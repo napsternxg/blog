@@ -67,8 +67,8 @@ PAGE_SAVE_AS = '{slug}.html'
 PAGE_URL = '{slug}.html'
 
 
-#THEME='pelican-themes/pelican-bootstrap3'
-#PYGMENTS_STYLE='friendly'
-#BOOTSTRAP_THEME='paper'
-#BOOTSTRAP_FLUID=True
-#CC_LICENSE='CC-BY'
+THEME='../pelican-themes/pelican-bootstrap3'
+PYGMENTS_STYLE='friendly'
+BOOTSTRAP_THEME='paper'
+BOOTSTRAP_FLUID=True
+CC_LICENSE='CC-BY'
