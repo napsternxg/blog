@@ -5,9 +5,6 @@ from __future__ import unicode_literals
 AUTHOR = u'Shubhanshu Mishra'
 SITENAME = u'Interpreting Models'
 SITEURL = 'http://shubhanshu.com/blog'
-SITETITLE = 'Interpreting Models'
-SITESUBTITLE = 'A quest to make models interpretable'
-SITEDESCRIPTION = '%s\'s thoughts on mathematical models and code' % AUTHOR
 
 GITHUB_URL='https://github.com/napsternxg/blog'
 PATH = 'content'
@@ -73,12 +70,6 @@ PAGE_SAVE_AS = '{slug}.html'
 PAGE_URL = '{slug}.html'
 
 
-#THEME='../pelican-themes/pelican-bootstrap3'
-THEME='../pelican-themes/Flex'
-SITELOGO = '/assets/images/pic.jpg'
-PYGMENTS_STYLE='friendly'
-BOOTSTRAP_THEME='paper'
-BOOTSTRAP_FLUID=True
 DISQUS_SITENAME = "shubhanshu-blog"
 IPYNB_IGNORE_CSS = True
 GOOGLE_ANALYTICS='UA-44393164-1'
@@ -88,4 +79,19 @@ CC_LICENSE = {
     'version': '4.0',
     'slug': 'by-sa'
 }
+
+# THEME SETTINGS
+#THEME='../pelican-themes/pelican-bootstrap3'
+THEME='../pelican-themes/Flex'
+SITELOGO = '/assets/images/pic.jpg'
+PYGMENTS_STYLE='friendly'
+BOOTSTRAP_THEME='paper'
+BOOTSTRAP_FLUID=True
 COPYRIGHT_YEAR = 2016
+MAIN_MENU = True
+SITETITLE = 'Interpreting Models'
+SITESUBTITLE = 'A quest to make models interpretable'
+SITEDESCRIPTION = '%s\'s thoughts on mathematical models and code' % AUTHOR
+MENUITEMS = (('Archives', '/archives.html'),
+    ('Categories', '/categories.html'),
+    ('Tags', '/tags.html'),)
