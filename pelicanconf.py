@@ -76,3 +76,4 @@ CC_LICENSE='CC-BY'
 DISQUS_SITENAME = "shubhanshu-blog"
 IPYNB_IGNORE_CSS = True
 GOOGLE_ANALYTICS='UA-44393164-1'
+GITHUB_URL='https://github.com/napsternxg/blog'
