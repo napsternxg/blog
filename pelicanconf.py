@@ -3,8 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Shubhanshu Mishra'
-SITENAME = u"Shubhanshu's Blog"
-SITEURL = ''
+SITENAME = u'Interpreting Models'
+SITEURL = 'http://shubhanshu.com/blog'
 
 PATH = 'content'
 
@@ -20,9 +20,8 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
+LINKS = (('Homepage', 'http://shubhanshu.com/'),
+        ('Projects', 'http://shubhanshu.com/playground.html'),
          )
 
 # Social widget
@@ -40,7 +39,7 @@ MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['ipynb.markup']
-
+IGNORE_FILES = ['.ipynb_checkpoints']
 
 ## PATHS
 OUTPUT_PATH="docs"
@@ -67,8 +66,12 @@ PAGE_SAVE_AS = '{slug}.html'
 PAGE_URL = '{slug}.html'
 
 
-THEME='../pelican-themes/pelican-bootstrap3'
+#THEME='../pelican-themes/pelican-bootstrap3'
+THEME='../pelican-themes/Flex'
+SITELOGO = '/assets/images/pic.jpg'
 PYGMENTS_STYLE='friendly'
 BOOTSTRAP_THEME='paper'
 BOOTSTRAP_FLUID=True
 CC_LICENSE='CC-BY'
+DISQUS_SITENAME = "shubhanshu-blog"
+IPYNB_IGNORE_CSS = True
