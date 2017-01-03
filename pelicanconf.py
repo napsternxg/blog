@@ -5,7 +5,11 @@ from __future__ import unicode_literals
 AUTHOR = u'Shubhanshu Mishra'
 SITENAME = u'Interpreting Models'
 SITEURL = 'http://shubhanshu.com/blog'
+SITETITLE = 'Interpreting Models'
+SITESUBTITLE = 'A quest to make models interpretable'
+SITEDESCRIPTION = '%s\'s thoughts on mathematical models and code' % AUTHOR
 
+GITHUB_URL='https://github.com/napsternxg/blog'
 PATH = 'content'
 
 TIMEZONE = 'America/Chicago'
@@ -13,8 +17,8 @@ TIMEZONE = 'America/Chicago'
 DEFAULT_LANG = u'en'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
@@ -22,13 +26,16 @@ AUTHOR_FEED_RSS = None
 # Blogroll
 LINKS = (('Homepage', 'http://shubhanshu.com/'),
         ('Projects', 'http://shubhanshu.com/playground.html'),
-         )
+        ('Blog Repo', GITHUB_URL),
+        )
 
 # Social widget
 SOCIAL = (('website', 'http://shubhanshu.com'),
     ('twitter', 'http://twitter.com/TheShubhanshu'),
     ('linkedin', 'http://www.linkedin.com/in/shubhanshumishra'),
-    ('github', 'http://github.com/napsternxg'),)
+    ('github', 'http://github.com/napsternxg'),
+    ('rss', '//shubhanshu.com/blog/feeds/all.atom.xml')
+    )
 
 DEFAULT_PAGINATION = 10
 
@@ -72,9 +79,13 @@ SITELOGO = '/assets/images/pic.jpg'
 PYGMENTS_STYLE='friendly'
 BOOTSTRAP_THEME='paper'
 BOOTSTRAP_FLUID=True
-CC_LICENSE='CC-BY'
 DISQUS_SITENAME = "shubhanshu-blog"
 IPYNB_IGNORE_CSS = True
 GOOGLE_ANALYTICS='UA-44393164-1'
-GITHUB_URL='https://github.com/napsternxg/blog'
 TWITTER_USERNAME='TheShubhanshu'
+CC_LICENSE = {
+    'name': 'Creative Commons Attribution-ShareAlike',
+    'version': '4.0',
+    'slug': 'by-sa'
+}
+COPYRIGHT_YEAR = 2016
