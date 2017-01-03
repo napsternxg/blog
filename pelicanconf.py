@@ -92,6 +92,6 @@ MAIN_MENU = True
 SITETITLE = 'Interpreting Models'
 SITESUBTITLE = 'A quest to make models interpretable'
 SITEDESCRIPTION = '%s\'s thoughts on mathematical models and code' % AUTHOR
-MENUITEMS = (('Archives', '/blog/archives.html'),
-    ('Categories', '/blog/categories.html'),
-    ('Tags', '/blog/tags.html'),)
+MENUITEMS = (('Archives', '/blog/%s' % ARCHIVES_URL),
+    ('Categories', '/blog/%s' % CATEGORIES_URL),
+    ('Tags', '/blog/%s' % TAGS_URL),)
