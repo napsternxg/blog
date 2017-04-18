@@ -1,0 +1,7 @@
+Title: Metropolis Hastings algorithm - a python primer
+Slug: metropolis-hastings-primer
+Date: 2017-04-18 02:19
+Category: posts
+Tags: machine learning, implementation, bayesian
+Author: Shubhanshu Mishra
+Summary: A pure numpy and python based primer to implementing and visualizing Metropolis Hastings algorithm for MCMC sampling. 
