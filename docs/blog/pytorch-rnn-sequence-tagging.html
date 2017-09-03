@@ -1,0 +1,1938 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="http://shubhanshu.com/blog/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://shubhanshu.com/blog/theme/pygments/friendly.min.css">
+  <link rel="stylesheet" type="text/css" href="http://shubhanshu.com/blog/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://shubhanshu.com/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Interpreting Models Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+
+<meta name="author" content="Shubhanshu Mishra" />
+<meta name="description" content="" />
+<meta name="keywords" content="python, machine learning, deeplearning">
+
+<meta property="og:site_name" content="Interpreting Models"/>
+<meta property="og:title" content="Pytorch RNN sequence tagging"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://shubhanshu.com/blog/blog/pytorch-rnn-sequence-tagging.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-09-03 01:57:00-05:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://shubhanshu.com/blog/author/shubhanshu-mishra.html">
+<meta property="article:section" content="posts"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="machine learning"/>
+<meta property="article:tag" content="deeplearning"/>
+<meta property="og:image" content="/assets/images/pic.jpg">
+
+  <title>Interpreting Models &ndash; Pytorch RNN sequence tagging</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://shubhanshu.com/blog">
+        <img src="/assets/images/pic.jpg" alt="Interpreting Models" title="Interpreting Models">
+      </a>
+      <h1><a href="http://shubhanshu.com/blog">Interpreting Models</a></h1>
+
+<p>A quest to make models interpretable</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="http://shubhanshu.com/" target="_blank">Homepage</a></li>
+          <li><a href="http://shubhanshu.com/playground.html" target="_blank">Projects</a></li>
+          <li><a href="https://github.com/napsternxg/blog" target="_blank">Blog Repo</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-website" href="http://shubhanshu.com" target="_blank"><i class="fa fa-website"></i></a></li>
+        <li><a class="sc-twitter" href="http://twitter.com/TheShubhanshu" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="http://www.linkedin.com/in/shubhanshumishra" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-github" href="http://github.com/napsternxg" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-rss" href="//shubhanshu.com/blog/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://shubhanshu.com/blog">    Home
+</a>
+
+      <a href="/blog/blog/archives/archives.html">Archives</a>
+      <a href="/blog/blog/category/">Categories</a>
+      <a href="/blog/blog/tag/">Tags</a>
+
+      <a href="http://shubhanshu.com/blog/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="pytorch-rnn-sequence-tagging">Pytorch RNN sequence tagging</h1>
+    <p>
+          Posted on Sun 03 September 2017 in <a href="http://shubhanshu.com/blog/blog/category/posts.html">posts</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">torch.autograd</span> <span class="k">import</span> <span class="n">Variable</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+<span class="kn">import</span> <span class="nn">torch.utils.data</span> <span class="k">as</span> <span class="nn">data_utils</span>
+<span class="kn">import</span> <span class="nn">operator</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="RNN-intuition">RNN intuition<a class="anchor-link" href="#RNN-intuition">¶</a></h2><p>Let us assume that we have an input $x = [x_1, x_2, ..., x_N]$ and we need to learn the mapping for some output $y = [y_1, y_2, ..., y_N]$, where $N$ is variable for each instance. In this case we can't just use a simple feed forward neural network which maps $x \rightarrow y$, as this will not work with variable length sequences. Furthermore, the number or parameters required for training such a network would be proportional to $size(x_i)*N$. This is a major memory cost. Additionally, if the sequence has some common mapping between $x_i$ and $y_i$, then we would be learning redundant weights for each pair in the sequence. This is where an RNN network is more useful. The basic idea is that each input $x_i$ is processed in a similar fashion using the same processing module and some additional context variable (which we will henseforth refer to as the <strong>hidden state</strong>). This hidden state should capture some information about the part of the sequence which has already been processed. Now at each step of the sequence we need to do the following:</p>
+<ul>
+<li>Generate the output based on the previous hidden state and current input</li>
+<li>Update the hidden state based on the previous hidden state and current input. </li>
+</ul>
+<p>The order of the above steps is not fixed and forms the basis of many RNN spin-offs. What is important, at each step, is to have a new output and a new hidden state. Sometimes, the hidden state and the outputs are the same, to make the network smaller. But the core idea remains same. Below we would like to formalize the general intuition of an RNN module.</p>
+<p>Initialize an initial hidden state $h_{0}$ with some initial value.</p>
+<p>At timestep n: 
+$$
+\begin{equation}
+h^{'}_{i} = f(x_{i},h_{i})\\
+y_{i} = g(x_{i},h^{'}_{i})\\
+h_{i+1} = h^{'}_{i}\\
+\end{equation}
+$$</p>
+<p>Here $y_{i}$ is the output and $h^{'}_{i}$ is the intermediate hidden state.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Input2Hidden</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_dim</span><span class="p">,</span> <span class="n">concat_layers</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">"""Input2Hidden module</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            x_dim: input vector dimension</span>
+<span class="sd">            concat_layers: weather to concat input and hidden layers or sum them</span>
+<span class="sd">        """</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Input2Hidden</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">concat_layers</span> <span class="o">=</span> <span class="n">concat_layers</span>
+        <span class="n">input_dim</span> <span class="o">=</span> <span class="n">x_dim</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">concat_layers</span><span class="p">:</span>
+            <span class="n">input_dim</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">x_dim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">linear_layer</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">input_dim</span><span class="p">,</span> <span class="n">x_dim</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">concat_layers</span><span class="p">:</span>
+            <span class="n">cell_input</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">h</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cell_input</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">h</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cell_input</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+        <span class="n">logit</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">linear_layer</span><span class="p">(</span><span class="n">cell_input</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">logit</span>
+    
+    
+<span class="k">class</span> <span class="nc">Hidden2Output</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_dim</span><span class="p">,</span> <span class="n">out_dim</span><span class="p">,</span> <span class="n">concat_layers</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">"""Hidden2Output module</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            x_dim: input vector dimension</span>
+<span class="sd">            out_dim: output vector dimension</span>
+<span class="sd">            concat_layers: weather to concat input and hidden layers or sum them</span>
+<span class="sd">        """</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Hidden2Output</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="n">input_dim</span> <span class="o">=</span> <span class="n">x_dim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">concat_layers</span> <span class="o">=</span> <span class="n">concat_layers</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">concat_layers</span><span class="p">:</span>
+            <span class="n">input_dim</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">x_dim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">linear_layer</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">input_dim</span><span class="p">,</span> <span class="n">out_dim</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">concat_layers</span><span class="p">:</span>
+            <span class="n">cell_input</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">h</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cell_input</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">h</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cell_input</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+        <span class="n">logit</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">linear_layer</span><span class="p">(</span><span class="n">cell_input</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">logit</span>
+    
+    
+<span class="k">class</span> <span class="nc">CustomRNNCell</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i2h</span><span class="p">,</span> <span class="n">h2o</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">CustomRNNCell</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">i2h</span> <span class="o">=</span> <span class="n">i2h</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">h2o</span> <span class="o">=</span> <span class="n">h2o</span>
+        
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+        <span class="n">h_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">i2h</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">h</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">h_prime</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">h2o</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">h_prime</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">output</span><span class="p">,</span> <span class="n">h_prime</span>
+    
+<span class="k">class</span> <span class="nc">Model</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embedding</span><span class="p">,</span> <span class="n">rnn_cell</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Model</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">embedding</span> <span class="o">=</span> <span class="n">embedding</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rnn_cell</span> <span class="o">=</span> <span class="n">rnn_cell</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">loss_function</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word_ids</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">hidden</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">hidden</span> <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span>
+                <span class="n">word_ids</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">embedding</span><span class="o">.</span><span class="n">embedding_dim</span><span class="p">))</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">hidden</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+        <span class="n">embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embedding</span><span class="p">(</span><span class="n">word_ids</span><span class="p">)</span>
+        <span class="n">max_seq_length</span> <span class="o">=</span> <span class="n">word_ids</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">outputs</span><span class="p">,</span> <span class="n">hidden_states</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_seq_length</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">embeddings</span><span class="p">[:,</span> <span class="n">i</span><span class="p">,</span> <span class="p">:]</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+            <span class="c1">#print("x={}\nhidden={}".format(x,hidden))</span>
+            <span class="n">output</span><span class="p">,</span> <span class="n">hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rnn_cell</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">hidden</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">hidden</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+            <span class="c1">#print("output: {}, hidden: {}".format(output.data.shape, hidden.data.shape))</span>
+            <span class="n">outputs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+            <span class="n">hidden_states</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hidden</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">hidden_states</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span><span class="n">hidden_states</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">hidden_states</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">outputs</span><span class="p">,</span> <span class="n">hidden_states</span>
+    
+    <span class="k">def</span> <span class="nf">loss</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word_ids</span><span class="p">,</span> <span class="n">target_ids</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">outputs</span><span class="p">,</span> <span class="n">hidden_states</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">word_ids</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="n">hidden</span><span class="p">)</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="n">outputs</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">outputs</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">target_ids</span> <span class="o">=</span> <span class="n">target_ids</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">target_ids</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+        <span class="c1">#print("output={}\ttargets={}".format(outputs.data.shape,target_ids.data.shape))</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss_function</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">target_ids</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">loss</span>    
+        
+        
+    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word_ids</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">outputs</span><span class="p">,</span> <span class="n">hidden_states</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">word_ids</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="n">hidden</span><span class="p">)</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="n">outputs</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">outputs</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">max_scores</span><span class="p">,</span> <span class="n">predictions</span> <span class="o">=</span> <span class="n">outputs</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">predictions</span> <span class="o">=</span> <span class="n">predictions</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">*</span><span class="n">word_ids</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+        <span class="c1">#print(word_ids.data.shape, predictions.data.shape)</span>
+        <span class="k">assert</span> <span class="n">word_ids</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">predictions</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s2">"word_ids: </span><span class="si">{}</span><span class="s2">, predictions: </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">word_ids</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">predictions</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">predictions</span>
+        
+        
+<span class="k">def</span> <span class="nf">tensors2variables</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">Variable</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="n">requires_grad</span><span class="p">),</span> <span class="n">args</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">get_batch</span><span class="p">(</span><span class="n">tensor_types</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">,</span><span class="n">arg</span><span class="p">:</span> <span class="n">Variable</span><span class="p">(</span><span class="n">t</span><span class="p">(</span><span class="n">arg</span><span class="p">),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="n">requires_grad</span><span class="p">),</span> <span class="n">tensor_types</span><span class="p">,</span> <span class="n">args</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Learning-to-predict-bit-flip">Learning to predict bit flip<a class="anchor-link" href="#Learning-to-predict-bit-flip">¶</a></h2><p>Let us take a simple example of using an RNN to predict the flip in bits of an $N$ bit unsigned integer. In python for an integer n represented using $N$ bits, the unsigned bitflip can be written as <code>(~n) & ((1 << N)-1)</code>. Four our RNN each bit from the left will be $x_i$ and each flipped bit will be $y_i$. This task doesn't require any temporal dependencies but will be a good exercise to test the accuracy of RNN implementation. Theoretically, the network should learn to do this job perfectly in a few iterations. Later we will move to an example which does require the network to learn some temporal dependencies between inputs.</p>
+<p>For our network we define $f(x,h)$ as a simple affine layer with $tanh$ activation, which takes the concatanated input $[x_i, h_{i-1}]$ and returns a new hidden state $h^{'}_{i}$. Similarly, we have $g(x_i, h^{'}_{n})$ also represented as an affine layer with $tanh$ activation, of the concatanation of its inputs $[x_i, h^{'}_{n}]$, resulting in a new output $y_{i}$. More formally, we have</p>
+$$
+\begin{equation}
+h^{'}_{i} = f(x_{i},h_{i}) = \sigma([x_i, h_{i-1}]W_{i2h})\\
+y_{i} = g(x_{i},h^{'}_{i}) = \sigma([x_i, h^{'}_{n}]W_{h2o})\\
+h_{i+1} = h^{'}_{i}\\
+\end{equation}
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">input_size</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">embedding_size</span><span class="o">=</span><span class="mi">3</span>
+<span class="n">output_size</span><span class="o">=</span><span class="mi">2</span>
+
+<span class="n">embedding</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">embedding_size</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">Input2Hidden</span><span class="p">(</span><span class="n">embedding_size</span><span class="p">,</span> <span class="n">concat_layers</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">Hidden2Output</span><span class="p">(</span><span class="n">embedding_size</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">concat_layers</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">rnn_cell</span> <span class="o">=</span> <span class="n">CustomRNNCell</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">embedding</span><span class="p">,</span> <span class="n">rnn_cell</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">word_ids</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+<span class="n">target_ids</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+
+<span class="n">tensor_types</span> <span class="o">=</span> <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">LongTensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">LongTensor</span><span class="p">)</span>
+<span class="n">word_ids_tensor</span><span class="p">,</span> <span class="n">target_ids_tensor</span> <span class="o">=</span> <span class="n">get_batch</span><span class="p">(</span><span class="n">tensor_types</span><span class="p">,</span> <span class="n">word_ids</span><span class="p">,</span> <span class="n">target_ids</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word_ids_tensor</span><span class="p">,</span> <span class="n">target_ids_tensor</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Variable containing:
+ 0  1  0  1  0  1
+[torch.LongTensor of size 1x6]
+ Variable containing:
+ 1  0  1  0  1  0
+[torch.LongTensor of size 1x6]
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">word_ids_tensor</span><span class="p">,</span> <span class="n">word_ids_tensor</span><span class="p">,</span> <span class="n">word_ids_tensor</span><span class="p">],</span> <span class="mi">0</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>Variable containing:
+(0 ,.,.) = 
+  0.1159 -0.0933
+ -0.4920  0.6325
+  0.1634 -0.0420
+ -0.5012  0.6430
+  0.1758 -0.0425
+ -0.5058  0.6449
+
+(1 ,.,.) = 
+  0.1159 -0.0933
+ -0.4920  0.6325
+  0.1634 -0.0420
+ -0.5012  0.6430
+  0.1758 -0.0425
+ -0.5058  0.6449
+
+(2 ,.,.) = 
+  0.1159 -0.0933
+ -0.4920  0.6325
+  0.1634 -0.0420
+ -0.5012  0.6430
+  0.1758 -0.0425
+ -0.5058  0.6449
+[torch.FloatTensor of size 3x6x2]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">word_ids_tensor</span><span class="p">,</span> <span class="n">word_ids_tensor</span><span class="p">,</span> <span class="n">word_ids_tensor</span><span class="p">],</span> <span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[6]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>Variable containing:
+ 0  1  0  1  0  1
+ 0  1  0  1  0  1
+ 0  1  0  1  0  1
+[torch.LongTensor of size 3x6]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">loss</span><span class="p">(</span><span class="n">word_ids_tensor</span><span class="p">,</span> <span class="n">target_ids_tensor</span><span class="p">)</span>
+<span class="n">loss</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>Variable containing:
+ 1.1108
+[torch.FloatTensor of size 1]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">word_ids_tensor</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[9]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>Variable containing:
+ 0  1  0  1  0  1
+[torch.LongTensor of size 1x6]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">create_dataset</span><span class="p">(</span><span class="n">max_len</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+    <span class="sd">"""Create a dataset of max_len bits and their flipped values</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        max_len: Maximum number of bits in the number</span>
+<span class="sd">    """</span>
+    <span class="n">max_val</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o"><<</span><span class="n">max_len</span><span class="p">)</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_val</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="s2">"{0:0</span><span class="si">{1}</span><span class="s2">b}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">max_len</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="s2">"{0:0</span><span class="si">{1}</span><span class="s2">b}"</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="o">~</span><span class="n">i</span><span class="p">)</span> <span class="o">&</span> <span class="n">max_val</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">max_len</span><span class="p">)</span>
+        
+        <span class="n">x</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+        <span class="n">X</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">Y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span>
+        
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">create_dataset</span><span class="p">(</span><span class="n">max_len</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">X_tensors</span><span class="p">,</span> <span class="n">Y_tensors</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">LongTensor</span><span class="p">,</span> <span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">Y_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">X_tensors</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">Y_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s2">"X and Y should be of same shape"</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>torch.Size([1024, 10]) torch.Size([1024, 10])
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [12]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">data_utils</span><span class="o">.</span><span class="n">TensorDataset</span><span class="p">(</span><span class="n">X_tensors</span><span class="p">,</span> <span class="n">Y_tensors</span><span class="p">)</span>
+<span class="n">train_loader</span> <span class="o">=</span> <span class="n">data_utils</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [13]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+learning_rate = 1e-4
+max_epochs = 20
+optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+for epoch in range(1, max_epochs+1):
+    for X_batch, Y_batch in train_loader:
+        X_batch, Y_batch = tensors2variables(X_batch, Y_batch)
+        # Forward pass: compute predicted y by passing x to the model.
+        loss = model.loss(X_batch, Y_batch)
+
+        # Before the backward pass, use the optimizer object to zero all of the
+        # gradients for the variables it will update (which are the learnable weights
+        # of the model)
+        optimizer.zero_grad()
+
+        # Backward pass: compute gradient of the loss with respect to model
+        # parameters
+        loss.backward()
+
+        # Calling the step function on an Optimizer makes an update to its
+        # parameters
+        optimizer.step()
+    if epoch % 2 != 0:
+        continue
+        
+    loss = model.loss(*tensors2variables(X_tensors, Y_tensors))
+    Y_predict = model.predict(Variable(X_tensors)).data
+    accuracy = (Y_tensors == Y_predict).sum() /operator.mul(*Y_tensors.shape) * 100.
+    print("Epoch[{:03d}]: loss={:5.3f}; accuracy={:.3f}%".format(epoch, loss.data[0], accuracy))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch[002]: loss=0.982; accuracy=45.000%
+Epoch[004]: loss=0.902; accuracy=50.000%
+Epoch[006]: loss=0.827; accuracy=50.000%
+Epoch[008]: loss=0.754; accuracy=50.000%
+Epoch[010]: loss=0.681; accuracy=50.000%
+Epoch[012]: loss=0.609; accuracy=50.000%
+Epoch[014]: loss=0.536; accuracy=77.500%
+Epoch[016]: loss=0.459; accuracy=100.000%
+Epoch[018]: loss=0.383; accuracy=100.000%
+Epoch[020]: loss=0.320; accuracy=100.000%
+CPU times: user 32.2 s, sys: 1min 42s, total: 2min 15s
+Wall time: 22.6 s
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_predict</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_batch</span><span class="p">)</span>
+<span class="n">Y_predict</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[14]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>
+    1     1     1     1     0     0     0     0     0     0
+    1     0     0     1     1     1     1     1     0     0
+    0     0     0     0     0     0     0     1     1     1
+    1     1     0     1     1     0     0     1     0     0
+    0     1     0     0     1     1     1     1     1     1
+    0     0     1     0     1     1     0     1     0     0
+    0     0     0     0     1     0     1     1     1     1
+    1     1     1     0     0     0     1     1     1     0
+[torch.LongTensor of size 8x10]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Learning-to-predict-bit-shift">Learning to predict bit shift<a class="anchor-link" href="#Learning-to-predict-bit-shift">¶</a></h2><p>This example requires some learning of temporal dependencies. We want to learn our network the output when the input $x$'s bits are shifted right by $K$ positions. This can be done using <code>x >> K</code>. Similarly, a left shift can be done using <code>(a << K) & (1 << N) -1)</code>, where $N$ is the max length of the bit sequence.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [15]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">create_dataset</span><span class="p">(</span><span class="n">max_len</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">K</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+    <span class="sd">"""Create a dataset of max_len bits and their flipped values</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        max_len: Maximum number of bits in the number</span>
+<span class="sd">    """</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="n">max_val</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="n">max_len</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_val</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="s2">"{0:0</span><span class="si">{1}</span><span class="s2">b}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">max_len</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="s2">"{0:0</span><span class="si">{1}</span><span class="s2">b}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">>></span><span class="n">K</span><span class="p">,</span><span class="n">max_len</span><span class="p">)</span>
+        
+        <span class="n">x</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+        <span class="n">X</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">Y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span>
+        
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [16]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">input_size</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">embedding_size</span><span class="o">=</span><span class="mi">3</span>
+<span class="n">output_size</span><span class="o">=</span><span class="mi">2</span>
+
+<span class="n">embedding</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">embedding_size</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">Input2Hidden</span><span class="p">(</span><span class="n">embedding_size</span><span class="p">,</span> <span class="n">concat_layers</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">Hidden2Output</span><span class="p">(</span><span class="n">embedding_size</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">concat_layers</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">rnn_cell</span> <span class="o">=</span> <span class="n">CustomRNNCell</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">embedding</span><span class="p">,</span> <span class="n">rnn_cell</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [17]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">create_dataset</span><span class="p">(</span><span class="n">max_len</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">K</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">X_tensors</span><span class="p">,</span> <span class="n">Y_tensors</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">LongTensor</span><span class="p">,</span> <span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">Y_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">X_tensors</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">Y_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s2">"X and Y should be of same shape"</span>
+
+<span class="n">train</span> <span class="o">=</span> <span class="n">data_utils</span><span class="o">.</span><span class="n">TensorDataset</span><span class="p">(</span><span class="n">X_tensors</span><span class="p">,</span> <span class="n">Y_tensors</span><span class="p">)</span>
+<span class="n">train_loader</span> <span class="o">=</span> <span class="n">data_utils</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>torch.Size([1024, 10]) torch.Size([1024, 10])
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [18]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+learning_rate = 1e-4
+max_epochs = 10000
+check_every=500
+optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+for epoch in range(1, max_epochs+1):
+    for X_batch, Y_batch in train_loader:
+        X_batch, Y_batch = tensors2variables(X_batch, Y_batch)
+        # Forward pass: compute predicted y by passing x to the model.
+        loss = model.loss(X_batch, Y_batch)
+
+        # Before the backward pass, use the optimizer object to zero all of the
+        # gradients for the variables it will update (which are the learnable weights
+        # of the model)
+        optimizer.zero_grad()
+
+        # Backward pass: compute gradient of the loss with respect to model
+        # parameters
+        loss.backward()
+
+        # Calling the step function on an Optimizer makes an update to its
+        # parameters
+        optimizer.step()
+    if epoch % check_every != 0:
+        continue
+        
+    loss = model.loss(*tensors2variables(X_tensors, Y_tensors))
+    Y_predict = model.predict(Variable(X_tensors)).data
+    accuracy = (Y_tensors == Y_predict).sum() /operator.mul(*Y_tensors.shape) * 100.
+    print("Epoch[{:03d}]: loss={:5.3f}; accuracy={:.3f}%".format(epoch, loss.data[0], accuracy))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch[500]: loss=0.552; accuracy=76.133%
+Epoch[1000]: loss=0.523; accuracy=78.555%
+Epoch[1500]: loss=0.512; accuracy=78.896%
+Epoch[2000]: loss=0.494; accuracy=79.600%
+Epoch[2500]: loss=0.464; accuracy=79.600%
+Epoch[3000]: loss=0.409; accuracy=83.193%
+Epoch[3500]: loss=0.368; accuracy=85.518%
+Epoch[4000]: loss=0.348; accuracy=87.441%
+Epoch[4500]: loss=0.341; accuracy=87.500%
+Epoch[5000]: loss=0.337; accuracy=87.500%
+Epoch[5500]: loss=0.334; accuracy=87.500%
+Epoch[6000]: loss=0.332; accuracy=87.500%
+Epoch[6500]: loss=0.331; accuracy=87.500%
+Epoch[7000]: loss=0.330; accuracy=87.500%
+Epoch[7500]: loss=0.329; accuracy=87.500%
+Epoch[8000]: loss=0.329; accuracy=87.500%
+Epoch[8500]: loss=0.329; accuracy=87.500%
+Epoch[9000]: loss=0.328; accuracy=87.500%
+Epoch[9500]: loss=0.328; accuracy=87.500%
+Epoch[10000]: loss=0.327; accuracy=87.500%
+CPU times: user 19min 9s, sys: 57min 56s, total: 1h 17min 6s
+Wall time: 12min 52s
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [19]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_predict</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_batch</span><span class="p">)</span>
+<span class="n">Y_predict</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[19]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>
+    0     0     0     0     1     1     1     1     1     1
+    0     0     0     0     0     1     0     1     1     1
+    0     0     0     0     1     0     1     1     1     1
+    0     0     0     0     0     0     0     0     0     1
+    0     0     0     0     0     0     1     0     1     0
+    0     0     0     0     1     1     1     1     1     1
+    0     0     0     0     0     0     0     1     0     1
+    0     0     0     0     0     1     0     1     0     1
+    0     0     0     0     0     1     0     1     0     1
+    0     0     0     0     1     0     1     0     1     0
+[torch.LongTensor of size 10x10]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Too-slow-to-learn">Too slow to learn<a class="anchor-link" href="#Too-slow-to-learn">¶</a></h2><p>The network trained above takes more than 10,000 epochs to converge to only $90\%$ accuracy. This reflects a major shortcoming of general RNN's. The shortcoming comes from a problem known as vanishing gradients, where gradients based on more distant steps become numerically too small to update the current layer, leading to information loss and failure to learn long range dependencies. Researcher's have worked around this using what is known as gated or memory based RNN cell's, which allows the information to be stored for a longer duration in the network and the gradients from long range dependencies to flow more easily. Two of the most popular variants are Long Short Term Memory (LSTM) cells and Gated Recurrent Unit (GRU) cells. The core idea is to allow some memory of the current state to be stored for the long time either in a seperate memory cell or in the hidden state. This is usually done by selectively reading and editing from the memory based on the current step. In the following sections we will understand the GRU cells which are a very simple extension of RNN and solve the vanishing gradient problem. The LSTM cells are a bit more involved and will be discussed later.</p>
+<h2 id="Gated-Recurrent-Unit-(GRU)">Gated Recurrent Unit (GRU)<a class="anchor-link" href="#Gated-Recurrent-Unit-(GRU)">¶</a></h2><p>The idea behind GRU's is to update part of the hidden state and retain the rest. This is done using the following functions:</p>
+<ul>
+<li>reset gate - Identifies what proportion of hidden state should be reset</li>
+<li>update gate - Identifies what proportion of hidden state should be updated</li>
+</ul>
+<p>The implementation is as follow:</p>
+$$
+\begin{equation}
+reset = \sigma(W_{r}[x_i, h_{i-1}])\\
+update = \sigma(W_{u}[x_i, h_{i-1}])\\
+interim\_hidden = tanh(W_{i}[x_i, reset \circ h_{i-1}])\\
+h^{'}_{i} = update \circ interim\_hidden + (1-update) \circ h_{i-1} \\
+\end{equation}
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [20]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">GRUCell</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">,</span> <span class="n">output_dim</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">GRUCell</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span> <span class="o">=</span> <span class="n">input_dim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_dim</span> <span class="o">=</span> <span class="n">output_dim</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset_linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">interim_linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span><span class="p">,</span> <span class="n">output_dim</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+        <span class="n">concat_tensors</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">h</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">reset</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reset_linear</span><span class="p">(</span><span class="n">concat_tensors</span><span class="p">))</span>
+        <span class="n">update</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update_linear</span><span class="p">(</span><span class="n">concat_tensors</span><span class="p">))</span>
+        <span class="n">reset_hidden</span> <span class="o">=</span> <span class="n">reset</span> <span class="o">*</span> <span class="n">h</span>
+        <span class="n">concat_reset_hidden</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">reset_hidden</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">interim_hidden</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">interim_linear</span><span class="p">(</span><span class="n">concat_reset_hidden</span><span class="p">))</span>
+        <span class="n">h_prime</span> <span class="o">=</span> <span class="n">update</span> <span class="o">*</span> <span class="n">interim_hidden</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">update</span><span class="p">)</span> <span class="o">*</span> <span class="n">h</span>
+        
+        <span class="n">concat_out</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">h_prime</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output_linear</span><span class="p">(</span><span class="n">concat_out</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">output</span><span class="p">,</span> <span class="n">h_prime</span>
+        
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [21]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">input_size</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">embedding_size</span><span class="o">=</span><span class="mi">3</span>
+<span class="n">output_size</span><span class="o">=</span><span class="mi">2</span>
+
+<span class="n">embedding</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">embedding_size</span><span class="p">)</span>
+<span class="n">rnn_cell</span> <span class="o">=</span> <span class="n">GRUCell</span><span class="p">(</span><span class="n">embedding_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">embedding</span><span class="p">,</span> <span class="n">rnn_cell</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [22]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">create_dataset</span><span class="p">(</span><span class="n">max_len</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">K</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">X_tensors</span><span class="p">,</span> <span class="n">Y_tensors</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">LongTensor</span><span class="p">,</span> <span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">Y_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">X_tensors</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">Y_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s2">"X and Y should be of same shape"</span>
+
+<span class="n">train</span> <span class="o">=</span> <span class="n">data_utils</span><span class="o">.</span><span class="n">TensorDataset</span><span class="p">(</span><span class="n">X_tensors</span><span class="p">,</span> <span class="n">Y_tensors</span><span class="p">)</span>
+<span class="n">train_loader</span> <span class="o">=</span> <span class="n">data_utils</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>torch.Size([1024, 10]) torch.Size([1024, 10])
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [23]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+learning_rate = 1e-4
+max_epochs = 3000
+check_every=500
+optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+for epoch in range(1, max_epochs+1):
+    for X_batch, Y_batch in train_loader:
+        X_batch, Y_batch = tensors2variables(X_batch, Y_batch)
+        # Forward pass: compute predicted y by passing x to the model.
+        loss = model.loss(X_batch, Y_batch)
+
+        # Before the backward pass, use the optimizer object to zero all of the
+        # gradients for the variables it will update (which are the learnable weights
+        # of the model)
+        optimizer.zero_grad()
+
+        # Backward pass: compute gradient of the loss with respect to model
+        # parameters
+        loss.backward()
+
+        # Calling the step function on an Optimizer makes an update to its
+        # parameters
+        optimizer.step()
+    if epoch % check_every != 0:
+        continue
+        
+    loss = model.loss(*tensors2variables(X_tensors, Y_tensors))
+    Y_predict = model.predict(Variable(X_tensors)).data
+    accuracy = (Y_tensors == Y_predict).sum() /operator.mul(*Y_tensors.shape) * 100.
+    print("Epoch[{:03d}]: loss={:5.3f}; accuracy={:.3f}%".format(epoch, loss.data[0], accuracy))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch[500]: loss=0.412; accuracy=83.740%
+Epoch[1000]: loss=0.350; accuracy=86.836%
+Epoch[1500]: loss=0.302; accuracy=91.025%
+Epoch[2000]: loss=0.279; accuracy=92.422%
+Epoch[2500]: loss=0.270; accuracy=93.242%
+Epoch[3000]: loss=0.264; accuracy=93.506%
+CPU times: user 21min 12s, sys: 1h 6min 27s, total: 1h 27min 39s
+Wall time: 14min 38s
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [24]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[24]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>Model (
+  (embedding): Embedding(2, 3)
+  (rnn_cell): GRUCell (
+    (reset_linear): Linear (6 -> 3)
+    (update_linear): Linear (6 -> 3)
+    (interim_linear): Linear (6 -> 3)
+    (output_linear): Linear (6 -> 2)
+  )
+  (loss_function): CrossEntropyLoss (
+  )
+)</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Running-using-GPU">Running using GPU<a class="anchor-link" href="#Running-using-GPU">¶</a></h2><p>This makes things go faster.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [25]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">input_size</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">embedding_size</span><span class="o">=</span><span class="mi">3</span>
+<span class="n">output_size</span><span class="o">=</span><span class="mi">2</span>
+
+<span class="n">embedding</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">embedding_size</span><span class="p">)</span>
+<span class="n">rnn_cell</span> <span class="o">=</span> <span class="n">GRUCell</span><span class="p">(</span><span class="n">embedding_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">embedding</span><span class="p">,</span> <span class="n">rnn_cell</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [26]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">create_dataset</span><span class="p">(</span><span class="n">max_len</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">K</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">X_tensors</span><span class="p">,</span> <span class="n">Y_tensors</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">LongTensor</span><span class="p">,</span> <span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">Y_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">X_tensors</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">Y_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s2">"X and Y should be of same shape"</span>
+
+<span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span>
+<span class="n">train</span> <span class="o">=</span> <span class="n">data_utils</span><span class="o">.</span><span class="n">TensorDataset</span><span class="p">(</span><span class="n">X_tensors</span><span class="p">,</span> <span class="n">Y_tensors</span><span class="p">)</span>
+<span class="n">train_loader</span> <span class="o">=</span> <span class="n">data_utils</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pin_memory</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>torch.Size([1024, 10]) torch.Size([1024, 10])
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [27]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">overall_hidden</span> <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">model</span><span class="o">.</span><span class="n">embedding</span><span class="o">.</span><span class="n">embedding_dim</span><span class="p">))</span>
+<span class="n">overall_hidden</span> <span class="o">=</span> <span class="n">overall_hidden</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">overall_hidden</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[27]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>Variable containing:
+ 0  0  0
+[torch.cuda.FloatTensor of size 1x3 (GPU 0)]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [28]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+learning_rate = 1e-4
+max_epochs = 3000
+check_every=500
+optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+
+for epoch in range(1, max_epochs+1):
+    for X_batch, Y_batch in train_loader:
+        X_batch = X_batch.cuda(async=True)
+        Y_batch = Y_batch.cuda(async=True)
+        X_batch, Y_batch = tensors2variables(X_batch, Y_batch)
+        hidden = overall_hidden.repeat(batch_size, 1)
+        # Forward pass: compute predicted y by passing x to the model.
+        loss = model.loss(X_batch, Y_batch, hidden=hidden)
+
+        # Before the backward pass, use the optimizer object to zero all of the
+        # gradients for the variables it will update (which are the learnable weights
+        # of the model)
+        optimizer.zero_grad()
+
+        # Backward pass: compute gradient of the loss with respect to model
+        # parameters
+        loss.backward()
+
+        # Calling the step function on an Optimizer makes an update to its
+        # parameters
+        optimizer.step()
+    if epoch % check_every != 0:
+        continue
+    
+    hidden = overall_hidden.repeat(X_tensors.shape[0], 1)
+    loss = model.loss(*tensors2variables(X_tensors.cuda(), Y_tensors.cuda()),
+                      hidden=hidden)
+    Y_predict = model.predict(Variable(X_tensors.cuda()), hidden=hidden).data
+    accuracy = (Y_tensors.cuda() == Y_predict).sum() /operator.mul(*Y_tensors.shape) * 100.
+    print("Epoch[{:03d}]: loss={:5.3f}; accuracy={:.3f}%".format(epoch, loss.data[0], accuracy))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch[500]: loss=0.406; accuracy=84.111%
+Epoch[1000]: loss=0.320; accuracy=88.711%
+Epoch[1500]: loss=0.285; accuracy=91.377%
+Epoch[2000]: loss=0.270; accuracy=92.842%
+Epoch[2500]: loss=0.262; accuracy=93.301%
+Epoch[3000]: loss=0.255; accuracy=93.975%
+CPU times: user 18min 6s, sys: 3.28 s, total: 18min 9s
+Wall time: 18min 11s
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It looks like the GPU version is actually a bit slower in this case. This might be due to the small size of our dataset, for which the cost of moving tensors to GPU is greater than the gain by speeding up network computations.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Increasing-the-network-capacity">Increasing the network capacity<a class="anchor-link" href="#Increasing-the-network-capacity">¶</a></h2><p>This can be done by increasing the hidden units in the network. Or in our case by increasing the embedding size as that is used to derive the number of hidden units.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [29]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">input_size</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">embedding_size</span><span class="o">=</span><span class="mi">10</span>
+<span class="n">output_size</span><span class="o">=</span><span class="mi">2</span>
+
+<span class="n">embedding</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">embedding_size</span><span class="p">)</span>
+<span class="n">rnn_cell</span> <span class="o">=</span> <span class="n">GRUCell</span><span class="p">(</span><span class="n">embedding_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">embedding</span><span class="p">,</span> <span class="n">rnn_cell</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [30]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">create_dataset</span><span class="p">(</span><span class="n">max_len</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">K</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">X_tensors</span><span class="p">,</span> <span class="n">Y_tensors</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">LongTensor</span><span class="p">,</span> <span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">Y_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">X_tensors</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">Y_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s2">"X and Y should be of same shape"</span>
+
+<span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span>
+<span class="n">train</span> <span class="o">=</span> <span class="n">data_utils</span><span class="o">.</span><span class="n">TensorDataset</span><span class="p">(</span><span class="n">X_tensors</span><span class="p">,</span> <span class="n">Y_tensors</span><span class="p">)</span>
+<span class="n">train_loader</span> <span class="o">=</span> <span class="n">data_utils</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pin_memory</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>torch.Size([1024, 10]) torch.Size([1024, 10])
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [31]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">overall_hidden</span> <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">model</span><span class="o">.</span><span class="n">embedding</span><span class="o">.</span><span class="n">embedding_dim</span><span class="p">))</span>
+<span class="n">overall_hidden</span> <span class="o">=</span> <span class="n">overall_hidden</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">overall_hidden</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[31]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>Variable containing:
+    0     0     0     0     0     0     0     0     0     0
+[torch.cuda.FloatTensor of size 1x10 (GPU 0)]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [32]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+learning_rate = 1e-4
+max_epochs = 1000
+check_every=50
+optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+
+for epoch in range(1, max_epochs+1):
+    for X_batch, Y_batch in train_loader:
+        X_batch = X_batch.cuda(async=True)
+        Y_batch = Y_batch.cuda(async=True)
+        X_batch, Y_batch = tensors2variables(X_batch, Y_batch)
+        hidden = overall_hidden.repeat(batch_size, 1)
+        # Forward pass: compute predicted y by passing x to the model.
+        loss = model.loss(X_batch, Y_batch, hidden=hidden)
+
+        # Before the backward pass, use the optimizer object to zero all of the
+        # gradients for the variables it will update (which are the learnable weights
+        # of the model)
+        optimizer.zero_grad()
+
+        # Backward pass: compute gradient of the loss with respect to model
+        # parameters
+        loss.backward()
+
+        # Calling the step function on an Optimizer makes an update to its
+        # parameters
+        optimizer.step()
+    if epoch % check_every != 0:
+        continue
+    
+    hidden = overall_hidden.repeat(X_tensors.shape[0], 1)
+    loss = model.loss(*tensors2variables(X_tensors.cuda(), Y_tensors.cuda()),
+                      hidden=hidden)
+    Y_predict = model.predict(Variable(X_tensors.cuda()), hidden=hidden).data
+    accuracy = (Y_tensors.cuda() == Y_predict).sum() /operator.mul(*Y_tensors.shape) * 100.
+    print("Epoch[{:03d}]: loss={:5.3f}; accuracy={:.3f}%".format(epoch, loss.data[0], accuracy))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch[050]: loss=0.642; accuracy=65.000%
+Epoch[100]: loss=0.605; accuracy=70.000%
+Epoch[150]: loss=0.521; accuracy=70.010%
+Epoch[200]: loss=0.426; accuracy=82.100%
+Epoch[250]: loss=0.376; accuracy=86.182%
+Epoch[300]: loss=0.344; accuracy=88.877%
+Epoch[350]: loss=0.293; accuracy=93.311%
+Epoch[400]: loss=0.229; accuracy=96.768%
+Epoch[450]: loss=0.188; accuracy=98.701%
+Epoch[500]: loss=0.157; accuracy=99.805%
+Epoch[550]: loss=0.143; accuracy=99.971%
+Epoch[600]: loss=0.136; accuracy=100.000%
+Epoch[650]: loss=0.131; accuracy=100.000%
+Epoch[700]: loss=0.130; accuracy=100.000%
+Epoch[750]: loss=0.129; accuracy=100.000%
+Epoch[800]: loss=0.128; accuracy=100.000%
+Epoch[850]: loss=0.128; accuracy=100.000%
+Epoch[900]: loss=0.127; accuracy=100.000%
+Epoch[950]: loss=0.127; accuracy=100.000%
+Epoch[1000]: loss=0.127; accuracy=100.000%
+CPU times: user 6min 5s, sys: 1.22 s, total: 6min 6s
+Wall time: 6min 7s
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As we can see, the network converges <strong>10x</strong> quicker than the one with lower capacity and also achieves $100\%$ accuracy in just 600 epochs. This is a very useful result, as it shows that in order to learn more complex functionalities we need networks with larger capacities as well as computationally efficient structures. Luckily for us many of the standard functionalities, are usually implemented efficiently in neural network libraries. Pytorch implements many of the standard neural network modules efficiently using it's C code, which can give us an order of magniture of improvement (especially for larger networks). These modules include GRU cells and a GRU module which can process the whole sequence. We will look at these in detail below.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Using-Pytorch's-GRUCell">Using Pytorch's GRUCell<a class="anchor-link" href="#Using-Pytorch's-GRUCell">¶</a></h2><p>Let us check our implementation using the Pytorch's inbuild GRU cell</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [33]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">PytorchGRUCell</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">,</span> <span class="n">output_dim</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">PytorchGRUCell</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span> <span class="o">=</span> <span class="n">input_dim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_dim</span> <span class="o">=</span> <span class="n">output_dim</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">gru</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">GRUCell</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_dim</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+        <span class="n">h_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gru</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">h</span><span class="p">)</span>
+        
+        <span class="n">concat_out</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">h_prime</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output_linear</span><span class="p">(</span><span class="n">concat_out</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">output</span><span class="p">,</span> <span class="n">h_prime</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [34]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">input_size</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">embedding_size</span><span class="o">=</span><span class="mi">10</span>
+<span class="n">output_size</span><span class="o">=</span><span class="mi">2</span>
+
+<span class="n">embedding</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">embedding_size</span><span class="p">)</span>
+<span class="n">rnn_cell</span> <span class="o">=</span> <span class="n">PytorchGRUCell</span><span class="p">(</span><span class="n">embedding_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">embedding</span><span class="p">,</span> <span class="n">rnn_cell</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [35]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">create_dataset</span><span class="p">(</span><span class="n">max_len</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">K</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">X_tensors</span><span class="p">,</span> <span class="n">Y_tensors</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">LongTensor</span><span class="p">,</span> <span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">Y_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">X_tensors</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">Y_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s2">"X and Y should be of same shape"</span>
+
+<span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span>
+<span class="n">train</span> <span class="o">=</span> <span class="n">data_utils</span><span class="o">.</span><span class="n">TensorDataset</span><span class="p">(</span><span class="n">X_tensors</span><span class="p">,</span> <span class="n">Y_tensors</span><span class="p">)</span>
+<span class="n">train_loader</span> <span class="o">=</span> <span class="n">data_utils</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pin_memory</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>torch.Size([1024, 10]) torch.Size([1024, 10])
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [36]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">overall_hidden</span> <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">model</span><span class="o">.</span><span class="n">embedding</span><span class="o">.</span><span class="n">embedding_dim</span><span class="p">))</span>
+<span class="n">overall_hidden</span> <span class="o">=</span> <span class="n">overall_hidden</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">overall_hidden</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[36]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>Variable containing:
+    0     0     0     0     0     0     0     0     0     0
+[torch.cuda.FloatTensor of size 1x10 (GPU 0)]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [37]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+learning_rate = 1e-4
+max_epochs = 1000
+check_every=50
+optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+
+for epoch in range(1, max_epochs+1):
+    for X_batch, Y_batch in train_loader:
+        X_batch = X_batch.cuda(async=True)
+        Y_batch = Y_batch.cuda(async=True)
+        X_batch, Y_batch = tensors2variables(X_batch, Y_batch)
+        hidden = overall_hidden.repeat(batch_size, 1)
+        # Forward pass: compute predicted y by passing x to the model.
+        loss = model.loss(X_batch, Y_batch, hidden=hidden)
+
+        # Before the backward pass, use the optimizer object to zero all of the
+        # gradients for the variables it will update (which are the learnable weights
+        # of the model)
+        optimizer.zero_grad()
+
+        # Backward pass: compute gradient of the loss with respect to model
+        # parameters
+        loss.backward()
+
+        # Calling the step function on an Optimizer makes an update to its
+        # parameters
+        optimizer.step()
+    if epoch % check_every != 0:
+        continue
+    
+    hidden = overall_hidden.repeat(X_tensors.shape[0], 1)
+    loss = model.loss(*tensors2variables(X_tensors.cuda(), Y_tensors.cuda()),
+                      hidden=hidden)
+    Y_predict = model.predict(Variable(X_tensors.cuda()), hidden=hidden).data
+    accuracy = (Y_tensors.cuda() == Y_predict).sum() /operator.mul(*Y_tensors.shape) * 100.
+    print("Epoch[{:03d}]: loss={:5.3f}; accuracy={:.3f}%".format(epoch, loss.data[0], accuracy))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch[050]: loss=0.564; accuracy=70.000%
+Epoch[100]: loss=0.450; accuracy=80.488%
+Epoch[150]: loss=0.380; accuracy=86.357%
+Epoch[200]: loss=0.334; accuracy=89.805%
+Epoch[250]: loss=0.292; accuracy=92.783%
+Epoch[300]: loss=0.259; accuracy=94.795%
+Epoch[350]: loss=0.237; accuracy=96.182%
+Epoch[400]: loss=0.221; accuracy=96.670%
+Epoch[450]: loss=0.190; accuracy=97.900%
+Epoch[500]: loss=0.148; accuracy=99.990%
+Epoch[550]: loss=0.135; accuracy=100.000%
+Epoch[600]: loss=0.131; accuracy=100.000%
+Epoch[650]: loss=0.130; accuracy=100.000%
+Epoch[700]: loss=0.129; accuracy=100.000%
+Epoch[750]: loss=0.128; accuracy=100.000%
+Epoch[800]: loss=0.128; accuracy=100.000%
+Epoch[850]: loss=0.127; accuracy=100.000%
+Epoch[900]: loss=0.127; accuracy=100.000%
+Epoch[950]: loss=0.127; accuracy=100.000%
+Epoch[1000]: loss=0.127; accuracy=100.000%
+CPU times: user 3min 10s, sys: 948 ms, total: 3min 11s
+Wall time: 3min 11s
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Great, this implementation is almost <strong>2x</strong> times faster than our implementation, probably because it is written using the C backend.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Using-Pytorch-GRU-module">Using Pytorch GRU module<a class="anchor-link" href="#Using-Pytorch-GRU-module">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [38]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)],</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[38]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>
+(0 ,.,.) = 
+  0  0  0  1  1  1
+  0  0  0  1  1  1
+[torch.FloatTensor of size 1x2x6]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [39]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">PyTorchModel</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="p">,</span> <span class="n">embedding_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">PyTorchModel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_size</span> <span class="o">=</span> <span class="n">input_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">embedding_size</span> <span class="o">=</span> <span class="n">embedding_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_size</span> <span class="o">=</span> <span class="n">output_size</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">embedding</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">embedding_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rnn</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">GRU</span><span class="p">(</span><span class="n">embedding_size</span><span class="p">,</span> <span class="n">embedding_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">embedding_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_size</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">loss_function</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word_ids</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">hidden</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">hidden</span> <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span>
+                <span class="n">word_ids</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">embedding</span><span class="o">.</span><span class="n">embedding_dim</span><span class="p">))</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">hidden</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+        <span class="n">embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embedding</span><span class="p">(</span><span class="n">word_ids</span><span class="p">)</span>
+        <span class="n">max_seq_length</span> <span class="o">=</span> <span class="n">word_ids</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="c1">## RNN input and output shapes are (seq_len, batch_size, input_size)</span>
+        <span class="n">embeddings</span> <span class="o">=</span> <span class="n">embeddings</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">hidden_states</span><span class="p">,</span> <span class="n">hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rnn</span><span class="p">(</span><span class="n">embeddings</span><span class="p">)</span>
+        
+        <span class="n">concat_tensors</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">embeddings</span><span class="p">,</span> <span class="n">hidden_states</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">concat_tensors</span> <span class="o">=</span> <span class="n">concat_tensors</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">contiguous</span><span class="p">()</span>
+        <span class="n">concat_tensors</span> <span class="o">=</span> <span class="n">concat_tensors</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">concat_tensors</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_linear</span><span class="p">(</span><span class="n">concat_tensors</span><span class="p">)</span>
+        
+        <span class="n">hidden_states</span> <span class="o">=</span> <span class="n">hidden_states</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="n">outputs</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_size</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_size</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">hidden_states</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">outputs</span><span class="p">,</span> <span class="n">hidden_states</span>
+    
+    <span class="k">def</span> <span class="nf">loss</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word_ids</span><span class="p">,</span> <span class="n">target_ids</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">outputs</span><span class="p">,</span> <span class="n">hidden_states</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">word_ids</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="n">hidden</span><span class="p">)</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="n">outputs</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">outputs</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">target_ids</span> <span class="o">=</span> <span class="n">target_ids</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">target_ids</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span>
+        <span class="c1">#print("output={}\ttargets={}".format(outputs.data.shape,target_ids.data.shape))</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss_function</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">target_ids</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">loss</span>    
+        
+        
+    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word_ids</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">outputs</span><span class="p">,</span> <span class="n">hidden_states</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">word_ids</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="n">hidden</span><span class="p">)</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="n">outputs</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">outputs</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">max_scores</span><span class="p">,</span> <span class="n">predictions</span> <span class="o">=</span> <span class="n">outputs</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">predictions</span> <span class="o">=</span> <span class="n">predictions</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">*</span><span class="n">word_ids</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+        <span class="c1">#print(word_ids.data.shape, predictions.data.shape)</span>
+        <span class="k">assert</span> <span class="n">word_ids</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">predictions</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s2">"word_ids: </span><span class="si">{}</span><span class="s2">, predictions: </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">word_ids</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">predictions</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">predictions</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [40]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">input_size</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">embedding_size</span><span class="o">=</span><span class="mi">10</span>
+<span class="n">output_size</span><span class="o">=</span><span class="mi">2</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">PyTorchModel</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">embedding_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [41]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">create_dataset</span><span class="p">(</span><span class="n">max_len</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">K</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">X_tensors</span><span class="p">,</span> <span class="n">Y_tensors</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">LongTensor</span><span class="p">,</span> <span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">Y_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">X_tensors</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">Y_tensors</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s2">"X and Y should be of same shape"</span>
+
+<span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span>
+<span class="n">train</span> <span class="o">=</span> <span class="n">data_utils</span><span class="o">.</span><span class="n">TensorDataset</span><span class="p">(</span><span class="n">X_tensors</span><span class="p">,</span> <span class="n">Y_tensors</span><span class="p">)</span>
+<span class="n">train_loader</span> <span class="o">=</span> <span class="n">data_utils</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pin_memory</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>torch.Size([1024, 10]) torch.Size([1024, 10])
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [42]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">overall_hidden</span> <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">model</span><span class="o">.</span><span class="n">embedding</span><span class="o">.</span><span class="n">embedding_dim</span><span class="p">))</span>
+<span class="n">overall_hidden</span> <span class="o">=</span> <span class="n">overall_hidden</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">overall_hidden</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[42]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>Variable containing:
+    0     0     0     0     0     0     0     0     0     0
+[torch.cuda.FloatTensor of size 1x10 (GPU 0)]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [43]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+learning_rate = 1e-4
+max_epochs = 1000
+check_every=50
+optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+
+for epoch in range(1, max_epochs+1):
+    for X_batch, Y_batch in train_loader:
+        X_batch = X_batch.cuda(async=True)
+        Y_batch = Y_batch.cuda(async=True)
+        X_batch, Y_batch = tensors2variables(X_batch, Y_batch)
+        hidden = overall_hidden.repeat(batch_size, 1)
+        # Forward pass: compute predicted y by passing x to the model.
+        loss = model.loss(X_batch, Y_batch, hidden=hidden)
+
+        # Before the backward pass, use the optimizer object to zero all of the
+        # gradients for the variables it will update (which are the learnable weights
+        # of the model)
+        optimizer.zero_grad()
+
+        # Backward pass: compute gradient of the loss with respect to model
+        # parameters
+        loss.backward()
+
+        # Calling the step function on an Optimizer makes an update to its
+        # parameters
+        optimizer.step()
+    if epoch % check_every != 0:
+        continue
+    
+    hidden = overall_hidden.repeat(X_tensors.shape[0], 1)
+    loss = model.loss(*tensors2variables(X_tensors.cuda(), Y_tensors.cuda()),
+                      hidden=hidden)
+    Y_predict = model.predict(Variable(X_tensors.cuda()), hidden=hidden).data
+    accuracy = (Y_tensors.cuda() == Y_predict).sum() /operator.mul(*Y_tensors.shape) * 100.
+    print("Epoch[{:03d}]: loss={:5.3f}; accuracy={:.3f}%".format(epoch, loss.data[0], accuracy))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch[050]: loss=0.580; accuracy=70.000%
+Epoch[100]: loss=0.453; accuracy=77.949%
+Epoch[150]: loss=0.342; accuracy=84.902%
+Epoch[200]: loss=0.255; accuracy=88.398%
+Epoch[250]: loss=0.193; accuracy=94.902%
+Epoch[300]: loss=0.136; accuracy=96.455%
+Epoch[350]: loss=0.074; accuracy=99.297%
+Epoch[400]: loss=0.032; accuracy=99.990%
+Epoch[450]: loss=0.016; accuracy=100.000%
+Epoch[500]: loss=0.009; accuracy=100.000%
+Epoch[550]: loss=0.005; accuracy=100.000%
+Epoch[600]: loss=0.003; accuracy=100.000%
+Epoch[650]: loss=0.002; accuracy=100.000%
+Epoch[700]: loss=0.001; accuracy=100.000%
+Epoch[750]: loss=0.001; accuracy=100.000%
+Epoch[800]: loss=0.001; accuracy=100.000%
+Epoch[850]: loss=0.000; accuracy=100.000%
+Epoch[900]: loss=0.000; accuracy=100.000%
+Epoch[950]: loss=0.000; accuracy=100.000%
+Epoch[1000]: loss=0.000; accuracy=100.000%
+CPU times: user 57.6 s, sys: 952 ms, total: 58.5 s
+Wall time: 58.7 s
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is super fast, <strong>3x</strong> faster than using the GRUCell and <strong>6x</strong> faster than our implementation.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This concludes our introduction to sequence tagging using Pytorch. The example covered here were very small so as to demonstrate the code required to implement a neural network as well as to give an intuition about the kind of tasks the networks can handle. More complex models can be built on top of this demo, which can handle variable length sequences, complex inference process (e.g. Linear Chain Conditional Random Fields for predicting the best sequence of outputs), and complex handling of input like words, phrases, etc.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [44]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Pytorch Version: </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">__version__</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Pytorch Version: 0.2.0_4
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://shubhanshu.com/blog/blog/tag/python.html">python</a>
+      <a href="http://shubhanshu.com/blog/blog/tag/machine-learning.html">machine learning</a>
+      <a href="http://shubhanshu.com/blog/blog/tag/deeplearning.html">deeplearning</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'shubhanshu-blog';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>
+  &copy;  2016 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44393164-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Interpreting Models ",
+  "url" : "http://shubhanshu.com/blog",
+  "image": "/assets/images/pic.jpg",
+  "description": "Shubhanshu Mishra's thoughts on mathematical models and code"
+}
+</script>
+
+</body>
+</html>
