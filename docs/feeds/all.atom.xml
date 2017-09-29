@@ -25660,4 +25660,60 @@ QmCC
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python"></category><category term="firsts"></category></entry></feed>
+</content><category term="python"></category><category term="firsts"></category></entry><entry><title>Revisiting Semi-Supervised Learning with Graph Embeddings</title><link href="http://shubhanshu.com/blog/blog/semi-sup-graphemb-salakh.html" rel="alternate"></link><published>2016-04-04T10:20:00-05:00</published><updated>2016-04-04T10:20:00-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-04-04:/blog/blog/semi-sup-graphemb-salakh.html</id><summary type="html">&lt;p&gt;Semi-supervised way of learning graph embeddings&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Authors: Zhilin Yang, William Cohen, Ruslan Salakhutdinov&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This is an interesting paper which describes a semi-supervised learning algorithm for Graph Embedding. The authors have build up on the DeepWalk [1] and LINE [2] algorithms which learn embeddings of nodes in a graph in a similar way Word2Vec Skipgram model [3] learns word embeddings based on context. They add a semi-supervised component using both Transductive and Inductive learning, which utilizes partially labeled data to jointly train the model to predict the class of the labeled nodes and the context of the all nodes. The authors report an increase in accuracy over other semi-supervised methods, on several text classification, entity extraction and entity classification tasks.&lt;/p&gt;
+&lt;h2&gt;Thoughts&lt;/h2&gt;
+&lt;p&gt;I found the paper to be really interesting because of its ability to lay some foundation in joint training of embeddings on labeled and unlabled data. The authors differentiate their paper from other semi-supervised algorithms in its use of graph to identify context of the instances, while at the same time using features of each instance.&lt;/p&gt;
+&lt;p&gt;It is interesting to see, how many algorithms have build up on the word2vec skipgram approach to learn embeddings for the data instances. One of the major challenges with the approach is coming up with a proper way to generate the negative samples. Papers like DeepWalk and LINE use a random walk approach to generate the negative samples from the data. The authors have presented a really useful way to sample the positive and negative samples from the graph which, at the same time ensures that the labeled data is also present in each sample while training.&lt;/p&gt;
+&lt;p&gt;The authors' presentation of the transductive and inductive variants of the algorithms, presents a framework to apply this approach to cases where the predictions need to be done on in-sample unlabeled data (transductive) as well as out of sample unlabeled data (inductive).&lt;/p&gt;
+&lt;p&gt;One issue I found with the paper was the &lt;em&gt;Experiments&lt;/em&gt; sections and the data used for the analysis. The CiteSeer, CORA and PubMed data are relatively small in my understanding, to describe the efficiency of this model. However, on the larger DIEL data, the algorithms' significant performance improvement can be taken as a measure of its strength over other mentioned algorithms.&lt;/p&gt;
+&lt;p&gt;Overall, I think it is a very useful paper which will push the Machine Learning field forward by further utilizing the vector embedding approach and nicely incorporating it into a semi-supervised setting.&lt;/p&gt;
+&lt;p&gt;It would be interesting to use the same approach on Skip-Thought vectors [4] or paragraph vectors connected by topics, users etc.&lt;/p&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;p&gt;[1] Perozzi, Bryan, Rami Al-Rfou, and Steven Skiena. "Deepwalk: Online learning of social representations." Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining. ACM, 2014.&lt;/p&gt;
+&lt;p&gt;[2] Tang, Jian, et al. "Line: Large-scale information network embedding." Proceedings of the 24th International Conference on World Wide Web. International World Wide Web Conferences Steering Committee, 2015.&lt;/p&gt;
+&lt;p&gt;[3] Mikolov, Tomas, et al. "Distributed representations of words and phrases and their compositionality." Advances in neural information processing systems. 2013.&lt;/p&gt;
+&lt;p&gt;[4] Kiros, Ryan, et al. "Skip-thought vectors." Advances in Neural Information Processing Systems. 2015.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;@misc{1603.08861,
+Author = {Zhilin Yang and William Cohen and Ruslan Salakhutdinov},
+Title = {Revisiting Semi-Supervised Learning with Graph Embeddings},
+Year = {2016},
+Eprint = {arXiv:1603.08861},
+}
+&lt;/pre&gt;&lt;/div&gt;</content><category term="deeplearning"></category></entry><entry><title>Ask Me Anything - Dynamic Memory Networks for Natural Language Processing</title><link href="http://shubhanshu.com/blog/blog/ama-socher.html" rel="alternate"></link><published>2016-03-09T10:20:00-06:00</published><updated>2016-03-09T10:20:00-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-03-09:/blog/blog/ama-socher.html</id><summary type="html">&lt;p&gt;End to end module to learn NLP tasks as Q/A tasks.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Authors: Ankit Kumar, Ozan Irsoy, Peter Ondruska, Mohit Iyyer, James Bradbury, Ishaan Gulrajani, Victor Zhong, Romain Paulus, Richard Socher&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This paper presents a general purpose neural network framework called Dynamic Memory Networks (DMN), for solving NLP tasks such as question answering (QnA), text classification for sentiment analysis, and Part-of-Speech (POS) tagging. The authors achieve this by converting each task into its equivalent QnA form e.g. "What is the sentiment?", "POS tags?" etc. They report state of the art accuracy on all the tasks.&lt;/p&gt;
+&lt;h2&gt;Thoughts&lt;/h2&gt;
+&lt;p&gt;The paper proposes an end-to-end differentiable NN module called DMN. It consists of 4 parts, an input module, question module, episodic memory module and an answer module. Their works appear quite similar to the MemNN neural network with the main difference being the episodic memory module, which is an attention based recurrent module over the input hidden states and the question state. The authors argue that in many cases multiple passes over all the facts and question can help in better question answering. This is also demonstrated in their visualization of the attention matrix for the sentiment analysis case. This application is also demonstrated to work quite well for the question answering tasks.&lt;/p&gt;
+&lt;p&gt;Some highlights of the paper are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recurrent processing of multiple sentences and outputting only one hidden state per sentence.&lt;/li&gt;
+&lt;li&gt;Recurrent attention based episodic memory&lt;/li&gt;
+&lt;li&gt;Supervised training of the episodic memory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Although the authors report a better average performance of DMN on Facebook bABI dataset compared to MemNN, there are many instances where their performance is worse then MemNN. On POS tagging, their method equals the performance of the previous state of the art SCNN, although their ensemble model outperforms SCNN outperforms by 0.06%. On sentiment analysis, their model is better by 0.5% compared to CNN-MC model of Kim 2014.&lt;/p&gt;
+&lt;p&gt;One important thing which comes out from the comparison is that the CNN models are quite close to RNN models in performance for sentiment and POS tagging tasks. I would be interested in knowing, if this is because of similar properties of CNN which can encode attention during convolution and pooling operations. Also, given the fact that RNNs are sometimes more expensive to train than CNN, should we try out more CNN applications in NLP, probably a CNN over the attention matrix.&lt;/p&gt;
+&lt;p&gt;For the multi-sentence input, I would be interested in knowing how the DMN performns if there is an output from the Input module per token for each sentence. I think this will give the module more fine-grained control over the details in each sentence, especially, when it involved path finding and positonal arguments.&lt;/p&gt;
+&lt;p&gt;Overall, I think this paper is another important step in the direction of end-to-end NLP, and supports the the prediction of Christopher Manning of "Deep Learning Tsunami in NLP". Given the previous seminal work in the MemNN paper as well as the NLP from Scratch paper, this work also will get more researchers involved in using end to end sequence to sequence learning approaches in NLP tasks.&lt;/p&gt;
+&lt;h3&gt;Reference&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;@article{DBLP:journals/corr/KumarISBEPOGS15,
+author = {Ankit Kumar and
+Ozan Irsoy and
+Jonathan Su and
+James Bradbury and
+Robert English and
+Brian Pierce and
+Peter Ondruska and
+Ishaan Gulrajani and
+Richard Socher},
+title = {Ask Me Anything: Dynamic Memory Networks for Natural Language Processing},
+journal = {CoRR},
+volume = {abs/1506.07285},
+year = {2015},
+url = {http://arxiv.org/abs/1506.07285},
+timestamp = {Wed, 01 Jul 2015 15:10:24 +0200},
+biburl = {http://dblp.uni-trier.de/rec/bib/journals/corr/KumarISBEPOGS15},
+bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+&lt;/pre&gt;&lt;/div&gt;</content><category term="deeplearning"></category></entry></feed>
