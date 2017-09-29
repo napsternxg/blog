@@ -1,8 +1,8 @@
 Title: Revisiting Semi-Supervised Learning with Graph Embeddings
 Date: 2016-04-04 10:20
 Modified: 2016-04-04 10:20
-Category: reviews
-Tags: deeplearning
+Category: posts
+Tags: deeplearning, reviews
 Slug: semi-sup-graphemb-salakh
 Authors: Shubhanshu Mishra
 Summary: Semi-supervised way of learning graph embeddings

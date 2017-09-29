@@ -1,8 +1,8 @@
 Title: Ask Me Anything - Dynamic Memory Networks for Natural Language Processing
 Date: 2016-03-09 10:20
 Modified: 2016-03-09 10:20
-Category: reviews
-Tags: deeplearning
+Category: posts
+Tags: deeplearning, reviews
 Slug: ama-socher
 Authors: Shubhanshu Mishra
 Summary: End to end module to learn NLP tasks as Q/A tasks. 
