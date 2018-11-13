@@ -1,0 +1,9 @@
+name: pelican
+dependencies:
+    - python=3
+    - jupyter
+    - ipython
+    - nbconvert
+    - markdown
+    - pip:
+        - pelican
