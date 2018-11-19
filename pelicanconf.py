@@ -48,23 +48,23 @@ IGNORE_FILES = ['.ipynb_checkpoints']
 ## PATHS
 OUTPUT_PATH="docs"
 # put articles (posts) in blog/
-ARTICLE_URL = 'blog/{slug}.html'
-ARTICLE_SAVE_AS = 'blog/{slug}.html'
+ARTICLE_URL = '{slug}.html'
+ARTICLE_SAVE_AS = '{slug}.html'
 # we need to change the main index page now though...
 INDEX_SAVE_AS = 'index.html'
 #now move all the category and tag stuff to that blog/ dir as well
-CATEGORY_URL = 'blog/category/{slug}.html'
-CATEGORY_SAVE_AS = 'blog/category/{slug}.html'
-CATEGORIES_URL = 'blog/category/'
-CATEGORIES_SAVE_AS = 'blog/category/index.html'
-TAG_URL = 'blog/tag/{slug}.html'
-TAG_SAVE_AS = 'blog/tag/{slug}.html'
-TAGS_URL = 'blog/tag/'
-TAGS_SAVE_AS = 'blog/tag/index.html'
-ARCHIVES_SAVE_AS = 'blog/archives/archives.html'
-ARCHIVES_URL = 'blog/archives/archives.html'
-AUTHOR_SAVE_AS = 'blog/{slug}.html'
-AUTHORS_SAVE_AS = 'blog/authors.html'
+CATEGORY_URL = 'category/{slug}.html'
+CATEGORY_SAVE_AS = 'category/{slug}.html'
+CATEGORIES_URL = 'category/'
+CATEGORIES_SAVE_AS = 'category/index.html'
+TAG_URL = 'tag/{slug}.html'
+TAG_SAVE_AS = 'tag/{slug}.html'
+TAGS_URL = 'tag/'
+TAGS_SAVE_AS = 'tag/index.html'
+ARCHIVES_SAVE_AS = 'archives/archives.html'
+ARCHIVES_URL = 'archives/archives.html'
+AUTHOR_SAVE_AS = '{slug}.html'
+AUTHORS_SAVE_AS = 'authors.html'
 # put pages in the root directory
 PAGE_SAVE_AS = '{slug}.html'
 PAGE_URL = '{slug}.html'

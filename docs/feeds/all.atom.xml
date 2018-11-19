@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Interpreting Models</title><link href="http://shubhanshu.com/blog/" rel="alternate"></link><link href="http://shubhanshu.com/blog/feeds/all.atom.xml" rel="self"></link><id>http://shubhanshu.com/blog/</id><updated>2018-11-19T17:36:12-06:00</updated><subtitle>A quest to make models interpretable</subtitle><entry><title>D3</title><link href="http://shubhanshu.com/blog/blog/d3.html" rel="alternate"></link><published>2018-11-19T17:36:12-06:00</published><updated>2018-11-19T17:36:12-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2018-11-19:/blog/blog/d3.html</id><summary type="html">&lt;p&gt;Links related to D3 visualizations&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Learn D3&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Interpreting Models</title><link href="http://shubhanshu.com/blog/" rel="alternate"></link><link href="http://shubhanshu.com/blog/feeds/all.atom.xml" rel="self"></link><id>http://shubhanshu.com/blog/</id><updated>2018-11-19T17:36:12-06:00</updated><subtitle>A quest to make models interpretable</subtitle><entry><title>D3</title><link href="http://shubhanshu.com/blog/d3.html" rel="alternate"></link><published>2018-11-19T17:36:12-06:00</published><updated>2018-11-19T17:36:12-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2018-11-19:/blog/d3.html</id><summary type="html">&lt;p&gt;Links related to D3 visualizations&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Learn D3&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;http://learnjsdata.com/index.html&lt;/li&gt;
 &lt;li&gt;http://bl.ocks.org/sxywu/fcef0e6dac231ef2e54b - Very good and clean example of D3 with React&lt;/li&gt;
@@ -15,7 +15,7 @@
 &lt;p&gt;http://facebook.github.io/immutable-js/ - Immutable data structures
 https://runkit.com/home - For prototyping
 https://beta.observablehq.com - For prototyping with D3
-https://github.com/nicgirault/circosJS - Circos Charts in JS using D3&lt;/p&gt;</content><category term="links"></category></entry><entry><title>Natural Language Processing</title><link href="http://shubhanshu.com/blog/blog/nlp.html" rel="alternate"></link><published>2018-11-19T17:33:30-06:00</published><updated>2018-11-19T17:33:30-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2018-11-19:/blog/blog/nlp.html</id><summary type="html">&lt;p&gt;Links related to NLP resources&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Courses&lt;/h2&gt;
+https://github.com/nicgirault/circosJS - Circos Charts in JS using D3&lt;/p&gt;</content><category term="links"></category></entry><entry><title>Natural Language Processing</title><link href="http://shubhanshu.com/blog/nlp.html" rel="alternate"></link><published>2018-11-19T17:33:30-06:00</published><updated>2018-11-19T17:33:30-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2018-11-19:/blog/nlp.html</id><summary type="html">&lt;p&gt;Links related to NLP resources&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Courses&lt;/h2&gt;
 &lt;p&gt;https://github.com/uclmr/stat-nlp-book/blob/python/overview.ipynb&lt;/p&gt;
 &lt;h2&gt;Books&lt;/h2&gt;
 &lt;p&gt;Information extraction: https://web.stanford.edu/~jurafsky/slp3/17.pdf covers main ideas of information extraction&lt;/p&gt;
@@ -32,7 +32,7 @@ https://github.com/nicgirault/circosJS - Circos Charts in JS using D3&lt;/p&gt;<
 &lt;li&gt;Rules for forming questions using text: https://ell.stackexchange.com/questions/1156/when-converting-a-statement-to-a-question-where-in-the-sentence-should-i-put-t/1198#1198&lt;/li&gt;
 &lt;li&gt;Intel NLP library lots of great features using Tensorflow: http://nlp_architect.nervanasys.com/publications.html&lt;/li&gt;
 &lt;li&gt;Information extraction from unstructured text: https://sites.google.com/site/keit2018kdd/&lt;/li&gt;
-&lt;/ul&gt;</content><category term="links"></category></entry><entry><title>Time dependent models</title><link href="http://shubhanshu.com/blog/blog/time-dependent-models.html" rel="alternate"></link><published>2017-09-11T14:05:00-05:00</published><updated>2017-09-11T14:05:00-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-11:/blog/blog/time-dependent-models.html</id><summary type="html">
+&lt;/ul&gt;</content><category term="links"></category></entry><entry><title>Time dependent models</title><link href="http://shubhanshu.com/blog/time-dependent-models.html" rel="alternate"></link><published>2017-09-11T14:05:00-05:00</published><updated>2017-09-11T14:05:00-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-11:/blog/time-dependent-models.html</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -15678,7 +15678,7 @@ cgghhBCSlv4PgfNoADwBj8EAAAAASUVORK5CYII=
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python"></category><category term="machine learning"></category></entry><entry><title>Pytorch RNN sequence tagging</title><link href="http://shubhanshu.com/blog/blog/pytorch-rnn-sequence-tagging.html" rel="alternate"></link><published>2017-09-03T01:57:00-05:00</published><updated>2017-09-03T01:57:00-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-03:/blog/blog/pytorch-rnn-sequence-tagging.html</id><summary type="html">
+</content><category term="python"></category><category term="machine learning"></category></entry><entry><title>Pytorch RNN sequence tagging</title><link href="http://shubhanshu.com/blog/pytorch-rnn-sequence-tagging.html" rel="alternate"></link><published>2017-09-03T01:57:00-05:00</published><updated>2017-09-03T01:57:00-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-03:/blog/pytorch-rnn-sequence-tagging.html</id><summary type="html">
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;</summary><content type="html">
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
@@ -17746,7 +17746,7 @@ Wall time: 58.7 s
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python"></category><category term="machine learning"></category><category term="deeplearning"></category></entry><entry><title>Metropolis Hastings algorithm - a python primer</title><link href="http://shubhanshu.com/blog/blog/metropolis-hastings-primer.html" rel="alternate"></link><published>2017-04-18T02:19:00-05:00</published><updated>2017-04-18T02:19:00-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-04-18:/blog/blog/metropolis-hastings-primer.html</id><summary type="html">
+</content><category term="python"></category><category term="machine learning"></category><category term="deeplearning"></category></entry><entry><title>Metropolis Hastings algorithm - a python primer</title><link href="http://shubhanshu.com/blog/metropolis-hastings-primer.html" rel="alternate"></link><published>2017-04-18T02:19:00-05:00</published><updated>2017-04-18T02:19:00-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-04-18:/blog/metropolis-hastings-primer.html</id><summary type="html">
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;</summary><content type="html">
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
@@ -22559,7 +22559,7 @@ h6BbAAAAAElFTkSuQmCC
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="machine learning"></category><category term="implementation"></category><category term="bayesian"></category></entry><entry><title>Convex Optimization using CVXPY</title><link href="http://shubhanshu.com/blog/blog/convex-optimization-cvxpy.html" rel="alternate"></link><published>2017-01-02T10:30:00-06:00</published><updated>2017-01-02T10:30:00-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-01-02:/blog/blog/convex-optimization-cvxpy.html</id><summary type="html">
+</content><category term="machine learning"></category><category term="implementation"></category><category term="bayesian"></category></entry><entry><title>Convex Optimization using CVXPY</title><link href="http://shubhanshu.com/blog/convex-optimization-cvxpy.html" rel="alternate"></link><published>2017-01-02T10:30:00-06:00</published><updated>2017-01-02T10:30:00-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-01-02:/blog/convex-optimization-cvxpy.html</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -25501,7 +25501,7 @@ QmCC
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="machine learning"></category></entry><entry><title>Getting started with pelican</title><link href="http://shubhanshu.com/blog/blog/getting-started-pelican.html" rel="alternate"></link><published>2016-11-08T10:30:00-06:00</published><updated>2016-11-08T10:30:00-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-11-08:/blog/blog/getting-started-pelican.html</id><summary type="html">
+</content><category term="machine learning"></category></entry><entry><title>Getting started with pelican</title><link href="http://shubhanshu.com/blog/getting-started-pelican.html" rel="alternate"></link><published>2016-11-08T10:30:00-06:00</published><updated>2016-11-08T10:30:00-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-11-08:/blog/getting-started-pelican.html</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -26936,7 +26936,7 @@ QmCC
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python"></category><category term="firsts"></category></entry><entry><title>Revisiting Semi-Supervised Learning with Graph Embeddings</title><link href="http://shubhanshu.com/blog/blog/semi-sup-graphemb-salakh.html" rel="alternate"></link><published>2016-04-04T10:20:00-05:00</published><updated>2016-04-04T10:20:00-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-04-04:/blog/blog/semi-sup-graphemb-salakh.html</id><summary type="html">&lt;p&gt;Semi-supervised way of learning graph embeddings&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Authors: Zhilin Yang, William Cohen, Ruslan Salakhutdinov&lt;/strong&gt;&lt;/p&gt;
+</content><category term="python"></category><category term="firsts"></category></entry><entry><title>Revisiting Semi-Supervised Learning with Graph Embeddings</title><link href="http://shubhanshu.com/blog/semi-sup-graphemb-salakh.html" rel="alternate"></link><published>2016-04-04T10:20:00-05:00</published><updated>2016-04-04T10:20:00-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-04-04:/blog/semi-sup-graphemb-salakh.html</id><summary type="html">&lt;p&gt;Semi-supervised way of learning graph embeddings&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Authors: Zhilin Yang, William Cohen, Ruslan Salakhutdinov&lt;/strong&gt;&lt;/p&gt;
 &lt;h2&gt;Overview&lt;/h2&gt;
 &lt;p&gt;This is an interesting paper which describes a semi-supervised learning algorithm for Graph Embedding. The authors have build up on the DeepWalk [1] and LINE [2] algorithms which learn embeddings of nodes in a graph in a similar way Word2Vec Skipgram model [3] learns word embeddings based on context. They add a semi-supervised component using both Transductive and Inductive learning, which utilizes partially labeled data to jointly train the model to predict the class of the labeled nodes and the context of the all nodes. The authors report an increase in accuracy over other semi-supervised methods, on several text classification, entity extraction and entity classification tasks.&lt;/p&gt;
 &lt;h2&gt;Thoughts&lt;/h2&gt;
@@ -26957,7 +26957,7 @@ Title = {Revisiting Semi-Supervised Learning with Graph Embeddings},
 Year = {2016},
 Eprint = {arXiv:1603.08861},
 }
-&lt;/pre&gt;&lt;/div&gt;</content><category term="deeplearning"></category><category term="reviews"></category></entry><entry><title>Ask Me Anything - Dynamic Memory Networks for Natural Language Processing</title><link href="http://shubhanshu.com/blog/blog/ama-socher.html" rel="alternate"></link><published>2016-03-09T10:20:00-06:00</published><updated>2016-03-09T10:20:00-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-03-09:/blog/blog/ama-socher.html</id><summary type="html">&lt;p&gt;End to end module to learn NLP tasks as Q/A tasks.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Authors: Ankit Kumar, Ozan Irsoy, Peter Ondruska, Mohit Iyyer, James Bradbury, Ishaan Gulrajani, Victor Zhong, Romain Paulus, Richard Socher&lt;/strong&gt;&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="deeplearning"></category><category term="reviews"></category></entry><entry><title>Ask Me Anything - Dynamic Memory Networks for Natural Language Processing</title><link href="http://shubhanshu.com/blog/ama-socher.html" rel="alternate"></link><published>2016-03-09T10:20:00-06:00</published><updated>2016-03-09T10:20:00-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-03-09:/blog/ama-socher.html</id><summary type="html">&lt;p&gt;End to end module to learn NLP tasks as Q/A tasks.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Authors: Ankit Kumar, Ozan Irsoy, Peter Ondruska, Mohit Iyyer, James Bradbury, Ishaan Gulrajani, Victor Zhong, Romain Paulus, Richard Socher&lt;/strong&gt;&lt;/p&gt;
 &lt;h2&gt;Overview&lt;/h2&gt;
 &lt;p&gt;This paper presents a general purpose neural network framework called Dynamic Memory Networks (DMN), for solving NLP tasks such as question answering (QnA), text classification for sentiment analysis, and Part-of-Speech (POS) tagging. The authors achieve this by converting each task into its equivalent QnA form e.g. "What is the sentiment?", "POS tags?" etc. They report state of the art accuracy on all the tasks.&lt;/p&gt;
 &lt;h2&gt;Thoughts&lt;/h2&gt;
