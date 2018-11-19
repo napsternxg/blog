@@ -35,7 +35,7 @@ SOCIAL = (('website', 'http://shubhanshu.com'),
     )
 
 DEFAULT_PAGINATION = 10
-
+DEFAULT_DATE = 'fs'
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
@@ -57,9 +57,9 @@ CATEGORY_URL = 'blog/category/{slug}.html'
 CATEGORY_SAVE_AS = 'blog/category/{slug}.html'
 CATEGORIES_URL = 'blog/category/'
 CATEGORIES_SAVE_AS = 'blog/category/index.html'
-TAG_URL = 'blog/tag/{slug}.html'    
-TAG_SAVE_AS = 'blog/tag/{slug}.html'    
-TAGS_URL = 'blog/tag/'  
+TAG_URL = 'blog/tag/{slug}.html'
+TAG_SAVE_AS = 'blog/tag/{slug}.html'
+TAGS_URL = 'blog/tag/'
 TAGS_SAVE_AS = 'blog/tag/index.html'
 ARCHIVES_SAVE_AS = 'blog/archives/archives.html'
 ARCHIVES_URL = 'blog/archives/archives.html'

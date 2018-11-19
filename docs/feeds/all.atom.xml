@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Interpreting Models</title><link href="http://shubhanshu.com/blog/" rel="alternate"></link><link href="http://shubhanshu.com/blog/feeds/all.atom.xml" rel="self"></link><id>http://shubhanshu.com/blog/</id><updated>2017-09-11T14:05:00-05:00</updated><subtitle>A quest to make models interpretable</subtitle><entry><title>Time dependent models</title><link href="http://shubhanshu.com/blog/blog/time-dependent-models.html" rel="alternate"></link><published>2017-09-11T14:05:00-05:00</published><updated>2017-09-11T14:05:00-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-11:/blog/blog/time-dependent-models.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Interpreting Models</title><link href="http://shubhanshu.com/blog/" rel="alternate"></link><link href="http://shubhanshu.com/blog/feeds/all.atom.xml" rel="self"></link><id>http://shubhanshu.com/blog/</id><updated>2018-11-19T17:36:12-06:00</updated><subtitle>A quest to make models interpretable</subtitle><entry><title>D3</title><link href="http://shubhanshu.com/blog/blog/d3.html" rel="alternate"></link><published>2018-11-19T17:36:12-06:00</published><updated>2018-11-19T17:36:12-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2018-11-19:/blog/blog/d3.html</id><summary type="html">&lt;p&gt;Links related to D3 visualizations&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Learn D3&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;http://learnjsdata.com/index.html&lt;/li&gt;
+&lt;li&gt;http://bl.ocks.org/sxywu/fcef0e6dac231ef2e54b - Very good and clean example of D3 with React&lt;/li&gt;
+&lt;li&gt;http://d3indepth.com/ - Step by step to using D3 v4&lt;/li&gt;
+&lt;li&gt;https://medium.com/@sxywu/on-d3-react-and-a-little-bit-of-flux-88a226f328f3 - Shirly Wu's blog&lt;/li&gt;
+&lt;li&gt;https://medium.com/@sxywu/understanding-the-force-ef1237017d5 - Custom layouts&lt;/li&gt;
+&lt;li&gt;http://mfviz.com/react-d3/ - Read D3 exercises&lt;/li&gt;
+&lt;li&gt;http://slides.com/shirleywu/deck-11 - D3 React tutorial ppt&lt;/li&gt;
+&lt;li&gt;http://slides.com/shirleywu/deck-10 - General design guidelines for D3&lt;/li&gt;
+&lt;li&gt;https://d3-discovery.net/ - many d3 examples&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Tools&lt;/h2&gt;
+&lt;p&gt;http://facebook.github.io/immutable-js/ - Immutable data structures
+https://runkit.com/home - For prototyping
+https://beta.observablehq.com - For prototyping with D3
+https://github.com/nicgirault/circosJS - Circos Charts in JS using D3&lt;/p&gt;</content><category term="links"></category></entry><entry><title>Natural Language Processing</title><link href="http://shubhanshu.com/blog/blog/nlp.html" rel="alternate"></link><published>2018-11-19T17:33:30-06:00</published><updated>2018-11-19T17:33:30-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2018-11-19:/blog/blog/nlp.html</id><summary type="html">&lt;p&gt;Links related to NLP resources&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Courses&lt;/h2&gt;
+&lt;p&gt;https://github.com/uclmr/stat-nlp-book/blob/python/overview.ipynb&lt;/p&gt;
+&lt;h2&gt;Books&lt;/h2&gt;
+&lt;p&gt;Information extraction: https://web.stanford.edu/~jurafsky/slp3/17.pdf covers main ideas of information extraction&lt;/p&gt;
+&lt;h2&gt;Scientific NLP&lt;/h2&gt;
+&lt;p&gt;https://github.com/NIHOPA/NLPre&lt;/p&gt;
+&lt;h2&gt;Tools&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Using spacy and flashtext for fast lookup of dictionary items in text. https://github.com/mpuig/spacy-lookup&lt;/li&gt;
+&lt;li&gt;Open IE tool - https://github.com/dair-iitd/OpenIE-standalone&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html&lt;/li&gt;
+&lt;li&gt;Rules for forming questions using text: https://ell.stackexchange.com/questions/1156/when-converting-a-statement-to-a-question-where-in-the-sentence-should-i-put-t/1198#1198&lt;/li&gt;
+&lt;li&gt;Intel NLP library lots of great features using Tensorflow: http://nlp_architect.nervanasys.com/publications.html&lt;/li&gt;
+&lt;li&gt;Information extraction from unstructured text: https://sites.google.com/site/keit2018kdd/&lt;/li&gt;
+&lt;/ul&gt;</content><category term="links"></category></entry><entry><title>Time dependent models</title><link href="http://shubhanshu.com/blog/blog/time-dependent-models.html" rel="alternate"></link><published>2017-09-11T14:05:00-05:00</published><updated>2017-09-11T14:05:00-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-11:/blog/blog/time-dependent-models.html</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
