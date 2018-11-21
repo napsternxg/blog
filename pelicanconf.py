@@ -6,6 +6,13 @@ AUTHOR = u'Shubhanshu Mishra'
 SITENAME = u'Interpreting Models'
 SITEURL = 'http://localhost:8000'
 
+MARKDOWN = {
+        "extension_configs": {
+            "pymdownx.magiclink": {}
+            },
+        "output_format": "html5"
+        }
+
 GITHUB_URL='https://github.com/napsternxg/blog'
 PATH = 'content'
 
@@ -15,7 +22,7 @@ DEFAULT_LANG = u'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
@@ -85,7 +92,7 @@ CC_LICENSE = {
 #THEME='../pelican-themes/Flex'
 THEME='../pelican-themes/pelican-bootswatch'
 SITELOGO = '/assets/images/pic.jpg'
-PYGMENTS_STYLE='friendly'
+PYGMENTS_STYLE='native'
 BOOTSTRAP_THEME='paper'
 BOOTSTRAP_FLUID=True
 COPYRIGHT_YEAR = 2016

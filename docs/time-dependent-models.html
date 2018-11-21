@@ -8,7 +8,7 @@
 
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.1.3/litera/bootstrap.min.css" rel="stylesheet" integrity="sha384-JuAGGg3c8UPrWdf0N8ZPJyOHkACruI9+mbl0C+H6XSYOqv9xIdiUSKehRyA8jUol" crossorigin="anonymous">
 
-  <link rel="stylesheet" type="text/css" href="http://shubhanshu.com/blog/theme/pygments/friendly.min.css">
+  <link rel="stylesheet" type="text/css" href="http://shubhanshu.com/blog/theme/pygments/native.min.css">
   <link rel="stylesheet" type="text/css" href="http://shubhanshu.com/blog/theme/font-awesome/css/font-awesome.min.css">
 
 
@@ -90,23 +90,20 @@
 
   <div>
     
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Time-Dependent-Classification/Regression">Time Dependent Classification/Regression<a class="anchor-link" href="#Time-Dependent-Classification/Regression">¶</a></h1><p>I have been interested in time dependent classification/regression for a long time. Most machine learning models are implemented as static models where our assumptions about the relationships between the input variables and the parameters of the models is fixed. This assumption is mostly true, however, there are cases where the model parameters for the same input variable must be allowed to change with time. Furthermore, the change in the model parameters should not be large compared to their value at the previous timesteps. One simple way to approach this problem is to have a different model for each timestep, however, this will not allow us to learn from all the data at hand. The second approach is to have a different parameter for each timestep and a base set of parameters. This second approach although more appropriate will not allow us to enforce our constraint that the model parameters at a given timestep should not change too much from their value at the last timestep.</p>
+<h1 id="Time-Dependent-Classification/Regression">Time Dependent Classification/Regression<a class="anchor-link" href="#Time-Dependent-Classification/Regression">&#182;</a></h1><p>I have been interested in time dependent classification/regression for a long time. Most machine learning models are implemented as static models where our assumptions about the relationships between the input variables and the parameters of the models is fixed. This assumption is mostly true, however, there are cases where the model parameters for the same input variable must be allowed to change with time. Furthermore, the change in the model parameters should not be large compared to their value at the previous timesteps. One simple way to approach this problem is to have a different model for each timestep, however, this will not allow us to learn from all the data at hand. The second approach is to have a different parameter for each timestep and a base set of parameters. This second approach although more appropriate will not allow us to enforce our constraint that the model parameters at a given timestep should not change too much from their value at the last timestep.</p>
 <p>How can we encode such relationships in our models? How can we implement these models using existing python libraries? This will be topic of this post. Inspiration for this post comes from <a href="http://multithreaded.stitchfix.com/blog/2017/09/08/time-dependent-classification/">a recent post</a> on a similar topic by Stitchfix.com, you can visit their blog for more details at motivation for using such models in industry. They suggest the approach can be implemented in R using <code>glmnet</code> package. Since, I am interested in this kind of problems and since python is my primary language for writing code, I decided to replicate their results using existing python libraries. 
 A similar model can be set up in a fully Bayesian way using random walk gaussian priors on the weights at each timestep. This is described in <a href="http://twiecki.github.io/blog/2017/03/14/random-walk-deep-net/">a wonderful post by Thomas Wiecki</a>.</p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Problem-formulation">Problem formulation<a class="anchor-link" href="#Problem-formulation">¶</a></h2>$$
+<h2 id="Problem-formulation">Problem formulation<a class="anchor-link" href="#Problem-formulation">&#182;</a></h2>$$
 \begin{equation}
 X = [X_1, X_2, ..., X_t, ..., X_T]\\
 Y = [Y_1, Y_2, ..., Y_t, ..., Y_T]\\
@@ -115,16 +112,17 @@ Y_t = f_t(X_t)
 $$<p>Here $X$ in the input data such that at each timestep we get $X_t$ and it's corresponding $Y_t$. A good senario will be a user ($X_t$)'s purchase activity ($Y_t$) on their $t$-th visit or a movie($X_t$)'s earnings($Y_t$) on it's $t$-th week since release.</p>
 <p>This data can be modeled as a linear model with time dependent weights as $Y_t = f(X_t, \beta_{t})$, such that $\left\lVert\beta_{t}-\beta_{t-1}\right\rVert$ is small.</p>
 <p>Hence, we can reparameterize the equation as suggested in the stitchfix post as $\beta_{t} = \sum_{1}^{t} \delta_{t}$, where $\delta_{t} = \beta_{t} - \beta_{t-1}$ and $\delta_{1} = \beta_{1}$. This reparameterization allows us to use existing classification libraries to implement our model with some modificiation of the input.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [1]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
-<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
 
 <span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -138,47 +136,50 @@ $$<p>Here $X$ in the input data such that at each timestep we get $X_t$ and it's
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">ElasticNet</span><span class="p">,</span> <span class="n">LogisticRegression</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">r2_score</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">f1_score</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [2]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s2">"paper"</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">"ticks"</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s2">&quot;paper&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;ticks&quot;</span><span class="p">)</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">20170911</span><span class="p">)</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
+
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Generating-some-fake-data-for-time-dependent-models">Generating some fake data for time dependent models<a class="anchor-link" href="#Generating-some-fake-data-for-time-dependent-models">¶</a></h2><p>One way we can generate the fake data for time-dependent models is by starting with an initial value of weights and then changing the weights in a random walk fashion with some stepsize for each weight.</p>
+<h2 id="Generating-some-fake-data-for-time-dependent-models">Generating some fake data for time dependent models<a class="anchor-link" href="#Generating-some-fake-data-for-time-dependent-models">&#182;</a></h2><p>One way we can generate the fake data for time-dependent models is by starting with an initial value of weights and then changing the weights in a random walk fashion with some stepsize for each weight.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">timesteps</span><span class="o">=</span><span class="mi">3</span>
 <span class="k">def</span> <span class="nf">random_walk_values</span><span class="p">(</span><span class="n">timesteps</span><span class="p">,</span> <span class="n">initial_values</span><span class="p">,</span> <span class="n">stepsize</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="sd">'''Generate random walk weights for timesteps starting with initial_vals</span>
+    <span class="sd">&#39;&#39;&#39;Generate random walk weights for timesteps starting with initial_vals</span>
 <span class="sd">    </span>
 <span class="sd">    Args:</span>
 <span class="sd">        timesteps: number of timesteps of random walk</span>
 <span class="sd">        initial_vals: initial values of weights</span>
 <span class="sd">        stepsize: scalar or vector of same shape as initial_values</span>
-<span class="sd">    '''</span>
+<span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">timesteps</span><span class="p">,</span> <span class="o">*</span><span class="n">initial_values</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
     <span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">initial_values</span>
     <span class="n">next_values</span> <span class="o">=</span> <span class="n">initial_values</span>
@@ -187,24 +188,35 @@ $$<p>Here $X$ in the input data such that at each timestep we get $X_t$ and it's
         <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">next_values</span>
     <span class="k">return</span> <span class="n">values</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [4]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">random_walk_values</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">stepsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[4]:</div>
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>array([[ -0.78309232,  -0.93589561,   1.03411781],
        [ -0.97358204,  -2.35858223,   1.36900536],
@@ -212,24 +224,26 @@ $$<p>Here $X$ in the input data such that at each timestep we get $X_t$ and it's
        [-28.13018774, -18.91226046,   1.83061094],
        [-29.00613038, -39.76713231, -14.43907089]])</pre>
 </div>
+
+</div>
+
 </div>
 </div>
+
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Generating-the-data-based-on-the-random-walk-model">Generating the data based on the random walk model<a class="anchor-link" href="#Generating-the-data-based-on-the-random-walk-model">¶</a></h2><p>We are going to generate the classification or regression data based on the random walk weights generated above.</p>
+<h2 id="Generating-the-data-based-on-the-random-walk-model">Generating the data based on the random walk model<a class="anchor-link" href="#Generating-the-data-based-on-the-random-walk-model">&#182;</a></h2><p>We are going to generate the classification or regression data based on the random walk weights generated above.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [5]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">generate_data</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">,</span> <span class="n">initial_values</span><span class="p">,</span> <span class="n">stepsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">classification</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="n">weights</span> <span class="o">=</span> <span class="n">random_walk_values</span><span class="p">(</span><span class="n">timesteps</span><span class="p">,</span><span class="n">initial_values</span><span class="p">,</span> <span class="n">stepsize</span><span class="p">)</span>
     <span class="n">X</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">initial_values</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span>
@@ -247,39 +261,41 @@ $$<p>Here $X$ in the input data such that at each timestep we get $X_t$ and it's
     
     
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [6]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">timesteps</span><span class="o">=</span><span class="mi">10</span>
 <span class="n">initial_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span>
 <span class="n">stepsize</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">weights</span> <span class="o">=</span> <span class="n">generate_data</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">,</span> <span class="n">initial_values</span><span class="o">=</span><span class="n">initial_values</span><span class="p">,</span> <span class="n">stepsize</span><span class="o">=</span><span class="n">stepsize</span><span class="p">)</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
+
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Plotting-the-data">Plotting the data<a class="anchor-link" href="#Plotting-the-data">¶</a></h2>
+<h2 id="Plotting-the-data">Plotting the data<a class="anchor-link" href="#Plotting-the-data">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [7]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ncols</span><span class="o">=</span><span class="mi">5</span>
 <span class="n">nrows</span><span class="o">=</span><span class="n">timesteps</span><span class="o">//</span><span class="n">ncols</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
@@ -287,17 +303,26 @@ $$<p>Here $X$ in the input data such that at each timestep we get $X_t$ and it's
 <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">timesteps</span><span class="p">):</span>
     <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">Y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">f</span><span class="s1">'timesteps=</span><span class="si">{i}</span><span class="s1">'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;timesteps=</span><span class="si">{i}</span><span class="s1">&#39;</span><span class="p">)</span>
     
 <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABZkAAAI5CAYAAADDiDQ/AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3X101PWd9//Xd6jWGiBRkiCZBH41E26C5ga5K2sABekW
@@ -1110,45 +1135,63 @@ PqiDBw9q0qRJkqRnnnlG48aNcziqxB599FEdO3ZM119/vX7xi184HU7K/vrXv+rRRx9VfX29JGnr
 yDPZVAg5Rsr/PEORGQAAAAAAAACQNhb/AQAAAAAAAADSRpEZAAAAAAAAAJA2iswAAAAAAAAAgLRR
 ZAYAAAAAAAAApI0iMwAAAAAAAAAgbRSZAQAAAAAAAABpo8gMAAAAAAAAAEgbRWYAAAAAAAAAQNr+
 P8+0jmFD21cyAAAAAElFTkSuQmCC
-" />
+">
+</div>
+
+</div>
+
 </div>
 </div>
+
 </div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As we can see above the relationship between $X$ and $Y$ changes with each timestep. Let us also look at how the weights change over time.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [8]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">weights</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">timesteps</span><span class="p">),</span> <span class="n">weights</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">f</span><span class="s1">'w[</span><span class="si">{i}</span><span class="s1">]'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Timesteps"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"w"</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">timesteps</span><span class="p">),</span> <span class="n">weights</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">f</span><span class="s1">&#39;w[</span><span class="si">{i}</span><span class="s1">]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Timesteps&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[8]:</div>
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
-<pre><matplotlib.legend.legend at 0x7f9672f57860></pre>
+<pre>&lt;matplotlib.legend.Legend at 0x7f9672f57860&gt;</pre>
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZ0AAAElCAYAAAA/Rj+6AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XlcVPX+x/HXsCP7vgkKggIiCqIp7ktpqWWLopJpZYup
@@ -1425,50 +1468,64 @@ Ar9rIW6PlI4Q9cjJyYmhQ4cycuRITExMsLS0ZM6cOUybNo3z589TUVHBiBEjAAgODmbcuHE8/PDD
 TJ06lenTp1NSUgLA2LFjMTExwcXFheeee46srCymTp0KwPjx46moqKCiooIJEyao9nsVojZk95oQ
 DcTevXvZuHEjb775ptpRhLhtcnGoEEIIxciZjhBCCMXImY4QQgjFSOkIIYRQjJSOEEIIxUjpCCGE
 UIyUjhBCCMVI6QghhFDM/wE2XNL0KlyEJwAAAABJRU5ErkJggg==
-" />
+">
+</div>
+
+</div>
+
 </div>
 </div>
+
 </div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Fitting-a-regression-model-with-no-time-dependence">Fitting a regression model with no time dependence<a class="anchor-link" href="#Fitting-a-regression-model-with-no-time-dependence">¶</a></h3><p>Let us fit a regression model with no time-dependent on this data. I will use the ElasticNet classifier of sklearn with l1_ratio as zero resulting in a l2 norm on model parameter changes over time.</p>
+<h3 id="Fitting-a-regression-model-with-no-time-dependence">Fitting a regression model with no time dependence<a class="anchor-link" href="#Fitting-a-regression-model-with-no-time-dependence">&#182;</a></h3><p>Let us fit a regression model with no time-dependent on this data. I will use the ElasticNet classifier of sklearn with l1_ratio as zero resulting in a l2 norm on model parameter changes over time.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [9]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">ElasticNet</span><span class="p">(</span><span class="n">l1_ratio</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span><span class="n">Y</span><span class="p">))</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[9]:</div>
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>ElasticNet(alpha=0.1, copy_X=True, fit_intercept=True, l1_ratio=0,
       max_iter=1000, normalize=False, positive=False, precompute=False,
-      random_state=None, selection='cyclic', tol=0.0001, warm_start=False)</pre>
+      random_state=None, selection=&#39;cyclic&#39;, tol=0.0001, warm_start=False)</pre>
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [10]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ncols</span><span class="o">=</span><span class="mi">5</span>
 <span class="n">nrows</span><span class="o">=</span><span class="n">timesteps</span><span class="o">//</span><span class="n">ncols</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
@@ -1477,18 +1534,27 @@ UIyUjhBCCMVI6QghhFDM/wE2XNL0KlyEJwAAAABJRU5ErkJggg==
 <span class="n">X_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span><span class="o">/</span><span class="mi">1000</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">timesteps</span><span class="p">):</span>
     <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">Y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_true</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_true</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">"r"</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">)</span>
-    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">f</span><span class="s1">'timesteps=</span><span class="si">{i}</span><span class="s1">'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_true</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_true</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;timesteps=</span><span class="si">{i}</span><span class="s1">&#39;</span><span class="p">)</span>
     
 <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABZkAAAI5CAYAAADDiDQ/AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xd0VNXax/HvmYCAlERJAqSAmIROioAgSpFiQxRQQS4i
@@ -2749,47 +2815,65 @@ bFZ3d3caGRnR6uqq9ZzIzs/Plc1mNTw8LEnKZDIaGxszXlW/2dlZhWFoPaNl0Rk36IwdGmOLxrhB
 Y2zRGVu+dYbGuNUMnaExtnxrjERnXGqGxkj+d4YjMwAAAAAAAAAgNn78BwAAAAAAAACIjSMzAAAA
 AAAAACA2jswAAAAAAAAAgNg4MgMAAAAAAAAAYuPIDAAAAAAAAACIjSMzAAAAAAAAACA2jswAAAAA
 AAAAgNg4MgMAAAAAAAAAYvsNz4YzlbUmxmgAAAAASUVORK5CYII=
-" />
+">
+</div>
+
+</div>
+
 </div>
 </div>
+
 </div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The model above doesn't fit all the timesteps properly, but it does try to model the data as a whole. Furthermore, the R-squared value for each timestep is pretty bad as shown below.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [11]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
 <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">timesteps</span><span class="p">)</span><span class="o">*</span><span class="n">r2_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"k"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">timesteps</span><span class="p">)</span><span class="o">*</span><span class="n">r2_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
     <span class="p">[</span><span class="n">r2_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">[</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="p">):</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)],</span> <span class="n">y_pred</span><span class="p">[</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="p">):</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">timesteps</span><span class="p">)],</span>
-    <span class="n">linestyle</span><span class="o">=</span><span class="s2">"-"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"r"</span>
+    <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span>
 <span class="p">)</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[11]:</div>
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
-<pre>[<matplotlib.lines.line2d at 0x7f966f43a710>]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f966f43a710&gt;]</pre>
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZwAAAEYCAYAAABoYED3AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XtclGX6+PEPR0UYUjyfRS1NgUXX1g1rC7VstVwtBRma
@@ -3052,61 +3136,92 @@ Zt68eXzzzTfcfPPN/PnPf9Y7HKfy0UcfMW/ePG688UYAnnrqKQYMGKBzVM4pLi6OlJQUvcNwOq+8
 8goHDx6kVatWLFq0CH9/f71DcioFBQX88Y9/pKSkBF9fX1599VWPncfxiIQjhBBCf24/pCaEEMI5
 SMIRQgjhEJJwhBBCOIQkHCGEEA4hCUcIIYRDSMIRQgjhEJJwhBBCOIQkHCGEEA7x/wHzjycx3VLw
 qQAAAABJRU5ErkJggg==
-" />
+">
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [12]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model_params</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([[</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">],</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">])</span>
 <span class="n">model_params</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[12]:</div>
+
+    <div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>array([ 0.59215837,  5.51581555])</pre>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [13]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">w_colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"g"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">]</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">w_colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">weights</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">timesteps</span><span class="p">),</span> <span class="n">weights</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">f</span><span class="s1">'w[</span><span class="si">{i}</span><span class="s1">]'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">w_colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">timesteps</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">timesteps</span><span class="p">)</span><span class="o">*</span><span class="n">model_params</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">w_colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">timesteps</span><span class="p">),</span> <span class="n">weights</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">f</span><span class="s1">&#39;w[</span><span class="si">{i}</span><span class="s1">]&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">w_colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">timesteps</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">timesteps</span><span class="p">)</span><span class="o">*</span><span class="n">model_params</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">w_colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">timesteps</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"timesteps"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"w"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;timesteps&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[13]:</div>
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
-<pre><matplotlib.legend.legend at 0x7f966fb72080></pre>
+<pre>&lt;matplotlib.legend.Legend at 0x7f966fb72080&gt;</pre>
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZ0AAAElCAYAAAA/Rj+6AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3Xk8VOsfB/DP2AlZUpE2hDZJ63VbqVTUzW2RrX3f66bS
@@ -3416,35 +3531,36 @@ ZWVlVK5cGTk5OQDY0jyzZs2CSCTC0KFDYW5uztMzJ6T4qOgQ8g2qqqqFXt1VJBIV+j0AVK9eHebm
 ACNHjoSSkhIMDQ0xatQoJCYmYurUqQCAMWPGQCwWQywWY+zYsfJ58oSUMFrwkxAFd+XKFYSHh+P3
 338XOgohP4yGTBNCCOENHekQQgjhDR3pEEII4Q0VHUIIIbyhokMIIYQ3VHQIIYTwhooOIYQQ3lDR
 IYQQwpv/AcNL4i5FKG5AAAAAAElFTkSuQmCC
-" />
+">
+</div>
+
+</div>
+
 </div>
 </div>
+
 </div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As you can see above, the model has the same weights for each timestep.</p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Time-dependent-model">Time dependent model<a class="anchor-link" href="#Time-dependent-model">¶</a></h2><p>Now let us try to implement our time dependent model as stated above. In order to use the sklearn api we need to change the model input slightly by using time depenent masks and using get_timesensitive function defined below to get the input data in the desired form. This time sensitive input data has each dimension (corresponding to each weight and including the intercept) replicated for each timestep. Furthermore, since skearn adds an intercept by default we can only include $timesteps-1$ intercepts.</p>
+<h2 id="Time-dependent-model">Time dependent model<a class="anchor-link" href="#Time-dependent-model">&#182;</a></h2><p>Now let us try to implement our time dependent model as stated above. In order to use the sklearn api we need to change the model input slightly by using time depenent masks and using get_timesensitive function defined below to get the input data in the desired form. This time sensitive input data has each dimension (corresponding to each weight and including the intercept) replicated for each timestep. Furthermore, since skearn adds an intercept by default we can only include $timesteps-1$ intercepts.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [14]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_masks</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">):</span>
     <span class="n">masks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="o">*</span><span class="n">timesteps</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">))</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">timesteps</span><span class="p">):</span>
@@ -3479,8 +3595,8 @@ IYQQwpv/AcNL4i5FKG5AAAAAAElFTkSuQmCC
         <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
             <span class="n">X_true</span><span class="p">[</span><span class="n">N_true</span><span class="o">*</span><span class="n">i</span><span class="p">:</span><span class="n">N_true</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">timesteps</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> 
             <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_true</span><span class="p">[</span><span class="n">N_true</span><span class="o">*</span><span class="n">i</span><span class="p">:</span><span class="n">N_true</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="p">:]),</span>
-            <span class="n">color</span><span class="o">=</span><span class="s2">"r"</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">)</span>
-        <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">f</span><span class="s1">'timesteps=</span><span class="si">{i}</span><span class="s1">'</span><span class="p">)</span>
+            <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;timesteps=</span><span class="si">{i}</span><span class="s1">&#39;</span><span class="p">)</span>
 
     <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span>
@@ -3495,17 +3611,17 @@ IYQQwpv/AcNL4i5FKG5AAAAAAElFTkSuQmCC
     <span class="n">model_delta_params</span> <span class="o">=</span> <span class="n">model_delta_params</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n_coefs</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">)</span>
     <span class="n">model_params</span> <span class="o">=</span> <span class="n">model_delta_params</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-    <span class="n">w_colors</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">"Set2"</span><span class="p">,</span> <span class="n">n_coefs</span><span class="p">)</span>
+    <span class="n">w_colors</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;Set2&quot;</span><span class="p">,</span> <span class="n">n_coefs</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_coefs</span><span class="p">):</span>
-        <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">timesteps</span><span class="p">),</span> <span class="n">weights</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">f</span><span class="s1">'w[</span><span class="si">{i}</span><span class="s1">]'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">w_colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-        <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">timesteps</span><span class="p">),</span> <span class="n">model_params</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">w_colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">timesteps</span><span class="p">),</span> <span class="n">weights</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">f</span><span class="s1">&#39;w[</span><span class="si">{i}</span><span class="s1">]&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">w_colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">timesteps</span><span class="p">),</span> <span class="n">model_params</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">w_colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
     <span class="c1">#ax.set_xticks(np.arange(timesteps))</span>
-    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"timesteps"</span><span class="p">)</span>
-    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"w"</span><span class="p">)</span>
-    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"timesteps"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;timesteps&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;timesteps&quot;</span><span class="p">)</span>
     <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"True"</span><span class="p">)</span>
-    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Predicted"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;True&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Predicted&quot;</span><span class="p">)</span>
     <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span>
 
@@ -3515,44 +3631,59 @@ IYQQwpv/AcNL4i5FKG5AAAAAAElFTkSuQmCC
     <span class="n">metrics</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
     <span class="n">metric_overall</span> <span class="o">=</span> <span class="n">metric</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">timesteps</span><span class="p">)</span><span class="o">*</span><span class="n">metric_overall</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'k'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">timesteps</span><span class="p">)</span><span class="o">*</span><span class="n">metric_overall</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">timesteps</span><span class="p">):</span>
         <span class="n">metrics</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">metric</span><span class="p">(</span><span class="n">y_true</span><span class="p">[</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="p">):</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)],</span> <span class="n">y_pred</span><span class="p">[</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="p">):</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)]))</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">metrics</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'-'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'r'</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'timesteps'</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'</span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">metric</span><span class="o">.</span><span class="vm">__name__</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">metrics</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;timesteps&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">metric</span><span class="o">.</span><span class="vm">__name__</span><span class="p">))</span>
     <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span>
     
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [15]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_timesensitive</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
     <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
     <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
 <span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)],</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(6, 6) (6, 3)
 </pre>
 </div>
 </div>
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[15]:</div>
+
+    <div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>array([[ 0.,  0.,  1.,  2.,  0.,  0.,  0.,  0.],
        [ 0.,  0.,  1.,  2.,  0.,  0.,  0.,  0.],
@@ -3561,83 +3692,112 @@ IYQQwpv/AcNL4i5FKG5AAAAAAElFTkSuQmCC
        [ 1.,  1.,  1.,  2.,  1.,  2.,  1.,  2.],
        [ 1.,  1.,  1.,  2.,  1.,  2.,  1.,  2.]])</pre>
 </div>
+
+</div>
+
 </div>
 </div>
+
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As shown above, the timesensitive data has the dimensions replicated for it's number of timesteps.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [16]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_timesensitive</span> <span class="o">=</span> <span class="n">get_timesensitive</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">)</span>
 <span class="n">X_timesensitive</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(1000, 10) (1000, 10)
 </pre>
 </div>
 </div>
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[16]:</div>
+
+    <div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>(1000, 19)</pre>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [17]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[17]:</div>
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>(1000,)</pre>
 </div>
+
+</div>
+
 </div>
 </div>
+
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Fitting-the-model">Fitting the model<a class="anchor-link" href="#Fitting-the-model">¶</a></h3><p>Now let us fit the same model as above on the new data.</p>
+<h3 id="Fitting-the-model">Fitting the model<a class="anchor-link" href="#Fitting-the-model">&#182;</a></h3><p>Now let us fit the same model as above on the new data.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [18]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">ElasticNet</span><span class="p">(</span><span class="n">l1_ratio</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_timesensitive</span><span class="p">,</span> <span class="n">y_true</span><span class="p">)</span>
@@ -3645,28 +3805,48 @@ IYQQwpv/AcNL4i5FKG5AAAAAAElFTkSuQmCC
 <span class="n">plot_metrics</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_timesensitive</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">r2_score</span><span class="p">)</span>
 <span class="n">plot_model_params</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(10000, 10) (10000, 10)
 </pre>
 </div>
 </div>
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[18]:</div>
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
-<pre>(<matplotlib.figure.figure at 0x7f966f23ddd8>,
- array([<matplotlib.axes._subplots.axessubplot object at 0x7f966fad39b0>,
-        <matplotlib.axes._subplots.axessubplot object at 0x7f966f16be10>], dtype=object))</pre>
+<pre>(&lt;matplotlib.figure.Figure at 0x7f966f23ddd8&gt;,
+ array([&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f966fad39b0&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f966f16be10&gt;], dtype=object))</pre>
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABZkAAAI5CAYAAADDiDQ/AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xd0VOXWx/HvmRBCCJCAKZBCS0IJkCJVpDepUkS4XBTs
@@ -4908,11 +5088,18 @@ V1JSourqatMx4hY9Exn0jDl0jFl0TGTQMWbRM2bZrWfomMiKhZ6hY8yyW8dI9EwkxULHSPbvGUZm
 AAAAAAAAAEDQuPEfAAAAAAAAACBojMwAAAAAAAAAgKAxMgMAAAAAAAAAgsbIDAAAAAAAAAAIGiMz
 AAAAAAAAACBojMwAAAAAAAAAgKAxMgMAAAAAAAAAgsbIDAAAAAAAAAAI2v8BnGnz175R2uEAAAAA
 SUVORK5CYII=
-" />
+">
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcYAAAE2CAYAAAD78DIwAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3Xtc1VW+//EXIIQhKoiKiRqi4hXRTIuysubUTDpdT6E4
@@ -5162,11 +5349,18 @@ UcRDdOnSha1bt/Loo4+ye/fuGj0nLCyMO++8kxEjRuDv788FF1zA22+/zXPPPceePXsoLi4mKSkJ
 gK5du/Lwww9z++23M378eJKTkykoKADgwQcfxN/fnxYtWvDQQw+xf/9+xo8fD8Do0aMpLi6muLiY
 Rx55xD0XL+JBtIm4iACwdu1aPv/8cyZPnux0KSKO0nINERGRStRjFBERqUQ9RhERkUoUjCIiIpUo
 GEVERCpRMIqIiFSiYBQREalEwSgiIlLJ/wfO2iqKWbodZgAAAABJRU5ErkJggg==
-" />
+">
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjkAAAEZCAYAAAB1rzTGAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xl8lPW5///X554kZN83srOGAEnYQRZBQEAQwaWiUtQe
@@ -5524,63 +5718,84 @@ sWTJEgBAREQEVq9ejcTERKSnpyMzMxPt7e0AgNTUVKjVagwePBirVq1CY2Mj0tPTAQAvv/wyjEYj
 jEYj1qxZ45jFE1G3sSvI2XiDTnJ5586dw/Hjx/Hmm28qHYWIHmHsir6HHyEnIiIiKfFIDhEREUmJ
 R3KIiIhIShxyiIiISEoccoiIiEhKHHKIiIhIShxyiIiISEoccoiIiEhK/wV2cKdzyu2SSwAAAABJ
 RU5ErkJggg==
-" />
+">
+</div>
+
+</div>
+
 </div>
 </div>
+
 </div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As we can see our new model fits well to each timestep. The value of alpha can be tuned using cross-validation. Finally, we also see that the weights learned for each timestep are quite similar to the original model weights with smoother transitions.</p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="L1-model">L1 model<a class="anchor-link" href="#L1-model">¶</a></h2><p>Let us also try the L1 norm which enforces sparsity on the weight changes. This will help us have a model with very few parameters.</p>
+<h2 id="L1-model">L1 model<a class="anchor-link" href="#L1-model">&#182;</a></h2><p>Let us also try the L1 norm which enforces sparsity on the weight changes. This will help us have a model with very few parameters.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [19]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">ElasticNet</span><span class="p">(</span><span class="n">l1_ratio</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_timesensitive</span><span class="p">,</span> <span class="n">y_true</span><span class="p">)</span>
 <span class="n">plot_data_pred</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">plot_metrics</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_timesensitive</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">r2_score</span><span class="p">)</span>
 <span class="n">plot_model_params</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(10000, 10) (10000, 10)
 </pre>
 </div>
 </div>
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[19]:</div>
+
+    <div class="prompt output_prompt">Out[19]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
-<pre>(<matplotlib.figure.figure at 0x7f966c321278>,
- array([<matplotlib.axes._subplots.axessubplot object at 0x7f966c2b4630>,
-        <matplotlib.axes._subplots.axessubplot object at 0x7f966f2e0e10>], dtype=object))</pre>
+<pre>(&lt;matplotlib.figure.Figure at 0x7f966c321278&gt;,
+ array([&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f966c2b4630&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f966f2e0e10&gt;], dtype=object))</pre>
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABZkAAAI5CAYAAADDiDQ/AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XlUVeX+x/H3PoATDjgACqgZ4IAK4qw5z2NqpWb+TBv0
@@ -6825,11 +7040,18 @@ z64dI9Ez0WTXjpHiq2cYmQegoaFBBw4c0LJly0xHGbBVq1bp4MGDGjFihCRp8+bNSk1NNZzq+9XW
 mEXHRAcdYxY9Y5bdeoaOia546Bk6xiy7dYxEz0RTPHSMZP+eYWQGAAAAAAAAAISMB/8BAAAAAAAA
 AELGyAwAAAAAAAAACBkjMwAAAAAAAAAgZIzMAAAAAAAAAICQMTIDAAAAAAAAAELGyAwAAAAAAAAA
 CBkjMwAAAAAAAAAgZIzMAAAAAAAAAICQ/R/nCF33ko1hQgAAAABJRU5ErkJggg==
-" />
+">
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcYAAAE2CAYAAAD78DIwAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3Xtc1GXa+PEPIAgiCoiJ5iHUREMJ7WCRtZXb1pYVrJvg
@@ -7136,11 +7358,18 @@ rq7GYrEAMHDgQB555BFGjx7N9OnTSU5OpqKiAoCHHnoIT09PunTpwsMPP8y+ffuYPn06AH/+85+p
 rq6murqayZMnG/PmhXAgUkRcCAHAV199xb///W9mzZpldihCmEq2awghhBANSI9RCCGEaEB6jEII
 IUQDkhiFEEKIBiQxCiGEEA1IYhRCCCEakMQohBBCNCCJUQghhGjg/wOMuQagGz+JfQAAAABJRU5E
 rkJggg==
-" />
+">
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjkAAAEZCAYAAAB1rzTGAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xl8lOW5//HP/UwSsu8bIRtrAiGEfUfAiCCL4FIjIGpr
@@ -7491,54 +7720,76 @@ Dq/Xy4IFCwCYMGECy5cvJzs7m/z8fAoLC2lrawNg6dKlhIWFMXz4cJYtW0ZjYyP5+fkAPPfcc3i9
 XrxeL88//3zvDC8iXaaukL6mG3RKyDtw4AC7d+/m1VdfdTqKiNzG1BX9j/6FXERERKykMzkiIiJi
 JZ3JEREREStpyRERERErackRERERK2nJEREREStpyRERERErackRERERK/0Hopbnjq7DyDYAAAAA
 SUVORK5CYII=
-" />
+">
+</div>
+
+</div>
+
 </div>
 </div>
+
 </div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="L1-and-L2-model">L1 and L2 model<a class="anchor-link" href="#L1-and-L2-model">¶</a></h2><p>We can extend this further and use an elastic net penalty on the model parameters to improve the performance further.</p>
+<h2 id="L1-and-L2-model">L1 and L2 model<a class="anchor-link" href="#L1-and-L2-model">&#182;</a></h2><p>We can extend this further and use an elastic net penalty on the model parameters to improve the performance further.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [20]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">ElasticNet</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span><span class="n">l1_ratio</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_timesensitive</span><span class="p">,</span> <span class="n">y_true</span><span class="p">)</span>
 <span class="n">plot_data_pred</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">plot_metrics</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_timesensitive</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">r2_score</span><span class="p">)</span>
 <span class="n">plot_model_params</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(10000, 10) (10000, 10)
 </pre>
 </div>
 </div>
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[20]:</div>
+
+    <div class="prompt output_prompt">Out[20]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
-<pre>(<matplotlib.figure.figure at 0x7f966c262ef0>,
- array([<matplotlib.axes._subplots.axessubplot object at 0x7f966c1feb00>,
-        <matplotlib.axes._subplots.axessubplot object at 0x7f966c76ac18>], dtype=object))</pre>
+<pre>(&lt;matplotlib.figure.Figure at 0x7f966c262ef0&gt;,
+ array([&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f966c1feb00&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f966c76ac18&gt;], dtype=object))</pre>
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABZkAAAI5CAYAAADDiDQ/AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3WdYVVfaxvH/PogNFSyggmIB7FLsHXuMJRoTNcaoqaaZ
@@ -8781,11 +9032,18 @@ Mgynur2GhgZ9/PHHmjBhglauXGk6zqC9/fbbamhoUHFxsSSpvr5ebrfbcKrwVVVVqbm52XSMlEXP
 xAc9Yw4dYxYdEx90jFn0jFl26xk6Jr6SoWfoGLPs1jESPRNPydAxkv17hpEZAAAAAAAAABAxHvwH
 AAAAAAAAAIgYIzMAAAAAAAAAIGKMzAAAAAAAAACAiDEyAwAAAAAAAAAixsgMAAAAAAAAAIgYIzMA
 AAAAAAAAIGKMzAAAAAAAAACAiDEyAwAAAAAAAAAi9n9JRy+XpXJaAQAAAABJRU5ErkJggg==
-" />
+">
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcYAAAE2CAYAAAD78DIwAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XlY1WX+//EnIogppoK5hBpokrlEWla0Z2VZTTmWKIRZ
@@ -9032,11 +9290,18 @@ du3asWXLFh599FEyMjIq9JxGjRrRp08fYmNjqVWrFnXq1OGtt97iueeeY+fOnRQUFBAdHQ3Aeeed
 x0MPPUTv3r0ZOXIkcXFx5OTkAPDAAw9Qq1YtgoKCePDBB9mzZw8jR44E4OGHH6agoICCggIeeeQR
 17x4ETeiJuIiAsDXX3/NJ598wujRo50uRcRR2q4hIiJSiq4YRUREStEVo4iISCkKRhERkVIUjCIi
 IqUoGEVEREpRMIqIiJSiYBQRESnl/wMYILFfs7h3IgAAAABJRU5ErkJggg==
-" />
+">
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjkAAAEZCAYAAAB1rzTGAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xd81fXd///H+5zsPUnIZgRIGGFvRIaCDMEZEVF72WG1
@@ -9412,26 +9677,28 @@ h9FoxPLlywEAEREReOONN7BkyRKkpKQgLS0NHR0dAIDVq1dDo9Fg+PDheP3119HQ0ICUlBQAwJtv
 vgmj0Qij0Yg1a9bYZ/FE9MhYK8jR+IBOcnrnz5/HiRMnsGHDBrWjEFE/xlox8PAWciIiIpISj+QQ
 ERGRlHgkh4iIiKTEJoeIiIikxCaHiIiIpMQmh4iIiKTEJoeIiIikxCaHiIiIpPQ/WJhiQVjFIIsA
 AAAASUVORK5CYII=
-" />
+">
+</div>
+
+</div>
+
 </div>
 </div>
+
 </div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Models-with-more-parameters">Models with more parameters<a class="anchor-link" href="#Models-with-more-parameters">¶</a></h2><p>The above models only had two weights for each timestep (one for x dimension and one intercept), for the sake of visualizing the model versus the fit. Below we extend the model to have more weights and we will only visualize the change in metric and the change in weights.</p>
+<h2 id="Models-with-more-parameters">Models with more parameters<a class="anchor-link" href="#Models-with-more-parameters">&#182;</a></h2><p>The above models only had two weights for each timestep (one for x dimension and one intercept), for the sake of visualizing the model versus the fit. Below we extend the model to have more weights and we will only visualize the change in metric and the change in weights.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [21]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">timesteps</span><span class="o">=</span><span class="mi">50</span>
 <span class="n">N_coefs</span> <span class="o">=</span> <span class="mi">3</span>
@@ -9439,65 +9706,99 @@ AAAASUVORK5CYII=
 <span class="n">stepsize</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">N_coefs</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N_coefs</span><span class="p">)</span>
 <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">weights</span> <span class="o">=</span> <span class="n">generate_data</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">,</span> <span class="n">initial_values</span><span class="o">=</span><span class="n">initial_values</span><span class="p">,</span> <span class="n">stepsize</span><span class="o">=</span><span class="n">stepsize</span><span class="p">)</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [22]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_timesensitive</span> <span class="o">=</span> <span class="n">get_timesensitive</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">)</span>
 <span class="n">y_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
 <span class="n">X_timesensitive</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_true</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(5000, 100) (5000, 50)
 </pre>
 </div>
 </div>
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[22]:</div>
+
+    <div class="prompt output_prompt">Out[22]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>((5000, 149), (5000,))</pre>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [23]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">ElasticNet</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span><span class="n">l1_ratio</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_timesensitive</span><span class="p">,</span> <span class="n">y_true</span><span class="p">)</span>
 <span class="n">plot_metrics</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_timesensitive</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">r2_score</span><span class="p">)</span>
 <span class="n">plot_model_params</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[23]:</div>
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
-<pre>(<matplotlib.figure.figure at 0x7f968ac025f8>,
- array([<matplotlib.axes._subplots.axessubplot object at 0x7f966c534240>,
-        <matplotlib.axes._subplots.axessubplot object at 0x7f966c564748>], dtype=object))</pre>
+<pre>(&lt;matplotlib.figure.Figure at 0x7f968ac025f8&gt;,
+ array([&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f966c534240&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f966c564748&gt;], dtype=object))</pre>
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcYAAAE2CAYAAAD78DIwAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XtYlGXCP/DvMDKAzKDgATyg4lkQROtnG66bpeamHXR9
@@ -9761,11 +10062,18 @@ nDlzBlarFQkJCQCAgQMH4qmnnsLkyZOxcOFCpKSkoLS0FADwxBNPwMfHBx06dMCTTz6Jc+fOYeHC
 hQCAOXPmwGq1wmq14umnn1bmxROpFDcRJ7qF7d27F59++il+//vfe7oqRKrB5RpEREQO2GIkIiJy
 wBYjERGRAwYjERGRAwYjERGRAwYjERGRAwYjERGRAwYjERGRg/8PLeL4VISjKq0AAAAASUVORK5C
 YII=
-" />
+">
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjkAAAEZCAYAAAB1rzTGAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsvXl4XNV9//86dzSb9tVaLcmWLK/Yxgu2MQSI2cGYEBKH
@@ -10456,67 +10764,97 @@ aciRGVu8eDFdXV3s2LGDX3/9dVrPefTRR1m3bh2lpaUkJiaSkpJCXV0dlZWV3Lhxg2AwiMfjAeDp
 p5/mnXfeobi4mIqKCqqqqhgZGQFg69atJCYmMn/+fLZt20ZfXx8VFRUAbN++nWAwSDAY5N13343M
 mxeRaVNXSLTpBp1ivdbWVk6fPs3evXtjHUVE4pi64sGjr5CLiIiII+lIjoiIiDiSjuSIiIiII2nI
 EREREUfSkCMiIiKOpCFHREREHElDjoiIiDiShhwRERFxpL8Bd13is0Tm3wgAAAAASUVORK5CYII=
-" />
+">
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [24]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stepsize</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[24]:</div>
+
+    <div class="prompt output_prompt">Out[24]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>array([0, 2, 1])</pre>
 </div>
+
+</div>
+
 </div>
 </div>
+
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As before the model fits well to the changing weights across timesteps. Let us increase the <code>l1_ratio</code> to increase sparsity of the weight changes.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [25]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">ElasticNet</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">l1_ratio</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_timesensitive</span><span class="p">,</span> <span class="n">y_true</span><span class="p">)</span>
 <span class="n">plot_metrics</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_timesensitive</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">r2_score</span><span class="p">)</span>
 <span class="n">plot_model_params</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[25]:</div>
+
+    <div class="prompt output_prompt">Out[25]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
-<pre>(<matplotlib.figure.figure at 0x7f966f067eb8>,
- array([<matplotlib.axes._subplots.axessubplot object at 0x7f966c3009b0>,
-        <matplotlib.axes._subplots.axessubplot object at 0x7f966c732da0>], dtype=object))</pre>
+<pre>(&lt;matplotlib.figure.Figure at 0x7f966f067eb8&gt;,
+ array([&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f966c3009b0&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f966c732da0&gt;], dtype=object))</pre>
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcYAAAE2CAYAAAD78DIwAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XtcVGX+B/DPMDAMMAheEDTxhjdUlNRsRa0tt2y32jLT
@@ -10749,11 +11087,18 @@ xYswGAwAgH79+mHw4MH46aefsHTpUrz66qtKPH0i1WEwEnlYt27dkJmZiSeeeAJnzpxx6jHNmzfH
 lClT4OPjg5YtW2Lq1KnIzs7GnDlzAACPP/44rFYrrFYrpk2bpsyTJ1IhnkSc6H/c999/j88//xx/
 +ctfPF0KkSpwugYREZEdthiJiIjssMVIRERkh8FIRERkh8FIRERkh8FIRERkh8FIRERkh8FIRERk
 5/8BZB0OU4vxaF4AAAAASUVORK5CYII=
-" />
+">
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjkAAAEZCAYAAAB1rzTGAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsvXd8nFeZ9/0996j33mXJVe41xY7TnUYSJwRCTDYxyW6o
@@ -11359,26 +11704,28 @@ t7/9bTgcDgDAI488ApFIBKPRiL/8y79Eb28vnnrqKQDAo48+Co/HA4/Hg8ceeyw+/3lCSMRoriCJ
 Rg06Sdo7dOgQ3n77bXzrW99K9lAIISmM5orFh1LICSGEELIg0UoOIYQQQhYkWskhhBBCyIJEQQ4h
 hBBCFiQKcgghhBCyIFGQQwghhJAFiYIcQgghhCxIFOQQQgghZEH6/4fh8jtzaLlGAAAAAElFTkSu
 QmCC
-" />
+">
+</div>
+
+</div>
+
 </div>
 </div>
+
 </div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Model-with-lot-of-time-insensitive-parameters">Model with lot of time-insensitive parameters<a class="anchor-link" href="#Model-with-lot-of-time-insensitive-parameters">¶</a></h2><p>Let us try a model with lot of weights, such that only a few of those change over time. We can implement this by setting the stepsize to 0 for most weights.</p>
+<h2 id="Model-with-lot-of-time-insensitive-parameters">Model with lot of time-insensitive parameters<a class="anchor-link" href="#Model-with-lot-of-time-insensitive-parameters">&#182;</a></h2><p>Let us try a model with lot of weights, such that only a few of those change over time. We can implement this by setting the stepsize to 0 for most weights.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [26]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">timesteps</span><span class="o">=</span><span class="mi">50</span>
 <span class="n">N_coefs</span> <span class="o">=</span> <span class="mi">10</span>
@@ -11389,86 +11736,132 @@ QmCC
 <span class="n">stepsize</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">3</span><span class="p">:]]</span><span class="o">=</span><span class="mi">0</span>
 <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">weights</span> <span class="o">=</span> <span class="n">generate_data</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">,</span> <span class="n">initial_values</span><span class="o">=</span><span class="n">initial_values</span><span class="p">,</span> <span class="n">stepsize</span><span class="o">=</span><span class="n">stepsize</span><span class="p">)</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [27]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_timesensitive</span> <span class="o">=</span> <span class="n">get_timesensitive</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">)</span>
 <span class="n">y_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
 <span class="n">X_timesensitive</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_true</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(5000, 450) (5000, 50)
 </pre>
 </div>
 </div>
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[27]:</div>
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>((5000, 499), (5000,))</pre>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [28]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stepsize</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[28]:</div>
+
+    <div class="prompt output_prompt">Out[28]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>array([0, 0, 0, 0, 8, 0, 7, 0, 8, 0])</pre>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [29]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">ElasticNet</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">l1_ratio</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_timesensitive</span><span class="p">,</span> <span class="n">y_true</span><span class="p">)</span>
 <span class="n">plot_metrics</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_timesensitive</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">r2_score</span><span class="p">)</span>
 <span class="n">plot_model_params</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[29]:</div>
+
+    <div class="prompt output_prompt">Out[29]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
-<pre>(<matplotlib.figure.figure at 0x7f966c7709e8>,
- array([<matplotlib.axes._subplots.axessubplot object at 0x7f966c479f98>,
-        <matplotlib.axes._subplots.axessubplot object at 0x7f966c0d2d68>], dtype=object))</pre>
+<pre>(&lt;matplotlib.figure.Figure at 0x7f966c7709e8&gt;,
+ array([&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f966c479f98&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f966c0d2d68&gt;], dtype=object))</pre>
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcYAAAE2CAYAAAD78DIwAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XtcVGX+B/APDAwqDCqKooHX8oYiVmsbpl3UbDVbXUMQ
@@ -11767,11 +12160,18 @@ GavW6dixI6ZOnYqkpCT4+voiICAAa9aswUsvvYSzZ89Cr9cjISEBADBgwADMnj0bU6ZMwYIFC5CS
 kgKdTgcAeOyxx+Dr64tOnTrh8ccfx/nz57FgwQIAwJw5c6DX66HX6/HEE08o8+SJPBRPIk7Uiu3e
 vRtffvklXnzxRXc3hchj8HANIiIiE6wYiYiITLBiJCIiMsFgJCIiMsFgJCIiMsFgJCIiMsFgJCIi
 MsFgJCIiMvH/B5aP09WotCMAAAAASUVORK5CYII=
-" />
+">
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjkAAAEZCAYAAAB1rzTGAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XmYVGed8P3vOVWn9r163xtoaJYOELYASUgCMYshmIzK
@@ -12470,66 +12870,75 @@ X76cixcvYrVamTNnDgDDhw9nwYIFzJgxg2XLlrFixQrq6+sB+PWvf41arSYiIoKnn36a8vJyli1b
 BsDChQuxWq1YrVaeeeYZ53x4IcRNyRghXEUadAqvk5eXx+7du3nppZfcHUUI4YFkjPAd8gi5EEII
 IbyS3MkRQgghhFeSOzlCCCGE8EpS5AghhBDCK0mRI4QQQgivJEWOEEIIIbySFDlCCCGE8EpS5Agh
 hBDCK/0/34bVgkQpSwEAAAAASUVORK5CYII=
-" />
+">
+</div>
+
+</div>
+
 </div>
 </div>
+
 </div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As we can observe, the model recovers the parameters correctly, include the ones which don't change over time.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [30]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Model sparsity is </span><span class="si">{:.3f}</span><span class="s2">%"</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model sparsity is </span><span class="si">{:.3f}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Model sparsity is 71.142%
 </pre>
 </div>
 </div>
+
 </div>
 </div>
+
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Why-use-such-models?">Why use such models?<a class="anchor-link" href="#Why-use-such-models?">¶</a></h2><p>If you notice that while training such models we effectively use $n\_coefs*timesteps$ number of parameters. However, if you notice that $74\%$ of the parameters are zero, meaning while prediction we will only require $26\%$ of the parameters. Furthermore, only $26\%$ of the parameters can sufficiently explain the data using our current model. This is a very useful insight and helps in overall reduction of the complexity of the data generation process.</p>
+<h2 id="Why-use-such-models?">Why use such models?<a class="anchor-link" href="#Why-use-such-models?">&#182;</a></h2><p>If you notice that while training such models we effectively use $n\_coefs*timesteps$ number of parameters. However, if you notice that $74\%$ of the parameters are zero, meaning while prediction we will only require $26\%$ of the parameters. Furthermore, only $26\%$ of the parameters can sufficiently explain the data using our current model. This is a very useful insight and helps in overall reduction of the complexity of the data generation process.</p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-implement-classification-models">How to implement classification models<a class="anchor-link" href="#How-to-implement-classification-models">¶</a></h2><p>Most of us are interested in classification models which share this property of time dependence. One easy way the sklearn api can be used to implement this approach in the classification setting is to use <a href="https://github.com/mkliegl/custom-sklearn/blob/master/flexible_linear.py">the code for implementing a custom sklearn model with custom loss</a>. You can also use LogisticRegression classifier if you don't wish to use the elastic net penalty which is a weighted sum of l1 and l2 penalty. However, using the custom classifier you have control over using the kind of penalty and the kind of penalties you can include e.g. Group Lasso and MCP as suggested in the stichfix blog. Below I will present an example using LogisticRegression classifier. For classification model we will use the <code>f1_score</code> as the metric for evaluation.</p>
+<h2 id="How-to-implement-classification-models">How to implement classification models<a class="anchor-link" href="#How-to-implement-classification-models">&#182;</a></h2><p>Most of us are interested in classification models which share this property of time dependence. One easy way the sklearn api can be used to implement this approach in the classification setting is to use <a href="https://github.com/mkliegl/custom-sklearn/blob/master/flexible_linear.py">the code for implementing a custom sklearn model with custom loss</a>. You can also use LogisticRegression classifier if you don't wish to use the elastic net penalty which is a weighted sum of l1 and l2 penalty. However, using the custom classifier you have control over using the kind of penalty and the kind of penalties you can include e.g. Group Lasso and MCP as suggested in the stichfix blog. Below I will present an example using LogisticRegression classifier. For classification model we will use the <code>f1_score</code> as the metric for evaluation.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [31]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">timesteps</span><span class="o">=</span><span class="mi">50</span>
 <span class="n">N_coefs</span> <span class="o">=</span> <span class="mi">10</span>
@@ -12540,86 +12949,132 @@ hBDCK/0/34bVgkQpSwEAAAAASUVORK5CYII=
 <span class="n">stepsize</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">5</span><span class="p">:]]</span><span class="o">=</span><span class="mi">0</span>
 <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">weights</span> <span class="o">=</span> <span class="n">generate_data</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">,</span> <span class="n">initial_values</span><span class="o">=</span><span class="n">initial_values</span><span class="p">,</span> <span class="n">stepsize</span><span class="o">=</span><span class="n">stepsize</span><span class="p">,</span> <span class="n">classification</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [32]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_timesensitive</span> <span class="o">=</span> <span class="n">get_timesensitive</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">)</span>
 <span class="n">y_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
 <span class="n">X_timesensitive</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_true</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(5000, 450) (5000, 50)
 </pre>
 </div>
 </div>
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[32]:</div>
+
+    <div class="prompt output_prompt">Out[32]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>((5000, 499), (5000,))</pre>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [33]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stepsize</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[33]:</div>
+
+    <div class="prompt output_prompt">Out[33]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>array([0, 0, 0, 1, 0, 0, 0, 2, 2, 2])</pre>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [34]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">penalty</span><span class="o">=</span><span class="s1">'l2'</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">penalty</span><span class="o">=</span><span class="s1">&#39;l2&#39;</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_timesensitive</span><span class="p">,</span> <span class="n">y_true</span><span class="p">)</span>
 <span class="n">plot_metrics</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_timesensitive</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">f1_score</span><span class="p">)</span>
 <span class="n">plot_model_params</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[34]:</div>
+
+    <div class="prompt output_prompt">Out[34]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
-<pre>(<matplotlib.figure.figure at 0x7f968b13b3c8>,
- array([<matplotlib.axes._subplots.axessubplot object at 0x7f966f3e1358>,
-        <matplotlib.axes._subplots.axessubplot object at 0x7f966ed57ba8>], dtype=object))</pre>
+<pre>(&lt;matplotlib.figure.Figure at 0x7f968b13b3c8&gt;,
+ array([&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f966f3e1358&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f966ed57ba8&gt;], dtype=object))</pre>
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcYAAAE2CAYAAAD78DIwAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3X1U01eeP/A3YAIIoTypoGgLdsQHwNiy2kmnZ1V2p7Pb
@@ -12850,11 +13305,18 @@ MW3aNJw9exbLly/HxYsXJT0mISEBTzzxBEpKShAeHo7IyEhs2rQJ69evx6VLl2CxWKDVagEA06dP
 x7PPPovHHnsMpaWlKC8vR1dXFwDg5z//OcLDw5GUlIR/+Zd/wZUrV1BaWgoAeO6552CxWGCxWPD8
 88/L8+KJRhFuIk5EAKxXSP/Tn/6EdevWBborRAHF5RpEREQOWDESERE5YMVIRETkgMFIRETkgMFI
 RETkgMFIRETkgMFIRETkgMFIRETk4P8DYO+G04sLsF8AAAAASUVORK5CYII=
-" />
+">
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjkAAAEZCAYAAAB1rzTGAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsvXeYHfV59/2Z0+ues7tne2/a1ar3hhAgmSIQQoABgbGx
@@ -13899,37 +14361,56 @@ XlitVuzevRsAsHLlSjz88MO49957cfDgQRw6dAhmsxkA8NOf/hQcDgcSiQQPPfQQNBoNDh48CAB4
 5JFHYLVaYbVa8eijjwbmhyeEzInGCBIs1KCTRJza2lp8+OGH+PWvfx3qUAghYYjGiKWDtpATQggh
 JCLRTA4hhBBCIhLN5BBCCCEkIlGSQwghhJCIREkOIYQQQiISJTmEEEIIiUiU5BBCCCEkIlGSQwgh
 hJCI9P8B9Oyzc1pu2tsAAAAASUVORK5CYII=
-" />
+">
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [35]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">penalty</span><span class="o">=</span><span class="s1">'l1'</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">penalty</span><span class="o">=</span><span class="s1">&#39;l1&#39;</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_timesensitive</span><span class="p">,</span> <span class="n">y_true</span><span class="p">)</span>
 <span class="n">plot_metrics</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_timesensitive</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">f1_score</span><span class="p">)</span>
 <span class="n">plot_model_params</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
 </pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area">
-<div class="prompt output_prompt">Out[35]:</div>
+
+    <div class="prompt output_prompt">Out[35]:</div>
+
+
+
+
 <div class="output_text output_subarea output_execute_result">
-<pre>(<matplotlib.figure.figure at 0x7f966f66ef28>,
- array([<matplotlib.axes._subplots.axessubplot object at 0x7f966f7c6f98>,
-        <matplotlib.axes._subplots.axessubplot object at 0x7f966c25b4e0>], dtype=object))</pre>
+<pre>(&lt;matplotlib.figure.Figure at 0x7f966f66ef28&gt;,
+ array([&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f966f7c6f98&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f966c25b4e0&gt;], dtype=object))</pre>
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcYAAAE2CAYAAAD78DIwAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3X1U01eeP/A3YAIIoTypoGgLdsQHwNiy2kmnZ1V2p7Pb
@@ -14160,11 +14641,18 @@ MW3aNJw9exbLly/HxYsXJT0mISEBTzzxBEpKShAeHo7IyEhs2rQJ69evx6VLl2CxWKDVagEA06dP
 x7PPPovHHnsMpaWlKC8vR1dXFwDg5z//OcLDw5GUlIR/+Zd/wZUrV1BaWgoAeO6552CxWGCxWPD8
 88/L8+KJRhFuIk5EAKxXSP/Tn/6EdevWBborRAHF5RpEREQOWDESERE5YMVIRETkgMFIRETkgMFI
 RETkgMFIRETkgMFIRETkgMFIRETk4P8DYO+G04sLsF8AAAAASUVORK5CYII=
-" />
+">
 </div>
+
 </div>
+
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
+
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjkAAAEZCAYAAAB1rzTGAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsvXd4HeWZ9/+ZOb0f6ZyjZlVbsiwXuReMjQ2mNwMhEHAI
@@ -15183,32 +15671,38 @@ axcsFgtYlkVNTQ0AYOHChXjyySdx//33Y+fOndi9ezcGBgYAAL/+9a8hkUiQk5OD3/zmN+ju7sbO
 nTsBAE899RRYlgXLsvjtb3+bmn88IWRcNEYQvlCDTpJ2Ghoa8MUXX+Dll18WOhRCiAjRGDFz0BFy
 QgghhKQlmskhhBBCSFqimRxCCCGEpCVKcgghhBCSlijJIYQQQkhaoiSHEEIIIWmJkhxCCCGEpCVK
 cgghhBCSlv4PgfNoADwBj8EAAAAASUVORK5CYII=
-" />
+">
+</div>
+
+</div>
+
 </div>
 </div>
+
 </div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As before the model is able to learn the parameters correctly, although there is a bit more noise for the classification case.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
+
+    </div>
 </div>
 </div>
+
 </div>
-</div>
+ 
+
 
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');

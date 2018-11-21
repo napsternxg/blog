@@ -7,3 +7,4 @@ dependencies:
     - markdown
     - pip:
         - pelican
+        - pymdown-extensions
