@@ -28,9 +28,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('shubhanshu.com', 'http://shubhanshu.com/'),
-        ('Projects', 'http://shubhanshu.com/playground.html'),
-        ('Github', GITHUB_URL),
+LINKS = (('Personal Website', 'http://shubhanshu.com/'),
         )
 
 # Social widget
@@ -43,6 +41,7 @@ SOCIAL = (('website', 'http://shubhanshu.com'),
 
 DEFAULT_PAGINATION = 10
 DEFAULT_DATE = 'fs'
+DEFAULT_DATE_FORMAT = '%d/%m/%Y'
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
@@ -98,8 +97,8 @@ BOOTSTRAP_FLUID=True
 COPYRIGHT_YEAR = 2016
 MAIN_MENU = True
 SITETITLE = 'Interpreting Models'
-SITESUBTITLE = 'A quest to make models interpretable'
-SITEDESCRIPTION = '{author}\'s thoughts on mathematical models and code'.format(author=AUTHOR)
+SITESUBTITLE = 'A journey towards model interpretability'
+SITEDESCRIPTION = 'This is a collection of notes and thoughts on mathematical model interpretation via their code implementation.'
 menuitems_list = [
                 ("Archives", ARCHIVES_URL),
                 ("Categories", CATEGORIES_URL),
