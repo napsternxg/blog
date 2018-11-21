@@ -21,9 +21,9 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Homepage', 'http://shubhanshu.com/'),
+LINKS = (('shubhanshu.com', 'http://shubhanshu.com/'),
         ('Projects', 'http://shubhanshu.com/playground.html'),
-        ('Blog Repo', GITHUB_URL),
+        ('Github', GITHUB_URL),
         )
 
 # Social widget
@@ -61,8 +61,8 @@ TAG_URL = 'tag/{slug}.html'
 TAG_SAVE_AS = 'tag/{slug}.html'
 TAGS_URL = 'tag/'
 TAGS_SAVE_AS = 'tag/index.html'
-ARCHIVES_SAVE_AS = 'archives/archives.html'
-ARCHIVES_URL = 'archives/archives.html'
+ARCHIVES_SAVE_AS = 'archives/index.html'
+ARCHIVES_URL = 'archives/'
 AUTHOR_SAVE_AS = '{slug}.html'
 AUTHORS_SAVE_AS = 'authors.html'
 # put pages in the root directory
@@ -82,7 +82,8 @@ CC_LICENSE = {
 
 # THEME SETTINGS
 #THEME='../pelican-themes/pelican-bootstrap3'
-THEME='../pelican-themes/Flex'
+#THEME='../pelican-themes/Flex'
+THEME='../pelican-themes/pelican-bootswatch'
 SITELOGO = '/assets/images/pic.jpg'
 PYGMENTS_STYLE='friendly'
 BOOTSTRAP_THEME='paper'
@@ -91,7 +92,17 @@ COPYRIGHT_YEAR = 2016
 MAIN_MENU = True
 SITETITLE = 'Interpreting Models'
 SITESUBTITLE = 'A quest to make models interpretable'
-SITEDESCRIPTION = '%s\'s thoughts on mathematical models and code' % AUTHOR
-MENUITEMS = (('Archives', '/blog/%s' % ARCHIVES_URL),
-    ('Categories', '/blog/%s' % CATEGORIES_URL),
-    ('Tags', '/blog/%s' % TAGS_URL),)
+SITEDESCRIPTION = '{author}\'s thoughts on mathematical models and code'.format(author=AUTHOR)
+menuitems_list = [
+                ("Archives", ARCHIVES_URL),
+                ("Categories", CATEGORIES_URL),
+                ("Tags", TAGS_URL)
+                ]
+
+def get_menuitems(siteurl, menuitems_list):
+    menuitems = tuple(
+            (title, "{siteurl}/{url}".format(siteurl=siteurl, url=url))
+            for title, url in menuitems_list
+            )
+    return menuitems
+MENUITEMS = get_menuitems(SITEURL, menuitems_list)

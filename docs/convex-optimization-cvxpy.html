@@ -6,6 +6,8 @@
 
     <link rel="stylesheet" type="text/css" href="http://shubhanshu.com/blog/theme/stylesheet/style.min.css">
 
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.1.3/litera/bootstrap.min.css" rel="stylesheet" integrity="sha384-JuAGGg3c8UPrWdf0N8ZPJyOHkACruI9+mbl0C+H6XSYOqv9xIdiUSKehRyA8jUol" crossorigin="anonymous">
+
   <link rel="stylesheet" type="text/css" href="http://shubhanshu.com/blog/theme/pygments/friendly.min.css">
   <link rel="stylesheet" type="text/css" href="http://shubhanshu.com/blog/theme/font-awesome/css/font-awesome.min.css">
 
@@ -42,51 +44,37 @@
 
 </head>
 <body>
-  <aside>
-    <div>
-      <a href="http://shubhanshu.com/blog">
-        <img src="/assets/images/pic.jpg" alt="Interpreting Models" title="Interpreting Models">
-      </a>
-      <h1><a href="http://shubhanshu.com/blog">Interpreting Models</a></h1>
+  <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="http://shubhanshu.com/blog">Interpreting Models</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
 
-<p>A quest to make models interpretable</p>
-      <nav>
-        <ul class="list">
-          <li><a href="http://shubhanshu.com/blog/d3.html#d3">D3</a></li>
-          <li><a href="http://shubhanshu.com/blog/nlp.html#nlp">Natural Language Processing</a></li>
+          <div class="collapse navbar-collapse" id="navbarColor03">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item"><a class="nav-link" href="http://shubhanshu.com/" target="_blank">shubhanshu.com</a></li>
+                  <li class="nav-item"><a class="nav-link" href="http://shubhanshu.com/playground.html" target="_blank">Projects</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://github.com/napsternxg/blog" target="_blank">Github</a></li>
+                  <li class="nav-item"><a class="nav-link" href="http://shubhanshu.com/blog/archives/">Archives</a></li>
+                  <li class="nav-item"><a class="nav-link" href="http://shubhanshu.com/blog/category/">Categories</a></li>
+                  <li class="nav-item"><a class="nav-link" href="http://shubhanshu.com/blog/tag/">Tags</a></li>
 
-          <li><a href="http://shubhanshu.com/" target="_blank">Homepage</a></li>
-          <li><a href="http://shubhanshu.com/playground.html" target="_blank">Projects</a></li>
-          <li><a href="https://github.com/napsternxg/blog" target="_blank">Blog Repo</a></li>
-        </ul>
+                  <li class="nav-item"><a class="nav-link" href="http://shubhanshu.com/blog/feeds/all.atom.xml">    Atom
+</a></li>
+
+                  <li class="nav-item dropdown show">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="true">Notes</a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="http://shubhanshu.com/blog/d3.html#d3">D3</a>
+                            <a class="dropdown-item" href="http://shubhanshu.com/blog/nlp.html#nlp">Natural Language Processing</a>
+                      </div>
+                  </li>
+              </ul>
+          </div>
       </nav>
-
-      <ul class="social">
-        <li><a class="sc-website" href="http://shubhanshu.com" target="_blank"><i class="fa fa-website"></i></a></li>
-        <li><a class="sc-twitter" href="http://twitter.com/TheShubhanshu" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="sc-linkedin" href="http://www.linkedin.com/in/shubhanshumishra" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="sc-github" href="http://github.com/napsternxg" target="_blank"><i class="fa fa-github"></i></a></li>
-        <li><a class="sc-rss" href="//shubhanshu.com/blog/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
-      </ul>
-    </div>
-
-
-  </aside>
-  <main>
-
-    <nav>
-      <a href="http://shubhanshu.com/blog">    Home
-</a>
-
-      <a href="/blog/archives/archives.html">Archives</a>
-      <a href="/blog/category/">Categories</a>
-      <a href="/blog/tag/">Tags</a>
-
-      <a href="http://shubhanshu.com/blog/feeds/all.atom.xml">    Atom
-</a>
-
-    </nav>
-
+      <div class="row">
+          <div class="col-sm-12" style="text-align: justify;">
 <article class="single">
   <header>
       
@@ -101,12 +89,14 @@
 
   <div>
     
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>$\DeclareMathOperator*{\argmin}{arg\,min}$</p>
 <p>I got introduced to the concept of <a href="https://en.wikipedia.org/wiki/Convex_optimization">convex optimization</a> after viewing <a href="http://stanford.edu/~boyd/">Stephen P. Boyd</a>'s lecture vidoes on the topic from the <a href="http://mlss.tuebingen.mpg.de/2015/speakers.html">Machine Learning Summer School 2015 in Tubingen</a>. Prof. Boyd has a very engaging style of explaining the topic. His lectures also included some code samples using the <a href="http://www.cvxpy.org/en/latest/">CVXPY library</a>, which was developed in his lab. After finishing the lectures, I decided to give the library a try and put to test some of Prof. Boyd's claims of solving the convex optimization problem by not caring about the solver -- or as he exclaims multiple times during the lectures -- "None of your goddamn business".</p>
-<h2 id="Convex-optimization">Convex optimization<a class="anchor-link" href="#Convex-optimization">&#182;</a></h2><p>I will not go into the details of convex optimization but will just try to explain it from the perspective of optimization and convex functions.</p>
+<h2 id="Convex-optimization">Convex optimization<a class="anchor-link" href="#Convex-optimization">¶</a></h2><p>I will not go into the details of convex optimization but will just try to explain it from the perspective of optimization and convex functions.</p>
 <p>In optimization the goal is to find the arguments $\theta$ which maximize or minimize a given function $f(\theta)$. The function $f(\theta)$ can be any complex entity e.g. the average sales per day of a given company under some constraints such as the number of units which can be produced or sold should be less than a threshold. More formally, the goal is to find $\theta = \argmin_{\theta}{f(\theta)}$ if the function needs to be minimized.</p>
 <p>In convex optimization we put a condition on the allowed family of functions to be optimized. The condition is that the functions should be <a href="https://en.wikipedia.org/wiki/Convex_function">convex</a> i.e. they should have only one global extremum (either maxima or minima). This yields very nice properties for creating efficient optimization algorithms for such functions.</p>
 <p>Ofcourse, for any one who has worked in data analysis or machine learning convex functions are not anything new. Infact, one of the most populars convex functions are the popular loss functions used in linear regression forumations, e.g.</p>
@@ -114,18 +104,17 @@
 <li>$f(\theta) = (y - (\theta{x}))^2$ also known as the squared loss function</li>
 <li>$f(\theta) = -(y\log(\sigma(\theta{x})) + (1-y)\log(1-\sigma(\theta{x})))$ also known as the logistic loss or the cross entropy loss function used in binary classification settings</li>
 </ul>
-<h3 id="A-note-on-gradient-based-methods-for-optimizing-convex-functions">A note on gradient based methods for optimizing convex functions<a class="anchor-link" href="#A-note-on-gradient-based-methods-for-optimizing-convex-functions">&#182;</a></h3><p>Although, most of these functions are these days optimized using the popular gradient based methods - which basically move the parameters in the direction of the steepest ascent/descent. However, one of the caveats of using gradient based methods is their pre-requirements for the functions to be differentiable everywhere in the parameter space. This means that gradient descent will not work for convex functions which are non-differentiable e.g. $f(x) = \max\limits_{i}(a_{i}*x+b_i)$. However, there do exist other methods for fining the extremum of these functions. But the most important thing is that the problem is a convex optimization problem and that is what guarentees it to have a unique extremum. So knowing how to solving it is -- "None of your goddamn business" -- as Prof. Boyd will say.</p>
-<h2 id="CVXPY">CVXPY<a class="anchor-link" href="#CVXPY">&#182;</a></h2><p>CVXPY actually implements many of those algorithms which are needed for solving a convex optimization problem. Another, great thing about the library is that it will analyze a given problem form and use a techniqe called <strong><a href="http://dcp.stanford.edu/home">Disciplined Convex Programming (DCP)</a></strong> to identify if it is a convex optimization problem or not. Infact, there is a <a href="http://dcp.stanford.edu/analyzer">DCP analyzer page</a> by Prof. Boyd's lab which allows you to input an optimization function and it will output if it is a convex problem or not.</p>
+<h3 id="A-note-on-gradient-based-methods-for-optimizing-convex-functions">A note on gradient based methods for optimizing convex functions<a class="anchor-link" href="#A-note-on-gradient-based-methods-for-optimizing-convex-functions">¶</a></h3><p>Although, most of these functions are these days optimized using the popular gradient based methods - which basically move the parameters in the direction of the steepest ascent/descent. However, one of the caveats of using gradient based methods is their pre-requirements for the functions to be differentiable everywhere in the parameter space. This means that gradient descent will not work for convex functions which are non-differentiable e.g. $f(x) = \max\limits_{i}(a_{i}*x+b_i)$. However, there do exist other methods for fining the extremum of these functions. But the most important thing is that the problem is a convex optimization problem and that is what guarentees it to have a unique extremum. So knowing how to solving it is -- "None of your goddamn business" -- as Prof. Boyd will say.</p>
+<h2 id="CVXPY">CVXPY<a class="anchor-link" href="#CVXPY">¶</a></h2><p>CVXPY actually implements many of those algorithms which are needed for solving a convex optimization problem. Another, great thing about the library is that it will analyze a given problem form and use a techniqe called <strong><a href="http://dcp.stanford.edu/home">Disciplined Convex Programming (DCP)</a></strong> to identify if it is a convex optimization problem or not. Infact, there is a <a href="http://dcp.stanford.edu/analyzer">DCP analyzer page</a> by Prof. Boyd's lab which allows you to input an optimization function and it will output if it is a convex problem or not.</p>
 <p>In the following lines I will use this library to show how easy it is to solve the convex optimization problem using CVXPY. I am using the anaconda distribution for installing this library and its related packages.</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 
 <span class="kn">import</span> <span class="nn">cvxpy</span> <span class="kn">as</span> <span class="nn">cvx</span>
@@ -135,67 +124,50 @@
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
 
-<span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s2">&quot;paper&quot;</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;ticks&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s2">"paper"</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">"ticks"</span><span class="p">)</span>
 
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1337</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Fitting-a-quadratic-curve-to-data-points">Fitting a quadratic curve to data points<a class="anchor-link" href="#Fitting-a-quadratic-curve-to-data-points">&#182;</a></h2><p>In the spirit of machine learning, I will use the example of fitting a quadratic curve to a set of data points. The data is generated by adding gaussian noise to points sampled from a quadratic curve $f(x) = a*x^2 + b*x + c$ and we have to find the set of points $a,b,c$ which fit the data best. First let us look at the data and the original curve.</p>
-
+<h2 id="Fitting-a-quadratic-curve-to-data-points">Fitting a quadratic curve to data points<a class="anchor-link" href="#Fitting-a-quadratic-curve-to-data-points">¶</a></h2><p>In the spirit of machine learning, I will use the example of fitting a quadratic curve to a set of data points. The data is generated by adding gaussian noise to points sampled from a quadratic curve $f(x) = a*x^2 + b*x + c$ and we have to find the set of points $a,b,c$ which fit the data best. First let us look at the data and the original curve.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span><span class="o">-</span><span class="mf">1.4</span><span class="p">,</span><span class="mi">10</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">y_orig</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">c</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">y_orig</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">*</span><span class="mi">10</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_orig</span><span class="p">,</span><span class="s1">&#39;-r&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;$f(x) = </span><span class="si">%s</span><span class="s2">*x^2 + </span><span class="si">%s</span><span class="s2">*x + </span><span class="si">%s</span><span class="s2">$&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_orig</span><span class="p">,</span><span class="s1">'-r'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"$f(x) = </span><span class="si">%s</span><span class="s2">*x^2 + </span><span class="si">%s</span><span class="s2">*x + </span><span class="si">%s</span><span class="s2">$"</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">))</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[2]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[2]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x7f4850c74d10&gt;</pre>
+<pre><matplotlib.text.text at 0x7f4850c74d10></pre>
 </div>
-
 </div>
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
+<div class="prompt"></div>
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAi0AAAGWCAYAAAC0DLNZAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAAPYQAAD2EBqD+naQAAIABJREFUeJzs3XtYlGX+x/H3cKoULBU0Eq3ULBVPi1mWZp4y0/XQtuap
@@ -513,28 +485,26 @@ d+H7vtq21bquuu9beZ7zYP+xeZ41DIM8z9N1XaqqSlEUPT3rVcZx1DRNsm1bcRyrLMunJ73Svu+q
 6/o74sMwVNM0sm374WXvsW2biqLQeZ5alkVRFCkIAiVJor7v5TiOPp+Puq6T67q/OtOYaAEAAO9m
 /PcQAAB4B6IFAAAYgWgBAABGIFoAAIARiBYAAGAEogUAABiBaAEAAEYgWgAAgBGIFgAAYASiBQAA
 GOEL2kuGZQF83iUAAAAASUVORK5CYII=
-">
-</div>
-
-</div>
-
+" />
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Defining-the-convex-optimization-problem-in-CVXPY">Defining the convex optimization problem in CVXPY<a class="anchor-link" href="#Defining-the-convex-optimization-problem-in-CVXPY">&#182;</a></h2><p>Now we are going to define the convex optimization problem which will give us the parameters which minimizes the mean squared loss (defined using the norm function in CVXPY). The following cell will define the variables which need to be optimized as well as the function to optimize along with some L1 regularization constraints. Finally, we will wrap the expression to optimize in a cvx.Problem object and then call solve. That is it.</p>
-
+<h2 id="Defining-the-convex-optimization-problem-in-CVXPY">Defining the convex optimization problem in CVXPY<a class="anchor-link" href="#Defining-the-convex-optimization-problem-in-CVXPY">¶</a></h2><p>Now we are going to define the convex optimization problem which will give us the parameters which minimizes the mean squared loss (defined using the norm function in CVXPY). The following cell will define the variables which need to be optimized as well as the function to optimize along with some L1 regularization constraints. Finally, we will wrap the expression to optimize in a cvx.Problem object and then call solve. That is it.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">a_bar</span> <span class="o">=</span> <span class="n">cvx</span><span class="o">.</span><span class="n">Variable</span><span class="p">()</span>
 <span class="n">b_bar</span> <span class="o">=</span> <span class="n">cvx</span><span class="o">.</span><span class="n">Variable</span><span class="p">()</span>
 <span class="n">c_bar</span> <span class="o">=</span> <span class="n">cvx</span><span class="o">.</span><span class="n">Variable</span><span class="p">()</span>
@@ -544,121 +514,86 @@ GOEL2kuGZQF83iUAAAAASUVORK5CYII=
 <span class="n">prob</span> <span class="o">=</span> <span class="n">cvx</span><span class="o">.</span><span class="n">Problem</span><span class="p">(</span><span class="n">cvx</span><span class="o">.</span><span class="n">Minimize</span><span class="p">(</span><span class="n">loss</span><span class="o">/</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">C</span><span class="o">*</span><span class="n">reg</span><span class="p">))</span>
 <span class="n">prob</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[3]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>2.364341360670563</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Calling <code>prob.solve()</code> finds the solution to the problem and returns the minimum value of the function. Furthermore, the values of the parameters for which the solution is reached are stored in the <code>value</code> property of each <code>cvx.Variable</code> object.</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s2">&quot;a_bar=</span><span class="si">%s</span><span class="s2">, b_bar=</span><span class="si">%s</span><span class="s2">, c_bar=</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">a_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">b_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">c_bar</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-<span class="k">print</span> <span class="s2">&quot;a=</span><span class="si">%s</span><span class="s2">, b=</span><span class="si">%s</span><span class="s2">, c=</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s2">"a_bar=</span><span class="si">%s</span><span class="s2">, b_bar=</span><span class="si">%s</span><span class="s2">, c_bar=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">a_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">b_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">c_bar</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">"a=</span><span class="si">%s</span><span class="s2">, b=</span><span class="si">%s</span><span class="s2">, c=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>a_bar=2.41662949138, b_bar=-1.03057743203, c_bar=11.1312608782
 a=2.5, b=-1.4, c=10
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As we can observe that the optimal values found by the solves are quite close to the original values used for generating the data points. Finally, we can see how the optimal curve fits the data points and how does it compare to the original curve.</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">a_bar</span><span class="o">.</span><span class="n">value</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b_bar</span><span class="o">.</span><span class="n">value</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">c_bar</span><span class="o">.</span><span class="n">value</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_orig</span><span class="p">,</span><span class="s1">&#39;-r&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;original&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_pred</span><span class="p">,</span><span class="s1">&#39;--k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;fitted&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_orig</span><span class="p">,</span><span class="s1">'-r'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"original"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_pred</span><span class="p">,</span><span class="s1">'--k'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"fitted"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">"upper left"</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[5]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x7f48509a6090&gt;</pre>
+<pre><matplotlib.legend.legend at 0x7f48509a6090></pre>
 </div>
-
 </div>
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
+<div class="prompt"></div>
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAi0AAAGICAYAAACN0NCyAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAAPYQAAD2EBqD+naQAAIABJREFUeJzs3Xt8zvX/x/HHtVPMoWJETuWUwyg5RI1EqCyHbzkfsjlM
@@ -1005,28 +940,26 @@ jik9PV2RSEQHDhxQUVGR3WU5yqeffqqvvvpKbrdba9asUX19vd0lOdJvv/2m999/PxbiV6xYocbG
 Rrndbpsrc47bt2+rrq5Of/zxh3766ScVFRUpLy9PgUBAra2tmjdvnhYtWqSWlhY98cQT0zqnMaEF
 AAA4m/HTQwAAwBkILQAAwAiEFgAAYARCCwAAMAKhBQAAGIHQAgAAjEBoAQAARiC0AAAAIxBaAACA
 EQgtAADACIQWAABghP8Bct5xko8KrjYAAAAASUVORK5CYII=
-">
-</div>
-
-</div>
-
+" />
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Contour-of-the-parameter-space">Contour of the parameter space<a class="anchor-link" href="#Contour-of-the-parameter-space">&#182;</a></h2><p>Now let us examine how the contour of the parameter space looks for the 2 parameters $a, b$ (I have kept $c$ fixed to its original value to visualize the surface on the 2D plane).</p>
-
+<h2 id="Contour-of-the-parameter-space">Contour of the parameter space<a class="anchor-link" href="#Contour-of-the-parameter-space">¶</a></h2><p>Now let us examine how the contour of the parameter space looks for the 2 parameters $a, b$ (I have kept $c$ fixed to its original value to visualize the surface on the 2D plane).</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#a,b,c = 2.5,-1.4,10</span>
 <span class="n">a_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">1e-2</span><span class="p">)</span>
 <span class="n">b_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mf">1e-1</span><span class="p">)</span>
@@ -1039,95 +972,63 @@ EQgtAADACIQWAABghP8Bct5xko8KrjYAAAAASUVORK5CYII=
         <span class="n">Z</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">ai</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">bj</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">c</span> <span class="o">-</span> <span class="n">y</span><span class="p">))</span>
 <span class="n">Z</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(400,) (200,)
 (200, 400) (200, 400)
 </pre>
 </div>
 </div>
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[6]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[6]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>(200, 400)</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Z</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">Z</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">1000</span><span class="p">)</span>  <span class="c1"># Boost the upper limit to avoid truncation errors.</span>
 <span class="n">norm</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmax</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">vmin</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 <span class="n">cset1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span><span class="n">levels</span><span class="p">,</span>
-                 <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;YlOrRd&#39;</span><span class="p">,</span>
+                 <span class="n">cmap</span><span class="o">=</span><span class="s1">'YlOrRd'</span><span class="p">,</span>
                  <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span>
                  <span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cset1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">b</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;original&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">a</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">b_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;fitted&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">a_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;a=</span><span class="si">%s</span><span class="s2">,b=</span><span class="si">%s</span><span class="s2">,a_bar=</span><span class="si">%.3f</span><span class="s2">,b_bar=</span><span class="si">%.3f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">a_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">b_bar</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"A"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"B"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">b</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"k"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"original"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">a</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"k"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">b_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"b"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"fitted"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">a_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"b"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"a=</span><span class="si">%s</span><span class="s2">,b=</span><span class="si">%s</span><span class="s2">,a_bar=</span><span class="si">%.3f</span><span class="s2">,b_bar=</span><span class="si">%.3f</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">a_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">b_bar</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">"upper left"</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[7]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x7f485044d910&gt;</pre>
+<pre><matplotlib.legend.legend at 0x7f485044d910></pre>
 </div>
-
 </div>
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
+<div class="prompt"></div>
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjAAAAGmCAYAAABiJr6sAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAAPYQAAD2EBqD+naQAAIABJREFUeJzs3Xl8FPX9P/DXJGQTcgjhVORS5FSoFGNFoJyCUBUlQUEF
@@ -1540,72 +1441,58 @@ VFNTo0ePHikuLk6S9P37d6Wlpen+/ftRngwAgnmiPQCA6JuamlJ3d7d6e3sVHx/v3H/gwAG9fPlS
 mzdvjuJ0ABCMS0gA1NHRoezs7DnlRZLy8/PV2toapakAIDQKDAC1tbVpz549Qffv3btXHR0dfCYM
 ANfhf2AAAIB1eAUGAABYhwIDAACsQ4EBAADWocAAAADrUGAAAIB1KDAAAMA6FBgAAGAdCgwAALAO
 BQYAAFiHAgMAAKxDgQEAANahwAAAAOv8A58Z+BAHEn2sAAAAAElFTkSuQmCC
-">
-</div>
-
-</div>
-
+" />
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We do observe that the optimal parameters returned by CVXPY are in the neighborhood of the minimum cost region and close to the original parameter values.</p>
-
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Non-linear-curve">Non linear curve<a class="anchor-link" href="#Non-linear-curve">&#182;</a></h2><p>Now let us take the case of a non-linear system where the errors are not distributed normally, but are transformed by the exponential function. Again our parameters are $a,b,c$ and the data points are sampled from the curve $f(X)=e^{a*X^2+b*X+C}$. The function looks as follows:</p>
-
+<h2 id="Non-linear-curve">Non linear curve<a class="anchor-link" href="#Non-linear-curve">¶</a></h2><p>Now let us take the case of a non-linear system where the errors are not distributed normally, but are transformed by the exponential function. Again our parameters are $a,b,c$ and the data points are sampled from the curve $f(X)=e^{a*X^2+b*X+C}$. The function looks as follows:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="mf">1e-2</span><span class="p">,</span><span class="o">-</span><span class="mf">1.4</span><span class="p">,</span><span class="mi">1</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span>
 <span class="n">y_orig</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">*</span><span class="mf">1e-1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_orig</span><span class="p">,</span><span class="s1">&#39;-r&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;$f(x) = \exp(</span><span class="si">%s</span><span class="s2">*x^2 + </span><span class="si">%s</span><span class="s2">*x + </span><span class="si">%s</span><span class="s2">)$&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_orig</span><span class="p">,</span><span class="s1">'-r'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"$f(x) = \exp(</span><span class="si">%s</span><span class="s2">*x^2 + </span><span class="si">%s</span><span class="s2">*x + </span><span class="si">%s</span><span class="s2">)$"</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">))</span>
 <span class="k">print</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_orig</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(200,) (200,) (200,)
 </pre>
 </div>
 </div>
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
+<div class="prompt"></div>
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAigAAAGWCAYAAABSJXgdAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAAPYQAAD2EBqD+naQAAIABJREFUeJzs3Xlc1NX+x/HXKOAC4m4pagZZeUXTLJPqVoakZSpk6i1x
@@ -1982,28 +1869,26 @@ k1iyZAmvvPIKs2fPJjk5mZKSEtauXUt4eDjR0dG8+uqrDBw4MNTdNqWuYpmXl0dhYSERERFERETw
 8ssvM3To0FB323Tq6upYtGgRTU1NlJeXc/fdd5OYmIjVamXWrFkalzcgkFh2Z1yaJkERERER8ehV
 SzwiIiLSNyhBEREREdNRgiIiIiKmowRFRERETEcJioiIiJiOEhQRERExHSUoIiIiYjpKUERERMR0
 lKCIiIiI6ShBEREREdP5fzOI5lCKQDC6AAAAAElFTkSuQmCC
-">
-</div>
-
-</div>
-
+" />
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now the original problem of fitting the data points to the exponential curve is not convex, because of it not following the DCP rules. This can also be inspected by using the <code>is_dcp()</code> function of a problem object. Furthermore, the curvature of the loss object is also unknown as identified by CVXPY. Let us try it out:</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">a_bar</span> <span class="o">=</span> <span class="n">cvx</span><span class="o">.</span><span class="n">Variable</span><span class="p">()</span>
 <span class="n">b_bar</span> <span class="o">=</span> <span class="n">cvx</span><span class="o">.</span><span class="n">Variable</span><span class="p">()</span>
 <span class="n">c_bar</span> <span class="o">=</span> <span class="n">cvx</span><span class="o">.</span><span class="n">Variable</span><span class="p">()</span>
@@ -2012,28 +1897,21 @@ lKCIiIiI6ShBEREREdP5fzOI5lCKQDC6AAAAAElFTkSuQmCC
 <span class="n">reg</span> <span class="o">=</span> <span class="n">cvx</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">a_bar</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">cvx</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">b_bar</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">prob</span> <span class="o">=</span> <span class="n">cvx</span><span class="o">.</span><span class="n">Problem</span><span class="p">(</span><span class="n">cvx</span><span class="o">.</span><span class="n">Minimize</span><span class="p">(</span><span class="n">loss</span><span class="o">/</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">C</span><span class="o">*</span><span class="n">reg</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="s2">&quot;Is the problem DCP: &quot;</span><span class="p">,</span> <span class="n">prob</span><span class="o">.</span><span class="n">is_dcp</span><span class="p">()</span>
-<span class="k">print</span> <span class="s2">&quot;Problem curvature: &quot;</span><span class="p">,</span> <span class="n">loss</span><span class="o">.</span><span class="n">curvature</span>
-<span class="k">print</span> <span class="s2">&quot;Problem sign: &quot;</span><span class="p">,</span> <span class="n">loss</span><span class="o">.</span><span class="n">sign</span>
+<span class="k">print</span> <span class="s2">"Is the problem DCP: "</span><span class="p">,</span> <span class="n">prob</span><span class="o">.</span><span class="n">is_dcp</span><span class="p">()</span>
+<span class="k">print</span> <span class="s2">"Problem curvature: "</span><span class="p">,</span> <span class="n">loss</span><span class="o">.</span><span class="n">curvature</span>
+<span class="k">print</span> <span class="s2">"Problem sign: "</span><span class="p">,</span> <span class="n">loss</span><span class="o">.</span><span class="n">sign</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">prob</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
 <span class="k">except</span> <span class="n">cvx</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">DCPError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
     <span class="k">print</span> <span class="n">e</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Is the problem DCP:  False
 Problem curvature:  UNKNOWN
@@ -2042,24 +1920,23 @@ Problem does not follow DCP rules.
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can actually convert the problem to DCP by doing a log transform on RHS and LHS of the equation. This effectively converts the problem into the earlier quadratic curve fitting problem. CVXPY also tells us that this problem does follow the DCP rules and has a convex curvature.</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">a_bar</span> <span class="o">=</span> <span class="n">cvx</span><span class="o">.</span><span class="n">Variable</span><span class="p">()</span>
 <span class="n">b_bar</span> <span class="o">=</span> <span class="n">cvx</span><span class="o">.</span><span class="n">Variable</span><span class="p">()</span>
 <span class="n">c_bar</span> <span class="o">=</span> <span class="n">cvx</span><span class="o">.</span><span class="n">Variable</span><span class="p">()</span>
@@ -2067,27 +1944,20 @@ Problem does not follow DCP rules.
 <span class="n">loss</span> <span class="o">=</span> <span class="n">cvx</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">a_bar</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b_bar</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">c_bar</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
 <span class="n">reg</span> <span class="o">=</span> <span class="n">cvx</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">a_bar</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">cvx</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">b_bar</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">prob</span> <span class="o">=</span> <span class="n">cvx</span><span class="o">.</span><span class="n">Problem</span><span class="p">(</span><span class="n">cvx</span><span class="o">.</span><span class="n">Minimize</span><span class="p">(</span><span class="n">loss</span><span class="o">/</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">C</span><span class="o">*</span><span class="n">reg</span><span class="p">))</span>
-<span class="k">print</span> <span class="s2">&quot;Is the problem DCP: &quot;</span><span class="p">,</span> <span class="n">prob</span><span class="o">.</span><span class="n">is_dcp</span><span class="p">()</span>
-<span class="k">print</span> <span class="s2">&quot;Problem curvature: &quot;</span><span class="p">,</span> <span class="n">loss</span><span class="o">.</span><span class="n">curvature</span>
-<span class="k">print</span> <span class="s2">&quot;Problem sign: &quot;</span><span class="p">,</span> <span class="n">loss</span><span class="o">.</span><span class="n">sign</span>
+<span class="k">print</span> <span class="s2">"Is the problem DCP: "</span><span class="p">,</span> <span class="n">prob</span><span class="o">.</span><span class="n">is_dcp</span><span class="p">()</span>
+<span class="k">print</span> <span class="s2">"Problem curvature: "</span><span class="p">,</span> <span class="n">loss</span><span class="o">.</span><span class="n">curvature</span>
+<span class="k">print</span> <span class="s2">"Problem sign: "</span><span class="p">,</span> <span class="n">loss</span><span class="o">.</span><span class="n">sign</span>
 <span class="k">print</span> <span class="n">prob</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
-<span class="k">print</span> <span class="s2">&quot;a_bar=</span><span class="si">%s</span><span class="s2">, b_bar=</span><span class="si">%s</span><span class="s2">, c_bar=</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">a_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">b_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">c_bar</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-<span class="k">print</span> <span class="s2">&quot;a=</span><span class="si">%s</span><span class="s2">, b=</span><span class="si">%s</span><span class="s2">, c=</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">"a_bar=</span><span class="si">%s</span><span class="s2">, b_bar=</span><span class="si">%s</span><span class="s2">, c_bar=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">a_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">b_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">c_bar</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">"a=</span><span class="si">%s</span><span class="s2">, b=</span><span class="si">%s</span><span class="s2">, c=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Is the problem DCP:  True
 Problem curvature:  CONVEX
@@ -2098,59 +1968,42 @@ a=0.01, b=-1.4, c=1
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can see that the parameters of the optimal curve found by CVXPY are quite close to the original parameters. Now we can plot the optimized curve versus the original curve.</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">a_bar</span><span class="o">.</span><span class="n">value</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b_bar</span><span class="o">.</span><span class="n">value</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">c_bar</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_orig</span><span class="p">,</span><span class="s1">&#39;-r&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;original&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_pred</span><span class="p">,</span><span class="s1">&#39;--k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;fitted&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_orig</span><span class="p">,</span><span class="s1">'-r'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"original"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_pred</span><span class="p">,</span><span class="s1">'--k'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"fitted"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">"upper left"</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[11]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[11]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x7f48502a3cd0&gt;</pre>
+<pre><matplotlib.legend.legend at 0x7f48502a3cd0></pre>
 </div>
-
 </div>
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
+<div class="prompt"></div>
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAigAAAGICAYAAABr+Rv2AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAAPYQAAD2EBqD+naQAAIABJREFUeJzs3XlY1GW/x/H3sLmAmkmmgmag5oKm2SLm0yKSlYmYmZW4
@@ -2523,28 +2376,26 @@ Zmdnk5+fT0hICCEhITz33HMMHTrU3802nZqaGhYvXkxjYyNHjx7lpptuIi4uDqvVyuzZs9Uvr0BX
 YtmdfmmaBEVERETEpVdN8YiIiEjfoARFRERETEcJioiIiJiOEhQRERExHSUoIiIiYjpKUERERMR0
 lKCIiIiI6ShBEREREdNRgiIiIiKmowRFRERETEcJioiIiJjO/wN/0VbZj+KqpQAAAABJRU5ErkJg
 gg==
-">
-</div>
-
-</div>
-
+" />
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The fitted curves also match quite well. Let us explore the parameter space with respect to the loss function as we did earlier. We know that the parameter space should be quite similar to the original space as the final loss function is also quadratic.</p>
-
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#a,b,c = 1e-2,-1.4,1</span>
 <span class="n">a_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">1e-2</span><span class="p">)</span>
 <span class="n">b_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">1e-1</span><span class="p">)</span>
@@ -2557,128 +2408,84 @@ gg==
         <span class="n">Z</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">ai</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">bj</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">c</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span>
 <span class="n">Z</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(600,) (100,)
 (100, 600) (100, 600)
 </pre>
 </div>
 </div>
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[12]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[12]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>(100, 600)</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">Z</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">Z</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[13]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[13]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>(0.0091438091332204201, 16.623137689495856)</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Z</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">Z</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Boost the upper limit to avoid truncation errors.</span>
 <span class="n">norm</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmax</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">vmin</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 <span class="n">cset1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span><span class="n">levels</span><span class="p">,</span>
-                 <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;YlOrRd&#39;</span><span class="p">,</span>
+                 <span class="n">cmap</span><span class="o">=</span><span class="s1">'YlOrRd'</span><span class="p">,</span>
                  <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span>
                  <span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cset1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">b</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;original&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">a</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">b_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;fitted&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">a_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;a=</span><span class="si">%s</span><span class="s2">,b=</span><span class="si">%s</span><span class="s2">,a_bar=</span><span class="si">%.3f</span><span class="s2">,b_bar=</span><span class="si">%.3f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">a_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">b_bar</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"A"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"B"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">b</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"k"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"original"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">a</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"k"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">b_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"b"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"fitted"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">a_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"b"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"a=</span><span class="si">%s</span><span class="s2">,b=</span><span class="si">%s</span><span class="s2">,a_bar=</span><span class="si">%.3f</span><span class="s2">,b_bar=</span><span class="si">%.3f</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">a_bar</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">b_bar</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">"upper left"</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[14]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[14]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x7f48500e8250&gt;</pre>
+<pre><matplotlib.legend.legend at 0x7f48500e8250></pre>
 </div>
-
 </div>
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
+<div class="prompt"></div>
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhcAAAGmCAYAAADPp6YFAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAAPYQAAD2EBqD+naQAAIABJREFUeJzt3Xl0FGXC9uG7upMmJB22BARFRFl13oliREZBZEgghBki
@@ -2989,26 +2796,22 @@ koLOnTvj2LFjyM3N1XtIRCQQxgWRxXzxxRe4/vrrERMTAwBITk7G+vXrdR4VEYmE34pKZDETJkzA
 xM+8ICJF8DUXREREpCjOXBAREZGiGBdERESkKMYFERERKYpxQURERIpiXBAREZGiGBdERESkKMYF
 ERERKYpxQURERIpiXBAREZGiGBdERESkKMYFERERKYpxQURERIr6/6nKd8RIBoAnAAAAAElFTkSu
 QmCC
-">
-</div>
-
-</div>
-
+" />
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Finally, we see that the original and the optimal parameter values found by CVXPY again fall in the same region and are quite close to each other. So, a slight transformation of the problem converted it into a convex optimization problem, which was quickly solved by CVXPY.</p>
-<h2 id="Closing-thoughts">Closing thoughts<a class="anchor-link" href="#Closing-thoughts">&#182;</a></h2><p>I feel the field of convex optimization is quite fascinating and allows us a different perspective to machine learning practitioner who mostly deal with fitting models to data. The <a href="http://www.cvxpy.org/en/latest/examples/index.html">CVXPY examples</a> and Prof. Boyd's talk include many other interesting applications of convex optimization like in <a href="http://nbviewer.jupyter.org/github/cvxgrp/cvxpy/blob/master/examples/notebooks/WWW/tv_inpainting.ipynb">image inpainting using total variation</a> and my personal favorite <a href="http://nbviewer.jupyter.org/github/cvxgrp/cvx_short_course/blob/master/applications/quantile_regression.ipynb">Quantile regression</a>, many of these examples talk about optimization in general without formulating the problem as that of fitting a model to data. Finally, I am not an expert in convex optimization and this post was an attempt to learn about this domain, try out the CVXPY library, and apply it to some toy problems I am interested in. If you can find more exciting use cases of convex optimization or CVXPY, feel free to post in comments.</p>
-
+<h2 id="Closing-thoughts">Closing thoughts<a class="anchor-link" href="#Closing-thoughts">¶</a></h2><p>I feel the field of convex optimization is quite fascinating and allows us a different perspective to machine learning practitioner who mostly deal with fitting models to data. The <a href="http://www.cvxpy.org/en/latest/examples/index.html">CVXPY examples</a> and Prof. Boyd's talk include many other interesting applications of convex optimization like in <a href="http://nbviewer.jupyter.org/github/cvxgrp/cvxpy/blob/master/examples/notebooks/WWW/tv_inpainting.ipynb">image inpainting using total variation</a> and my personal favorite <a href="http://nbviewer.jupyter.org/github/cvxgrp/cvx_short_course/blob/master/applications/quantile_regression.ipynb">Quantile regression</a>, many of these examples talk about optimization in general without formulating the problem as that of fitting a model to data. Finally, I am not an expert in convex optimization and this post was an attempt to learn about this domain, try out the CVXPY library, and apply it to some toy problems I am interested in. If you can find more exciting use cases of convex optimization or CVXPY, feel free to post in comments.</p>
 </div>
 </div>
 </div>
- 
-
 
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
@@ -3066,13 +2869,13 @@ QmCC
 </noscript>
 <!-- End Disqus -->
 </article>
-
-    <footer>
+          </div>
+      </div>
+      <div class="footer">
 <p>
   &copy;  2016 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
 </p>
-<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
-</p><p>
+<p>Powered by <a href="http://getpelican.com" target="_blank">Pelican</a>. <a href="https://github.com/napsternxg/pelican-bootswatch" target="_blank">pelican-bootswatch</a> by <a href="https://shubhanshu.com">shubhanshu.com</a>. Made using <a href="http://getbootstrap.com/">Twitter Bootstrap</a> and <a href="http://bootswatch.com/litera/">Bootswatch litera</a> theme. Icons from <a href="http://glyphicons.com/">Glyphicons</a>.</p><p>
   <a rel="license"
      href="http://creativecommons.org/licenses/by-sa/4.0/"
      target="_blank">
@@ -3083,9 +2886,12 @@ QmCC
          width="80"
          height="15"/>
   </a>
-</p>    </footer>
-  </main>
-
+</p>      </div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <!-- Google Analytics -->
 <script type="text/javascript">
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -3096,20 +2902,4 @@ QmCC
   ga('create', 'UA-44393164-1', 'auto');
   ga('send', 'pageview');
 </script>
-<!-- End Google Analytics -->
-
-
-
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Blog",
-  "name": " Interpreting Models ",
-  "url" : "http://shubhanshu.com/blog",
-  "image": "/assets/images/pic.jpg",
-  "description": "Shubhanshu Mishra's thoughts on mathematical models and code"
-}
-</script>
-
-</body>
-</html>
+<!-- End Google Analytics --></html>
