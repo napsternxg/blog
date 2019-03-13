@@ -5,15 +5,17 @@ Slug: nlp
 Authors: Shubhanshu Mishra
 Summary: Links related to NLP resources
 
-## Courses
-https://github.com/uclmr/stat-nlp-book/blob/python/overview.ipynb
+## Courses/Books
+* Statistical NLP Book: https://github.com/uclmr/stat-nlp-book/blob/python/overview.ipynb
+* Course on word embeddings, variants, and applications: http://people.ds.cam.ac.uk/iv250/esslli2018.html
+* A Course in Machine Learning: http://ciml.info/
 
 ## Books
-Information extraction: https://web.stanford.edu/~jurafsky/slp3/17.pdf covers main ideas of information extraction
+* Information extraction: https://web.stanford.edu/~jurafsky/slp3/17.pdf covers main ideas of information extraction
 
 
 ## Scientific NLP 
-https://github.com/NIHOPA/NLPre
+* https://github.com/NIHOPA/NLPre
 
 ## Tools
 
