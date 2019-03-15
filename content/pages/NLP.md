@@ -21,10 +21,17 @@ Summary: Links related to NLP resources
 
 * Using spacy and flashtext for fast lookup of dictionary items in text. https://github.com/mpuig/spacy-lookup
 * Open IE tool - https://github.com/dair-iitd/OpenIE-standalone
+* Different evaluation techniques for NER: https://github.com/davidsbatista/NER-Evaluation
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
 * Rules for forming questions using text: https://ell.stackexchange.com/questions/1156/when-converting-a-statement-to-a-question-where-in-the-sentence-should-i-put-t/1198#1198
 * Intel NLP library lots of great features using Tensorflow: http://nlp_architect.nervanasys.com/publications.html
 * Information extraction from unstructured text: https://sites.google.com/site/keit2018kdd/
+
+## Data
+
+* Sentiment copora: https://www.w3.org/community/sentiment/wiki/Datasets
+* Relation Extraction Corpora: https://github.com/davidsbatista/Annotated-Semantic-Relationships-Datasets
+
 
