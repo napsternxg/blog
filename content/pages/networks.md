@@ -1,4 +1,9 @@
-# Social Networks and Network Related documents
+Title: Networks
+Category: links
+Tags: links
+Slug: networks
+Authors: Shubhanshu Mishra
+Summary: Social Networks and Network Related documents
 
 
 ## Datasets: 
