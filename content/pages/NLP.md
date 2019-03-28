@@ -31,7 +31,9 @@ Summary: Links related to NLP resources
 
 ## Data
 
-* Sentiment copora: https://www.w3.org/community/sentiment/wiki/Datasets
+* Sentiment corpora: https://www.w3.org/community/sentiment/wiki/Datasets
 * Relation Extraction Corpora: https://github.com/davidsbatista/Annotated-Semantic-Relationships-Datasets
+* Summarization corpora: https://gist.github.com/napsternxg/2750479273e0621c5aa697bf89843428
+* Text normalization corpora: https://github.com/rwsproat/text-normalization-data
 
 
