@@ -23,6 +23,7 @@ Summary: Links related to NLP resources
 * Open IE tool - https://github.com/dair-iitd/OpenIE-standalone
 * Different evaluation techniques for NER: https://github.com/davidsbatista/NER-Evaluation
 * Phrase extraction using POS patterns: https://github.com/slanglab/phrasemachine
+* Whats wrong with my NLP in Python diff visualizer for NLP tasks - https://github.com/ppke-nlpg/whats-wrong-python
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
@@ -38,4 +39,11 @@ Summary: Links related to NLP resources
 * Summarization corpora: https://gist.github.com/napsternxg/2750479273e0621c5aa697bf89843428
 * Text normalization corpora: https://github.com/rwsproat/text-normalization-data
 
-
+## Research Groups
+* https://supernlp.github.io/ - University of Copenhagen 
+* http://slanglab.cs.umass.edu/ - Statistical Social Language Analysis - Brendan O'Connor
+* https://nlp.stanford.edu/ - Stanford
+* http://nlp.seas.harvard.edu/ - Harvard
+* https://mr.cs.ucl.ac.uk/ - University College London
+* http://nlpg.itk.ppke.hu/projects - Pázmány Péter Catholic University
+* http://www.ark.cs.washington.edu/ - Noah Smith NLP Lab at University of Washington
