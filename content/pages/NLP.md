@@ -9,8 +9,6 @@ Summary: Links related to NLP resources
 * Statistical NLP Book: https://github.com/uclmr/stat-nlp-book/blob/python/overview.ipynb
 * Course on word embeddings, variants, and applications: http://people.ds.cam.ac.uk/iv250/esslli2018.html
 * A Course in Machine Learning: http://ciml.info/
-
-## Books
 * Information extraction: https://web.stanford.edu/~jurafsky/slp3/17.pdf covers main ideas of information extraction
 
 
@@ -31,6 +29,8 @@ Summary: Links related to NLP resources
 * Intel NLP library lots of great features using Tensorflow: http://nlp_architect.nervanasys.com/publications.html
 * Information extraction from unstructured text: https://sites.google.com/site/keit2018kdd/
 * Tutorial on deep latent variable models for NLP with pytorch code: https://nlp.seas.harvard.edu/latent-nlp-tutorial.html
+* On the viability of crowdsourcing NLP annotations in healthcare: https://roamanalytics.com/2018/07/26/on-the-viability-of-crowdsourcing-nlp-annotations-in-healthcare/
+* 
 
 ## Data
 
