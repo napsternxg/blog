@@ -22,6 +22,7 @@ Summary: Links related to NLP resources
 * Using spacy and flashtext for fast lookup of dictionary items in text. https://github.com/mpuig/spacy-lookup
 * Open IE tool - https://github.com/dair-iitd/OpenIE-standalone
 * Different evaluation techniques for NER: https://github.com/davidsbatista/NER-Evaluation
+* Phrase extraction using POS patterns: https://github.com/slanglab/phrasemachine
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
