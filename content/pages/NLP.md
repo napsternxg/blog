@@ -38,6 +38,8 @@ Summary: Links related to NLP resources
 * Relation Extraction Corpora: https://github.com/davidsbatista/Annotated-Semantic-Relationships-Datasets
 * Summarization corpora: https://gist.github.com/napsternxg/2750479273e0621c5aa697bf89843428
 * Text normalization corpora: https://github.com/rwsproat/text-normalization-data
+* Sentihood data - Aspect based sentiment for neighborhood text - https://github.com/uclmr/jack/tree/master/data/sentihood
+* Pretrained emoji embeddings and Twitter sentiment data - https://github.com/uclmr/emoji2vec
 
 ## Research Groups
 * https://supernlp.github.io/ - University of Copenhagen 
