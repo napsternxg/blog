@@ -49,3 +49,4 @@ Summary: Links related to NLP resources
 * https://mr.cs.ucl.ac.uk/ - University College London
 * http://nlpg.itk.ppke.hu/projects - Pázmány Péter Catholic University
 * http://www.ark.cs.washington.edu/ - Noah Smith NLP Lab at University of Washington
+* https://www.cs.washington.edu/research/nlp - University of Washington
