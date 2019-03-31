@@ -29,6 +29,7 @@ Summary: Links related to NLP resources
 * Rules for forming questions using text: https://ell.stackexchange.com/questions/1156/when-converting-a-statement-to-a-question-where-in-the-sentence-should-i-put-t/1198#1198
 * Intel NLP library lots of great features using Tensorflow: http://nlp_architect.nervanasys.com/publications.html
 * Information extraction from unstructured text: https://sites.google.com/site/keit2018kdd/
+* Tutorial on deep latent variable models for NLP with pytorch code: https://nlp.seas.harvard.edu/latent-nlp-tutorial.html
 
 ## Data
 
