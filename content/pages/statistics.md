@@ -12,6 +12,7 @@ Summary: Notes and links related to statistics
 ## Links
 
 * Connection between statistical tests and linear models: https://lindeloev.github.io/tests-as-linear/
+* Understanding ANOVA: http://www.stat.columbia.edu/~gelman/research/unpublished/econanova2.pdf
 
 
 ## Uncertainity
