@@ -22,6 +22,7 @@ Summary: Notes and links related to statistics
 * High-Confidence Predictions under Adversarial Uncertainty - https://arxiv.org/abs/1101.4446
 * Cheat Sheet: Subgradient Descent, Mirror Descent, and Online Learning - http://www.pokutta.com/blog/research/2019/02/27/cheatsheet-nonsmooth.html
 * Handy statistical lexicon - https://statmodeling.stat.columbia.edu/2009/05/24/handy_statistic/
+* Toward a principled Bayesian workflow: A tutorial for cognitive science: https://osf.io/b2vx9/
 
 ## Uncertainity
 * https://erikbern.com/2018/10/08/the-hackers-guide-to-uncertainty-estimates.html
