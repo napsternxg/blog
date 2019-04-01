@@ -18,3 +18,8 @@ Summary: Social Networks and Network Related documents
 * Message passing networks in Pytorch using Pytorch Geometry: https://rusty1s.github.io/pytorch_geometric/build/html/notes/create_gnn.html
 * DGL - Deep Learning on Graphs: https://github.com/dmlc/dgl, https://www.dgl.ai/
 * Deep Mind's Graph Nets: https://github.com/deepmind/graph_nets
+
+## Network Analysis tools
+
+* Community detection on igraph: https://leidenalg.readthedocs.io/en/latest/index.html
+* 
