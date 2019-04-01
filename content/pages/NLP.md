@@ -10,6 +10,7 @@ Summary: Links related to NLP resources
 * Course on word embeddings, variants, and applications: http://people.ds.cam.ac.uk/iv250/esslli2018.html
 * A Course in Machine Learning: http://ciml.info/
 * Information extraction: https://web.stanford.edu/~jurafsky/slp3/17.pdf covers main ideas of information extraction
+* 601.765 Machine Learning: Linguistic & Sequence Modeling - https://seq2class.github.io/
 
 
 ## Scientific NLP 
@@ -22,6 +23,8 @@ Summary: Links related to NLP resources
 * Different evaluation techniques for NER: https://github.com/davidsbatista/NER-Evaluation
 * Phrase extraction using POS patterns: https://github.com/slanglab/phrasemachine
 * Whats wrong with my NLP in Python diff visualizer for NLP tasks - https://github.com/ppke-nlpg/whats-wrong-python
+* Inform - interactive fiction based on natural language: http://inform7.com/
+* Linguistic Knowledge and Transferability of Contextual Representations - https://github.com/nelson-liu/contextual-repr-analysis
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
@@ -30,7 +33,7 @@ Summary: Links related to NLP resources
 * Information extraction from unstructured text: https://sites.google.com/site/keit2018kdd/
 * Tutorial on deep latent variable models for NLP with pytorch code: https://nlp.seas.harvard.edu/latent-nlp-tutorial.html
 * On the viability of crowdsourcing NLP annotations in healthcare: https://roamanalytics.com/2018/07/26/on-the-viability-of-crowdsourcing-nlp-annotations-in-healthcare/
-* 
+* Contextual Word Representations: A Contextual Introduction - https://arxiv.org/abs/1902.06006
 
 ## Data
 
@@ -40,6 +43,11 @@ Summary: Links related to NLP resources
 * Text normalization corpora: https://github.com/rwsproat/text-normalization-data
 * Sentihood data - Aspect based sentiment for neighborhood text - https://github.com/uclmr/jack/tree/master/data/sentihood
 * Pretrained emoji embeddings and Twitter sentiment data - https://github.com/uclmr/emoji2vec
+* Fake News Corpus: https://github.com/several27/FakeNewsCorpus
+
+## Shared tasks, competitions
+
+* IN PURSUIT OF HAPPINESS - https://sites.google.com/view/affcon2019/cl-aff-shared-task
 
 ## Research Groups
 * https://supernlp.github.io/ - University of Copenhagen 
@@ -50,3 +58,4 @@ Summary: Links related to NLP resources
 * http://nlpg.itk.ppke.hu/projects - Pázmány Péter Catholic University
 * http://www.ark.cs.washington.edu/ - Noah Smith NLP Lab at University of Washington
 * https://www.cs.washington.edu/research/nlp - University of Washington
+* http://wiki.clsp.jhu.edu/view/NLP_Reading_Group - John Hopkins University
