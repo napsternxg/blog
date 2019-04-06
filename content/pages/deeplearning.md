@@ -10,3 +10,4 @@ Summary: Deep Learning And Neural Network based resources
 * Neural Ordinary Differential Equations:
   - https://github.com/msurtsukov/neural-ode
   - https://jontysinai.github.io/jekyll/update/2019/01/18/understanding-neural-odes.html
+  - Augumented Neural ODE: https://arxiv.org/abs/1904.01681
