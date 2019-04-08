@@ -23,6 +23,8 @@ Summary: Notes and links related to statistics
 * Cheat Sheet: Subgradient Descent, Mirror Descent, and Online Learning - http://www.pokutta.com/blog/research/2019/02/27/cheatsheet-nonsmooth.html
 * Handy statistical lexicon - https://statmodeling.stat.columbia.edu/2009/05/24/handy_statistic/
 * Toward a principled Bayesian workflow: A tutorial for cognitive science: https://osf.io/b2vx9/
+* Description of different types of MCMC algorithms: https://m-clark.github.io/docs/ld_mcmc
+* Lord's paradox, Simpson's paradox explanations: https://m-clark.github.io/docs/lord/index.html
 
 ## Uncertainity
 * https://erikbern.com/2018/10/08/the-hackers-guide-to-uncertainty-estimates.html
