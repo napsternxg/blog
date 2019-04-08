@@ -18,3 +18,7 @@ Summary: Machine Learning concepts and traditional resources
 ## Extreme classification
 
 * Slide deck from above course: https://taehwanptl.github.io/lectures/lecture_05_02.pdf
+
+## Reinforcement learning
+
+* Course on Online Learning, Bandits, Reinforcement and Imitation Learning: https://sites.google.com/view/cs-159-spring-2018/home
