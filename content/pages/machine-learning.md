@@ -23,6 +23,10 @@ Summary: Machine Learning concepts and traditional resources
 
 * Online Learning, Interactive Machine Learning, and Learning from Human Feedback: http://www.yisongyue.com/courses/cs159/
 
+## Active learning
+
+* http://www.yisongyue.com/courses/cs159/lectures/active_learning.pdf
+
 ## Reinforcement learning
 
 * Course on Online Learning, Bandits, Reinforcement and Imitation Learning: https://sites.google.com/view/cs-159-spring-2018/home
