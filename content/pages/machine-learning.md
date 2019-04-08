@@ -13,6 +13,7 @@ Summary: Machine Learning concepts and traditional resources
 ## Graphical models and variational inference
 
 * Graphical Models, Exponential Families, and Variational Inference: https://people.eecs.berkeley.edu/~wainwrig/Papers/WaiJor08_FTML.pdf
+* Probabilistic Graphical Models stanford course: https://cs228.stanford.edu/ [\[Course notes\]](https://ermongroup.github.io/cs228-notes/)
 
 ## Extreme classification
 
