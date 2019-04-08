@@ -19,6 +19,10 @@ Summary: Machine Learning concepts and traditional resources
 
 * Slide deck from above course: https://taehwanptl.github.io/lectures/lecture_05_02.pdf
 
+## Online learning
+
+* Online Learning, Interactive Machine Learning, and Learning from Human Feedback: http://www.yisongyue.com/courses/cs159/
+
 ## Reinforcement learning
 
 * Course on Online Learning, Bandits, Reinforcement and Imitation Learning: https://sites.google.com/view/cs-159-spring-2018/home
