@@ -25,7 +25,8 @@ Summary: Machine Learning concepts and traditional resources
 
 ## Active learning
 
-* http://www.yisongyue.com/courses/cs159/lectures/active_learning.pdf
+* Importance weighted active learning for streams: http://www.yisongyue.com/courses/cs159/lectures/active_learning.pdf
+* Summary of active learning: http://www.yisongyue.com/courses/cs159/lectures/active_notes.pdf
 
 ## Reinforcement learning
 
