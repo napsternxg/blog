@@ -10,6 +10,8 @@ Summary: Social Networks and Network Related documents
 
 * News citation networks (temporal): https://dbs.ifi.uni-heidelberg.de/resources/data/
 * Wikipedia event triples data: https://event.ifi.uni-heidelberg.de/?page_id=8
+* Network data repository: http://networkrepository.com/
+* Index of complex networks: https://icon.colorado.edu/#!/about
 
 ## Deep Learning on Networks
 
@@ -22,4 +24,4 @@ Summary: Social Networks and Network Related documents
 ## Network Analysis tools
 
 * Community detection on igraph: https://leidenalg.readthedocs.io/en/latest/index.html
-* 
+* Realtime graph visualization: http://graphvis.com/
