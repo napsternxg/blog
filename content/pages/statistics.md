@@ -10,6 +10,11 @@ Summary: Notes and links related to statistics
 * https://github.com/thomas-haslwanter/statsintro_python/tree/master/ipynb
 * Model based machine learning: http://www.mbmlbook.com/toc.html
 
+## Probability theory
+
+* https://betanalpha.github.io/assets/case_studies/probability_theory.html
+* https://betanalpha.github.io/assets/case_studies/conditional_probability_theory.html
+
 ## Links
 
 * Connection between statistical tests and linear models: https://lindeloev.github.io/tests-as-linear/
