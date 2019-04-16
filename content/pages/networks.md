@@ -25,3 +25,10 @@ Summary: Social Networks and Network Related documents
 
 * Community detection on igraph: https://leidenalg.readthedocs.io/en/latest/index.html
 * Realtime graph visualization: http://graphvis.com/
+
+
+## Network signals
+* Great posts on the benefits of using network signals in identifying fake news:
+  - https://hapgood.us/2019/03/28/network-heuristics/
+  - https://hapgood.us/2018/02/18/recognition-is-futile-why-checklist-approaches-to-information-literacy-fail-and-what-to-do-about-it/
+  - https://hapgood.us/2018/09/14/a-short-history-of-craap/
