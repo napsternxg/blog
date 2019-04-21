@@ -10,6 +10,12 @@ Summary: Notes and links related to statistics
 * https://github.com/thomas-haslwanter/statsintro_python/tree/master/ipynb
 * Model based machine learning: http://www.mbmlbook.com/toc.html
 
+## Books
+
+* [Wasserman’s All of Statistics](http://www.stat.cmu.edu/~larry/all-of-statistics/)
+* [Shalizi’s Advanced Data Analysis from an Elementary Point of View](http://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/ADAfaEPoV.pdf)
+* [Computer Age Statistical Inference: Algorithms, Evidence and Data Science](https://web.stanford.edu/~hastie/CASI/)
+
 ## Probability theory
 
 * https://betanalpha.github.io/assets/case_studies/probability_theory.html
