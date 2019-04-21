@@ -1,7 +1,7 @@
 Title: Machine Learning
 Category: links
 Tags: links
-Slug: deeplearning
+Slug: ml
 Authors: Shubhanshu Mishra
 Summary: Machine Learning concepts and traditional resources
 

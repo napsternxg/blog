@@ -1,4 +1,9 @@
-
+Title: Indian Politics
+Category: links
+Tags: links
+Slug: indian-politics
+Authors: Shubhanshu Mishra
+Summary: Links related to indian politics data
 
 ## Resources about indian politicians
 
