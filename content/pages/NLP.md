@@ -45,6 +45,7 @@ Summary: Links related to NLP resources
 * Pretrained emoji embeddings and Twitter sentiment data - https://github.com/uclmr/emoji2vec
 * Fake News Corpus: https://github.com/several27/FakeNewsCorpus
 * EmoBank - Sentiment from perspective of reader's v/s writer's emotion - https://github.com/JULIELab/EmoBank
+* Lot of argumentation mining corpora - https://www.informatik.tu-darmstadt.de/ukp/research_6/research_areas/argumentation_mining/index.en.jsp
 
 ## Shared tasks, competitions
 
