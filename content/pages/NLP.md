@@ -25,6 +25,7 @@ Summary: Links related to NLP resources
 * Whats wrong with my NLP in Python diff visualizer for NLP tasks - https://github.com/ppke-nlpg/whats-wrong-python
 * Inform - interactive fiction based on natural language: http://inform7.com/
 * Linguistic Knowledge and Transferability of Contextual Representations - https://github.com/nelson-liu/contextual-repr-analysis
+* Generalized brown clusters - https://github.com/sean-chester/generalised-brown
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
