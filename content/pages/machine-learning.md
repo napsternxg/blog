@@ -31,3 +31,4 @@ Summary: Machine Learning concepts and traditional resources
 ## Reinforcement learning
 
 * Course on Online Learning, Bandits, Reinforcement and Imitation Learning: https://sites.google.com/view/cs-159-spring-2018/home
+* Python code examples for the book: https://github.com/ShangtongZhang/reinforcement-learning-an-introduction
