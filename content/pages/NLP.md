@@ -44,6 +44,7 @@ Summary: Links related to NLP resources
 * Sentihood data - Aspect based sentiment for neighborhood text - https://github.com/uclmr/jack/tree/master/data/sentihood
 * Pretrained emoji embeddings and Twitter sentiment data - https://github.com/uclmr/emoji2vec
 * Fake News Corpus: https://github.com/several27/FakeNewsCorpus
+* EmoBank - Sentiment from perspective of reader's v/s writer's emotion - https://github.com/JULIELab/EmoBank
 
 ## Shared tasks, competitions
 
