@@ -47,6 +47,7 @@ Summary: Links related to NLP resources
 * Fake News Corpus: https://github.com/several27/FakeNewsCorpus
 * EmoBank - Sentiment from perspective of reader's v/s writer's emotion - https://github.com/JULIELab/EmoBank
 * Lot of argumentation mining corpora - https://www.informatik.tu-darmstadt.de/ukp/research_6/research_areas/argumentation_mining/index.en.jsp
+* NER datasets - https://github.com/juand-r/entity-recognition-datasets
 
 ## Shared tasks, competitions
 
