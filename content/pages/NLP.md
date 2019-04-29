@@ -35,6 +35,8 @@ Summary: Links related to NLP resources
 * Tutorial on deep latent variable models for NLP with pytorch code: https://nlp.seas.harvard.edu/latent-nlp-tutorial.html
 * On the viability of crowdsourcing NLP annotations in healthcare: https://roamanalytics.com/2018/07/26/on-the-viability-of-crowdsourcing-nlp-annotations-in-healthcare/
 * Contextual Word Representations: A Contextual Introduction - https://arxiv.org/abs/1902.06006
+* Emotion vocabularies - https://www.w3.org/TR/emotion-voc/
+* Emotion markup language - https://www.w3.org/TR/emotionml/
 
 ## Data
 
@@ -48,6 +50,9 @@ Summary: Links related to NLP resources
 * EmoBank - Sentiment from perspective of reader's v/s writer's emotion - https://github.com/JULIELab/EmoBank
 * Lot of argumentation mining corpora - https://www.informatik.tu-darmstadt.de/ukp/research_6/research_areas/argumentation_mining/index.en.jsp
 * NER datasets - https://github.com/juand-r/entity-recognition-datasets
+* Moral foundations twitter corpus - https://psyarxiv.com/w4f72
+* Keyphrase extraction - https://github.com/titipata/keyphrase_extraction
+* Multi-target-specific sentiment recognition on Twitter - https://github.com/bluemonk482/tdparse
 
 ## Shared tasks, competitions
 
