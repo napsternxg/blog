@@ -1,9 +1,13 @@
-Title: Indian Politics
+Title: Data Sources
 Category: links
 Tags: links
-Slug: indian-politics
+Slug: data-sources
 Authors: Shubhanshu Mishra
-Summary: Links related to indian politics data
+Summary: Links related to many datasets
+
+## Web Data Commons - Web Table Corpora
+* Web tables from common crawl data
+* http://webdatacommons.org/webtables/
 
 ## Resources about indian politicians
 
