@@ -9,7 +9,12 @@ Summary: Links related to many datasets
 * Web tables from common crawl data
 * http://webdatacommons.org/webtables/
 
-## Resources about indian politicians
+## Resources about Indian politicians
 
 * Funding resources: https://myneta.info/party/
 * Association for democratic reforms: https://adrindia.org/about-adr/who-we-are
+
+
+## Image caption datasets:
+
+* [Visual story telling dataset](http://visionandlanguage.net/VIST/)
