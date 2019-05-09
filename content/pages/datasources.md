@@ -24,3 +24,8 @@ Summary: Links related to many datasets
 
 * http://crowdtruth.org/data/
 * Datasets on relation extraction, frame extraction, stories, NER, and novelty detection in Tweets
+
+## Humor data
+
+* [Jokes](https://github.com/taivop/joke-dataset)
+* [Short text corpus with focus on humor detection](https://github.com/CrowdTruth/Short-Text-Corpus-For-Humor-Detection)
