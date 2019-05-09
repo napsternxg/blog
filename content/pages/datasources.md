@@ -18,3 +18,9 @@ Summary: Links related to many datasets
 ## Image caption datasets:
 
 * [Visual story telling dataset](http://visionandlanguage.net/VIST/)
+
+
+## Crowdtruth NLP datasets
+
+* http://crowdtruth.org/data/
+* Datasets on relation extraction, frame extraction, stories, NER, and novelty detection in Tweets
