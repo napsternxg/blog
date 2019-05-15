@@ -5,6 +5,10 @@ Slug: networks
 Authors: Shubhanshu Mishra
 Summary: Social Networks and Network Related documents
 
+## Links
+
+* Network Science Education: https://sites.google.com/a/binghamton.edu/netscied/teaching-learning/resources
+
 
 ## Datasets: 
 
@@ -12,6 +16,7 @@ Summary: Social Networks and Network Related documents
 * Wikipedia event triples data: https://event.ifi.uni-heidelberg.de/?page_id=8
 * Network data repository: http://networkrepository.com/
 * Index of complex networks: https://icon.colorado.edu/#!/about
+* Awesome List: https://github.com/briatte/awesome-network-analysis
 
 ## Deep Learning on Networks
 
