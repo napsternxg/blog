@@ -54,6 +54,7 @@ Summary: Links related to NLP resources
 * Keyphrase extraction - https://github.com/titipata/keyphrase_extraction
 * Multi-target-specific sentiment recognition on Twitter - https://github.com/bluemonk482/tdparse
 * Multi (700 languages) lingual speech and text - https://github.com/festvox/datasets-CMU_Wilderness
+* Large Scale text classification - http://lshtc.iit.demokritos.gr/
 
 ## Shared tasks, competitions
 
