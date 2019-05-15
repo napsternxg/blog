@@ -53,6 +53,7 @@ Summary: Links related to NLP resources
 * Moral foundations twitter corpus - https://psyarxiv.com/w4f72
 * Keyphrase extraction - https://github.com/titipata/keyphrase_extraction
 * Multi-target-specific sentiment recognition on Twitter - https://github.com/bluemonk482/tdparse
+* Multi (700 languages) lingual speech and text - https://github.com/festvox/datasets-CMU_Wilderness
 
 ## Shared tasks, competitions
 
