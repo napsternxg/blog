@@ -11,6 +11,7 @@ Summary: Links related to NLP resources
 * A Course in Machine Learning: http://ciml.info/
 * Information extraction: https://web.stanford.edu/~jurafsky/slp3/17.pdf covers main ideas of information extraction
 * 601.765 Machine Learning: Linguistic & Sequence Modeling - https://seq2class.github.io/
+* Variational Inference for NLP - https://github.com/philschulz/VITutorial#general
 
 
 ## Scientific NLP 
