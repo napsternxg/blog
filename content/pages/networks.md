@@ -30,6 +30,12 @@ Summary: Social Networks and Network Related documents
 ## Network Analysis tools
 
 * Community detection on igraph: https://leidenalg.readthedocs.io/en/latest/index.html
+
+## Visualization
+
+### Large scale graph visualization
+* El-grapho client slide JS library for large graphs - https://github.com/ericdrowell/ElGrapho
+* Graphistry server - https://github.com/graphistry/pygraphistry 
 * Realtime graph visualization: http://graphvis.com/
 
 
