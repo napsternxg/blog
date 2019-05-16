@@ -23,25 +23,17 @@
     <meta name="robots" content="" />
 
 
-<meta name="author" content="Shubhanshu Mishra" />
-<meta name="description" content="End to end module to learn NLP tasks as Q/A tasks." />
-<meta name="keywords" content="deeplearning, reviews">
-
+    <meta name="author" content="Shubhanshu Mishra" />
+    <meta name="description" content="This is a collection of notes and thoughts on mathematical model interpretation via their code implementation." />
 <meta property="og:site_name" content="Interpreting Models"/>
-<meta property="og:title" content="Ask Me Anything - Dynamic Memory Networks for Natural Language Processing"/>
-<meta property="og:description" content="End to end module to learn NLP tasks as Q/A tasks."/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Interpreting Models"/>
+<meta property="og:description" content="This is a collection of notes and thoughts on mathematical model interpretation via their code implementation."/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="http://shubhanshu.com/blog/ama-socher.html"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2016-03-09 10:20:00-06:00"/>
-<meta property="article:modified_time" content="2016-03-09 10:20:00-06:00"/>
-<meta property="article:author" content="http://shubhanshu.com/blog/author/shubhanshu-mishra.html">
-<meta property="article:section" content="posts"/>
-<meta property="article:tag" content="deeplearning"/>
-<meta property="article:tag" content="reviews"/>
+<meta property="og:url" content="http://shubhanshu.com/blog"/>
 <meta property="og:image" content="/assets/images/pic.jpg">
 
-  <title>Interpreting Models &ndash; Ask Me Anything - Dynamic Memory Networks for Natural Language Processing</title>
+  <title>Interpreting Models &ndash; Data Sources</title>
 
 </head>
 <body>
@@ -88,77 +80,34 @@
           <div class="col-lg-12" style="text-align: justify;">
 <article class="single">
   <header>
-      
-    <h1 id="ama-socher">Ask Me Anything - Dynamic Memory Networks for Natural Language Processing</h1>
-    <p>
-          Posted on 09/03/2016 in <a href="http://shubhanshu.com/blog/category/posts.html" class="badge badge-primary">posts</a>
-
-
-      <a href="http://shubhanshu.com/blog/tag/deeplearning.html" class="badge badge-info">deeplearning</a>
-      <a href="http://shubhanshu.com/blog/tag/reviews.html" class="badge badge-info">reviews</a>
-    </p>
+    
+    <h1 id="data-sources">Data Sources</h1>
   </header>
-  <hr/>
-
-
   <div>
-    <p><strong>Authors: Ankit Kumar, Ozan Irsoy, Peter Ondruska, Mohit Iyyer, James Bradbury, Ishaan Gulrajani, Victor Zhong, Romain Paulus, Richard Socher</strong></p>
-<h2>Overview</h2>
-<p>This paper presents a general purpose neural network framework called Dynamic Memory Networks (DMN), for solving NLP tasks such as question answering (QnA), text classification for sentiment analysis, and Part-of-Speech (POS) tagging. The authors achieve this by converting each task into its equivalent QnA form e.g. "What is the sentiment?", "POS tags?" etc. They report state of the art accuracy on all the tasks.</p>
-<h2>Thoughts</h2>
-<p>The paper proposes an end-to-end differentiable NN module called DMN. It consists of 4 parts, an input module, question module, episodic memory module and an answer module. Their works appear quite similar to the MemNN neural network with the main difference being the episodic memory module, which is an attention based recurrent module over the input hidden states and the question state. The authors argue that in many cases multiple passes over all the facts and question can help in better question answering. This is also demonstrated in their visualization of the attention matrix for the sentiment analysis case. This application is also demonstrated to work quite well for the question answering tasks.</p>
-<p>Some highlights of the paper are:</p>
+<h2>Web Data Commons - Web Table Corpora</h2>
 <ul>
-<li>Recurrent processing of multiple sentences and outputting only one hidden state per sentence.</li>
-<li>Recurrent attention based episodic memory</li>
-<li>Supervised training of the episodic memory</li>
+<li>Web tables from common crawl data</li>
+<li><a href="http://webdatacommons.org/webtables/">http://webdatacommons.org/webtables/</a></li>
 </ul>
-<p>Although the authors report a better average performance of DMN on Facebook bABI dataset compared to MemNN, there are many instances where their performance is worse then MemNN. On POS tagging, their method equals the performance of the previous state of the art SCNN, although their ensemble model outperforms SCNN outperforms by 0.06%. On sentiment analysis, their model is better by 0.5% compared to CNN-MC model of Kim 2014.</p>
-<p>One important thing which comes out from the comparison is that the CNN models are quite close to RNN models in performance for sentiment and POS tagging tasks. I would be interested in knowing, if this is because of similar properties of CNN which can encode attention during convolution and pooling operations. Also, given the fact that RNNs are sometimes more expensive to train than CNN, should we try out more CNN applications in NLP, probably a CNN over the attention matrix.</p>
-<p>For the multi-sentence input, I would be interested in knowing how the DMN performns if there is an output from the Input module per token for each sentence. I think this will give the module more fine-grained control over the details in each sentence, especially, when it involved path finding and positonal arguments.</p>
-<p>Overall, I think this paper is another important step in the direction of end-to-end NLP, and supports the the prediction of Christopher Manning of "Deep Learning Tsunami in NLP". Given the previous seminal work in the MemNN paper as well as the NLP from Scratch paper, this work also will get more researchers involved in using end to end sequence to sequence learning approaches in NLP tasks.</p>
-<h3>Reference</h3>
-<p><code>@article{DBLP:journals/corr/KumarISBEPOGS15,
-author = {Ankit Kumar and
-Ozan Irsoy and
-Jonathan Su and
-James Bradbury and
-Robert English and
-Brian Pierce and
-Peter Ondruska and
-Ishaan Gulrajani and
-Richard Socher},
-title = {Ask Me Anything: Dynamic Memory Networks for Natural Language Processing},
-journal = {CoRR},
-volume = {abs/1506.07285},
-year = {2015},
-url = {http://arxiv.org/abs/1506.07285},
-timestamp = {Wed, 01 Jul 2015 15:10:24 +0200},
-biburl = {http://dblp.uni-trier.de/rec/bib/journals/corr/KumarISBEPOGS15},
-bibsource = {dblp computer science bibliography, http://dblp.org}
-}</code></p>
-  </div>
-
-
-
-    <div class="addthis_relatedposts_inline">
-
-
-<!-- Disqus -->
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'shubhanshu-blog';
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>
-        Please enable JavaScript to view comments.
-
-</noscript>
-<!-- End Disqus -->
+<h2>Resources about Indian politicians</h2>
+<ul>
+<li>Funding resources: <a href="https://myneta.info/party/">https://myneta.info/party/</a></li>
+<li>Association for democratic reforms: <a href="https://adrindia.org/about-adr/who-we-are">https://adrindia.org/about-adr/who-we-are</a></li>
+</ul>
+<h2>Image caption datasets:</h2>
+<ul>
+<li><a href="http://visionandlanguage.net/VIST/">Visual story telling dataset</a></li>
+</ul>
+<h2>Crowdtruth NLP datasets</h2>
+<ul>
+<li><a href="http://crowdtruth.org/data/">http://crowdtruth.org/data/</a></li>
+<li>Datasets on relation extraction, frame extraction, stories, NER, and novelty detection in Tweets</li>
+</ul>
+<h2>Humor data</h2>
+<ul>
+<li><a href="https://github.com/taivop/joke-dataset">Jokes</a></li>
+<li><a href="https://github.com/CrowdTruth/Short-Text-Corpus-For-Humor-Detection">Short text corpus with focus on humor detection</a></li>
+</ul>  </div>
 </article>
           </div>
       </div>
