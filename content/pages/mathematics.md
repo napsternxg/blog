@@ -12,3 +12,7 @@ Summary: Links related to mathematics
   - https://www.geogebra.org/u/institute-mei
   - http://mei.org.uk/geogebra-tasks
 * Geogebra tutorials: https://www.geogebra.org/m/t6v92Gdz
+
+# N-dimensional spaces
+
+* [Hamming The Art Of Doing Science And Engineering - Chapter 9](http://worrydream.com/refs/Hamming-TheArtOfDoingScienceAndEngineering.pdf)
