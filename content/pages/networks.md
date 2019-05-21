@@ -27,6 +27,10 @@ Summary: Social Networks and Network Related documents
 * DGL - Deep Learning on Graphs: https://github.com/dmlc/dgl, https://www.dgl.ai/
 * Deep Mind's Graph Nets: https://github.com/deepmind/graph_nets
 
+## Tutorials
+
+* All types of graph neural networks GCN, Graph GANs etc: https://www.cl.cam.ac.uk/~pv273/slides/Oxf-AdvGraph.pdf
+
 ## Network Analysis tools
 
 * Community detection on igraph: https://leidenalg.readthedocs.io/en/latest/index.html
