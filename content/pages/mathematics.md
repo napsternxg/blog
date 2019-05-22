@@ -16,3 +16,14 @@ Summary: Links related to mathematics
 # N-dimensional spaces
 
 * [Hamming The Art Of Doing Science And Engineering - Chapter 9](http://worrydream.com/refs/Hamming-TheArtOfDoingScienceAndEngineering.pdf)
+* [There’s Plenty of Room in the Corners - Interactive Observable notebook](https://observablehq.com/@tophtucker/theres-plenty-of-room-in-the-corners)
+
+# Mathematics for Social Justice
+
+## Books
+
+* [Mathematics for Social Justice: Resources for the College Classroom](https://bookstore.ams.org/clrm-60?fbclid=IwAR36N1LcYgpHpNFU9iYmO5EPOSn8zKHvrFP1_FDcWd9HXlkCHK5CbWRrMKM)
+
+## Pages
+
+* [Math and Social Justice: A Collaborative MTBoS Site](https://sites.google.com/site/mathandsocialjustice/curriculum-resources)
