@@ -35,6 +35,7 @@ Summary: Social Networks and Network Related documents
 ## Network Analysis tools
 
 * Community detection on igraph: https://leidenalg.readthedocs.io/en/latest/index.html
+* Network reconstruction from time series data and network distances: https://github.com/netsiphd/netrd/
 
 ## Visualization
 
