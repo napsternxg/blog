@@ -59,6 +59,7 @@ Summary: Links related to NLP resources
 * Large Scale text classification - http://lshtc.iit.demokritos.gr/
 * Multiple text classification data - https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html
 * Data for lifelong ML for sentiment classification - https://www.aclweb.org/anthology/papers/P/P15/P15-2123/
+* Aspect extraction data for Amazon reviews for 36 domains (1000 per domain) - https://www.aclweb.org/anthology/papers/P/P14/P14-1033/
 
 ## Shared tasks, competitions
 
