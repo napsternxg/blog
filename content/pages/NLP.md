@@ -58,6 +58,7 @@ Summary: Links related to NLP resources
 * Multi (700 languages) lingual speech and text - https://github.com/festvox/datasets-CMU_Wilderness
 * Large Scale text classification - http://lshtc.iit.demokritos.gr/
 * Multiple text classification data - https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html
+* Data for lifelong ML for sentiment classification - https://www.aclweb.org/anthology/papers/P/P15/P15-2123/
 
 ## Shared tasks, competitions
 
