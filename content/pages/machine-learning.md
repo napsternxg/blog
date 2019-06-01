@@ -5,6 +5,12 @@ Slug: ml
 Authors: Shubhanshu Mishra
 Summary: Machine Learning concepts and traditional resources
 
+## Optimization
+
+* [Jupyter notebooks on various optimization topics](https://github.com/MichielStock/SelectedTopicsOptimization)
+* [Notebook on Optimal transport](https://github.com/MichielStock/Teaching/blob/master/Optimal_transport/Optimal_transport_examples.ipynb)
+* [Numerical Tours - Python](https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/optimaltransp_6_entropic_adv.ipynb)
+
 ## Structured prediction
 
 * Course: https://taehwanptl.github.io/
