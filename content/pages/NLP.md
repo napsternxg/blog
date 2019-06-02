@@ -28,6 +28,7 @@ Summary: Links related to NLP resources
 * Inform - interactive fiction based on natural language: http://inform7.com/
 * Linguistic Knowledge and Transferability of Contextual Representations - https://github.com/nelson-liu/contextual-repr-analysis
 * Generalized brown clusters - https://github.com/sean-chester/generalised-brown
+* COGCOMP NLP: Online demo with multiple tasks - http://nlp.cogcomp.org/ Code: https://github.com/CogComp/cogcomp-nlp 
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
@@ -62,6 +63,8 @@ Summary: Links related to NLP resources
 * Multiple text classification data - https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html
 * Data for lifelong ML for sentiment classification - https://www.aclweb.org/anthology/papers/P/P15/P15-2123/
 * Aspect extraction data for Amazon reviews for 36 domains (1000 per domain) - https://www.aclweb.org/anthology/papers/P/P14/P14-1033/
+* Perspectrum: dataset of claims and supporting and opposing sentences and paragraphs - https://github.com/CogComp/perspectrum 
+* Multiple datasets curated by CogComp group - https://cogcomp.org/page/corpora/ and https://cogcomp.org/page/data/
 
 ## Shared tasks, competitions
 
