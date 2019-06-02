@@ -39,6 +39,8 @@ Summary: Links related to NLP resources
 * Contextual Word Representations: A Contextual Introduction - https://arxiv.org/abs/1902.06006
 * Emotion vocabularies - https://www.w3.org/TR/emotion-voc/
 * Emotion markup language - https://www.w3.org/TR/emotionml/
+* NAACL 2019 tutorial on Tutorial on Modeling Language Change - https://github.com/jacobeisenstein/language-change-tutorial
+* NAACL 2019 tutorial on Transfer Learning in Natural Language Processing - https://github.com/huggingface/naacl_transfer_learning_tutorial
 
 ## Data
 
