@@ -44,7 +44,7 @@ Summary: Social Networks and Network Related documents
 * El-grapho client slide JS library for large graphs - https://github.com/ericdrowell/ElGrapho
 * Graphistry server - https://github.com/graphistry/pygraphistry 
 * Realtime graph visualization: http://graphvis.com/
-
+* Multilayer Networks in LaTeX - https://github.com/hackl/tikz-network
 
 ## Network signals
 * Great posts on the benefits of using network signals in identifying fake news:
