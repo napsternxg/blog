@@ -65,6 +65,7 @@ Summary: Links related to NLP resources
 * Aspect extraction data for Amazon reviews for 36 domains (1000 per domain) - https://www.aclweb.org/anthology/papers/P/P14/P14-1033/
 * Perspectrum: dataset of claims and supporting and opposing sentences and paragraphs - https://github.com/CogComp/perspectrum 
 * Multiple datasets curated by CogComp group - https://cogcomp.org/page/corpora/ and https://cogcomp.org/page/data/
+* 204,135 articles from 18 American publications. Includes date, title, publication, article text, publication name, year, month, and URL (2013-2018)- https://components.one/datasets/all-the-news-articles-dataset/
 
 ## Shared tasks, competitions
 
