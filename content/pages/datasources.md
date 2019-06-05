@@ -14,6 +14,10 @@ Summary: Links related to many datasets
 * Funding resources: https://myneta.info/party/
 * Association for democratic reforms: https://adrindia.org/about-adr/who-we-are
 
+## Name datasets
+* Name embeddings - https://arxiv.org/abs/1905.04799
+* Name master file - http://ssdmf.info/ [latest](http://cancelthesefunerals.com/)
+
 
 ## Image caption datasets:
 
