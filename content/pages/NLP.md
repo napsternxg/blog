@@ -66,6 +66,7 @@ Summary: Links related to NLP resources
 * Perspectrum: dataset of claims and supporting and opposing sentences and paragraphs - https://github.com/CogComp/perspectrum 
 * Multiple datasets curated by CogComp group - https://cogcomp.org/page/corpora/ and https://cogcomp.org/page/data/
 * 204,135 articles from 18 American publications. Includes date, title, publication, article text, publication name, year, month, and URL (2013-2018)- https://components.one/datasets/all-the-news-articles-dataset/
+* Legal Entity Detection - https://github.com/hockeyjudson/Legal-Entity-Detection
 
 ## Shared tasks, competitions
 
