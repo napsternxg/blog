@@ -7,7 +7,9 @@ Summary: Notes and links related to machine learning ethics
 
 ## Courses
 
-* 
+* Summer Institutes for Computational Social Science - https://compsocialscience.github.io/summer-institute/teaching-learning-materials
+* People + AI - https://pair.withgoogle.com/
+* Google AI ML fairness lectures - https://developers.google.com/machine-learning/crash-course/fairness/video-lecture
 
 ## Links
 
