@@ -43,6 +43,11 @@ Summary: Links related to NLP resources
 * NAACL 2019 tutorial on Tutorial on Modeling Language Change - https://github.com/jacobeisenstein/language-change-tutorial
 * NAACL 2019 tutorial on Transfer Learning in Natural Language Processing - https://github.com/huggingface/naacl_transfer_learning_tutorial
 
+## Lexicons
+
+* HistEmo lexicon for valance, arousal and dominance scores of words across time - https://github.com/JULIELab/HistEmo
+* Sentiment lexicon - https://github.com/juliasilge/tidytext/blob/master/data-raw/sentiments.csv
+
 ## Data
 
 * Sentiment corpora: https://www.w3.org/community/sentiment/wiki/Datasets
