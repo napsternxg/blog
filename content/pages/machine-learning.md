@@ -5,6 +5,10 @@ Slug: ml
 Authors: Shubhanshu Mishra
 Summary: Machine Learning concepts and traditional resources
 
+## Theory
+
+* [The Theory Behind Overfitting, Cross Validation, Regularization, Bagging, and Boosting: Tutorial](https://arxiv.org/abs/1905.12787)
+
 ## Optimization
 
 * [Jupyter notebooks on various optimization topics](https://github.com/MichielStock/SelectedTopicsOptimization)
