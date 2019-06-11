@@ -72,6 +72,7 @@ Summary: Links related to NLP resources
 * Multiple datasets curated by CogComp group - https://cogcomp.org/page/corpora/ and https://cogcomp.org/page/data/
 * 204,135 articles from 18 American publications. Includes date, title, publication, article text, publication name, year, month, and URL (2013-2018)- https://components.one/datasets/all-the-news-articles-dataset/
 * Legal Entity Detection - https://github.com/hockeyjudson/Legal-Entity-Detection
+* New Yorker Cartoon Captions Funny v/s not-Funny dataset - https://github.com/nextml/caption-contest-data/tree/master/contests
 
 ## Shared tasks, competitions
 
