@@ -8,6 +8,7 @@ Summary: Machine Learning concepts and traditional resources
 ## Theory
 
 * [The Theory Behind Overfitting, Cross Validation, Regularization, Bagging, and Boosting: Tutorial](https://arxiv.org/abs/1905.12787)
+* [Blog: Shape matching with time series data](https://roamanalytics.com/2016/11/28/shape-matching-with-time-series-data/)
 
 ## Optimization
 
