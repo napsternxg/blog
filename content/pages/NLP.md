@@ -29,6 +29,7 @@ Summary: Links related to NLP resources
 * Linguistic Knowledge and Transferability of Contextual Representations - https://github.com/nelson-liu/contextual-repr-analysis
 * Generalized brown clusters - https://github.com/sean-chester/generalised-brown
 * COGCOMP NLP: Online demo with multiple tasks - http://nlp.cogcomp.org/ Code: https://github.com/CogComp/cogcomp-nlp 
+* Python keyphrase extraction library - https://github.com/boudinfl/pke
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
