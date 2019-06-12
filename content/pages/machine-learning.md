@@ -5,6 +5,13 @@ Slug: ml
 Authors: Shubhanshu Mishra
 Summary: Machine Learning concepts and traditional resources
 
+## Novel tools
+* Scikit-multilearn - http://scikit.ml/index.html
+* scikit-multiflow: for multi-output/multi-label and stream data.- https://scikit-multiflow.github.io/
+* scikit-plot: plot models analysis - https://github.com/reiinakano/scikit-plot
+* yellowbrick various model visualizations - https://www.scikit-yb.org/en/latest/
+* List of various scikits - http://scikits.appspot.com/scikits
+
 ## Theory
 
 * [The Theory Behind Overfitting, Cross Validation, Regularization, Bagging, and Boosting: Tutorial](https://arxiv.org/abs/1905.12787)
