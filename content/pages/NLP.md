@@ -30,6 +30,7 @@ Summary: Links related to NLP resources
 * Generalized brown clusters - https://github.com/sean-chester/generalised-brown
 * COGCOMP NLP: Online demo with multiple tasks - http://nlp.cogcomp.org/ Code: https://github.com/CogComp/cogcomp-nlp 
 * Python keyphrase extraction library - https://github.com/boudinfl/pke
+* Neural Relation Extration - https://github.com/thunlp/OpenNRE
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
@@ -43,6 +44,8 @@ Summary: Links related to NLP resources
 * Emotion markup language - https://www.w3.org/TR/emotionml/
 * NAACL 2019 tutorial on Tutorial on Modeling Language Change - https://github.com/jacobeisenstein/language-change-tutorial
 * NAACL 2019 tutorial on Transfer Learning in Natural Language Processing - https://github.com/huggingface/naacl_transfer_learning_tutorial
+* Papers on Textual Adversarial Attack and Defense: https://github.com/thunlp/TAADpapers
+* Resources for NRE: Neural Relation Extraction: https://github.com/thunlp/NREPapers
 
 ## Lexicons
 
@@ -61,6 +64,7 @@ Summary: Links related to NLP resources
 * EmoBank - Sentiment from perspective of reader's v/s writer's emotion - https://github.com/JULIELab/EmoBank
 * Lot of argumentation mining corpora - https://www.informatik.tu-darmstadt.de/ukp/research_6/research_areas/argumentation_mining/index.en.jsp
 * NER datasets - https://github.com/juand-r/entity-recognition-datasets
+* More NER datasets - http://www.cs.technion.ac.il/~gabr/resources/data/ne_datasets.html
 * Moral foundations twitter corpus - https://psyarxiv.com/w4f72
 * Keyphrase extraction - https://github.com/titipata/keyphrase_extraction https://github.com/LIAAD/KeywordExtractor-Datasets#theses
 * Multi-target-specific sentiment recognition on Twitter - https://github.com/bluemonk482/tdparse
@@ -74,6 +78,9 @@ Summary: Links related to NLP resources
 * 204,135 articles from 18 American publications. Includes date, title, publication, article text, publication name, year, month, and URL (2013-2018)- https://components.one/datasets/all-the-news-articles-dataset/
 * Legal Entity Detection - https://github.com/hockeyjudson/Legal-Entity-Detection
 * New Yorker Cartoon Captions Funny v/s not-Funny dataset - https://github.com/nextml/caption-contest-data/tree/master/contests
+* Semantic Text Similarity datasets - https://github.com/brmson/dataset-sts
+* Another list of NLP datasets - https://github.com/shashankg7/Deep-Learning-for-NLP-Resources
+* Few-Shot Relation Classification Dataset (FewRel), consisting of 70,000 sentences on 100 relations derived from Wikipedia and annotated by crowdworkers - https://github.com/thunlp/FewRel
 
 ## Shared tasks, competitions
 
