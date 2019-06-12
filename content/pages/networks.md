@@ -11,7 +11,7 @@ Summary: Social Networks and Network Related documents
 * Graph traversal algorithms: https://workshape.github.io/visual-graph-algorithms/
 * Network tools repository: https://github.com/junipertcy/Network-Code-Repository
 * Resources on NRL: network representation learning. NE: network embedding: https://github.com/thunlp/NRLPapers
-
+* Resources on KRL: knowledge representation learning. KE: knowledge embedding: https://github.com/thunlp/KRLPapers
 
 ## Datasets: 
 
@@ -32,6 +32,7 @@ Summary: Social Networks and Network Related documents
 * OpenNE various network embedding algorithms: https://github.com/thunlp/openne
 * Dynamic Graph embeddings methods: https://github.com/palash1992/DynamicGEM
 * GEM various Graph Embedding Methods: https://github.com/palash1992/GEM
+* Knowledge graph embeddings: https://github.com/thunlp/openKE
 
 ## Tutorials
 
