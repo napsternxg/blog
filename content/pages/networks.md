@@ -10,6 +10,7 @@ Summary: Social Networks and Network Related documents
 * Network Science Education: https://sites.google.com/a/binghamton.edu/netscied/teaching-learning/resources
 * Graph traversal algorithms: https://workshape.github.io/visual-graph-algorithms/
 * Network tools repository: https://github.com/junipertcy/Network-Code-Repository
+* Resources on NRL: network representation learning. NE: network embedding: https://github.com/thunlp/NRLPapers
 
 
 ## Datasets: 
@@ -28,6 +29,9 @@ Summary: Social Networks and Network Related documents
 * Message passing networks in Pytorch using Pytorch Geometry: https://rusty1s.github.io/pytorch_geometric/build/html/notes/create_gnn.html
 * DGL - Deep Learning on Graphs: https://github.com/dmlc/dgl, https://www.dgl.ai/
 * Deep Mind's Graph Nets: https://github.com/deepmind/graph_nets
+* OpenNE various network embedding algorithms: https://github.com/thunlp/openne
+* Dynamic Graph embeddings methods: https://github.com/palash1992/DynamicGEM
+* GEM various Graph Embedding Methods: https://github.com/palash1992/GEM
 
 ## Tutorials
 
