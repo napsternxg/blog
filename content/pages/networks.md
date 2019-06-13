@@ -21,6 +21,9 @@ Summary: Social Networks and Network Related documents
 * Index of complex networks: https://icon.colorado.edu/#!/about
 * Awesome List: https://github.com/briatte/awesome-network-analysis
 * Networks from various social media platforms: http://socialcomputing.asu.edu/pages/datasets?att=dateAdded&order=ASC
+* Networks between fb pages, music users, wiki: https://github.com/benedekrozemberczki/datasets/
+
+
 
 ## Deep Learning on Networks
 
