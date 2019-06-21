@@ -46,6 +46,10 @@ Summary: Machine Learning concepts and traditional resources
 * Importance weighted active learning for streams: http://www.yisongyue.com/courses/cs159/lectures/active_learning.pdf
 * Summary of active learning: http://www.yisongyue.com/courses/cs159/lectures/active_notes.pdf
 
+## Self-supervised learning
+
+* Slides by Andrew Zisserman (DeepMind) with focus on Images and Videos: https://project.inria.fr/paiss/files/2018/07/zisserman-self-supervised.pdf
+
 ## Reinforcement learning
 
 * Course on Online Learning, Bandits, Reinforcement and Imitation Learning: https://sites.google.com/view/cs-159-spring-2018/home
