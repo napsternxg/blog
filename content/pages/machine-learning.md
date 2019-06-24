@@ -45,6 +45,10 @@ Summary: Machine Learning concepts and traditional resources
 
 * Importance weighted active learning for streams: http://www.yisongyue.com/courses/cs159/lectures/active_learning.pdf
 * Summary of active learning: http://www.yisongyue.com/courses/cs159/lectures/active_notes.pdf
+* Good survey of potential issues with active learning: http://proceedings.mlr.press/v16/settles11a.html
+
+## Multiple instance learning
+* Good survey: https://arxiv.org/abs/1612.03365
 
 ## Self-supervised learning
 
