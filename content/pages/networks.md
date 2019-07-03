@@ -40,6 +40,7 @@ Summary: Social Networks and Network Related documents
 ## Tutorials
 
 * All types of graph neural networks GCN, Graph GANs etc: https://www.cl.cam.ac.uk/~pv273/slides/Oxf-AdvGraph.pdf
+* Incompleteness in Networks: Biases, Skewed Results, and Some Solutions (by [Tina Eliassi-Rad](http://eliassi.org/) Rajmonda Caceres and Timothy LaRock): https://www.kdd.org/kdd2019/
 
 ## Network Analysis tools
 
