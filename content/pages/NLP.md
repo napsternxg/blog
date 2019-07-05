@@ -82,6 +82,7 @@ Summary: Links related to NLP resources
 * Another list of NLP datasets - https://github.com/shashankg7/Deep-Learning-for-NLP-Resources
 * Few-Shot Relation Classification Dataset (FewRel), consisting of 70,000 sentences on 100 relations derived from Wikipedia and annotated by crowdworkers - https://github.com/thunlp/FewRel
 * Named dataset - https://github.com/philipperemy/name-dataset
+* Aspect/Target based sentiment prediction - https://github.com/apmoore1/Bella
 
 ## Shared tasks, competitions
 
