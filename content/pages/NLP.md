@@ -98,3 +98,7 @@ Summary: Links related to NLP resources
 * http://www.ark.cs.washington.edu/ - Noah Smith NLP Lab at University of Washington
 * https://www.cs.washington.edu/research/nlp - University of Washington
 * http://wiki.clsp.jhu.edu/view/NLP_Reading_Group - John Hopkins University
+
+## Mailing lists
+
+* https://mailman.uib.no/public/corpora/ - Corpora mailing list
