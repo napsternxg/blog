@@ -16,6 +16,8 @@ Summary: Machine Learning concepts and traditional resources
 
 * [The Theory Behind Overfitting, Cross Validation, Regularization, Bagging, and Boosting: Tutorial](https://arxiv.org/abs/1905.12787)
 * [Blog: Shape matching with time series data](https://roamanalytics.com/2016/11/28/shape-matching-with-time-series-data/)
+* [Notes on information theory - Information Theory for Intelligent People - Simon DeDeo](http://tuvalu.santafe.edu/~simon/it.pdf)
+* [Notes on Bayesian reasoning - Bayesian Reasoning for Intelligent People - Simon DeDeo](http://tuvalu.santafe.edu/~simon/br.pdf)
 
 ## Optimization
 
