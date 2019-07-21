@@ -14,6 +14,10 @@ Summary: Links related to many datasets
 * Funding resources: https://myneta.info/party/
 * Association for democratic reforms: https://adrindia.org/about-adr/who-we-are
 
+## Name datasets
+* Name embeddings - https://arxiv.org/abs/1905.04799
+* Name master file - http://ssdmf.info/ [latest](http://cancelthesefunerals.com/)
+
 
 ## Image caption datasets:
 
@@ -29,3 +33,7 @@ Summary: Links related to many datasets
 
 * [Jokes](https://github.com/taivop/joke-dataset)
 * [Short text corpus with focus on humor detection](https://github.com/CrowdTruth/Short-Text-Corpus-For-Humor-Detection)
+
+## Acoustic features data
+
+* [Acoustic and meta features of albums and songs on the Billboard 200](https://components.one/datasets/billboard-200/)
