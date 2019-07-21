@@ -1,10 +1,11 @@
 name: pelican
 dependencies:
     - python=3
-    - jupyter
+    - ipykernel
     - ipython
     - nbconvert
     - markdown
+    - pip
     - pip:
         - pelican
         - pymdown-extensions
