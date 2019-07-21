@@ -330,7 +330,8 @@ $$<p>Surprisingly, like the central limit theorem, these values also converge on
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As we can observe, as the number of samples $k$ increases, the estimation of the mean and the extreme values converges to the true value. However, unlike the central limit theorem, where the variance of estimated mean reduced for higher $k$, for extreme value distributions, the distribution shifts to either right (for max) or left (for min) as $k$ increases. The variance the extreme value distributions sometimes reduces or increases as $k$ increases. I am not aware of any theorem which proves the convergence of variance.</p>
-<p>For bounded distributions like uniform, exponential, and powerlaw, the extreme value converges to the bound as $k$ increases.</p>
+<p>For bounded distributions like uniform, exponential, and powerlaw, the extreme value converges to the bound as $k$ increases. 
+<em>UPDATE</em>: I found this very similar blog post <a href="https://eranraviv.com/distribution-sample-maximum/">https://eranraviv.com/distribution-sample-maximum/</a> which explains the convergence of sample maximum for a real use case of hiring top talent. I would highly recommend reading this.</p>
 <h2 id="Comparing-normal-and-GEV-distributions">Comparing normal and GEV distributions<a class="anchor-link" href="#Comparing-normal-and-GEV-distributions">&#182;</a></h2><p>A good thing about these limiting GEV distributions is that they often fat tailed compared to the normal distribution, and also that they are skewed. This allows us to model extreme values more appropriately. We can observe this skew and fat tailed property by comparing normal distribution, to each of the GEV distributions.</p>
 
 </div>
