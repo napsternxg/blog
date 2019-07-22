@@ -43,6 +43,10 @@ Summary: Machine Learning concepts and traditional resources
 
 * Online Learning, Interactive Machine Learning, and Learning from Human Feedback: http://www.yisongyue.com/courses/cs159/
 
+## Learning to Rank
+
+* Tutorial using TF-Rank: http://ltr-tutorial-sigir19.isti.cnr.it/program-overview/
+
 ## Active learning
 
 * Importance weighted active learning for streams: http://www.yisongyue.com/courses/cs159/lectures/active_learning.pdf
