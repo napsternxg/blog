@@ -66,6 +66,18 @@ Summary: Machine Learning concepts and traditional resources
 * Python code examples for the book: https://github.com/ShangtongZhang/reinforcement-learning-an-introduction
 
 
+## Transfer Learning
+
+* Good overview of all types of transfer learning approaches (in Chinese): https://github.com/jindongwang/transferlearning
+
+
 ## Applications
 
 * List of applications across various industries - https://github.com/firmai/industry-machine-learning#legal
+* Visual explanations of ML algorithms - http://visxai.io/2018.html
+* Javascript animated examples from Artificial Intelligence - A Modern Approach by Stuart Russell and Peter Norvig: http://aimacode.github.io/aima-javascript/
+
+
+## ML Bias
+
+* Tutorial - https://github.com/Jindong-Explainable-AI/Bias_in_Machine_Learning
