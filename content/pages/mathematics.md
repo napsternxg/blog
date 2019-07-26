@@ -18,6 +18,10 @@ Summary: Links related to mathematics
 * [Hamming The Art Of Doing Science And Engineering - Chapter 9](http://worrydream.com/refs/Hamming-TheArtOfDoingScienceAndEngineering.pdf)
 * [There’s Plenty of Room in the Corners - Interactive Observable notebook](https://observablehq.com/@tophtucker/theres-plenty-of-room-in-the-corners)
 
+# Real Analysis
+* [Course notes from Cambridge analysis 1 course](https://theoremoftheweek.wordpress.com/category/cambridge-maths-tripos/ia-analysis-i/page/3/)
+* [Course notes from above course but more recent - this includes a very good introduction of the subject](https://gowers.wordpress.com/2014/01/11/introduction-to-cambridge-ia-analysis-i-2014/)
+
 # Mathematics for Social Justice
 
 ## Books
