@@ -44,6 +44,11 @@ Summary: Notes and links related to statistics
 ## Uncertainity
 * https://erikbern.com/2018/10/08/the-hackers-guide-to-uncertainty-estimates.html
 
+## Extreme value theory (EVT)
+
+* Novelty detection via EVT: https://pdfs.semanticscholar.org/b81a/a3046e7f9213949fb37e0c59cacdca4572c4.pdf
+* Fitting extreme value distribution (Weibull): https://stackoverflow.com/questions/17481672/fitting-a-weibull-distribution-using-scipy
+
 
 ## Datasets
 
