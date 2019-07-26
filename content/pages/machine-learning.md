@@ -24,6 +24,8 @@ Summary: Machine Learning concepts and traditional resources
 * [Jupyter notebooks on various optimization topics](https://github.com/MichielStock/SelectedTopicsOptimization)
 * [Notebook on Optimal transport](https://github.com/MichielStock/Teaching/blob/master/Optimal_transport/Optimal_transport_examples.ipynb)
 * [Numerical Tours - Python](https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/optimaltransp_6_entropic_adv.ipynb)
+* [Algebraic and Topological Tools in Linear Optimization](http://www.ams.org/journals/notices/201907/rnoti-p1023.pdf)
+* [Algebraic, Geometric, and Topological Methods in Optimization](https://www.math.ucdavis.edu/~deloera/TALKS/2019Baltimore-JMM-final.pdf)
 
 ## Structured prediction
 
