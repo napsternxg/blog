@@ -21,6 +21,7 @@ Summary: Links related to mathematics
 # Real Analysis
 * [Course notes from Cambridge analysis 1 course](https://theoremoftheweek.wordpress.com/category/cambridge-maths-tripos/ia-analysis-i/page/3/)
 * [Course notes from above course but more recent - this includes a very good introduction of the subject](https://gowers.wordpress.com/2014/01/11/introduction-to-cambridge-ia-analysis-i-2014/)
+* [Poetic and beautiful mathematical proofs](https://www.patrickstevens.co.uk/)
 
 # Mathematics for Social Justice
 
