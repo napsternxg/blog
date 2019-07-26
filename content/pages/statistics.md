@@ -49,6 +49,7 @@ Summary: Notes and links related to statistics
 * Novelty detection via EVT: https://pdfs.semanticscholar.org/b81a/a3046e7f9213949fb37e0c59cacdca4572c4.pdf
 * Fitting extreme value distribution (Weibull): https://stackoverflow.com/questions/17481672/fitting-a-weibull-distribution-using-scipy
 * Extreme value analysis an introduction: https://hal-enac.archives-ouvertes.fr/hal-00917995/document
+* EVT in context of discrete choice modeling: https://eml.berkeley.edu/books/choice2.html
 
 
 ## Datasets
