@@ -31,6 +31,8 @@ Summary: Links related to NLP resources
 * COGCOMP NLP: Online demo with multiple tasks - http://nlp.cogcomp.org/ Code: https://github.com/CogComp/cogcomp-nlp 
 * Python keyphrase extraction library - https://github.com/boudinfl/pke
 * Neural Relation Extration - https://github.com/thunlp/OpenNRE
+* List of tools for corpus analysis - https://corpus-analysis.com/
+* WordMapper, evolution of words on Twitter - https://sites.google.com/site/wordmapperinfo/
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
