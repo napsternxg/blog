@@ -48,6 +48,7 @@ Summary: Links related to NLP resources
 * NAACL 2019 tutorial on Transfer Learning in Natural Language Processing - https://github.com/huggingface/naacl_transfer_learning_tutorial
 * Papers on Textual Adversarial Attack and Defense: https://github.com/thunlp/TAADpapers
 * Resources for NRE: Neural Relation Extraction: https://github.com/thunlp/NREPapers
+* Online self-learning platform on vocabulary: http://vlearn.fed.cuhk.edu.hk/
 
 ## Lexicons
 
