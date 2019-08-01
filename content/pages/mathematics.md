@@ -23,6 +23,13 @@ Summary: Links related to mathematics
 * [Course notes from above course but more recent - this includes a very good introduction of the subject](https://gowers.wordpress.com/2014/01/11/introduction-to-cambridge-ia-analysis-i-2014/)
 * [Poetic and beautiful mathematical proofs](https://www.patrickstevens.co.uk/)
 
+# Calculus
+
+* [Active Calculus - open-source texts designed for active learning of calculus](https://activecalculus.org/)
+* [Open Calculus - open source calculus resources](https://opencalculus.wordpress.com/)
+* [Calculus One MOOC](https://mooculus.osu.edu/lectures)
+* [Calculus Blue by Robert Ghist - comic style calculus - covers basic to advanced concepts](https://www.math.upenn.edu/~ghrist/)
+
 # Mathematics for Social Justice
 
 ## Books
