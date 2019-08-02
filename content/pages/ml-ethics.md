@@ -19,6 +19,7 @@ Summary: Notes and links related to machine learning ethics
 * Ironies of Automation -  http://www.bainbrdg.demon.co.uk/Papers/Ironies.html
 * Ethics checklist for data science - http://deon.drivendata.org/
 * Artificial Intelligence and Human Rights - https://ai-hr.cyber.harvard.edu/
+* ML gone wrong, a beginners explanation of AI ethics - https://machinesgonewrong.com
 
 ## Challenges
 
