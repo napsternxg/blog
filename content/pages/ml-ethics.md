@@ -15,6 +15,7 @@ Summary: Notes and links related to machine learning ethics
 
 ## Links
 
+* Awesome list - https://github.com/marikyu7/awesome-artificial-intelligence-ethics
 * Ethics courses syllabus - https://medium.com/@cfiesler/tech-ethics-curricula-a-collection-of-syllabi-3eedfb76be18
 * Ironies of Automation -  http://www.bainbrdg.demon.co.uk/Papers/Ironies.html
 * Ethics checklist for data science - http://deon.drivendata.org/
