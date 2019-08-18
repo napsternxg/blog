@@ -87,6 +87,7 @@ Summary: Links related to NLP resources
 * Named dataset - https://github.com/philipperemy/name-dataset
 * Aspect/Target based sentiment prediction - https://github.com/apmoore1/Bella
 * Relation classification - https://github.com/zhangdongxu/kbp37 https://github.com/deepakn97/relationPrediction
+* Multimodal knowledge graphs - https://github.com/nle-ml/mmkb
 
 ## Shared tasks, competitions
 
