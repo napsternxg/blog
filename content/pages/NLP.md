@@ -86,8 +86,7 @@ Summary: Links related to NLP resources
 * Few-Shot Relation Classification Dataset (FewRel), consisting of 70,000 sentences on 100 relations derived from Wikipedia and annotated by crowdworkers - https://github.com/thunlp/FewRel
 * Named dataset - https://github.com/philipperemy/name-dataset
 * Aspect/Target based sentiment prediction - https://github.com/apmoore1/Bella
-* Relation classification - https://github.com/zhangdongxu/kbp37
-* 
+* Relation classification - https://github.com/zhangdongxu/kbp37 https://github.com/deepakn97/relationPrediction
 
 ## Shared tasks, competitions
 
