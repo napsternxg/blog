@@ -88,6 +88,8 @@ Summary: Links related to NLP resources
 * Aspect/Target based sentiment prediction - https://github.com/apmoore1/Bella
 * Relation classification - https://github.com/zhangdongxu/kbp37 https://github.com/deepakn97/relationPrediction
 * Multimodal knowledge graphs - https://github.com/nle-ml/mmkb
+* Distantly supervised relation extraction without false positives - https://github.com/pvthuy/distantly-supervised-RE
+* Part whole relationship data - https://github.com/pvthuy/part-whole-relations
 
 ## Shared tasks, competitions
 
