@@ -90,6 +90,7 @@ Summary: Links related to NLP resources
 * Multimodal knowledge graphs - https://github.com/nle-ml/mmkb
 * Distantly supervised relation extraction without false positives - https://github.com/pvthuy/distantly-supervised-RE
 * Part whole relationship data - https://github.com/pvthuy/part-whole-relations
+* Supersense-Tagged Repository of English with a Unified Semantics for Lexical Expressions for Web reviews from English Treebank - https://github.com/nert-nlp/streusle
 
 ## Shared tasks, competitions
 
