@@ -92,6 +92,7 @@ Summary: Links related to NLP resources
 * Part whole relationship data - https://github.com/pvthuy/part-whole-relations
 * Supersense-Tagged Repository of English with a Unified Semantics for Lexical Expressions for Web reviews from English Treebank - https://github.com/nert-nlp/streusle
 * English WikiHow instructional guides semantically annotated with Universal Conceptual Cognitive Annotation (UCCA) - https://github.com/nert-nlp/Whow_UCCA
+* English Keyphrase generation dataset - https://github.com/memray/seq2seq-keyphrase and https://github.com/kenchan0226/keyphrase-generation-rl
 
 ## Shared tasks, competitions
 
