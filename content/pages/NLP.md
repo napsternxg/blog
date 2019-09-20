@@ -54,6 +54,8 @@ Summary: Links related to NLP resources
 
 * HistEmo lexicon for valance, arousal and dominance scores of words across time - https://github.com/JULIELab/HistEmo
 * Sentiment lexicon - https://github.com/juliasilge/tidytext/blob/master/data-raw/sentiments.csv
+* Polarity shifter lexicons - https://github.com/uds-lsv/polarity-shifter-resources
+* Bootstrapped polarity shifter lexicons - https://github.com/uds-lsv/bootstrapped-lexicon-of-english-polarity-shifters
 
 ## Data
 
