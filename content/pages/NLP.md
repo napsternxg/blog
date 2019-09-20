@@ -56,6 +56,8 @@ Summary: Links related to NLP resources
 * Sentiment lexicon - https://github.com/juliasilge/tidytext/blob/master/data-raw/sentiments.csv
 * Polarity shifter lexicons - https://github.com/uds-lsv/polarity-shifter-resources
 * Bootstrapped polarity shifter lexicons - https://github.com/uds-lsv/bootstrapped-lexicon-of-english-polarity-shifters
+* Lexicon of abusive words - https://github.com/uds-lsv/lexicon-of-abusive-words
+* 
 
 ## Data
 
@@ -95,6 +97,8 @@ Summary: Links related to NLP resources
 * Supersense-Tagged Repository of English with a Unified Semantics for Lexical Expressions for Web reviews from English Treebank - https://github.com/nert-nlp/streusle
 * English WikiHow instructional guides semantically annotated with Universal Conceptual Cognitive Annotation (UCCA) - https://github.com/nert-nlp/Whow_UCCA
 * English Keyphrase generation dataset - https://github.com/memray/seq2seq-keyphrase and https://github.com/kenchan0226/keyphrase-generation-rl
+* Reverse dictionary evaluation data - https://github.com/uds-lsv/Multi-Sense-Embeddings-Reverse-Dictionaries
+* Verbal shifter disambiguation - https://github.com/uds-lsv/disambiguation-of-verbal-shifters
 
 ## Shared tasks, competitions
 
