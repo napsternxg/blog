@@ -99,6 +99,7 @@ Summary: Links related to NLP resources
 * English Keyphrase generation dataset - https://github.com/memray/seq2seq-keyphrase and https://github.com/kenchan0226/keyphrase-generation-rl
 * Reverse dictionary evaluation data - https://github.com/uds-lsv/Multi-Sense-Embeddings-Reverse-Dictionaries
 * Verbal shifter disambiguation - https://github.com/uds-lsv/disambiguation-of-verbal-shifters
+* TextGraphs-13 Shared Task on Multi-Hop Inference Explanation Regeneration - https://competitions.codalab.org/competitions/20150
 
 ## Shared tasks, competitions
 
