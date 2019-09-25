@@ -104,6 +104,8 @@ Summary: Links related to NLP resources
 * TextGraphs-13 Shared Task on Multi-Hop Inference Explanation Regeneration - https://competitions.codalab.org/competitions/20150
 * Named Entities in European Newspapers (German, French, and Dutch) - https://github.com/EuropeanaNewspapers/ner-corpora
 * Document and subject indexing corpora - https://github.com/NatLibFi/Annif-corpora
+* GENETAG - https://github.com/openbiocorpora/genetag
+* Open Biomedical corpora - https://github.com/openbiocorpora
 
 ## Shared tasks, competitions
 
