@@ -33,6 +33,7 @@ Summary: Links related to NLP resources
 * Neural Relation Extration - https://github.com/thunlp/OpenNRE
 * List of tools for corpus analysis - https://corpus-analysis.com/
 * WordMapper, evolution of words on Twitter - https://sites.google.com/site/wordmapperinfo/
+* Document subject indexing and thesaura linking (also works for Finnish) - http://annif.org/
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
@@ -57,7 +58,7 @@ Summary: Links related to NLP resources
 * Polarity shifter lexicons - https://github.com/uds-lsv/polarity-shifter-resources
 * Bootstrapped polarity shifter lexicons - https://github.com/uds-lsv/bootstrapped-lexicon-of-english-polarity-shifters
 * Lexicon of abusive words - https://github.com/uds-lsv/lexicon-of-abusive-words
-* 
+* Finnish General Ontology YSO, several domain-specific vocabularies, and the KOKO ontology - https://github.com/NatLibFi/Finto-data
 
 ## Data
 
@@ -100,6 +101,8 @@ Summary: Links related to NLP resources
 * Reverse dictionary evaluation data - https://github.com/uds-lsv/Multi-Sense-Embeddings-Reverse-Dictionaries
 * Verbal shifter disambiguation - https://github.com/uds-lsv/disambiguation-of-verbal-shifters
 * TextGraphs-13 Shared Task on Multi-Hop Inference Explanation Regeneration - https://competitions.codalab.org/competitions/20150
+* Named Entities in European Newspapers (German, French, and Dutch) - https://github.com/EuropeanaNewspapers/ner-corpora
+* Document and subject indexing corpora - https://github.com/NatLibFi/Annif-corpora
 
 ## Shared tasks, competitions
 
