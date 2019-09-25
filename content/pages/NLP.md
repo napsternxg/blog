@@ -112,6 +112,7 @@ Summary: Links related to NLP resources
 ## Shared tasks, competitions
 
 * IN PURSUIT OF HAPPINESS - https://sites.google.com/view/affcon2019/cl-aff-shared-task
+* NIST TAC Knowledge Base Population (KBP2019) Entity Discovery and Linking Track - http://nlp.cs.rpi.edu/kbp/2019/index.html
 
 ## Research Groups
 * https://supernlp.github.io/ - University of Copenhagen 
