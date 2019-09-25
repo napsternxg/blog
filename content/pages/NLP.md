@@ -50,6 +50,7 @@ Summary: Links related to NLP resources
 * Papers on Textual Adversarial Attack and Defense: https://github.com/thunlp/TAADpapers
 * Resources for NRE: Neural Relation Extraction: https://github.com/thunlp/NREPapers
 * Online self-learning platform on vocabulary: http://vlearn.fed.cuhk.edu.hk/
+* Awesome sentiment analysis - https://github.com/xiamx/awesome-sentiment-analysis
 
 ## Lexicons
 
