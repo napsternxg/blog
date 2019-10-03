@@ -37,3 +37,7 @@ Summary: Links related to many datasets
 ## Acoustic features data
 
 * [Acoustic and meta features of albums and songs on the Billboard 200](https://components.one/datasets/billboard-200/)
+
+
+## Driving data
+* [AEV Autonomous Driving Dataset (A2D2) from Audi](https://www.audi-electronics-venture.de/aev/web/de/driving-dataset.html)
