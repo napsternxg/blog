@@ -109,6 +109,7 @@ Summary: Links related to NLP resources
 * Multilingual NER - https://github.com/afshinrahimi/mmner - PANX - https://www.amazon.com/clouddrive/share/d3KGCRCIYwhKJF0H3eWA26hjg2ZCRhjpEQtDL70FSBN?_encoding=UTF8&%2AVersion%2A=1&%2Aentries%2A=0&mgh=1
 * WikiANN 282 languages NER - http://nlp.cs.rpi.edu/wikiann/
 * Amazon QA review based question answering corpus - https://github.com/amazonqa/amazonqa
+* Arabic NER - http://www.cs.cmu.edu/~ark/ArabicNER/
 
 ## Shared tasks, competitions
 
