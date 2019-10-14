@@ -17,6 +17,7 @@ Summary: Links related to many datasets
 ## Name datasets
 * Name embeddings - https://arxiv.org/abs/1905.04799
 * Name master file - http://ssdmf.info/ [latest](http://cancelthesefunerals.com/)
+* Frequent first and last names in US census 1990 - http://web.archive.org/web/20040627041136/https://www.census.gov/genealogy/www/freqnames.html
 
 
 ## Image caption datasets:
