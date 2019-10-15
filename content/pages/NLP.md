@@ -114,6 +114,7 @@ Summary: Links related to NLP resources
 * Wikification evaluation data - https://cogcomp.seas.upenn.edu/page/resource_view/4
 * Named Entity Coreference resolution across documents data - https://cogcomp.seas.upenn.edu/page/resource_view/44
 * Seminars and Job posting Data (Named Entities) - https://cogcomp.seas.upenn.edu/page/resource_view/31
+* List of various English NER datasets - https://github.com/dice-group/FOX/tree/master/input
 
 ## Shared tasks, competitions
 
