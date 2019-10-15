@@ -110,6 +110,10 @@ Summary: Links related to NLP resources
 * WikiANN 282 languages NER - http://nlp.cs.rpi.edu/wikiann/
 * Amazon QA review based question answering corpus - https://github.com/amazonqa/amazonqa
 * Arabic NER - http://www.cs.cmu.edu/~ark/ArabicNER/
+* NERWebpagesColumns from CogComp UIUC - https://cogcomp.seas.upenn.edu/page/resource_view/28
+* Wikification evaluation data - https://cogcomp.seas.upenn.edu/page/resource_view/4
+* Named Entity Coreference resolution across documents data - https://cogcomp.seas.upenn.edu/page/resource_view/44
+* Seminars and Job posting Data (Named Entities) - https://cogcomp.seas.upenn.edu/page/resource_view/31
 
 ## Shared tasks, competitions
 
