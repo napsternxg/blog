@@ -42,3 +42,13 @@ Summary: Links related to many datasets
 
 ## Driving data
 * [AEV Autonomous Driving Dataset (A2D2) from Audi](https://www.audi-electronics-venture.de/aev/web/de/driving-dataset.html)
+
+
+## Sports
+### Cricket stats
+
+* [Cricksheet](https://cricsheet.org) - Also in XML format - https://github.com/cricsheet/cricsheet-xml
+* [Python API for cricinfo JSON data](https://github.com/dwillis/python-espncricinfo) - [Example CricInfo JSON which includes commentary](http://www.espncricinfo.com/caribbean-premier-league-2015/engine/match/857713.json). 
+
+### NFL
+* [Commentary of NFL matches across the years](https://github.com/jmerullo/football)
