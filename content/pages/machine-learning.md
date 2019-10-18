@@ -10,6 +10,7 @@ Summary: Machine Learning concepts and traditional resources
 * scikit-multiflow: for multi-output/multi-label and stream data.- https://scikit-multiflow.github.io/
 * scikit-plot: plot models analysis - https://github.com/reiinakano/scikit-plot
 * yellowbrick various model visualizations - https://www.scikit-yb.org/en/latest/
+* Scikit-lego: interesting prebuild pipelines and transformers for sklearn - https://scikit-lego.readthedocs.io/en/latest/
 * List of various scikits - http://scikits.appspot.com/scikits
 
 ## Theory
@@ -18,6 +19,7 @@ Summary: Machine Learning concepts and traditional resources
 * [Blog: Shape matching with time series data](https://roamanalytics.com/2016/11/28/shape-matching-with-time-series-data/)
 * [Notes on information theory - Information Theory for Intelligent People - Simon DeDeo](http://tuvalu.santafe.edu/~simon/it.pdf)
 * [Notes on Bayesian reasoning - Bayesian Reasoning for Intelligent People - Simon DeDeo](http://tuvalu.santafe.edu/~simon/br.pdf)
+* [Mathematics of Machine Learning book](https://mml-book.github.io/)
 
 ## Optimization
 
@@ -39,15 +41,16 @@ Summary: Machine Learning concepts and traditional resources
 
 ## Extreme classification
 
-* Slide deck from above course: https://taehwanptl.github.io/lectures/lecture_05_02.pdf
+* [Slide deck from above course](https://taehwanptl.github.io/lectures/lecture_05_02.pdf)
 
 ## Online learning
 
-* Online Learning, Interactive Machine Learning, and Learning from Human Feedback: http://www.yisongyue.com/courses/cs159/
+* [Online Learning, Interactive Machine Learning, and Learning from Human Feedback](http://www.yisongyue.com/courses/cs159/)
+* [Lecture notes on Online Learning](https://parameterfree.com/lecture-notes-on-online-learning/)
 
 ## Learning to Rank
 
-* Tutorial using TF-Rank: http://ltr-tutorial-sigir19.isti.cnr.it/program-overview/
+* [Tutorial using TF-Rank](http://ltr-tutorial-sigir19.isti.cnr.it/program-overview/)
 
 ## Active learning
 
