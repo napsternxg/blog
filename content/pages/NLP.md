@@ -51,6 +51,7 @@ Summary: Links related to NLP resources
 * Resources for NRE: Neural Relation Extraction: https://github.com/thunlp/NREPapers
 * Online self-learning platform on vocabulary: http://vlearn.fed.cuhk.edu.hk/
 * Awesome sentiment analysis - https://github.com/xiamx/awesome-sentiment-analysis
+* List of papers on Textual Adversarial Attack and Defense - https://github.com/thunlp/TAADpapers
 
 ## Lexicons
 
@@ -115,6 +116,7 @@ Summary: Links related to NLP resources
 * Named Entity Coreference resolution across documents data - https://cogcomp.seas.upenn.edu/page/resource_view/44
 * Seminars and Job posting Data (Named Entities) - https://cogcomp.seas.upenn.edu/page/resource_view/31
 * List of various English NER datasets - https://github.com/dice-group/FOX/tree/master/input
+* Document level relation extraction data using English Wikipedia - https://github.com/thunlp/DocRED
 
 ## Shared tasks, competitions
 
