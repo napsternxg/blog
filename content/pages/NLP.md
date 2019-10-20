@@ -117,6 +117,10 @@ Summary: Links related to NLP resources
 * Seminars and Job posting Data (Named Entities) - https://cogcomp.seas.upenn.edu/page/resource_view/31
 * List of various English NER datasets - https://github.com/dice-group/FOX/tree/master/input
 * Document level relation extraction data using English Wikipedia - https://github.com/thunlp/DocRED
+* Medinify dataset of medical comments tagged with drug mentions and ease of use - https://github.com/NLPatVCU/medinify-datasets
+* Nano particles entity annotated data (in brat format) - https://github.com/NLPatVCU/medaCy_dataset_end
+* Named entities dataset in brat format from [Systematic Review Information Extraction (SRIE) 2018](https://tac.nist.gov/2018/SRIE/data.html) - https://github.com/NLPatVCU/medaCy_dataset_tac_2018
+* Ontonotes and FIGER gold data - http://nlp.cs.rpi.edu/kbp/2019/data.html - [Wayback link](https://web.archive.org/web/20191020032708/http://www.cl.ecei.tohoku.ac.jp/~shimaoka/corpus.zip)
 
 ## Shared tasks, competitions
 
