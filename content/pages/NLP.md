@@ -121,6 +121,7 @@ Summary: Links related to NLP resources
 * Nano particles entity annotated data (in brat format) - https://github.com/NLPatVCU/medaCy_dataset_end
 * Named entities dataset in brat format from [Systematic Review Information Extraction (SRIE) 2018](https://tac.nist.gov/2018/SRIE/data.html) - https://github.com/NLPatVCU/medaCy_dataset_tac_2018
 * Ontonotes and FIGER gold data - http://nlp.cs.rpi.edu/kbp/2019/data.html - [Wayback link](https://web.archive.org/web/20191020032708/http://www.cl.ecei.tohoku.ac.jp/~shimaoka/corpus.zip)
+* KNET fine grained named entity data - https://github.com/thunlp/KNET
 
 ## Shared tasks, competitions
 
