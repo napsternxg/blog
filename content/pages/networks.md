@@ -23,6 +23,7 @@ Summary: Social Networks and Network Related documents
 * Networks from various social media platforms: http://socialcomputing.asu.edu/pages/datasets?att=dateAdded&order=ASC
 * Networks between fb pages, music users, wiki: https://github.com/benedekrozemberczki/datasets/
 * Temporal network of people participating in teams to build lego projects: https://www.pnas.org/content/suppl/2019/10/09/1909827116.DCSupplemental
+* Frequently update list of temporal interaction networks collected using RFID tags: http://www.sociopatterns.org/datasets/
 
 
 
