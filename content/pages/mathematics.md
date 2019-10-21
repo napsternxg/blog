@@ -35,6 +35,7 @@ Summary: Links related to mathematics
 ## Books
 
 * [Mathematics for Social Justice: Resources for the College Classroom](https://bookstore.ams.org/clrm-60?fbclid=IwAR36N1LcYgpHpNFU9iYmO5EPOSn8zKHvrFP1_FDcWd9HXlkCHK5CbWRrMKM)
+* [Many books related to mathematical topics like Logic and Computation, Geometric Modeling](https://www.cis.upenn.edu/~jean/gbooks/home.html)
 
 ## Pages
 
