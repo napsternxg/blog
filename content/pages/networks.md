@@ -51,6 +51,8 @@ Summary: Social Networks and Network Related documents
 
 ## Visualization
 
+* NetworkX with Altair backend - https://github.com/Zsailer/nx_altair
+
 ### Large scale graph visualization
 * El-grapho client slide JS library for large graphs - https://github.com/ericdrowell/ElGrapho
 * Graphistry server - https://github.com/graphistry/pygraphistry 
