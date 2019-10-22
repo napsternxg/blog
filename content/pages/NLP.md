@@ -126,6 +126,8 @@ Summary: Links related to NLP resources
 * Model Sense classification - https://github.com/amarasovic/modal-sense-classifcation
 * Entity Sentiment TAC KBP - https://tac.nist.gov//2014/KBP/data.html
 * MPQA 3.0 Entity Sentiment data - https://mpqa.cs.pitt.edu/corpora/mpqa_corpus/
+* Cross-Lingual Sentiment (CLS) dataset comprises about 800.000 Amazon product reviews - https://webis.de/data/webis-cls-10.html
+* MLDoc: A Corpus for Multilingual Document Classification in Eight Languages - https://github.com/facebookresearch/MLDoc
 
 ## Shared tasks, competitions
 
