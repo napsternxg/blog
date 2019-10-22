@@ -20,6 +20,7 @@ Summary: Links related to many datasets
 * Frequent first and last names in US census 1990 - http://web.archive.org/web/20040627041136/https://www.census.gov/genealogy/www/freqnames.html
 * First name and last name data for Dutch, English, Portugese, Italian, and Spanish - https://github.com/davidsbatista/lexicons/blob/master/names-surnames-NL-UK-IT-PT-ES.zip
 * Names from different ethinicities used in bias evaluation - https://github.com/commonsense/conceptnet5/blob/master/conceptnet5/vectors/evaluation/bias.py
+* Gender by language wikidata - http://whgi.wmflabs.org/gender-by-language.html
 
 
 ## Image caption datasets:
