@@ -13,6 +13,7 @@ Summary: Links related to data mining resources
 
 # Frequent pattern mining
 * [Jiawei Han's Coursera course](https://www.coursera.org/learn/data-patterns/home/info)
+* [SPMF (Sequential Pattern Mining Framework) an open-source data mining mining library in Java](http://www.philippe-fournier-viger.com/spmf/index.php?link=resources.php)
 
 # References and courses
 * [STA-663-2017 - Reference on various data science tools with python code](http://people.duke.edu/~ccc14/sta-663-2017/index.html)
