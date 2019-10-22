@@ -23,6 +23,7 @@ Summary: Links related to many datasets
 * Gender by language wikidata - http://whgi.wmflabs.org/gender-by-language.html
 * US congress members name and gender - https://github.com/unitedstates/congress-legislators
 * Name pronounciation of US congress members - https://github.com/govtrack/pronunciation
+* Name gender race data from DBPedia SPARQL - https://gist.github.com/napsternxg/9930a53630bc7e6d72429b5ec00d7dc9
 
 
 ## Image caption datasets:
