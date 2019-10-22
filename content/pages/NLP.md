@@ -123,6 +123,9 @@ Summary: Links related to NLP resources
 * Ontonotes and FIGER gold data - http://nlp.cs.rpi.edu/kbp/2019/data.html - [Wayback link](https://web.archive.org/web/20191020032708/http://www.cl.ecei.tohoku.ac.jp/~shimaoka/corpus.zip)
 * KNET fine grained named entity data - https://github.com/thunlp/KNET
 * Drug Drug interaction data for TAC 2019 task (NER and RE) - https://bionlp.nlm.nih.gov/tac2019druginteractions/
+* Model Sense classification - https://github.com/amarasovic/modal-sense-classifcation
+* Entity Sentiment TAC KBP - https://tac.nist.gov//2014/KBP/data.html
+* MPQA 3.0 Entity Sentiment data - https://mpqa.cs.pitt.edu/corpora/mpqa_corpus/
 
 ## Shared tasks, competitions
 
