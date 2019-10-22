@@ -22,6 +22,7 @@ Summary: Links related to many datasets
 * Names from different ethinicities used in bias evaluation - https://github.com/commonsense/conceptnet5/blob/master/conceptnet5/vectors/evaluation/bias.py
 * Gender by language wikidata - http://whgi.wmflabs.org/gender-by-language.html
 * US congress members name and gender - https://github.com/unitedstates/congress-legislators
+* Name pronounciation of US congress members - https://github.com/govtrack/pronunciation
 
 
 ## Image caption datasets:
