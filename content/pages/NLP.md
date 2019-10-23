@@ -17,6 +17,7 @@ Summary: Links related to NLP resources
 
 ## Scientific NLP 
 * https://github.com/NIHOPA/NLPre
+* https://shubhanshu.com/awesome-scholarly-data-analysis/
 
 ## Tools
 
@@ -52,6 +53,8 @@ Summary: Links related to NLP resources
 * Online self-learning platform on vocabulary: http://vlearn.fed.cuhk.edu.hk/
 * Awesome sentiment analysis - https://github.com/xiamx/awesome-sentiment-analysis
 * List of papers on Textual Adversarial Attack and Defense - https://github.com/thunlp/TAADpapers
+* Tutorial on NLP Approaches to Computational Argumentation - http://acl2016tutorial.arg.tech/index.php/tutorial-materials/
+* Tutorial on Argumentation Mining - http://www.i3s.unice.fr/~villata/tutorialIJCAI2016.html
 
 ## Lexicons
 
@@ -136,6 +139,9 @@ Summary: Links related to NLP resources
 * VU Amsterdam Metaphor Corpus - http://ota.ahds.ac.uk/headers/2541.xml [Codalab](https://competitions.codalab.org/competitions/17805#learn_the_details-evaluation)
 * Abusive language datasets - https://sites.google.com/view/alw3/resources?authuser=0
 * Multilingual Surface Realization - http://taln.upf.edu/pages/msr2019-ws/SRST.html#data
+* Argument mining microtexts (not social media; available in English and German) - https://github.com/peldszus/arg-microtexts
+* List of resources in argument mining - https://www.informatik.tu-darmstadt.de/ukp/research_6/data/index.en.jsp
+* Unibo corpora for argument mining - http://argumentationmining.disi.unibo.it/resources.html
 
 
 ## Shared tasks, competitions
