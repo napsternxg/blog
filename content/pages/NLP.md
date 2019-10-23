@@ -55,6 +55,7 @@ Summary: Links related to NLP resources
 * List of papers on Textual Adversarial Attack and Defense - https://github.com/thunlp/TAADpapers
 * Tutorial on NLP Approaches to Computational Argumentation - http://acl2016tutorial.arg.tech/index.php/tutorial-materials/
 * Tutorial on Argumentation Mining - http://www.i3s.unice.fr/~villata/tutorialIJCAI2016.html
+* ACL2019 Tutorial: Advances in Argument Mining - http://arg.tech/~chris/acl2019tut/index.html
 
 ## Lexicons
 
@@ -142,6 +143,9 @@ Summary: Links related to NLP resources
 * Argument mining microtexts (not social media; available in English and German) - https://github.com/peldszus/arg-microtexts
 * List of resources in argument mining - https://www.informatik.tu-darmstadt.de/ukp/research_6/data/index.en.jsp
 * Unibo corpora for argument mining - http://argumentationmining.disi.unibo.it/resources.html
+* Datasets on natural argumentation - http://www-sop.inria.fr/NoDE/NoDE-xml.html
+* Dataset on natural arguments with emotions - https://project.inria.fr/seempad/datasets/
+* IBM debator dataset (multi task dataset) - http://www.research.ibm.com/haifa/dept/vst/debating_data.shtml
 
 
 ## Shared tasks, competitions
