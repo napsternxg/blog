@@ -130,6 +130,8 @@ Summary: Links related to NLP resources
 * MLDoc: A Corpus for Multilingual Document Classification in Eight Languages - https://github.com/facebookresearch/MLDoc
 * Topical Chat: human-human dataset of open-domain conversations - https://github.com/alexa/alexa-prize-topical-chat-dataset/
 * Human to Human actionable request dataset - https://github.com/NervanaSystems/nlp-architect/tree/master/datasets/H2H%20requests%20detection
+* Human written weather summaries - https://ehudreiter.files.wordpress.com/2016/12/sumtime.zip
+* List of datasets for Natural Language Generation (NLG) - https://aclweb.org/aclwiki/Data_sets_for_NLG
 
 
 ## Shared tasks, competitions
