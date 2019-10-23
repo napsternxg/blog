@@ -134,6 +134,8 @@ Summary: Links related to NLP resources
 * List of datasets for Natural Language Generation (NLG) - https://aclweb.org/aclwiki/Data_sets_for_NLG
 * EmotionX:emotions induced by dialogue utterances - https://sites.google.com/view/emotionx2019/
 * VU Amsterdam Metaphor Corpus - http://ota.ahds.ac.uk/headers/2541.xml [Codalab](https://competitions.codalab.org/competitions/17805#learn_the_details-evaluation)
+* Abusive language datasets - https://sites.google.com/view/alw3/resources?authuser=0
+* Multilingual Surface Realization - http://taln.upf.edu/pages/msr2019-ws/SRST.html#data
 
 
 ## Shared tasks, competitions
