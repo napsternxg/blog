@@ -146,6 +146,7 @@ Summary: Links related to NLP resources
 * Datasets on natural argumentation - http://www-sop.inria.fr/NoDE/NoDE-xml.html
 * Dataset on natural arguments with emotions - https://project.inria.fr/seempad/datasets/
 * IBM debator dataset (multi task dataset) - http://www.research.ibm.com/haifa/dept/vst/debating_data.shtml
+* El Capitan corpus for sentiment and topic at both the review (document) and sentence level - https://github.com/eibeke/El-Capitan-Dataset
 
 
 ## Shared tasks, competitions
