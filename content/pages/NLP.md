@@ -128,6 +128,9 @@ Summary: Links related to NLP resources
 * MPQA 3.0 Entity Sentiment data - https://mpqa.cs.pitt.edu/corpora/mpqa_corpus/
 * Cross-Lingual Sentiment (CLS) dataset comprises about 800.000 Amazon product reviews - https://webis.de/data/webis-cls-10.html
 * MLDoc: A Corpus for Multilingual Document Classification in Eight Languages - https://github.com/facebookresearch/MLDoc
+* Topical Chat: human-human dataset of open-domain conversations - https://github.com/alexa/alexa-prize-topical-chat-dataset/
+* Human to Human actionable request dataset - https://github.com/NervanaSystems/nlp-architect/tree/master/datasets/H2H%20requests%20detection
+
 
 ## Shared tasks, competitions
 
