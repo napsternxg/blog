@@ -31,6 +31,10 @@ Summary: Links related to many datasets
 * Data from The Neural Hawkes Particle Smoothing - https://github.com/HMEIatJHU/neural-hawkes-particle-smoothing - [Google drive link](https://drive.google.com/drive/folders/1tZ6xODd3tO3qgSp2gp-jqYOdfh3aj827?usp=sharing)
 
 
+## Controversial topics
+* List of topics - https://www.procon.org/
+* List of topics - https://www.questia.com/library/controversial-topics
+
 ## Image caption datasets:
 
 * [Visual story telling dataset](http://visionandlanguage.net/VIST/)
