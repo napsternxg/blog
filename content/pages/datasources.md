@@ -26,6 +26,10 @@ Summary: Links related to many datasets
 * Name gender race data from DBPedia SPARQL - https://gist.github.com/napsternxg/9930a53630bc7e6d72429b5ec00d7dc9
 * Name gender race data frok Wikidata SPARQL - https://gist.github.com/napsternxg/d63d770e07262f8d24880dcceda83550
 
+## Stream processing data
+* Data from The Neural Hawkes Process - https://github.com/HMEIatJHU/neurawkes - [Google drive link](https://drive.google.com/drive/folders/0BwqmV0EcoUc8UklIR1BKV25YR1U?usp=sharing)
+* Data from The Neural Hawkes Particle Smoothing - https://github.com/HMEIatJHU/neural-hawkes-particle-smoothing - [Google drive link](https://drive.google.com/drive/folders/1tZ6xODd3tO3qgSp2gp-jqYOdfh3aj827?usp=sharing)
+
 
 ## Image caption datasets:
 
