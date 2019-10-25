@@ -25,6 +25,11 @@ Summary: Links related to many datasets
 * Name pronounciation of US congress members - https://github.com/govtrack/pronunciation
 * Name gender race data from DBPedia SPARQL - https://gist.github.com/napsternxg/9930a53630bc7e6d72429b5ec00d7dc9
 * Name gender race data frok Wikidata SPARQL - https://gist.github.com/napsternxg/d63d770e07262f8d24880dcceda83550
+* List of white actors - https://www.imdb.com/list/ls075115011/
+* List of white actresses - https://www.imdb.com/list/ls052159785/
+* List of black actors - https://www.imdb.com/list/ls077130929/
+* List of black actresses - https://www.imdb.com/list/ls066061932/
+
 
 ## Stream processing data
 * Data from The Neural Hawkes Process - https://github.com/HMEIatJHU/neurawkes - [Google drive link](https://drive.google.com/drive/folders/0BwqmV0EcoUc8UklIR1BKV25YR1U?usp=sharing)
