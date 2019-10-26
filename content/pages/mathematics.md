@@ -12,6 +12,7 @@ Summary: Links related to mathematics
   - https://www.geogebra.org/u/institute-mei
   - http://mei.org.uk/geogebra-tasks
 * Geogebra tutorials: https://www.geogebra.org/m/t6v92Gdz
+* Video lecture courses with interactive content: https://lmqm.xyz
 
 # N-dimensional spaces
 
