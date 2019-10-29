@@ -149,6 +149,7 @@ Summary: Links related to NLP resources
 * El Capitan corpus for sentiment and topic at both the review (document) and sentence level - https://github.com/eibeke/El-Capitan-Dataset
 * Argument Mining European Court of Human Rights - https://github.com/PLN-FaMAF/ArgumentMiningECHR
 * Question Classification Labels for Science Questions - http://cognitiveai.org/explanationbank/
+* Wikipedia Biographies data (for assessing text generation algorithms) - https://github.com/DavidGrangier/wikipedia-biography-dataset
 
 
 ## Shared tasks, competitions
