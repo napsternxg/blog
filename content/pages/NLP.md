@@ -17,6 +17,7 @@ Summary: Links related to NLP resources
 
 ## Scientific NLP 
 * https://github.com/NIHOPA/NLPre
+* https://shubhanshu.com/awesome-scholarly-data-analysis/
 
 ## Tools
 
@@ -52,6 +53,9 @@ Summary: Links related to NLP resources
 * Online self-learning platform on vocabulary: http://vlearn.fed.cuhk.edu.hk/
 * Awesome sentiment analysis - https://github.com/xiamx/awesome-sentiment-analysis
 * List of papers on Textual Adversarial Attack and Defense - https://github.com/thunlp/TAADpapers
+* Tutorial on NLP Approaches to Computational Argumentation - http://acl2016tutorial.arg.tech/index.php/tutorial-materials/
+* Tutorial on Argumentation Mining - http://www.i3s.unice.fr/~villata/tutorialIJCAI2016.html
+* ACL2019 Tutorial: Advances in Argument Mining - http://arg.tech/~chris/acl2019tut/index.html
 
 ## Lexicons
 
@@ -132,12 +136,26 @@ Summary: Links related to NLP resources
 * Human to Human actionable request dataset - https://github.com/NervanaSystems/nlp-architect/tree/master/datasets/H2H%20requests%20detection
 * Human written weather summaries - https://ehudreiter.files.wordpress.com/2016/12/sumtime.zip
 * List of datasets for Natural Language Generation (NLG) - https://aclweb.org/aclwiki/Data_sets_for_NLG
+* EmotionX:emotions induced by dialogue utterances - https://sites.google.com/view/emotionx2019/
+* VU Amsterdam Metaphor Corpus - http://ota.ahds.ac.uk/headers/2541.xml [Codalab](https://competitions.codalab.org/competitions/17805#learn_the_details-evaluation)
+* Abusive language datasets - https://sites.google.com/view/alw3/resources?authuser=0
+* Multilingual Surface Realization - http://taln.upf.edu/pages/msr2019-ws/SRST.html#data
+* Argument mining microtexts (not social media; available in English and German) - https://github.com/peldszus/arg-microtexts
+* List of resources in argument mining - https://www.informatik.tu-darmstadt.de/ukp/research_6/data/index.en.jsp
+* Unibo corpora for argument mining - http://argumentationmining.disi.unibo.it/resources.html
+* Datasets on natural argumentation - http://www-sop.inria.fr/NoDE/NoDE-xml.html
+* Dataset on natural arguments with emotions - https://project.inria.fr/seempad/datasets/
+* IBM debator dataset (multi task dataset) - http://www.research.ibm.com/haifa/dept/vst/debating_data.shtml
+* El Capitan corpus for sentiment and topic at both the review (document) and sentence level - https://github.com/eibeke/El-Capitan-Dataset
+* Argument Mining European Court of Human Rights - https://github.com/PLN-FaMAF/ArgumentMiningECHR
+* Question Classification Labels for Science Questions - http://cognitiveai.org/explanationbank/
 
 
 ## Shared tasks, competitions
 
 * IN PURSUIT OF HAPPINESS - https://sites.google.com/view/affcon2019/cl-aff-shared-task
 * NIST TAC Knowledge Base Population (KBP2019) Entity Discovery and Linking Track - http://nlp.cs.rpi.edu/kbp/2019/index.html
+* Multilingual Surface Realization Shared Task (SR'19) - http://taln.upf.edu/pages/msr2019-ws/SRST.html#data
 
 ## Research Groups
 * https://supernlp.github.io/ - University of Copenhagen 
