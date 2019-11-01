@@ -151,7 +151,7 @@ Summary: Links related to NLP resources
 * Question Classification Labels for Science Questions - http://cognitiveai.org/explanationbank/
 * Wikipedia Biographies data (for assessing text generation algorithms) - https://github.com/DavidGrangier/wikipedia-biography-dataset
 * TASKMASTER-1 DIALOG CORPUS: TOWARD A REALISTIC AND DIVERSE DATASET - https://mila.quebec/en/publication/taskmaster-1-dialog-corpus-toward-a-realistic-and-diverse-dataset/
-
+* Parallelly Annotated Stylistic Language Dataset with Multiple Personas - https://github.com/dykang/PASTEL
 
 ## Shared tasks, competitions
 
