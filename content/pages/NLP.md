@@ -150,6 +150,7 @@ Summary: Links related to NLP resources
 * Argument Mining European Court of Human Rights - https://github.com/PLN-FaMAF/ArgumentMiningECHR
 * Question Classification Labels for Science Questions - http://cognitiveai.org/explanationbank/
 * Wikipedia Biographies data (for assessing text generation algorithms) - https://github.com/DavidGrangier/wikipedia-biography-dataset
+* TASKMASTER-1 DIALOG CORPUS: TOWARD A REALISTIC AND DIVERSE DATASET - https://mila.quebec/en/publication/taskmaster-1-dialog-corpus-toward-a-realistic-and-diverse-dataset/
 
 
 ## Shared tasks, competitions
