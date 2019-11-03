@@ -35,6 +35,7 @@ Summary: Links related to NLP resources
 * List of tools for corpus analysis - https://corpus-analysis.com/
 * WordMapper, evolution of words on Twitter - https://sites.google.com/site/wordmapperinfo/
 * Document subject indexing and thesaura linking (also works for Finnish) - http://annif.org/
+* BPEmb: Pre-trained Subword Embeddings in 275 Languages (LREC 2018) - https://doi.org/10.11588/data/V9CXPR
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
@@ -152,6 +153,10 @@ Summary: Links related to NLP resources
 * Wikipedia Biographies data (for assessing text generation algorithms) - https://github.com/DavidGrangier/wikipedia-biography-dataset
 * TASKMASTER-1 DIALOG CORPUS: TOWARD A REALISTIC AND DIVERSE DATASET - https://mila.quebec/en/publication/taskmaster-1-dialog-corpus-toward-a-realistic-and-diverse-dataset/
 * Parallelly Annotated Stylistic Language Dataset with Multiple Personas - https://github.com/dykang/PASTEL
+* A Richly Annotated Corpus for Different Tasks in Automated Fact-Checking (UKP Snopes Corpus) - https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2081 [Paper](https://www.aclweb.org/anthology/K19-1046/)
+* Argument Aspect Similarity (UKP ASPECT) Corpus - https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/1998 [Paper](https://www.aclweb.org/anthology/P19-1054/)
+* VU Amsterdam Metaphor Corpus - https://github.com/UKPLab/acl2019-GPPL-humour-metaphor/tree/master/data/VU%20Amsterdam%20Metaphor%20Corpus/2541
+* VUAMC_crowd Dataset for evaluating humour (containing 28,210 pairwise comparisons of 4030 texts) - https://github.com/UKPLab/acl2019-GPPL-humour-metaphor/tree/master/data/vuamc_crowd
 
 ## Shared tasks, competitions
 
