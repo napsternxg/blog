@@ -157,6 +157,14 @@ Summary: Links related to NLP resources
 * Argument Aspect Similarity (UKP ASPECT) Corpus - https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/1998 [Paper](https://www.aclweb.org/anthology/P19-1054/)
 * VU Amsterdam Metaphor Corpus - https://github.com/UKPLab/acl2019-GPPL-humour-metaphor/tree/master/data/VU%20Amsterdam%20Metaphor%20Corpus/2541
 * VUAMC_crowd Dataset for evaluating humour (containing 28,210 pairwise comparisons of 4030 texts) - https://github.com/UKPLab/acl2019-GPPL-humour-metaphor/tree/master/data/vuamc_crowd
+* Argument convincingness from crowdsourced data - https://github.com/UKPLab/tacl2018-preference-convincing
+* Discourse-level argumentation annotations - https://github.com/UKPLab/naacl2019-argument-annotations
+* CNN/Daily Mail summarization - https://github.com/UKPLab/emnlp2019-summary-reward/tree/master/data
+* IBM Debator Evidence Detection data - https://github.com/UKPLab/fever2019-interactive-evidence-detection/tree/master/data
+* QA data for benchmarking entity linking systems - https://public.ukp.informatik.tu-darmstadt.de/starsem18-entity-linking/EntityLinkingForQADatasets.zip [Code](https://github.com/UKPLab/starsem2018-entity-linking)
+* Wikipedia-Wikidata sentence-level relation annotations - https://www.informatik.tu-darmstadt.de/ukp/research_6/data/lexical_resources/wikipedia_wikidata_relations/index.en.jsp
+* Live Blog Corpus for Summarization - https://github.com/UKPLab/lrec2018-live-blog-corpus
+* Wikidata/FrameNet Alignment - https://www.informatik.tu-darmstadt.de/ukp/research_6/data/lexical_resources/wikidata_framenet_alignments/index.en.jsp
 
 ## Shared tasks, competitions
 
