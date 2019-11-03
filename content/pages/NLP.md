@@ -165,6 +165,7 @@ Summary: Links related to NLP resources
 * Wikipedia-Wikidata sentence-level relation annotations - https://www.informatik.tu-darmstadt.de/ukp/research_6/data/lexical_resources/wikipedia_wikidata_relations/index.en.jsp
 * Live Blog Corpus for Summarization - https://github.com/UKPLab/lrec2018-live-blog-corpus
 * Wikidata/FrameNet Alignment - https://www.informatik.tu-darmstadt.de/ukp/research_6/data/lexical_resources/wikidata_framenet_alignments/index.en.jsp
+* Event time extraction - https://github.com/UKPLab/tacl2017-event-time-extraction/tree/master/input
 
 ## Shared tasks, competitions
 
