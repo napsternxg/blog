@@ -9,3 +9,4 @@ Summary: Links related to explorable explanations
 * [Complexity Explorables](http://www.complexity-explorables.org/explorables/)
 * [Explorable Explanations Directory](https://explorabl.es/)
 * [Resonance: Learning Mechanical Vibration Engineering Through Computation](https://moorepants.github.io/resonance/)
+* [myPhysicsLab: Physics teaching via simulations](https://www.myphysicslab.com/)
