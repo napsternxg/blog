@@ -24,6 +24,7 @@ Summary: Social Networks and Network Related documents
 * Networks between fb pages, music users, wiki: https://github.com/benedekrozemberczki/datasets/
 * Temporal network of people participating in teams to build lego projects: https://www.pnas.org/content/suppl/2019/10/09/1909827116.DCSupplemental
 * Frequently update list of temporal interaction networks collected using RFID tags: http://www.sociopatterns.org/datasets/
+* Co-citation networks of all Nature papers: https://www.nature.com/immersive/d41586-019-03165-4/index.html
 
 
 
@@ -52,6 +53,7 @@ Summary: Social Networks and Network Related documents
 ## Visualization
 
 * NetworkX with Altair backend - https://github.com/Zsailer/nx_altair
+* Temporal co-citation networks of all Nature papers: https://www.nature.com/immersive/d41586-019-03165-4/index.html
 
 ### Large scale graph visualization
 * El-grapho client slide JS library for large graphs - https://github.com/ericdrowell/ElGrapho
