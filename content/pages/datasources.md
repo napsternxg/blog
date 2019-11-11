@@ -35,6 +35,7 @@ Summary: Links related to many datasets
 * List of African-American actresses - https://www.imdb.com/list/ls066061932/
 * Wiki List of African-American actors - https://en.wikipedia.org/wiki/List_of_African-American_actors
 * Wiki List of American actresses - https://en.wikipedia.org/wiki/List_of_American_film_actresses
+* Artists in MoMA collection and their names/nationality - https://github.com/MuseumofModernArt/collection
 
 
 ## Stream processing data
