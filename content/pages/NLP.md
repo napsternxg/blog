@@ -169,6 +169,7 @@ Summary: Links related to NLP resources
 * Event time extraction - https://github.com/UKPLab/tacl2017-event-time-extraction/tree/master/input
 * MultiFC: A Real-World Multi-Domain Dataset for Evidence-Based Fact Checking of Claims - https://copenlu.github.io/publication/2019_emnlp_augenstein/
 * Conversation datasets in ConvoKit - https://zissou.infosci.cornell.edu/convokit/documentation/datasets.html
+* Dataset of personal narratives with Advice-Seeking Questions - https://github.com/CornellNLP/ASQ
 
 ## Shared tasks, competitions
 
