@@ -36,6 +36,7 @@ Summary: Links related to NLP resources
 * WordMapper, evolution of words on Twitter - https://sites.google.com/site/wordmapperinfo/
 * Document subject indexing and thesaura linking (also works for Finnish) - http://annif.org/
 * BPEmb: Pre-trained Subword Embeddings in 275 Languages (LREC 2018) - https://doi.org/10.11588/data/V9CXPR
+* Cornell Conversational Analysis Toolkit - https://zissou.infosci.cornell.edu/convokit/documentation/index.html
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
@@ -167,6 +168,7 @@ Summary: Links related to NLP resources
 * Wikidata/FrameNet Alignment - https://www.informatik.tu-darmstadt.de/ukp/research_6/data/lexical_resources/wikidata_framenet_alignments/index.en.jsp
 * Event time extraction - https://github.com/UKPLab/tacl2017-event-time-extraction/tree/master/input
 * MultiFC: A Real-World Multi-Domain Dataset for Evidence-Based Fact Checking of Claims - https://copenlu.github.io/publication/2019_emnlp_augenstein/
+* Conversation datasets in ConvoKit - https://zissou.infosci.cornell.edu/convokit/documentation/datasets.html
 
 ## Shared tasks, competitions
 
