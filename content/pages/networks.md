@@ -25,6 +25,7 @@ Summary: Social Networks and Network Related documents
 * Temporal network of people participating in teams to build lego projects: https://www.pnas.org/content/suppl/2019/10/09/1909827116.DCSupplemental
 * Frequently update list of temporal interaction networks collected using RFID tags: http://www.sociopatterns.org/datasets/
 * Co-citation networks of all Nature papers: https://www.nature.com/immersive/d41586-019-03165-4/index.html
+* Network datasets - https://gitlab.com/cristophersfr/fisher-networks
 
 
 
@@ -39,6 +40,7 @@ Summary: Social Networks and Network Related documents
 * Dynamic Graph embeddings methods: https://github.com/palash1992/DynamicGEM
 * GEM various Graph Embedding Methods: https://github.com/palash1992/GEM
 * Knowledge graph embeddings: https://github.com/thunlp/openKE
+* Information theory on networks: https://gitlab.com/cristophersfr/fisher-networks
 
 ## Tutorials
 
