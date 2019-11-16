@@ -170,6 +170,7 @@ Summary: Links related to NLP resources
 * MultiFC: A Real-World Multi-Domain Dataset for Evidence-Based Fact Checking of Claims - https://copenlu.github.io/publication/2019_emnlp_augenstein/
 * Conversation datasets in ConvoKit - https://zissou.infosci.cornell.edu/convokit/documentation/datasets.html
 * Dataset of personal narratives with Advice-Seeking Questions - https://github.com/CornellNLP/ASQ
+* Ontonotes documents labeled using Freebase entity types (included as part of paper source files) - https://arxiv.org/format/1412.1820
 
 ## Shared tasks, competitions
 
