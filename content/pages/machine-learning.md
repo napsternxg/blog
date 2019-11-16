@@ -32,6 +32,7 @@ Summary: Machine Learning concepts and traditional resources
 ## Structured prediction
 
 * Course: https://taehwanptl.github.io/
+* CVPR 2011 Tutorial - Structured Prediction and Learning in Computer Vision: http://www.nowozin.net/sebastian/cvpr2011tutorial/
 
 
 ## Graphical models and variational inference
