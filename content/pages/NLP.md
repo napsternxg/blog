@@ -171,6 +171,7 @@ Summary: Links related to NLP resources
 * Conversation datasets in ConvoKit - https://zissou.infosci.cornell.edu/convokit/documentation/datasets.html
 * Dataset of personal narratives with Advice-Seeking Questions - https://github.com/CornellNLP/ASQ
 * Ontonotes documents labeled using Freebase entity types (included as part of paper source files) - https://arxiv.org/format/1412.1820
+* Google book corpora catalogue - http://storage.googleapis.com/books/
 
 ## Shared tasks, competitions
 
