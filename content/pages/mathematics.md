@@ -31,6 +31,11 @@ Summary: Links related to mathematics
 * [Calculus One MOOC](https://mooculus.osu.edu/lectures)
 * [Calculus Blue by Robert Ghist - comic style calculus - covers basic to advanced concepts](https://www.math.upenn.edu/~ghrist/)
 
+# Category theory
+
+* [Applied Category Theory Course](https://www.azimuthproject.org/azimuth/show/Applied+Category+Theory+Course)
+* [Seven Sketches in Compositionality: An Invitation to Applied Category Theory](http://math.mit.edu/~dspivak/teaching/sp18/7Sketches.pdf)
+
 # Mathematics for Social Justice
 
 ## Books
