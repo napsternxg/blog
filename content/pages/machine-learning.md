@@ -48,6 +48,7 @@ Summary: Machine Learning concepts and traditional resources
 
 * [Online Learning, Interactive Machine Learning, and Learning from Human Feedback](http://www.yisongyue.com/courses/cs159/)
 * [Lecture notes on Online Learning](https://parameterfree.com/lecture-notes-on-online-learning/)
+* [Machine Learning for Data Streams using MOA](https://moa.cms.waikato.ac.nz/book-html/)
 
 ## Learning to Rank
 
