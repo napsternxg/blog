@@ -8,6 +8,7 @@ Summary: Links related to many datasets
 ## Meta - Data sources about data sources
 
 * Data is Plural - https://tinyletter.com/data-is-plural [Spreadsheet with all data organized](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit)
+* Replies to Allen Downey's question about data sources - https://twitter.com/AllenDowney/status/1196802333017071616
 
 ## Web Data Commons - Web Table Corpora
 * Web tables from common crawl data
