@@ -18,6 +18,11 @@ Summary: Links related to many datasets
 * Funding resources: https://myneta.info/party/
 * Association for democratic reforms: https://adrindia.org/about-adr/who-we-are
 
+# Social economic data
+
+## Economics data
+* Social mobility and a variety of other outcomes from life expectancy to patent rates by neighborhood, college, parental income level, and racial background - https://opportunityinsights.org/data/
+
 ## Name datasets
 * Name embeddings - https://arxiv.org/abs/1905.04799
 * Name master file - http://ssdmf.info/ [latest](http://cancelthesefunerals.com/)
