@@ -26,6 +26,7 @@ Summary: Links related to many datasets
 
 ## Name datasets
 * Name embeddings - https://arxiv.org/abs/1905.04799
+* Baby Names map (100,000 unique names from 14 different countries) - https://github.com/guydavis/babynamemap
 * Name master file - http://ssdmf.info/ [latest](http://cancelthesefunerals.com/)
 * Frequent first and last names in US census 1990 - http://web.archive.org/web/20040627041136/https://www.census.gov/genealogy/www/freqnames.html
 * First name and last name data for Dutch, English, Portugese, Italian, and Spanish - https://github.com/davidsbatista/lexicons/blob/master/names-surnames-NL-UK-IT-PT-ES.zip
