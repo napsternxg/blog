@@ -172,6 +172,8 @@ Summary: Links related to NLP resources
 * Dataset of personal narratives with Advice-Seeking Questions - https://github.com/CornellNLP/ASQ
 * Ontonotes documents labeled using Freebase entity types (included as part of paper source files) - https://arxiv.org/format/1412.1820
 * Google book corpora catalogue - http://storage.googleapis.com/books/
+* Multiple AIDA datasets for Named Entity Linking - https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/aida/downloads/
+* Named Entity Disambiguation for Noisy Text - https://github.com/yotam-happy/NEDforNoisyText
 
 ## Shared tasks, competitions
 
