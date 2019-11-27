@@ -26,6 +26,7 @@ Summary: Links related to many datasets
 
 ## Name datasets
 * Name embeddings - https://arxiv.org/abs/1905.04799
+* NYC baby names by gender and mother's ethnicity - https://data.cityofnewyork.us/Health/Popular-Baby-Names/25th-nujf [Also available here](https://catalog.data.gov/dataset/most-popular-baby-names-by-sex-and-mothers-ethnic-group-new-york-city-8c742)
 * Baby Names map (100,000 unique names from 14 different countries) - https://github.com/guydavis/babynamemap
 * Name master file - http://ssdmf.info/ [latest](http://cancelthesefunerals.com/)
 * Frequent first and last names in US census 1990 - http://web.archive.org/web/20040627041136/https://www.census.gov/genealogy/www/freqnames.html
