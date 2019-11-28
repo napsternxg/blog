@@ -174,6 +174,7 @@ Summary: Links related to NLP resources
 * Google book corpora catalogue - http://storage.googleapis.com/books/
 * Multiple AIDA datasets for Named Entity Linking - https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/aida/downloads/
 * Named Entity Disambiguation for Noisy Text - https://github.com/yotam-happy/NEDforNoisyText
+* Multiple datasets for wikipedia based disambiguation - http://rali.iro.umontreal.ca/rali/?q=en/wikipedia-ds-cont-emb
 
 ## Shared tasks, competitions
 
