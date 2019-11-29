@@ -25,7 +25,8 @@ Summary: Links related to many datasets
 * Social mobility and a variety of other outcomes from life expectancy to patent rates by neighborhood, college, parental income level, and racial background - https://opportunityinsights.org/data/
 
 ## Name datasets
-* Manually curated name gender list from multiple countries - https://github.com/lead-ratings/gender-guesser [Originally introduced here](https://autohotkey.com/board/topic/20260-gender-verification-by-forename-cmd-line-tool-db/)
+* Manually curated name gender list from multiple countries - https://github.com/lead-ratings/gender-guesser [Originally introduced here](https://autohotkey.com/board/topic/20260-gender-verification-by-forename-cmd-line-tool-db/) and [here](https://www.heise.de/ct/ftp/07/17/182/) - [Python package](https://github.com/ferhatelmas/sexmachine)
+* Large name dataset python program - https://github.com/philipperemy/name-dataset
 * Name embeddings - https://arxiv.org/abs/1905.04799
 * NYC baby names by gender and mother's ethnicity - https://data.cityofnewyork.us/Health/Popular-Baby-Names/25th-nujf [Also available here](https://catalog.data.gov/dataset/most-popular-baby-names-by-sex-and-mothers-ethnic-group-new-york-city-8c742)
 * Baby Names map (100,000 unique names from 14 different countries) - https://github.com/guydavis/babynamemap
