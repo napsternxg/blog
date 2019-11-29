@@ -45,6 +45,7 @@ Summary: Links related to many datasets
 * Wiki List of African-American actors - https://en.wikipedia.org/wiki/List_of_African-American_actors
 * Wiki List of American actresses - https://en.wikipedia.org/wiki/List_of_American_film_actresses
 * Artists in MoMA collection and their names/nationality - https://github.com/MuseumofModernArt/collection
+* Swedish names by gender/year with at-least 10 individuals - http://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__BE__BE0001__BE0001G/?rxid=e2756678-20f3-4656-9668-7918edb9fa7a
 
 
 ## Images
