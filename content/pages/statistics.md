@@ -25,6 +25,10 @@ Summary: Notes and links related to statistics
 
 * Prob programming workflow using PyMC3 - https://github.com/springcoil/pydataprobprog
 
+## Bayesian Data Analysis
+
+* Lecture notes and videos by Aki Vehtari - https://github.com/avehtari/BDA_course_Aalto
+
 ## Links
 
 * Connection between statistical tests and linear models - https://lindeloev.github.io/tests-as-linear/
