@@ -13,6 +13,8 @@ Summary: Links related to NLP resources
 * 601.765 Machine Learning: Linguistic & Sequence Modeling - https://seq2class.github.io/
 * Variational Inference for NLP - https://github.com/philschulz/VITutorial#general
 * Probabilistic NLP course - https://uva-slpl.github.io/nlp2/syllabus.html
+* Oxford Deep Learning NLP - https://github.com/oxford-cs-deepnlp-2017/lectures
+* CMU NLP - http://phontron.com/class/nn4nlp2017/schedule.html
 
 
 ## Scientific NLP 
