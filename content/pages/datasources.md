@@ -21,6 +21,11 @@ Summary: Links related to many datasets
 
 # Social economic data
 
+## Religion
+
+* Religious history database - https://religiondatabase.org/landing/
+
+
 ## Personality prediction data
 * Multiple personality datasets - https://github.com/amarallab/personality-types
 
