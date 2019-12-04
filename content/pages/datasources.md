@@ -21,6 +21,9 @@ Summary: Links related to many datasets
 
 # Social economic data
 
+## Personality prediction data
+* Multiple personality datasets - https://github.com/amarallab/personality-types
+
 ## Economics data
 * Social mobility and a variety of other outcomes from life expectancy to patent rates by neighborhood, college, parental income level, and racial background - https://opportunityinsights.org/data/
 
