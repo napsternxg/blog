@@ -28,6 +28,7 @@ Summary: Machine Learning concepts and traditional resources
 * [Numerical Tours - Python](https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/optimaltransp_6_entropic_adv.ipynb)
 * [Algebraic and Topological Tools in Linear Optimization](http://www.ams.org/journals/notices/201907/rnoti-p1023.pdf)
 * [Algebraic, Geometric, and Topological Methods in Optimization](https://www.math.ucdavis.edu/~deloera/TALKS/2019Baltimore-JMM-final.pdf)
+* [MOSEC Cookbook on Convex Optimization](https://docs.mosek.com/modeling-cookbook/index.html#) - [Handy cheatsheet](http://docs.mosek.com/cheatsheets/conic.pdf)
 
 ## Structured prediction
 
