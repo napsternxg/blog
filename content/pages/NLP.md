@@ -177,6 +177,7 @@ Summary: Links related to NLP resources
 * Multiple AIDA datasets for Named Entity Linking - https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/aida/downloads/
 * Named Entity Disambiguation for Noisy Text - https://github.com/yotam-happy/NEDforNoisyText
 * Multiple datasets for wikipedia based disambiguation - http://rali.iro.umontreal.ca/rali/?q=en/wikipedia-ds-cont-emb
+* VideoStory: Text summaries of videos - https://zenodo.org/record/2383739#.Xe5mO-hKh3g
 
 ## Shared tasks, competitions
 
