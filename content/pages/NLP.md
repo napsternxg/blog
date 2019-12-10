@@ -179,7 +179,7 @@ Summary: Links related to NLP resources
 * Multiple datasets for wikipedia based disambiguation - http://rali.iro.umontreal.ca/rali/?q=en/wikipedia-ds-cont-emb
 * VideoStory: Text summaries of videos - https://zenodo.org/record/2383739#.Xe5mO-hKh3g
 * German Named Entity Linking dataset - https://github.com/linkedtv/videocorpus
-
+* TAC KBP English Entity Linking Comprehensive Training and Evaluation Data 2010 - https://github.com/hellojet/TAC_KBP_English_EL_2010/tree/e274785013be529f0acee347b75d6076bda11126
 
 
 ## Shared tasks, competitions
