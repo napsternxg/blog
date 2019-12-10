@@ -178,6 +178,9 @@ Summary: Links related to NLP resources
 * Named Entity Disambiguation for Noisy Text - https://github.com/yotam-happy/NEDforNoisyText
 * Multiple datasets for wikipedia based disambiguation - http://rali.iro.umontreal.ca/rali/?q=en/wikipedia-ds-cont-emb
 * VideoStory: Text summaries of videos - https://zenodo.org/record/2383739#.Xe5mO-hKh3g
+* German Named Entity Linking dataset - https://github.com/linkedtv/videocorpus
+
+
 
 ## Shared tasks, competitions
 
