@@ -56,6 +56,7 @@ Summary: Links related to many datasets
 * Wiki List of American actresses - https://en.wikipedia.org/wiki/List_of_American_film_actresses
 * Artists in MoMA collection and their names/nationality - https://github.com/MuseumofModernArt/collection
 * Swedish names by gender/year with at-least 10 individuals - http://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__BE__BE0001__BE0001G/?rxid=e2756678-20f3-4656-9668-7918edb9fa7a
+* Given names by culture and lanugage from Wikipedia - https://en.wikipedia.org/wiki/Category:Given_names
 
 
 ## Images
