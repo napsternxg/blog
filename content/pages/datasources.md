@@ -25,6 +25,10 @@ Summary: Links related to many datasets
 
 * Religious history database - https://religiondatabase.org/landing/
 
+## World Events
+
+* Historical Phoenix Event Data covers the period 1945-2019 and includes several million events extracted from 18.9 million news stories. - https://databank.illinois.edu/datasets/IDB-3992334
+
 
 ## Personality prediction data
 * Multiple personality datasets - https://github.com/amarallab/personality-types
