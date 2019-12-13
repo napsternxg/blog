@@ -182,6 +182,8 @@ Summary: Links related to NLP resources
 * VideoStory: Text summaries of videos - https://zenodo.org/record/2383739#.Xe5mO-hKh3g
 * German Named Entity Linking dataset - https://github.com/linkedtv/videocorpus
 * TAC KBP English Entity Linking Comprehensive Training and Evaluation Data 2010 - https://github.com/hellojet/TAC_KBP_English_EL_2010/tree/e274785013be529f0acee347b75d6076bda11126
+* Temporal fact extraction datasets - https://github.com/dmsquare/tfwin
+* Updated and fixed Fake news challenge dataset - https://github.com/UKPLab/coling2018_fake-news-challenge
 
 
 ## Shared tasks, competitions
