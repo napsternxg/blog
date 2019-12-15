@@ -66,6 +66,7 @@ Summary: Links related to many datasets
 ## Images
 
 * MoMA collection of images with name/gender/nationality - https://github.com/MuseumofModernArt/collection
+* Devnagri MNIST - https://www.kaggle.com/ashokpant/devanagari-character-dataset and http://archive.ics.uci.edu/ml/machine-learning-databases/00389/ - [Devnagri MNIST large on Kaggle](https://www.kaggle.com/ashokpant/devanagari-character-dataset-large)
 
 
 ## Stream processing data
