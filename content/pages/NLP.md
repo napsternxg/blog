@@ -39,6 +39,8 @@ Summary: Links related to NLP resources
 * Document subject indexing and thesaura linking (also works for Finnish) - http://annif.org/
 * BPEmb: Pre-trained Subword Embeddings in 275 Languages (LREC 2018) - https://doi.org/10.11588/data/V9CXPR
 * Cornell Conversational Analysis Toolkit - https://zissou.infosci.cornell.edu/convokit/documentation/index.html
+* Python based text summarization evaluation - https://github.com/chakki-works/sumeval
+* Python based sequence tagging evaluation - https://github.com/chakki-works/seqeval
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
@@ -185,6 +187,7 @@ Summary: Links related to NLP resources
 * Temporal fact extraction datasets - https://github.com/dmsquare/tfwin
 * Updated and fixed Fake news challenge dataset - https://github.com/UKPLab/coling2018_fake-news-challenge
 * Document Ranking datasets - https://microsoft.github.io/TREC-2019-Deep-Learning/
+* Japanese aspect based sentiment analysis corpora - https://github.com/chakki-works/chABSA-dataset
 
 
 ## Shared tasks, competitions
