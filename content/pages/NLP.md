@@ -194,6 +194,7 @@ Summary: Links related to NLP resources
 * Lexico-semantic relatedness (7 datasets) - https://bitbucket.org/gg42554/dual-tensors/src/master/data/
 * Text simiplification - https://bitbucket.org/gg42554/embesimp/src/master/Data/
 * Ultra-fine entity typing - https://homes.cs.washington.edu/~eunsol/open_entity.html
+* Capturing Discriminative Attributes - https://competitions.codalab.org/competitions/17326#participate
 
 
 ## Shared tasks, competitions
