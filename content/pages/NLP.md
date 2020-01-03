@@ -196,7 +196,7 @@ Summary: Links related to NLP resources
 * Text simiplification - https://bitbucket.org/gg42554/embesimp/src/master/Data/
 * Ultra-fine entity typing - https://homes.cs.washington.edu/~eunsol/open_entity.html
 * Capturing Discriminative Attributes - https://competitions.codalab.org/competitions/17326#participate
-
+* IBM Debating datasets with labels on Sentiment, Argumentation - https://www.research.ibm.com/haifa/dept/vst/debating_data.shtml
 
 ## Shared tasks, competitions
 
