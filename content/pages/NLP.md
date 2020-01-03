@@ -62,7 +62,8 @@ Summary: Links related to NLP resources
 * Tutorial on NLP Approaches to Computational Argumentation - http://acl2016tutorial.arg.tech/index.php/tutorial-materials/
 * Tutorial on Argumentation Mining - http://www.i3s.unice.fr/~villata/tutorialIJCAI2016.html
 * ACL2019 Tutorial: Advances in Argument Mining - http://arg.tech/~chris/acl2019tut/index.html
-* International Linguistic Olumpiad - https://ioling.org/ - Covers a lot of low resource and multilingual problems
+* International Linguistic Olympiad - https://ioling.org/ - Covers a lot of low resource and multilingual problems
+* Tutorial by Xavier Carreras on Structured Prediction - https://www.youtube.com/watch?v=f6Gqr2UCG9k&list=PLSWgH7JB2-1G2h8wj-ecK8FfpX72Z80_B&index=3&t=0s
 
 ## Lexicons
 
