@@ -21,6 +21,10 @@ Summary: Links related to many datasets
 
 # Social economic data
 
+## Datasets with gender, personality (preferably emotional stability), an experimental manipulation of which the effect will plausibly vary by gender [Source tweet](https://twitter.com/dingding_peng/status/1213083677837709312)
+* Open psychological datasets - https://docs.google.com/spreadsheets/d/1ejOJTNTL5ApCuGTUciV0REEEAqvhI2Rd2FCoj7afops/htmlview#
+* LISS data archive - https://www.lissdata.nl/search/node/experiment
+
 ## Religion
 
 * Religious history database - https://religiondatabase.org/landing/
@@ -67,6 +71,7 @@ Summary: Links related to many datasets
 
 * MoMA collection of images with name/gender/nationality - https://github.com/MuseumofModernArt/collection
 * Devnagri MNIST - https://www.kaggle.com/ashokpant/devanagari-character-dataset and http://archive.ics.uci.edu/ml/machine-learning-databases/00389/ - [Devnagri MNIST large on Kaggle](https://www.kaggle.com/ashokpant/devanagari-character-dataset-large)
+* Families In the Wild: A Kinship Recognition Benchmark - https://web.northeastern.edu/smilelab/fiw/
 
 
 ## Stream processing data
