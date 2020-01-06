@@ -27,6 +27,7 @@ Summary: Social Networks and Network Related documents
 * Co-citation networks of all Nature papers: https://www.nature.com/immersive/d41586-019-03165-4/index.html
 * Network datasets - https://gitlab.com/cristophersfr/fisher-networks
 * Pajek datasets (including temporal networks) - http://vladowiki.fmf.uni-lj.si/doku.php?id=pajek:data:index
+* Open Graph Benchmark - https://ogb.stanford.edu/index.html
 
 
 
