@@ -22,6 +22,7 @@ Summary: Notes and links related to machine learning ethics
 * Artificial Intelligence and Human Rights - https://ai-hr.cyber.harvard.edu/
 * ML gone wrong, a beginners explanation of AI ethics - https://machinesgonewrong.com
 * Content moderation reading list by Social Media Collective lab - https://socialmediacollective.org/content-moderation-reading-list/
+* ML Fairness overview - https://developers.google.com/machine-learning/fairness-overview
 
 ## Challenges
 
