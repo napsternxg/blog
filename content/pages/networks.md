@@ -28,7 +28,7 @@ Summary: Social Networks and Network Related documents
 * Network datasets - https://gitlab.com/cristophersfr/fisher-networks
 * Pajek datasets (including temporal networks) - http://vladowiki.fmf.uni-lj.si/doku.php?id=pajek:data:index
 * Open Graph Benchmark - https://ogb.stanford.edu/index.html
-
+* Twitter Follow Graph (1,963,263,821 directed social links) - http://twitter.mpi-sws.org/
 
 
 ## Deep Learning on Networks
