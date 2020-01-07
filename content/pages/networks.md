@@ -43,11 +43,15 @@ Summary: Social Networks and Network Related documents
 * GEM various Graph Embedding Methods: https://github.com/palash1992/GEM
 * Knowledge graph embeddings: https://github.com/thunlp/openKE
 * Information theory on networks: https://gitlab.com/cristophersfr/fisher-networks
+* DynetworkX (Python package for importing and analyzing discrete- and continuous-time dynamic networks) - https://github.com/IdeasLabUT/dynetworkx
+* Community Hawkes Independent Pairs model for timestamped relational event networks (includes datasets) - https://github.com/IdeasLabUT/CHIP-Network-Model
 
 ## Tutorials
 
 * All types of graph neural networks GCN, Graph GANs etc: https://www.cl.cam.ac.uk/~pv273/slides/Oxf-AdvGraph.pdf
 * Incompleteness in Networks: Biases, Skewed Results, and Some Solutions (by [Tina Eliassi-Rad](http://eliassi.org/) Rajmonda Caceres and Timothy LaRock): https://www.kdd.org/kdd2019/
+* Generative Models for Social Media Analytics: Networks, Text, and Time - https://github.com/kevin-s-xu/ICWSM-2018-Generative-Tutorial
+* Statistical models for analyzing dynamic social network data - [Video](https://youtu.be/T3JgEH0um20?t=920) [Slides](https://sites.google.com/site/kevinshuaixu/MIDAS_2018_Network_Models.pdf?attredirects=0)
 
 ## Network Analysis tools
 
