@@ -31,6 +31,10 @@ Summary: Social Networks and Network Related documents
 * Twitter Follow Graph (1,963,263,821 directed social links) - http://twitter.mpi-sws.org/
 
 
+## Theory
+
+* Graph Laplacian and Spectral Clustering - https://csustan.csustan.edu/~tom/Clustering/GraphLaplacian-tutorial.pdf
+
 ## Deep Learning on Networks
 
 ### Tools
