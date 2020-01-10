@@ -20,6 +20,7 @@ Summary: Machine Learning concepts and traditional resources
 * [Notes on information theory - Information Theory for Intelligent People - Simon DeDeo](http://tuvalu.santafe.edu/~simon/it.pdf)
 * [Notes on Bayesian reasoning - Bayesian Reasoning for Intelligent People - Simon DeDeo](http://tuvalu.santafe.edu/~simon/br.pdf)
 * [Mathematics of Machine Learning book](https://mml-book.github.io/)
+* [Old and New Matrix Algebra Useful for Statistics](https://tminka.github.io/papers/matrix/minka-matrix.pdf)
 
 ## Optimization
 
