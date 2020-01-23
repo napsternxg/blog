@@ -41,6 +41,7 @@ Summary: Links related to NLP resources
 * Cornell Conversational Analysis Toolkit - https://zissou.infosci.cornell.edu/convokit/documentation/index.html
 * Python based text summarization evaluation - https://github.com/chakki-works/sumeval
 * Python based sequence tagging evaluation - https://github.com/chakki-works/seqeval
+* NLP annotation tool - https://github.com/doccano/doccano
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
@@ -64,6 +65,10 @@ Summary: Links related to NLP resources
 * ACL2019 Tutorial: Advances in Argument Mining - http://arg.tech/~chris/acl2019tut/index.html
 * International Linguistic Olympiad - https://ioling.org/ - Covers a lot of low resource and multilingual problems
 * Tutorial by Xavier Carreras on Structured Prediction - https://www.youtube.com/watch?v=f6Gqr2UCG9k&list=PLSWgH7JB2-1G2h8wj-ecK8FfpX72Z80_B&index=3&t=0s
+* Visual Sentiment Ontology & Dataset - http://visual-sentiment-ontology.appspot.com/?
+* NLP Roadmap - https://github.com/graykode/nlp-roadmap
+* Pretrained LM model papers - https://github.com/thunlp/PLMpapers
+* EmojiMap - http://kt.ijs.si/data/Emoji_sentiment_ranking/emojimap.html
 
 ## Lexicons
 
@@ -197,6 +202,11 @@ Summary: Links related to NLP resources
 * Ultra-fine entity typing - https://homes.cs.washington.edu/~eunsol/open_entity.html
 * Capturing Discriminative Attributes - https://competitions.codalab.org/competitions/17326#participate
 * IBM Debating datasets with labels on Sentiment, Argumentation - https://www.research.ibm.com/haifa/dept/vst/debating_data.shtml
+* LitBank is an entity annotated dataset of 100 works of English-language fiction - https://github.com/dbamman/litbank - https://github.com/dbamman/NAACL2019-literary-entities
+* Nested Named Entity database - https://github.com/nickyringland/nested_named_entities
+* WikiNER - http://web.archive.org/web/20141104075416/http://schwa.org/projects/resources/wiki/Wikiner
+* English Web Treebank - https://github.com/UniversalDependencies/UD_English-EWT
+* PAWS: Paraphrase Adversaries from Word Scrambling - https://github.com/google-research-datasets/paws [PAWS-X multilingual](https://github.com/google-research-datasets/paws/tree/master/pawsx)
 
 ## Shared tasks, competitions
 
