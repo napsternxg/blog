@@ -52,6 +52,12 @@ Summary: Machine Learning concepts and traditional resources
 * [Lecture notes on Online Learning](https://parameterfree.com/lecture-notes-on-online-learning/)
 * [Machine Learning for Data Streams using MOA](https://moa.cms.waikato.ac.nz/book-html/)
 
+## Continual learning
+* Meta-Learning Representations for Continual Learning - https://github.com/khurramjaved96/mrcl
+* Distillation and Incremental Classifier Learning - https://github.com/khurramjaved96/incremental-learning
+* Awesome Continual Learning - https://github.com/khurramjaved96/awesome-continual-learning
+* Continual Unsupervised Representation Learning - https://arxiv.org/abs/1910.14481
+
 ## Learning to Rank
 
 * [Tutorial using TF-Rank](http://ltr-tutorial-sigir19.isti.cnr.it/program-overview/)
