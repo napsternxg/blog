@@ -18,3 +18,6 @@ Summary: Links related to data mining resources
 
 # References and courses
 * [STA-663-2017 - Reference on various data science tools with python code](http://people.duke.edu/~ccc14/sta-663-2017/index.html)
+
+# Record Linking
+* Pandas record linking tool - https://github.com/J535D165/recordlinkage
