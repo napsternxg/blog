@@ -30,6 +30,7 @@ Summary: Machine Learning concepts and traditional resources
 * [Algebraic and Topological Tools in Linear Optimization](http://www.ams.org/journals/notices/201907/rnoti-p1023.pdf)
 * [Algebraic, Geometric, and Topological Methods in Optimization](https://www.math.ucdavis.edu/~deloera/TALKS/2019Baltimore-JMM-final.pdf)
 * [MOSEC Cookbook on Convex Optimization](https://docs.mosek.com/modeling-cookbook/index.html#) - [Handy cheatsheet](http://docs.mosek.com/cheatsheets/conic.pdf)
+* [Energy Based Machine Learning video tutorial from IBM research](https://researcher.watson.ibm.com/researcher/view_group.php?id=7834)
 
 ## Structured prediction
 
@@ -57,6 +58,10 @@ Summary: Machine Learning concepts and traditional resources
 * Distillation and Incremental Classifier Learning - https://github.com/khurramjaved96/incremental-learning
 * Awesome Continual Learning - https://github.com/khurramjaved96/awesome-continual-learning
 * Continual Unsupervised Representation Learning - https://arxiv.org/abs/1910.14481
+
+## Multi task learning
+
+* CS 330: Deep Multi-Task and Meta Learning - http://cs330.stanford.edu/
 
 ## Learning to Rank
 
