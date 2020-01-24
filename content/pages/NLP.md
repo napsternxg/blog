@@ -22,7 +22,6 @@ Summary: Links related to NLP resources
 * https://shubhanshu.com/awesome-scholarly-data-analysis/
 
 ## Tools
-
 * Using spacy and flashtext for fast lookup of dictionary items in text. https://github.com/mpuig/spacy-lookup
 * Open IE tool - https://github.com/dair-iitd/OpenIE-standalone
 * Different evaluation techniques for NER: https://github.com/davidsbatista/NER-Evaluation
@@ -42,6 +41,7 @@ Summary: Links related to NLP resources
 * Python based text summarization evaluation - https://github.com/chakki-works/sumeval
 * Python based sequence tagging evaluation - https://github.com/chakki-works/seqeval
 * NLP annotation tool - https://github.com/doccano/doccano
+* Yake Single document keyword extraction - https://github.com/LIAAD/yake
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
@@ -207,6 +207,8 @@ Summary: Links related to NLP resources
 * WikiNER - http://web.archive.org/web/20141104075416/http://schwa.org/projects/resources/wiki/Wikiner
 * English Web Treebank - https://github.com/UniversalDependencies/UD_English-EWT
 * PAWS: Paraphrase Adversaries from Word Scrambling - https://github.com/google-research-datasets/paws [PAWS-X multilingual](https://github.com/google-research-datasets/paws/tree/master/pawsx)
+* Open Super-large Crawled ALMAnaCH coRpus is a huge multilingual corpus obtained by language classification and filtering of the Common Crawl corpus - https://traces1.inria.fr/oscar/
+* IRC Conversation Disentanglement - https://jkk.name/irc-disentanglement/
 
 ## Shared tasks, competitions
 
