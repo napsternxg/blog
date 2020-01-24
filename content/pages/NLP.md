@@ -78,6 +78,7 @@ Summary: Links related to NLP resources
 * Bootstrapped polarity shifter lexicons - https://github.com/uds-lsv/bootstrapped-lexicon-of-english-polarity-shifters
 * Lexicon of abusive words - https://github.com/uds-lsv/lexicon-of-abusive-words
 * Finnish General Ontology YSO, several domain-specific vocabularies, and the KOKO ontology - https://github.com/NatLibFi/Finto-data
+* Entitypedia is an Extended Named Entity Dictionary from Wikipedia - https://github.com/chakki-works/entitypedia 
 
 ## Data
 
