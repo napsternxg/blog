@@ -210,6 +210,7 @@ Summary: Links related to NLP resources
 * PAWS: Paraphrase Adversaries from Word Scrambling - https://github.com/google-research-datasets/paws [PAWS-X multilingual](https://github.com/google-research-datasets/paws/tree/master/pawsx)
 * Open Super-large Crawled ALMAnaCH coRpus is a huge multilingual corpus obtained by language classification and filtering of the Common Crawl corpus - https://traces1.inria.fr/oscar/
 * IRC Conversation Disentanglement - https://jkk.name/irc-disentanglement/
+* Multiple NER datasets including corrected CoNLL 2003 data - https://github.com/pfliu-nlp/Named-Entity-Recognition-NER-Papers
 
 ## Shared tasks, competitions
 
