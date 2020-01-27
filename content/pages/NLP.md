@@ -211,6 +211,7 @@ Summary: Links related to NLP resources
 * Open Super-large Crawled ALMAnaCH coRpus is a huge multilingual corpus obtained by language classification and filtering of the Common Crawl corpus - https://traces1.inria.fr/oscar/
 * IRC Conversation Disentanglement - https://jkk.name/irc-disentanglement/
 * Multiple NER datasets including corrected CoNLL 2003 data - https://github.com/pfliu-nlp/Named-Entity-Recognition-NER-Papers
+* The Big Bad NLP Database - https://quantumstat.com/dataset/dataset.html
 
 ## Shared tasks, competitions
 
