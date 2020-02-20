@@ -24,6 +24,10 @@ Summary: Notes and links related to machine learning ethics
 * Content moderation reading list by Social Media Collective lab - https://socialmediacollective.org/content-moderation-reading-list/
 * ML Fairness overview - https://developers.google.com/machine-learning/fairness-overview
 
+## Datasets
+
+* Compass Recidivism - https://www.propublica.org/datastore/dataset/compas-recidivism-risk-score-data-and-analysis
+
 ## Challenges
 
 * Differential privacy - https://www.topcoder.com/community/data-science/Differential-Privacy-Synthetic-Data-Challenge
