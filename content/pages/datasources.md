@@ -14,7 +14,14 @@ Summary: Links related to many datasets
 * Web tables from common crawl data
 * http://webdatacommons.org/webtables/
 
-## Resources about Indian politicians
+## Politics
+
+### US
+* Summaries of US bills and other congress datasets - https://www.govtrack.us/about-our-data
+* FB political ads dataset crowdsourced by Propublica - https://www.propublica.org/datastore/dataset/political-advertisements-from-facebook
+
+
+### India
 
 * Funding resources: https://myneta.info/party/
 * Association for democratic reforms: https://adrindia.org/about-adr/who-we-are
