@@ -44,6 +44,7 @@ Summary: Notes and links related to statistics
 * Toward a principled Bayesian workflow: A tutorial for cognitive science - https://osf.io/b2vx9/
 * Description of different types of MCMC algorithms - https://m-clark.github.io/docs/ld_mcmc
 * Lord's paradox, Simpson's paradox explanations - https://m-clark.github.io/docs/lord/index.html
+* Probability cheatsheet - https://github.com/wzchen/probability_cheatsheet
 
 ## Uncertainity
 * https://erikbern.com/2018/10/08/the-hackers-guide-to-uncertainty-estimates.html
