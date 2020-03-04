@@ -15,6 +15,7 @@ Summary: Notes and links related to statistics
 * [Wasserman’s All of Statistics](http://www.stat.cmu.edu/~larry/all-of-statistics/)
 * [Shalizi’s Advanced Data Analysis from an Elementary Point of View](http://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/ADAfaEPoV.pdf)
 * [Computer Age Statistical Inference: Algorithms, Evidence and Data Science](https://web.stanford.edu/~hastie/CASI/)
+* [Model Based Machine Learning by John Winn and others (including Chris Bishop)](http://www.mbmlbook.com/toc.html)
 
 ## Probability theory
 
