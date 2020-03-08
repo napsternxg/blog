@@ -12,6 +12,7 @@ Summary: Social Networks and Network Related documents
 * Network tools repository: https://github.com/junipertcy/Network-Code-Repository
 * Resources on NRL: network representation learning. NE: network embedding: https://github.com/thunlp/NRLPapers
 * Resources on KRL: knowledge representation learning. KE: knowledge embedding: https://github.com/thunlp/KRLPapers
+* VAX Network epidemic game: http://vax.herokuapp.com/
 
 ## Datasets: 
 
