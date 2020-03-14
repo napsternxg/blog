@@ -54,6 +54,11 @@ Summary: Machine Learning concepts and traditional resources
 * [Lecture notes on Online Learning](https://parameterfree.com/lecture-notes-on-online-learning/)
 * [Machine Learning for Data Streams using MOA](https://moa.cms.waikato.ac.nz/book-html/)
 
+## Bandit Algorithms
+
+* [A blog and book on bandit algorithms by Tor Lattimore and Csaba Szepesvari](https://banditalgs.com/)
+* [I'm a bandit - Random topics in optimization, probability, and statistics. By Sébastien Bubeck](https://blogs.princeton.edu/imabandit/)
+
 ## Continual learning
 * Meta-Learning Representations for Continual Learning - https://github.com/khurramjaved96/mrcl
 * Distillation and Incremental Classifier Learning - https://github.com/khurramjaved96/incremental-learning
