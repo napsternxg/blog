@@ -78,6 +78,7 @@ Summary: Machine Learning concepts and traditional resources
 * Importance weighted active learning for streams: http://www.yisongyue.com/courses/cs159/lectures/active_learning.pdf
 * Summary of active learning: http://www.yisongyue.com/courses/cs159/lectures/active_notes.pdf
 * Good survey of potential issues with active learning: http://proceedings.mlr.press/v16/settles11a.html
+* [Human-in-the-Loop Machine Learning by Robert Munro](https://www.manning.com/books/human-in-the-loop-machine-learning) - [Active learning in pytorch from book](https://github.com/rmunro/pytorch_active_learning) [Cheatsheat on active learning](http://www.robertmunro.com/Advanced_Active_Learning_Cheatsheet.pdf)
 
 ## Multiple instance learning
 * Good survey: https://arxiv.org/abs/1612.03365
