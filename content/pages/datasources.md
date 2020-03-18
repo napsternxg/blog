@@ -39,6 +39,7 @@ Summary: Links related to many datasets
 ## World Events
 
 * Historical Phoenix Event Data covers the period 1945-2019 and includes several million events extracted from 18.9 million news stories. - https://databank.illinois.edu/datasets/IDB-3992334
+* Global Atrocity Prevention - Datasets https://www.topcoder.com/community/data-science/datasets/atrocity-prevention
 
 
 ## Personality prediction data
