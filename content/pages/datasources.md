@@ -40,6 +40,10 @@ Summary: Links related to many datasets
 
 * Historical Phoenix Event Data covers the period 1945-2019 and includes several million events extracted from 18.9 million news stories. - https://databank.illinois.edu/datasets/IDB-3992334
 * Global Atrocity Prevention - Datasets https://www.topcoder.com/community/data-science/datasets/atrocity-prevention
+* Violence Early-Warning System - https://www.pcr.uu.se/research/views/downloads/ [Data for each PRIO-GRID map cell across time](https://grid.prio.org/#/about)
+* GROWup - Geographical Research On War, Unified Platform - https://growup.ethz.ch/about
+* The Armed Conflict Location & Event Data Project - https://acleddata.com/#/dashboard
+* Uppsala Conflict Data Program (UCDP) - https://www.pcr.uu.se/research/ucdp/
 
 
 ## Personality prediction data
@@ -47,6 +51,10 @@ Summary: Links related to many datasets
 
 ## Economics data
 * Social mobility and a variety of other outcomes from life expectancy to patent rates by neighborhood, college, parental income level, and racial background - https://opportunityinsights.org/data/
+
+## Misc
+
+* Catalogue For Predictive Models In The Humanitarian Sector - https://centre.humdata.org/catalogue-for-predictive-models-in-the-humanitarian-sector/
 
 ## Name datasets
 * Manually curated name gender list from multiple countries - https://github.com/lead-ratings/gender-guesser [Originally introduced here](https://autohotkey.com/board/topic/20260-gender-verification-by-forename-cmd-line-tool-db/) and [here](https://www.heise.de/ct/ftp/07/17/182/) - [Python package](https://github.com/ferhatelmas/sexmachine)
