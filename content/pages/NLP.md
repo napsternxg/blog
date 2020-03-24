@@ -213,6 +213,7 @@ Summary: Links related to NLP resources
 * Multiple NER datasets including corrected CoNLL 2003 data - https://github.com/pfliu-nlp/Named-Entity-Recognition-NER-Papers
 * The Big Bad NLP Database - https://quantumstat.com/dataset/dataset.html
 * LRE Map A database containing around 6,000 language resources and tools published at LREC conferences - http://lremap.elra.info/
+* OpenIE datasets - https://github.com/gabrielStanovsky/supervised-oie/
 
 ## Shared tasks, competitions
 
