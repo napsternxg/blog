@@ -214,6 +214,7 @@ Summary: Links related to NLP resources
 * The Big Bad NLP Database - https://quantumstat.com/dataset/dataset.html
 * LRE Map A database containing around 6,000 language resources and tools published at LREC conferences - http://lremap.elra.info/
 * OpenIE datasets - https://github.com/gabrielStanovsky/supervised-oie/
+* Entity linking dataset in German based on news broadcasts transcripts - https://github.com/linkedtv/videocorpus
 
 ## Shared tasks, competitions
 
