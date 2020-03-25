@@ -69,6 +69,7 @@ Summary: Links related to NLP resources
 * NLP Roadmap - https://github.com/graykode/nlp-roadmap
 * Pretrained LM model papers - https://github.com/thunlp/PLMpapers
 * EmojiMap - http://kt.ijs.si/data/Emoji_sentiment_ranking/emojimap.html
+* Literature review and datasets on Text-Summarization - https://github.com/neulab/Text-Summarization-Papers
 
 ## Lexicons
 
@@ -215,6 +216,7 @@ Summary: Links related to NLP resources
 * LRE Map A database containing around 6,000 language resources and tools published at LREC conferences - http://lremap.elra.info/
 * OpenIE datasets - https://github.com/gabrielStanovsky/supervised-oie/
 * Entity linking dataset in German based on news broadcasts transcripts - https://github.com/linkedtv/videocorpus
+* Text summarization datasets - http://pfliu.com/pl-summarization/summ_data.html
 
 ## Shared tasks, competitions
 
