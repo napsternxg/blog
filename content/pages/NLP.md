@@ -217,6 +217,7 @@ Summary: Links related to NLP resources
 * OpenIE datasets - https://github.com/gabrielStanovsky/supervised-oie/
 * Entity linking dataset in German based on news broadcasts transcripts - https://github.com/linkedtv/videocorpus
 * Text summarization datasets - http://pfliu.com/pl-summarization/summ_data.html
+* Multi-ling summarization datasets from shared task - http://multiling.iit.demokritos.gr/pages/view/1666/multiling-2019-call-for-papers
 
 ## Shared tasks, competitions
 
