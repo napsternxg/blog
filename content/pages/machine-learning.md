@@ -58,6 +58,7 @@ Summary: Machine Learning concepts and traditional resources
 
 * [A blog and book on bandit algorithms by Tor Lattimore and Csaba Szepesvari](https://banditalgs.com/)
 * [I'm a bandit - Random topics in optimization, probability, and statistics. By Sébastien Bubeck](https://blogs.princeton.edu/imabandit/)
+* [A tutorial on Thompson Sampling](https://arxiv.org/abs/1707.02038)
 
 ## Continual learning
 * Meta-Learning Representations for Continual Learning - https://github.com/khurramjaved96/mrcl
