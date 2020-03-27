@@ -42,6 +42,7 @@ Summary: Links related to NLP resources
 * Python based sequence tagging evaluation - https://github.com/chakki-works/seqeval
 * NLP annotation tool - https://github.com/doccano/doccano
 * Yake Single document keyword extraction - https://github.com/LIAAD/yake
+* Open IE Tool - https://github.com/dair-iitd/OpenIE-standalone [Other OpenIE tools](http://www.cse.iitd.ac.in/~mausam/software.html)
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
@@ -70,6 +71,8 @@ Summary: Links related to NLP resources
 * Pretrained LM model papers - https://github.com/thunlp/PLMpapers
 * EmojiMap - http://kt.ijs.si/data/Emoji_sentiment_ranking/emojimap.html
 * Literature review and datasets on Text-Summarization - https://github.com/neulab/Text-Summarization-Papers
+* Causal Inference using text data - https://github.com/jaeyk/ITS-Text-Classification
+* Tutorial on topic models and its extensions with animations of Chinese restaurant process and Poyla's Urn - http://topicmodels.west.uni-koblenz.de/
 
 ## Lexicons
 
@@ -218,6 +221,9 @@ Summary: Links related to NLP resources
 * Entity linking dataset in German based on news broadcasts transcripts - https://github.com/linkedtv/videocorpus
 * Text summarization datasets - http://pfliu.com/pl-summarization/summ_data.html
 * Multi-ling summarization datasets from shared task - http://multiling.iit.demokritos.gr/pages/view/1666/multiling-2019-call-for-papers
+* TED-Parallel-Corpus based on translations of TED talks - https://github.com/ajinkyakulkarni14/TED-Multilingual-Parallel-Corpus
+* Audio books corpora for speech to text - https://github.com/ajinkyakulkarni14/Audio-Book-Corpus-for-European-Languages-
+* Target Based Speech Act Classification in Political Campaign Text - https://github.com/shivashankarrs/Speech-Acts
 
 ## Shared tasks, competitions
 
