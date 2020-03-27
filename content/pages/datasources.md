@@ -19,6 +19,7 @@ Summary: Links related to many datasets
 ### US
 * Summaries of US bills and other congress datasets - https://www.govtrack.us/about-our-data
 * FB political ads dataset crowdsourced by Propublica - https://www.propublica.org/datastore/dataset/political-advertisements-from-facebook
+* Political datasets - https://github.com/erikgahner/PolData
 
 
 ### India
