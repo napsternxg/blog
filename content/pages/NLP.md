@@ -224,6 +224,7 @@ Summary: Links related to NLP resources
 * TED-Parallel-Corpus based on translations of TED talks - https://github.com/ajinkyakulkarni14/TED-Multilingual-Parallel-Corpus
 * Audio books corpora for speech to text - https://github.com/ajinkyakulkarni14/Audio-Book-Corpus-for-European-Languages-
 * Target Based Speech Act Classification in Political Campaign Text - https://github.com/shivashankarrs/Speech-Acts
+* Datasets for Aspect Level Sentiment Analysis - https://github.com/12190143/Deep-Learning-for-Aspect-Level-Sentiment-Classification-Baselines
 
 ## Shared tasks, competitions
 
