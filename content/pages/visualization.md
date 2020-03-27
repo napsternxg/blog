@@ -1,9 +1,13 @@
-Title: D3
+Title: Visualization
 Category: links
 Tags: links
-Slug: d3
+Slug: visualization
 Authors: Shubhanshu Mishra
-Summary: Links related to D3 visualizations
+Summary: Links related to visualizations
+
+## Courses/Tutorials
+
+* Visualization Curriculum using Altair and Vega-Lite - https://github.com/uwdata/visualization-curriculum
 
 ## Learn D3
 
