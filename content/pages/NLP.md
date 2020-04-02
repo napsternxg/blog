@@ -226,6 +226,7 @@ Summary: Links related to NLP resources
 * Target Based Speech Act Classification in Political Campaign Text - https://github.com/shivashankarrs/Speech-Acts
 * Datasets for Aspect Level Sentiment Analysis - https://github.com/12190143/Deep-Learning-for-Aspect-Level-Sentiment-Classification-Baselines
 * Curation Corpus for Abstractive Text Summarisation - https://github.com/CurationCorp/curation-corpus
+* List of NER datasets curated as split of train, dev, and test - https://github.com/pfliu-nlp/Named-Entity-Recognition-NER-Papers
 
 ## Shared tasks, competitions
 
