@@ -227,6 +227,8 @@ Summary: Links related to NLP resources
 * Datasets for Aspect Level Sentiment Analysis - https://github.com/12190143/Deep-Learning-for-Aspect-Level-Sentiment-Classification-Baselines
 * Curation Corpus for Abstractive Text Summarisation - https://github.com/CurationCorp/curation-corpus
 * List of NER datasets curated as split of train, dev, and test - https://github.com/pfliu-nlp/Named-Entity-Recognition-NER-Papers
+* Portmanteau corpus of 1600 items - https://github.com/vgtomahawk/Charmanteau-CamReady
+* NLP with human traits corpus - https://osf.io/bm9gn/
 
 ## Shared tasks, competitions
 
