@@ -20,6 +20,9 @@ Summary: Links related to many datasets
 * Summaries of US bills and other congress datasets - https://www.govtrack.us/about-our-data
 * FB political ads dataset crowdsourced by Propublica - https://www.propublica.org/datastore/dataset/political-advertisements-from-facebook
 * Political datasets - https://github.com/erikgahner/PolData
+* All congress bills (updated daily) - https://www.propublica.org/datastore/dataset/congressional-data-bulk-legislation-bills
+* Politician's social media accounts - https://www.propublica.org/datastore/dataset/politicians-tracked-by-politwoops
+* Federal Election Commission data - https://www.fec.gov/data/browse-data/?tab=bulk-data
 
 
 ### India
@@ -82,6 +85,7 @@ Summary: Links related to many datasets
 * Artists in MoMA collection and their names/nationality - https://github.com/MuseumofModernArt/collection
 * Swedish names by gender/year with at-least 10 individuals - http://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__BE__BE0001__BE0001G/?rxid=e2756678-20f3-4656-9668-7918edb9fa7a
 * Given names by culture and lanugage from Wikipedia - https://en.wikipedia.org/wiki/Category:Given_names
+* Names of all politicians - https://github.com/everypolitician/everypolitician-names
 
 
 ## Images
