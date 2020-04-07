@@ -16,6 +16,10 @@ Summary: Links related to many datasets
 
 ## Politics
 
+## Misc
+
+* List of politician names and properties in Wikidata - https://www.wikidata.org/wiki/Wikidata:WikiProject_every_politician
+
 ### US
 * Summaries of US bills and other congress datasets - https://www.govtrack.us/about-our-data
 * FB political ads dataset crowdsourced by Propublica - https://www.propublica.org/datastore/dataset/political-advertisements-from-facebook
