@@ -229,6 +229,8 @@ Summary: Links related to NLP resources
 * List of NER datasets curated as split of train, dev, and test - https://github.com/pfliu-nlp/Named-Entity-Recognition-NER-Papers
 * Portmanteau corpus of 1600 items - https://github.com/vgtomahawk/Charmanteau-CamReady
 * NLP with human traits corpus - https://osf.io/bm9gn/
+* Categorized Entity Linking Corpus - https://github.com/henryrosalesmendez/categorized_EMNLP_datasets - [Outputs of various EL systems on the datasets](https://github.com/henryrosalesmendez/EL_exp)
+* Bio2RDF: Linked data which can be used for Entity Linking  - https://download.bio2rdf.org/files/release/3/release.html - https://download.bio2rdf.org/#/current/
 
 ## Shared tasks, competitions
 
