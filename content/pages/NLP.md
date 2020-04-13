@@ -233,6 +233,10 @@ Summary: Links related to NLP resources
 * Bio2RDF: Linked data which can be used for Entity Linking  - https://download.bio2rdf.org/files/release/3/release.html - https://download.bio2rdf.org/#/current/
 * Clickbait headlines dataset - https://github.com/bhargaviparanjape/clickbait/tree/master/dataset
 * Named Entities based on gaze prediction - https://github.com/DS3Lab/ner-at-first-sight/tree/master/data
+* Nerwip Corpus (Manually annotated 408 Wikipedia biographies for Named Entities) - https://doi.org/10.6084/m9.figshare.1289791.v17
+* Serial Speakers: a Dataset of TV Series - https://figshare.com/articles/TV_Series_Corpus/3471839
+* Wikipedia Abusive Conversations - https://figshare.com/articles/Wikipedia_Abusive_Conversations/11299118
+
 
 ## Shared tasks, competitions
 
