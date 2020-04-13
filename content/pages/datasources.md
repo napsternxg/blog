@@ -52,6 +52,7 @@ Summary: Links related to many datasets
 * GROWup - Geographical Research On War, Unified Platform - https://growup.ethz.ch/about
 * The Armed Conflict Location & Event Data Project - https://acleddata.com/#/dashboard
 * Uppsala Conflict Data Program (UCDP) - https://www.pcr.uu.se/research/ucdp/
+* Militarized Interstate Disputes (v4.3) - https://correlatesofwar.org/data-sets/MIDs
 
 
 ## Personality prediction data
