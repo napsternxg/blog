@@ -232,6 +232,7 @@ Summary: Links related to NLP resources
 * Categorized Entity Linking Corpus - https://github.com/henryrosalesmendez/categorized_EMNLP_datasets - [Outputs of various EL systems on the datasets](https://github.com/henryrosalesmendez/EL_exp)
 * Bio2RDF: Linked data which can be used for Entity Linking  - https://download.bio2rdf.org/files/release/3/release.html - https://download.bio2rdf.org/#/current/
 * Clickbait headlines dataset - https://github.com/bhargaviparanjape/clickbait/tree/master/dataset
+* Named Entities based on gaze prediction - https://github.com/DS3Lab/ner-at-first-sight/tree/master/data
 
 ## Shared tasks, competitions
 
