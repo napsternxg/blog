@@ -50,6 +50,7 @@ Summary: Social Networks and Network Related documents
 * Information theory on networks: https://gitlab.com/cristophersfr/fisher-networks
 * DynetworkX (Python package for importing and analyzing discrete- and continuous-time dynamic networks) - https://github.com/IdeasLabUT/dynetworkx
 * Community Hawkes Independent Pairs model for timestamped relational event networks (includes datasets) - https://github.com/IdeasLabUT/CHIP-Network-Model
+* muxViz - Multilayer network visualization tool in R - https://github.com/manlius/muxViz
 
 ## Tutorials
 
