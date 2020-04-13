@@ -5,9 +5,10 @@ Slug: visualization
 Authors: Shubhanshu Mishra
 Summary: Links related to visualizations
 
-## Courses/Tutorials
+## Courses/Tutorials/Books
 
 * Visualization Curriculum using Altair and Vega-Lite - https://github.com/uwdata/visualization-curriculum
+* Open source book in R Fundamentals of Data Visualization by Claus O. Wilke - https://serialmentor.com/dataviz/
 
 ## Learn D3
 
