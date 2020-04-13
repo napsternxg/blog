@@ -30,6 +30,7 @@ Summary: Social Networks and Network Related documents
 * Pajek datasets (including temporal networks) - http://vladowiki.fmf.uni-lj.si/doku.php?id=pajek:data:index
 * Open Graph Benchmark - https://ogb.stanford.edu/index.html
 * Twitter Follow Graph (1,963,263,821 directed social links) - http://twitter.mpi-sws.org/
+* Enron Dynamic Networks - https://figshare.com/articles/Last_FM_Jazz_Listeners_Dynamic_Network/3203410
 
 
 ## Theory
