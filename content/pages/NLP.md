@@ -236,7 +236,9 @@ Summary: Links related to NLP resources
 * Nerwip Corpus (Manually annotated 408 Wikipedia biographies for Named Entities) - https://doi.org/10.6084/m9.figshare.1289791.v17
 * Serial Speakers: a Dataset of TV Series - https://figshare.com/articles/TV_Series_Corpus/3471839
 * Wikipedia Abusive Conversations - https://figshare.com/articles/Wikipedia_Abusive_Conversations/11299118
-
+* Extracting Semantic Network Data from Newspaper Articles - https://doi.org/10.7910/DVN/GBUL0K
+* ChroniclItaly 2.0. A corpus of Italian American newspapers annotated for entities, 1898-1920 - https://doi.org/10.24416/uu01-4mecro
+* English/Turkish Wikipedia Named-Entity Recognition and Text Categorization Dataset - https://data.mendeley.com/datasets/cdcztymf4k/1
 
 ## Shared tasks, competitions
 
