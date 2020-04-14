@@ -5,6 +5,16 @@ Slug: programming
 Authors: Shubhanshu Mishra
 Summary: Links related to programming
 
+## Courses
+
+* UIUC Intro to Competitive Programming - https://pages.github-dev.cs.illinois.edu/sig-icpc/cs491-wf/syllabus/
+* William Fiset Youtube Playlists on various topics - https://www.youtube.com/user/purpongie/playlists
+
+
+## Data Structures
+
+* Tradeoffs of data structures - http://www.idevelopment.info/data/Programming/data_structures/overview/Data_Structures_Algorithms_Introduction.shtml
+* Applications of data structures - http://www.cs.fsu.edu/~jestes/cop3330/notes/datastruct.html
 
 ## Dynamic Programming
 
