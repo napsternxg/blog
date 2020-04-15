@@ -242,6 +242,7 @@ Summary: Links related to NLP resources
 * Various German NLP datasets - https://www.inf.uni-hamburg.de/en/inst/ab/lt/resources/data.html
 * Hierarchical Patent Classification - https://dublin.zhaw.ch/~benf/HPC/
 * LSHTC: A Benchmark for Large-Scale Text Classification - http://lshtc.iit.demokritos.gr/
+* GSCL Shared Task: Automatic Linguistic Annotation of Computer-Mediated Communication / Social Media - https://sites.google.com/site/empirist2015/home
 
 ## Shared tasks, competitions
 
