@@ -239,6 +239,9 @@ Summary: Links related to NLP resources
 * Extracting Semantic Network Data from Newspaper Articles - https://doi.org/10.7910/DVN/GBUL0K
 * ChroniclItaly 2.0. A corpus of Italian American newspapers annotated for entities, 1898-1920 - https://doi.org/10.24416/uu01-4mecro
 * English/Turkish Wikipedia Named-Entity Recognition and Text Categorization Dataset - https://data.mendeley.com/datasets/cdcztymf4k/1
+* Various German NLP datasets - https://www.inf.uni-hamburg.de/en/inst/ab/lt/resources/data.html
+* Hierarchical Patent Classification - https://dublin.zhaw.ch/~benf/HPC/
+* LSHTC: A Benchmark for Large-Scale Text Classification - http://lshtc.iit.demokritos.gr/
 
 ## Shared tasks, competitions
 
