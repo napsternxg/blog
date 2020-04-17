@@ -10,6 +10,9 @@ Summary: Links related to programming
 * UIUC Intro to Competitive Programming - https://pages.github-dev.cs.illinois.edu/sig-icpc/cs491-wf/syllabus/
 * William Fiset Youtube Playlists on various topics - https://www.youtube.com/user/purpongie/playlists
 
+## Implementations
+
+* The Stony Brook Algorithm Repository - http://algorist.com/algorist.html
 
 ## Data Structures
 
