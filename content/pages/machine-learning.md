@@ -54,6 +54,10 @@ Summary: Machine Learning concepts and traditional resources
 * [Lecture notes on Online Learning](https://parameterfree.com/lecture-notes-on-online-learning/)
 * [Machine Learning for Data Streams using MOA](https://moa.cms.waikato.ac.nz/book-html/)
 
+## Concept Drift
+* [Handling Concept Drift](https://www.cs.waikato.ac.nz/~abifet/PAKDD2011/PAKDD11Tutorial_Handling_Concept_Drift.pdf)
+* [Learning under Concept Drift](https://arxiv.org/pdf/1010.4784.pdf)
+
 ## Bandit Algorithms
 
 * [A blog and book on bandit algorithms by Tor Lattimore and Csaba Szepesvari](https://banditalgs.com/)
