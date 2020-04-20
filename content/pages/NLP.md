@@ -246,6 +246,7 @@ Summary: Links related to NLP resources
 * EU News Summary Dataset for 2006-2013 - http://lexhub.org/data_sets/14
 * NER on historical newspapers - https://github.com/impresso/CLEF-HIPE-2020/tree/master/data
 * Salient information from news articles and tweets - http://data.crowdtruth.org/salience-news-tweets/
+* The Upworthy Research Archive dataset of headline A/B tests conducted by Upworthy from early 2013 into April 2015 - https://upworthy.natematias.com/about-the-archive
 
 ## Shared tasks, competitions
 
