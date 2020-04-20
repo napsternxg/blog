@@ -245,6 +245,7 @@ Summary: Links related to NLP resources
 * GSCL Shared Task: Automatic Linguistic Annotation of Computer-Mediated Communication / Social Media - https://sites.google.com/site/empirist2015/home
 * EU News Summary Dataset for 2006-2013 - http://lexhub.org/data_sets/14
 * NER on historical newspapers - https://github.com/impresso/CLEF-HIPE-2020/tree/master/data
+* Salient information from news articles and tweets - http://data.crowdtruth.org/salience-news-tweets/
 
 ## Shared tasks, competitions
 
