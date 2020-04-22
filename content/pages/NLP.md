@@ -247,6 +247,8 @@ Summary: Links related to NLP resources
 * NER on historical newspapers - https://github.com/impresso/CLEF-HIPE-2020/tree/master/data
 * Salient information from news articles and tweets - http://data.crowdtruth.org/salience-news-tweets/
 * The Upworthy Research Archive dataset of headline A/B tests conducted by Upworthy from early 2013 into April 2015 - https://upworthy.natematias.com/about-the-archive
+* Emotion-Cause Pair Extraction: A New Task to Emotion Analysis in Texts - https://github.com/NUSTM/ECPE [More unified version](https://github.com/NUSTM/RTHN)
+* Aspect Based Sentiment Analysis (Twitter, Product Reviews) - https://github.com/NUSTM/ABSC/tree/master/data/absa
 
 ## Shared tasks, competitions
 
