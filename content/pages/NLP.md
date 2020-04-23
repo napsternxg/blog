@@ -91,6 +91,9 @@ Summary: Links related to NLP resources
 * Lexicon of abusive words - https://github.com/uds-lsv/lexicon-of-abusive-words
 * Finnish General Ontology YSO, several domain-specific vocabularies, and the KOKO ontology - https://github.com/NatLibFi/Finto-data
 * Entitypedia is an Extended Named Entity Dictionary from Wikipedia - https://github.com/chakki-works/entitypedia 
+* Extended Open Multilingual Wordnet - http://compling.hss.ntu.edu.sg/omw/summx.html
+* Open Multilingual Wordnet - http://compling.hss.ntu.edu.sg/omw/index.html
+* Open License English Wordnet - https://github.com/globalwordnet/english-wordnet
 
 ## Data
 
@@ -259,6 +262,7 @@ Summary: Links related to NLP resources
 * Aspect Based Sentiment Analysis (Twitter, Product Reviews) - https://github.com/NUSTM/ABSC/tree/master/data/absa
 * Fewshot relation extraction corpus - https://thunlp.github.io/1/fewrel1.html
 * SemEval 2010 Task 8 - Multi-Way Classification of Semantic Relations Between Pairs of Nominals - https://drive.google.com/file/d/0B_jQiLugGTAkMDQ5ZjZiMTUtMzQ1Yy00YWNmLWJlZDYtOWY1ZDMwY2U4YjFk/view?sort=name&layout=list&num=50
+* Wordnet Annotated Corpora - http://globalwordnet.org/resources/wordnet-annotated-corpora/
 
 ## Shared tasks, competitions
 
