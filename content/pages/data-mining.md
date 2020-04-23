@@ -21,3 +21,7 @@ Summary: Links related to data mining resources
 
 # Record Linking
 * Pandas record linking tool - https://github.com/J535D165/recordlinkage
+
+# Evaluation
+* [A comparison of Extrinsic Clustering Evaluation Metrics based on Formal Constraints](https://www.researchgate.net/profile/Julio_Gonzalo/publication/225548032_Amigo_E_Gonzalo_J_Artiles_J_et_alA_comparison_of_extrinsic_clustering_evaluation_metrics_based_on_formal_constraints_Inform_Retriev_12461-486/links/0c96052138dbb99740000000/Amigo-E-Gonzalo-J-Artiles-J-et-alA-comparison-of-extrinsic-clustering-evaluation-metrics-based-on-formal-constraints-Inform-Retriev-12461-486.pdf) - Discusses B-cubed F1 score. 
+* Evaluation of coreference resolution systems - http://www.cs.cmu.edu/~yimengz/papers/Coreference_survey.pdf
