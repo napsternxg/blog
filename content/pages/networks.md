@@ -5,6 +5,11 @@ Slug: networks
 Authors: Shubhanshu Mishra
 Summary: Social Networks and Network Related documents
 
+
+## Courses
+
+* [Networks Illustrated: Principles without Calculus Princeton University](https://www.coursera.org/learn/networks-illustrated)
+
 ## Links
 
 * Network Science Education: https://sites.google.com/a/binghamton.edu/netscied/teaching-learning/resources
