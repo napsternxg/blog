@@ -43,6 +43,13 @@ Summary: Links related to NLP resources
 * NLP annotation tool - https://github.com/doccano/doccano
 * Yake Single document keyword extraction - https://github.com/LIAAD/yake
 * Open IE Tool - https://github.com/dair-iitd/OpenIE-standalone [Other OpenIE tools](http://www.cse.iitd.ac.in/~mausam/software.html)
+* Derive named entities from Wikipedia - https://github.com/kno10/WikipediaEntities
+
+### Pretrained embeddings and models
+* ELMO for Many Languages - https://github.com/HIT-SCIR/ELMoForManyLangs
+* Flair for many languages - https://github.com/flairNLP/flair-lms
+* Pretrained transformer models for many languages and domains - https://huggingface.co/models
+* FastText embeddings - https://fasttext.cc/
 
 ## Links
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
@@ -73,6 +80,7 @@ Summary: Links related to NLP resources
 * Literature review and datasets on Text-Summarization - https://github.com/neulab/Text-Summarization-Papers
 * Causal Inference using text data - https://github.com/jaeyk/ITS-Text-Classification
 * Tutorial on topic models and its extensions with animations of Chinese restaurant process and Poyla's Urn - http://topicmodels.west.uni-koblenz.de/
+* Relation extraction resources - https://github.com/roomylee/awesome-relation-extraction
 
 ## Lexicons
 
@@ -249,6 +257,8 @@ Summary: Links related to NLP resources
 * The Upworthy Research Archive dataset of headline A/B tests conducted by Upworthy from early 2013 into April 2015 - https://upworthy.natematias.com/about-the-archive
 * Emotion-Cause Pair Extraction: A New Task to Emotion Analysis in Texts - https://github.com/NUSTM/ECPE [More unified version](https://github.com/NUSTM/RTHN)
 * Aspect Based Sentiment Analysis (Twitter, Product Reviews) - https://github.com/NUSTM/ABSC/tree/master/data/absa
+* Fewshot relation extraction corpus - https://thunlp.github.io/1/fewrel1.html
+* SemEval 2010 Task 8 - Multi-Way Classification of Semantic Relations Between Pairs of Nominals - https://drive.google.com/file/d/0B_jQiLugGTAkMDQ5ZjZiMTUtMzQ1Yy00YWNmLWJlZDYtOWY1ZDMwY2U4YjFk/view?sort=name&layout=list&num=50
 
 ## Shared tasks, competitions
 
