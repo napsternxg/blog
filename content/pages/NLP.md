@@ -263,6 +263,9 @@ Summary: Links related to NLP resources
 * Fewshot relation extraction corpus - https://thunlp.github.io/1/fewrel1.html
 * SemEval 2010 Task 8 - Multi-Way Classification of Semantic Relations Between Pairs of Nominals - https://drive.google.com/file/d/0B_jQiLugGTAkMDQ5ZjZiMTUtMzQ1Yy00YWNmLWJlZDYtOWY1ZDMwY2U4YjFk/view?sort=name&layout=list&num=50
 * Wordnet Annotated Corpora - http://globalwordnet.org/resources/wordnet-annotated-corpora/
+* [(RC)^2 dataset for Review Conversational Reading Comprehension (RCRC)](https://howardhsu.github.io/dataset/) - [data](https://drive.google.com/file/d/1qSTs7VkamBsxKN2iOAsK40zwAF5f1xo1/view?usp=sharing) [repo](https://github.com/howardhsu/RCRC)
+* [Review Reading Comprehension (RRC)](https://howardhsu.github.io/dataset/) - [data](https://drive.google.com/file/d/1NGH5bqzEx6aDlYJ7O3hepZF4i_p4iMR8/view?usp=sharing) [repo](https://github.com/howardhsu/BERT-for-RRC-ABSA)
+* [Complementary Entity Recognition (CER)](https://howardhsu.github.io/dataset/) - [QA large](https://www.cs.uic.edu/~hxu/QA_dataset.html) [PCQA](https://www.cs.uic.edu/~hxu/PCQA_dataset.html) [Reviews](https://www.cs.uic.edu/~hxu/CER_dataset.html)
 
 ## Shared tasks, competitions
 
