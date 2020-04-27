@@ -267,6 +267,7 @@ Summary: Links related to NLP resources
 * [Review Reading Comprehension (RRC)](https://howardhsu.github.io/dataset/) - [data](https://drive.google.com/file/d/1NGH5bqzEx6aDlYJ7O3hepZF4i_p4iMR8/view?usp=sharing) [repo](https://github.com/howardhsu/BERT-for-RRC-ABSA)
 * [Complementary Entity Recognition (CER)](https://howardhsu.github.io/dataset/) - [QA large](https://www.cs.uic.edu/~hxu/QA_dataset.html) [PCQA](https://www.cs.uic.edu/~hxu/PCQA_dataset.html) [Reviews](https://www.cs.uic.edu/~hxu/CER_dataset.html)
 * A Multilingual Multi-Target Dataset for Stance Detection - https://github.com/ZurichNLP/xstance
+* Argument Mining manual annotation of judgments of the European Court on Human Rights - https://github.com/PLN-FaMAF/ArgumentMiningECHR
 
 ## Shared tasks, competitions
 
