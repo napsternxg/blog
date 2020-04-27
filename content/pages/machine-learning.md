@@ -53,6 +53,9 @@ Summary: Machine Learning concepts and traditional resources
 * [Online Learning, Interactive Machine Learning, and Learning from Human Feedback](http://www.yisongyue.com/courses/cs159/)
 * [Lecture notes on Online Learning](https://parameterfree.com/lecture-notes-on-online-learning/)
 * [Machine Learning for Data Streams using MOA](https://moa.cms.waikato.ac.nz/book-html/)
+* [Introduction to Online Convex Optimization](https://ocobook.cs.princeton.edu/)
+* [Prediction, Learning, and Games](http://www.ii.uni.wroc.pl/~lukstafi/pmwiki/uploads/AGT/Prediction_Learning_and_Games.pdf)
+* [Online learning, boosting and Games - Prof. Yoav Freund](https://yoavfreund.miraheze.org/wiki/OnlineLearning2018)
 
 ## Concept Drift
 * [Handling Concept Drift](https://www.cs.waikato.ac.nz/~abifet/PAKDD2011/PAKDD11Tutorial_Handling_Concept_Drift.pdf)
