@@ -93,6 +93,9 @@ Summary: Links related to many datasets
 * Given names by culture and lanugage from Wikipedia - https://en.wikipedia.org/wiki/Category:Given_names
 * Names of all politicians - https://github.com/everypolitician/everypolitician-names
 * IMDB artists identified if they are actor or actresses - https://www.imdb.com/interfaces/
+* List of Olympic athlete names mapped with ethnicity and country - https://github.com/jhyuklee/ethnicity-tensorflow
+* 140k name/ethnicity associations - https://github.com/appeler/ethnicolr/tree/master/ethnicolr/data/wiki
+* First names, gender, and year in Indian electoral roll data - https://github.com/appeler/naampy
 
 
 ## Images
