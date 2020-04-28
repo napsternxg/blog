@@ -37,6 +37,9 @@ Summary: Links related to many datasets
 
 # Social economic data
 
+## Geolocation to census and other geolocation data
+* http://www.datasciencetoolkit.org/about
+
 ## Datasets with gender, personality (preferably emotional stability), an experimental manipulation of which the effect will plausibly vary by gender [Source tweet](https://twitter.com/dingding_peng/status/1213083677837709312)
 * Open psychological datasets - https://docs.google.com/spreadsheets/d/1ejOJTNTL5ApCuGTUciV0REEEAqvhI2Rd2FCoj7afops/htmlview#
 * LISS data archive - https://www.lissdata.nl/search/node/experiment
@@ -96,6 +99,7 @@ Summary: Links related to many datasets
 * List of Olympic athlete names mapped with ethnicity and country - https://github.com/jhyuklee/ethnicity-tensorflow
 * 140k name/ethnicity associations - https://github.com/appeler/ethnicolr/tree/master/ethnicolr/data/wiki
 * First names, gender, and year in Indian electoral roll data - https://github.com/appeler/naampy
+* Indian names with ethnicity, religion, gender extracted from SimplyMarry and CBSE data - https://github.com/Nilabhra/ethnicity/tree/master/json_counts
 
 
 ## Images
