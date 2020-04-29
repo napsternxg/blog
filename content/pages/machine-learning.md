@@ -57,6 +57,7 @@ Summary: Machine Learning concepts and traditional resources
 * [Prediction, Learning, and Games](http://www.ii.uni.wroc.pl/~lukstafi/pmwiki/uploads/AGT/Prediction_Learning_and_Games.pdf)
 * [Online learning, boosting and Games - Prof. Yoav Freund](https://yoavfreund.miraheze.org/wiki/OnlineLearning2018)
 
+
 ## Concept Drift
 * [Handling Concept Drift](https://www.cs.waikato.ac.nz/~abifet/PAKDD2011/PAKDD11Tutorial_Handling_Concept_Drift.pdf)
 * [Learning under Concept Drift](https://arxiv.org/pdf/1010.4784.pdf)
@@ -99,7 +100,7 @@ Summary: Machine Learning concepts and traditional resources
 
 * Course on Online Learning, Bandits, Reinforcement and Imitation Learning: https://sites.google.com/view/cs-159-spring-2018/home
 * Python code examples for the book: https://github.com/ShangtongZhang/reinforcement-learning-an-introduction
-
+* [Approximate Dynamic Programming](http://adp.princeton.edu/)
 
 ## Transfer Learning
 
