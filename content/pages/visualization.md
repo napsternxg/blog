@@ -24,6 +24,7 @@ Summary: Links related to visualizations
 * https://medium.com/@enjalot/the-hitchhikers-guide-to-d3-js-a8552174733a
 * http://elliotbentley.com/2016/05/23/a-better-way-to-structure-d3-code.html
 * https://bl.ocks.org/nstrayer/37a503dd1db369a8f7e3ce21757e19ee - Reusable charts
+* https://www.smashingmagazine.com/2018/02/react-d3-ecosystem/
 
 ## Tools
 
