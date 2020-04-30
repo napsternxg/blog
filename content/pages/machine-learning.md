@@ -101,6 +101,7 @@ Summary: Machine Learning concepts and traditional resources
 * Course on Online Learning, Bandits, Reinforcement and Imitation Learning: https://sites.google.com/view/cs-159-spring-2018/home
 * Python code examples for the book: https://github.com/ShangtongZhang/reinforcement-learning-an-introduction
 * [Approximate Dynamic Programming](http://adp.princeton.edu/)
+* [Multiagent Systems - Algorithmic, Game-Theoretic, and Logical Foundations](http://www.masfoundations.org/index.html)
 
 ## Transfer Learning
 
