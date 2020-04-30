@@ -5,7 +5,21 @@ Slug: nlp
 Authors: Shubhanshu Mishra
 Summary: Links related to NLP resources
 
-## Courses/Books
+- [Courses and Books](#courses-and-books)
+- [Scientific NLP](#scientific-nlp)
+- [Tools](#tools)
+  * [Pretrained embeddings and models](#pretrained-embeddings-and-models)
+- [Links](#links)
+- [Lexicons](#lexicons)
+- [Data](#data)
+- [Shared tasks, competitions](#shared-tasks--competitions)
+- [Research Groups](#research-groups)
+- [Mailing lists](#mailing-lists)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
+## Courses and Books
 * Statistical NLP Book: https://github.com/uclmr/stat-nlp-book/blob/python/overview.ipynb
 * Course on word embeddings, variants, and applications: http://people.ds.cam.ac.uk/iv250/esslli2018.html
 * A Course in Machine Learning: http://ciml.info/
@@ -81,6 +95,7 @@ Summary: Links related to NLP resources
 * Causal Inference using text data - https://github.com/jaeyk/ITS-Text-Classification
 * Tutorial on topic models and its extensions with animations of Chinese restaurant process and Poyla's Urn - http://topicmodels.west.uni-koblenz.de/
 * Relation extraction resources - https://github.com/roomylee/awesome-relation-extraction
+* Wordbank - An open database of children's vocabulary development - http://wordbank.stanford.edu/
 
 ## Lexicons
 
