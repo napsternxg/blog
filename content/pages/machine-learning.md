@@ -62,6 +62,12 @@ Summary: Machine Learning concepts and traditional resources
 * [Handling Concept Drift](https://www.cs.waikato.ac.nz/~abifet/PAKDD2011/PAKDD11Tutorial_Handling_Concept_Drift.pdf)
 * [Learning under Concept Drift](https://arxiv.org/pdf/1010.4784.pdf)
 
+## Domain Adaptation
+
+* Office-Home Dataset - http://hemanthdv.org/OfficeHome-Dataset/
+* ImageClef - https://www.imageclef.org/2014/adaptation
+* Pg. 13 of this paper suggests data for open world/domain adaptation - https://arxiv.org/pdf/2004.07780.pdf
+
 ## Bandit Algorithms
 
 * [A blog and book on bandit algorithms by Tor Lattimore and Csaba Szepesvari](https://banditalgs.com/)
