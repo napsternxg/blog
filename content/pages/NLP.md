@@ -284,6 +284,8 @@ Summary: Links related to NLP resources
 * [Complementary Entity Recognition (CER)](https://howardhsu.github.io/dataset/) - [QA large](https://www.cs.uic.edu/~hxu/QA_dataset.html) [PCQA](https://www.cs.uic.edu/~hxu/PCQA_dataset.html) [Reviews](https://www.cs.uic.edu/~hxu/CER_dataset.html)
 * A Multilingual Multi-Target Dataset for Stance Detection - https://github.com/ZurichNLP/xstance
 * Argument Mining manual annotation of judgments of the European Court on Human Rights - https://github.com/PLN-FaMAF/ArgumentMiningECHR
+* SemCor and Masc documents annotated with NOAD (New Oxford American Dictionary) word senses - https://github.com/google-research-datasets/word_sense_disambigation_corpora
+
 
 ## Shared tasks, competitions
 
