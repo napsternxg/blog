@@ -96,6 +96,7 @@ Summary: Links related to NLP resources
 * Tutorial on topic models and its extensions with animations of Chinese restaurant process and Poyla's Urn - http://topicmodels.west.uni-koblenz.de/
 * Relation extraction resources - https://github.com/roomylee/awesome-relation-extraction
 * Wordbank - An open database of children's vocabulary development - http://wordbank.stanford.edu/
+* [Comparison of web (text) annotation editors](https://docs.google.com/spreadsheets/d/14ionbRVYBQuD0cNLazKfRWYzrkax3qFCspm9SiaG5Aw/edit#gid=0)
 
 ## Lexicons
 
