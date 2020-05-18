@@ -286,6 +286,7 @@ Summary: Links related to NLP resources
 * A Multilingual Multi-Target Dataset for Stance Detection - https://github.com/ZurichNLP/xstance
 * Argument Mining manual annotation of judgments of the European Court on Human Rights - https://github.com/PLN-FaMAF/ArgumentMiningECHR
 * SemCor and Masc documents annotated with NOAD (New Oxford American Dictionary) word senses - https://github.com/google-research-datasets/word_sense_disambigation_corpora
+* Polish NLP datasets (NER, IE, WSD) - http://poleval.pl/tasks/
 
 
 ## Shared tasks, competitions
@@ -294,6 +295,7 @@ Summary: Links related to NLP resources
 * NIST TAC Knowledge Base Population (KBP2019) Entity Discovery and Linking Track - http://nlp.cs.rpi.edu/kbp/2019/index.html
 * Multilingual Surface Realization Shared Task (SR'19) - http://taln.upf.edu/pages/msr2019-ws/SRST.html#data
 * SHARED TASK ON FINE-GRAINED PROPAGANDA DETECTION @NLP4IF 2019 - https://propaganda.qcri.org/nlp4if-shared-task/
+* PolEval - http://poleval.pl/tasks/
 
 ## Research Groups
 * https://supernlp.github.io/ - University of Copenhagen 
