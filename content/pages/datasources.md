@@ -22,6 +22,7 @@ Summary: Links related to many datasets
 * List of politician names and properties in Wikidata - https://www.wikidata.org/wiki/Wikidata:WikiProject_every_politician
 * UK MPs on Twitter - https://www.mpsontwitter.co.uk/
 * Women in Politics - https://data.oecd.org/inequality/women-in-politics.htm
+* Danish Politicians on Twitter - https://github.com/obaidaITU/dkpol/blob/master/danish_politicians.csv
 
 ### US
 * Summaries of US bills and other congress datasets - https://www.govtrack.us/about-our-data
