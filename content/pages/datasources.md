@@ -11,9 +11,10 @@ Summary: Links related to many datasets
 * Replies to Allen Downey's question about data sources - https://twitter.com/AllenDowney/status/1196802333017071616
 * The Ultimate Dataset Aggregator for Machine Learning - https://lionbridge.ai/datasets/ultimate-dataset-aggregator-for-machine-learning/
 
-## Web Data Commons - Web Table Corpora
-* Web tables from common crawl data
-* http://webdatacommons.org/webtables/
+## Web Data
+* Web tables from common crawl data - http://webdatacommons.org/webtables/
+* Domain names - https://dnscensus2013.neocities.org/index.html
+
 
 ## Politics
 
