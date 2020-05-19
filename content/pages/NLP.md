@@ -288,6 +288,7 @@ Summary: Links related to NLP resources
 * SemCor and Masc documents annotated with NOAD (New Oxford American Dictionary) word senses - https://github.com/google-research-datasets/word_sense_disambigation_corpora
 * Polish NLP datasets (NER, IE, WSD) - http://poleval.pl/tasks/
 * PoKi: A Large Dataset of Poems by Children (divided by grade and gender inferred from name) - https://github.com/whipson/PoKi-Poems-by-Kids
+* Privacy policies of US companies judged by legal experts - https://github.com/ansgarw/privacy
 
 ## Shared tasks, competitions
 
