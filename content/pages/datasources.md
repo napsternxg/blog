@@ -24,6 +24,7 @@ Summary: Links related to many datasets
 * UK MPs on Twitter - https://www.mpsontwitter.co.uk/
 * Women in Politics - https://data.oecd.org/inequality/women-in-politics.htm
 * Danish Politicians on Twitter - https://github.com/obaidaITU/dkpol/blob/master/danish_politicians.csv
+* Global Party Survey - https://www.globalpartysurvey.org/download-data
 
 ### US
 * Summaries of US bills and other congress datasets - https://www.govtrack.us/about-our-data
