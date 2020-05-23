@@ -97,6 +97,7 @@ Summary: Links related to NLP resources
 * Relation extraction resources - https://github.com/roomylee/awesome-relation-extraction
 * Wordbank - An open database of children's vocabulary development - http://wordbank.stanford.edu/
 * [Comparison of web (text) annotation editors](https://docs.google.com/spreadsheets/d/14ionbRVYBQuD0cNLazKfRWYzrkax3qFCspm9SiaG5Aw/edit#gid=0)
+* North American Computational Linguistics Open Competition - https://www.nacloweb.org/
 
 ## Lexicons
 
