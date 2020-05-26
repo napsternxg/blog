@@ -148,6 +148,9 @@ Summary: Links related to many datasets
 
 
 ## Sports
+### Football
+* Match results data - https://github.com/openfootball/football.json
+
 ### Cricket stats
 
 * [Cricksheet](https://cricsheet.org) - Also in XML format - https://github.com/cricsheet/cricsheet-xml
