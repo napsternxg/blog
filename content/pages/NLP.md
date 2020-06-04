@@ -98,6 +98,7 @@ Summary: Links related to NLP resources
 * Wordbank - An open database of children's vocabulary development - http://wordbank.stanford.edu/
 * [Comparison of web (text) annotation editors](https://docs.google.com/spreadsheets/d/14ionbRVYBQuD0cNLazKfRWYzrkax3qFCspm9SiaG5Aw/edit#gid=0)
 * North American Computational Linguistics Open Competition - https://www.nacloweb.org/
+* Frequency lists of words in all languages - https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists
 
 ## Lexicons
 
@@ -290,6 +291,8 @@ Summary: Links related to NLP resources
 * Polish NLP datasets (NER, IE, WSD) - http://poleval.pl/tasks/
 * PoKi: A Large Dataset of Poems by Children (divided by grade and gender inferred from name) - https://github.com/whipson/PoKi-Poems-by-Kids
 * Privacy policies of US companies judged by legal experts - https://github.com/ansgarw/privacy
+* OpenSubtitles - subtitles in various languages - http://opus.nlpl.eu/OpenSubtitles-v2018.php
+* OpenParallel corpus - http://opus.nlpl.eu/index.php
 
 ## Shared tasks, competitions
 
