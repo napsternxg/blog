@@ -28,14 +28,14 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Personal Website', 'http://shubhanshu.com/'),
+LINKS = (('Personal Website', 'https://shubhanshu.com/'),
         )
 
 # Social widget
-SOCIAL = (('website', 'http://shubhanshu.com'),
-    ('twitter', 'http://twitter.com/TheShubhanshu'),
-    ('linkedin', 'http://www.linkedin.com/in/shubhanshumishra'),
-    ('github', 'http://github.com/napsternxg'),
+SOCIAL = (('website', 'https://shubhanshu.com'),
+    ('twitter', 'https://twitter.com/TheShubhanshu'),
+    ('linkedin', 'https://www.linkedin.com/in/shubhanshumishra'),
+    ('github', 'https://github.com/napsternxg'),
     ('rss', '//shubhanshu.com/blog/feeds/all.atom.xml')
     )
 
