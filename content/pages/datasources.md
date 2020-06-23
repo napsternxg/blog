@@ -105,7 +105,7 @@ Summary: Links related to many datasets
 * 140k name/ethnicity associations - https://github.com/appeler/ethnicolr/tree/master/ethnicolr/data/wiki
 * First names, gender, and year in Indian electoral roll data - https://github.com/appeler/naampy
 * Indian names with ethnicity, religion, gender extracted from SimplyMarry and CBSE data - https://github.com/Nilabhra/ethnicity/tree/master/json_counts
-
+* Name Nationalities from Wikipedia Categories and classifier to predict these - https://github.com/Kyubyong/name2nat
 
 ## Images
 
