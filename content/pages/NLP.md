@@ -294,6 +294,7 @@ Summary: Links related to NLP resources
 * OpenSubtitles - subtitles in various languages - http://opus.nlpl.eu/OpenSubtitles-v2018.php
 * OpenParallel corpus - http://opus.nlpl.eu/index.php
 * A Dataset of Petitions from Avaaz.org - https://dataverse.mpi-sws.org/dataset.xhtml?persistentId=doi:10.5072/FK2/CUSKCS&version=1.0
+* NLP Datasets on Indian Languages - https://github.com/indicnlpweb/indicnlp_catalog
 
 ## Shared tasks, competitions
 
