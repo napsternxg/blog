@@ -296,6 +296,7 @@ Summary: Links related to NLP resources
 * A Dataset of Petitions from Avaaz.org - https://dataverse.mpi-sws.org/dataset.xhtml?persistentId=doi:10.5072/FK2/CUSKCS&version=1.0
 * NLP Datasets on Indian Languages - https://github.com/indicnlpweb/indicnlp_catalog
 * A Survey and Experiments on Annotated Corpora for Emotion Classification in Text - https://github.com/sarnthil/unify-emotion-datasets/tree/master/datasets
+* Github Typo Corpus (A Large-Scale Multilingual Dataset of Misspellings and Grammatical Errors) - https://github.com/mhagiwara/github-typo-corpus
 
 ## Shared tasks, competitions
 
