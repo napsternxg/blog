@@ -298,6 +298,7 @@ Summary: Links related to NLP resources
 * A Survey and Experiments on Annotated Corpora for Emotion Classification in Text - https://github.com/sarnthil/unify-emotion-datasets/tree/master/datasets
 * Github Typo Corpus (A Large-Scale Multilingual Dataset of Misspellings and Grammatical Errors) - https://github.com/mhagiwara/github-typo-corpus
 * Sentence Alignment in Text Simplification (Wiki and Newsela) - https://github.com/chaojiang06/wiki-auto
+* Media Frame Corpus - https://github.com/dallascard/media_frames_corpus
 
 ## Shared tasks, competitions
 
