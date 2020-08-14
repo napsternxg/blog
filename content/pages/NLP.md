@@ -302,6 +302,7 @@ Summary: Links related to NLP resources
 * DAWT: Densely Annotated Wikipedia Texts across multiple languages - https://github.com/klout/opendata/blob/master/wiki_annotation/README.md
 * News corpus of Police Killings which are sentence segmented, mention-level, distantly labeled data used in experiments. - http://slanglab.cs.umass.edu/PoliceKillingsExtraction/
 * Biographical Structure in Text (Wikipedia event data, inferred gender and date of birth) - http://www.cs.cmu.edu/~ark/bio/
+* NER for South and South East Asian Languages (Hindi, Bengali, Oriya, Telugu, Urdu) - http://ltrc.iiit.ac.in/ner-ssea-08/index.cgi?topic=5
 
 ## Shared tasks, competitions
 
