@@ -107,6 +107,7 @@ Summary: Links related to many datasets
 * Indian names with ethnicity, religion, gender extracted from SimplyMarry and CBSE data - https://github.com/Nilabhra/ethnicity/tree/master/json_counts
 * Name Nationalities from Wikipedia Categories and classifier to predict these - https://github.com/Kyubyong/name2nat
 * WikiTree Data Dump (24M geneologies) - https://www.wikitree.com/wiki/Help:Database_Dumps
+* List of names and surnames for Dutch, English, Portuguese and Spanish - https://github.com/davidsbatista/lexicons/blob/master/names-surnames-NL-UK-IT-PT-ES.zip
 
 ## Images
 
