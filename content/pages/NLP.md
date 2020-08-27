@@ -59,6 +59,8 @@ Summary: Links related to NLP resources
 * Open IE Tool - https://github.com/dair-iitd/OpenIE-standalone [Other OpenIE tools](http://www.cse.iitd.ac.in/~mausam/software.html)
 * Derive named entities from Wikipedia - https://github.com/kno10/WikipediaEntities
 * Bengali NLP - https://github.com/sagorbrur/bnlp
+* Py Readability metrics - https://github.com/cdimascio/py-readability-metrics
+* iNLTK - https://inltk.readthedocs.io/en/latest/
 
 ### Pretrained embeddings and models
 * ELMO for Many Languages - https://github.com/HIT-SCIR/ELMoForManyLangs
