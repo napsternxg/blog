@@ -30,6 +30,7 @@ Summary: Links related to NLP resources
 * Oxford Deep Learning NLP - https://github.com/oxford-cs-deepnlp-2017/lectures
 * CMU NLP - http://phontron.com/class/nn4nlp2017/schedule.html
 * David Bamman's Course on Applied NLP - https://github.com/dbamman/anlp19 - [Course Page](http://people.ischool.berkeley.edu/~dbamman/info256.html)
+* NLP Course | For You by Lena Voita - https://lena-voita.github.io/nlp_course.html
 
 ## Scientific NLP 
 * https://github.com/NIHOPA/NLPre
