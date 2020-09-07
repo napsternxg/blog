@@ -309,6 +309,7 @@ Summary: Links related to NLP resources
 * NER for South and South East Asian Languages (Hindi, Bengali, Oriya, Telugu, Urdu) - http://ltrc.iiit.ac.in/ner-ssea-08/index.cgi?topic=5
 * Summarization datasets - https://github.com/recitalAI/summarizing_summarization
 * Same Side Stance Classification - https://events.webis.de/sameside-19/#task
+* Information Extraction from Chemical Patents - https://chemu-patent-ie.github.io/
 
 ## Shared tasks, competitions
 
