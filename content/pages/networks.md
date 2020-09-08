@@ -10,6 +10,11 @@ Summary: Social Networks and Network Related documents
 
 * [Networks Illustrated: Principles without Calculus Princeton University](https://www.coursera.org/learn/networks-illustrated)
 
+
+## Books
+
+* [Lectures on Network Systems](http://motion.me.ucsb.edu/book-lns/)
+
 ## Links
 
 * Network Science Education: https://sites.google.com/a/binghamton.edu/netscied/teaching-learning/resources
