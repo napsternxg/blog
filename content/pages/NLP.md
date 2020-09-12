@@ -311,6 +311,7 @@ Summary: Links related to NLP resources
 * Summarization datasets - https://github.com/recitalAI/summarizing_summarization
 * Same Side Stance Classification - https://events.webis.de/sameside-19/#task
 * Information Extraction from Chemical Patents - https://chemu-patent-ie.github.io/
+* Open Advancement of Question Answering Systems - https://oaqa.github.io/
 
 ## Shared tasks, competitions
 
