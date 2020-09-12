@@ -129,3 +129,4 @@ Summary: Machine Learning concepts and traditional resources
 ## Interpretability
 
 * ML Interpratation in python - https://github.com/jphall663/interpretable_machine_learning_with_python
+* Explanatory Model Analysis - https://github.com/pbiecek/ema
