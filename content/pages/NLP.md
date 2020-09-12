@@ -312,6 +312,7 @@ Summary: Links related to NLP resources
 * Same Side Stance Classification - https://events.webis.de/sameside-19/#task
 * Information Extraction from Chemical Patents - https://chemu-patent-ie.github.io/
 * Open Advancement of Question Answering Systems - https://oaqa.github.io/
+* Medical term similarity datasets based on SNOMED-CT. - https://github.com/babylonhealth/medisim
 
 ## Shared tasks, competitions
 
