@@ -64,6 +64,7 @@ Summary: Links related to NLP resources
 * Bengali NLP - https://github.com/sagorbrur/bnlp
 * Py Readability metrics - https://github.com/cdimascio/py-readability-metrics
 * iNLTK - https://inltk.readthedocs.io/en/latest/
+* Fast spell correction and word segmentation - https://github.com/wolfgarbe/symspell
 
 ### Pretrained embeddings and models
 * ELMO for Many Languages - https://github.com/HIT-SCIR/ELMoForManyLangs
