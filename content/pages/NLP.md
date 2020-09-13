@@ -106,6 +106,7 @@ Summary: Links related to NLP resources
 * [Comparison of web (text) annotation editors](https://docs.google.com/spreadsheets/d/14ionbRVYBQuD0cNLazKfRWYzrkax3qFCspm9SiaG5Aw/edit#gid=0)
 * North American Computational Linguistics Open Competition - https://www.nacloweb.org/
 * Frequency lists of words in all languages - https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists
+* The NLP Pandect - https://github.com/ivan-bilan/The-NLP-Pandect
 
 ## Lexicons
 
