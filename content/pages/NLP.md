@@ -32,6 +32,7 @@ Summary: Links related to NLP resources
 * David Bamman's Course on Applied NLP - https://github.com/dbamman/anlp19 - [Course Page](http://people.ischool.berkeley.edu/~dbamman/info256.html)
 * NLP Course | For You by Lena Voita - https://lena-voita.github.io/nlp_course.html
 * Course material for Machine Translation from UIUC, JHU - http://mt-class.org/
+* Jason Eisner - http://www.cs.jhu.edu/~jason/465/
 
 ## Scientific NLP 
 * https://github.com/NIHOPA/NLPre
