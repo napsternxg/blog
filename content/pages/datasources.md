@@ -28,6 +28,7 @@ Summary: Links related to many datasets
 * Manifesto of political parties - https://manifesto-project.wzb.eu/datasets
 * Global Parliametary Report - http://archive.ipu.org/gpr-e/downloads/index.htm
 * Data on world elections and political parties - https://data.ipu.org/elections
+* Global Party Facts - https://partyfacts.herokuapp.com/data/
 
 ### US
 * Summaries of US bills and other congress datasets - https://www.govtrack.us/about-our-data
