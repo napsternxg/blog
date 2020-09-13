@@ -12,7 +12,7 @@ Summary: Machine Learning concepts and traditional resources
 * yellowbrick various model visualizations - https://www.scikit-yb.org/en/latest/
 * Scikit-lego: interesting prebuild pipelines and transformers for sklearn - https://scikit-lego.readthedocs.io/en/latest/
 * List of various scikits - http://scikits.appspot.com/scikits
-* Information Theoretical Estimators (ITE) in Python - https://bitbucket.org/szzoli/ite-in-python/src/master/
+* Information Theoretical Estimators (ITE) in Python - https://bitbucket.org/szzoli/ite-in-python/src/master/ [Paper](https://arxiv.org/abs/1405.2106)
 
 ## Theory
 
