@@ -29,6 +29,7 @@ Summary: Links related to many datasets
 * Global Parliametary Report - http://archive.ipu.org/gpr-e/downloads/index.htm
 * Data on world elections and political parties - https://data.ipu.org/elections
 * Global Party Facts - https://partyfacts.herokuapp.com/data/
+* World Election Calendar - https://www.ndi.org/elections-calendar
 
 ### US
 * Summaries of US bills and other congress datasets - https://www.govtrack.us/about-our-data
