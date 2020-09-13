@@ -107,6 +107,7 @@ Summary: Links related to NLP resources
 * North American Computational Linguistics Open Competition - https://www.nacloweb.org/
 * Frequency lists of words in all languages - https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists
 * The NLP Pandect - https://github.com/ivan-bilan/The-NLP-Pandect
+* Unicode text segmentation - http://www.unicode.org/reports/tr29/
 
 ## Lexicons
 
