@@ -119,6 +119,7 @@ Summary: Links related to many datasets
 * MoMA collection of images with name/gender/nationality - https://github.com/MuseumofModernArt/collection
 * Devnagri MNIST - https://www.kaggle.com/ashokpant/devanagari-character-dataset and http://archive.ics.uci.edu/ml/machine-learning-databases/00389/ - [Devnagri MNIST large on Kaggle](https://www.kaggle.com/ashokpant/devanagari-character-dataset-large)
 * Families In the Wild: A Kinship Recognition Benchmark - https://web.northeastern.edu/smilelab/fiw/
+* The Sixth Workshop on Fine-Grained Visual Categorization - https://sites.google.com/view/fgvc6/home?authuser=0
 
 
 ## Stream processing data
