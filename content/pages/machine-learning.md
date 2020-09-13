@@ -120,6 +120,9 @@ Summary: Machine Learning concepts and traditional resources
 
 * Good overview of all types of transfer learning approaches (in Chinese): https://github.com/jindongwang/transferlearning
 
+## Multimodal learning
+* Multimodal Machine Learning: A Survey and Taxonomy - https://arxiv.org/abs/1705.09406
+
 
 ## Applications
 
