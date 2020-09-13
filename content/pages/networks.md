@@ -71,6 +71,7 @@ Summary: Social Networks and Network Related documents
 * Incompleteness in Networks: Biases, Skewed Results, and Some Solutions (by [Tina Eliassi-Rad](http://eliassi.org/) Rajmonda Caceres and Timothy LaRock): https://www.kdd.org/kdd2019/
 * Generative Models for Social Media Analytics: Networks, Text, and Time - https://github.com/kevin-s-xu/ICWSM-2018-Generative-Tutorial
 * Statistical models for analyzing dynamic social network data - [Video](https://youtu.be/T3JgEH0um20?t=920) [Slides](https://sites.google.com/site/kevinshuaixu/MIDAS_2018_Network_Models.pdf?attredirects=0)
+* A Comprehensive Survey of Graph Embedding: Problems, Techniques and Applications - https://arxiv.org/abs/1709.07604
 
 ## Network Analysis tools
 
