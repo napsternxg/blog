@@ -62,6 +62,7 @@ Summary: Machine Learning concepts and traditional resources
 * [Introduction to Online Convex Optimization](https://ocobook.cs.princeton.edu/)
 * [Prediction, Learning, and Games](http://www.ii.uni.wroc.pl/~lukstafi/pmwiki/uploads/AGT/Prediction_Learning_and_Games.pdf)
 * [Online learning, boosting and Games - Prof. Yoav Freund](https://yoavfreund.miraheze.org/wiki/OnlineLearning2018)
+* [Python implementation of concept-drift algorithms for Online Learning](https://github.com/blablahaha/concept-drift)
 
 
 ## Concept Drift
