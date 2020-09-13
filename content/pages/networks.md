@@ -72,6 +72,7 @@ Summary: Social Networks and Network Related documents
 * Generative Models for Social Media Analytics: Networks, Text, and Time - https://github.com/kevin-s-xu/ICWSM-2018-Generative-Tutorial
 * Statistical models for analyzing dynamic social network data - [Video](https://youtu.be/T3JgEH0um20?t=920) [Slides](https://sites.google.com/site/kevinshuaixu/MIDAS_2018_Network_Models.pdf?attredirects=0)
 * A Comprehensive Survey of Graph Embedding: Problems, Techniques and Applications - https://arxiv.org/abs/1709.07604
+* Signal Processing and Machine Learning on Graphs - http://web.media.mit.edu/~xdong/talk/EconomicNetworks_GSP.pdf - http://web.media.mit.edu/~xdong/resource.html
 
 ## Network Analysis tools
 
