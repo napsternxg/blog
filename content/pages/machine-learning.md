@@ -134,6 +134,7 @@ Summary: Machine Learning concepts and traditional resources
 ## ML Bias
 
 * Tutorial - https://github.com/Jindong-Explainable-AI/Bias_in_Machine_Learning
+* Using Big Data to Solve Economic and Social Problems - https://opportunityinsights.org/course/
 
 ## Interpretability
 
