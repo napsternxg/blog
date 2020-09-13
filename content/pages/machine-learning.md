@@ -14,6 +14,11 @@ Summary: Machine Learning concepts and traditional resources
 * List of various scikits - http://scikits.appspot.com/scikits
 * Information Theoretical Estimators (ITE) in Python - https://bitbucket.org/szzoli/ite-in-python/src/master/ [Paper](https://arxiv.org/abs/1405.2106)
 
+
+## ML Production
+* https://github.com/EthicalML/awesome-production-machine-learning
+* https://www.oreilly.com/radar/what-you-need-to-know-about-product-management-for-ai/
+
 ## Theory
 
 * [The Theory Behind Overfitting, Cross Validation, Regularization, Bagging, and Boosting: Tutorial](https://arxiv.org/abs/1905.12787)
