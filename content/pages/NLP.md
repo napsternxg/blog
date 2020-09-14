@@ -337,6 +337,9 @@ Summary: Links related to NLP resources
 * http://www.ark.cs.washington.edu/ - Noah Smith NLP Lab at University of Washington
 * https://www.cs.washington.edu/research/nlp - University of Washington
 * http://wiki.clsp.jhu.edu/view/NLP_Reading_Group - John Hopkins University
+* https://github.com/thunlp - Natural Language Processing Lab at Tsinghua University
+* https://github.com/OSU-slatelab - OSU Speech and Language Technologies Laboratory
+
 
 ## Mailing lists
 
