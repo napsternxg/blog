@@ -15,9 +15,13 @@ Summary: Machine Learning concepts and traditional resources
 * Information Theoretical Estimators (ITE) in Python - https://bitbucket.org/szzoli/ite-in-python/src/master/ [Paper](https://arxiv.org/abs/1405.2106)
 
 
-## ML Production
+## ML Engineering
 * https://github.com/EthicalML/awesome-production-machine-learning
 * https://www.oreilly.com/radar/what-you-need-to-know-about-product-management-for-ai/
+* https://github.com/Intellicode/ml-engineering-resources
+* Top 30 ML in Production Resources - https://mlinproduction.com/top-30-ml-in-production-resources-guide/
+* 150 Successful Machine Learning Models: 6 Lessons Learned at Booking.com - https://dl.acm.org/doi/pdf/10.1145/3292500.3330744
+* Rules of Machine Learning: Best Practices for ML Engineering - http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf [On google blog](https://developers.google.com/machine-learning/guides/rules-of-ml)
 
 ## Theory
 
