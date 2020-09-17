@@ -43,6 +43,7 @@ Summary: Social Networks and Network Related documents
 * Twitter Follow Graph (1,963,263,821 directed social links) - http://twitter.mpi-sws.org/
 * Enron Dynamic Networks - https://figshare.com/articles/Last_FM_Jazz_Listeners_Dynamic_Network/3203410
 * RELATIONAL DATASET REPOSITORY for relational ML - https://relational.fit.cvut.cz/
+* Netzschleuder - 3k+ graph datasets - https://networks.skewed.de/
 
 
 ## Theory
