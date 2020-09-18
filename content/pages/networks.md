@@ -44,6 +44,7 @@ Summary: Social Networks and Network Related documents
 * Enron Dynamic Networks - https://figshare.com/articles/Last_FM_Jazz_Listeners_Dynamic_Network/3203410
 * RELATIONAL DATASET REPOSITORY for relational ML - https://relational.fit.cvut.cz/
 * Netzschleuder - 3k+ graph datasets - https://networks.skewed.de/
+* The KONECT Project - 1.3k+ networks - http://konect.cc/
 
 
 ## Theory
