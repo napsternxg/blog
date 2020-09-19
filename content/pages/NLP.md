@@ -318,6 +318,7 @@ Summary: Links related to NLP resources
 * Open Advancement of Question Answering Systems - https://oaqa.github.io/
 * Medical term similarity datasets based on SNOMED-CT. - https://github.com/babylonhealth/medisim
 * Large-Scale Multi-Label Text Classification on EU Legislation - EURLEX57K - http://nlp.cs.aueb.gr/software_and_datasets/EURLEX57K/index.html [Paper](https://www.aclweb.org/anthology/P19-1636/)
+* O\*NET® 25.0 Database - Jobtitle, Job Description to Job Codes - https://www.onetcenter.org/database.html#individual-files
 
 ## Shared tasks, competitions
 
