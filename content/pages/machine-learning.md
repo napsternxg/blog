@@ -140,6 +140,7 @@ Summary: Machine Learning concepts and traditional resources
 * Tutorial - https://github.com/Jindong-Explainable-AI/Bias_in_Machine_Learning
 * Using Big Data to Solve Economic and Social Problems - https://opportunityinsights.org/course/
 * CS269 - Special Topic in AI: Fairness, Accountability, and Transparency in Natural Language Processing - https://uclanlp.github.io/CS269-Winter2020/index.html
+* Fairness and machine learning Limitations and Opportunities Solon Barocas, Moritz Hardt, Arvind Narayanan - https://fairmlbook.org/index.html
 
 ## Interpretability
 
