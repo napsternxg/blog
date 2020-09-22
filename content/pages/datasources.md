@@ -123,6 +123,7 @@ Summary: Links related to many datasets
 * SALICON Saliency Prediction Challenge (LSUN 2017) - http://salicon.net/challenge-2017/
 * MIT/Tübingen Saliency Benchmark datasets - https://saliency.tuebingen.ai/datasets.html
 * [Visual story telling dataset](http://visionandlanguage.net/VIST/)
+* UTKFace Large Scale Face Dataset- https://susanqq.github.io/UTKFace/
 
 
 ## Stream processing data
