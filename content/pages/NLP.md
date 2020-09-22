@@ -320,6 +320,7 @@ Summary: Links related to NLP resources
 * Large-Scale Multi-Label Text Classification on EU Legislation - EURLEX57K - http://nlp.cs.aueb.gr/software_and_datasets/EURLEX57K/index.html [Paper](https://www.aclweb.org/anthology/P19-1636/)
 * O\*NET® 25.0 Database - Jobtitle, Job Description to Job Codes - https://www.onetcenter.org/database.html#individual-files https://github.com/afshinrahimi/jobdescription2jobtitle
 * WikiUMLS: Aligning UMLS to Wikipedia - https://github.com/afshinrahimi/wikiumls
+* Microsoft Research Paraphrase Corpus - https://www.microsoft.com/en-us/download/details.aspx?id=52398
 
 ## Shared tasks, competitions
 
