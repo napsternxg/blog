@@ -321,6 +321,7 @@ Summary: Links related to NLP resources
 * O\*NET® 25.0 Database - Jobtitle, Job Description to Job Codes - https://www.onetcenter.org/database.html#individual-files https://github.com/afshinrahimi/jobdescription2jobtitle
 * WikiUMLS: Aligning UMLS to Wikipedia - https://github.com/afshinrahimi/wikiumls
 * Microsoft Research Paraphrase Corpus - https://www.microsoft.com/en-us/download/details.aspx?id=52398
+* Microsoft Research Paraphrase Phrase Tables - https://www.microsoft.com/en-us/download/details.aspx?id=52536
 
 ## Shared tasks, competitions
 
