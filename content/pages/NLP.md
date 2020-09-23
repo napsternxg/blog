@@ -322,6 +322,9 @@ Summary: Links related to NLP resources
 * WikiUMLS: Aligning UMLS to Wikipedia - https://github.com/afshinrahimi/wikiumls
 * Microsoft Research Paraphrase Corpus - https://www.microsoft.com/en-us/download/details.aspx?id=52398
 * Microsoft Research Paraphrase Phrase Tables - https://www.microsoft.com/en-us/download/details.aspx?id=52536
+* SimplePPDB++ paraphrases with readability scores - https://github.com/mounicam/lexical_simplification/tree/master/SimplePPDBpp
+* Word Complexity Lexicon - https://github.com/mounicam/lexical_simplification/tree/master/word_complexity_lexicon
+* Multilingual paraphrase corpus - http://paraphrase.org/
 
 ## Shared tasks, competitions
 
