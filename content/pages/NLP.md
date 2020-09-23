@@ -65,6 +65,7 @@ Summary: Links related to NLP resources
 * Py Readability metrics - https://github.com/cdimascio/py-readability-metrics
 * iNLTK - https://inltk.readthedocs.io/en/latest/
 * Fast spell correction and word segmentation - https://github.com/wolfgarbe/symspell
+* NERD evaluation - https://nerd.readthedocs.io/en/latest/evaluation.html
 
 ### Pretrained embeddings and models
 * ELMO for Many Languages - https://github.com/HIT-SCIR/ELMoForManyLangs
