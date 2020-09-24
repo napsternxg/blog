@@ -329,6 +329,7 @@ Summary: Links related to NLP resources
 * chakki's Aspect-Based Sentiment Analysis dataset - https://github.com/chakki-works/chABSA-dataset
 * Sentiment Analysis in Russian - https://github.com/sismetanin/sentiment-analysis-in-russian
 * Similarity and relatedness dataset for Wikipedia entities (WikiSRS) - https://slate.cse.ohio-state.edu/WikiSRS/
+* Argumentation corpora - http://corpora.aifdb.org/
 
 ## Shared tasks, competitions
 
