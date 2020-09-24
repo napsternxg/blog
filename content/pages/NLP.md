@@ -326,6 +326,7 @@ Summary: Links related to NLP resources
 * SimplePPDB++ paraphrases with readability scores - https://github.com/mounicam/lexical_simplification/tree/master/SimplePPDBpp
 * Word Complexity Lexicon - https://github.com/mounicam/lexical_simplification/tree/master/word_complexity_lexicon
 * Multilingual paraphrase corpus - http://paraphrase.org/
+* chakki's Aspect-Based Sentiment Analysis dataset - https://github.com/chakki-works/chABSA-dataset
 
 ## Shared tasks, competitions
 
