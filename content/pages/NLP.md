@@ -327,6 +327,7 @@ Summary: Links related to NLP resources
 * Word Complexity Lexicon - https://github.com/mounicam/lexical_simplification/tree/master/word_complexity_lexicon
 * Multilingual paraphrase corpus - http://paraphrase.org/
 * chakki's Aspect-Based Sentiment Analysis dataset - https://github.com/chakki-works/chABSA-dataset
+* Sentiment Analysis in Russian - https://github.com/sismetanin/sentiment-analysis-in-russian
 
 ## Shared tasks, competitions
 
