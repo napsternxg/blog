@@ -330,6 +330,7 @@ Summary: Links related to NLP resources
 * Sentiment Analysis in Russian - https://github.com/sismetanin/sentiment-analysis-in-russian
 * Similarity and relatedness dataset for Wikipedia entities (WikiSRS) - https://slate.cse.ohio-state.edu/WikiSRS/
 * Argumentation corpora - http://corpora.aifdb.org/
+* A Benchmark for Structured Procedural Knowledge Extraction from Cooking Videos - https://github.com/frankxu2004/cooking-procedural-extraction
 
 ## Shared tasks, competitions
 
