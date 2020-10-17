@@ -331,6 +331,9 @@ Summary: Links related to NLP resources
 * Similarity and relatedness dataset for Wikipedia entities (WikiSRS) - https://slate.cse.ohio-state.edu/WikiSRS/
 * Argumentation corpora - http://corpora.aifdb.org/
 * A Benchmark for Structured Procedural Knowledge Extraction from Cooking Videos - https://github.com/frankxu2004/cooking-procedural-extraction
+* End to End Entity Linking datasets (WebQSPEL and GraphQEL)- http://dl.fbaipublicfiles.com/elq/EL4QA_data.tar.gz [Blink paper](https://github.com/facebookresearch/BLINK)
+* Entity Typing Dataset and WikilinksNED Unseen-Mentions - https://github.com/yasumasaonoe/ET4EL
+* Zero Shot Entity Linking dataset using Wikia - https://github.com/lajanugen/zeshel
 
 ## Shared tasks, competitions
 
