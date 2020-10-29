@@ -334,6 +334,7 @@ Summary: Links related to NLP resources
 * End to End Entity Linking datasets (WebQSPEL and GraphQEL)- http://dl.fbaipublicfiles.com/elq/EL4QA_data.tar.gz [Blink paper](https://github.com/facebookresearch/BLINK)
 * Entity Typing Dataset and WikilinksNED Unseen-Mentions - https://github.com/yasumasaonoe/ET4EL
 * Zero Shot Entity Linking dataset using Wikia - https://github.com/lajanugen/zeshel
+* Norwegian NER - https://github.com/ljos/navnkjenner
 
 ## Shared tasks, competitions
 
