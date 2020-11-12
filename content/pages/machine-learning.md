@@ -31,6 +31,8 @@ Summary: Machine Learning concepts and traditional resources
 * [Notes on Bayesian reasoning - Bayesian Reasoning for Intelligent People - Simon DeDeo](http://tuvalu.santafe.edu/~simon/br.pdf)
 * [Mathematics of Machine Learning book](https://mml-book.github.io/)
 * [Old and New Matrix Algebra Useful for Statistics](https://tminka.github.io/papers/matrix/minka-matrix.pdf)
+* [Linear Algebra by Jim Hefferon](https://hefferon.net/linearalgebra/)
+* [](https://pabloinsente.github.io/intro-linear-algebra)
 
 ## Optimization
 
