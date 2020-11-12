@@ -32,7 +32,8 @@ Summary: Machine Learning concepts and traditional resources
 * [Mathematics of Machine Learning book](https://mml-book.github.io/)
 * [Old and New Matrix Algebra Useful for Statistics](https://tminka.github.io/papers/matrix/minka-matrix.pdf)
 * [Linear Algebra by Jim Hefferon](https://hefferon.net/linearalgebra/)
-* [](https://pabloinsente.github.io/intro-linear-algebra)
+* [Intro to linear algebra in Numpy](https://pabloinsente.github.io/intro-linear-algebra)
+* [DATASET SHIFT IN MACHINE LEARNING](http://www.acad.bg/ebook/ml/The.MIT.Press.Dataset.Shift.in.Machine.Learning.Feb.2009.eBook-DDU.pdf)
 
 ## Optimization
 
