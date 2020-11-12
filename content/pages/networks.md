@@ -67,6 +67,7 @@ Summary: Social Networks and Network Related documents
 * Community Hawkes Independent Pairs model for timestamped relational event networks (includes datasets) - https://github.com/IdeasLabUT/CHIP-Network-Model
 * muxViz - Multilayer network visualization tool in R - https://github.com/manlius/muxViz
 * Build multi-agent simulations in minutes - https://hash.ai/
+* DeepSnap - https://github.com/snap-stanford/deepsnap
 
 ## Tutorials
 
