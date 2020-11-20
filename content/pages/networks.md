@@ -45,6 +45,7 @@ Summary: Social Networks and Network Related documents
 * RELATIONAL DATASET REPOSITORY for relational ML - https://relational.fit.cvut.cz/
 * Netzschleuder - 3k+ graph datasets - https://networks.skewed.de/
 * The KONECT Project - 1.3k+ networks - http://konect.cc/
+* Case Law Project (US Cases Open Text as well as Case Citation Networks) - https://case.law/download/
 
 
 ## Theory
