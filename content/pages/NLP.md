@@ -335,6 +335,7 @@ Summary: Links related to NLP resources
 * Entity Typing Dataset and WikilinksNED Unseen-Mentions - https://github.com/yasumasaonoe/ET4EL
 * Zero Shot Entity Linking dataset using Wikia - https://github.com/lajanugen/zeshel
 * Norwegian NER - https://github.com/ljos/navnkjenner
+* Case Law Project (US Cases Open Text as well as Case Citation Networks) - https://case.law/download/
 
 ## Shared tasks, competitions
 
