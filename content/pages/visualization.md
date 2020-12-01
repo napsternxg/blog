@@ -9,6 +9,7 @@ Summary: Links related to visualizations
 
 * Visualization Curriculum using Altair and Vega-Lite - https://github.com/uwdata/visualization-curriculum
 * Open source book in R Fundamentals of Data Visualization by Claus O. Wilke - https://serialmentor.com/dataviz/
+* Courses by Michael Freeman - http://mfviz.com/
 
 ## Learn D3
 
