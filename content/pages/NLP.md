@@ -337,6 +337,7 @@ Summary: Links related to NLP resources
 * Zero Shot Entity Linking dataset using Wikia - https://github.com/lajanugen/zeshel
 * Norwegian NER - https://github.com/ljos/navnkjenner
 * Case Law Project (US Cases Open Text as well as Case Citation Networks) - https://case.law/download/
+* Multilingual LibriSpeech (MLS) - A large multilingual corpus derived from LibriVox audiobooks - http://www.openslr.org/94/
 
 ## Shared tasks, competitions
 
