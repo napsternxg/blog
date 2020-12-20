@@ -23,6 +23,7 @@ Summary: Links related to NLP resources
 * Statistical NLP Book: https://github.com/uclmr/stat-nlp-book/blob/python/overview.ipynb
 * Course on word embeddings, variants, and applications: http://people.ds.cam.ac.uk/iv250/esslli2018.html
 * A Course in Machine Learning: http://ciml.info/
+* Introduction to Natural Language Processing by Jacob Eisenstein - https://github.com/jacobeisenstein/gt-nlp-class
 * Information extraction: https://web.stanford.edu/~jurafsky/slp3/17.pdf covers main ideas of information extraction
 * 601.765 Machine Learning: Linguistic & Sequence Modeling - https://seq2class.github.io/
 * Variational Inference for NLP - https://github.com/philschulz/VITutorial#general
