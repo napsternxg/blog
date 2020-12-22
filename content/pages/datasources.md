@@ -124,7 +124,7 @@ Summary: Links related to many datasets
 * MIT/Tübingen Saliency Benchmark datasets - https://saliency.tuebingen.ai/datasets.html
 * [Visual story telling dataset](http://visionandlanguage.net/VIST/)
 * UTKFace Large Scale Face Dataset- https://susanqq.github.io/UTKFace/
-
+* Flickr Image Cropping Dataset - https://github.com/yiling-chen/flickr-cropping-dataset
 
 ## Stream processing data
 * Data from The Neural Hawkes Process - https://github.com/HMEIatJHU/neurawkes - [Google drive link](https://drive.google.com/drive/folders/0BwqmV0EcoUc8UklIR1BKV25YR1U?usp=sharing)
