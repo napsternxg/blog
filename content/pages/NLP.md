@@ -339,6 +339,7 @@ Summary: Links related to NLP resources
 * Norwegian NER - https://github.com/ljos/navnkjenner
 * Case Law Project (US Cases Open Text as well as Case Citation Networks) - https://case.law/download/
 * Multilingual LibriSpeech (MLS) - A large multilingual corpus derived from LibriVox audiobooks - http://www.openslr.org/94/
+* Event prediction from WikiHow - https://github.com/daiquocnguyen/EventPrediction
 
 ## Shared tasks, competitions
 
