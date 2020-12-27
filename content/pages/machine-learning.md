@@ -45,6 +45,7 @@ Summary: Machine Learning concepts and traditional resources
 * [MOSEC Cookbook on Convex Optimization](https://docs.mosek.com/modeling-cookbook/index.html#) - [Handy cheatsheet](http://docs.mosek.com/cheatsheets/conic.pdf)
 * [Energy Based Machine Learning video tutorial from IBM research](https://researcher.watson.ibm.com/researcher/view_group.php?id=7834)
 * [Google OR Tools for Operations Research optimization problems](https://developers.google.com/optimization/introduction/overview)
+* [Computational Control Theory - Princton course](https://sites.google.com/view/cos59x-cct/home)
 
 ## Structured prediction
 
