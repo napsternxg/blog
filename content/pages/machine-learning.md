@@ -46,6 +46,7 @@ Summary: Machine Learning concepts and traditional resources
 * [Energy Based Machine Learning video tutorial from IBM research](https://researcher.watson.ibm.com/researcher/view_group.php?id=7834)
 * [Google OR Tools for Operations Research optimization problems](https://developers.google.com/optimization/introduction/overview)
 * [Computational Control Theory - Princton course](https://sites.google.com/view/cos59x-cct/home)
+* [Proximal Operators implementations](http://proximity-operator.net/)
 
 ## Structured prediction
 
