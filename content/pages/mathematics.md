@@ -18,6 +18,7 @@ Summary: Links related to mathematics
 
 * [Hamming The Art Of Doing Science And Engineering - Chapter 9](http://worrydream.com/refs/Hamming-TheArtOfDoingScienceAndEngineering.pdf)
 * [There’s Plenty of Room in the Corners - Interactive Observable notebook](https://observablehq.com/@tophtucker/theres-plenty-of-room-in-the-corners)
+* [Conformal Models of the Hyperbolic Geometry - Slides](http://bulatov.org/math/1001/)
 
 # Real Analysis
 * [Course notes from Cambridge analysis 1 course](https://theoremoftheweek.wordpress.com/category/cambridge-maths-tripos/ia-analysis-i/page/3/)
