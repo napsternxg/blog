@@ -13,6 +13,7 @@ Summary: Machine Learning concepts and traditional resources
 * Scikit-lego: interesting prebuild pipelines and transformers for sklearn - https://scikit-lego.readthedocs.io/en/latest/
 * List of various scikits - http://scikits.appspot.com/scikits
 * Information Theoretical Estimators (ITE) in Python - https://bitbucket.org/szzoli/ite-in-python/src/master/ [Paper](https://arxiv.org/abs/1405.2106)
+* HYPERBOLIC DEEP LEARNING - A nascent and promising field - http://hyperbolicdeeplearning.com/
 
 
 ## ML Engineering
