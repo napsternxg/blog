@@ -343,6 +343,7 @@ Summary: Links related to NLP resources
 * Event prediction from WikiHow - https://github.com/daiquocnguyen/EventPrediction
 * IBM Debating data - https://www.research.ibm.com/haifa/dept/vst/debating_data.shtml
 * T-Rex : A Large Scale Alignment of Natural Language with Knowledge Base Triples - https://github.com/hadyelsahar/RE-NLG-Dataset
+* Hindi Translated datasets - http://www.cfilt.iitb.ac.in/iitb_parallel/
 
 ## Shared tasks, competitions
 
