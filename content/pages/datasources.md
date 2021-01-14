@@ -30,6 +30,7 @@ Summary: Links related to many datasets
 * Data on world elections and political parties - https://data.ipu.org/elections
 * Global Party Facts - https://partyfacts.herokuapp.com/data/
 * World Election Calendar - https://www.ndi.org/elections-calendar
+* US congress memebers info (includes images) - https://bioguide.congress.gov/search
 
 ### US
 * Summaries of US bills and other congress datasets - https://www.govtrack.us/about-our-data
