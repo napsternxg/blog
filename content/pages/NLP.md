@@ -345,6 +345,7 @@ Summary: Links related to NLP resources
 * T-Rex : A Large Scale Alignment of Natural Language with Knowledge Base Triples - https://github.com/hadyelsahar/RE-NLG-Dataset
 * Hindi Translated datasets - http://www.cfilt.iitb.ac.in/iitb_parallel/
 * Ontonotes CoNLL format data - https://github.com/yuchenlin/OntoNotes-5.0-NER-BIO
+* Japanese NLP datasets for multiple tasks - http://nlp.ist.i.kyoto-u.ac.jp/EN/?NLPresources#d40a0717
 
 ## Shared tasks, competitions
 
