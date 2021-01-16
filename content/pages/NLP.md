@@ -344,6 +344,7 @@ Summary: Links related to NLP resources
 * IBM Debating data - https://www.research.ibm.com/haifa/dept/vst/debating_data.shtml
 * T-Rex : A Large Scale Alignment of Natural Language with Knowledge Base Triples - https://github.com/hadyelsahar/RE-NLG-Dataset
 * Hindi Translated datasets - http://www.cfilt.iitb.ac.in/iitb_parallel/
+* Ontonotes CoNLL format data - https://github.com/yuchenlin/OntoNotes-5.0-NER-BIO
 
 ## Shared tasks, competitions
 
