@@ -346,6 +346,8 @@ Summary: Links related to NLP resources
 * Hindi Translated datasets - http://www.cfilt.iitb.ac.in/iitb_parallel/
 * Ontonotes CoNLL format data - https://github.com/yuchenlin/OntoNotes-5.0-NER-BIO
 * Japanese NLP datasets for multiple tasks - http://nlp.ist.i.kyoto-u.ac.jp/EN/?NLPresources#d40a0717
+* Japanese parallel text data - http://phontron.com/japanese-translation-data.php?lang=en
+* Ted transcripts - https://wit3.fbk.eu/
 
 ## Shared tasks, competitions
 
