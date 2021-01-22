@@ -348,6 +348,7 @@ Summary: Links related to NLP resources
 * Japanese NLP datasets for multiple tasks - http://nlp.ist.i.kyoto-u.ac.jp/EN/?NLPresources#d40a0717
 * Japanese parallel text data - http://phontron.com/japanese-translation-data.php?lang=en
 * Ted transcripts - https://wit3.fbk.eu/
+* WikiConv - Wikipedia Talk Page conversations in 5 languages - https://github.com/conversationai/wikidetox/tree/master/wikiconv
 
 ## Shared tasks, competitions
 
