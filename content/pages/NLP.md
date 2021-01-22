@@ -69,6 +69,7 @@ Summary: Links related to NLP resources
 * Fast spell correction and word segmentation - https://github.com/wolfgarbe/symspell
 * NERD evaluation - https://nerd.readthedocs.io/en/latest/evaluation.html
 * MedCAT can be used to extract information from Electronic Health Records (EHRs) and link it to biomedical ontologies like SNOMED-CT and UMLS - https://github.com/CogStack/MedCAT
+* PyTerrier - A Python framework for performing information retrieval experiments, building on http://terrier.org/ -  https://github.com/terrier-org/pyterrier
 
 ### Pretrained embeddings and models
 * ELMO for Many Languages - https://github.com/HIT-SCIR/ELMoForManyLangs
