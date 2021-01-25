@@ -24,6 +24,7 @@ Summary: Social Networks and Network Related documents
 * Resources on KRL: knowledge representation learning. KE: knowledge embedding: https://github.com/thunlp/KRLPapers
 * VAX Network epidemic game: http://vax.herokuapp.com/
 * The NetLogo NW Extension for Network Analysis - https://github.com/NetLogo/NW-Extension
+* GraphBLAS - https://github.com/GraphBLAS/GraphBLAS-Pointers
 
 ## Datasets: 
 
