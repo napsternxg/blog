@@ -113,6 +113,7 @@ Summary: Links related to NLP resources
 * Frequency lists of words in all languages - https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists
 * The NLP Pandect - https://github.com/ivan-bilan/The-NLP-Pandect
 * Unicode text segmentation - http://www.unicode.org/reports/tr29/
+* Datasets for Text Analysis - https://docs.google.com/spreadsheets/d/1I7cvuCBQxosQK2evTcdL3qtglaEPc0WFEs6rZMx-xiE/edit#gid=0
 
 ## Lexicons
 
