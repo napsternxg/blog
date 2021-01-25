@@ -352,6 +352,7 @@ Summary: Links related to NLP resources
 * WikiConv - Wikipedia Talk Page conversations in 5 languages - https://github.com/conversationai/wikidetox/tree/master/wikiconv
 * NER on historic newspaper text - https://github.com/dbmdz/historic-ner
 * Persuasion Techniques Annotation - https://propaganda.math.unipd.it/index.html
+* Temporal Privacy Policy dataset - https://github.com/citp/privacy-policy-historical
 
 ## Shared tasks, competitions
 
