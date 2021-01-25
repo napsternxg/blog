@@ -361,6 +361,7 @@ Summary: Links related to NLP resources
 * Multilingual Surface Realization Shared Task (SR'19) - http://taln.upf.edu/pages/msr2019-ws/SRST.html#data
 * SHARED TASK ON FINE-GRAINED PROPAGANDA DETECTION @NLP4IF 2019 - https://propaganda.qcri.org/nlp4if-shared-task/
 * PolEval - http://poleval.pl/tasks/
+* GERMEVAL - German NLP shared tasks - https://projects.fzai.h-da.de/iggsa/germeval/
 
 ## Research Groups
 * https://supernlp.github.io/ - University of Copenhagen 
