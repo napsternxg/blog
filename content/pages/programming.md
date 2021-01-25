@@ -14,6 +14,11 @@ Summary: Links related to programming
 
 * The Stony Brook Algorithm Repository - http://algorist.com/algorist.html
 
+
+## Parallel Computing
+
+* MIT 18.337J/6.338J: Parallel Computing and Scientific Machine Learning in Julia - https://mitmath.github.io/18337/
+
 ## Data Structures
 
 * Tradeoffs of data structures - http://www.idevelopment.info/data/Programming/data_structures/overview/Data_Structures_Algorithms_Introduction.shtml
