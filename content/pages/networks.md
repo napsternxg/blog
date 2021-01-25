@@ -70,6 +70,7 @@ Summary: Social Networks and Network Related documents
 * muxViz - Multilayer network visualization tool in R - https://github.com/manlius/muxViz
 * Build multi-agent simulations in minutes - https://hash.ai/
 * DeepSnap - https://github.com/snap-stanford/deepsnap
+* Little Ball of Fur - Sampling from Graphs - https://little-ball-of-fur.readthedocs.io/
 
 ## Tutorials
 
