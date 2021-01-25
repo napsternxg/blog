@@ -13,6 +13,10 @@ Summary: Notes and links related to machine learning ethics
 * Law for Computer Scientists - https://lawforcomputerscientists.pubpub.org/
 * Berkeley course on Social Movements and Social Media - https://docs.google.com/document/d/1BFvpSxBOZoKayRUayCZfyUaolj6FEwH7muc5bfYWkRA/edit
 
+## Tools
+
+* The Bias and Fairness Audit Toolkit - https://github.com/dssg/aequitas
+
 ## Links
 
 * Awesome list - https://github.com/marikyu7/awesome-artificial-intelligence-ethics
