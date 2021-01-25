@@ -351,6 +351,7 @@ Summary: Links related to NLP resources
 * Ted transcripts - https://wit3.fbk.eu/
 * WikiConv - Wikipedia Talk Page conversations in 5 languages - https://github.com/conversationai/wikidetox/tree/master/wikiconv
 * NER on historic newspaper text - https://github.com/dbmdz/historic-ner
+* Persuasion Techniques Annotation - https://propaganda.math.unipd.it/index.html
 
 ## Shared tasks, competitions
 
