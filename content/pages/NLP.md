@@ -350,6 +350,7 @@ Summary: Links related to NLP resources
 * Japanese parallel text data - http://phontron.com/japanese-translation-data.php?lang=en
 * Ted transcripts - https://wit3.fbk.eu/
 * WikiConv - Wikipedia Talk Page conversations in 5 languages - https://github.com/conversationai/wikidetox/tree/master/wikiconv
+* NER on historic newspaper text - https://github.com/dbmdz/historic-ner
 
 ## Shared tasks, competitions
 
