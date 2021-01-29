@@ -355,6 +355,9 @@ Summary: Links related to NLP resources
 * NER on historic newspaper text - https://github.com/dbmdz/historic-ner
 * Persuasion Techniques Annotation - https://propaganda.math.unipd.it/index.html
 * Temporal Privacy Policy dataset - https://github.com/citp/privacy-policy-historical
+* Groningen Meaning Bank (GMB) Publc Domain English NER + other tags - https://gmb.let.rug.nl/ 
+* Parallel Meaning Bank (PMB) - https://pmb.let.rug.nl/
+* Finnish NLP corpora - https://www.kielipankki.fi/corpora/
 
 ## Shared tasks, competitions
 
