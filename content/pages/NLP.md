@@ -359,6 +359,8 @@ Summary: Links related to NLP resources
 * Parallel Meaning Bank (PMB) - https://pmb.let.rug.nl/
 * Finnish NLP corpora - https://www.kielipankki.fi/corpora/
 * Finnish English Emotion Annotation Movie dialogues from OPUS - https://github.com/Helsinki-NLP/XED
+* Event coref bank data - http://www.newsreader-project.eu/results/data/the-ecb-corpus/
+* Newsreader project data (Wikinews) - http://www.newsreader-project.eu/results/data/
 
 ## Shared tasks, competitions
 
