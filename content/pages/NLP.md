@@ -358,6 +358,7 @@ Summary: Links related to NLP resources
 * Groningen Meaning Bank (GMB) Publc Domain English NER + other tags - https://gmb.let.rug.nl/ 
 * Parallel Meaning Bank (PMB) - https://pmb.let.rug.nl/
 * Finnish NLP corpora - https://www.kielipankki.fi/corpora/
+* Finnish English Emotion Annotation Movie dialogues from OPUS - https://github.com/Helsinki-NLP/XED
 
 ## Shared tasks, competitions
 
