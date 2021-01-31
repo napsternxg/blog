@@ -361,6 +361,7 @@ Summary: Links related to NLP resources
 * Finnish English Emotion Annotation Movie dialogues from OPUS - https://github.com/Helsinki-NLP/XED
 * Event coref bank data - http://www.newsreader-project.eu/results/data/the-ecb-corpus/
 * Newsreader project data (Wikinews) - http://www.newsreader-project.eu/results/data/
+* NER transliteration dataset in multiple languages - http://workshop.colips.org/news2018/dataset.html
 
 ## Shared tasks, competitions
 
