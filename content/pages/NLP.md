@@ -362,6 +362,7 @@ Summary: Links related to NLP resources
 * Event coref bank data - http://www.newsreader-project.eu/results/data/the-ecb-corpus/
 * Newsreader project data (Wikinews) - http://www.newsreader-project.eu/results/data/
 * NER transliteration dataset in multiple languages - http://workshop.colips.org/news2018/dataset.html
+* Various Paraphrase corpus - https://github.com/wasiahmad/paraphrase_identification/tree/master/dataset
 
 ## Shared tasks, competitions
 
