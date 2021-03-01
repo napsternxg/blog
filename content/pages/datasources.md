@@ -10,6 +10,7 @@ Summary: Links related to many datasets
 * Data is Plural - https://tinyletter.com/data-is-plural [Spreadsheet with all data organized](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit)
 * Replies to Allen Downey's question about data sources - https://twitter.com/AllenDowney/status/1196802333017071616
 * The Ultimate Dataset Aggregator for Machine Learning - https://lionbridge.ai/datasets/ultimate-dataset-aggregator-for-machine-learning/
+* List of datasets for machine-learning research - https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research
 
 ## Web Data
 * Web tables from common crawl data - http://webdatacommons.org/webtables/
