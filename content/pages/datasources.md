@@ -17,6 +17,12 @@ Summary: Links related to many datasets
 * Domain names - https://dnscensus2013.neocities.org/index.html
 
 
+## Location data
+
+* Who's On First CC by gazetteer of places categorized by types - https://whosonfirst.org/what/
+* Global Research Identifier Database: locations of research organizations over the world - https://www.grid.ac/
+* Geonames: all world locations with lat long, name variants, and other details - https://www.geonames.org/
+
 ## Politics
 
 ## Misc
