@@ -366,6 +366,7 @@ Summary: Links related to NLP resources
 * Keyphrase Generation datasets - https://github.com/wasiahmad/NeuralKpGen/blob/master/data/README.md
 * Corpus of Russian documents (for LM training) - https://ruscorpora.ru/new/en/index.html
 * Dakshina corpus of South Asian languages in Latin Script - https://github.com/google-research-datasets/dakshina
+* Economic Sentiment dataset - https://github.com/vanatteveldt/ecosent
 
 ## Shared tasks, competitions
 
