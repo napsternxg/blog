@@ -370,6 +370,7 @@ Summary: Links related to NLP resources
 * Entity Linking datasets - https://github.com/dice-group/gerbil/wiki/Licences-for-datasets
 * Multilingual Political Scaling - https://bitbucket.org/gg42554/cl-scaling/src/master/
 * Entity Aspect Linking - https://federiconanni.com/eal-d/
+* TREC Complex Answer Retrieval - http://trec-car.cs.unh.edu/
 
 ## Shared tasks, competitions
 
