@@ -371,6 +371,8 @@ Summary: Links related to NLP resources
 * Multilingual Political Scaling - https://bitbucket.org/gg42554/cl-scaling/src/master/
 * Entity Aspect Linking - https://federiconanni.com/eal-d/
 * TREC Complex Answer Retrieval - http://trec-car.cs.unh.edu/
+* Multilingual Text Similarity - https://bitbucket.org/gg42554/cl-sts/src/master/data/
+* TREC News (Wapost related doc and wikification) - http://trec-news.org/
 
 ## Shared tasks, competitions
 
