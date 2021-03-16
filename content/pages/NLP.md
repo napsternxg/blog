@@ -368,6 +368,8 @@ Summary: Links related to NLP resources
 * Dakshina corpus of South Asian languages in Latin Script - https://github.com/google-research-datasets/dakshina
 * Economic Sentiment dataset - https://github.com/vanatteveldt/ecosent
 * Entity Linking datasets - https://github.com/dice-group/gerbil/wiki/Licences-for-datasets
+* Multilingual Political Scaling - https://bitbucket.org/gg42554/cl-scaling/src/master/
+* Entity Aspect Linking - https://federiconanni.com/eal-d/
 
 ## Shared tasks, competitions
 
