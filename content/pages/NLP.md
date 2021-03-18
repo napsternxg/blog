@@ -373,6 +373,7 @@ Summary: Links related to NLP resources
 * TREC Complex Answer Retrieval - http://trec-car.cs.unh.edu/
 * Multilingual Text Similarity - https://bitbucket.org/gg42554/cl-sts/src/master/data/
 * TREC News (Wapost related doc and wikification) - http://trec-news.org/
+* CrossNER - Multi Domain NER data - https://github.com/zliucr/CrossNER
 
 ## Shared tasks, competitions
 
