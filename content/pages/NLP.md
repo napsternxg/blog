@@ -377,6 +377,8 @@ Summary: Links related to NLP resources
 * Geoparsing datasets - https://github.com/milangritta/Pragmatic-Guide-to-Geoparsing-Evaluation
 * ParCOR - Parallel EN-DE coreference corpus - https://github.com/chardmeier/parcor-full
 * DWIE (Deutsche Welle corpus for Information Extraction) for document-level multi-task Information Extraction (IE) (NER, NED, Coref, RelEx) - https://github.com/klimzaporojets/DWIE/
+* ParSent - paragraph level entity centric sentiment - https://stonybrooknlp.github.io/PerSenT/
+* Targeted Sentiment Analysis - https://www.research.ibm.com/haifa/dept/vst/debating_data.shtml#Targeted%20Sentiment%20Analysis
 
 ## Shared tasks, competitions
 
