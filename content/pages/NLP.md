@@ -376,6 +376,7 @@ Summary: Links related to NLP resources
 * CrossNER - Multi Domain NER data - https://github.com/zliucr/CrossNER
 * Geoparsing datasets - https://github.com/milangritta/Pragmatic-Guide-to-Geoparsing-Evaluation
 * ParCOR - Parallel EN-DE coreference corpus - https://github.com/chardmeier/parcor-full
+* DWIE (Deutsche Welle corpus for Information Extraction) for document-level multi-task Information Extraction (IE) (NER, NED, Coref, RelEx) - https://github.com/klimzaporojets/DWIE/
 
 ## Shared tasks, competitions
 
