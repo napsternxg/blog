@@ -374,6 +374,7 @@ Summary: Links related to NLP resources
 * Multilingual Text Similarity - https://bitbucket.org/gg42554/cl-sts/src/master/data/
 * TREC News (Wapost related doc and wikification) - http://trec-news.org/
 * CrossNER - Multi Domain NER data - https://github.com/zliucr/CrossNER
+* Geoparsing datasets - https://github.com/milangritta/Pragmatic-Guide-to-Geoparsing-Evaluation
 
 ## Shared tasks, competitions
 
