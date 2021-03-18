@@ -375,6 +375,7 @@ Summary: Links related to NLP resources
 * TREC News (Wapost related doc and wikification) - http://trec-news.org/
 * CrossNER - Multi Domain NER data - https://github.com/zliucr/CrossNER
 * Geoparsing datasets - https://github.com/milangritta/Pragmatic-Guide-to-Geoparsing-Evaluation
+* ParCOR - Parallel EN-DE coreference corpus - https://github.com/chardmeier/parcor-full
 
 ## Shared tasks, competitions
 
