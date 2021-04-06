@@ -380,6 +380,8 @@ Summary: Links related to NLP resources
 * ParSent - paragraph level entity centric sentiment - https://stonybrooknlp.github.io/PerSenT/
 * Targeted Sentiment Analysis - https://www.research.ibm.com/haifa/dept/vst/debating_data.shtml#Targeted%20Sentiment%20Analysis
 * African Languages NER - https://github.com/masakhane-io/masakhane-ner
+* Politcal Ads - http://lig-membres.imag.fr/gogao/www21.html
+* Propublica politcal ads - https://www.propublica.org/datastore/dataset/political-advertisements-from-facebook
 
 ## Shared tasks, competitions
 
