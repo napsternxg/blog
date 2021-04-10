@@ -382,6 +382,7 @@ Summary: Links related to NLP resources
 * African Languages NER - https://github.com/masakhane-io/masakhane-ner
 * Politcal Ads - http://lig-membres.imag.fr/gogao/www21.html
 * Propublica politcal ads - https://www.propublica.org/datastore/dataset/political-advertisements-from-facebook
+* Speech NER - https://github.com/mdredze/speech_ner_entity_linking_data
 
 ## Shared tasks, competitions
 
