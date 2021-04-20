@@ -383,6 +383,7 @@ Summary: Links related to NLP resources
 * Politcal Ads - http://lig-membres.imag.fr/gogao/www21.html
 * Propublica politcal ads - https://www.propublica.org/datastore/dataset/political-advertisements-from-facebook
 * Speech NER - https://github.com/mdredze/speech_ner_entity_linking_data
+* Russian Corpora 20+ datasets - https://github.com/natasha/corus#reference
 
 ## Shared tasks, competitions
 
