@@ -98,6 +98,7 @@ Summary: Machine Learning concepts and traditional resources
 * Awesome Continual Learning - https://github.com/khurramjaved96/awesome-continual-learning
 * Continual Unsupervised Representation Learning - https://arxiv.org/abs/1910.14481
 * Continual Learning Papers Library by ContinualAI - https://www.zotero.org/groups/2623909/continual_learning_papers/library
+* Sequoia A Playground for research at the intersection of Continual, Reinforcement, and Self-Supervised Learning. - https://github.com/lebrice/Sequoia
 
 ## Multi task learning
 
