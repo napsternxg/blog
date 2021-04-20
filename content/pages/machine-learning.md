@@ -97,6 +97,7 @@ Summary: Machine Learning concepts and traditional resources
 * Distillation and Incremental Classifier Learning - https://github.com/khurramjaved96/incremental-learning
 * Awesome Continual Learning - https://github.com/khurramjaved96/awesome-continual-learning
 * Continual Unsupervised Representation Learning - https://arxiv.org/abs/1910.14481
+* Continual Learning Papers Library by ContinualAI - https://www.zotero.org/groups/2623909/continual_learning_papers/library
 
 ## Multi task learning
 
