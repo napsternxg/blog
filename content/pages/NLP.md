@@ -35,6 +35,7 @@ Summary: Links related to NLP resources
 * Course material for Machine Translation from UIUC, JHU - http://mt-class.org/
 * Jason Eisner - http://www.cs.jhu.edu/~jason/465/
 * Introduction to Cultural Analytics & Python - https://melaniewalsh.github.io/Intro-Cultural-Analytics/
+* Computational Sociolinguistics by David Jurgens - https://docs.google.com/document/d/1Ouyqz-emtOI-ohwTOdOZpcjcEFtPPilhJDso8sjgByU/edit
 
 ## Scientific NLP 
 * https://github.com/NIHOPA/NLPre
