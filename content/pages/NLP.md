@@ -385,6 +385,7 @@ Summary: Links related to NLP resources
 * Propublica politcal ads - https://www.propublica.org/datastore/dataset/political-advertisements-from-facebook
 * Speech NER - https://github.com/mdredze/speech_ner_entity_linking_data
 * Russian Corpora 20+ datasets - https://github.com/natasha/corus#reference
+* WNED Corpora as reported in [Paper footnote 7](https://arxiv.org/pdf/1704.04920.pdf) - https://www.dropbox.com/s/987hmjdoq0cql9z/WNED.tar.gz
 
 ## Shared tasks, competitions
 
