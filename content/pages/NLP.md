@@ -386,6 +386,7 @@ Summary: Links related to NLP resources
 * Speech NER - https://github.com/mdredze/speech_ner_entity_linking_data
 * Russian Corpora 20+ datasets - https://github.com/natasha/corus#reference
 * WNED Corpora as reported in [Paper footnote 7](https://arxiv.org/pdf/1704.04920.pdf) - https://www.dropbox.com/s/987hmjdoq0cql9z/WNED.tar.gz
+* Deep - ED Entity Disambiguation Dataset - https://github.com/dalab/deep-ed - https://drive.google.com/uc?id=0Bx8d3azIm_ZcbHMtVmRVc1o5TWM&export=download
 
 ## Shared tasks, competitions
 
