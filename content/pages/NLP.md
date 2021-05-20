@@ -388,6 +388,7 @@ Summary: Links related to NLP resources
 * WNED Corpora as reported in [Paper footnote 7](https://arxiv.org/pdf/1704.04920.pdf) - https://www.dropbox.com/s/987hmjdoq0cql9z/WNED.tar.gz
 * Deep - ED Entity Disambiguation Dataset - https://github.com/dalab/deep-ed - https://drive.google.com/uc?id=0Bx8d3azIm_ZcbHMtVmRVc1o5TWM&export=download
 * Large scale dataset of multi-lingual aligned NER annotations from common crawl - http://data.statmt.org/xlent/
+* ViralTexts project - identify why old newspaper text went viral - https://viraltexts.org/
 
 ## Shared tasks, competitions
 
