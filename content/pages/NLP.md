@@ -130,6 +130,7 @@ Summary: Links related to NLP resources
 * Open Multilingual Wordnet - http://compling.hss.ntu.edu.sg/omw/index.html
 * Open License English Wordnet - https://github.com/globalwordnet/english-wordnet
 * HurtLex a lexicon of offensive, aggressive, and hateful words in over 50 languages - https://github.com/valeriobasile/hurtlex
+* The Evaluative Lexicon - emotionality, valence, and extremity - http://www.evaluativelexicon.com/
 
 ## Data
 
