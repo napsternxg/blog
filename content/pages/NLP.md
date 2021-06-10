@@ -390,6 +390,8 @@ Summary: Links related to NLP resources
 * Deep - ED Entity Disambiguation Dataset - https://github.com/dalab/deep-ed - https://drive.google.com/uc?id=0Bx8d3azIm_ZcbHMtVmRVc1o5TWM&export=download
 * Large scale dataset of multi-lingual aligned NER annotations from common crawl - http://data.statmt.org/xlent/
 * ViralTexts project - identify why old newspaper text went viral - https://viraltexts.org/
+* Multimodal Knowledge Graph Completion - https://public.ukp.informatik.tu-darmstadt.de/starsem18-multimodalKB/ [Code](https://github.com/UKPLab/starsem18-multimodalKB)
+* Entity Linking on Question Answering Data - https://github.com/UKPLab/starsem2018-entity-linking
 
 ## Shared tasks, competitions
 
