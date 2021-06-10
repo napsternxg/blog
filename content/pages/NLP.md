@@ -392,6 +392,9 @@ Summary: Links related to NLP resources
 * ViralTexts project - identify why old newspaper text went viral - https://viraltexts.org/
 * Multimodal Knowledge Graph Completion - https://public.ukp.informatik.tu-darmstadt.de/starsem18-multimodalKB/ [Code](https://github.com/UKPLab/starsem18-multimodalKB)
 * Entity Linking on Question Answering Data - https://github.com/UKPLab/starsem2018-entity-linking
+* WebQuestions Semantic Parses Dataset - https://www.microsoft.com/en-us/download/details.aspx?id=52763 [Code](https://github.com/UKPLab/coling2018-graph-neural-networks-question-answering)
+* WebQuestions Full dataset - https://nlp.stanford.edu/software/sempre/
+* Question Answering over Linked Data - https://project-hobbit.eu/challenges/qald2017/
 
 ## Shared tasks, competitions
 
@@ -401,6 +404,10 @@ Summary: Links related to NLP resources
 * SHARED TASK ON FINE-GRAINED PROPAGANDA DETECTION @NLP4IF 2019 - https://propaganda.qcri.org/nlp4if-shared-task/
 * PolEval - http://poleval.pl/tasks/
 * GERMEVAL - German NLP shared tasks - https://projects.fzai.h-da.de/iggsa/germeval/
+* Hobbit: Holistic Benchmarking of Big Linked Data - https://project-hobbit.eu/
+* CLEF Shared tasks - http://clef2021.clef-initiative.eu/index.php?page=Pages/labs.html
+* SemEval shared tasks - https://semeval.github.io/
+* TREC shared tasks - https://trec.nist.gov/pubs/call2021.html
 
 ## Research Groups
 * https://supernlp.github.io/ - University of Copenhagen 
