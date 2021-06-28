@@ -395,6 +395,7 @@ Summary: Links related to NLP resources
 * WebQuestions Semantic Parses Dataset - https://www.microsoft.com/en-us/download/details.aspx?id=52763 [Code](https://github.com/UKPLab/coling2018-graph-neural-networks-question-answering)
 * WebQuestions Full dataset - https://nlp.stanford.edu/software/sempre/
 * Question Answering over Linked Data - https://project-hobbit.eu/challenges/qald2017/
+* Romanian language datasets - https://github.com/eemlcommunity/ro_benchmark_leaderboard
 
 ## Shared tasks, competitions
 
