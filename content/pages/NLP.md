@@ -396,6 +396,7 @@ Summary: Links related to NLP resources
 * WebQuestions Full dataset - https://nlp.stanford.edu/software/sempre/
 * Question Answering over Linked Data - https://project-hobbit.eu/challenges/qald2017/
 * Romanian language datasets - https://github.com/eemlcommunity/ro_benchmark_leaderboard
+* Entity Linking datasets - https://github.com/kermitt2/entity-fishing/tree/master/data
 
 ## Shared tasks, competitions
 
