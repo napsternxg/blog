@@ -42,6 +42,7 @@ Summary: Links related to mathematics
 
 * [Geometric Algebra For Computer Science, An Object Oriented Approach to Geometry](https://geometricalgebra.org/)
 * [Geometric Algebra Resources from University of Cambridge](http://geometry.mrao.cam.ac.uk/)
+* [BiVector.net](https://bivector.net/) - [Accompanying YouTube videos](https://www.youtube.com/watch?v=Fc5rlZ3Malw&list=PLrizc6KfD8q8KDw31lUARRIeugbIW3MHL)
 
 # Mathematics for Social Justice
 
