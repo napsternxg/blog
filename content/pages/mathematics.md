@@ -37,6 +37,12 @@ Summary: Links related to mathematics
 * [Applied Category Theory Course](https://www.azimuthproject.org/azimuth/show/Applied+Category+Theory+Course)
 * [Seven Sketches in Compositionality: An Invitation to Applied Category Theory](http://math.mit.edu/~dspivak/teaching/sp18/7Sketches.pdf)
 
+
+# Geometric Algebra
+
+* [Geometric Algebra For Computer Science, An Object Oriented Approach to Geometry](https://geometricalgebra.org/)
+* [Geometric Algebra Resources from University of Cambridge](http://geometry.mrao.cam.ac.uk/)
+
 # Mathematics for Social Justice
 
 ## Books
