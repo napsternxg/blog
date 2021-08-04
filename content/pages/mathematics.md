@@ -44,6 +44,10 @@ Summary: Links related to mathematics
 * [Geometric Algebra Resources from University of Cambridge](http://geometry.mrao.cam.ac.uk/)
 * [BiVector.net](https://bivector.net/) - [Accompanying YouTube videos](https://www.youtube.com/watch?v=Fc5rlZ3Malw&list=PLrizc6KfD8q8KDw31lUARRIeugbIW3MHL)
 
+## Tools
+* [Ganja.js - Visualization tools for Geometric Algebra](https://github.com/enkimute/ganja.js)
+* [clifford: Geometric Algebra for Python](https://github.com/pygae/clifford)
+
 # Mathematics for Social Justice
 
 ## Books
