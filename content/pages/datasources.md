@@ -38,6 +38,7 @@ Summary: Links related to many datasets
 * Global Party Facts - https://partyfacts.herokuapp.com/data/
 * World Election Calendar - https://www.ndi.org/elections-calendar
 * US congress memebers info (includes images) - https://bioguide.congress.gov/search
+* The Database of Political Institutions over time - https://publications.iadb.org/en/database-political-institutions-2020-dpi2020
 
 ### US
 * Summaries of US bills and other congress datasets - https://www.govtrack.us/about-our-data
@@ -121,6 +122,7 @@ Summary: Links related to many datasets
 * Name Nationalities from Wikipedia Categories and classifier to predict these - https://github.com/Kyubyong/name2nat
 * WikiTree Data Dump (24M geneologies) - https://www.wikitree.com/wiki/Help:Database_Dumps
 * List of names and surnames for Dutch, English, Portuguese and Spanish - https://github.com/davidsbatista/lexicons/blob/master/names-surnames-NL-UK-IT-PT-ES.zip
+* Chinese Names - https://github.com/psychbruce/ChineseNames
 
 ## Images
 
@@ -133,6 +135,7 @@ Summary: Links related to many datasets
 * [Visual story telling dataset](http://visionandlanguage.net/VIST/)
 * UTKFace Large Scale Face Dataset- https://susanqq.github.io/UTKFace/
 * Flickr Image Cropping Dataset - https://github.com/yiling-chen/flickr-cropping-dataset
+* Bob Ross Paintings with title and color pallet names - https://github.com/jwilber/Bob_Ross_Paintings
 
 ## Stream processing data
 * Data from The Neural Hawkes Process - https://github.com/HMEIatJHU/neurawkes - [Google drive link](https://drive.google.com/drive/folders/0BwqmV0EcoUc8UklIR1BKV25YR1U?usp=sharing)
