@@ -397,6 +397,8 @@ Summary: Links related to NLP resources
 * Question Answering over Linked Data - https://project-hobbit.eu/challenges/qald2017/
 * Romanian language datasets - https://github.com/eemlcommunity/ro_benchmark_leaderboard
 * Entity Linking datasets - https://github.com/kermitt2/entity-fishing/tree/master/data
+* GDELT webngrams - https://blog.gdeltproject.org/announcing-the-web-news-ngram-datasets-web-ngram/
+* GDELT new similarity graph - https://blog.gdeltproject.org/announcing-the-global-similarity-graph-television-news-sentence-embeddings-using-the-universal-sentence-encoder/
 
 ## Shared tasks, competitions
 
