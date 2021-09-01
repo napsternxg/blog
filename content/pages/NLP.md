@@ -399,6 +399,13 @@ Summary: Links related to NLP resources
 * Entity Linking datasets - https://github.com/kermitt2/entity-fishing/tree/master/data
 * GDELT webngrams - https://blog.gdeltproject.org/announcing-the-web-news-ngram-datasets-web-ngram/
 * GDELT new similarity graph - https://blog.gdeltproject.org/announcing-the-global-similarity-graph-television-news-sentence-embeddings-using-the-universal-sentence-encoder/
+* Web Data Commons - Schema.org Table Corpus - http://webdatacommons.org/structureddata/schemaorgtables/
+* QuoteBank A corpus of quotations from a decade of news - https://zenodo.org/record/4277311
+* Indian Court Judgements annotated with Gender - https://www.devdatalab.org/judicial-data
+* Sentiment in Firm Risk Reports - https://www.firmlevelrisk.com/home
+* Terms of services tracked over time from various websites - https://github.com/ambanum/OpenTermsArchive-versions
+* News Haiku Dataset - https://www.kaggle.com/newshaikus/dataset/version/3
+* India Police Events about Gujrat 2002 riots - https://github.com/slanglab/IndiaPoliceEvents
 
 ## Shared tasks, competitions
 
