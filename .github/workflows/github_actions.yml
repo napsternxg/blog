@@ -14,6 +14,9 @@ jobs:
           mkdir -p "${GITHUB_WORKSPACE}/../pelican-themes"
           pushd "${GITHUB_WORKSPACE}/../pelican-themes"
           git clone https://github.com/napsternxg/pelican-bootswatch.git
+          ls -ltrh ${GITHUB_WORKSPACE}
+          ls -ltrh ${GITHUB_WORKSPACE}/..
+          ls -ltrh ${GITHUB_WORKSPACE}/../..
           popd
           
       - uses: conda-incubator/setup-miniconda@v2
