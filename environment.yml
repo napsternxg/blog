@@ -3,7 +3,7 @@ dependencies:
     - python=3
     - ipykernel
     - ipython
-    - nbconvert
+    - nbconvert>=5, <6
     - markdown
     - pip
     - pip:
