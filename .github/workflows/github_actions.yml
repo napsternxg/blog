@@ -1,0 +1,50 @@
+name: build blog
+on:
+  pull_requests:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Get Pelical Themes
+        run: |
+          mkdir -p pelican-themes
+          pushd pelican-themes
+          git clone https://github.com/napsternxg/pelican-bootswatch.git
+          popd
+          
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: pelican
+          environment-file: environment.yml
+          python-version: 3.8
+          auto-activate-base: false
+      
+      - name: Setup software
+        run: |
+          apt-get install make
+      
+      - name: Generate Blog
+        uses: actions/checkout@v2
+        with:
+          - path: './blog'
+        run: |
+          pushd ~/blog
+          make production
+
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Updated Blog using $GITHUB_SHA"
+          git push
+          popd
+          
+        
+      
+      
+          
+        
