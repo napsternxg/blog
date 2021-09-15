@@ -8,4 +8,4 @@ dependencies:
     - pip
     - pip:
         - pelican==4.0.1
-        - pymdown-extensions=6.0
+        - pymdown-extensions==6.0
