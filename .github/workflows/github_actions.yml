@@ -40,7 +40,7 @@ jobs:
       - name: Generate blog
         run: |
           cd "${GITHUB_WORKSPACE}"
-          make publish
+          DEBUG=1 make publish
 
       - name: Push blog
         run: |
