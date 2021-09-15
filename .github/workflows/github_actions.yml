@@ -38,7 +38,7 @@ jobs:
       - name: Generate blog
         run: |
           cd "${GITHUB_WORKSPACE}"
-          make production
+          make publish
 
       - name: Push blog
         run: |
