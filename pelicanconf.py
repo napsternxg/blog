@@ -50,6 +50,7 @@ MARKUP = ('md', 'ipynb')
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['ipynb.markup']
 IGNORE_FILES = ['.ipynb_checkpoints']
+JINJA_EXTENSIONS = []
 
 ## PATHS
 OUTPUT_PATH="docs"
