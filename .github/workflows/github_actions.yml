@@ -31,7 +31,7 @@ jobs:
       
       - name: Setup software
         run: |
-          apt-get install make
+          sudo apt-get -y install make
 
       - name: Generate blog
         run: |
