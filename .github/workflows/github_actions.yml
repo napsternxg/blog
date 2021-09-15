@@ -1,6 +1,5 @@
 name: build blog
 on:
-  pull_requests:
   push:
     branches:
       - master
