@@ -1,11 +1,11 @@
 name: pelican
 dependencies:
     - python=3
-    - ipykernel
-    - ipython
-    - nbconvert>=5, <6
-    - markdown
+    - ipykernel==5.1.1
+    - ipython==7.5.0
+    - nbconvert==5.5.0
+    - markdown==3.1.1
     - pip
     - pip:
-        - pelican==3.7.0
-        - pymdown-extensions
+        - pelican==4.0.1
+        - pymdown-extensions=6.0
