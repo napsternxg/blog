@@ -19,7 +19,7 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v2
         with:
           activate-environment: pelican
-          environment-file: environment.yml
+          environment-file: '~/work/blog/environment.yml'
           python-version: 3.8
           auto-activate-base: false
       
@@ -33,12 +33,12 @@ jobs:
 
       - name: Generate blog
         run: |
-          cd ~/blog
+          cd ~/work/blog
           make production
 
       - name: Push blog
         run: |
-          cd ~/blog
+          cd ~/work/blog
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
