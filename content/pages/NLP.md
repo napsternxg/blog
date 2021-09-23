@@ -406,6 +406,8 @@ Summary: Links related to NLP resources
 * Terms of services tracked over time from various websites - https://github.com/ambanum/OpenTermsArchive-versions
 * News Haiku Dataset - https://www.kaggle.com/newshaikus/dataset/version/3
 * India Police Events about Gujrat 2002 riots - https://github.com/slanglab/IndiaPoliceEvents
+* Wikipedia Entity Linking Editor Reccomendations - [Code](https://github.com/wikimedia/research-mwaddlink) [Datasets](https://analytics.wikimedia.org/published/datasets/one-off/research-mwaddlink/enwiki/) [Paper](https://arxiv.org/abs/2105.15110)
+* WikiCheck: Wikipedia based Fact Checking - https://github.com/trokhymovych/WikiCheck [Paper](https://arxiv.org/abs/2109.00835)
 
 ## Shared tasks, competitions
 
