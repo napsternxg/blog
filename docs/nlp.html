@@ -1,0 +1,567 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://shubhanshu.com/blog/theme/stylesheet/style.min.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.1.3/litera/bootstrap.min.css" rel="stylesheet" integrity="sha384-JuAGGg3c8UPrWdf0N8ZPJyOHkACruI9+mbl0C+H6XSYOqv9xIdiUSKehRyA8jUol" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="https://shubhanshu.com/blog/theme/pygments/native.min.css">
+  <link rel="stylesheet" type="text/css" href="https://shubhanshu.com/blog/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://shubhanshu.com/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Interpreting Models Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+
+    <meta name="author" content="Shubhanshu Mishra" />
+    <meta name="description" content="This is a collection of notes and thoughts on mathematical model interpretation via their code implementation." />
+<meta property="og:site_name" content="Interpreting Models"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Interpreting Models"/>
+<meta property="og:description" content="This is a collection of notes and thoughts on mathematical model interpretation via their code implementation."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://shubhanshu.com/blog"/>
+<meta property="og:image" content="/assets/images/pic.jpg">
+
+  <title>Interpreting Models &ndash; Natural Language Processing</title>
+
+</head>
+<body>
+  <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="https://shubhanshu.com/blog">Interpreting Models</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor03">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item dropdown show">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="true">Notes</a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/data-mining.html#data-mining">Data Mining</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/data-sources.html#data-sources">Data Sources</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/deeplearning.html#deeplearning">Deep Learning</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/explorables.html#explorables">Explorable Explanations</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/ir.html#ir">Information Retrieval</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/ml.html#ml">Machine Learning</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/ml-ethics.html#ml-ethics">Machine Learning Ethics</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/math.html#math">Mathematics</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/nlp.html#nlp">Natural Language Processing</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/networks.html#networks">Networks</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/programming.html#programming">Programming</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/quantum-computing.html#quantum-computing">Quantum Computing</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/recsys.html#recsys">Recommender Systems</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/statistics.html#statistics">Statistics</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/visualization.html#visualization">Visualization</a>
+                      </div>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="https://shubhanshu.com/blog/archives/">Archives</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://shubhanshu.com/blog/category/">Categories</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://shubhanshu.com/blog/tag/">Tags</a></li>
+              </ul>
+              <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link" href="https://shubhanshu.com/" target="_blank">Personal Website</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://shubhanshu.com/blog/feeds/all.atom.xml">    Atom
+</a></li>
+
+              </ul>
+          </div>
+      </nav>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12" style="text-align: justify;">
+<article class="single">
+  <header>
+    
+    <h1 id="nlp">Natural Language Processing</h1>
+  </header>
+  <div>
+<ul>
+<li><a href="#courses-and-books">Courses and Books</a></li>
+<li><a href="#scientific-nlp">Scientific NLP</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#pretrained-embeddings-and-models">Pretrained embeddings and models</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#lexicons">Lexicons</a></li>
+<li><a href="#data">Data</a></li>
+<li><a href="#shared-tasks--competitions">Shared tasks, competitions</a></li>
+<li><a href="#research-groups">Research Groups</a></li>
+<li><a href="#mailing-lists">Mailing lists</a></li>
+</ul>
+<p><small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small></p>
+<h2>Courses and Books</h2>
+<ul>
+<li>Statistical NLP Book: <a href="https://github.com/uclmr/stat-nlp-book/blob/python/overview.ipynb">https://github.com/uclmr/stat-nlp-book/blob/python/overview.ipynb</a></li>
+<li>Course on word embeddings, variants, and applications: <a href="http://people.ds.cam.ac.uk/iv250/esslli2018.html">http://people.ds.cam.ac.uk/iv250/esslli2018.html</a></li>
+<li>A Course in Machine Learning: <a href="http://ciml.info/">http://ciml.info/</a></li>
+<li>Introduction to Natural Language Processing by Jacob Eisenstein - <a href="https://github.com/jacobeisenstein/gt-nlp-class">https://github.com/jacobeisenstein/gt-nlp-class</a></li>
+<li>Information extraction: <a href="https://web.stanford.edu/~jurafsky/slp3/17.pdf">https://web.stanford.edu/~jurafsky/slp3/17.pdf</a> covers main ideas of information extraction</li>
+<li>601.765 Machine Learning: Linguistic &amp; Sequence Modeling - <a href="https://seq2class.github.io/">https://seq2class.github.io/</a></li>
+<li>Variational Inference for NLP - <a href="https://github.com/philschulz/VITutorial#general">https://github.com/philschulz/VITutorial#general</a></li>
+<li>Probabilistic NLP course - <a href="https://uva-slpl.github.io/nlp2/syllabus.html">https://uva-slpl.github.io/nlp2/syllabus.html</a></li>
+<li>Oxford Deep Learning NLP - <a href="https://github.com/oxford-cs-deepnlp-2017/lectures">https://github.com/oxford-cs-deepnlp-2017/lectures</a></li>
+<li>CMU NLP - <a href="http://phontron.com/class/nn4nlp2017/schedule.html">http://phontron.com/class/nn4nlp2017/schedule.html</a></li>
+<li>David Bamman's Course on Applied NLP - <a href="https://github.com/dbamman/anlp19">https://github.com/dbamman/anlp19</a> - <a href="http://people.ischool.berkeley.edu/~dbamman/info256.html">Course Page</a></li>
+<li>NLP Course | For You by Lena Voita - <a href="https://lena-voita.github.io/nlp_course.html">https://lena-voita.github.io/nlp_course.html</a></li>
+<li>Course material for Machine Translation from UIUC, JHU - <a href="http://mt-class.org/">http://mt-class.org/</a></li>
+<li>Jason Eisner - <a href="http://www.cs.jhu.edu/~jason/465/">http://www.cs.jhu.edu/~jason/465/</a></li>
+<li>Introduction to Cultural Analytics &amp; Python - <a href="https://melaniewalsh.github.io/Intro-Cultural-Analytics/">https://melaniewalsh.github.io/Intro-Cultural-Analytics/</a></li>
+<li>Computational Sociolinguistics by David Jurgens - <a href="https://docs.google.com/document/d/1Ouyqz-emtOI-ohwTOdOZpcjcEFtPPilhJDso8sjgByU/edit">https://docs.google.com/document/d/1Ouyqz-emtOI-ohwTOdOZpcjcEFtPPilhJDso8sjgByU/edit</a></li>
+</ul>
+<h2>Scientific NLP</h2>
+<ul>
+<li><a href="https://github.com/NIHOPA/NLPre">https://github.com/NIHOPA/NLPre</a></li>
+<li><a href="https://shubhanshu.com/awesome-scholarly-data-analysis/">https://shubhanshu.com/awesome-scholarly-data-analysis/</a></li>
+</ul>
+<h2>Tools</h2>
+<ul>
+<li>Using spacy and flashtext for fast lookup of dictionary items in text. <a href="https://github.com/mpuig/spacy-lookup">https://github.com/mpuig/spacy-lookup</a></li>
+<li>Open IE tool - <a href="https://github.com/dair-iitd/OpenIE-standalone">https://github.com/dair-iitd/OpenIE-standalone</a></li>
+<li>Different evaluation techniques for NER: <a href="https://github.com/davidsbatista/NER-Evaluation">https://github.com/davidsbatista/NER-Evaluation</a></li>
+<li>Phrase extraction using POS patterns: <a href="https://github.com/slanglab/phrasemachine">https://github.com/slanglab/phrasemachine</a></li>
+<li>Whats wrong with my NLP in Python diff visualizer for NLP tasks - <a href="https://github.com/ppke-nlpg/whats-wrong-python">https://github.com/ppke-nlpg/whats-wrong-python</a></li>
+<li>Inform - interactive fiction based on natural language: <a href="http://inform7.com/">http://inform7.com/</a></li>
+<li>Linguistic Knowledge and Transferability of Contextual Representations - <a href="https://github.com/nelson-liu/contextual-repr-analysis">https://github.com/nelson-liu/contextual-repr-analysis</a></li>
+<li>Generalized brown clusters - <a href="https://github.com/sean-chester/generalised-brown">https://github.com/sean-chester/generalised-brown</a></li>
+<li>COGCOMP NLP: Online demo with multiple tasks - <a href="http://nlp.cogcomp.org/">http://nlp.cogcomp.org/</a> Code: <a href="https://github.com/CogComp/cogcomp-nlp">https://github.com/CogComp/cogcomp-nlp</a> </li>
+<li>Python keyphrase extraction library - <a href="https://github.com/boudinfl/pke">https://github.com/boudinfl/pke</a></li>
+<li>Neural Relation Extration - <a href="https://github.com/thunlp/OpenNRE">https://github.com/thunlp/OpenNRE</a></li>
+<li>List of tools for corpus analysis - <a href="https://corpus-analysis.com/">https://corpus-analysis.com/</a></li>
+<li>WordMapper, evolution of words on Twitter - <a href="https://sites.google.com/site/wordmapperinfo/">https://sites.google.com/site/wordmapperinfo/</a></li>
+<li>Document subject indexing and thesaura linking (also works for Finnish) - <a href="http://annif.org/">http://annif.org/</a></li>
+<li>BPEmb: Pre-trained Subword Embeddings in 275 Languages (LREC 2018) - <a href="https://doi.org/10.11588/data/V9CXPR">https://doi.org/10.11588/data/V9CXPR</a></li>
+<li>Cornell Conversational Analysis Toolkit - <a href="https://zissou.infosci.cornell.edu/convokit/documentation/index.html">https://zissou.infosci.cornell.edu/convokit/documentation/index.html</a></li>
+<li>Python based text summarization evaluation - <a href="https://github.com/chakki-works/sumeval">https://github.com/chakki-works/sumeval</a></li>
+<li>Python based sequence tagging evaluation - <a href="https://github.com/chakki-works/seqeval">https://github.com/chakki-works/seqeval</a></li>
+<li>NLP annotation tool - <a href="https://github.com/doccano/doccano">https://github.com/doccano/doccano</a></li>
+<li>Yake Single document keyword extraction - <a href="https://github.com/LIAAD/yake">https://github.com/LIAAD/yake</a></li>
+<li>Open IE Tool - <a href="https://github.com/dair-iitd/OpenIE-standalone">https://github.com/dair-iitd/OpenIE-standalone</a> <a href="http://www.cse.iitd.ac.in/~mausam/software.html">Other OpenIE tools</a></li>
+<li>Derive named entities from Wikipedia - <a href="https://github.com/kno10/WikipediaEntities">https://github.com/kno10/WikipediaEntities</a></li>
+<li>Bengali NLP - <a href="https://github.com/sagorbrur/bnlp">https://github.com/sagorbrur/bnlp</a></li>
+<li>Py Readability metrics - <a href="https://github.com/cdimascio/py-readability-metrics">https://github.com/cdimascio/py-readability-metrics</a></li>
+<li>iNLTK - <a href="https://inltk.readthedocs.io/en/latest/">https://inltk.readthedocs.io/en/latest/</a></li>
+<li>Fast spell correction and word segmentation - <a href="https://github.com/wolfgarbe/symspell">https://github.com/wolfgarbe/symspell</a></li>
+<li>NERD evaluation - <a href="https://nerd.readthedocs.io/en/latest/evaluation.html">https://nerd.readthedocs.io/en/latest/evaluation.html</a></li>
+<li>MedCAT can be used to extract information from Electronic Health Records (EHRs) and link it to biomedical ontologies like SNOMED-CT and UMLS - <a href="https://github.com/CogStack/MedCAT">https://github.com/CogStack/MedCAT</a></li>
+<li>PyTerrier - A Python framework for performing information retrieval experiments, building on <a href="http://terrier.org/">http://terrier.org/</a> -  <a href="https://github.com/terrier-org/pyterrier">https://github.com/terrier-org/pyterrier</a></li>
+</ul>
+<h3>Pretrained embeddings and models</h3>
+<ul>
+<li>ELMO for Many Languages - <a href="https://github.com/HIT-SCIR/ELMoForManyLangs">https://github.com/HIT-SCIR/ELMoForManyLangs</a></li>
+<li>Flair for many languages - <a href="https://github.com/flairNLP/flair-lms">https://github.com/flairNLP/flair-lms</a></li>
+<li>Pretrained transformer models for many languages and domains - <a href="https://huggingface.co/models">https://huggingface.co/models</a></li>
+<li>FastText embeddings - <a href="https://fasttext.cc/">https://fasttext.cc/</a></li>
+</ul>
+<h2>Links</h2>
+<ul>
+<li>Bayesian NLP: <a href="https://homepages.inf.ed.ac.uk/sgwater/resources.html">https://homepages.inf.ed.ac.uk/sgwater/resources.html</a></li>
+<li>Rules for forming questions using text: <a href="https://ell.stackexchange.com/questions/1156/when-converting-a-statement-to-a-question-where-in-the-sentence-should-i-put-t/1198#1198">https://ell.stackexchange.com/questions/1156/when-converting-a-statement-to-a-question-where-in-the-sentence-should-i-put-t/1198#1198</a></li>
+<li>Intel NLP library lots of great features using Tensorflow: <a href="http://nlp_architect.nervanasys.com/publications.html">http://nlp_architect.nervanasys.com/publications.html</a></li>
+<li>Information extraction from unstructured text: <a href="https://sites.google.com/site/keit2018kdd/">https://sites.google.com/site/keit2018kdd/</a></li>
+<li>Tutorial on deep latent variable models for NLP with pytorch code: <a href="https://nlp.seas.harvard.edu/latent-nlp-tutorial.html">https://nlp.seas.harvard.edu/latent-nlp-tutorial.html</a></li>
+<li>On the viability of crowdsourcing NLP annotations in healthcare: <a href="https://roamanalytics.com/2018/07/26/on-the-viability-of-crowdsourcing-nlp-annotations-in-healthcare/">https://roamanalytics.com/2018/07/26/on-the-viability-of-crowdsourcing-nlp-annotations-in-healthcare/</a></li>
+<li>Contextual Word Representations: A Contextual Introduction - <a href="https://arxiv.org/abs/1902.06006">https://arxiv.org/abs/1902.06006</a></li>
+<li>Emotion vocabularies - <a href="https://www.w3.org/TR/emotion-voc/">https://www.w3.org/TR/emotion-voc/</a></li>
+<li>Emotion markup language - <a href="https://www.w3.org/TR/emotionml/">https://www.w3.org/TR/emotionml/</a></li>
+<li>NAACL 2019 tutorial on Tutorial on Modeling Language Change - <a href="https://github.com/jacobeisenstein/language-change-tutorial">https://github.com/jacobeisenstein/language-change-tutorial</a></li>
+<li>NAACL 2019 tutorial on Transfer Learning in Natural Language Processing - <a href="https://github.com/huggingface/naacl_transfer_learning_tutorial">https://github.com/huggingface/naacl_transfer_learning_tutorial</a></li>
+<li>Papers on Textual Adversarial Attack and Defense: <a href="https://github.com/thunlp/TAADpapers">https://github.com/thunlp/TAADpapers</a></li>
+<li>Resources for NRE: Neural Relation Extraction: <a href="https://github.com/thunlp/NREPapers">https://github.com/thunlp/NREPapers</a></li>
+<li>Online self-learning platform on vocabulary: <a href="http://vlearn.fed.cuhk.edu.hk/">http://vlearn.fed.cuhk.edu.hk/</a></li>
+<li>Awesome sentiment analysis - <a href="https://github.com/xiamx/awesome-sentiment-analysis">https://github.com/xiamx/awesome-sentiment-analysis</a></li>
+<li>List of papers on Textual Adversarial Attack and Defense - <a href="https://github.com/thunlp/TAADpapers">https://github.com/thunlp/TAADpapers</a></li>
+<li>Tutorial on NLP Approaches to Computational Argumentation - <a href="http://acl2016tutorial.arg.tech/index.php/tutorial-materials/">http://acl2016tutorial.arg.tech/index.php/tutorial-materials/</a></li>
+<li>Tutorial on Argumentation Mining - <a href="http://www.i3s.unice.fr/~villata/tutorialIJCAI2016.html">http://www.i3s.unice.fr/~villata/tutorialIJCAI2016.html</a></li>
+<li>ACL2019 Tutorial: Advances in Argument Mining - <a href="http://arg.tech/~chris/acl2019tut/index.html">http://arg.tech/~chris/acl2019tut/index.html</a></li>
+<li>International Linguistic Olympiad - <a href="https://ioling.org/">https://ioling.org/</a> - Covers a lot of low resource and multilingual problems</li>
+<li>Tutorial by Xavier Carreras on Structured Prediction - <a href="https://www.youtube.com/watch?v=f6Gqr2UCG9k&amp;list=PLSWgH7JB2-1G2h8wj-ecK8FfpX72Z80_B&amp;index=3&amp;t=0s">https://www.youtube.com/watch?v=f6Gqr2UCG9k&amp;list=PLSWgH7JB2-1G2h8wj-ecK8FfpX72Z80_B&amp;index=3&amp;t=0s</a></li>
+<li>Visual Sentiment Ontology &amp; Dataset - <a href="http://visual-sentiment-ontology.appspot.com/">http://visual-sentiment-ontology.appspot.com/</a>?</li>
+<li>NLP Roadmap - <a href="https://github.com/graykode/nlp-roadmap">https://github.com/graykode/nlp-roadmap</a></li>
+<li>Pretrained LM model papers - <a href="https://github.com/thunlp/PLMpapers">https://github.com/thunlp/PLMpapers</a></li>
+<li>EmojiMap - <a href="http://kt.ijs.si/data/Emoji_sentiment_ranking/emojimap.html">http://kt.ijs.si/data/Emoji_sentiment_ranking/emojimap.html</a></li>
+<li>Literature review and datasets on Text-Summarization - <a href="https://github.com/neulab/Text-Summarization-Papers">https://github.com/neulab/Text-Summarization-Papers</a></li>
+<li>Causal Inference using text data - <a href="https://github.com/jaeyk/ITS-Text-Classification">https://github.com/jaeyk/ITS-Text-Classification</a></li>
+<li>Tutorial on topic models and its extensions with animations of Chinese restaurant process and Poyla's Urn - <a href="http://topicmodels.west.uni-koblenz.de/">http://topicmodels.west.uni-koblenz.de/</a></li>
+<li>Relation extraction resources - <a href="https://github.com/roomylee/awesome-relation-extraction">https://github.com/roomylee/awesome-relation-extraction</a></li>
+<li>Wordbank - An open database of children's vocabulary development - <a href="http://wordbank.stanford.edu/">http://wordbank.stanford.edu/</a></li>
+<li><a href="https://docs.google.com/spreadsheets/d/14ionbRVYBQuD0cNLazKfRWYzrkax3qFCspm9SiaG5Aw/edit#gid=0">Comparison of web (text) annotation editors</a></li>
+<li>North American Computational Linguistics Open Competition - <a href="https://www.nacloweb.org/">https://www.nacloweb.org/</a></li>
+<li>Frequency lists of words in all languages - <a href="https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists">https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists</a></li>
+<li>The NLP Pandect - <a href="https://github.com/ivan-bilan/The-NLP-Pandect">https://github.com/ivan-bilan/The-NLP-Pandect</a></li>
+<li>Unicode text segmentation - <a href="http://www.unicode.org/reports/tr29/">http://www.unicode.org/reports/tr29/</a></li>
+<li>Datasets for Text Analysis - <a href="https://docs.google.com/spreadsheets/d/1I7cvuCBQxosQK2evTcdL3qtglaEPc0WFEs6rZMx-xiE/edit#gid=0">https://docs.google.com/spreadsheets/d/1I7cvuCBQxosQK2evTcdL3qtglaEPc0WFEs6rZMx-xiE/edit#gid=0</a></li>
+<li>Multilingual stopwords - <a href="https://github.com/stopwords-iso/stopwords-iso">https://github.com/stopwords-iso/stopwords-iso</a></li>
+</ul>
+<h2>Lexicons</h2>
+<ul>
+<li>HistEmo lexicon for valance, arousal and dominance scores of words across time - <a href="https://github.com/JULIELab/HistEmo">https://github.com/JULIELab/HistEmo</a></li>
+<li>Sentiment lexicon - <a href="https://github.com/juliasilge/tidytext/blob/master/data-raw/sentiments.csv">https://github.com/juliasilge/tidytext/blob/master/data-raw/sentiments.csv</a></li>
+<li>Polarity shifter lexicons - <a href="https://github.com/uds-lsv/polarity-shifter-resources">https://github.com/uds-lsv/polarity-shifter-resources</a></li>
+<li>Bootstrapped polarity shifter lexicons - <a href="https://github.com/uds-lsv/bootstrapped-lexicon-of-english-polarity-shifters">https://github.com/uds-lsv/bootstrapped-lexicon-of-english-polarity-shifters</a></li>
+<li>Lexicon of abusive words - <a href="https://github.com/uds-lsv/lexicon-of-abusive-words">https://github.com/uds-lsv/lexicon-of-abusive-words</a></li>
+<li>Finnish General Ontology YSO, several domain-specific vocabularies, and the KOKO ontology - <a href="https://github.com/NatLibFi/Finto-data">https://github.com/NatLibFi/Finto-data</a></li>
+<li>Entitypedia is an Extended Named Entity Dictionary from Wikipedia - <a href="https://github.com/chakki-works/entitypedia">https://github.com/chakki-works/entitypedia</a> </li>
+<li>Extended Open Multilingual Wordnet - <a href="http://compling.hss.ntu.edu.sg/omw/summx.html">http://compling.hss.ntu.edu.sg/omw/summx.html</a></li>
+<li>Open Multilingual Wordnet - <a href="http://compling.hss.ntu.edu.sg/omw/index.html">http://compling.hss.ntu.edu.sg/omw/index.html</a></li>
+<li>Open License English Wordnet - <a href="https://github.com/globalwordnet/english-wordnet">https://github.com/globalwordnet/english-wordnet</a></li>
+<li>HurtLex a lexicon of offensive, aggressive, and hateful words in over 50 languages - <a href="https://github.com/valeriobasile/hurtlex">https://github.com/valeriobasile/hurtlex</a></li>
+<li>The Evaluative Lexicon - emotionality, valence, and extremity - <a href="http://www.evaluativelexicon.com/">http://www.evaluativelexicon.com/</a></li>
+</ul>
+<h2>Data</h2>
+<ul>
+<li>Sentiment corpora: <a href="https://www.w3.org/community/sentiment/wiki/Datasets">https://www.w3.org/community/sentiment/wiki/Datasets</a></li>
+<li>Relation Extraction Corpora: <a href="https://github.com/davidsbatista/Annotated-Semantic-Relationships-Datasets">https://github.com/davidsbatista/Annotated-Semantic-Relationships-Datasets</a></li>
+<li>Summarization corpora: <a href="https://gist.github.com/napsternxg/2750479273e0621c5aa697bf89843428">https://gist.github.com/napsternxg/2750479273e0621c5aa697bf89843428</a></li>
+<li>Text normalization corpora: <a href="https://github.com/rwsproat/text-normalization-data">https://github.com/rwsproat/text-normalization-data</a></li>
+<li>Sentihood data - Aspect based sentiment for neighborhood text - <a href="https://github.com/uclmr/jack/tree/master/data/sentihood">https://github.com/uclmr/jack/tree/master/data/sentihood</a></li>
+<li>Pretrained emoji embeddings and Twitter sentiment data - <a href="https://github.com/uclmr/emoji2vec">https://github.com/uclmr/emoji2vec</a></li>
+<li>Fake News Corpus: <a href="https://github.com/several27/FakeNewsCorpus">https://github.com/several27/FakeNewsCorpus</a></li>
+<li>EmoBank - Sentiment from perspective of reader's v/s writer's emotion - <a href="https://github.com/JULIELab/EmoBank">https://github.com/JULIELab/EmoBank</a></li>
+<li>Lot of argumentation mining corpora - <a href="https://www.informatik.tu-darmstadt.de/ukp/research_6/research_areas/argumentation_mining/index.en.jsp">https://www.informatik.tu-darmstadt.de/ukp/research_6/research_areas/argumentation_mining/index.en.jsp</a></li>
+<li>NER datasets - <a href="https://github.com/juand-r/entity-recognition-datasets">https://github.com/juand-r/entity-recognition-datasets</a></li>
+<li>More NER datasets - <a href="http://www.cs.technion.ac.il/~gabr/resources/data/ne_datasets.html">http://www.cs.technion.ac.il/~gabr/resources/data/ne_datasets.html</a></li>
+<li>Moral foundations twitter corpus - <a href="https://psyarxiv.com/w4f72">https://psyarxiv.com/w4f72</a></li>
+<li>Keyphrase extraction - <a href="https://github.com/titipata/keyphrase_extraction">https://github.com/titipata/keyphrase_extraction</a> <a href="https://github.com/LIAAD/KeywordExtractor-Datasets#theses">https://github.com/LIAAD/KeywordExtractor-Datasets#theses</a></li>
+<li>Multi-target-specific sentiment recognition on Twitter - <a href="https://github.com/bluemonk482/tdparse">https://github.com/bluemonk482/tdparse</a></li>
+<li>Multi (700 languages) lingual speech and text - <a href="https://github.com/festvox/datasets-CMU_Wilderness">https://github.com/festvox/datasets-CMU_Wilderness</a></li>
+<li>Large Scale text classification - <a href="http://lshtc.iit.demokritos.gr/">http://lshtc.iit.demokritos.gr/</a></li>
+<li>Multiple text classification data - <a href="https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html">https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html</a></li>
+<li>Data for lifelong ML for sentiment classification - <a href="https://www.aclweb.org/anthology/papers/P/P15/P15-2123/">https://www.aclweb.org/anthology/papers/P/P15/P15-2123/</a></li>
+<li>Aspect extraction data for Amazon reviews for 36 domains (1000 per domain) - <a href="https://www.aclweb.org/anthology/papers/P/P14/P14-1033/">https://www.aclweb.org/anthology/papers/P/P14/P14-1033/</a></li>
+<li>Perspectrum: dataset of claims and supporting and opposing sentences and paragraphs - <a href="https://github.com/CogComp/perspectrum">https://github.com/CogComp/perspectrum</a> </li>
+<li>Multiple datasets curated by CogComp group - <a href="https://cogcomp.org/page/corpora/">https://cogcomp.org/page/corpora/</a> and <a href="https://cogcomp.org/page/data/">https://cogcomp.org/page/data/</a></li>
+<li>204,135 articles from 18 American publications. Includes date, title, publication, article text, publication name, year, month, and URL (2013-2018)- <a href="https://components.one/datasets/all-the-news-articles-dataset/">https://components.one/datasets/all-the-news-articles-dataset/</a></li>
+<li>Legal Entity Detection - <a href="https://github.com/hockeyjudson/Legal-Entity-Detection">https://github.com/hockeyjudson/Legal-Entity-Detection</a></li>
+<li>New Yorker Cartoon Captions Funny v/s not-Funny dataset - <a href="https://github.com/nextml/caption-contest-data/tree/master/contests">https://github.com/nextml/caption-contest-data/tree/master/contests</a></li>
+<li>Semantic Text Similarity datasets - <a href="https://github.com/brmson/dataset-sts">https://github.com/brmson/dataset-sts</a></li>
+<li>Another list of NLP datasets - <a href="https://github.com/shashankg7/Deep-Learning-for-NLP-Resources">https://github.com/shashankg7/Deep-Learning-for-NLP-Resources</a></li>
+<li>Few-Shot Relation Classification Dataset (FewRel), consisting of 70,000 sentences on 100 relations derived from Wikipedia and annotated by crowdworkers - <a href="https://github.com/thunlp/FewRel">https://github.com/thunlp/FewRel</a></li>
+<li>Named dataset - <a href="https://github.com/philipperemy/name-dataset">https://github.com/philipperemy/name-dataset</a></li>
+<li>Aspect/Target based sentiment prediction - <a href="https://github.com/apmoore1/Bella">https://github.com/apmoore1/Bella</a></li>
+<li>Relation classification - <a href="https://github.com/zhangdongxu/kbp37">https://github.com/zhangdongxu/kbp37</a> <a href="https://github.com/deepakn97/relationPrediction">https://github.com/deepakn97/relationPrediction</a></li>
+<li>Multimodal knowledge graphs - <a href="https://github.com/nle-ml/mmkb">https://github.com/nle-ml/mmkb</a></li>
+<li>Distantly supervised relation extraction without false positives - <a href="https://github.com/pvthuy/distantly-supervised-RE">https://github.com/pvthuy/distantly-supervised-RE</a></li>
+<li>Part whole relationship data - <a href="https://github.com/pvthuy/part-whole-relations">https://github.com/pvthuy/part-whole-relations</a></li>
+<li>Supersense-Tagged Repository of English with a Unified Semantics for Lexical Expressions for Web reviews from English Treebank - <a href="https://github.com/nert-nlp/streusle">https://github.com/nert-nlp/streusle</a></li>
+<li>English WikiHow instructional guides semantically annotated with Universal Conceptual Cognitive Annotation (UCCA) - <a href="https://github.com/nert-nlp/Whow_UCCA">https://github.com/nert-nlp/Whow_UCCA</a></li>
+<li>English Keyphrase generation dataset - <a href="https://github.com/memray/seq2seq-keyphrase">https://github.com/memray/seq2seq-keyphrase</a> and <a href="https://github.com/kenchan0226/keyphrase-generation-rl">https://github.com/kenchan0226/keyphrase-generation-rl</a></li>
+<li>Reverse dictionary evaluation data - <a href="https://github.com/uds-lsv/Multi-Sense-Embeddings-Reverse-Dictionaries">https://github.com/uds-lsv/Multi-Sense-Embeddings-Reverse-Dictionaries</a></li>
+<li>Verbal shifter disambiguation - <a href="https://github.com/uds-lsv/disambiguation-of-verbal-shifters">https://github.com/uds-lsv/disambiguation-of-verbal-shifters</a></li>
+<li>TextGraphs-13 Shared Task on Multi-Hop Inference Explanation Regeneration - <a href="https://competitions.codalab.org/competitions/20150">https://competitions.codalab.org/competitions/20150</a></li>
+<li>Named Entities in European Newspapers (German, French, and Dutch) - <a href="https://github.com/EuropeanaNewspapers/ner-corpora">https://github.com/EuropeanaNewspapers/ner-corpora</a></li>
+<li>Document and subject indexing corpora - <a href="https://github.com/NatLibFi/Annif-corpora">https://github.com/NatLibFi/Annif-corpora</a></li>
+<li>GENETAG - <a href="https://github.com/openbiocorpora/genetag">https://github.com/openbiocorpora/genetag</a></li>
+<li>Open Biomedical corpora - <a href="https://github.com/openbiocorpora">https://github.com/openbiocorpora</a></li>
+<li>Multilingual NER - <a href="https://github.com/afshinrahimi/mmner">https://github.com/afshinrahimi/mmner</a> - PANX - <a href="https://www.amazon.com/clouddrive/share/d3KGCRCIYwhKJF0H3eWA26hjg2ZCRhjpEQtDL70FSBN?_encoding=UTF8&amp;%2AVersion%2A=1&amp;%2Aentries%2A=0&amp;mgh=1">https://www.amazon.com/clouddrive/share/d3KGCRCIYwhKJF0H3eWA26hjg2ZCRhjpEQtDL70FSBN?_encoding=UTF8&amp;%2AVersion%2A=1&amp;%2Aentries%2A=0&amp;mgh=1</a></li>
+<li>WikiANN 282 languages NER - <a href="http://nlp.cs.rpi.edu/wikiann/">http://nlp.cs.rpi.edu/wikiann/</a> - <a href="https://drive.google.com/drive/folders/1Q-xdT99SeaCghihGa7nRkcXGwRGUIsKN">Gdrive</a></li>
+<li>Amazon QA review based question answering corpus - <a href="https://github.com/amazonqa/amazonqa">https://github.com/amazonqa/amazonqa</a></li>
+<li>Arabic NER - <a href="http://www.cs.cmu.edu/~ark/ArabicNER/">http://www.cs.cmu.edu/~ark/ArabicNER/</a></li>
+<li>NERWebpagesColumns from CogComp UIUC - <a href="https://cogcomp.seas.upenn.edu/page/resource_view/28">https://cogcomp.seas.upenn.edu/page/resource_view/28</a></li>
+<li>Wikification evaluation data - <a href="https://cogcomp.seas.upenn.edu/page/resource_view/4">https://cogcomp.seas.upenn.edu/page/resource_view/4</a></li>
+<li>Named Entity Coreference resolution across documents data - <a href="https://cogcomp.seas.upenn.edu/page/resource_view/44">https://cogcomp.seas.upenn.edu/page/resource_view/44</a></li>
+<li>Seminars and Job posting Data (Named Entities) - <a href="https://cogcomp.seas.upenn.edu/page/resource_view/31">https://cogcomp.seas.upenn.edu/page/resource_view/31</a></li>
+<li>List of various English NER datasets - <a href="https://github.com/dice-group/FOX/tree/master/input">https://github.com/dice-group/FOX/tree/master/input</a></li>
+<li>Document level relation extraction data using English Wikipedia - <a href="https://github.com/thunlp/DocRED">https://github.com/thunlp/DocRED</a></li>
+<li>Medinify dataset of medical comments tagged with drug mentions and ease of use - <a href="https://github.com/NLPatVCU/medinify-datasets">https://github.com/NLPatVCU/medinify-datasets</a></li>
+<li>Nano particles entity annotated data (in brat format) - <a href="https://github.com/NLPatVCU/medaCy_dataset_end">https://github.com/NLPatVCU/medaCy_dataset_end</a></li>
+<li>Named entities dataset in brat format from <a href="https://tac.nist.gov/2018/SRIE/data.html">Systematic Review Information Extraction (SRIE) 2018</a> - <a href="https://github.com/NLPatVCU/medaCy_dataset_tac_2018">https://github.com/NLPatVCU/medaCy_dataset_tac_2018</a></li>
+<li>Ontonotes and FIGER gold data - <a href="http://nlp.cs.rpi.edu/kbp/2019/data.html">http://nlp.cs.rpi.edu/kbp/2019/data.html</a> - <a href="https://web.archive.org/web/20191020032708/http://www.cl.ecei.tohoku.ac.jp/~shimaoka/corpus.zip">Wayback link</a></li>
+<li>FIGER training data - <a href="https://github.com/xiaoling/figer">https://github.com/xiaoling/figer</a></li>
+<li>KNET fine grained named entity data - <a href="https://github.com/thunlp/KNET">https://github.com/thunlp/KNET</a></li>
+<li>Drug Drug interaction data for TAC 2019 task (NER and RE) - <a href="https://bionlp.nlm.nih.gov/tac2019druginteractions/">https://bionlp.nlm.nih.gov/tac2019druginteractions/</a></li>
+<li>Model Sense classification - <a href="https://github.com/amarasovic/modal-sense-classifcation">https://github.com/amarasovic/modal-sense-classifcation</a></li>
+<li>Entity Sentiment TAC KBP - <a href="https://tac.nist.gov//2014/KBP/data.html">https://tac.nist.gov//2014/KBP/data.html</a></li>
+<li>MPQA 3.0 Entity Sentiment data - <a href="https://mpqa.cs.pitt.edu/corpora/mpqa_corpus/">https://mpqa.cs.pitt.edu/corpora/mpqa_corpus/</a></li>
+<li>Cross-Lingual Sentiment (CLS) dataset comprises about 800.000 Amazon product reviews - <a href="https://webis.de/data/webis-cls-10.html">https://webis.de/data/webis-cls-10.html</a></li>
+<li>MLDoc: A Corpus for Multilingual Document Classification in Eight Languages - <a href="https://github.com/facebookresearch/MLDoc">https://github.com/facebookresearch/MLDoc</a></li>
+<li>Topical Chat: human-human dataset of open-domain conversations - <a href="https://github.com/alexa/alexa-prize-topical-chat-dataset/">https://github.com/alexa/alexa-prize-topical-chat-dataset/</a></li>
+<li>Human to Human actionable request dataset - <a href="https://github.com/NervanaSystems/nlp-architect/tree/master/datasets/H2H%20requests%20detection">https://github.com/NervanaSystems/nlp-architect/tree/master/datasets/H2H%20requests%20detection</a></li>
+<li>Human written weather summaries - <a href="https://ehudreiter.files.wordpress.com/2016/12/sumtime.zip">https://ehudreiter.files.wordpress.com/2016/12/sumtime.zip</a></li>
+<li>List of datasets for Natural Language Generation (NLG) - <a href="https://aclweb.org/aclwiki/Data_sets_for_NLG">https://aclweb.org/aclwiki/Data_sets_for_NLG</a></li>
+<li>EmotionX:emotions induced by dialogue utterances - <a href="https://sites.google.com/view/emotionx2019/">https://sites.google.com/view/emotionx2019/</a></li>
+<li>VU Amsterdam Metaphor Corpus - <a href="http://ota.ahds.ac.uk/headers/2541.xml">http://ota.ahds.ac.uk/headers/2541.xml</a> <a href="https://competitions.codalab.org/competitions/17805#learn_the_details-evaluation">Codalab</a></li>
+<li>Abusive language datasets - <a href="https://sites.google.com/view/alw3/resources?authuser=0">https://sites.google.com/view/alw3/resources?authuser=0</a></li>
+<li>Multilingual Surface Realization - <a href="http://taln.upf.edu/pages/msr2019-ws/SRST.html#data">http://taln.upf.edu/pages/msr2019-ws/SRST.html#data</a></li>
+<li>Argument mining microtexts (not social media; available in English and German) - <a href="https://github.com/peldszus/arg-microtexts">https://github.com/peldszus/arg-microtexts</a></li>
+<li>List of resources in argument mining - <a href="https://www.informatik.tu-darmstadt.de/ukp/research_6/data/index.en.jsp">https://www.informatik.tu-darmstadt.de/ukp/research_6/data/index.en.jsp</a></li>
+<li>Unibo corpora for argument mining - <a href="http://argumentationmining.disi.unibo.it/resources.html">http://argumentationmining.disi.unibo.it/resources.html</a></li>
+<li>Datasets on natural argumentation - <a href="http://www-sop.inria.fr/NoDE/NoDE-xml.html">http://www-sop.inria.fr/NoDE/NoDE-xml.html</a></li>
+<li>Dataset on natural arguments with emotions - <a href="https://project.inria.fr/seempad/datasets/">https://project.inria.fr/seempad/datasets/</a></li>
+<li>IBM debator dataset (multi task dataset) - <a href="http://www.research.ibm.com/haifa/dept/vst/debating_data.shtml">http://www.research.ibm.com/haifa/dept/vst/debating_data.shtml</a></li>
+<li>El Capitan corpus for sentiment and topic at both the review (document) and sentence level - <a href="https://github.com/eibeke/El-Capitan-Dataset">https://github.com/eibeke/El-Capitan-Dataset</a></li>
+<li>Argument Mining European Court of Human Rights - <a href="https://github.com/PLN-FaMAF/ArgumentMiningECHR">https://github.com/PLN-FaMAF/ArgumentMiningECHR</a></li>
+<li>Question Classification Labels for Science Questions - <a href="http://cognitiveai.org/explanationbank/">http://cognitiveai.org/explanationbank/</a></li>
+<li>Wikipedia Biographies data (for assessing text generation algorithms) - <a href="https://github.com/DavidGrangier/wikipedia-biography-dataset">https://github.com/DavidGrangier/wikipedia-biography-dataset</a></li>
+<li>TASKMASTER-1 DIALOG CORPUS: TOWARD A REALISTIC AND DIVERSE DATASET - <a href="https://mila.quebec/en/publication/taskmaster-1-dialog-corpus-toward-a-realistic-and-diverse-dataset/">https://mila.quebec/en/publication/taskmaster-1-dialog-corpus-toward-a-realistic-and-diverse-dataset/</a></li>
+<li>Parallelly Annotated Stylistic Language Dataset with Multiple Personas - <a href="https://github.com/dykang/PASTEL">https://github.com/dykang/PASTEL</a></li>
+<li>A Richly Annotated Corpus for Different Tasks in Automated Fact-Checking (UKP Snopes Corpus) - <a href="https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2081">https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2081</a> <a href="https://www.aclweb.org/anthology/K19-1046/">Paper</a></li>
+<li>Argument Aspect Similarity (UKP ASPECT) Corpus - <a href="https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/1998">https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/1998</a> <a href="https://www.aclweb.org/anthology/P19-1054/">Paper</a></li>
+<li>VU Amsterdam Metaphor Corpus - <a href="https://github.com/UKPLab/acl2019-GPPL-humour-metaphor/tree/master/data/VU%20Amsterdam%20Metaphor%20Corpus/2541">https://github.com/UKPLab/acl2019-GPPL-humour-metaphor/tree/master/data/VU%20Amsterdam%20Metaphor%20Corpus/2541</a></li>
+<li>VUAMC_crowd Dataset for evaluating humour (containing 28,210 pairwise comparisons of 4030 texts) - <a href="https://github.com/UKPLab/acl2019-GPPL-humour-metaphor/tree/master/data/vuamc_crowd">https://github.com/UKPLab/acl2019-GPPL-humour-metaphor/tree/master/data/vuamc_crowd</a></li>
+<li>Argument convincingness from crowdsourced data - <a href="https://github.com/UKPLab/tacl2018-preference-convincing">https://github.com/UKPLab/tacl2018-preference-convincing</a></li>
+<li>Discourse-level argumentation annotations - <a href="https://github.com/UKPLab/naacl2019-argument-annotations">https://github.com/UKPLab/naacl2019-argument-annotations</a></li>
+<li>CNN/Daily Mail summarization - <a href="https://github.com/UKPLab/emnlp2019-summary-reward/tree/master/data">https://github.com/UKPLab/emnlp2019-summary-reward/tree/master/data</a></li>
+<li>IBM Debator Evidence Detection data - <a href="https://github.com/UKPLab/fever2019-interactive-evidence-detection/tree/master/data">https://github.com/UKPLab/fever2019-interactive-evidence-detection/tree/master/data</a></li>
+<li>QA data for benchmarking entity linking systems - <a href="https://public.ukp.informatik.tu-darmstadt.de/starsem18-entity-linking/EntityLinkingForQADatasets.zip">https://public.ukp.informatik.tu-darmstadt.de/starsem18-entity-linking/EntityLinkingForQADatasets.zip</a> <a href="https://github.com/UKPLab/starsem2018-entity-linking">Code</a></li>
+<li>Wikipedia-Wikidata sentence-level relation annotations - <a href="https://www.informatik.tu-darmstadt.de/ukp/research_6/data/lexical_resources/wikipedia_wikidata_relations/index.en.jsp">https://www.informatik.tu-darmstadt.de/ukp/research_6/data/lexical_resources/wikipedia_wikidata_relations/index.en.jsp</a></li>
+<li>Live Blog Corpus for Summarization - <a href="https://github.com/UKPLab/lrec2018-live-blog-corpus">https://github.com/UKPLab/lrec2018-live-blog-corpus</a></li>
+<li>Wikidata/FrameNet Alignment - <a href="https://www.informatik.tu-darmstadt.de/ukp/research_6/data/lexical_resources/wikidata_framenet_alignments/index.en.jsp">https://www.informatik.tu-darmstadt.de/ukp/research_6/data/lexical_resources/wikidata_framenet_alignments/index.en.jsp</a></li>
+<li>Event time extraction - <a href="https://github.com/UKPLab/tacl2017-event-time-extraction/tree/master/input">https://github.com/UKPLab/tacl2017-event-time-extraction/tree/master/input</a></li>
+<li>MultiFC: A Real-World Multi-Domain Dataset for Evidence-Based Fact Checking of Claims - <a href="https://copenlu.github.io/publication/2019_emnlp_augenstein/">https://copenlu.github.io/publication/2019_emnlp_augenstein/</a></li>
+<li>Conversation datasets in ConvoKit - <a href="https://zissou.infosci.cornell.edu/convokit/documentation/datasets.html">https://zissou.infosci.cornell.edu/convokit/documentation/datasets.html</a></li>
+<li>Dataset of personal narratives with Advice-Seeking Questions - <a href="https://github.com/CornellNLP/ASQ">https://github.com/CornellNLP/ASQ</a></li>
+<li>Ontonotes documents labeled using Freebase entity types (included as part of paper source files) - <a href="https://arxiv.org/format/1412.1820">https://arxiv.org/format/1412.1820</a></li>
+<li>Google book corpora catalogue - <a href="http://storage.googleapis.com/books/">http://storage.googleapis.com/books/</a></li>
+<li>Multiple AIDA datasets for Named Entity Linking - <a href="https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/aida/downloads/">https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/aida/downloads/</a></li>
+<li>Named Entity Disambiguation for Noisy Text - <a href="https://github.com/yotam-happy/NEDforNoisyText">https://github.com/yotam-happy/NEDforNoisyText</a></li>
+<li>Multiple datasets for wikipedia based disambiguation - <a href="http://rali.iro.umontreal.ca/rali/?q=en/wikipedia-ds-cont-emb">http://rali.iro.umontreal.ca/rali/?q=en/wikipedia-ds-cont-emb</a></li>
+<li>VideoStory: Text summaries of videos - <a href="https://zenodo.org/record/2383739#.Xe5mO-hKh3g">https://zenodo.org/record/2383739#.Xe5mO-hKh3g</a></li>
+<li>German Named Entity Linking dataset - <a href="https://github.com/linkedtv/videocorpus">https://github.com/linkedtv/videocorpus</a></li>
+<li>TAC KBP English Entity Linking Comprehensive Training and Evaluation Data 2010 - <a href="https://github.com/hellojet/TAC_KBP_English_EL_2010/tree/e274785013be529f0acee347b75d6076bda11126">https://github.com/hellojet/TAC_KBP_English_EL_2010/tree/e274785013be529f0acee347b75d6076bda11126</a></li>
+<li>Temporal fact extraction datasets - <a href="https://github.com/dmsquare/tfwin">https://github.com/dmsquare/tfwin</a></li>
+<li>Updated and fixed Fake news challenge dataset - <a href="https://github.com/UKPLab/coling2018_fake-news-challenge">https://github.com/UKPLab/coling2018_fake-news-challenge</a></li>
+<li>Document Ranking datasets - <a href="https://microsoft.github.io/TREC-2019-Deep-Learning/">https://microsoft.github.io/TREC-2019-Deep-Learning/</a></li>
+<li>Japanese aspect based sentiment analysis corpora - <a href="https://github.com/chakki-works/chABSA-dataset">https://github.com/chakki-works/chABSA-dataset</a></li>
+<li>Political scaling dataset - <a href="https://bitbucket.org/gg42554/cl-scaling/src/master/">https://bitbucket.org/gg42554/cl-scaling/src/master/</a></li>
+<li>Cross lingual text similarity - <a href="https://bitbucket.org/gg42554/cl-sts/src/master/data/">https://bitbucket.org/gg42554/cl-sts/src/master/data/</a></li>
+<li>Topical segmentation of text - <a href="https://bitbucket.org/gg42554/graphseg/src/master/data/">https://bitbucket.org/gg42554/graphseg/src/master/data/</a></li>
+<li>Lexico-semantic relatedness (7 datasets) - <a href="https://bitbucket.org/gg42554/dual-tensors/src/master/data/">https://bitbucket.org/gg42554/dual-tensors/src/master/data/</a></li>
+<li>Text simiplification - <a href="https://bitbucket.org/gg42554/embesimp/src/master/Data/">https://bitbucket.org/gg42554/embesimp/src/master/Data/</a></li>
+<li>Ultra-fine entity typing - <a href="https://homes.cs.washington.edu/~eunsol/open_entity.html">https://homes.cs.washington.edu/~eunsol/open_entity.html</a></li>
+<li>Capturing Discriminative Attributes - <a href="https://competitions.codalab.org/competitions/17326#participate">https://competitions.codalab.org/competitions/17326#participate</a></li>
+<li>IBM Debating datasets with labels on Sentiment, Argumentation - <a href="https://www.research.ibm.com/haifa/dept/vst/debating_data.shtml">https://www.research.ibm.com/haifa/dept/vst/debating_data.shtml</a></li>
+<li>LitBank is an entity annotated dataset of 100 works of English-language fiction - <a href="https://github.com/dbamman/litbank">https://github.com/dbamman/litbank</a> - <a href="https://github.com/dbamman/NAACL2019-literary-entities">https://github.com/dbamman/NAACL2019-literary-entities</a></li>
+<li>Nested Named Entity database - <a href="https://github.com/nickyringland/nested_named_entities">https://github.com/nickyringland/nested_named_entities</a></li>
+<li>WikiNER - <a href="http://web.archive.org/web/20141104075416/http://schwa.org/projects/resources/wiki/Wikiner">http://web.archive.org/web/20141104075416/http://schwa.org/projects/resources/wiki/Wikiner</a></li>
+<li>English Web Treebank - <a href="https://github.com/UniversalDependencies/UD_English-EWT">https://github.com/UniversalDependencies/UD_English-EWT</a></li>
+<li>PAWS: Paraphrase Adversaries from Word Scrambling - <a href="https://github.com/google-research-datasets/paws">https://github.com/google-research-datasets/paws</a> <a href="https://github.com/google-research-datasets/paws/tree/master/pawsx">PAWS-X multilingual</a></li>
+<li>Open Super-large Crawled ALMAnaCH coRpus is a huge multilingual corpus obtained by language classification and filtering of the Common Crawl corpus - <a href="https://traces1.inria.fr/oscar/">https://traces1.inria.fr/oscar/</a></li>
+<li>IRC Conversation Disentanglement - <a href="https://jkk.name/irc-disentanglement/">https://jkk.name/irc-disentanglement/</a></li>
+<li>Multiple NER datasets including corrected CoNLL 2003 data - <a href="https://github.com/pfliu-nlp/Named-Entity-Recognition-NER-Papers">https://github.com/pfliu-nlp/Named-Entity-Recognition-NER-Papers</a></li>
+<li>The Big Bad NLP Database - <a href="https://quantumstat.com/dataset/dataset.html">https://quantumstat.com/dataset/dataset.html</a></li>
+<li>LRE Map A database containing around 6,000 language resources and tools published at LREC conferences - <a href="http://lremap.elra.info/">http://lremap.elra.info/</a></li>
+<li>OpenIE datasets - <a href="https://github.com/gabrielStanovsky/supervised-oie/">https://github.com/gabrielStanovsky/supervised-oie/</a></li>
+<li>Entity linking dataset in German based on news broadcasts transcripts - <a href="https://github.com/linkedtv/videocorpus">https://github.com/linkedtv/videocorpus</a></li>
+<li>Text summarization datasets - <a href="http://pfliu.com/pl-summarization/summ_data.html">http://pfliu.com/pl-summarization/summ_data.html</a></li>
+<li>Multi-ling summarization datasets from shared task - <a href="http://multiling.iit.demokritos.gr/pages/view/1666/multiling-2019-call-for-papers">http://multiling.iit.demokritos.gr/pages/view/1666/multiling-2019-call-for-papers</a></li>
+<li>TED-Parallel-Corpus based on translations of TED talks - <a href="https://github.com/ajinkyakulkarni14/TED-Multilingual-Parallel-Corpus">https://github.com/ajinkyakulkarni14/TED-Multilingual-Parallel-Corpus</a></li>
+<li>Audio books corpora for speech to text - <a href="https://github.com/ajinkyakulkarni14/Audio-Book-Corpus-for-European-Languages-">https://github.com/ajinkyakulkarni14/Audio-Book-Corpus-for-European-Languages-</a></li>
+<li>Target Based Speech Act Classification in Political Campaign Text - <a href="https://github.com/shivashankarrs/Speech-Acts">https://github.com/shivashankarrs/Speech-Acts</a></li>
+<li>Datasets for Aspect Level Sentiment Analysis - <a href="https://github.com/12190143/Deep-Learning-for-Aspect-Level-Sentiment-Classification-Baselines">https://github.com/12190143/Deep-Learning-for-Aspect-Level-Sentiment-Classification-Baselines</a></li>
+<li>Curation Corpus for Abstractive Text Summarisation - <a href="https://github.com/CurationCorp/curation-corpus">https://github.com/CurationCorp/curation-corpus</a></li>
+<li>List of NER datasets curated as split of train, dev, and test - <a href="https://github.com/pfliu-nlp/Named-Entity-Recognition-NER-Papers">https://github.com/pfliu-nlp/Named-Entity-Recognition-NER-Papers</a></li>
+<li>Portmanteau corpus of 1600 items - <a href="https://github.com/vgtomahawk/Charmanteau-CamReady">https://github.com/vgtomahawk/Charmanteau-CamReady</a></li>
+<li>NLP with human traits corpus - <a href="https://osf.io/bm9gn/">https://osf.io/bm9gn/</a></li>
+<li>Categorized Entity Linking Corpus - <a href="https://github.com/henryrosalesmendez/categorized_EMNLP_datasets">https://github.com/henryrosalesmendez/categorized_EMNLP_datasets</a> - <a href="https://github.com/henryrosalesmendez/EL_exp">Outputs of various EL systems on the datasets</a></li>
+<li>Bio2RDF: Linked data which can be used for Entity Linking  - <a href="https://download.bio2rdf.org/files/release/3/release.html">https://download.bio2rdf.org/files/release/3/release.html</a> - <a href="https://download.bio2rdf.org/#/current/">https://download.bio2rdf.org/#/current/</a></li>
+<li>Clickbait headlines dataset - <a href="https://github.com/bhargaviparanjape/clickbait/tree/master/dataset">https://github.com/bhargaviparanjape/clickbait/tree/master/dataset</a></li>
+<li>Named Entities based on gaze prediction - <a href="https://github.com/DS3Lab/ner-at-first-sight/tree/master/data">https://github.com/DS3Lab/ner-at-first-sight/tree/master/data</a></li>
+<li>Nerwip Corpus (Manually annotated 408 Wikipedia biographies for Named Entities) - <a href="https://doi.org/10.6084/m9.figshare.1289791.v17">https://doi.org/10.6084/m9.figshare.1289791.v17</a></li>
+<li>Serial Speakers: a Dataset of TV Series - <a href="https://figshare.com/articles/TV_Series_Corpus/3471839">https://figshare.com/articles/TV_Series_Corpus/3471839</a></li>
+<li>Wikipedia Abusive Conversations - <a href="https://figshare.com/articles/Wikipedia_Abusive_Conversations/11299118">https://figshare.com/articles/Wikipedia_Abusive_Conversations/11299118</a></li>
+<li>Extracting Semantic Network Data from Newspaper Articles - <a href="https://doi.org/10.7910/DVN/GBUL0K">https://doi.org/10.7910/DVN/GBUL0K</a></li>
+<li>ChroniclItaly 2.0. A corpus of Italian American newspapers annotated for entities, 1898-1920 - <a href="https://doi.org/10.24416/uu01-4mecro">https://doi.org/10.24416/uu01-4mecro</a></li>
+<li>English/Turkish Wikipedia Named-Entity Recognition and Text Categorization Dataset - <a href="https://data.mendeley.com/datasets/cdcztymf4k/1">https://data.mendeley.com/datasets/cdcztymf4k/1</a></li>
+<li>Various German NLP datasets - <a href="https://www.inf.uni-hamburg.de/en/inst/ab/lt/resources/data.html">https://www.inf.uni-hamburg.de/en/inst/ab/lt/resources/data.html</a></li>
+<li>Hierarchical Patent Classification - <a href="https://dublin.zhaw.ch/~benf/HPC/">https://dublin.zhaw.ch/~benf/HPC/</a></li>
+<li>LSHTC: A Benchmark for Large-Scale Text Classification - <a href="http://lshtc.iit.demokritos.gr/">http://lshtc.iit.demokritos.gr/</a></li>
+<li>GSCL Shared Task: Automatic Linguistic Annotation of Computer-Mediated Communication / Social Media - <a href="https://sites.google.com/site/empirist2015/home">https://sites.google.com/site/empirist2015/home</a></li>
+<li>EU News Summary Dataset for 2006-2013 - <a href="http://lexhub.org/data_sets/14">http://lexhub.org/data_sets/14</a></li>
+<li>NER on historical newspapers - <a href="https://github.com/impresso/CLEF-HIPE-2020/tree/master/data">https://github.com/impresso/CLEF-HIPE-2020/tree/master/data</a></li>
+<li>Salient information from news articles and tweets - <a href="http://data.crowdtruth.org/salience-news-tweets/">http://data.crowdtruth.org/salience-news-tweets/</a></li>
+<li>The Upworthy Research Archive dataset of headline A/B tests conducted by Upworthy from early 2013 into April 2015 - <a href="https://upworthy.natematias.com/about-the-archive">https://upworthy.natematias.com/about-the-archive</a></li>
+<li>Emotion-Cause Pair Extraction: A New Task to Emotion Analysis in Texts - <a href="https://github.com/NUSTM/ECPE">https://github.com/NUSTM/ECPE</a> <a href="https://github.com/NUSTM/RTHN">More unified version</a></li>
+<li>Aspect Based Sentiment Analysis (Twitter, Product Reviews) - <a href="https://github.com/NUSTM/ABSC/tree/master/data/absa">https://github.com/NUSTM/ABSC/tree/master/data/absa</a></li>
+<li>Fewshot relation extraction corpus - <a href="https://thunlp.github.io/1/fewrel1.html">https://thunlp.github.io/1/fewrel1.html</a></li>
+<li>SemEval 2010 Task 8 - Multi-Way Classification of Semantic Relations Between Pairs of Nominals - <a href="https://drive.google.com/file/d/0B_jQiLugGTAkMDQ5ZjZiMTUtMzQ1Yy00YWNmLWJlZDYtOWY1ZDMwY2U4YjFk/view?sort=name&amp;layout=list&amp;num=50">https://drive.google.com/file/d/0B_jQiLugGTAkMDQ5ZjZiMTUtMzQ1Yy00YWNmLWJlZDYtOWY1ZDMwY2U4YjFk/view?sort=name&amp;layout=list&amp;num=50</a></li>
+<li>Wordnet Annotated Corpora - <a href="http://globalwordnet.org/resources/wordnet-annotated-corpora/">http://globalwordnet.org/resources/wordnet-annotated-corpora/</a></li>
+<li><a href="https://howardhsu.github.io/dataset/">(RC)^2 dataset for Review Conversational Reading Comprehension (RCRC)</a> - <a href="https://drive.google.com/file/d/1qSTs7VkamBsxKN2iOAsK40zwAF5f1xo1/view?usp=sharing">data</a> <a href="https://github.com/howardhsu/RCRC">repo</a></li>
+<li><a href="https://howardhsu.github.io/dataset/">Review Reading Comprehension (RRC)</a> - <a href="https://drive.google.com/file/d/1NGH5bqzEx6aDlYJ7O3hepZF4i_p4iMR8/view?usp=sharing">data</a> <a href="https://github.com/howardhsu/BERT-for-RRC-ABSA">repo</a></li>
+<li><a href="https://howardhsu.github.io/dataset/">Complementary Entity Recognition (CER)</a> - <a href="https://www.cs.uic.edu/~hxu/QA_dataset.html">QA large</a> <a href="https://www.cs.uic.edu/~hxu/PCQA_dataset.html">PCQA</a> <a href="https://www.cs.uic.edu/~hxu/CER_dataset.html">Reviews</a></li>
+<li>A Multilingual Multi-Target Dataset for Stance Detection - <a href="https://github.com/ZurichNLP/xstance">https://github.com/ZurichNLP/xstance</a></li>
+<li>Argument Mining manual annotation of judgments of the European Court on Human Rights - <a href="https://github.com/PLN-FaMAF/ArgumentMiningECHR">https://github.com/PLN-FaMAF/ArgumentMiningECHR</a></li>
+<li>SemCor and Masc documents annotated with NOAD (New Oxford American Dictionary) word senses - <a href="https://github.com/google-research-datasets/word_sense_disambigation_corpora">https://github.com/google-research-datasets/word_sense_disambigation_corpora</a></li>
+<li>Polish NLP datasets (NER, IE, WSD) - <a href="http://poleval.pl/tasks/">http://poleval.pl/tasks/</a></li>
+<li>PoKi: A Large Dataset of Poems by Children (divided by grade and gender inferred from name) - <a href="https://github.com/whipson/PoKi-Poems-by-Kids">https://github.com/whipson/PoKi-Poems-by-Kids</a></li>
+<li>Privacy policies of US companies judged by legal experts - <a href="https://github.com/ansgarw/privacy">https://github.com/ansgarw/privacy</a></li>
+<li>OpenSubtitles - subtitles in various languages - <a href="http://opus.nlpl.eu/OpenSubtitles-v2018.php">http://opus.nlpl.eu/OpenSubtitles-v2018.php</a></li>
+<li>OpenParallel corpus - <a href="http://opus.nlpl.eu/index.php">http://opus.nlpl.eu/index.php</a></li>
+<li>A Dataset of Petitions from Avaaz.org - <a href="https://dataverse.mpi-sws.org/dataset.xhtml?persistentId=doi:10.5072/FK2/CUSKCS&amp;version=1.0">https://dataverse.mpi-sws.org/dataset.xhtml?persistentId=doi:10.5072/FK2/CUSKCS&amp;version=1.0</a></li>
+<li>NLP Datasets on Indian Languages - <a href="https://github.com/indicnlpweb/indicnlp_catalog">https://github.com/indicnlpweb/indicnlp_catalog</a></li>
+<li>A Survey and Experiments on Annotated Corpora for Emotion Classification in Text - <a href="https://github.com/sarnthil/unify-emotion-datasets/tree/master/datasets">https://github.com/sarnthil/unify-emotion-datasets/tree/master/datasets</a></li>
+<li>Github Typo Corpus (A Large-Scale Multilingual Dataset of Misspellings and Grammatical Errors) - <a href="https://github.com/mhagiwara/github-typo-corpus">https://github.com/mhagiwara/github-typo-corpus</a></li>
+<li>Sentence Alignment in Text Simplification (Wiki and Newsela) - <a href="https://github.com/chaojiang06/wiki-auto">https://github.com/chaojiang06/wiki-auto</a></li>
+<li>Media Frame Corpus - <a href="https://github.com/dallascard/media_frames_corpus">https://github.com/dallascard/media_frames_corpus</a></li>
+<li>DAWT: Densely Annotated Wikipedia Texts across multiple languages - <a href="https://github.com/klout/opendata/blob/master/wiki_annotation/README.md">https://github.com/klout/opendata/blob/master/wiki_annotation/README.md</a></li>
+<li>News corpus of Police Killings which are sentence segmented, mention-level, distantly labeled data used in experiments. - <a href="http://slanglab.cs.umass.edu/PoliceKillingsExtraction/">http://slanglab.cs.umass.edu/PoliceKillingsExtraction/</a></li>
+<li>Biographical Structure in Text (Wikipedia event data, inferred gender and date of birth) - <a href="http://www.cs.cmu.edu/~ark/bio/">http://www.cs.cmu.edu/~ark/bio/</a></li>
+<li>NER for South and South East Asian Languages (Hindi, Bengali, Oriya, Telugu, Urdu) - <a href="http://ltrc.iiit.ac.in/ner-ssea-08/index.cgi?topic=5">http://ltrc.iiit.ac.in/ner-ssea-08/index.cgi?topic=5</a></li>
+<li>Summarization datasets - <a href="https://github.com/recitalAI/summarizing_summarization">https://github.com/recitalAI/summarizing_summarization</a></li>
+<li>Same Side Stance Classification - <a href="https://events.webis.de/sameside-19/#task">https://events.webis.de/sameside-19/#task</a></li>
+<li>Information Extraction from Chemical Patents - <a href="https://chemu-patent-ie.github.io/">https://chemu-patent-ie.github.io/</a></li>
+<li>Open Advancement of Question Answering Systems - <a href="https://oaqa.github.io/">https://oaqa.github.io/</a></li>
+<li>Medical term similarity datasets based on SNOMED-CT. - <a href="https://github.com/babylonhealth/medisim">https://github.com/babylonhealth/medisim</a></li>
+<li>Large-Scale Multi-Label Text Classification on EU Legislation - EURLEX57K - <a href="http://nlp.cs.aueb.gr/software_and_datasets/EURLEX57K/index.html">http://nlp.cs.aueb.gr/software_and_datasets/EURLEX57K/index.html</a> <a href="https://www.aclweb.org/anthology/P19-1636/">Paper</a></li>
+<li>O*NET® 25.0 Database - Jobtitle, Job Description to Job Codes - <a href="https://www.onetcenter.org/database.html#individual-files">https://www.onetcenter.org/database.html#individual-files</a> <a href="https://github.com/afshinrahimi/jobdescription2jobtitle">https://github.com/afshinrahimi/jobdescription2jobtitle</a></li>
+<li>WikiUMLS: Aligning UMLS to Wikipedia - <a href="https://github.com/afshinrahimi/wikiumls">https://github.com/afshinrahimi/wikiumls</a></li>
+<li>Microsoft Research Paraphrase Corpus - <a href="https://www.microsoft.com/en-us/download/details.aspx?id=52398">https://www.microsoft.com/en-us/download/details.aspx?id=52398</a></li>
+<li>Microsoft Research Paraphrase Phrase Tables - <a href="https://www.microsoft.com/en-us/download/details.aspx?id=52536">https://www.microsoft.com/en-us/download/details.aspx?id=52536</a></li>
+<li>SimplePPDB++ paraphrases with readability scores - <a href="https://github.com/mounicam/lexical_simplification/tree/master/SimplePPDBpp">https://github.com/mounicam/lexical_simplification/tree/master/SimplePPDBpp</a></li>
+<li>Word Complexity Lexicon - <a href="https://github.com/mounicam/lexical_simplification/tree/master/word_complexity_lexicon">https://github.com/mounicam/lexical_simplification/tree/master/word_complexity_lexicon</a></li>
+<li>Multilingual paraphrase corpus - <a href="http://paraphrase.org/">http://paraphrase.org/</a></li>
+<li>chakki's Aspect-Based Sentiment Analysis dataset - <a href="https://github.com/chakki-works/chABSA-dataset">https://github.com/chakki-works/chABSA-dataset</a></li>
+<li>Sentiment Analysis in Russian - <a href="https://github.com/sismetanin/sentiment-analysis-in-russian">https://github.com/sismetanin/sentiment-analysis-in-russian</a></li>
+<li>Similarity and relatedness dataset for Wikipedia entities (WikiSRS) - <a href="https://slate.cse.ohio-state.edu/WikiSRS/">https://slate.cse.ohio-state.edu/WikiSRS/</a></li>
+<li>Argumentation corpora - <a href="http://corpora.aifdb.org/">http://corpora.aifdb.org/</a></li>
+<li>A Benchmark for Structured Procedural Knowledge Extraction from Cooking Videos - <a href="https://github.com/frankxu2004/cooking-procedural-extraction">https://github.com/frankxu2004/cooking-procedural-extraction</a></li>
+<li>End to End Entity Linking datasets (WebQSPEL and GraphQEL)- <a href="http://dl.fbaipublicfiles.com/elq/EL4QA_data.tar.gz">http://dl.fbaipublicfiles.com/elq/EL4QA_data.tar.gz</a> <a href="https://github.com/facebookresearch/BLINK">Blink paper</a></li>
+<li>Entity Typing Dataset and WikilinksNED Unseen-Mentions - <a href="https://github.com/yasumasaonoe/ET4EL">https://github.com/yasumasaonoe/ET4EL</a></li>
+<li>Zero Shot Entity Linking dataset using Wikia - <a href="https://github.com/lajanugen/zeshel">https://github.com/lajanugen/zeshel</a></li>
+<li>Norwegian NER - <a href="https://github.com/ljos/navnkjenner">https://github.com/ljos/navnkjenner</a></li>
+<li>Case Law Project (US Cases Open Text as well as Case Citation Networks) - <a href="https://case.law/download/">https://case.law/download/</a></li>
+<li>Multilingual LibriSpeech (MLS) - A large multilingual corpus derived from LibriVox audiobooks - <a href="http://www.openslr.org/94/">http://www.openslr.org/94/</a></li>
+<li>Event prediction from WikiHow - <a href="https://github.com/daiquocnguyen/EventPrediction">https://github.com/daiquocnguyen/EventPrediction</a></li>
+<li>IBM Debating data - <a href="https://www.research.ibm.com/haifa/dept/vst/debating_data.shtml">https://www.research.ibm.com/haifa/dept/vst/debating_data.shtml</a></li>
+<li>T-Rex : A Large Scale Alignment of Natural Language with Knowledge Base Triples - <a href="https://github.com/hadyelsahar/RE-NLG-Dataset">https://github.com/hadyelsahar/RE-NLG-Dataset</a></li>
+<li>Hindi Translated datasets - <a href="http://www.cfilt.iitb.ac.in/iitb_parallel/">http://www.cfilt.iitb.ac.in/iitb_parallel/</a></li>
+<li>Ontonotes CoNLL format data - <a href="https://github.com/yuchenlin/OntoNotes-5.0-NER-BIO">https://github.com/yuchenlin/OntoNotes-5.0-NER-BIO</a></li>
+<li>Japanese NLP datasets for multiple tasks - <a href="http://nlp.ist.i.kyoto-u.ac.jp/EN/?NLPresources#d40a0717">http://nlp.ist.i.kyoto-u.ac.jp/EN/?NLPresources#d40a0717</a></li>
+<li>Japanese parallel text data - <a href="http://phontron.com/japanese-translation-data.php?lang=en">http://phontron.com/japanese-translation-data.php?lang=en</a></li>
+<li>Ted transcripts - <a href="https://wit3.fbk.eu/">https://wit3.fbk.eu/</a></li>
+<li>WikiConv - Wikipedia Talk Page conversations in 5 languages - <a href="https://github.com/conversationai/wikidetox/tree/master/wikiconv">https://github.com/conversationai/wikidetox/tree/master/wikiconv</a></li>
+<li>NER on historic newspaper text - <a href="https://github.com/dbmdz/historic-ner">https://github.com/dbmdz/historic-ner</a></li>
+<li>Persuasion Techniques Annotation - <a href="https://propaganda.math.unipd.it/index.html">https://propaganda.math.unipd.it/index.html</a></li>
+<li>Temporal Privacy Policy dataset - <a href="https://github.com/citp/privacy-policy-historical">https://github.com/citp/privacy-policy-historical</a></li>
+<li>Groningen Meaning Bank (GMB) Publc Domain English NER + other tags - <a href="https://gmb.let.rug.nl/">https://gmb.let.rug.nl/</a> </li>
+<li>Parallel Meaning Bank (PMB) - <a href="https://pmb.let.rug.nl/">https://pmb.let.rug.nl/</a></li>
+<li>Finnish NLP corpora - <a href="https://www.kielipankki.fi/corpora/">https://www.kielipankki.fi/corpora/</a></li>
+<li>Finnish English Emotion Annotation Movie dialogues from OPUS - <a href="https://github.com/Helsinki-NLP/XED">https://github.com/Helsinki-NLP/XED</a></li>
+<li>Event coref bank data - <a href="http://www.newsreader-project.eu/results/data/the-ecb-corpus/">http://www.newsreader-project.eu/results/data/the-ecb-corpus/</a></li>
+<li>Newsreader project data (Wikinews) - <a href="http://www.newsreader-project.eu/results/data/">http://www.newsreader-project.eu/results/data/</a></li>
+<li>NER transliteration dataset in multiple languages - <a href="http://workshop.colips.org/news2018/dataset.html">http://workshop.colips.org/news2018/dataset.html</a></li>
+<li>Various Paraphrase corpus - <a href="https://github.com/wasiahmad/paraphrase_identification/tree/master/dataset">https://github.com/wasiahmad/paraphrase_identification/tree/master/dataset</a></li>
+<li>Keyphrase Generation datasets - <a href="https://github.com/wasiahmad/NeuralKpGen/blob/master/data/README.md">https://github.com/wasiahmad/NeuralKpGen/blob/master/data/README.md</a></li>
+<li>Corpus of Russian documents (for LM training) - <a href="https://ruscorpora.ru/new/en/index.html">https://ruscorpora.ru/new/en/index.html</a></li>
+<li>Dakshina corpus of South Asian languages in Latin Script - <a href="https://github.com/google-research-datasets/dakshina">https://github.com/google-research-datasets/dakshina</a></li>
+<li>Economic Sentiment dataset - <a href="https://github.com/vanatteveldt/ecosent">https://github.com/vanatteveldt/ecosent</a></li>
+<li>Entity Linking datasets - <a href="https://github.com/dice-group/gerbil/wiki/Licences-for-datasets">https://github.com/dice-group/gerbil/wiki/Licences-for-datasets</a></li>
+<li>Multilingual Political Scaling - <a href="https://bitbucket.org/gg42554/cl-scaling/src/master/">https://bitbucket.org/gg42554/cl-scaling/src/master/</a></li>
+<li>Entity Aspect Linking - <a href="https://federiconanni.com/eal-d/">https://federiconanni.com/eal-d/</a></li>
+<li>TREC Complex Answer Retrieval - <a href="http://trec-car.cs.unh.edu/">http://trec-car.cs.unh.edu/</a></li>
+<li>Multilingual Text Similarity - <a href="https://bitbucket.org/gg42554/cl-sts/src/master/data/">https://bitbucket.org/gg42554/cl-sts/src/master/data/</a></li>
+<li>TREC News (Wapost related doc and wikification) - <a href="http://trec-news.org/">http://trec-news.org/</a></li>
+<li>CrossNER - Multi Domain NER data - <a href="https://github.com/zliucr/CrossNER">https://github.com/zliucr/CrossNER</a></li>
+<li>Geoparsing datasets - <a href="https://github.com/milangritta/Pragmatic-Guide-to-Geoparsing-Evaluation">https://github.com/milangritta/Pragmatic-Guide-to-Geoparsing-Evaluation</a></li>
+<li>ParCOR - Parallel EN-DE coreference corpus - <a href="https://github.com/chardmeier/parcor-full">https://github.com/chardmeier/parcor-full</a></li>
+<li>DWIE (Deutsche Welle corpus for Information Extraction) for document-level multi-task Information Extraction (IE) (NER, NED, Coref, RelEx) - <a href="https://github.com/klimzaporojets/DWIE/">https://github.com/klimzaporojets/DWIE/</a></li>
+<li>ParSent - paragraph level entity centric sentiment - <a href="https://stonybrooknlp.github.io/PerSenT/">https://stonybrooknlp.github.io/PerSenT/</a></li>
+<li>Targeted Sentiment Analysis - <a href="https://www.research.ibm.com/haifa/dept/vst/debating_data.shtml#Targeted%20Sentiment%20Analysis">https://www.research.ibm.com/haifa/dept/vst/debating_data.shtml#Targeted%20Sentiment%20Analysis</a></li>
+<li>African Languages NER - <a href="https://github.com/masakhane-io/masakhane-ner">https://github.com/masakhane-io/masakhane-ner</a></li>
+<li>Politcal Ads - <a href="http://lig-membres.imag.fr/gogao/www21.html">http://lig-membres.imag.fr/gogao/www21.html</a></li>
+<li>Propublica politcal ads - <a href="https://www.propublica.org/datastore/dataset/political-advertisements-from-facebook">https://www.propublica.org/datastore/dataset/political-advertisements-from-facebook</a></li>
+<li>Speech NER - <a href="https://github.com/mdredze/speech_ner_entity_linking_data">https://github.com/mdredze/speech_ner_entity_linking_data</a></li>
+<li>Russian Corpora 20+ datasets - <a href="https://github.com/natasha/corus#reference">https://github.com/natasha/corus#reference</a></li>
+<li>WNED Corpora as reported in <a href="https://arxiv.org/pdf/1704.04920.pdf">Paper footnote 7</a> - <a href="https://www.dropbox.com/s/987hmjdoq0cql9z/WNED.tar.gz">https://www.dropbox.com/s/987hmjdoq0cql9z/WNED.tar.gz</a></li>
+<li>Deep - ED Entity Disambiguation Dataset - <a href="https://github.com/dalab/deep-ed">https://github.com/dalab/deep-ed</a> - <a href="https://drive.google.com/uc?id=0Bx8d3azIm_ZcbHMtVmRVc1o5TWM&amp;export=download">https://drive.google.com/uc?id=0Bx8d3azIm_ZcbHMtVmRVc1o5TWM&amp;export=download</a></li>
+<li>Large scale dataset of multi-lingual aligned NER annotations from common crawl - <a href="http://data.statmt.org/xlent/">http://data.statmt.org/xlent/</a></li>
+<li>ViralTexts project - identify why old newspaper text went viral - <a href="https://viraltexts.org/">https://viraltexts.org/</a></li>
+<li>Multimodal Knowledge Graph Completion - <a href="https://public.ukp.informatik.tu-darmstadt.de/starsem18-multimodalKB/">https://public.ukp.informatik.tu-darmstadt.de/starsem18-multimodalKB/</a> <a href="https://github.com/UKPLab/starsem18-multimodalKB">Code</a></li>
+<li>Entity Linking on Question Answering Data - <a href="https://github.com/UKPLab/starsem2018-entity-linking">https://github.com/UKPLab/starsem2018-entity-linking</a></li>
+<li>WebQuestions Semantic Parses Dataset - <a href="https://www.microsoft.com/en-us/download/details.aspx?id=52763">https://www.microsoft.com/en-us/download/details.aspx?id=52763</a> <a href="https://github.com/UKPLab/coling2018-graph-neural-networks-question-answering">Code</a></li>
+<li>WebQuestions Full dataset - <a href="https://nlp.stanford.edu/software/sempre/">https://nlp.stanford.edu/software/sempre/</a></li>
+<li>Question Answering over Linked Data - <a href="https://project-hobbit.eu/challenges/qald2017/">https://project-hobbit.eu/challenges/qald2017/</a></li>
+<li>Romanian language datasets - <a href="https://github.com/eemlcommunity/ro_benchmark_leaderboard">https://github.com/eemlcommunity/ro_benchmark_leaderboard</a></li>
+<li>Entity Linking datasets - <a href="https://github.com/kermitt2/entity-fishing/tree/master/data">https://github.com/kermitt2/entity-fishing/tree/master/data</a></li>
+<li>GDELT webngrams - <a href="https://blog.gdeltproject.org/announcing-the-web-news-ngram-datasets-web-ngram/">https://blog.gdeltproject.org/announcing-the-web-news-ngram-datasets-web-ngram/</a></li>
+<li>GDELT new similarity graph - <a href="https://blog.gdeltproject.org/announcing-the-global-similarity-graph-television-news-sentence-embeddings-using-the-universal-sentence-encoder/">https://blog.gdeltproject.org/announcing-the-global-similarity-graph-television-news-sentence-embeddings-using-the-universal-sentence-encoder/</a></li>
+<li>Web Data Commons - Schema.org Table Corpus - <a href="http://webdatacommons.org/structureddata/schemaorgtables/">http://webdatacommons.org/structureddata/schemaorgtables/</a></li>
+<li>QuoteBank A corpus of quotations from a decade of news - <a href="https://zenodo.org/record/4277311">https://zenodo.org/record/4277311</a></li>
+<li>Indian Court Judgements annotated with Gender - <a href="https://www.devdatalab.org/judicial-data">https://www.devdatalab.org/judicial-data</a></li>
+<li>Sentiment in Firm Risk Reports - <a href="https://www.firmlevelrisk.com/home">https://www.firmlevelrisk.com/home</a></li>
+<li>Terms of services tracked over time from various websites - <a href="https://github.com/ambanum/OpenTermsArchive-versions">https://github.com/ambanum/OpenTermsArchive-versions</a></li>
+<li>News Haiku Dataset - <a href="https://www.kaggle.com/newshaikus/dataset/version/3">https://www.kaggle.com/newshaikus/dataset/version/3</a></li>
+<li>India Police Events about Gujrat 2002 riots - <a href="https://github.com/slanglab/IndiaPoliceEvents">https://github.com/slanglab/IndiaPoliceEvents</a></li>
+<li>Wikipedia Entity Linking Editor Reccomendations - <a href="https://github.com/wikimedia/research-mwaddlink">Code</a> <a href="https://analytics.wikimedia.org/published/datasets/one-off/research-mwaddlink/enwiki/">Datasets</a> <a href="https://arxiv.org/abs/2105.15110">Paper</a></li>
+<li>WikiCheck: Wikipedia based Fact Checking - <a href="https://github.com/trokhymovych/WikiCheck">https://github.com/trokhymovych/WikiCheck</a> <a href="https://arxiv.org/abs/2109.00835">Paper</a></li>
+</ul>
+<h2>Shared tasks, competitions</h2>
+<ul>
+<li>IN PURSUIT OF HAPPINESS - <a href="https://sites.google.com/view/affcon2019/cl-aff-shared-task">https://sites.google.com/view/affcon2019/cl-aff-shared-task</a></li>
+<li>NIST TAC Knowledge Base Population (KBP2019) Entity Discovery and Linking Track - <a href="http://nlp.cs.rpi.edu/kbp/2019/index.html">http://nlp.cs.rpi.edu/kbp/2019/index.html</a></li>
+<li>Multilingual Surface Realization Shared Task (SR'19) - <a href="http://taln.upf.edu/pages/msr2019-ws/SRST.html#data">http://taln.upf.edu/pages/msr2019-ws/SRST.html#data</a></li>
+<li>SHARED TASK ON FINE-GRAINED PROPAGANDA DETECTION @NLP4IF 2019 - <a href="https://propaganda.qcri.org/nlp4if-shared-task/">https://propaganda.qcri.org/nlp4if-shared-task/</a></li>
+<li>PolEval - <a href="http://poleval.pl/tasks/">http://poleval.pl/tasks/</a></li>
+<li>GERMEVAL - German NLP shared tasks - <a href="https://projects.fzai.h-da.de/iggsa/germeval/">https://projects.fzai.h-da.de/iggsa/germeval/</a></li>
+<li>Hobbit: Holistic Benchmarking of Big Linked Data - <a href="https://project-hobbit.eu/">https://project-hobbit.eu/</a></li>
+<li>CLEF Shared tasks - <a href="http://clef2021.clef-initiative.eu/index.php?page=Pages/labs.html">http://clef2021.clef-initiative.eu/index.php?page=Pages/labs.html</a></li>
+<li>SemEval shared tasks - <a href="https://semeval.github.io/">https://semeval.github.io/</a></li>
+<li>TREC shared tasks - <a href="https://trec.nist.gov/pubs/call2021.html">https://trec.nist.gov/pubs/call2021.html</a></li>
+</ul>
+<h2>Research Groups</h2>
+<ul>
+<li><a href="https://supernlp.github.io/">https://supernlp.github.io/</a> - University of Copenhagen </li>
+<li><a href="http://slanglab.cs.umass.edu/">http://slanglab.cs.umass.edu/</a> - Statistical Social Language Analysis - Brendan O'Connor</li>
+<li><a href="https://nlp.stanford.edu/">https://nlp.stanford.edu/</a> - Stanford</li>
+<li><a href="http://nlp.seas.harvard.edu/">http://nlp.seas.harvard.edu/</a> - Harvard</li>
+<li><a href="https://mr.cs.ucl.ac.uk/">https://mr.cs.ucl.ac.uk/</a> - University College London</li>
+<li><a href="http://nlpg.itk.ppke.hu/projects">http://nlpg.itk.ppke.hu/projects</a> - Pázmány Péter Catholic University</li>
+<li><a href="http://www.ark.cs.washington.edu/">http://www.ark.cs.washington.edu/</a> - Noah Smith NLP Lab at University of Washington</li>
+<li><a href="https://www.cs.washington.edu/research/nlp">https://www.cs.washington.edu/research/nlp</a> - University of Washington</li>
+<li><a href="http://wiki.clsp.jhu.edu/view/NLP_Reading_Group">http://wiki.clsp.jhu.edu/view/NLP_Reading_Group</a> - John Hopkins University</li>
+<li><a href="https://github.com/thunlp">https://github.com/thunlp</a> - Natural Language Processing Lab at Tsinghua University</li>
+<li><a href="https://github.com/OSU-slatelab">https://github.com/OSU-slatelab</a> - OSU Speech and Language Technologies Laboratory</li>
+</ul>
+<h2>Mailing lists</h2>
+<ul>
+<li><a href="https://mailman.uib.no/public/corpora/">https://mailman.uib.no/public/corpora/</a> - Corpora mailing list</li>
+</ul>  </div>
+</article>
+          </div>
+      </div>
+  </div>
+  <div class="container">
+      <hr/>
+      <footer class="footer text-center text-muted">
+<p class="font-weight-light small">
+&copy;  2016 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+<a rel="license"
+   href="http://creativecommons.org/licenses/by-sa/4.0/"
+   target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+</a>
+<br/>
+Powered by <a href="http://getpelican.com" target="_blank">Pelican</a>. <a href="https://github.com/napsternxg/pelican-bootswatch" target="_blank">pelican-bootswatch</a> by <a href="https://shubhanshu.com">shubhanshu.com</a>. Made using <a href="http://getbootstrap.com/">Twitter Bootstrap</a> and <a href="http://bootswatch.com/litera/">Bootswatch litera</a> theme. Icons from <a href="http://glyphicons.com/">Glyphicons</a>.</p>
+      </footer>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44393164-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics --></html>

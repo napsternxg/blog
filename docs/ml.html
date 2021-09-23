@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://shubhanshu.com/blog/theme/stylesheet/style.min.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.1.3/litera/bootstrap.min.css" rel="stylesheet" integrity="sha384-JuAGGg3c8UPrWdf0N8ZPJyOHkACruI9+mbl0C+H6XSYOqv9xIdiUSKehRyA8jUol" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="https://shubhanshu.com/blog/theme/pygments/native.min.css">
+  <link rel="stylesheet" type="text/css" href="https://shubhanshu.com/blog/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://shubhanshu.com/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Interpreting Models Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+
+    <meta name="author" content="Shubhanshu Mishra" />
+    <meta name="description" content="This is a collection of notes and thoughts on mathematical model interpretation via their code implementation." />
+<meta property="og:site_name" content="Interpreting Models"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Interpreting Models"/>
+<meta property="og:description" content="This is a collection of notes and thoughts on mathematical model interpretation via their code implementation."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://shubhanshu.com/blog"/>
+<meta property="og:image" content="/assets/images/pic.jpg">
+
+  <title>Interpreting Models &ndash; Machine Learning</title>
+
+</head>
+<body>
+  <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="https://shubhanshu.com/blog">Interpreting Models</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor03">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item dropdown show">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="true">Notes</a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/data-mining.html#data-mining">Data Mining</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/data-sources.html#data-sources">Data Sources</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/deeplearning.html#deeplearning">Deep Learning</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/explorables.html#explorables">Explorable Explanations</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/ir.html#ir">Information Retrieval</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/ml.html#ml">Machine Learning</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/ml-ethics.html#ml-ethics">Machine Learning Ethics</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/math.html#math">Mathematics</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/nlp.html#nlp">Natural Language Processing</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/networks.html#networks">Networks</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/programming.html#programming">Programming</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/quantum-computing.html#quantum-computing">Quantum Computing</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/recsys.html#recsys">Recommender Systems</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/statistics.html#statistics">Statistics</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/visualization.html#visualization">Visualization</a>
+                      </div>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="https://shubhanshu.com/blog/archives/">Archives</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://shubhanshu.com/blog/category/">Categories</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://shubhanshu.com/blog/tag/">Tags</a></li>
+              </ul>
+              <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link" href="https://shubhanshu.com/" target="_blank">Personal Website</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://shubhanshu.com/blog/feeds/all.atom.xml">    Atom
+</a></li>
+
+              </ul>
+          </div>
+      </nav>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12" style="text-align: justify;">
+<article class="single">
+  <header>
+    
+    <h1 id="ml">Machine Learning</h1>
+  </header>
+  <div>
+<h2>Novel tools</h2>
+<ul>
+<li>Scikit-multilearn - <a href="http://scikit.ml/index.html">http://scikit.ml/index.html</a></li>
+<li>scikit-multiflow: for multi-output/multi-label and stream data.- <a href="https://scikit-multiflow.github.io/">https://scikit-multiflow.github.io/</a></li>
+<li>scikit-plot: plot models analysis - <a href="https://github.com/reiinakano/scikit-plot">https://github.com/reiinakano/scikit-plot</a></li>
+<li>yellowbrick various model visualizations - <a href="https://www.scikit-yb.org/en/latest/">https://www.scikit-yb.org/en/latest/</a></li>
+<li>Scikit-lego: interesting prebuild pipelines and transformers for sklearn - <a href="https://scikit-lego.readthedocs.io/en/latest/">https://scikit-lego.readthedocs.io/en/latest/</a></li>
+<li>List of various scikits - <a href="http://scikits.appspot.com/scikits">http://scikits.appspot.com/scikits</a></li>
+<li>Information Theoretical Estimators (ITE) in Python - <a href="https://bitbucket.org/szzoli/ite-in-python/src/master/">https://bitbucket.org/szzoli/ite-in-python/src/master/</a> <a href="https://arxiv.org/abs/1405.2106">Paper</a></li>
+<li>HYPERBOLIC DEEP LEARNING - A nascent and promising field - <a href="http://hyperbolicdeeplearning.com/">http://hyperbolicdeeplearning.com/</a></li>
+</ul>
+<h2>ML Engineering</h2>
+<ul>
+<li><a href="https://github.com/EthicalML/awesome-production-machine-learning">https://github.com/EthicalML/awesome-production-machine-learning</a></li>
+<li><a href="https://www.oreilly.com/radar/what-you-need-to-know-about-product-management-for-ai/">https://www.oreilly.com/radar/what-you-need-to-know-about-product-management-for-ai/</a></li>
+<li><a href="https://github.com/Intellicode/ml-engineering-resources">https://github.com/Intellicode/ml-engineering-resources</a></li>
+<li>Top 30 ML in Production Resources - <a href="https://mlinproduction.com/top-30-ml-in-production-resources-guide/">https://mlinproduction.com/top-30-ml-in-production-resources-guide/</a></li>
+<li>150 Successful Machine Learning Models: 6 Lessons Learned at Booking.com - <a href="https://dl.acm.org/doi/pdf/10.1145/3292500.3330744">https://dl.acm.org/doi/pdf/10.1145/3292500.3330744</a></li>
+<li>Rules of Machine Learning: Best Practices for ML Engineering - <a href="http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf">http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf</a> <a href="https://developers.google.com/machine-learning/guides/rules-of-ml">On google blog</a></li>
+</ul>
+<h2>Theory</h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1905.12787">The Theory Behind Overfitting, Cross Validation, Regularization, Bagging, and Boosting: Tutorial</a></li>
+<li><a href="https://roamanalytics.com/2016/11/28/shape-matching-with-time-series-data/">Blog: Shape matching with time series data</a></li>
+<li><a href="http://tuvalu.santafe.edu/~simon/it.pdf">Notes on information theory - Information Theory for Intelligent People - Simon DeDeo</a></li>
+<li><a href="http://tuvalu.santafe.edu/~simon/br.pdf">Notes on Bayesian reasoning - Bayesian Reasoning for Intelligent People - Simon DeDeo</a></li>
+<li><a href="https://mml-book.github.io/">Mathematics of Machine Learning book</a></li>
+<li><a href="https://tminka.github.io/papers/matrix/minka-matrix.pdf">Old and New Matrix Algebra Useful for Statistics</a></li>
+<li><a href="https://hefferon.net/linearalgebra/">Linear Algebra by Jim Hefferon</a></li>
+<li><a href="https://pabloinsente.github.io/intro-linear-algebra">Intro to linear algebra in Numpy</a></li>
+<li><a href="http://www.acad.bg/ebook/ml/The.MIT.Press.Dataset.Shift.in.Machine.Learning.Feb.2009.eBook-DDU.pdf">DATASET SHIFT IN MACHINE LEARNING</a></li>
+</ul>
+<h2>Optimization</h2>
+<ul>
+<li><a href="https://github.com/MichielStock/SelectedTopicsOptimization">Jupyter notebooks on various optimization topics</a></li>
+<li><a href="https://github.com/MichielStock/Teaching/blob/master/Optimal_transport/Optimal_transport_examples.ipynb">Notebook on Optimal transport</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/optimaltransp_6_entropic_adv.ipynb">Numerical Tours - Python</a></li>
+<li><a href="http://www.ams.org/journals/notices/201907/rnoti-p1023.pdf">Algebraic and Topological Tools in Linear Optimization</a></li>
+<li><a href="https://www.math.ucdavis.edu/~deloera/TALKS/2019Baltimore-JMM-final.pdf">Algebraic, Geometric, and Topological Methods in Optimization</a></li>
+<li><a href="https://docs.mosek.com/modeling-cookbook/index.html#">MOSEC Cookbook on Convex Optimization</a> - <a href="http://docs.mosek.com/cheatsheets/conic.pdf">Handy cheatsheet</a></li>
+<li><a href="https://researcher.watson.ibm.com/researcher/view_group.php?id=7834">Energy Based Machine Learning video tutorial from IBM research</a></li>
+<li><a href="https://developers.google.com/optimization/introduction/overview">Google OR Tools for Operations Research optimization problems</a></li>
+<li><a href="https://sites.google.com/view/cos59x-cct/home">Computational Control Theory - Princton course</a></li>
+<li><a href="http://proximity-operator.net/">Proximal Operators implementations</a></li>
+</ul>
+<h2>Structured prediction</h2>
+<ul>
+<li>Course: <a href="https://taehwanptl.github.io/">https://taehwanptl.github.io/</a></li>
+<li>CVPR 2011 Tutorial - Structured Prediction and Learning in Computer Vision: <a href="http://www.nowozin.net/sebastian/cvpr2011tutorial/">http://www.nowozin.net/sebastian/cvpr2011tutorial/</a></li>
+</ul>
+<h2>Graphical models and variational inference</h2>
+<ul>
+<li>Graphical Models, Exponential Families, and Variational Inference: <a href="https://people.eecs.berkeley.edu/~wainwrig/Papers/WaiJor08_FTML.pdf">https://people.eecs.berkeley.edu/~wainwrig/Papers/WaiJor08_FTML.pdf</a></li>
+<li>Probabilistic Graphical Models stanford course: <a href="https://cs228.stanford.edu/">https://cs228.stanford.edu/</a> <a href="https://ermongroup.github.io/cs228-notes/">[Course notes]</a></li>
+</ul>
+<h2>Extreme classification</h2>
+<ul>
+<li><a href="https://taehwanptl.github.io/lectures/lecture_05_02.pdf">Slide deck from above course</a></li>
+</ul>
+<h2>Online learning</h2>
+<ul>
+<li><a href="http://www.yisongyue.com/courses/cs159/">Online Learning, Interactive Machine Learning, and Learning from Human Feedback</a></li>
+<li><a href="https://parameterfree.com/lecture-notes-on-online-learning/">Lecture notes on Online Learning</a></li>
+<li><a href="https://moa.cms.waikato.ac.nz/book-html/">Machine Learning for Data Streams using MOA</a></li>
+<li><a href="https://ocobook.cs.princeton.edu/">Introduction to Online Convex Optimization</a></li>
+<li><a href="http://www.ii.uni.wroc.pl/~lukstafi/pmwiki/uploads/AGT/Prediction_Learning_and_Games.pdf">Prediction, Learning, and Games</a></li>
+<li><a href="https://yoavfreund.miraheze.org/wiki/OnlineLearning2018">Online learning, boosting and Games - Prof. Yoav Freund</a></li>
+<li><a href="https://github.com/blablahaha/concept-drift">Python implementation of concept-drift algorithms for Online Learning</a></li>
+<li><a href="https://parameterfree.com/icml-tutorial/">ICML 2020 TUTORIAL ON PARAMETER-FREE ONLINE OPTIMIZATION</a></li>
+</ul>
+<h2>Concept Drift</h2>
+<ul>
+<li><a href="https://www.cs.waikato.ac.nz/~abifet/PAKDD2011/PAKDD11Tutorial_Handling_Concept_Drift.pdf">Handling Concept Drift</a></li>
+<li><a href="https://arxiv.org/pdf/1010.4784.pdf">Learning under Concept Drift</a></li>
+</ul>
+<h2>Domain Adaptation</h2>
+<ul>
+<li>Office-Home Dataset - <a href="http://hemanthdv.org/OfficeHome-Dataset/">http://hemanthdv.org/OfficeHome-Dataset/</a></li>
+<li>ImageClef - <a href="https://www.imageclef.org/2014/adaptation">https://www.imageclef.org/2014/adaptation</a></li>
+<li>Pg. 13 of this paper suggests data for open world/domain adaptation - <a href="https://arxiv.org/pdf/2004.07780.pdf">https://arxiv.org/pdf/2004.07780.pdf</a></li>
+</ul>
+<h2>Bandit Algorithms</h2>
+<ul>
+<li><a href="https://banditalgs.com/">A blog and book on bandit algorithms by Tor Lattimore and Csaba Szepesvari</a></li>
+<li><a href="https://blogs.princeton.edu/imabandit/">I'm a bandit - Random topics in optimization, probability, and statistics. By Sébastien Bubeck</a></li>
+<li><a href="https://arxiv.org/abs/1707.02038">A tutorial on Thompson Sampling</a></li>
+</ul>
+<h2>Continual learning</h2>
+<ul>
+<li>Meta-Learning Representations for Continual Learning - <a href="https://github.com/khurramjaved96/mrcl">https://github.com/khurramjaved96/mrcl</a></li>
+<li>Distillation and Incremental Classifier Learning - <a href="https://github.com/khurramjaved96/incremental-learning">https://github.com/khurramjaved96/incremental-learning</a></li>
+<li>Awesome Continual Learning - <a href="https://github.com/khurramjaved96/awesome-continual-learning">https://github.com/khurramjaved96/awesome-continual-learning</a></li>
+<li>Continual Unsupervised Representation Learning - <a href="https://arxiv.org/abs/1910.14481">https://arxiv.org/abs/1910.14481</a></li>
+<li>Continual Learning Papers Library by ContinualAI - <a href="https://www.zotero.org/groups/2623909/continual_learning_papers/library">https://www.zotero.org/groups/2623909/continual_learning_papers/library</a></li>
+<li>Sequoia A Playground for research at the intersection of Continual, Reinforcement, and Self-Supervised Learning. - <a href="https://github.com/lebrice/Sequoia">https://github.com/lebrice/Sequoia</a></li>
+</ul>
+<h2>Multi task learning</h2>
+<ul>
+<li>CS 330: Deep Multi-Task and Meta Learning - <a href="http://cs330.stanford.edu/">http://cs330.stanford.edu/</a></li>
+</ul>
+<h2>Learning to Rank</h2>
+<ul>
+<li><a href="http://ltr-tutorial-sigir19.isti.cnr.it/program-overview/">Tutorial using TF-Rank</a></li>
+</ul>
+<h2>Active learning</h2>
+<ul>
+<li>Importance weighted active learning for streams: <a href="http://www.yisongyue.com/courses/cs159/lectures/active_learning.pdf">http://www.yisongyue.com/courses/cs159/lectures/active_learning.pdf</a></li>
+<li>Summary of active learning: <a href="http://www.yisongyue.com/courses/cs159/lectures/active_notes.pdf">http://www.yisongyue.com/courses/cs159/lectures/active_notes.pdf</a></li>
+<li>Good survey of potential issues with active learning: <a href="http://proceedings.mlr.press/v16/settles11a.html">http://proceedings.mlr.press/v16/settles11a.html</a></li>
+<li><a href="https://www.manning.com/books/human-in-the-loop-machine-learning">Human-in-the-Loop Machine Learning by Robert Munro</a> - <a href="https://github.com/rmunro/pytorch_active_learning">Active learning in pytorch from book</a> <a href="http://www.robertmunro.com/Advanced_Active_Learning_Cheatsheet.pdf">Cheatsheat on active learning</a></li>
+</ul>
+<h2>Multiple instance learning</h2>
+<ul>
+<li>Good survey: <a href="https://arxiv.org/abs/1612.03365">https://arxiv.org/abs/1612.03365</a></li>
+</ul>
+<h2>Self-supervised learning</h2>
+<ul>
+<li>Slides by Andrew Zisserman (DeepMind) with focus on Images and Videos: <a href="https://project.inria.fr/paiss/files/2018/07/zisserman-self-supervised.pdf">https://project.inria.fr/paiss/files/2018/07/zisserman-self-supervised.pdf</a></li>
+</ul>
+<h2>Reinforcement learning</h2>
+<ul>
+<li>Course on Online Learning, Bandits, Reinforcement and Imitation Learning: <a href="https://sites.google.com/view/cs-159-spring-2018/home">https://sites.google.com/view/cs-159-spring-2018/home</a></li>
+<li>Python code examples for the book: <a href="https://github.com/ShangtongZhang/reinforcement-learning-an-introduction">https://github.com/ShangtongZhang/reinforcement-learning-an-introduction</a></li>
+<li><a href="http://adp.princeton.edu/">Approximate Dynamic Programming</a></li>
+<li><a href="http://www.masfoundations.org/index.html">Multiagent Systems - Algorithmic, Game-Theoretic, and Logical Foundations</a></li>
+</ul>
+<h2>Transfer Learning</h2>
+<ul>
+<li>Good overview of all types of transfer learning approaches (in Chinese): <a href="https://github.com/jindongwang/transferlearning">https://github.com/jindongwang/transferlearning</a></li>
+</ul>
+<h2>Multimodal learning</h2>
+<ul>
+<li>Multimodal Machine Learning: A Survey and Taxonomy - <a href="https://arxiv.org/abs/1705.09406">https://arxiv.org/abs/1705.09406</a></li>
+</ul>
+<h2>Applications</h2>
+<ul>
+<li>List of applications across various industries - <a href="https://github.com/firmai/industry-machine-learning#legal">https://github.com/firmai/industry-machine-learning#legal</a></li>
+<li>Visual explanations of ML algorithms - <a href="http://visxai.io/2018.html">http://visxai.io/2018.html</a></li>
+<li>Javascript animated examples from Artificial Intelligence - A Modern Approach by Stuart Russell and Peter Norvig: <a href="http://aimacode.github.io/aima-javascript/">http://aimacode.github.io/aima-javascript/</a></li>
+</ul>
+<h2>ML Bias</h2>
+<ul>
+<li>Tutorial - <a href="https://github.com/Jindong-Explainable-AI/Bias_in_Machine_Learning">https://github.com/Jindong-Explainable-AI/Bias_in_Machine_Learning</a></li>
+<li>Using Big Data to Solve Economic and Social Problems - <a href="https://opportunityinsights.org/course/">https://opportunityinsights.org/course/</a></li>
+<li>CS269 - Special Topic in AI: Fairness, Accountability, and Transparency in Natural Language Processing - <a href="https://uclanlp.github.io/CS269-Winter2020/index.html">https://uclanlp.github.io/CS269-Winter2020/index.html</a></li>
+<li>Fairness and machine learning Limitations and Opportunities Solon Barocas, Moritz Hardt, Arvind Narayanan - <a href="https://fairmlbook.org/index.html">https://fairmlbook.org/index.html</a></li>
+</ul>
+<h2>Interpretability</h2>
+<ul>
+<li>ML Interpratation in python - <a href="https://github.com/jphall663/interpretable_machine_learning_with_python">https://github.com/jphall663/interpretable_machine_learning_with_python</a></li>
+<li>Explanatory Model Analysis - <a href="https://github.com/pbiecek/ema">https://github.com/pbiecek/ema</a></li>
+<li>Interesting resources related to XAI (Explainable Artificial Intelligence) - <a href="https://github.com/pbiecek/xai_resources">https://github.com/pbiecek/xai_resources</a></li>
+</ul>  </div>
+</article>
+          </div>
+      </div>
+  </div>
+  <div class="container">
+      <hr/>
+      <footer class="footer text-center text-muted">
+<p class="font-weight-light small">
+&copy;  2016 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+<a rel="license"
+   href="http://creativecommons.org/licenses/by-sa/4.0/"
+   target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+</a>
+<br/>
+Powered by <a href="http://getpelican.com" target="_blank">Pelican</a>. <a href="https://github.com/napsternxg/pelican-bootswatch" target="_blank">pelican-bootswatch</a> by <a href="https://shubhanshu.com">shubhanshu.com</a>. Made using <a href="http://getbootstrap.com/">Twitter Bootstrap</a> and <a href="http://bootswatch.com/litera/">Bootswatch litera</a> theme. Icons from <a href="http://glyphicons.com/">Glyphicons</a>.</p>
+      </footer>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44393164-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics --></html>
