@@ -50,5 +50,5 @@ jobs:
           git checkout gh-pages
           git add .
           git diff-index --quiet HEAD || git commit -m "Updated Blog using $GITHUB_SHA"
-          git push
+          git push origin HEAD
 
