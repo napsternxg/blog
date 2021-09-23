@@ -56,8 +56,9 @@ JINJA_ENVIRONMENT = {
         'lstrip_blocks': True,
         'extensions': [],
 }
-IPYNB_IGNORE_CSS = True
-IPYNB_COLORSCHEME='monokai'
+#IPYNB_SKIP_CSS=True
+#IPYNB_IGNORE_CSS = True
+#IPYNB_COLORSCHEME='monokai'
 
 ## PATHS
 OUTPUT_PATH="docs"
@@ -98,8 +99,7 @@ CC_LICENSE = {
 #THEME='../pelican-themes/Flex'
 THEME='../pelican-themes/pelican-bootswatch'
 SITELOGO = '/assets/images/pic.jpg'
-PYGMENTS_STYLE='monokai'
-
+#PYGMENTS_STYLE='monokai'
 BOOTSTRAP_THEME='paper'
 BOOTSTRAP_FLUID=True
 COPYRIGHT_YEAR = 2016
