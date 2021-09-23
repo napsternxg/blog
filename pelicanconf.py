@@ -47,8 +47,8 @@ RELATIVE_URLS = True
 
 MARKUP = ('md', 'ipynb')
 
-PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup']
+from pelican_jupyter import markup as nb_markup
+PLUGINS = [nb_markup]
 IGNORE_FILES = ['.ipynb_checkpoints']
 JINJA_EXTENSIONS = []
 JINJA_ENVIRONMENT = {
