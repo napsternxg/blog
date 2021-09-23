@@ -56,6 +56,8 @@ JINJA_ENVIRONMENT = {
         'lstrip_blocks': True,
         'extensions': [],
 }
+IPYNB_IGNORE_CSS = True
+IPYNB_COLORSCHEME='monokai'
 
 ## PATHS
 OUTPUT_PATH="docs"
@@ -83,7 +85,6 @@ PAGE_URL = '{slug}.html'
 
 
 DISQUS_SITENAME = "shubhanshu-blog"
-IPYNB_IGNORE_CSS = True
 GOOGLE_ANALYTICS='UA-44393164-1'
 TWITTER_USERNAME='TheShubhanshu'
 CC_LICENSE = {
@@ -97,7 +98,8 @@ CC_LICENSE = {
 #THEME='../pelican-themes/Flex'
 THEME='../pelican-themes/pelican-bootswatch'
 SITELOGO = '/assets/images/pic.jpg'
-PYGMENTS_STYLE='native'
+PYGMENTS_STYLE='monokai'
+
 BOOTSTRAP_THEME='paper'
 BOOTSTRAP_FLUID=True
 COPYRIGHT_YEAR = 2016
