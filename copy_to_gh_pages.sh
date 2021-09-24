@@ -14,7 +14,8 @@ else
     git fetch origin gh-pages
     git checkout gh-pages
     git add .
-    git diff-index --quiet HEAD || git commit -c user.name=github-actions -c user.email=github-actions@github.com -m "${COMMIT_MSG}"
+    git diff-index --quiet HEAD
+    git commit -c user.name=github-actions -c user.email=github-actions@github.com -m "${COMMIT_MSG}"
     git push origin HEAD
 fi
 
