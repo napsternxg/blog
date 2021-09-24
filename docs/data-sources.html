@@ -6,9 +6,9 @@
 
     <link rel="stylesheet" type="text/css" href="https://shubhanshu.com/blog/theme/stylesheet/style.min.css">
 
-  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.1.3/litera/bootstrap.min.css" rel="stylesheet" integrity="sha384-JuAGGg3c8UPrWdf0N8ZPJyOHkACruI9+mbl0C+H6XSYOqv9xIdiUSKehRyA8jUol" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.1/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha512-lClzayU/EqX2Du6vlZ1CDtYxqI311AxmlqlUH6oqJvSb8bcZ+04JsCnZWzh9lEOUsER0vzz2r69nRBnT1+ZJ2w==" crossorigin="anonymous">
 
-  <link rel="stylesheet" type="text/css" href="https://shubhanshu.com/blog/theme/pygments/native.min.css">
+  <link rel="stylesheet" type="text/css" href="https://shubhanshu.com/blog/theme/pygments/monokai.min.css">
   <link rel="stylesheet" type="text/css" href="https://shubhanshu.com/blog/theme/font-awesome/css/font-awesome.min.css">
 
 
@@ -38,17 +38,18 @@
 </head>
 <body>
   <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
           <a class="navbar-brand" href="https://shubhanshu.com/blog">Interpreting Models</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="navbarColor03">
-              <ul class="navbar-nav mr-auto">
-                  <li class="nav-item dropdown show">
-                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="true">Notes</a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <ul class="navbar-nav me-auto">
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Notes</a>
+                      <div class="dropdown-menu">
                           <a class="dropdown-item" href="https://shubhanshu.com/blog/data-mining.html#data-mining">Data Mining</a>
                           <a class="dropdown-item" href="https://shubhanshu.com/blog/data-sources.html#data-sources">Data Sources</a>
                           <a class="dropdown-item" href="https://shubhanshu.com/blog/deeplearning.html#deeplearning">Deep Learning</a>
@@ -76,6 +77,7 @@
 </a></li>
 
               </ul>
+          </div>
           </div>
       </nav>
   </div>
@@ -284,13 +286,11 @@
          height="15"/>
 </a>
 <br/>
-Powered by <a href="http://getpelican.com" target="_blank">Pelican</a>. <a href="https://github.com/napsternxg/pelican-bootswatch" target="_blank">pelican-bootswatch</a> by <a href="https://shubhanshu.com">shubhanshu.com</a>. Made using <a href="http://getbootstrap.com/">Twitter Bootstrap</a> and <a href="http://bootswatch.com/litera/">Bootswatch litera</a> theme. Icons from <a href="http://glyphicons.com/">Glyphicons</a>.</p>
+Powered by <a href="http://getpelican.com" target="_blank">Pelican</a>. <a href="https://github.com/napsternxg/pelican-bootswatch" target="_blank">pelican-bootswatch</a> by <a href="https://shubhanshu.com">shubhanshu.com</a>. Made using <a href="http://getbootstrap.com/">Twitter Bootstrap</a> and <a href="http://bootswatch.com/cyborg/">Bootswatch cyborg</a> theme. Icons from <a href="http://glyphicons.com/">Glyphicons</a>.</p>
       </footer>
   </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <!-- Google Analytics -->
 <script type="text/javascript">
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
