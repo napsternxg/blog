@@ -19,11 +19,14 @@ else
     else
         echo "DUMMY_USER=$DUMMY_USER, reusing env user."
     fi
+    cp -r ./docs ../
     git fetch origin gh-pages
     git checkout gh-pages
+    rsync -a --delete ../docs/ ./docs/
     git add .
     git diff-index --quiet HEAD || git commit -m "${COMMIT_MSG}"
     git push origin HEAD
+    git checkout master
 fi
 
 
