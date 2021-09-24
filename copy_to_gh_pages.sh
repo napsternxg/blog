@@ -2,6 +2,8 @@
 set -e
 
 COMMIT_MSG=${1:-Updated blog}
+DUMMY_USER=${DUMMY_USER:-1}
+
 echo "making a commit with message=${COMMIT_MSG}";
 
 if [ $DEBUG -eq "1" ];
@@ -9,8 +11,14 @@ then
     echo "DEBUGGING";
 else
     echo "RUNNING";
-    git config user.name github-actions
-    git config user.email github-actions@github.com
+    if [ $DUMMY_USER == 1 ];
+    then
+        echo "DUMMY_USER=$DUMMY_USER, setting new users."
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+    else
+        echo "DUMMY_USER=$DUMMY_USER, reusing env user."
+    fi
     git fetch origin gh-pages
     git checkout gh-pages
     git add .
