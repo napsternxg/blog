@@ -56,7 +56,7 @@ JINJA_ENVIRONMENT = {
         'extensions': [],
 }
 IPYNB_SKIP_CSS=True
-#IPYNB_IGNORE_CSS = True
+IPYNB_IGNORE_CSS = True
 #IPYNB_COLORSCHEME='monokai'
 
 ## PATHS
