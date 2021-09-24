@@ -50,13 +50,12 @@ MARKUP = ('md', 'ipynb')
 from pelican_jupyter import markup as nb_markup
 PLUGINS = [nb_markup]
 IGNORE_FILES = ['.ipynb_checkpoints']
-JINJA_EXTENSIONS = []
 JINJA_ENVIRONMENT = {
         'trim_blocks': True,
         'lstrip_blocks': True,
         'extensions': [],
 }
-#IPYNB_SKIP_CSS=True
+IPYNB_SKIP_CSS=True
 #IPYNB_IGNORE_CSS = True
 #IPYNB_COLORSCHEME='monokai'
 
@@ -98,8 +97,13 @@ CC_LICENSE = {
 #THEME='../pelican-themes/pelican-bootstrap3'
 #THEME='../pelican-themes/Flex'
 THEME='../pelican-themes/pelican-bootswatch'
+BOOTSWATCH_THEME="cyborg"
+BOOTSWATCH_VERSION="5.1.1"
+BOOTSWATCH_INTEGRITY_SHA384="sha512-lClzayU/EqX2Du6vlZ1CDtYxqI311AxmlqlUH6oqJvSb8bcZ+04JsCnZWzh9lEOUsER0vzz2r69nRBnT1+ZJ2w=="
+BOOTSWATCH_CDN="https://cdnjs.cloudflare.com/ajax/libs/bootswatch"
+
 SITELOGO = '/assets/images/pic.jpg'
-#PYGMENTS_STYLE='monokai'
+PYGMENTS_STYLE='monokai'
 BOOTSTRAP_THEME='paper'
 BOOTSTRAP_FLUID=True
 COPYRIGHT_YEAR = 2016
