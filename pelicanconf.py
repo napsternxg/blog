@@ -97,10 +97,12 @@ CC_LICENSE = {
 #THEME='../pelican-themes/pelican-bootstrap3'
 #THEME='../pelican-themes/Flex'
 THEME='../pelican-themes/pelican-bootswatch'
-BOOTSWATCH_THEME="cyborg"
-BOOTSWATCH_VERSION="5.1.1"
-BOOTSWATCH_INTEGRITY_SHA384="sha512-lClzayU/EqX2Du6vlZ1CDtYxqI311AxmlqlUH6oqJvSb8bcZ+04JsCnZWzh9lEOUsER0vzz2r69nRBnT1+ZJ2w=="
 BOOTSWATCH_CDN="https://cdnjs.cloudflare.com/ajax/libs/bootswatch"
+BOOTSWATCH_THEME="litera"
+BOOTSWATCH_VERSION="5.1.1"
+#BOOTSWATCH_INTEGRITY_SHA384="sha512-lClzayU/EqX2Du6vlZ1CDtYxqI311AxmlqlUH6oqJvSb8bcZ+04JsCnZWzh9lEOUsER0vzz2r69nRBnT1+ZJ2w=="
+BOOTSWATCH_INTEGRITY_SHA384="sha512-Ze0T5yoPnXhcETAFZDb7QSgCVQa1QDkA1c+wrFiRdSqcVXOnyutqKxOzt/vE3Qo9Sqto5EdJuBxQ7LLyOd3ofg=="
+BOOTSWATCH_NAV_THEME="light"
 
 SITELOGO = '/assets/images/pic.jpg'
 PYGMENTS_STYLE='monokai'
