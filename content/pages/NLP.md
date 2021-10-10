@@ -409,6 +409,7 @@ Summary: Links related to NLP resources
 * Wikipedia Entity Linking Editor Reccomendations - [Code](https://github.com/wikimedia/research-mwaddlink) [Datasets](https://analytics.wikimedia.org/published/datasets/one-off/research-mwaddlink/enwiki/) [Paper](https://arxiv.org/abs/2105.15110)
 * WikiCheck: Wikipedia based Fact Checking - https://github.com/trokhymovych/WikiCheck [Paper](https://arxiv.org/abs/2109.00835)
 * AIDA Entity Linking (Mapped to Wikidata) - https://github.com/aaaton/herd/tree/master/src/main/resources/evaluation
+* CMU Movie Summary Corpus - https://github.com/ucinlp/GenderQuant/tree/master/data/raw/summaries
 
 ## Shared tasks, competitions
 
