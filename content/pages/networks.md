@@ -25,6 +25,7 @@ Summary: Social Networks and Network Related documents
 * VAX Network epidemic game: http://vax.herokuapp.com/
 * The NetLogo NW Extension for Network Analysis - https://github.com/NetLogo/NW-Extension
 * GraphBLAS - https://github.com/GraphBLAS/GraphBLAS-Pointers
+* CREATING EFFECTIVE NETWORK DATA VISUALIZATION WITH D3.JS @ELIJAH_MEEKS - http://elijahmeeks.com/networkviz/
 
 ## Datasets: 
 
