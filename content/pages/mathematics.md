@@ -32,6 +32,11 @@ Summary: Links related to mathematics
 * [Calculus One MOOC](https://mooculus.osu.edu/lectures)
 * [Calculus Blue by Robert Ghist - comic style calculus - covers basic to advanced concepts](https://www.math.upenn.edu/~ghrist/)
 
+## Convex Optimization
+
+* [Convex Optimization - Euclidean Distance Geometry](https://meboo.convexoptimization.com/Meboo.html)
+* [Convex Optimization Resources](https://convexoptimization.com/)
+
 # Category theory
 
 * [Applied Category Theory Course](https://www.azimuthproject.org/azimuth/show/Applied+Category+Theory+Course)
