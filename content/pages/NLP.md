@@ -71,6 +71,7 @@ Summary: Links related to NLP resources
 * NERD evaluation - https://nerd.readthedocs.io/en/latest/evaluation.html
 * MedCAT can be used to extract information from Electronic Health Records (EHRs) and link it to biomedical ontologies like SNOMED-CT and UMLS - https://github.com/CogStack/MedCAT
 * PyTerrier - A Python framework for performing information retrieval experiments, building on http://terrier.org/ -  https://github.com/terrier-org/pyterrier
+* JamSpell - Spelling correction (works in python) - https://github.com/bakwc/JamSpell
 
 ### Pretrained embeddings and models
 * ELMO for Many Languages - https://github.com/HIT-SCIR/ELMoForManyLangs
@@ -410,6 +411,12 @@ Summary: Links related to NLP resources
 * WikiCheck: Wikipedia based Fact Checking - https://github.com/trokhymovych/WikiCheck [Paper](https://arxiv.org/abs/2109.00835)
 * AIDA Entity Linking (Mapped to Wikidata) - https://github.com/aaaton/herd/tree/master/src/main/resources/evaluation
 * CMU Movie Summary Corpus - https://github.com/ucinlp/GenderQuant/tree/master/data/raw/summaries
+* MS Marco Keyphrase Extraction - https://microsoft.github.io/msmarco/
+* Keyphrase Extraction datasets - https://github.com/memray/OpenNMT-kpg-release
+* JTubeSpeech: Corpus of speech collected from YouTube - https://github.com/sarulab-speech/jtubespeech
+* WikiNews - Annotated at multiple levels - http://www.newsreader-project.eu/results/data/wikinews/
+* Linked Hypernym dataset attaches entity articles in English, German and Dutch Wikipedia linked to DBPedia - https://ner.vse.cz/datasets/linkedhypernyms/
+* Entity Linking in Queries Resources - http://hasibi.com/resources/
 
 ## Shared tasks, competitions
 

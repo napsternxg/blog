@@ -24,8 +24,9 @@ Summary: Social Networks and Network Related documents
 * Resources on KRL: knowledge representation learning. KE: knowledge embedding: https://github.com/thunlp/KRLPapers
 * VAX Network epidemic game: http://vax.herokuapp.com/
 * The NetLogo NW Extension for Network Analysis - https://github.com/NetLogo/NW-Extension
-* GraphBLAS - https://github.com/GraphBLAS/GraphBLAS-Pointers
+* GraphBLAS - https://github.com/GraphBLAS/GraphBLAS-Pointers - [Tutorial](https://github.com/GraphBLAS-Tutorials/SIAM-Tutorial/blob/main/GraphBLAS_Tutorial_202103_python.pdf)
 * CREATING EFFECTIVE NETWORK DATA VISUALIZATION WITH D3.JS @ELIJAH_MEEKS - http://elijahmeeks.com/networkviz/
+* INCOMPLETENESS IN NETWORKS: BIASES, SKEWED RESULTS, AND SOME SOLUTIONS - http://eliassi.org/kdd19_tut_network_discovery_slides.pdf
 
 ## Datasets: 
 
@@ -48,6 +49,7 @@ Summary: Social Networks and Network Related documents
 * Netzschleuder - 3k+ graph datasets - https://networks.skewed.de/
 * The KONECT Project - 1.3k+ networks - http://konect.cc/
 * Case Law Project (US Cases Open Text as well as Case Citation Networks) - https://case.law/download/
+* Primer for Network Analysis - https://github.com/DennyBorsboom/NatureMethodsPrimer_NetworkAnalysis
 
 
 ## Theory

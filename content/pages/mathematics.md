@@ -31,6 +31,7 @@ Summary: Links related to mathematics
 * [Open Calculus - open source calculus resources](https://opencalculus.wordpress.com/)
 * [Calculus One MOOC](https://mooculus.osu.edu/lectures)
 * [Calculus Blue by Robert Ghist - comic style calculus - covers basic to advanced concepts](https://www.math.upenn.edu/~ghrist/)
+* [THE MATHEMATICS OF DIFFUSION](http://www-eng.lbl.gov/~shuman/NEXT/MATERIALS&COMPONENTS/Xe_damage/Crank-The-Mathematics-of-Diffusion.pdf)
 
 ## Convex Optimization
 

@@ -14,6 +14,7 @@ Summary: Machine Learning concepts and traditional resources
 * List of various scikits - http://scikits.appspot.com/scikits
 * Information Theoretical Estimators (ITE) in Python - https://bitbucket.org/szzoli/ite-in-python/src/master/ [Paper](https://arxiv.org/abs/1405.2106)
 * HYPERBOLIC DEEP LEARNING - A nascent and promising field - http://hyperbolicdeeplearning.com/
+* Optimial Transport - https://pythonot.github.io/quickstart.html
 
 
 ## ML Engineering
@@ -99,6 +100,7 @@ Summary: Machine Learning concepts and traditional resources
 * Continual Unsupervised Representation Learning - https://arxiv.org/abs/1910.14481
 * Continual Learning Papers Library by ContinualAI - https://www.zotero.org/groups/2623909/continual_learning_papers/library
 * Sequoia A Playground for research at the intersection of Continual, Reinforcement, and Self-Supervised Learning. - https://github.com/lebrice/Sequoia
+* Continual Learning: Towards “Broad” AI Winter 2021, A Course offered by the Université de Montréal - https://sites.google.com/view/ift6760-b2021/schedule?authuser=0
 
 ## Multi task learning
 

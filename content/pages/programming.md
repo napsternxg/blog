@@ -10,6 +10,10 @@ Summary: Links related to programming
 * UIUC Intro to Competitive Programming - https://pages.github-dev.cs.illinois.edu/sig-icpc/cs491-wf/syllabus/
 * William Fiset Youtube Playlists on various topics - https://www.youtube.com/user/purpongie/playlists
 
+## Books
+
+* Software Engineering at Google - https://abseil.io/resources/swe_at_google.2.pdf
+
 ## Implementations
 
 * The Stony Brook Algorithm Repository - http://algorist.com/algorist.html
@@ -28,3 +32,4 @@ Summary: Links related to programming
 
 * http://prismoskills.appspot.com/lessons/Dynamic_Programming/Chapter_01_-_Introduction.jsp
 * https://medium.freecodecamp.org/demystifying-dynamic-programming-3efafb8d4296
+* Dynamic Programming in Functional Programming - https://functional-algorithms-verified.org/functional_algorithms_verified.pdf
