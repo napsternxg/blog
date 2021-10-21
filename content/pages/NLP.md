@@ -417,7 +417,8 @@ Summary: Links related to NLP resources
 * WikiNews - Annotated at multiple levels - http://www.newsreader-project.eu/results/data/wikinews/
 * Linked Hypernym dataset attaches entity articles in English, German and Dutch Wikipedia linked to DBPedia - https://ner.vse.cz/datasets/linkedhypernyms/
 * Entity Linking in Queries Resources - http://hasibi.com/resources/
-* WNUT 2020 NER - https://github.com/jeniyat/WNUT_2020_NER
+* WNUT 2020 NER on wet lab protocol data - https://github.com/jeniyat/WNUT_2020_NER
+* WNUT 2020 Relation Extraction on wet lab protocol data - https://github.com/jeniyat/WNUT_2020_RE
 * Stack Overflow NER - https://github.com/jeniyat/StackOverflowNER
  
 
