@@ -72,6 +72,7 @@ Summary: Links related to NLP resources
 * MedCAT can be used to extract information from Electronic Health Records (EHRs) and link it to biomedical ontologies like SNOMED-CT and UMLS - https://github.com/CogStack/MedCAT
 * PyTerrier - A Python framework for performing information retrieval experiments, building on http://terrier.org/ -  https://github.com/terrier-org/pyterrier
 * JamSpell - Spelling correction (works in python) - https://github.com/bakwc/JamSpell
+* WNUT 2020 NER - https://github.com/jeniyat/WNUT_2020_NER
 
 ### Pretrained embeddings and models
 * ELMO for Many Languages - https://github.com/HIT-SCIR/ELMoForManyLangs
