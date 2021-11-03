@@ -420,6 +420,7 @@ Summary: Links related to NLP resources
 * WNUT 2020 NER on wet lab protocol data - https://github.com/jeniyat/WNUT_2020_NER
 * WNUT 2020 Relation Extraction on wet lab protocol data - https://github.com/jeniyat/WNUT_2020_RE
 * Stack Overflow NER - https://github.com/jeniyat/StackOverflowNER
+* Kensho derived wikimedia data [Wikipedia + Wikidata] - https://www.kaggle.com/kenshoresearch/kensho-derived-wikimedia-data
  
 
 ## Shared tasks, competitions
