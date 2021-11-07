@@ -422,6 +422,7 @@ Summary: Links related to NLP resources
 * Stack Overflow NER - https://github.com/jeniyat/StackOverflowNER
 * Kensho derived wikimedia data [Wikipedia + Wikidata] - https://www.kaggle.com/kenshoresearch/kensho-derived-wikimedia-data
 * Abstract Meaning Representation Corpus - https://github.com/IBM/transition-amr-parser/tree/master
+* NER on Material Science Papers - https://github.com/olivettigroup/annotated-materials-syntheses
  
 
 ## Shared tasks, competitions
