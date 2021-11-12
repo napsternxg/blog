@@ -146,12 +146,13 @@ Summary: Machine Learning concepts and traditional resources
 * Javascript animated examples from Artificial Intelligence - A Modern Approach by Stuart Russell and Peter Norvig: http://aimacode.github.io/aima-javascript/
 
 
-## ML Bias
+## Fair ML and ML Bias
 
 * Tutorial - https://github.com/Jindong-Explainable-AI/Bias_in_Machine_Learning
 * Using Big Data to Solve Economic and Social Problems - https://opportunityinsights.org/course/
 * CS269 - Special Topic in AI: Fairness, Accountability, and Transparency in Natural Language Processing - https://uclanlp.github.io/CS269-Winter2020/index.html
 * Fairness and machine learning Limitations and Opportunities Solon Barocas, Moritz Hardt, Arvind Narayanan - https://fairmlbook.org/index.html
+* Challenges of incorporating algorithmic fairness into practice - https://algorithmicbiasinpractice.wordpress.com/slides/
 
 ## Interpretability
 
