@@ -55,6 +55,13 @@ Summary: Links related to mathematics
 * [Ganja.js - Visualization tools for Geometric Algebra](https://github.com/enkimute/ganja.js)
 * [clifford: Geometric Algebra for Python](https://github.com/pygae/clifford)
 
+# Lie Groups
+
+* [Lie theory for the roboticist](https://www.youtube.com/watch?v=nHOcoIyJj2o) - Very good introduction. [Shorter version](https://www.youtube.com/watch?v=QR1p0Rabuww) [Cheatsheet](https://github.com/artivis/manif/blob/devel/paper/Lie_theory_cheat_sheet.pdf) [Paper](https://arxiv.org/abs/1812.01537)
+
+## Tools
+* [Manif](https://github.com/artivis/manif)
+
 # Mathematics for Social Justice
 
 ## Books
