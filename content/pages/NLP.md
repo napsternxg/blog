@@ -423,7 +423,23 @@ Summary: Links related to NLP resources
 * Kensho derived wikimedia data [Wikipedia + Wikidata] - https://www.kaggle.com/kenshoresearch/kensho-derived-wikimedia-data
 * Abstract Meaning Representation Corpus - https://github.com/IBM/transition-amr-parser/tree/master
 * NER on Material Science Papers - https://github.com/olivettigroup/annotated-materials-syntheses
- 
+* Multilingual Dataset for Named Entity Recognition, Entity Linking and Stance Detection in Historical Newspapers - https://zenodo.org/record/4573313#.Yd_Ssb3MJ3g [Annotation guidelines](https://zenodo.org/record/4574199#.Yd_TYb3MJ3g)
+* Webis Query Interpretation Corpus 2022 (Webis-QInC-22) - https://zenodo.org/record/5820673#.Yd_Tor3MJ3g
+* Webis Query Spelling Corpus 2017 (Webis-QSpell-17) - https://zenodo.org/record/3570912 
+* Webis-WebSeg-20 - 42,450 crowdsourced segmentations for 8,490 web pages from the Webis-Web-Archive-17 - https://zenodo.org/record/3988124#.Yd_UNL3MJ3g
+* Webis Abstractive Snippet Corpus 2020 - More than 10 million <webpage, abstractive snippet> pairs / 3.5 million <query, webpage, abstractive snippet> pairs were collected. - https://zenodo.org/record/3653834
+* Webis TripAdvisor Corpus 2014 (Webis-Tripad-14) - includes user meta-data - https://zenodo.org/record/3266882
+* Webis Query Segmentation Corpus 2010 (Webis-QSeC-10) - https://zenodo.org/record/3256198
+* Webis Crowd Paraphrase Corpus 2011 (Webis-CPC-11) - https://zenodo.org/record/3251771
+* Webis Cross-Lingual Sentiment Dataset 2010 (Webis-CLS-10) - https://zenodo.org/record/3251672
+* Webis-Revenue-10 (Entity Linking for Revenue statements) - https://zenodo.org/record/3257461
+* Webis-Debate-16 (A collection of phrases classified as argumentative or non-argumentative) - https://zenodo.org/record/3251804
+* Same Side Stance Classification Resampled Datasets - https://zenodo.org/record/5380989#.Yd_XGr3MJ3g
+* Benchmark for the evaluation of Named Entity Linking over ancient documents - https://zenodo.org/record/3490333#.Yd_Xib3MJ3g
+* HOME-Alcar (Aligned and Annotated Cartularies) corpus (to train Handwritten Text Recognition (HTR) and Named Entity Recognition (NER)) - https://zenodo.org/record/5600884#.Yd_Ylr3MJ3g
+* TAC KBP English Entity Linking - Comprehensive Training and Evaluation Data 2009-2013 - https://abacus.library.ubc.ca/dataset.xhtml?persistentId=hdl:11272.1/AB2/LCPM63 - [English](https://abacus.library.ubc.ca/dataset.xhtml?persistentId=hdl:11272.1/AB2/SRPNPS) - [Chinese](https://abacus.library.ubc.ca/dataset.xhtml?persistentId=hdl:11272.1/AB2/XOE0NF) [Spanish](https://abacus.library.ubc.ca/dataset.xhtml?persistentId=hdl:11272.1/AB2/HL83QO)
+* E3C Disorder Entity Recognizer - Multilingual - https://live.european-language-grid.eu/catalogue/tool-service/9283 
+* Effective Crowdsourcing of Multiple Tasks for Comprehensive Information Extraction (NER, NEL, REL) - https://figshare.com/articles/dataset/Effective_Crowdsourcing_of_Multiple_Tasks_for_Comprehensive_Information_Extraction/7935185
 
 ## Shared tasks, competitions
 
