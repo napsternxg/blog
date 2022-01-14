@@ -13,6 +13,7 @@ Summary: Links related to mathematics
   - http://mei.org.uk/geogebra-tasks
 * Geogebra tutorials: https://www.geogebra.org/m/t6v92Gdz
 * Video lecture courses with interactive content: https://lmqm.xyz
+* [JSXGraph](https://jsxgraph.uni-bayreuth.de/wp/about/index.html) 
 
 # N-dimensional spaces
 
@@ -61,6 +62,11 @@ Summary: Links related to mathematics
 
 ## Tools
 * [Manif](https://github.com/artivis/manif)
+
+# Complex Systems
+
+* [Nonlinear Dynamics 1: Geometry of Chaos](https://chaosbook.org/course1/index.html)
+
 
 # Mathematics for Social Justice
 
