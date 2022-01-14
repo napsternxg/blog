@@ -7,7 +7,7 @@ Authors: Shubhanshu Mishra
 Summary: Wordle One Shot Solution (Hack)
 
 
-![Wordle Hack GIF](./assets/wordle-hack.gif)
+![Wordle Hack GIF]({attach}/assets/wordle-hack.gif)
 
 **NOTE: This is a hack to get the wordle solution**
 

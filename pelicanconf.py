@@ -7,11 +7,20 @@ SITENAME = u'Interpreting Models'
 SITEURL = 'http://localhost:8000'
 
 MARKDOWN = {
-        "extension_configs": {
-            "pymdownx.magiclink": {}
-            },
-        "output_format": "html5"
-        }
+    'extension_configs': {
+        'markdown.extensions.extra': {},
+        'markdown.extensions.admonition': {},
+        'markdown.extensions.codehilite': {
+            'css_class': 'highlight'
+        },
+        'markdown.extensions.meta': {},
+        "pymdownx.magiclink": {},
+        'markdown.extensions.toc': {
+            'permalink': 'true',
+        },
+    },
+    "output_format": "html5"
+}        
 
 GITHUB_URL='https://github.com/napsternxg/blog'
 PATH = 'content'
