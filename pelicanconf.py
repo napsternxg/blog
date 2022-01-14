@@ -57,7 +57,7 @@ RELATIVE_URLS = True
 MARKUP = ('md', 'ipynb')
 
 from pelican_jupyter import markup as nb_markup
-PLUGINS = [nb_markup]
+PLUGINS = [nb_markup, 'extract_toc']
 IGNORE_FILES = ['.ipynb_checkpoints']
 JINJA_ENVIRONMENT = {
         'trim_blocks': True,
