@@ -110,9 +110,9 @@
 
   <div>
     <p><strong>Authors: Ankit Kumar, Ozan Irsoy, Peter Ondruska, Mohit Iyyer, James Bradbury, Ishaan Gulrajani, Victor Zhong, Romain Paulus, Richard Socher</strong></p>
-<h2>Overview</h2>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>This paper presents a general purpose neural network framework called Dynamic Memory Networks (DMN), for solving NLP tasks such as question answering (QnA), text classification for sentiment analysis, and Part-of-Speech (POS) tagging. The authors achieve this by converting each task into its equivalent QnA form e.g. "What is the sentiment?", "POS tags?" etc. They report state of the art accuracy on all the tasks.</p>
-<h2>Thoughts</h2>
+<h2 id="thoughts">Thoughts<a class="headerlink" href="#thoughts" title="Permanent link">&para;</a></h2>
 <p>The paper proposes an end-to-end differentiable NN module called DMN. It consists of 4 parts, an input module, question module, episodic memory module and an answer module. Their works appear quite similar to the MemNN neural network with the main difference being the episodic memory module, which is an attention based recurrent module over the input hidden states and the question state. The authors argue that in many cases multiple passes over all the facts and question can help in better question answering. This is also demonstrated in their visualization of the attention matrix for the sentiment analysis case. This application is also demonstrated to work quite well for the question answering tasks.</p>
 <p>Some highlights of the paper are:</p>
 <ul>
@@ -124,26 +124,27 @@
 <p>One important thing which comes out from the comparison is that the CNN models are quite close to RNN models in performance for sentiment and POS tagging tasks. I would be interested in knowing, if this is because of similar properties of CNN which can encode attention during convolution and pooling operations. Also, given the fact that RNNs are sometimes more expensive to train than CNN, should we try out more CNN applications in NLP, probably a CNN over the attention matrix.</p>
 <p>For the multi-sentence input, I would be interested in knowing how the DMN performns if there is an output from the Input module per token for each sentence. I think this will give the module more fine-grained control over the details in each sentence, especially, when it involved path finding and positonal arguments.</p>
 <p>Overall, I think this paper is another important step in the direction of end-to-end NLP, and supports the the prediction of Christopher Manning of "Deep Learning Tsunami in NLP". Given the previous seminal work in the MemNN paper as well as the NLP from Scratch paper, this work also will get more researchers involved in using end to end sequence to sequence learning approaches in NLP tasks.</p>
-<h3>Reference</h3>
-<p><code>@article{DBLP:journals/corr/KumarISBEPOGS15,
-author = {Ankit Kumar and
-Ozan Irsoy and
-Jonathan Su and
-James Bradbury and
-Robert English and
-Brian Pierce and
-Peter Ondruska and
-Ishaan Gulrajani and
-Richard Socher},
-title = {Ask Me Anything: Dynamic Memory Networks for Natural Language Processing},
-journal = {CoRR},
-volume = {abs/1506.07285},
-year = {2015},
-url = {http://arxiv.org/abs/1506.07285},
-timestamp = {Wed, 01 Jul 2015 15:10:24 +0200},
-biburl = {http://dblp.uni-trier.de/rec/bib/journals/corr/KumarISBEPOGS15},
-bibsource = {dblp computer science bibliography, http://dblp.org}
-}</code></p>
+<h3 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nv">@article</span><span class="err">{</span><span class="nl">DBLP</span><span class="p">:</span><span class="n">journals</span><span class="o">/</span><span class="k">corr</span><span class="o">/</span><span class="n">KumarISBEPOGS15</span><span class="p">,</span><span class="w"></span>
+<span class="n">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="n">Ankit</span><span class="w"> </span><span class="n">Kumar</span><span class="w"> </span><span class="ow">and</span><span class="w"></span>
+<span class="n">Ozan</span><span class="w"> </span><span class="n">Irsoy</span><span class="w"> </span><span class="ow">and</span><span class="w"></span>
+<span class="n">Jonathan</span><span class="w"> </span><span class="n">Su</span><span class="w"> </span><span class="ow">and</span><span class="w"></span>
+<span class="n">James</span><span class="w"> </span><span class="n">Bradbury</span><span class="w"> </span><span class="ow">and</span><span class="w"></span>
+<span class="n">Robert</span><span class="w"> </span><span class="n">English</span><span class="w"> </span><span class="ow">and</span><span class="w"></span>
+<span class="n">Brian</span><span class="w"> </span><span class="n">Pierce</span><span class="w"> </span><span class="ow">and</span><span class="w"></span>
+<span class="n">Peter</span><span class="w"> </span><span class="n">Ondruska</span><span class="w"> </span><span class="ow">and</span><span class="w"></span>
+<span class="n">Ishaan</span><span class="w"> </span><span class="n">Gulrajani</span><span class="w"> </span><span class="ow">and</span><span class="w"></span>
+<span class="n">Richard</span><span class="w"> </span><span class="n">Socher</span><span class="err">}</span><span class="p">,</span><span class="w"></span>
+<span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="n">Ask</span><span class="w"> </span><span class="n">Me</span><span class="w"> </span><span class="nl">Anything</span><span class="p">:</span><span class="w"> </span><span class="k">Dynamic</span><span class="w"> </span><span class="n">Memory</span><span class="w"> </span><span class="n">Networks</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">Natural</span><span class="w"> </span><span class="k">Language</span><span class="w"> </span><span class="n">Processing</span><span class="err">}</span><span class="p">,</span><span class="w"></span>
+<span class="n">journal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="k">CoRR</span><span class="err">}</span><span class="p">,</span><span class="w"></span>
+<span class="n">volume</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="nf">abs</span><span class="o">/</span><span class="mf">1506.07285</span><span class="err">}</span><span class="p">,</span><span class="w"></span>
+<span class="nf">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="mi">2015</span><span class="err">}</span><span class="p">,</span><span class="w"></span>
+<span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">arxiv</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="nf">abs</span><span class="o">/</span><span class="mf">1506.07285</span><span class="err">}</span><span class="p">,</span><span class="w"></span>
+<span class="nc">timestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="n">Wed</span><span class="p">,</span><span class="w"> </span><span class="mi">01</span><span class="w"> </span><span class="n">Jul</span><span class="w"> </span><span class="mi">2015</span><span class="w"> </span><span class="mi">15</span><span class="err">:</span><span class="mi">10</span><span class="err">:</span><span class="mi">24</span><span class="w"> </span><span class="o">+</span><span class="mi">0200</span><span class="err">}</span><span class="p">,</span><span class="w"></span>
+<span class="n">biburl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">dblp</span><span class="p">.</span><span class="n">uni</span><span class="o">-</span><span class="n">trier</span><span class="p">.</span><span class="n">de</span><span class="o">/</span><span class="n">rec</span><span class="o">/</span><span class="n">bib</span><span class="o">/</span><span class="n">journals</span><span class="o">/</span><span class="k">corr</span><span class="o">/</span><span class="n">KumarISBEPOGS15</span><span class="err">}</span><span class="p">,</span><span class="w"></span>
+<span class="n">bibsource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="n">dblp</span><span class="w"> </span><span class="n">computer</span><span class="w"> </span><span class="n">science</span><span class="w"> </span><span class="n">bibliography</span><span class="p">,</span><span class="w"> </span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">dblp</span><span class="p">.</span><span class="n">org</span><span class="err">}</span><span class="w"></span>
+<span class="err">}</span><span class="w"></span>
+</code></pre></div>
   </div>
 
 
