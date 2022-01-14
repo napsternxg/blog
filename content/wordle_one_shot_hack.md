@@ -18,7 +18,7 @@ Summary: Wordle One Shot Solution (Hack)
 I am not doing anything fancy. It is just that the solution is always available on the page and I am reading it and firing the keypresses to get answer.
 
 !!! note
-  Be reminded that **you should not copy JS from strangers on your pages, it can be used to steal your passwords or other sensitive information**. You can read the full code used here and more details at: https://shubhanshu.com/blog/wordle-hack.html#wordle-hack. Learn about internet security from A PROJECT OF THE ELECTRONIC FRONTIER FOUNDATION: SURVEILLANCE SELF-DEFENSE: TIPS, TOOLS AND HOW-TOS FOR SAFER ONLINE COMMUNICATIONS course from https://ssd.eff.org/en
+    Be reminded that **you should not copy JS from strangers on your pages, it can be used to steal your passwords or other sensitive information**. You can read the full code used here and more details at: https://shubhanshu.com/blog/wordle-hack.html#wordle-hack. Learn about internet security from A PROJECT OF THE ELECTRONIC FRONTIER FOUNDATION: SURVEILLANCE SELF-DEFENSE: TIPS, TOOLS AND HOW-TOS FOR SAFER ONLINE COMMUNICATIONS course from https://ssd.eff.org/en
 
 
 ## How to use
