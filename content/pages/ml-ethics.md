@@ -13,6 +13,10 @@ Summary: Notes and links related to machine learning ethics
 * Law for Computer Scientists - https://lawforcomputerscientists.pubpub.org/
 * Berkeley course on Social Movements and Social Media - https://docs.google.com/document/d/1BFvpSxBOZoKayRUayCZfyUaolj6FEwH7muc5bfYWkRA/edit
 
+## Books
+
+* PATTERNS, PREDICTIONS, AND ACTIONS: A story about machine learning - Moritz Hardt and Benjamin Recht - https://mlstory.org/index.html
+
 ## Tools
 
 * The Bias and Fairness Audit Toolkit - https://github.com/dssg/aequitas

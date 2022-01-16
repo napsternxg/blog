@@ -9,16 +9,37 @@ Summary: Wordle One Shot Solution (Hack)
 
 ![Wordle Hack GIF]({attach}/assets/wordle-hack.gif)
 
+## Table of content
+
 [TOC]
 
-**NOTE: This is a hack to get the [wordle](https://www.powerlanguage.co.uk/wordle/) solution**
+## Finding the solution on the page
 
-**NOTE: Use it only when you are frustrated and just want to see the solution. It will ruin the fun of the game for you.**
+!!! note
+    This is a hack to get the [wordle](https://www.powerlanguage.co.uk/wordle/) solution. Use it only when you are frustrated and just want to see the solution. It will ruin the fun of the game for you.
 
-I am not doing anything fancy. It is just that the solution is always available on the page and I am reading it and firing the keypresses to get answer.
+If you just want to know the solution, you follow these steps: 
+
+* Right click on Wordle page.
+* Click Inspect.
+* Click the Applications tab.
+* Click on Local Storage.
+* Click on `<wordle url>`.
+* Click on the value `gameState`.
+* See value of variable `solution`. 
+
+This is exactly what I did the first time to find the solution. Just wanted to simulate as a single click item, hence the solution which follows.
+
+<div>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">If you just want to know the solution, you can do the following. <br><br>Right click &gt; Inspect &gt; Applications &gt; Local Storage &gt; &lt;wordle url&gt; &gt; gameState &gt; {See value of solution}. <br><br>That is actually how I found the solution. Just wanted to simulate it via JS, hence the bookmark. <a href="https://t.co/IwwsygnqY9">pic.twitter.com/IwwsygnqY9</a></p>&mdash; Shubhanshu Mishra (@TheShubhanshu) <a href="https://twitter.com/TheShubhanshu/status/1481805738402099203?ref_src=twsrc%5Etfw">January 14, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+## Automating it via code/bookmark button
 
 !!! danger
     Be reminded that **you should not copy JS from strangers on your pages, it can be used to steal your passwords or other sensitive information**. You can read the full code used here and more details at: https://shubhanshu.com/blog/wordle-hack.html#wordle-hack. Learn about internet security from A PROJECT OF THE ELECTRONIC FRONTIER FOUNDATION: SURVEILLANCE SELF-DEFENSE: TIPS, TOOLS AND HOW-TOS FOR SAFER ONLINE COMMUNICATIONS course from https://ssd.eff.org/en
+
+I am not doing anything fancy. It is just that the solution is always available on the page and I am reading it and firing the keypresses to get answer.    
 
 
 ## How to use

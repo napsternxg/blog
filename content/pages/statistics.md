@@ -47,9 +47,11 @@ Summary: Notes and links related to statistics
 * Lord's paradox, Simpson's paradox explanations - https://m-clark.github.io/docs/lord/index.html
 * Probability cheatsheet - https://github.com/wzchen/probability_cheatsheet
 * Importance Samplint - https://statweb.stanford.edu/~owen/mc/Ch-var-is.pdf
+* Montel-Carlo - https://github.com/szcf-weiya/MonteCarlo/blob/master/References/Monte-Carlo-Strategies-in-Scientific-Computing.pdf
 
 ## Uncertainity
-* https://erikbern.com/2018/10/08/the-hackers-guide-to-uncertainty-estimates.html
+
+* Monte-Carlo-Strategies-in-Scientific-Computing - https://erikbern.com/2018/10/08/the-hackers-guide-to-uncertainty-estimates.html
 
 ## Extreme value theory (EVT)
 
@@ -62,3 +64,8 @@ Summary: Notes and links related to statistics
 ## Datasets
 
 * https://www.visualdata.io/
+
+
+## Economics
+
+* [The Economy](https://www.core-econ.org/the-economy/)

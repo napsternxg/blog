@@ -53,6 +53,7 @@ Summary: Links related to mathematics
 * [Tensor Calculus](https://grinfeld.org/)
 
 ## Tools
+
 * [Ganja.js - Visualization tools for Geometric Algebra](https://github.com/enkimute/ganja.js)
 * [clifford: Geometric Algebra for Python](https://github.com/pygae/clifford)
 
@@ -61,6 +62,7 @@ Summary: Links related to mathematics
 * [Lie theory for the roboticist](https://www.youtube.com/watch?v=nHOcoIyJj2o) - Very good introduction. [Shorter version](https://www.youtube.com/watch?v=QR1p0Rabuww) [Cheatsheet](https://github.com/artivis/manif/blob/devel/paper/Lie_theory_cheat_sheet.pdf) [Paper](https://arxiv.org/abs/1812.01537)
 
 ## Tools
+
 * [Manif](https://github.com/artivis/manif)
 
 # Complex Systems

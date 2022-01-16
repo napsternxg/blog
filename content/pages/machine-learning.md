@@ -6,6 +6,7 @@ Authors: Shubhanshu Mishra
 Summary: Machine Learning concepts and traditional resources
 
 ## Novel tools
+
 * Scikit-multilearn - http://scikit.ml/index.html
 * scikit-multiflow: for multi-output/multi-label and stream data.- https://scikit-multiflow.github.io/
 * scikit-plot: plot models analysis - https://github.com/reiinakano/scikit-plot
@@ -18,12 +19,19 @@ Summary: Machine Learning concepts and traditional resources
 
 
 ## ML Engineering
+
 * https://github.com/EthicalML/awesome-production-machine-learning
 * https://www.oreilly.com/radar/what-you-need-to-know-about-product-management-for-ai/
 * https://github.com/Intellicode/ml-engineering-resources
 * Top 30 ML in Production Resources - https://mlinproduction.com/top-30-ml-in-production-resources-guide/
 * 150 Successful Machine Learning Models: 6 Lessons Learned at Booking.com - https://dl.acm.org/doi/pdf/10.1145/3292500.3330744
 * Rules of Machine Learning: Best Practices for ML Engineering - http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf [On google blog](https://developers.google.com/machine-learning/guides/rules-of-ml)
+* Troubleshooting Deep Neural Networks: A Field Guide to Fixing Your Model - http://josh-tobin.com/troubleshooting-deep-neural-networks.html
+* Lecture 6: MLOps Infrastructure & Tooling - https://fullstackdeeplearning.com/spring2021/lecture-6/
+* Made with ML - https://madewithml.com/
+* Machine Learning Systems Design - https://stanford-cs329s.github.io/2021/slides/cs329s_12_slides_sara_google.pdf
+* Monitering model/data Drift - https://evidentlyai.com/blog/ml-monitoring-do-i-need-data-drift
+
 
 ## Theory
 
@@ -36,6 +44,9 @@ Summary: Machine Learning concepts and traditional resources
 * [Linear Algebra by Jim Hefferon](https://hefferon.net/linearalgebra/)
 * [Intro to linear algebra in Numpy](https://pabloinsente.github.io/intro-linear-algebra)
 * [DATASET SHIFT IN MACHINE LEARNING](http://www.acad.bg/ebook/ml/The.MIT.Press.Dataset.Shift.in.Machine.Learning.Feb.2009.eBook-DDU.pdf)
+* [Probability Divergences and Generative Models](https://www.gatsby.ucl.ac.uk/~gretton/coursefiles/mlss21_taipei.pdf) [Video](https://www.youtube.com/watch?v=Qwy9wuzrqfU)
+* [Generalized energy-based models](https://www.gatsby.ucl.ac.uk/~gretton//papers/gatech21.pdf) [Video](https://smartech.gatech.edu/handle/1853/65392)
+* [Kernel Methods](https://www.youtube.com/watch?v=alrKls6BORc)
 
 ## Optimization
 
@@ -60,6 +71,7 @@ Summary: Machine Learning concepts and traditional resources
 
 * Graphical Models, Exponential Families, and Variational Inference: https://people.eecs.berkeley.edu/~wainwrig/Papers/WaiJor08_FTML.pdf
 * Probabilistic Graphical Models stanford course: https://cs228.stanford.edu/ [\[Course notes\]](https://ermongroup.github.io/cs228-notes/)
+* Differential Inference: A Criminally Underused Tool - https://github.com/srush/ProbTalk/blob/main/talk.notebook.ipynb
 
 ## Extreme classification
 
@@ -78,6 +90,7 @@ Summary: Machine Learning concepts and traditional resources
 
 
 ## Concept Drift
+
 * [Handling Concept Drift](https://www.cs.waikato.ac.nz/~abifet/PAKDD2011/PAKDD11Tutorial_Handling_Concept_Drift.pdf)
 * [Learning under Concept Drift](https://arxiv.org/pdf/1010.4784.pdf)
 
@@ -94,6 +107,7 @@ Summary: Machine Learning concepts and traditional resources
 * [A tutorial on Thompson Sampling](https://arxiv.org/abs/1707.02038)
 
 ## Continual learning
+
 * Meta-Learning Representations for Continual Learning - https://github.com/khurramjaved96/mrcl
 * Distillation and Incremental Classifier Learning - https://github.com/khurramjaved96/incremental-learning
 * Awesome Continual Learning - https://github.com/khurramjaved96/awesome-continual-learning
@@ -110,6 +124,13 @@ Summary: Machine Learning concepts and traditional resources
 
 * [Tutorial using TF-Rank](http://ltr-tutorial-sigir19.isti.cnr.it/program-overview/)
 
+
+## Neural Ordinary Differential Equations
+
+* https://github.com/msurtsukov/neural-ode
+* https://jontysinai.github.io/jekyll/update/2019/01/18/understanding-neural-odes.html
+* Augumented Neural ODE: https://arxiv.org/abs/1904.01681
+
 ## Active learning
 
 * Importance weighted active learning for streams: http://www.yisongyue.com/courses/cs159/lectures/active_learning.pdf
@@ -118,6 +139,7 @@ Summary: Machine Learning concepts and traditional resources
 * [Human-in-the-Loop Machine Learning by Robert Munro](https://www.manning.com/books/human-in-the-loop-machine-learning) - [Active learning in pytorch from book](https://github.com/rmunro/pytorch_active_learning) [Cheatsheat on active learning](http://www.robertmunro.com/Advanced_Active_Learning_Cheatsheet.pdf)
 
 ## Multiple instance learning
+
 * Good survey: https://arxiv.org/abs/1612.03365
 
 ## Self-supervised learning
@@ -136,6 +158,7 @@ Summary: Machine Learning concepts and traditional resources
 * Good overview of all types of transfer learning approaches (in Chinese): https://github.com/jindongwang/transferlearning
 
 ## Multimodal learning
+
 * Multimodal Machine Learning: A Survey and Taxonomy - https://arxiv.org/abs/1705.09406
 
 
