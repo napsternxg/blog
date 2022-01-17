@@ -16,6 +16,7 @@ Summary: Notes and links related to machine learning ethics
 ## Books
 
 * PATTERNS, PREDICTIONS, AND ACTIONS: A story about machine learning - Moritz Hardt and Benjamin Recht - https://mlstory.org/index.html
+* Trust and Artificial Intelligence by Brian Stanton, Theodore Jensen - https://www.nist.gov/publications/trust-and-artificial-intelligence
 
 ## Tools
 

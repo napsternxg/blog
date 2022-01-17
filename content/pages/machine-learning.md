@@ -47,6 +47,7 @@ Summary: Machine Learning concepts and traditional resources
 * [Probability Divergences and Generative Models](https://www.gatsby.ucl.ac.uk/~gretton/coursefiles/mlss21_taipei.pdf) [Video](https://www.youtube.com/watch?v=Qwy9wuzrqfU)
 * [Generalized energy-based models](https://www.gatsby.ucl.ac.uk/~gretton//papers/gatech21.pdf) [Video](https://smartech.gatech.edu/handle/1853/65392)
 * [Kernel Methods](https://www.youtube.com/watch?v=alrKls6BORc)
+* [Non-Euclidean Methods in Machine Learning - “Data has Shape and Shape has Meaning” - Stanford Course](http://graphics.stanford.edu/courses/cs468-20-fall/index.html)
 
 ## Optimization
 
@@ -115,6 +116,9 @@ Summary: Machine Learning concepts and traditional resources
 * Continual Learning Papers Library by ContinualAI - https://www.zotero.org/groups/2623909/continual_learning_papers/library
 * Sequoia A Playground for research at the intersection of Continual, Reinforcement, and Self-Supervised Learning. - https://github.com/lebrice/Sequoia
 * Continual Learning: Towards “Broad” AI Winter 2021, A Course offered by the Université de Montréal - https://sites.google.com/view/ift6760-b2021/schedule?authuser=0
+* A Wholistic View of Continual Learning with Deep Neural Networks: Forgotten Lessons and the Bridge to Active and Open World Learning - Martin Mundt - https://drive.google.com/file/d/1fDOwLI3_EXxeEZyRCbGXFPSv2i39Tf_A/view
+* [Tutorial 2: Out-of-distribution (OOD) Learning Week 3, Day 4: Continual Learning](https://deeplearning.neuromatch.io/tutorials/W3D4_ContinualLearning/student/W3D4_Tutorial2.html)
+
 
 ## Multi task learning
 
@@ -167,6 +171,7 @@ Summary: Machine Learning concepts and traditional resources
 * List of applications across various industries - https://github.com/firmai/industry-machine-learning#legal
 * Visual explanations of ML algorithms - http://visxai.io/2018.html
 * Javascript animated examples from Artificial Intelligence - A Modern Approach by Stuart Russell and Peter Norvig: http://aimacode.github.io/aima-javascript/
+* Adaptive Language Models in JavaScript - https://github.com/google-research/google-research/tree/master/jslm
 
 
 ## Fair ML and ML Bias
