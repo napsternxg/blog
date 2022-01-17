@@ -72,7 +72,7 @@ javascript:function act(e){window.dispatchEvent(new KeyboardEvent("keydown",e))}
 Code to copy is as follows:
 
 
-```{ .js linenos=true hl_lines="23 25" title="Bookmark code" }
+```{ .js }
 
 /*
 This is a hack to get the wordle solution
