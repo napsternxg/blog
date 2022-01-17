@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Interpreting Models</title><link href="https://shubhanshu.com/blog/" rel="alternate"></link><link href="https://shubhanshu.com/blog/feeds/all.atom.xml" rel="self"></link><id>https://shubhanshu.com/blog/</id><updated>2022-01-17T04:13:06-06:00</updated><subtitle>A journey towards model interpretability</subtitle><entry><title>Wordle One Shot Solution (Hack)</title><link href="https://shubhanshu.com/blog/wordle-hack.html" rel="alternate"></link><published>2022-01-13T10:20:00-06:00</published><updated>2022-01-17T04:13:06-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2022-01-13:/blog/wordle-hack.html</id><summary type="html">&lt;p&gt;Wordle One Shot Solution (Hack)&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Wordle Hack GIF" src="https://shubhanshu.com/blog/assets/wordle-hack.gif"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Interpreting Models</title><link href="https://shubhanshu.com/blog/" rel="alternate"></link><link href="https://shubhanshu.com/blog/feeds/all.atom.xml" rel="self"></link><id>https://shubhanshu.com/blog/</id><updated>2022-01-17T04:33:59-06:00</updated><subtitle>A journey towards model interpretability</subtitle><entry><title>Wordle One Shot Solution (Hack)</title><link href="https://shubhanshu.com/blog/wordle-hack.html" rel="alternate"></link><published>2022-01-13T10:20:00-06:00</published><updated>2022-01-17T04:33:59-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2022-01-13:/blog/wordle-hack.html</id><summary type="html">&lt;p&gt;Wordle One Shot Solution (Hack)&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Wordle Hack GIF" src="https://shubhanshu.com/blog/assets/wordle-hack.gif"&gt;&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#finding-the-solution-on-the-page"&gt;Finding the solution on the page&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#automating-it-via-codebookmark-button"&gt;Automating it via code/bookmark button&lt;/a&gt;&lt;/li&gt;
@@ -58,41 +58,41 @@
 &lt;li&gt;NOTE: Be reminded that you should not copy JS from strangers on your pages, it can be used to steal your passwords or other sensitive information.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Code to copy is as follows:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;42&lt;/span&gt;
-&lt;span class="normal"&gt;43&lt;/span&gt;
-&lt;span class="normal"&gt;44&lt;/span&gt;
-&lt;span class="normal"&gt;45&lt;/span&gt;
-&lt;span class="normal"&gt;46&lt;/span&gt;
-&lt;span class="normal"&gt;47&lt;/span&gt;
-&lt;span class="normal"&gt;48&lt;/span&gt;
-&lt;span class="normal"&gt;49&lt;/span&gt;
-&lt;span class="normal"&gt;50&lt;/span&gt;
-&lt;span class="normal"&gt;51&lt;/span&gt;
-&lt;span class="normal"&gt;52&lt;/span&gt;
-&lt;span class="normal"&gt;53&lt;/span&gt;
-&lt;span class="normal"&gt;54&lt;/span&gt;
-&lt;span class="normal"&gt;55&lt;/span&gt;
-&lt;span class="normal"&gt;56&lt;/span&gt;
-&lt;span class="normal"&gt;57&lt;/span&gt;
-&lt;span class="normal"&gt;58&lt;/span&gt;
-&lt;span class="normal"&gt;59&lt;/span&gt;
-&lt;span class="normal"&gt;60&lt;/span&gt;
-&lt;span class="normal"&gt;61&lt;/span&gt;
-&lt;span class="normal"&gt;62&lt;/span&gt;
-&lt;span class="normal"&gt;63&lt;/span&gt;
-&lt;span class="normal"&gt;64&lt;/span&gt;
-&lt;span class="normal"&gt;65&lt;/span&gt;
-&lt;span class="normal"&gt;66&lt;/span&gt;
-&lt;span class="normal"&gt;67&lt;/span&gt;
-&lt;span class="normal"&gt;68&lt;/span&gt;
-&lt;span class="normal"&gt;69&lt;/span&gt;
-&lt;span class="normal"&gt;70&lt;/span&gt;
-&lt;span class="normal"&gt;71&lt;/span&gt;
-&lt;span class="normal"&gt;72&lt;/span&gt;
-&lt;span class="normal"&gt;73&lt;/span&gt;
-&lt;span class="normal"&gt;74&lt;/span&gt;
-&lt;span class="normal"&gt;75&lt;/span&gt;
-&lt;span class="normal"&gt;76&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;
+&lt;span class="normal"&gt;27&lt;/span&gt;
+&lt;span class="normal"&gt;28&lt;/span&gt;
+&lt;span class="normal"&gt;29&lt;/span&gt;
+&lt;span class="normal"&gt;30&lt;/span&gt;
+&lt;span class="normal"&gt;31&lt;/span&gt;
+&lt;span class="normal"&gt;32&lt;/span&gt;
+&lt;span class="normal"&gt;33&lt;/span&gt;
+&lt;span class="normal"&gt;34&lt;/span&gt;
+&lt;span class="normal"&gt;35&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
 &lt;span class="cm"&gt;This is a hack to get the wordle solution&lt;/span&gt;
 
 &lt;span class="cm"&gt;NOTE: Use it only when you are frustrated and just want to see the solution. It will ruin the fun of the game for you. &lt;/span&gt;
@@ -128,7 +128,7 @@
 &lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="nx"&gt;alert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;warn_message&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content><category term="posts"></category><category term="hacks"></category><category term="web-technolgy"></category></entry><entry><title>Part 1 - Understanding extreme value theory - Basics</title><link href="https://shubhanshu.com/blog/evt-part-1-basics.html" rel="alternate"></link><published>2019-07-21T02:10:00-05:00</published><updated>2022-01-17T04:13:06-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2019-07-21:/blog/evt-part-1-basics.html</id><summary type="html">&lt;p&gt;Basics of Extreme Value Theory for modeling extreme values.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content><category term="posts"></category><category term="hacks"></category><category term="web-technolgy"></category></entry><entry><title>Part 1 - Understanding extreme value theory - Basics</title><link href="https://shubhanshu.com/blog/evt-part-1-basics.html" rel="alternate"></link><published>2019-07-21T02:10:00-05:00</published><updated>2022-01-17T04:33:59-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2019-07-21:/blog/evt-part-1-basics.html</id><summary type="html">&lt;p&gt;Basics of Extreme Value Theory for modeling extreme values.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -509,7 +509,7 @@ $$&lt;p&gt;Surprisingly, like the central limit theorem, these values also conve
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="machine learning"></category><category term="statistics"></category></entry><entry><title>Time dependent models</title><link href="https://shubhanshu.com/blog/time-dependent-models.html" rel="alternate"></link><published>2017-09-11T14:05:00-05:00</published><updated>2022-01-17T04:13:06-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-11:/blog/time-dependent-models.html</id><summary type="html">&lt;p&gt;Implementing time dependent models using sklearn.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+</content><category term="posts"></category><category term="machine learning"></category><category term="statistics"></category></entry><entry><title>Time dependent models</title><link href="https://shubhanshu.com/blog/time-dependent-models.html" rel="alternate"></link><published>2017-09-11T14:05:00-05:00</published><updated>2022-01-17T04:33:59-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-11:/blog/time-dependent-models.html</id><summary type="html">&lt;p&gt;Implementing time dependent models using sklearn.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="Time-Dependent-Classification/Regression"&gt;Time Dependent Classification/Regression&lt;a class="anchor-link" href="#Time-Dependent-Classification/Regression"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;I have been interested in time dependent classification/regression for a long time. Most machine learning models are implemented as static models where our assumptions about the relationships between the input variables and the parameters of the models is fixed. This assumption is mostly true, however, there are cases where the model parameters for the same input variable must be allowed to change with time. Furthermore, the change in the model parameters should not be large compared to their value at the previous timesteps. One simple way to approach this problem is to have a different model for each timestep, however, this will not allow us to learn from all the data at hand. The second approach is to have a different parameter for each timestep and a base set of parameters. This second approach although more appropriate will not allow us to enforce our constraint that the model parameters at a given timestep should not change too much from their value at the last timestep.&lt;/p&gt;
@@ -16175,7 +16175,7 @@ cgghhBCSlv4PgfNoADwBj8EAAAAASUVORK5CYII=
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="python"></category><category term="machine learning"></category></entry><entry><title>Pytorch RNN sequence tagging</title><link href="https://shubhanshu.com/blog/pytorch-rnn-sequence-tagging.html" rel="alternate"></link><published>2017-09-03T01:57:00-05:00</published><updated>2022-01-17T04:13:06-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-03:/blog/pytorch-rnn-sequence-tagging.html</id><summary type="html">&lt;p&gt;Introduction to writing RNN sequence tagging code using PyTorch.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+</content><category term="posts"></category><category term="python"></category><category term="machine learning"></category></entry><entry><title>Pytorch RNN sequence tagging</title><link href="https://shubhanshu.com/blog/pytorch-rnn-sequence-tagging.html" rel="alternate"></link><published>2017-09-03T01:57:00-05:00</published><updated>2022-01-17T04:33:59-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-03:/blog/pytorch-rnn-sequence-tagging.html</id><summary type="html">&lt;p&gt;Introduction to writing RNN sequence tagging code using PyTorch.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -18241,7 +18241,7 @@ Wall time: 58.7 s
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="python"></category><category term="machine learning"></category><category term="deeplearning"></category></entry><entry><title>Metropolis Hastings algorithm - a python primer</title><link href="https://shubhanshu.com/blog/metropolis-hastings-primer.html" rel="alternate"></link><published>2017-04-18T02:19:00-05:00</published><updated>2022-01-17T04:13:06-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-04-18:/blog/metropolis-hastings-primer.html</id><summary type="html">&lt;p&gt;A pure numpy and python based primer to implementing and visualizing Metropolis Hastings algorithm for MCMC sampling.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+</content><category term="posts"></category><category term="python"></category><category term="machine learning"></category><category term="deeplearning"></category></entry><entry><title>Metropolis Hastings algorithm - a python primer</title><link href="https://shubhanshu.com/blog/metropolis-hastings-primer.html" rel="alternate"></link><published>2017-04-18T02:19:00-05:00</published><updated>2022-01-17T04:33:59-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-04-18:/blog/metropolis-hastings-primer.html</id><summary type="html">&lt;p&gt;A pure numpy and python based primer to implementing and visualizing Metropolis Hastings algorithm for MCMC sampling.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -23063,7 +23063,7 @@ h6BbAAAAAElFTkSuQmCC
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="machine learning"></category><category term="implementation"></category><category term="bayesian"></category></entry><entry><title>Convex Optimization using CVXPY</title><link href="https://shubhanshu.com/blog/convex-optimization-cvxpy.html" rel="alternate"></link><published>2017-01-02T10:30:00-06:00</published><updated>2022-01-17T04:13:06-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-01-02:/blog/convex-optimization-cvxpy.html</id><summary type="html">&lt;p&gt;Trying out CVXPY after listening to Stephen P. Boyd's lectures from Machine Learning Summer School, Tubingen and Kyoto, 2015 - &lt;a href="http://web.stanford.edu/~boyd/papers/cvx_short_course.html"&gt;http://web.stanford.edu/~boyd/papers/cvx_short_course.html&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+</content><category term="posts"></category><category term="machine learning"></category><category term="implementation"></category><category term="bayesian"></category></entry><entry><title>Convex Optimization using CVXPY</title><link href="https://shubhanshu.com/blog/convex-optimization-cvxpy.html" rel="alternate"></link><published>2017-01-02T10:30:00-06:00</published><updated>2022-01-17T04:33:59-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-01-02:/blog/convex-optimization-cvxpy.html</id><summary type="html">&lt;p&gt;Trying out CVXPY after listening to Stephen P. Boyd's lectures from Machine Learning Summer School, Tubingen and Kyoto, 2015 - &lt;a href="http://web.stanford.edu/~boyd/papers/cvx_short_course.html"&gt;http://web.stanford.edu/~boyd/papers/cvx_short_course.html&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;$\DeclareMathOperator*{\argmin}{arg\,min}$&lt;/p&gt;
@@ -26006,7 +26006,7 @@ QmCC
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="machine learning"></category></entry><entry><title>Getting started with pelican</title><link href="https://shubhanshu.com/blog/getting-started-pelican.html" rel="alternate"></link><published>2016-11-08T10:30:00-06:00</published><updated>2022-01-17T04:13:06-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-11-08:/blog/getting-started-pelican.html</id><summary type="html">&lt;p&gt;Using pelican, jupyter notebook to start a blog.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+</content><category term="posts"></category><category term="machine learning"></category></entry><entry><title>Getting started with pelican</title><link href="https://shubhanshu.com/blog/getting-started-pelican.html" rel="alternate"></link><published>2016-11-08T10:30:00-06:00</published><updated>2022-01-17T04:33:59-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-11-08:/blog/getting-started-pelican.html</id><summary type="html">&lt;p&gt;Using pelican, jupyter notebook to start a blog.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="First-plot-using-pelican"&gt;First plot using pelican&lt;a class="anchor-link" href="#First-plot-using-pelican"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;I am trying this new format for blogging using jupyter notebooks and pelican library. The motivation is to easily share my experiments using notebooks and write accompanying thoughts.&lt;/p&gt;
