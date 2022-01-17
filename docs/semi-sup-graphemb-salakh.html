@@ -45,9 +45,9 @@
 
 </head>
 <body>
-  <div class="container">
+
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
+          <div class="container">
           <a class="navbar-brand" href="https://shubhanshu.com/blog">Interpreting Models</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -88,10 +88,10 @@
           </div>
           </div>
       </nav>
-  </div>
   <div class="container">
-      <div class="row">
-          <div class="col-lg-12" style="text-align: justify;">
+    <div class="row">
+        <div class="col-lg-12">
+          <main>
 <article class="single">
   <header>
       
@@ -107,18 +107,18 @@
   <hr/>
 
 
-  <div>
-    <p><strong>Authors: Zhilin Yang, William Cohen, Ruslan Salakhutdinov</strong></p>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+  <!--START: Article content-->
+  <p><strong>Authors: Zhilin Yang, William Cohen, Ruslan Salakhutdinov</strong></p>
+<h2 id="overview">Overview</h2>
 <p>This is an interesting paper which describes a semi-supervised learning algorithm for Graph Embedding. The authors have build up on the DeepWalk [1] and LINE [2] algorithms which learn embeddings of nodes in a graph in a similar way Word2Vec Skipgram model [3] learns word embeddings based on context. They add a semi-supervised component using both Transductive and Inductive learning, which utilizes partially labeled data to jointly train the model to predict the class of the labeled nodes and the context of the all nodes. The authors report an increase in accuracy over other semi-supervised methods, on several text classification, entity extraction and entity classification tasks.</p>
-<h2 id="thoughts">Thoughts<a class="headerlink" href="#thoughts" title="Permanent link">&para;</a></h2>
+<h2 id="thoughts">Thoughts</h2>
 <p>I found the paper to be really interesting because of its ability to lay some foundation in joint training of embeddings on labeled and unlabled data. The authors differentiate their paper from other semi-supervised algorithms in its use of graph to identify context of the instances, while at the same time using features of each instance.</p>
 <p>It is interesting to see, how many algorithms have build up on the word2vec skipgram approach to learn embeddings for the data instances. One of the major challenges with the approach is coming up with a proper way to generate the negative samples. Papers like DeepWalk and LINE use a random walk approach to generate the negative samples from the data. The authors have presented a really useful way to sample the positive and negative samples from the graph which, at the same time ensures that the labeled data is also present in each sample while training.</p>
 <p>The authors' presentation of the transductive and inductive variants of the algorithms, presents a framework to apply this approach to cases where the predictions need to be done on in-sample unlabeled data (transductive) as well as out of sample unlabeled data (inductive).</p>
 <p>One issue I found with the paper was the <em>Experiments</em> sections and the data used for the analysis. The CiteSeer, CORA and PubMed data are relatively small in my understanding, to describe the efficiency of this model. However, on the larger DIEL data, the algorithms' significant performance improvement can be taken as a measure of its strength over other mentioned algorithms.</p>
 <p>Overall, I think it is a very useful paper which will push the Machine Learning field forward by further utilizing the vector embedding approach and nicely incorporating it into a semi-supervised setting.</p>
 <p>It would be interesting to use the same approach on Skip-Thought vectors [4] or paragraph vectors connected by topics, users etc.</p>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h2 id="references">References</h2>
 <p>[1] Perozzi, Bryan, Rami Al-Rfou, and Steven Skiena. "Deepwalk: Online learning of social representations." Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining. ACM, 2014.</p>
 <p>[2] Tang, Jian, et al. "Line: Large-scale information network embedding." Proceedings of the 24th International Conference on World Wide Web. International World Wide Web Conferences Steering Committee, 2015.</p>
 <p>[3] Mikolov, Tomas, et al. "Distributed representations of words and phrases and their compositionality." Advances in neural information processing systems. 2013.</p>
@@ -129,9 +129,8 @@
 <span class="nf">Year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="mi">2016</span><span class="err">}</span><span class="p">,</span><span class="w"></span>
 <span class="n">Eprint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="nl">arXiv</span><span class="p">:</span><span class="mf">1603.08861</span><span class="err">}</span><span class="p">,</span><span class="w"></span>
 <span class="err">}</span><span class="w"></span>
-</code></pre></div>
-  </div>
-
+</code></pre></div>  
+  <!--END: Article content-->
 
 
     <div class="addthis_relatedposts_inline">
@@ -153,12 +152,15 @@
 </noscript>
 <!-- End Disqus -->
 </article>
-          </div>
-      </div>
+          </main>
+        </div>
+    </div>
   </div>
-  <div class="container">
-      <hr/>
-      <footer class="footer text-center text-muted">
+  <footer class="footer text-center text-muted">
+    <hr/>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
 <p class="font-weight-light small">
 &copy;  2016 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
 <a rel="license"
@@ -173,8 +175,10 @@
 </a>
 <br/>
 Powered by <a href="http://getpelican.com" target="_blank">Pelican</a>. <a href="https://github.com/napsternxg/pelican-bootswatch" target="_blank">pelican-bootswatch</a> by <a href="https://shubhanshu.com">shubhanshu.com</a>. Made using <a href="http://getbootstrap.com/">Twitter Bootstrap</a> and <a href="http://bootswatch.com/litera/">Bootswatch litera</a> theme. Icons from <a href="http://glyphicons.com/">Glyphicons</a>.</p>
-      </footer>
   </div>
+</div>
+  </div>
+  </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 <!-- Google Analytics -->

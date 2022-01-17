@@ -45,9 +45,9 @@
 
 </head>
 <body>
-  <div class="container">
+
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
+          <div class="container">
           <a class="navbar-brand" href="https://shubhanshu.com/blog">Interpreting Models</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -88,10 +88,10 @@
           </div>
           </div>
       </nav>
-  </div>
   <div class="container">
-      <div class="row">
-          <div class="col-lg-12" style="text-align: justify;">
+    <div class="row">
+        <div class="col-lg-12">
+          <main>
 <article class="single">
   <header>
       
@@ -107,11 +107,11 @@
   <hr/>
 
 
-  <div>
-    <p><strong>Authors: Ankit Kumar, Ozan Irsoy, Peter Ondruska, Mohit Iyyer, James Bradbury, Ishaan Gulrajani, Victor Zhong, Romain Paulus, Richard Socher</strong></p>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+  <!--START: Article content-->
+  <p><strong>Authors: Ankit Kumar, Ozan Irsoy, Peter Ondruska, Mohit Iyyer, James Bradbury, Ishaan Gulrajani, Victor Zhong, Romain Paulus, Richard Socher</strong></p>
+<h2 id="overview">Overview</h2>
 <p>This paper presents a general purpose neural network framework called Dynamic Memory Networks (DMN), for solving NLP tasks such as question answering (QnA), text classification for sentiment analysis, and Part-of-Speech (POS) tagging. The authors achieve this by converting each task into its equivalent QnA form e.g. "What is the sentiment?", "POS tags?" etc. They report state of the art accuracy on all the tasks.</p>
-<h2 id="thoughts">Thoughts<a class="headerlink" href="#thoughts" title="Permanent link">&para;</a></h2>
+<h2 id="thoughts">Thoughts</h2>
 <p>The paper proposes an end-to-end differentiable NN module called DMN. It consists of 4 parts, an input module, question module, episodic memory module and an answer module. Their works appear quite similar to the MemNN neural network with the main difference being the episodic memory module, which is an attention based recurrent module over the input hidden states and the question state. The authors argue that in many cases multiple passes over all the facts and question can help in better question answering. This is also demonstrated in their visualization of the attention matrix for the sentiment analysis case. This application is also demonstrated to work quite well for the question answering tasks.</p>
 <p>Some highlights of the paper are:</p>
 <ul>
@@ -123,7 +123,7 @@
 <p>One important thing which comes out from the comparison is that the CNN models are quite close to RNN models in performance for sentiment and POS tagging tasks. I would be interested in knowing, if this is because of similar properties of CNN which can encode attention during convolution and pooling operations. Also, given the fact that RNNs are sometimes more expensive to train than CNN, should we try out more CNN applications in NLP, probably a CNN over the attention matrix.</p>
 <p>For the multi-sentence input, I would be interested in knowing how the DMN performns if there is an output from the Input module per token for each sentence. I think this will give the module more fine-grained control over the details in each sentence, especially, when it involved path finding and positonal arguments.</p>
 <p>Overall, I think this paper is another important step in the direction of end-to-end NLP, and supports the the prediction of Christopher Manning of "Deep Learning Tsunami in NLP". Given the previous seminal work in the MemNN paper as well as the NLP from Scratch paper, this work also will get more researchers involved in using end to end sequence to sequence learning approaches in NLP tasks.</p>
-<h3 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h3>
+<h3 id="reference">Reference</h3>
 <div class="highlight"><pre><span></span><code><span class="nv">@article</span><span class="err">{</span><span class="nl">DBLP</span><span class="p">:</span><span class="n">journals</span><span class="o">/</span><span class="k">corr</span><span class="o">/</span><span class="n">KumarISBEPOGS15</span><span class="p">,</span><span class="w"></span>
 <span class="n">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="n">Ankit</span><span class="w"> </span><span class="n">Kumar</span><span class="w"> </span><span class="ow">and</span><span class="w"></span>
 <span class="n">Ozan</span><span class="w"> </span><span class="n">Irsoy</span><span class="w"> </span><span class="ow">and</span><span class="w"></span>
@@ -143,9 +143,8 @@
 <span class="n">biburl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">dblp</span><span class="p">.</span><span class="n">uni</span><span class="o">-</span><span class="n">trier</span><span class="p">.</span><span class="n">de</span><span class="o">/</span><span class="n">rec</span><span class="o">/</span><span class="n">bib</span><span class="o">/</span><span class="n">journals</span><span class="o">/</span><span class="k">corr</span><span class="o">/</span><span class="n">KumarISBEPOGS15</span><span class="err">}</span><span class="p">,</span><span class="w"></span>
 <span class="n">bibsource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="n">dblp</span><span class="w"> </span><span class="n">computer</span><span class="w"> </span><span class="n">science</span><span class="w"> </span><span class="n">bibliography</span><span class="p">,</span><span class="w"> </span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">dblp</span><span class="p">.</span><span class="n">org</span><span class="err">}</span><span class="w"></span>
 <span class="err">}</span><span class="w"></span>
-</code></pre></div>
-  </div>
-
+</code></pre></div>  
+  <!--END: Article content-->
 
 
     <div class="addthis_relatedposts_inline">
@@ -167,12 +166,15 @@
 </noscript>
 <!-- End Disqus -->
 </article>
-          </div>
-      </div>
+          </main>
+        </div>
+    </div>
   </div>
-  <div class="container">
-      <hr/>
-      <footer class="footer text-center text-muted">
+  <footer class="footer text-center text-muted">
+    <hr/>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
 <p class="font-weight-light small">
 &copy;  2016 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
 <a rel="license"
@@ -187,8 +189,10 @@
 </a>
 <br/>
 Powered by <a href="http://getpelican.com" target="_blank">Pelican</a>. <a href="https://github.com/napsternxg/pelican-bootswatch" target="_blank">pelican-bootswatch</a> by <a href="https://shubhanshu.com">shubhanshu.com</a>. Made using <a href="http://getbootstrap.com/">Twitter Bootstrap</a> and <a href="http://bootswatch.com/litera/">Bootswatch litera</a> theme. Icons from <a href="http://glyphicons.com/">Glyphicons</a>.</p>
-      </footer>
   </div>
+</div>
+  </div>
+  </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 <!-- Google Analytics -->

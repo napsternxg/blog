@@ -34,7 +34,7 @@
 <meta property="og:url" content="https://shubhanshu.com/blog/time-dependent-models.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2017-09-11 14:05:00-05:00"/>
-<meta property="article:modified_time" content="2022-01-16 23:51:33.612585-06:00"/>
+<meta property="article:modified_time" content="2022-01-17 04:13:06.072328-06:00"/>
 <meta property="article:author" content="https://shubhanshu.com/blog/author/shubhanshu-mishra.html">
 <meta property="article:section" content="posts"/>
 <meta property="article:tag" content="python"/>
@@ -45,9 +45,9 @@
 
 </head>
 <body>
-  <div class="container">
+
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
+          <div class="container">
           <a class="navbar-brand" href="https://shubhanshu.com/blog">Interpreting Models</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -88,10 +88,10 @@
           </div>
           </div>
       </nav>
-  </div>
   <div class="container">
-      <div class="row">
-          <div class="col-lg-12" style="text-align: justify;">
+    <div class="row">
+        <div class="col-lg-12">
+          <main>
 <article class="single">
   <header>
       
@@ -107,8 +107,8 @@
   <hr/>
 
 
-  <div>
-    <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+  <!--START: Article content-->
+  <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Time-Dependent-Classification/Regression">Time Dependent Classification/Regression<a class="anchor-link" href="#Time-Dependent-Classification/Regression">&#182;</a></h1><p>I have been interested in time dependent classification/regression for a long time. Most machine learning models are implemented as static models where our assumptions about the relationships between the input variables and the parameters of the models is fixed. This assumption is mostly true, however, there are cases where the model parameters for the same input variable must be allowed to change with time. Furthermore, the change in the model parameters should not be large compared to their value at the previous timesteps. One simple way to approach this problem is to have a different model for each timestep, however, this will not allow us to learn from all the data at hand. The second approach is to have a different parameter for each timestep and a base set of parameters. This second approach although more appropriate will not allow us to enforce our constraint that the model parameters at a given timestep should not change too much from their value at the last timestep.</p>
@@ -15774,9 +15774,8 @@ cgghhBCSlv4PgfNoADwBj8EAAAAASUVORK5CYII=
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
-
-  </div>
-
+  
+  <!--END: Article content-->
 
 
     <div class="addthis_relatedposts_inline">
@@ -15798,12 +15797,15 @@ cgghhBCSlv4PgfNoADwBj8EAAAAASUVORK5CYII=
 </noscript>
 <!-- End Disqus -->
 </article>
-          </div>
-      </div>
+          </main>
+        </div>
+    </div>
   </div>
-  <div class="container">
-      <hr/>
-      <footer class="footer text-center text-muted">
+  <footer class="footer text-center text-muted">
+    <hr/>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
 <p class="font-weight-light small">
 &copy;  2016 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
 <a rel="license"
@@ -15818,8 +15820,10 @@ cgghhBCSlv4PgfNoADwBj8EAAAAASUVORK5CYII=
 </a>
 <br/>
 Powered by <a href="http://getpelican.com" target="_blank">Pelican</a>. <a href="https://github.com/napsternxg/pelican-bootswatch" target="_blank">pelican-bootswatch</a> by <a href="https://shubhanshu.com">shubhanshu.com</a>. Made using <a href="http://getbootstrap.com/">Twitter Bootstrap</a> and <a href="http://bootswatch.com/litera/">Bootswatch litera</a> theme. Icons from <a href="http://glyphicons.com/">Glyphicons</a>.</p>
-      </footer>
   </div>
+</div>
+  </div>
+  </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 <!-- Google Analytics -->
