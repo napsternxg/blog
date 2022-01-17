@@ -16,7 +16,7 @@ MARKDOWN = {
         'markdown.extensions.meta': {},
         "pymdownx.magiclink": {},
         'markdown.extensions.toc': {
-            'permalink': 'true',
+            'title': 'Table of Contents',
         },
     },
     "output_format": "html5"

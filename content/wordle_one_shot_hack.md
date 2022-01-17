@@ -9,7 +9,6 @@ Summary: Wordle One Shot Solution (Hack)
 
 ![Wordle Hack GIF]({attach}/assets/wordle-hack.gif)
 
-## Table of content
 
 [TOC]
 
@@ -73,7 +72,7 @@ javascript:function act(e){window.dispatchEvent(new KeyboardEvent("keydown",e))}
 Code to copy is as follows:
 
 
-```js
+```{ .js linenos=true linenostart=42 hl_lines="23 25" title="Bookmark code" }
 
 /*
 This is a hack to get the wordle solution
