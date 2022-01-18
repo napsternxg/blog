@@ -455,6 +455,7 @@ Summary: Links related to NLP resources
 * Dataset of code-switched datasets - https://ritual.uh.edu/lince/datasets
 * NE3L named entities Arabic corpus - http://catalog.elra.info/en-us/repository/browse/ELRA-W0078/
 * DISRPT/sharedtask2021 - Discourse Unit Segmentation, Connective Detection and Discourse Relation Classification - https://github.com/disrpt/sharedtask2021
+* NER For Entity Linking - https://github.com/Babelscape/ner4el
 
 ## Shared tasks, competitions
 
