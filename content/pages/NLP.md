@@ -117,6 +117,7 @@ Summary: Links related to NLP resources
 * Unicode text segmentation - http://www.unicode.org/reports/tr29/
 * Datasets for Text Analysis - https://docs.google.com/spreadsheets/d/1I7cvuCBQxosQK2evTcdL3qtglaEPc0WFEs6rZMx-xiE/edit#gid=0
 * Multilingual stopwords - https://github.com/stopwords-iso/stopwords-iso
+* Entity Related Papers - https://github.com/HelloRusk/entity-related-papers/blob/master/README.md
 
 ## Lexicons
 
@@ -440,6 +441,19 @@ Summary: Links related to NLP resources
 * TAC KBP English Entity Linking - Comprehensive Training and Evaluation Data 2009-2013 - https://abacus.library.ubc.ca/dataset.xhtml?persistentId=hdl:11272.1/AB2/LCPM63 - [English](https://abacus.library.ubc.ca/dataset.xhtml?persistentId=hdl:11272.1/AB2/SRPNPS) - [Chinese](https://abacus.library.ubc.ca/dataset.xhtml?persistentId=hdl:11272.1/AB2/XOE0NF) [Spanish](https://abacus.library.ubc.ca/dataset.xhtml?persistentId=hdl:11272.1/AB2/HL83QO)
 * E3C Disorder Entity Recognizer - Multilingual - https://live.european-language-grid.eu/catalogue/tool-service/9283 
 * Effective Crowdsourcing of Multiple Tasks for Comprehensive Information Extraction (NER, NEL, REL) - https://figshare.com/articles/dataset/Effective_Crowdsourcing_of_Multiple_Tasks_for_Comprehensive_Information_Extraction/7935185
+* Query Expansion benchmarks - https://github.com/hosseinfani/ReQue/
+* DBPedia-Entity: benchmark for entity query relevance - https://iai-group.github.io/DBpedia-Entity/
+* Korean NER - https://github.com/kmounlp/NER
+* Few-NERD - Not only a Few-shot NER dataset - https://ningding97.github.io/fewnerd/
+*  Improving Named Entity Recognition in Noisy User-generated Text with Local Distance Neighbor Feature - https://data.mendeley.com/datasets/nsfdt6m47j/1
+* Finnish NER - https://turkunlp.org/turku-ner-corpus
+* Romainian NER - https://github.com/dumitrescustefan/ronec
+* Bulgarian NER - https://github.com/usmiva/bg-ner
+* Hungarian NER - https://github.com/nytud/NYTK-NerKor
+* MIM-GOLD-NER – Icelanding named entity recognition corpus - https://repository.clarin.is/repository/xmlui/handle/20.500.12537/42
+* Arabic Spanish, Arabic English, and English Spanish Parallel Corpus - http://www.lllf.uam.es/ING/Arabe_espa%C3%B1ol.html
+* Dataset of code-switched datasets - https://ritual.uh.edu/lince/datasets
+* NE3L named entities Arabic corpus - http://catalog.elra.info/en-us/repository/browse/ELRA-W0078/
 
 ## Shared tasks, competitions
 
