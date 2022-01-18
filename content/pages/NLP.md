@@ -454,6 +454,7 @@ Summary: Links related to NLP resources
 * Arabic Spanish, Arabic English, and English Spanish Parallel Corpus - http://www.lllf.uam.es/ING/Arabe_espa%C3%B1ol.html
 * Dataset of code-switched datasets - https://ritual.uh.edu/lince/datasets
 * NE3L named entities Arabic corpus - http://catalog.elra.info/en-us/repository/browse/ELRA-W0078/
+* DISRPT/sharedtask2021 - Discourse Unit Segmentation, Connective Detection and Discourse Relation Classification - https://github.com/disrpt/sharedtask2021
 
 ## Shared tasks, competitions
 
