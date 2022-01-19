@@ -456,6 +456,7 @@ Summary: Links related to NLP resources
 * NE3L named entities Arabic corpus - http://catalog.elra.info/en-us/repository/browse/ELRA-W0078/
 * DISRPT/sharedtask2021 - Discourse Unit Segmentation, Connective Detection and Discourse Relation Classification - https://github.com/disrpt/sharedtask2021
 * NER For Entity Linking - https://github.com/Babelscape/ner4el
+* Tracking Knowledge Propagation Across Wikipedia Languages - https://zenodo.org/record/4433137
 
 ## Shared tasks, competitions
 
