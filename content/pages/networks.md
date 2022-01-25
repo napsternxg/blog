@@ -50,6 +50,7 @@ Summary: Social Networks and Network Related documents
 * The KONECT Project - 1.3k+ networks - http://konect.cc/
 * Case Law Project (US Cases Open Text as well as Case Citation Networks) - https://case.law/download/
 * Primer for Network Analysis - https://github.com/DennyBorsboom/NatureMethodsPrimer_NetworkAnalysis
+* The Copenhagen Networks Study interaction data - https://figshare.com/articles/dataset/The_Copenhagen_Networks_Study_interaction_data/7267433/1?file=13389320
 
 
 ## Theory
@@ -76,6 +77,7 @@ Summary: Social Networks and Network Related documents
 * Little Ball of Fur - Sampling from Graphs - https://little-ball-of-fur.readthedocs.io/
 * NetworKit - Large Scale Network Analysis in Python - https://networkit.github.io/index.html
 * PathPy - Temporal Network Analysis - https://www.pathpy.net/index.html
+* Bandicoot:an open-source Python toolbox to analyze mobile phone metadata - https://cpg.doc.ic.ac.uk/bandicoot/
 
 ## Tutorials
 
