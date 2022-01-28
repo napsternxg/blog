@@ -36,8 +36,8 @@ Summary: Links related to visualizations
 * https://beta.observablehq.com - For prototyping with D3
 * https://github.com/nicgirault/circosJS - Circos Charts in JS using D3
 * https://excalidraw.com/ - Make handdrawn looking diagrams
-* Network + Timeline + 3d + 2d graphs in JS - https://visjs.org/
-
+* https://visjs.org/ - Network + Timeline + 3d + 2d graphs in JS
+* https://meyda.js.org/ - Audio visualization
 
 ## Diagrams
 
