@@ -136,6 +136,7 @@ Summary: Links related to many datasets
 * UTKFace Large Scale Face Dataset- https://susanqq.github.io/UTKFace/
 * Flickr Image Cropping Dataset - https://github.com/yiling-chen/flickr-cropping-dataset
 * Bob Ross Paintings with title and color pallet names - https://github.com/jwilber/Bob_Ross_Paintings
+* OCR Datasets: https://cneud.github.io/ocr-gt/
 
 ## Stream processing data
 * Data from The Neural Hawkes Process - https://github.com/HMEIatJHU/neurawkes - [Google drive link](https://drive.google.com/drive/folders/0BwqmV0EcoUc8UklIR1BKV25YR1U?usp=sharing)
