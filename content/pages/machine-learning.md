@@ -187,3 +187,7 @@ Summary: Machine Learning concepts and traditional resources
 * ML Interpratation in python - https://github.com/jphall663/interpretable_machine_learning_with_python
 * Explanatory Model Analysis - https://github.com/pbiecek/ema
 * Interesting resources related to XAI (Explainable Artificial Intelligence) - https://github.com/pbiecek/xai_resources
+
+## Control Theory
+* Engineering Media: Control theory posts, lectures, and book - https://engineeringmedia.com/
+* Resourcium - https://resourcium.org/
