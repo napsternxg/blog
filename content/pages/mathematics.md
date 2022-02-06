@@ -6,6 +6,12 @@ Authors: Shubhanshu Mishra
 Summary: Links related to mathematics
 
 
+# General
+
+* Foundations of Mathematics - http://sakharov.net/foundation.html
+* Making Mathematics Visible: Visualizing Modular Multiplication Tables Through Curve Stitching - https://www.geogebra.org/m/htzrfh4h
+
+
 # Interactive mathematics
 
 * Geogebra based courses: 
@@ -14,6 +20,7 @@ Summary: Links related to mathematics
 * Geogebra tutorials: https://www.geogebra.org/m/t6v92Gdz
 * Video lecture courses with interactive content: https://lmqm.xyz
 * [JSXGraph](https://jsxgraph.uni-bayreuth.de/wp/about/index.html) 
+* [Tungsteno IO - Interactive Math](https://www.tungsteno.io/)
 
 # N-dimensional spaces
 
@@ -21,10 +28,11 @@ Summary: Links related to mathematics
 * [There’s Plenty of Room in the Corners - Interactive Observable notebook](https://observablehq.com/@tophtucker/theres-plenty-of-room-in-the-corners)
 * [Conformal Models of the Hyperbolic Geometry - Slides](http://bulatov.org/math/1001/)
 
-# Real Analysis
+# Analysis
 * [Course notes from Cambridge analysis 1 course](https://theoremoftheweek.wordpress.com/category/cambridge-maths-tripos/ia-analysis-i/page/3/)
 * [Course notes from above course but more recent - this includes a very good introduction of the subject](https://gowers.wordpress.com/2014/01/11/introduction-to-cambridge-ia-analysis-i-2014/)
 * [Poetic and beautiful mathematical proofs](https://www.patrickstevens.co.uk/)
+* [Complex Analysis](https://complex-analysis.com/content/table_of_contents.html)
 
 # Calculus
 
@@ -51,6 +59,8 @@ Summary: Links related to mathematics
 * [Geometric Algebra Resources from University of Cambridge](http://geometry.mrao.cam.ac.uk/)
 * [BiVector.net](https://bivector.net/) - [Accompanying YouTube videos](https://www.youtube.com/watch?v=Fc5rlZ3Malw&list=PLrizc6KfD8q8KDw31lUARRIeugbIW3MHL)
 * [Tensor Calculus](https://grinfeld.org/)
+* [CS 15-458/858: Discrete Differential Geometry](https://brickisland.net/DDGSpring2021/assignments/)
+* [What is the Inverse of a Vector?](https://mattferraro.dev/posts/geometric-algebra)
 
 ## Tools
 
@@ -80,3 +90,8 @@ Summary: Links related to mathematics
 ## Pages
 
 * [Math and Social Justice: A Collaborative MTBoS Site](https://sites.google.com/site/mathandsocialjustice/curriculum-resources)
+
+
+# Economics
+
+* [Applied Empirical Methods](https://github.com/paulgp/applied-methods-phd#lectures-full-syllabus)

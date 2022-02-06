@@ -17,6 +17,8 @@ Summary: Notes and links related to machine learning ethics
 
 * PATTERNS, PREDICTIONS, AND ACTIONS: A story about machine learning - Moritz Hardt and Benjamin Recht - https://mlstory.org/index.html
 * Trust and Artificial Intelligence by Brian Stanton, Theodore Jensen - https://www.nist.gov/publications/trust-and-artificial-intelligence
+* How Humans Judge Machines - https://www.judgingmachines.com/
+* Fairness and machine learning Limitations and Opportunities Solon Barocas, Moritz Hardt, Arvind Narayanan - https://fairmlbook.org/index.html
 
 ## Tools
 
@@ -32,6 +34,12 @@ Summary: Notes and links related to machine learning ethics
 * ML gone wrong, a beginners explanation of AI ethics - https://machinesgonewrong.com
 * Content moderation reading list by Social Media Collective lab - https://socialmediacollective.org/content-moderation-reading-list/
 * ML Fairness overview - https://developers.google.com/machine-learning/fairness-overview
+* Tutorial Series: Limits of Social Data - http://www.aolteanu.com/SocialDataLimitsTutorial/index.html
+* Tutorial - https://github.com/Jindong-Explainable-AI/Bias_in_Machine_Learning
+* Using Big Data to Solve Economic and Social Problems - https://opportunityinsights.org/course/
+* CS269 - Special Topic in AI: Fairness, Accountability, and Transparency in Natural Language Processing - https://uclanlp.github.io/CS269-Winter2020/index.html
+* Challenges of incorporating algorithmic fairness into practice - https://algorithmicbiasinpractice.wordpress.com/slides/
+
 
 ## Datasets
 

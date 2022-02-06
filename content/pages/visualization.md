@@ -5,12 +5,21 @@ Slug: visualization
 Authors: Shubhanshu Mishra
 Summary: Links related to visualizations
 
+
+## Links
+
+* TextVis Browser: A Visual Survey of Text Visualization Techniques - https://textvis.lnu.se/
+* TrustMLVis Browser: A Visual Survey in Enhancing Trust in Machine Learning (ML) Models with Visualization - https://trustmlvis.lnu.se/
+* Bad data guide - https://github.com/Quartz/bad-data-guide
+
 ## Courses/Tutorials/Books
 
 * Visualization Curriculum using Altair and Vega-Lite - https://github.com/uwdata/visualization-curriculum
 * Open source book in R Fundamentals of Data Visualization by Claus O. Wilke - https://serialmentor.com/dataviz/
 * Courses by Michael Freeman - http://mfviz.com/
 * Multiple esoteric chart types using Plotly Express - https://nicolas.kruchten.com/semiology_of_graphics/
+* Pixar Story telling course on Khan Academy - https://www.khanacademy.org/computing/pixar/storytelling
+* Scientific Visualization: Python + Matplotlib - https://github.com/rougier/scientific-visualization-book
 
 ## Learn D3
 
@@ -38,12 +47,21 @@ Summary: Links related to visualizations
 * https://excalidraw.com/ - Make handdrawn looking diagrams
 * https://visjs.org/ - Network + Timeline + 3d + 2d graphs in JS
 * https://meyda.js.org/ - Audio visualization
+* https://bioicons.com/ - Bioicons
+* https://github.com/penrose/penrose - Penrose - Create beautiful diagrams just by typing mathematical notation in plain text.
+* https://github.com/marceloprates/prettymaps - Pretty maps using OSM and matplotlib
+* https://github.com/deeptools/pyGenomeTracks - plot beautiful and highly customizable genome browser tracks
 
 ## Diagrams
 
 * Draw.io - https://draw.io
 * PlantUML - https://plantuml.com/
 * Online graphviz - https://dreampuf.github.io/GraphvizOnline/#
+
+## Shaders
+
+* Smoothstep.io - https://docs.smoothstep.io/tutorial/
+* Shadertoy - https://www.shadertoy.com/
 
 
 

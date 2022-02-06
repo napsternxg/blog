@@ -5,7 +5,7 @@ Slug: ml
 Authors: Shubhanshu Mishra
 Summary: Machine Learning concepts and traditional resources
 
-## Novel tools
+## Tools
 
 * Scikit-multilearn - http://scikit.ml/index.html
 * scikit-multiflow: for multi-output/multi-label and stream data.- https://scikit-multiflow.github.io/
@@ -16,11 +16,16 @@ Summary: Machine Learning concepts and traditional resources
 * Information Theoretical Estimators (ITE) in Python - https://bitbucket.org/szzoli/ite-in-python/src/master/ [Paper](https://arxiv.org/abs/1405.2106)
 * HYPERBOLIC DEEP LEARNING - A nascent and promising field - http://hyperbolicdeeplearning.com/
 * Optimial Transport - https://pythonot.github.io/quickstart.html
+* EMLP: Equivariant Representations layers - https://emlp.readthedocs.io/en/latest/index.html
+* BOLT: 10x faster matrix and vector operations - https://github.com/dblalock/bolt
+* Macarico: learning to search - https://github.com/hal3/macarico
+* A Collection of Conference & School Notes in Machine Learning - https://github.com/visual-ml-notes/visual-machine-learning-notes
 
 
 ## ML Engineering
 
 * https://github.com/EthicalML/awesome-production-machine-learning
+* Machine Learning Systems Design - https://github.com/chiphuyen/machine-learning-systems-design
 * https://www.oreilly.com/radar/what-you-need-to-know-about-product-management-for-ai/
 * https://github.com/Intellicode/ml-engineering-resources
 * Top 30 ML in Production Resources - https://mlinproduction.com/top-30-ml-in-production-resources-guide/
@@ -31,6 +36,8 @@ Summary: Machine Learning concepts and traditional resources
 * Made with ML - https://madewithml.com/
 * Machine Learning Systems Design - https://stanford-cs329s.github.io/2021/slides/cs329s_12_slides_sara_google.pdf
 * Monitering model/data Drift - https://evidentlyai.com/blog/ml-monitoring-do-i-need-data-drift
+* Machine Learning in Science and Industry slides - https://arogozhnikov.github.io/2017/04/20/machine-learning-in-science-and-industry.html
+* Machine learning in production - https://applyingml.com/papers/
 
 
 ## Theory
@@ -61,11 +68,14 @@ Summary: Machine Learning concepts and traditional resources
 * [Google OR Tools for Operations Research optimization problems](https://developers.google.com/optimization/introduction/overview)
 * [Computational Control Theory - Princton course](https://sites.google.com/view/cos59x-cct/home)
 * [Proximal Operators implementations](http://proximity-operator.net/)
+* [CMU series of tutorials for conducting computational experiments with optimization solvers](https://github.com/rkimura47/cmu-comp-or)
+* [Computational Optimal Transport](https://optimaltransport.github.io/slides/)
 
 ## Structured prediction
 
 * Course: https://taehwanptl.github.io/
 * CVPR 2011 Tutorial - Structured Prediction and Learning in Computer Vision: http://www.nowozin.net/sebastian/cvpr2011tutorial/
+* Pytorch Struct - http://nlp.seas.harvard.edu/pytorch-struct/README.html
 
 
 ## Graphical models and variational inference
@@ -83,11 +93,13 @@ Summary: Machine Learning concepts and traditional resources
 * [Online Learning, Interactive Machine Learning, and Learning from Human Feedback](http://www.yisongyue.com/courses/cs159/)
 * [Lecture notes on Online Learning](https://parameterfree.com/lecture-notes-on-online-learning/)
 * [Machine Learning for Data Streams using MOA](https://moa.cms.waikato.ac.nz/book-html/)
-* [Introduction to Online Convex Optimization](https://ocobook.cs.princeton.edu/)
+* [Introduction to Online Convex Optimization](https://ocobook.cs.princeton.edu/) - [Website](https://sites.google.com/view/intro-oco/home?authuser=0)
 * [Prediction, Learning, and Games](http://www.ii.uni.wroc.pl/~lukstafi/pmwiki/uploads/AGT/Prediction_Learning_and_Games.pdf)
 * [Online learning, boosting and Games - Prof. Yoav Freund](https://yoavfreund.miraheze.org/wiki/OnlineLearning2018)
 * [Python implementation of concept-drift algorithms for Online Learning](https://github.com/blablahaha/concept-drift)
 * [ICML 2020 TUTORIAL ON PARAMETER-FREE ONLINE OPTIMIZATION](https://parameterfree.com/icml-tutorial/)
+* [A Modern Introduction to Online Learning](https://arxiv.org/abs/1912.13213)
+
 
 
 ## Concept Drift
@@ -118,7 +130,8 @@ Summary: Machine Learning concepts and traditional resources
 * Continual Learning: Towards “Broad” AI Winter 2021, A Course offered by the Université de Montréal - https://sites.google.com/view/ift6760-b2021/schedule?authuser=0
 * A Wholistic View of Continual Learning with Deep Neural Networks: Forgotten Lessons and the Bridge to Active and Open World Learning - Martin Mundt - https://drive.google.com/file/d/1fDOwLI3_EXxeEZyRCbGXFPSv2i39Tf_A/view
 * [Tutorial 2: Out-of-distribution (OOD) Learning Week 3, Day 4: Continual Learning](https://deeplearning.neuromatch.io/tutorials/W3D4_ContinualLearning/student/W3D4_Tutorial2.html)
-
+* CVPR21 Continual Learning Challenge - https://eval.ai/web/challenges/challenge-page/829/overview
+* Avalanche: an End-to-End Library for Continual Learning - https://avalanche.continualai.org/
 
 ## Multi task learning
 
@@ -141,6 +154,7 @@ Summary: Machine Learning concepts and traditional resources
 * Summary of active learning: http://www.yisongyue.com/courses/cs159/lectures/active_notes.pdf
 * Good survey of potential issues with active learning: http://proceedings.mlr.press/v16/settles11a.html
 * [Human-in-the-Loop Machine Learning by Robert Munro](https://www.manning.com/books/human-in-the-loop-machine-learning) - [Active learning in pytorch from book](https://github.com/rmunro/pytorch_active_learning) [Cheatsheat on active learning](http://www.robertmunro.com/Advanced_Active_Learning_Cheatsheet.pdf)
+* DUALIST: Utility for Active Learning with Instances and Semantic Terms - https://github.com/burrsettles/dualist/blob/master/README.md
 
 ## Multiple instance learning
 
@@ -156,6 +170,7 @@ Summary: Machine Learning concepts and traditional resources
 * Python code examples for the book: https://github.com/ShangtongZhang/reinforcement-learning-an-introduction
 * [Approximate Dynamic Programming](http://adp.princeton.edu/)
 * [Multiagent Systems - Algorithmic, Game-Theoretic, and Logical Foundations](http://www.masfoundations.org/index.html)
+* [Book on Distributional Reinforcement Learning](https://www.distributional-rl.org/)
 
 ## Transfer Learning
 
@@ -174,14 +189,6 @@ Summary: Machine Learning concepts and traditional resources
 * Adaptive Language Models in JavaScript - https://github.com/google-research/google-research/tree/master/jslm
 
 
-## Fair ML and ML Bias
-
-* Tutorial - https://github.com/Jindong-Explainable-AI/Bias_in_Machine_Learning
-* Using Big Data to Solve Economic and Social Problems - https://opportunityinsights.org/course/
-* CS269 - Special Topic in AI: Fairness, Accountability, and Transparency in Natural Language Processing - https://uclanlp.github.io/CS269-Winter2020/index.html
-* Fairness and machine learning Limitations and Opportunities Solon Barocas, Moritz Hardt, Arvind Narayanan - https://fairmlbook.org/index.html
-* Challenges of incorporating algorithmic fairness into practice - https://algorithmicbiasinpractice.wordpress.com/slides/
-
 ## Interpretability
 
 * ML Interpratation in python - https://github.com/jphall663/interpretable_machine_learning_with_python
@@ -191,3 +198,10 @@ Summary: Machine Learning concepts and traditional resources
 ## Control Theory
 * Engineering Media: Control theory posts, lectures, and book - https://engineeringmedia.com/
 * Resourcium - https://resourcium.org/
+
+
+## Graph Neural Networks
+
+* A Complete Beginner's Guide to G-Invariant Neural Networks - https://invariances.org/ginvariance-tutorial/
+* Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges - https://geometricdeeplearning.com/lectures/
+* Non-Euclidean Methods in Machine Learning - http://graphics.stanford.edu/courses/cs468-20-fall/schedule.html

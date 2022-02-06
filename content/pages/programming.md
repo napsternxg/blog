@@ -13,6 +13,7 @@ Summary: Links related to programming
 ## Books
 
 * Software Engineering at Google - https://abseil.io/resources/swe_at_google.2.pdf
+* How to Design Programs, Second Edition - https://htdp.org/2019-02-24/index.html
 
 ## Implementations
 
@@ -22,6 +23,7 @@ Summary: Links related to programming
 ## Parallel Computing
 
 * MIT 18.337J/6.338J: Parallel Computing and Scientific Machine Learning in Julia - https://mitmath.github.io/18337/
+* Patterns of Distributed Systems - https://martinfowler.com/articles/patterns-of-distributed-systems/
 
 ## Data Structures
 
@@ -33,3 +35,7 @@ Summary: Links related to programming
 * http://prismoskills.appspot.com/lessons/Dynamic_Programming/Chapter_01_-_Introduction.jsp
 * https://medium.freecodecamp.org/demystifying-dynamic-programming-3efafb8d4296
 * Dynamic Programming in Functional Programming - https://functional-algorithms-verified.org/functional_algorithms_verified.pdf
+
+## Computer Security
+
+* picoCTF is a free computer security education program with original content built on a capture-the-flag framework - https://picoctf.org/

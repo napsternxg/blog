@@ -9,6 +9,8 @@ Summary: Notes and links related to statistics
 
 * https://github.com/thomas-haslwanter/statsintro_python/tree/master/ipynb
 * Model based machine learning: http://www.mbmlbook.com/toc.html
+* A free online companion course to the Second Edition of An Introduction to Statistical Learning is available through edX - https://www.statlearning.com/online-course
+* Michael Betancourt series on probability, modeling, etc. - https://betanalpha.github.io/writing/
 
 ## Books
 
@@ -16,6 +18,9 @@ Summary: Notes and links related to statistics
 * [Shalizi’s Advanced Data Analysis from an Elementary Point of View](http://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/ADAfaEPoV.pdf)
 * [Computer Age Statistical Inference: Algorithms, Evidence and Data Science](https://web.stanford.edu/~hastie/CASI/)
 * [Model Based Machine Learning by John Winn and others (including Chris Bishop)](http://www.mbmlbook.com/toc.html)
+* [Intro to Probability for Data Science](https://probability4datascience.com/index.html)
+* [The Effect: An Introduction to Research Design and Causality](https://theeffectbook.net/index.html)
+* [Bayesian models of perception and action](https://www.cns.nyu.edu/malab/bayesianbook.html)
 
 ## Probability theory
 
@@ -48,6 +53,9 @@ Summary: Notes and links related to statistics
 * Probability cheatsheet - https://github.com/wzchen/probability_cheatsheet
 * Importance Samplint - https://statweb.stanford.edu/~owen/mc/Ch-var-is.pdf
 * Montel-Carlo - https://github.com/szcf-weiya/MonteCarlo/blob/master/References/Monte-Carlo-Strategies-in-Scientific-Computing.pdf
+* The ABC of ABC (Approximate Bayesian Computation) - https://xianblog.wordpress.com/2019/07/28/introductory-overview-lecture-the-abc-of-abc/amp/
+* Falling (In Love With Principled Modeling) - https://betanalpha.github.io/assets/case_studies/falling.html
+* Handy statistical lexicon from Gelman - https://statmodeling.stat.columbia.edu/2009/05/24/handy_statistic/
 
 ## Uncertainity
 
@@ -68,4 +76,9 @@ Summary: Notes and links related to statistics
 
 ## Economics
 
-* [The Economy](https://www.core-econ.org/the-economy/)
+* The Economy - https://www.core-econ.org/the-economy/
+* QuantEcon: Open source code for economic modeling - https://quantecon.org/
+
+## Time Series
+
+* Stumpy - https://github.com/TDAmeritrade/stumpy/

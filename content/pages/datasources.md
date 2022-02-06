@@ -39,6 +39,7 @@ Summary: Links related to many datasets
 * World Election Calendar - https://www.ndi.org/elections-calendar
 * US congress memebers info (includes images) - https://bioguide.congress.gov/search
 * The Database of Political Institutions over time - https://publications.iadb.org/en/database-political-institutions-2020-dpi2020
+* WORLD POLITICAL CLEAVAGES AND INEQUALITY DATABASE - https://wpid.world/
 
 ### US
 * Summaries of US bills and other congress datasets - https://www.govtrack.us/about-our-data
@@ -87,6 +88,10 @@ Summary: Links related to many datasets
 ## Misc
 
 * Catalogue For Predictive Models In The Humanitarian Sector - https://centre.humdata.org/catalogue-for-predictive-models-in-the-humanitarian-sector/
+* Medical Data for Machine Learning - https://github.com/beamandrew/medical-data
+* Public data sets for testing and prototyping - https://docs.microsoft.com/en-us/azure/azure-sql/public-data-sets
+* ML datasets wikipedia page - https://en.m.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research
+* List of Datasets for Data Science & Machine Learning Projects - https://www.executivelevels.com/datasets/
 
 ## Name datasets
 * Manually curated name gender list from multiple countries - https://github.com/lead-ratings/gender-guesser [Originally introduced here](https://autohotkey.com/board/topic/20260-gender-verification-by-forename-cmd-line-tool-db/) and [here](https://www.heise.de/ct/ftp/07/17/182/) - [Python package](https://github.com/ferhatelmas/sexmachine)
@@ -137,6 +142,7 @@ Summary: Links related to many datasets
 * Flickr Image Cropping Dataset - https://github.com/yiling-chen/flickr-cropping-dataset
 * Bob Ross Paintings with title and color pallet names - https://github.com/jwilber/Bob_Ross_Paintings
 * OCR Datasets: https://cneud.github.io/ocr-gt/
+* LVIS: A DATASET FOR LARGE VOCABULARY INSTANCE SEGMENTATION: A new dataset for long tail object recognition. - https://www.lvisdataset.org/
 
 ## Stream processing data
 * Data from The Neural Hawkes Process - https://github.com/HMEIatJHU/neurawkes - [Google drive link](https://drive.google.com/drive/folders/0BwqmV0EcoUc8UklIR1BKV25YR1U?usp=sharing)

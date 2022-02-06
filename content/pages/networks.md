@@ -27,6 +27,9 @@ Summary: Social Networks and Network Related documents
 * GraphBLAS - https://github.com/GraphBLAS/GraphBLAS-Pointers - [Tutorial](https://github.com/GraphBLAS-Tutorials/SIAM-Tutorial/blob/main/GraphBLAS_Tutorial_202103_python.pdf)
 * CREATING EFFECTIVE NETWORK DATA VISUALIZATION WITH D3.JS @ELIJAH_MEEKS - http://elijahmeeks.com/networkviz/
 * INCOMPLETENESS IN NETWORKS: BIASES, SKEWED RESULTS, AND SOME SOLUTIONS - http://eliassi.org/kdd19_tut_network_discovery_slides.pdf
+* Literature of Deep Learning for Graphs - https://github.com/DeepGraphLearning/LiteratureDL4Graph
+* [Higher-Order Graph Models: From Theoretical Foundations to Machine Learning (Dagstuhl Seminar 21352)](https://drops.dagstuhl.de/opus/volltexte/2021/15592/)
+
 
 ## Datasets: 
 
@@ -51,6 +54,8 @@ Summary: Social Networks and Network Related documents
 * Case Law Project (US Cases Open Text as well as Case Citation Networks) - https://case.law/download/
 * Primer for Network Analysis - https://github.com/DennyBorsboom/NatureMethodsPrimer_NetworkAnalysis
 * The Copenhagen Networks Study interaction data - https://figshare.com/articles/dataset/The_Copenhagen_Networks_Study_interaction_data/7267433/1?file=13389320
+* Collection of Multilayer networks e.g. Twitter Infodemic - https://manliodedomenico.com/data.php
+* Multilayer Social Networks - http://multilayer.it.uu.se/datasets.html
 
 
 ## Theory

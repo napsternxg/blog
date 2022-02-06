@@ -36,6 +36,10 @@ Summary: Links related to NLP resources
 * Jason Eisner - http://www.cs.jhu.edu/~jason/465/
 * Introduction to Cultural Analytics & Python - https://melaniewalsh.github.io/Intro-Cultural-Analytics/
 * Computational Sociolinguistics by David Jurgens - https://docs.google.com/document/d/1Ouyqz-emtOI-ohwTOdOZpcjcEFtPPilhJDso8sjgByU/edit
+* Ethics in NLP - https://aclweb.org/aclwiki/Ethics_in_NLP
+* Multilingual Natural Language Processing - http://demo.clab.cs.cmu.edu/11737fa20/
+* CSE 704 - Applied Natural Language Processing and Computational Social Science - https://kennyjoseph.github.io/cse702
+
 
 ## Scientific NLP 
 * https://github.com/NIHOPA/NLPre
@@ -72,6 +76,12 @@ Summary: Links related to NLP resources
 * MedCAT can be used to extract information from Electronic Health Records (EHRs) and link it to biomedical ontologies like SNOMED-CT and UMLS - https://github.com/CogStack/MedCAT
 * PyTerrier - A Python framework for performing information retrieval experiments, building on http://terrier.org/ -  https://github.com/terrier-org/pyterrier
 * JamSpell - Spelling correction (works in python) - https://github.com/bakwc/JamSpell
+* Efficient Low Memory Aligner - https://github.com/robertostling/eflomal
+* DeepTranslit: Towards better transliteration for Indic languages - https://github.com/notAI-tech/DeepTranslit
+* Google Trends Anchor Bank - https://github.com/epfl-dlab/GoogleTrendsAnchorBank
+* The Tatoeba Translation Challenge (v2021-08-07) - https://github.com/Helsinki-NLP/Tatoeba-Challenge
+* Named Entity Recognition for Entity Linking: What Works and What's Next - https://github.com/Babelscape/ner4el
+* Inception: semantic annotation tool - https://inception-project.github.io/
 
 ### Pretrained embeddings and models
 * ELMO for Many Languages - https://github.com/HIT-SCIR/ELMoForManyLangs
@@ -133,6 +143,7 @@ Summary: Links related to NLP resources
 * Open License English Wordnet - https://github.com/globalwordnet/english-wordnet
 * HurtLex a lexicon of offensive, aggressive, and hateful words in over 50 languages - https://github.com/valeriobasile/hurtlex
 * The Evaluative Lexicon - emotionality, valence, and extremity - http://www.evaluativelexicon.com/
+* CLICS: Database of Cross-Linguistic Colexifications - https://clics.clld.org/
 
 ## Data
 
@@ -457,6 +468,31 @@ Summary: Links related to NLP resources
 * DISRPT/sharedtask2021 - Discourse Unit Segmentation, Connective Detection and Discourse Relation Classification - https://github.com/disrpt/sharedtask2021
 * NER For Entity Linking - https://github.com/Babelscape/ner4el
 * Tracking Knowledge Propagation Across Wikipedia Languages - https://zenodo.org/record/4433137
+* Hate Speech Data Catalogue - https://github.com/leondz/hatespeechdata
+* WikiDataSets - Topic specific subgraphs in Wikidata - https://graphs.telecom-paris.fr/Home_page.html
+* Multilingual Reply Suggestion (MRS) - https://github.com/zhangmozhi/mrs
+* African NLP Datasets - https://github.com/Andrews2017/africanlp-public-datasets
+* TREC 2022 MS Marco Deep Learning Track - https://microsoft.github.io/msmarco/TREC-Deep-Learning.html
+* UCPhrase: Unsupervised Context-aware Quality Phrase Tagging - https://github.com/xgeric/UCPhrase-exp
+* Mr. TyDi is a multi-lingual benchmark dataset for mono-lingual retrieval - https://github.com/castorini/mr.tydi
+* The Upworthy Research Archive - https://osf.io/jd64p/
+* ReDial (Recommendation Dialogues) is an annotated dataset of dialogues, where users recommend movies to each other - https://redialdata.github.io/website/
+* Emotion Cause Pair Extraction - https://github.com/NUSTM/ECPE
+* Cline Center: Coups d'état are important events in the life of a country - https://databank.illinois.edu/datasets/IDB-5672473
+* DyGIE++: Entity, Relation, and Event Extraction with Contextualized Span Representations - https://github.com/dwadden/dygiepp
+* A global and multi-lingual computational linguistic atlas - http://www.earthlings.io/download_cglu.html
+* Entity-Switched Datasets: An Approach to Auditing the In-Domain Robustness of Named Entity Recognition Models - https://github.com/oagarwal/entity-switched-ner
+* MATINF - Multitask Chinese NLP Dataset - https://github.com/WHUIR/MATINF
+* Wordbank: An open database of children's vocabulary development - http://wordbank.stanford.edu/ [Book](https://langcog.github.io/wordbank-book/)
+* ArtEmis: Affective Language for Visual Art dataset - https://www.artemisdataset.org/
+* In-group bias in the Indian judiciary - https://www.devdatalab.org/judicial-data [Code](https://github.com/devdatalab/paper-justice)
+* SigTyp 2021: hared task on predicting language IDs from speech - https://sigtyp.github.io/st2021.html
+* IR ranking datasets - https://ir-datasets.com/
+* ShadowLink: entity disambiguation evaluation on overshadowed entities- https://zenodo.org/record/5196175
+* Named Entity Recognition systems for 11 languages - https://multiconer.github.io/
+* Wikipedia - Image/Caption Matching - https://www.kaggle.com/c/wikipedia-image-caption
+* Silver Data Creation for Multilingual NER - https://github.com/Babelscape/wikineural
+
 
 ## Shared tasks, competitions
 
@@ -470,6 +506,7 @@ Summary: Links related to NLP resources
 * CLEF Shared tasks - http://clef2021.clef-initiative.eu/index.php?page=Pages/labs.html
 * SemEval shared tasks - https://semeval.github.io/
 * TREC shared tasks - https://trec.nist.gov/pubs/call2021.html
+* Shared task on implicit and underspecified language - https://unimplicit.github.io/
 
 ## Research Groups
 * https://supernlp.github.io/ - University of Copenhagen 
