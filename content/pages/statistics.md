@@ -82,3 +82,4 @@ Summary: Notes and links related to statistics
 ## Time Series
 
 * Stumpy - https://github.com/TDAmeritrade/stumpy/
+* Python Toolkit of Statistics for Pairwise Interactions (pyspi) - https://github.com/olivercliff/pyspi

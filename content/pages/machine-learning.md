@@ -20,7 +20,7 @@ Summary: Machine Learning concepts and traditional resources
 * BOLT: 10x faster matrix and vector operations - https://github.com/dblalock/bolt
 * Macarico: learning to search - https://github.com/hal3/macarico
 * A Collection of Conference & School Notes in Machine Learning - https://github.com/visual-ml-notes/visual-machine-learning-notes
-
+* Python Toolkit of Statistics for Pairwise Interactions (pyspi) - https://github.com/olivercliff/pyspi
 
 ## ML Engineering
 
