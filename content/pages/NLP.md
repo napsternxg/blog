@@ -492,7 +492,9 @@ Summary: Links related to NLP resources
 * Named Entity Recognition systems for 11 languages - https://multiconer.github.io/
 * Wikipedia - Image/Caption Matching - https://www.kaggle.com/c/wikipedia-image-caption
 * Silver Data Creation for Multilingual NER - https://github.com/Babelscape/wikineural
-
+* Data and code for "Rise and Fall of Rationality in Language" - https://github.com/jbollen/rise_and_fall_of_rationality_in_language
+* RadioTalk: a large-scale corpus of talk radio transcripts - https://github.com/social-machines/RadioTalk
+* KENSHO WIKIMEDIA (+Wikidata) DATA FOR NATURAL LANGUAGE PROCESSING (NLP) - https://datasets.kensho.com/datasets/wikimedia
 
 ## Shared tasks, competitions
 
@@ -507,6 +509,8 @@ Summary: Links related to NLP resources
 * SemEval shared tasks - https://semeval.github.io/
 * TREC shared tasks - https://trec.nist.gov/pubs/call2021.html
 * Shared task on implicit and underspecified language - https://unimplicit.github.io/
+* Multilingual News Article Similairty - https://competitions.codalab.org/competitions/33835
+* 
 
 ## Research Groups
 * https://supernlp.github.io/ - University of Copenhagen 

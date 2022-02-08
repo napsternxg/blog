@@ -95,3 +95,4 @@ Summary: Links related to mathematics
 # Economics
 
 * [Applied Empirical Methods](https://github.com/paulgp/applied-methods-phd#lectures-full-syllabus)
+* [The Economy](https://www.core-econ.org/the-economy/book/text/0-3-contents.html)

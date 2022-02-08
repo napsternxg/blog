@@ -39,6 +39,7 @@ Summary: Notes and links related to machine learning ethics
 * Using Big Data to Solve Economic and Social Problems - https://opportunityinsights.org/course/
 * CS269 - Special Topic in AI: Fairness, Accountability, and Transparency in Natural Language Processing - https://uclanlp.github.io/CS269-Winter2020/index.html
 * Challenges of incorporating algorithmic fairness into practice - https://algorithmicbiasinpractice.wordpress.com/slides/
+* Tech Ethics Curriculum - https://docs.google.com/spreadsheets/d/1jWIrA8jHz5fYAW4h9CkUD8gKS5V98PDJDymRf8d9vKI/edit#gid=0
 
 
 ## Datasets

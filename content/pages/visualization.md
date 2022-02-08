@@ -11,6 +11,8 @@ Summary: Links related to visualizations
 * TextVis Browser: A Visual Survey of Text Visualization Techniques - https://textvis.lnu.se/
 * TrustMLVis Browser: A Visual Survey in Enhancing Trust in Machine Learning (ML) Models with Visualization - https://trustmlvis.lnu.se/
 * Bad data guide - https://github.com/Quartz/bad-data-guide
+* Life of a triangle - NVIDIA's logical pipeline - https://developer.nvidia.com/content/life-triangle-nvidias-logical-pipeline
+* A trip through the Graphics Pipeline 2011: Index - https://fgiesen.wordpress.com/2011/07/09/a-trip-through-the-graphics-pipeline-2011-index/
 
 ## Courses/Tutorials/Books
 

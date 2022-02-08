@@ -28,7 +28,8 @@ Summary: Social Networks and Network Related documents
 * CREATING EFFECTIVE NETWORK DATA VISUALIZATION WITH D3.JS @ELIJAH_MEEKS - http://elijahmeeks.com/networkviz/
 * INCOMPLETENESS IN NETWORKS: BIASES, SKEWED RESULTS, AND SOME SOLUTIONS - http://eliassi.org/kdd19_tut_network_discovery_slides.pdf
 * Literature of Deep Learning for Graphs - https://github.com/DeepGraphLearning/LiteratureDL4Graph
-* [Higher-Order Graph Models: From Theoretical Foundations to Machine Learning (Dagstuhl Seminar 21352)](https://drops.dagstuhl.de/opus/volltexte/2021/15592/)
+* Higher-Order Graph Models: From Theoretical Foundations to Machine Learning (Dagstuhl Seminar 21352) - https://drops.dagstuhl.de/opus/volltexte/2021/15592/
+* Networks beyond pairwise interactions: Structure and dynamics - https://doi.org/10.1016/j.physrep.2020.05.004
 
 
 ## Datasets: 

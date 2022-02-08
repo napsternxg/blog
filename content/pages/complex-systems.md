@@ -14,6 +14,8 @@ Summary: Complex Systems
 * Emotions dynamics of 11K people - https://osf.io/h2jp3/?view_only=c685ecbec4f54afeb8046af8980afd4c
 * Technical Incerto Reading Club - https://github.com/Technical-Incerto-Reading-Club/technical-incerto-reading-club - [Code](https://github.com/Technical-Incerto-Reading-Club/code-examples)
 * Epidemic Modeling for Everyone - https://github.com/DataForScience/Epidemiology101/blob/master/README.md
+* [The Economy](https://www.core-econ.org/the-economy/book/text/0-3-contents.html)
+* Building Less Flawed Metrics: Dodging Goodhart and Campbell’s Laws - https://mpra.ub.uni-muenchen.de/98288/1/MPRA_paper_90649.pdf
 
 ## Courses
 
