@@ -40,6 +40,9 @@ Summary: Links related to many datasets
 * US congress memebers info (includes images) - https://bioguide.congress.gov/search
 * The Database of Political Institutions over time - https://publications.iadb.org/en/database-political-institutions-2020-dpi2020
 * WORLD POLITICAL CLEAVAGES AND INEQUALITY DATABASE - https://wpid.world/
+* Constitution project: https://www.constituteproject.org/content/data?lang=en
+* Comparative Constitutions Project (Changes in constitutions) - https://comparativeconstitutionsproject.org/ccp-data-downloads/ [Resources related to constitutions](https://comparativeconstitutionsproject.org/other-resources/)
+
 
 ### US
 * Summaries of US bills and other congress datasets - https://www.govtrack.us/about-our-data
