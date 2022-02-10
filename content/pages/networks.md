@@ -14,6 +14,7 @@ Summary: Social Networks and Network Related documents
 ## Books
 
 * [Lectures on Network Systems](http://motion.me.ucsb.edu/book-lns/)
+* [Handbook of Graph Drawing and Visualization](http://cs.brown.edu/people/rtamassi/gdhandbook/)
 
 ## Links
 
@@ -28,8 +29,7 @@ Summary: Social Networks and Network Related documents
 * CREATING EFFECTIVE NETWORK DATA VISUALIZATION WITH D3.JS @ELIJAH_MEEKS - http://elijahmeeks.com/networkviz/
 * INCOMPLETENESS IN NETWORKS: BIASES, SKEWED RESULTS, AND SOME SOLUTIONS - http://eliassi.org/kdd19_tut_network_discovery_slides.pdf
 * Literature of Deep Learning for Graphs - https://github.com/DeepGraphLearning/LiteratureDL4Graph
-* Higher-Order Graph Models: From Theoretical Foundations to Machine Learning (Dagstuhl Seminar 21352) - https://drops.dagstuhl.de/opus/volltexte/2021/15592/
-* Networks beyond pairwise interactions: Structure and dynamics - https://doi.org/10.1016/j.physrep.2020.05.004
+* [Higher-Order Graph Models: From Theoretical Foundations to Machine Learning (Dagstuhl Seminar 21352)](https://drops.dagstuhl.de/opus/volltexte/2021/15592/)
 
 
 ## Datasets: 
@@ -57,11 +57,16 @@ Summary: Social Networks and Network Related documents
 * The Copenhagen Networks Study interaction data - https://figshare.com/articles/dataset/The_Copenhagen_Networks_Study_interaction_data/7267433/1?file=13389320
 * Collection of Multilayer networks e.g. Twitter Infodemic - https://manliodedomenico.com/data.php
 * Multilayer Social Networks - http://multilayer.it.uu.se/datasets.html
-
+* House of Graphs - https://hog.grinvin.org/
+* Graph Drawing Contest Datasets - http://mozart.diei.unipg.it/gdcontest/
+* Mathematics Geneology Project Graph - http://mozart.diei.unipg.it/gdcontest/contest2018/topics.html
+* ReconMap2: most comprehensive representation of human metabolism - https://www.vmh.life/#reconmap2
+* Temporal Covid Mental Health Map - https://osf.io/mvdpe/
 
 ## Theory
 
 * Graph Laplacian and Spectral Clustering - https://csustan.csustan.edu/~tom/Clustering/GraphLaplacian-tutorial.pdf
+* Graph Drawing Theory - http://www.graphviz.org/theory/
 
 ## Deep Learning on Networks
 
