@@ -13,6 +13,8 @@ Summary: Links related to visualizations
 * Bad data guide - https://github.com/Quartz/bad-data-guide
 * Life of a triangle - NVIDIA's logical pipeline - https://developer.nvidia.com/content/life-triangle-nvidias-logical-pipeline
 * A trip through the Graphics Pipeline 2011: Index - https://fgiesen.wordpress.com/2011/07/09/a-trip-through-the-graphics-pipeline-2011-index/
+* Learning Modern 3D Graphics Programming - https://paroj.github.io/gltut/
+* Physically Based Rendering (Oscar winning book) - https://www.pbrt.org/ [Code](https://github.com/mmp/pbrt-v4)
 
 ## Courses/Tutorials/Books
 
