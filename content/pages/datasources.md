@@ -42,6 +42,9 @@ Summary: Links related to many datasets
 * WORLD POLITICAL CLEAVAGES AND INEQUALITY DATABASE - https://wpid.world/
 * Constitution project: https://www.constituteproject.org/content/data?lang=en
 * Comparative Constitutions Project (Changes in constitutions) - https://comparativeconstitutionsproject.org/ccp-data-downloads/ [Resources related to constitutions](https://comparativeconstitutionsproject.org/other-resources/)
+* Voter Turnout dataset from INTERNATIONAL IDEA SUPPORTING DEMOCRACY WORLDWIDE - https://www.idea.int/advanced-search
+
+
 
 
 ### US
