@@ -493,7 +493,9 @@ Summary: Links related to NLP resources
 * Wikipedia - Image/Caption Matching - https://www.kaggle.com/c/wikipedia-image-caption
 * Silver Data Creation for Multilingual NER - https://github.com/Babelscape/wikineural
 * Shared Task on Named Entity Transliteration - http://workshop.colips.org/news2018/dataset.html
-
+* ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization - https://github.com/krystalan/ClidSum
+* SportsSum2.0: Generating High-Quality Sports News from Live Text Commentary - https://github.com/krystalan/SportsSum2.0
+* Knowledge Enhanced Sports Game Summarization - https://github.com/krystalan/K-SportsSum
 
 ## Shared tasks, competitions
 
