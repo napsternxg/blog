@@ -15,6 +15,9 @@ Summary: Wordle One Shot Solution (Hack)
 ## Finding the solution on the page
 
 !!! note
+    The code has been updated to work with the [NYT Wordle](https://www.nytimes.com/games/wordle/index.html). The change is in the `localStorage` key from `gameState` to `nyt-wordle-state`.
+
+!!! note
     This is a hack to get the [wordle](https://www.powerlanguage.co.uk/wordle/) solution. Use it only when you are frustrated and just want to see the solution. It will ruin the fun of the game for you.
 
 If you just want to know the solution, you follow these steps: 
@@ -46,7 +49,7 @@ I am not doing anything fancy. It is just that the solution is always available 
 Make a bookmark with the following URL. When on the wordle page. Click the bookmark to get solution. 
 
 ```js
-javascript:function act(e){window.dispatchEvent(new KeyboardEvent("keydown",e))}const done={code:"Enter",key:"Enter",charCode:13,keyCode:13,view:window,bubbles:!0},solution=JSON.parse(window.localStorage.gameState).solution;Array.from(solution).map(e=>act({key:e})),act(done);const warn_message="This is a hack to get the wordle solution.\nWhen your press OK the solution will show. Read the message below in full.\nNOTE: Use it only when you are frustrated and just want to see the solution. It will ruin the fun of the game for you. \nI am not doing anything fancy. \nIt is just that the solution is always available on the page and I am reading it and firing the keypresses to get answer.\nYou can simply right click the page and open the console and type this JS. Be reminded that you should not copy JS from strangers on your pages, it can be used to steal your passwords or other sensitive information. You can read the full code used here and more details at: https://shubhanshu.com/blog/wordle-hack\nLearn about internet security from A PROJECT OF THE ELECTRONIC FRONTIER FOUNDATION: SURVEILLANCE SELF-DEFENSE: TIPS, TOOLS AND HOW-TOS FOR SAFER ONLINE COMMUNICATIONS course from https://ssd.eff.org/en\n";alert(warn_message);
+javascript:function act(e){window.dispatchEvent(new KeyboardEvent("keydown",e))}const done={code:"Enter",key:"Enter",charCode:13,keyCode:13,view:window,bubbles:!0},solution=JSON.parse(window.localStorage["nyt-wordle-state"]).solution;Array.from(solution).map(e=>act({key:e})),act(done);const warn_message="This is a hack to get the wordle solution.\nWhen your press OK the solution will show. Read the message below in full.\nNOTE: Use it only when you are frustrated and just want to see the solution. It will ruin the fun of the game for you. \nI am not doing anything fancy. \nIt is just that the solution is always available on the page and I am reading it and firing the keypresses to get answer.\nYou can simply right click the page and open the console and type this JS. Be reminded that you should not copy JS from strangers on your pages, it can be used to steal your passwords or other sensitive information. You can read the full code used here and more details at: https://shubhanshu.com/blog/wordle-hack\nLearn about internet security from A PROJECT OF THE ELECTRONIC FRONTIER FOUNDATION: SURVEILLANCE SELF-DEFENSE: TIPS, TOOLS AND HOW-TOS FOR SAFER ONLINE COMMUNICATIONS course from https://ssd.eff.org/en\n";alert(warn_message);
 ```
 
 <div>
@@ -59,7 +62,7 @@ javascript:function act(e){window.dispatchEvent(new KeyboardEvent("keydown",e))}
   margin: 10px;
 }
 </style>
-<p><a class="bookmark-btn" href='javascript:function act(e){window.dispatchEvent(new KeyboardEvent("keydown",e))}const done={code:"Enter",key:"Enter",charCode:13,keyCode:13,view:window,bubbles:!0},solution=JSON.parse(window.localStorage.gameState).solution;Array.from(solution).map(e=>act({key:e})),act(done);const warn_message="This is a hack to get the wordle solution.\nWhen your press OK the solution will show. Read the message below in full.\nNOTE: Use it only when you are frustrated and just want to see the solution. It will ruin the fun of the game for you. \nI am not doing anything fancy. \nIt is just that the solution is always available on the page and I am reading it and firing the keypresses to get answer.\nYou can simply right click the page and open the console and type this JS. Be reminded that you should not copy JS from strangers on your pages, it can be used to steal your passwords or other sensitive information. You can read the full code used here and more details at: https://shubhanshu.com/blog/wordle-hack\nLearn about internet security from A PROJECT OF THE ELECTRONIC FRONTIER FOUNDATION: SURVEILLANCE SELF-DEFENSE: TIPS, TOOLS AND HOW-TOS FOR SAFER ONLINE COMMUNICATIONS course from https://ssd.eff.org/en\n";alert(warn_message);'>Wordle Solve Bookmark (Drag me to bookmark bar)</a></p>
+<p><a class="bookmark-btn" href='javascript:function act(e){window.dispatchEvent(new KeyboardEvent("keydown",e))}const done={code:"Enter",key:"Enter",charCode:13,keyCode:13,view:window,bubbles:!0},solution=JSON.parse(window.localStorage["nyt-wordle-state"]).solution;Array.from(solution).map(e=>act({key:e})),act(done);const warn_message="This is a hack to get the wordle solution.\nWhen your press OK the solution will show. Read the message below in full.\nNOTE: Use it only when you are frustrated and just want to see the solution. It will ruin the fun of the game for you. \nI am not doing anything fancy. \nIt is just that the solution is always available on the page and I am reading it and firing the keypresses to get answer.\nYou can simply right click the page and open the console and type this JS. Be reminded that you should not copy JS from strangers on your pages, it can be used to steal your passwords or other sensitive information. You can read the full code used here and more details at: https://shubhanshu.com/blog/wordle-hack\nLearn about internet security from A PROJECT OF THE ELECTRONIC FRONTIER FOUNDATION: SURVEILLANCE SELF-DEFENSE: TIPS, TOOLS AND HOW-TOS FOR SAFER ONLINE COMMUNICATIONS course from https://ssd.eff.org/en\n";alert(warn_message);'>Wordle Solve Bookmark (Drag me to bookmark bar)</a></p>
 </div>
 
 
@@ -96,7 +99,7 @@ function act(x){
 /* Keypress arguments to simulate Enter key press */
 const done = {code: 'Enter',key: 'Enter', charCode: 13, keyCode: 13, view: window, bubbles: true};
 /* Wordle Solution is always saved in localStorage so just retriving it from there. */
-const solution = JSON.parse(window.localStorage.gameState).solution;
+const solution = JSON.parse(window.localStorage["nyt-wordle-state"]).solution;
 /* Fire keypress for each char in the solution and then press Enter. */
 Array.from(solution).map(x => act({key: x})); act(done);
 /* Display warning message on running JS from strangers on your page. Good way to educate masses on perils of copy pasting JS on secure pages (hopefully). */
