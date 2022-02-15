@@ -10,6 +10,7 @@ Summary: Links related to mathematics
 
 * Foundations of Mathematics - http://sakharov.net/foundation.html
 * Making Mathematics Visible: Visualizing Modular Multiplication Tables Through Curve Stitching - https://www.geogebra.org/m/htzrfh4h
+* American Institute of Mathematics Approved Textbooks (freely available) - https://aimath.org/textbooks/approved-textbooks/
 
 
 # Interactive mathematics
