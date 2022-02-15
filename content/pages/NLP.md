@@ -128,6 +128,8 @@ Summary: Links related to NLP resources
 * Datasets for Text Analysis - https://docs.google.com/spreadsheets/d/1I7cvuCBQxosQK2evTcdL3qtglaEPc0WFEs6rZMx-xiE/edit#gid=0
 * Multilingual stopwords - https://github.com/stopwords-iso/stopwords-iso
 * Entity Related Papers - https://github.com/HelloRusk/entity-related-papers/blob/master/README.md
+* Entity Linking Recent Trends - https://github.com/izuna385/Entity-Linking-Recent-Trends
+* Fine-grained evaluation of Entity Linking - https://github.com/henryrosalesmendez/EL_exp
 
 ## Lexicons
 
