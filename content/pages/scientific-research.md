@@ -15,3 +15,4 @@ Summary: Links related to Scientific Research
 * [Principles of Effective Research by Michael A. Nielsen](https://michaelnielsen.org/blog/principles-of-effective-research/)
 * [The Good Research Code Handbook](https://goodresearch.dev/)
 * [Annotated Latex equations](https://github.com/synercys/annotated_latex_equations)
+* [Awesome LaTeX drawing](https://github.com/xinychen/awesome-latex-drawing)
