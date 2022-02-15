@@ -498,6 +498,9 @@ Summary: Links related to NLP resources
 * ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization - https://github.com/krystalan/ClidSum
 * SportsSum2.0: Generating High-Quality Sports News from Live Text Commentary - https://github.com/krystalan/SportsSum2.0
 * Knowledge Enhanced Sports Game Summarization - https://github.com/krystalan/K-SportsSum
+* Keyword extraction datasets for Croatian, Estonian, Latvian and Russian 1.0 - https://www.clarin.si/repository/xmlui/handle/11356/1403
+* 24sata Croatian news article archive 1.0 - https://www.clarin.si/repository/xmlui/handle/11356/1410 - Comments data - https://www.clarin.si/repository/xmlui/handle/11356/1399
+* TermFrame: Terms, definitions and semantic annotations for karstology (English, Slovenian, Croatian) - https://www.clarin.si/repository/xmlui/handle/11356/1463
 
 ## Shared tasks, competitions
 
