@@ -38,6 +38,8 @@ Summary: Machine Learning concepts and traditional resources
 * Monitering model/data Drift - https://evidentlyai.com/blog/ml-monitoring-do-i-need-data-drift
 * Machine Learning in Science and Industry slides - https://arogozhnikov.github.io/2017/04/20/machine-learning-in-science-and-industry.html
 * Machine learning in production - https://applyingml.com/papers/
+* How to navigate through the ML research information flood - https://drive.google.com/file/d/1zKAKBmOzM8KOnVnO09Xc_4Mne1z4pEUa/view
+* SRE for ML: The First 10 Years and the Next 10 - https://www.usenix.org/conference/srecon21/presentation/underwood-sre-ml
 
 
 ## Theory
