@@ -205,3 +205,4 @@ Summary: Machine Learning concepts and traditional resources
 * A Complete Beginner's Guide to G-Invariant Neural Networks - https://invariances.org/ginvariance-tutorial/
 * Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges - https://geometricdeeplearning.com/lectures/
 * Non-Euclidean Methods in Machine Learning - http://graphics.stanford.edu/courses/cs468-20-fall/schedule.html
+* Introduction to Graph Neural Nets with JAX/jraph - https://github.com/deepmind/educational/tree/master/colabs/summer_schools
