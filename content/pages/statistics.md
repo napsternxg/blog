@@ -83,3 +83,5 @@ Summary: Notes and links related to statistics
 
 * Stumpy - https://github.com/TDAmeritrade/stumpy/
 * Python Toolkit of Statistics for Pairwise Interactions (pyspi) - https://github.com/olivercliff/pyspi
+* Time Series datasets for spatiotemporal data modeling from transportation data imputation project - https://github.com/xinychen/transdim
+* Dynamic Mode Decomposition - http://www.pyrunner.com/weblog/2016/07/25/dmd-python/ [Application to Traffic Patters](https://towardsdatascience.com/dynamic-mode-decomposition-for-spatiotemporal-traffic-speed-time-series-in-seattle-freeway-b0ba97e81c2c)
