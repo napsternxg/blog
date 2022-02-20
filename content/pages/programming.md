@@ -9,11 +9,14 @@ Summary: Links related to programming
 
 * UIUC Intro to Competitive Programming - https://pages.github-dev.cs.illinois.edu/sig-icpc/cs491-wf/syllabus/
 * William Fiset Youtube Playlists on various topics - https://www.youtube.com/user/purpongie/playlists
+* From Nand to Tetris: Building a Modern Computer From First Principles - https://www.nand2tetris.org/
 
 ## Books
 
 * Software Engineering at Google - https://abseil.io/resources/swe_at_google.2.pdf
 * How to Design Programs, Second Edition - https://htdp.org/2019-02-24/index.html
+* Algorithmica - https://en.algorithmica.org/hpc/ - [Code](https://github.com/sslotin/amh-code)
+
 
 ## Implementations
 
@@ -39,3 +42,9 @@ Summary: Links related to programming
 ## Computer Security
 
 * picoCTF is a free computer security education program with original content built on a capture-the-flag framework - https://picoctf.org/
+
+## Hardware
+
+* From Nand to Tetris: Building a Modern Computer From First Principles - https://www.nand2tetris.org/
+* Computer Systems: A Programmer's Perspective - http://csapp.cs.cmu.edu/3e/home.html
+* Semiconductors: Everything You Wanted to Know - https://www.youtube.com/watch?v=r6NUO_bymuA

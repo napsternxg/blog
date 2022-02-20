@@ -19,6 +19,7 @@ Summary: Notes and links related to machine learning ethics
 * Trust and Artificial Intelligence by Brian Stanton, Theodore Jensen - https://www.nist.gov/publications/trust-and-artificial-intelligence
 * How Humans Judge Machines - https://www.judgingmachines.com/
 * Fairness and machine learning Limitations and Opportunities Solon Barocas, Moritz Hardt, Arvind Narayanan - https://fairmlbook.org/index.html
+* Trustworthy Machine Learning by Kush R. Varshney - http://www.trustworthymachinelearning.com/
 
 ## Tools
 

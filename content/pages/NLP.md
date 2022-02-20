@@ -503,6 +503,7 @@ Summary: Links related to NLP resources
 * TermFrame: Terms, definitions and semantic annotations for karstology (English, Slovenian, Croatian) - https://www.clarin.si/repository/xmlui/handle/11356/1463
 * HuffPost News Category Dataset - https://www.kaggle.com/rmisra/news-category-dataset
 * OpenKP Keyphrase Extraction Dataset - https://github.com/microsoft/OpenKP
+* All Digitized Texas Appeals Court Cases Since 1900 - https://www.kaggle.com/judyrecords/all-digitized-texas-appeals-court-cases-since-1900 - https://www.judyrecords.com/info
 
 ## Shared tasks, competitions
 

@@ -40,6 +40,7 @@ Summary: Machine Learning concepts and traditional resources
 * Machine learning in production - https://applyingml.com/papers/
 * How to navigate through the ML research information flood - https://drive.google.com/file/d/1zKAKBmOzM8KOnVnO09Xc_4Mne1z4pEUa/view
 * SRE for ML: The First 10 Years and the Next 10 - https://www.usenix.org/conference/srecon21/presentation/underwood-sre-ml
+* ML Crash Course from Google which included practical aspects of ML - https://developers.google.com/machine-learning/crash-course
 
 
 ## Theory
