@@ -9,6 +9,8 @@ Summary: Links related to Scientific Research
 
 * [VITALITY OF A RESEARCH INSTITUTION AND HOW TO MAINTAIN IT by RALPH BOWN](https://maceip.github.io/bell-labs-innovation/)
 * [You and Your Research by Richard Hamming](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html)
+* [How to Have a Bad Career How to Have a Bad Career in Research/Academia in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf) [Other links](https://people.eecs.berkeley.edu/~pattrsn/talks/nontech.html)
+* [Technology and Courage - Ivan Sutherland](https://cseweb.ucsd.edu/~wgg/smli_ps-1.pdf)
 
 # Links
 
