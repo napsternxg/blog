@@ -1,7 +1,7 @@
 Title: Video Making
 Category: links
 Tags: links
-Slug: nlp
+Slug: video-making
 Authors: Shubhanshu Mishra
 Summary: Links related to Animations making, rendering, shaders, video editing
 
