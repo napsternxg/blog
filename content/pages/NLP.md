@@ -506,6 +506,13 @@ Summary: Links related to NLP resources
 * All Digitized Texas Appeals Court Cases Since 1900 - https://www.kaggle.com/judyrecords/all-digitized-texas-appeals-court-cases-since-1900 - https://www.judyrecords.com/info
 * Richpedia: A Comprehensive Multi-Modal Knowledge Graph - https://github.com/wangmengsd/richpedia
 * Entity Matching Deepmatcher Datasets (multiple domains) - https://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md
+* Multilingual GeoQuery: A multilingual dataset for Geoquery. Each instance is a sentence annotated with its meaning representations - https://github.com/statnlp-research/statnlp-datasets
+* Better Modeling of Incomplete Annotation for Named Entity Recognition - https://github.com/allanj/ner_incomplete_annotation
+* Chinese Address Parsing - https://github.com/leodotnet/neural-chinese-address-parsing/
+* Distantly Supervised NER - https://github.com/zwkatgithub/DSCAU
+* Distantly Supervised NER - https://github.com/cliang1453/BOND/tree/master/dataset
+* PROCAT: Product Catalogue Dataset for Implicit Clustering, Permutation Learning and Structure Prediction - https://figshare.com/articles/dataset/PROCAT_Product_Catalogue_Dataset_for_Implicit_Clustering_Permutation_Learning_and_Structure_Prediction/14709507
+* Data, submissions, and intermediate files from TempEval-3 held in 2013 - https://figshare.com/articles/dataset/TempEval-3_data/9586532
 
 ## Shared tasks, competitions
 
