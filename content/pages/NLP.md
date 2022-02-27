@@ -504,6 +504,7 @@ Summary: Links related to NLP resources
 * HuffPost News Category Dataset - https://www.kaggle.com/rmisra/news-category-dataset
 * OpenKP Keyphrase Extraction Dataset - https://github.com/microsoft/OpenKP
 * All Digitized Texas Appeals Court Cases Since 1900 - https://www.kaggle.com/judyrecords/all-digitized-texas-appeals-court-cases-since-1900 - https://www.judyrecords.com/info
+* Richpedia: A Comprehensive Multi-Modal Knowledge Graph - https://github.com/wangmengsd/richpedia
 
 ## Shared tasks, competitions
 
