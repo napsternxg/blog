@@ -86,6 +86,7 @@ Summary: Machine Learning concepts and traditional resources
 * Graphical Models, Exponential Families, and Variational Inference: https://people.eecs.berkeley.edu/~wainwrig/Papers/WaiJor08_FTML.pdf
 * Probabilistic Graphical Models stanford course: https://cs228.stanford.edu/ [\[Course notes\]](https://ermongroup.github.io/cs228-notes/)
 * Differential Inference: A Criminally Underused Tool - https://github.com/srush/ProbTalk/blob/main/talk.notebook.ipynb
+* Probabilistic Machine Learning: Advanced Topics - https://probml.github.io/pml-book/book2.html
 
 ## Extreme classification
 
