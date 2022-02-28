@@ -78,6 +78,7 @@ Summary: Notes and links related to statistics
 
 * The Economy - https://www.core-econ.org/the-economy/
 * QuantEcon: Open source code for economic modeling - https://quantecon.org/
+* Nashpy: Python library used for the computation of equilibria in 2 player strategic form games - https://nashpy.readthedocs.io/en/stable/index.html
 
 ## Time Series
 
