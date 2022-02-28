@@ -70,9 +70,12 @@ Summary: Links related to many datasets
 * Open psychological datasets - https://docs.google.com/spreadsheets/d/1ejOJTNTL5ApCuGTUciV0REEEAqvhI2Rd2FCoj7afops/htmlview#
 * LISS data archive - https://www.lissdata.nl/search/node/experiment
 
-## Religion
+## Religion, Ethnicity, Demographics
 
 * Religious history database - https://religiondatabase.org/landing/
+* Ethnic Power Relations (EPR) Dataset Family 2021 - https://icr.ethz.ch/data/epr/
+* Spatially Interpolated Data on Ethnicity - SIDE - https://icr.ethz.ch/data/side/
+* Geo-referencing of Ethnic Groups - https://icr.ethz.ch/data/greg/
 
 ## World Events
 
@@ -83,6 +86,11 @@ Summary: Links related to many datasets
 * The Armed Conflict Location & Event Data Project - https://acleddata.com/#/dashboard
 * Uppsala Conflict Data Program (UCDP) - https://www.pcr.uu.se/research/ucdp/
 * Militarized Interstate Disputes (v4.3) - https://correlatesofwar.org/data-sets/MIDs
+* Correlates of War Project - https://correlatesofwar.org/data-sets
+* Correlates of War External Links (Related datasets) - https://correlatesofwar.org/external-links
+* CShapes 2.0 maps the borders and capitals of independent states and dependent territories from 1886 to 2019 - https://icr.ethz.ch/data/cshapes/
+* GROWup - Geographical Research On War, Unified Platform - https://growup.ethz.ch/
+* Behavioral Correlates of War, 1816-1979 (ICPSR 8606) - https://www.icpsr.umich.edu/web/ICPSR/studies/8606
 
 
 ## Personality prediction data
