@@ -513,6 +513,8 @@ Summary: Links related to NLP resources
 * Distantly Supervised NER - https://github.com/cliang1453/BOND/tree/master/dataset
 * PROCAT: Product Catalogue Dataset for Implicit Clustering, Permutation Learning and Structure Prediction - https://figshare.com/articles/dataset/PROCAT_Product_Catalogue_Dataset_for_Implicit_Clustering_Permutation_Learning_and_Structure_Prediction/14709507
 * Data, submissions, and intermediate files from TempEval-3 held in 2013 - https://figshare.com/articles/dataset/TempEval-3_data/9586532
+* WikiCoref: An English Coreference-annotated Corpus of Wikipedia Articles - http://rali.iro.umontreal.ca/rali/?q=en/wikicoref
+* WiNER: Coarse Named Entities in Wikipedia and WiFiNE: Transforming Wikipedia into a Large-Scale Fine-Grained Entity Type Corpus - http://rali.iro.umontreal.ca/rali/en/wikipedia-main-concept
 
 ## Shared tasks, competitions
 
