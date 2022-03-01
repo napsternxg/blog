@@ -515,6 +515,7 @@ Summary: Links related to NLP resources
 * Data, submissions, and intermediate files from TempEval-3 held in 2013 - https://figshare.com/articles/dataset/TempEval-3_data/9586532
 * WikiCoref: An English Coreference-annotated Corpus of Wikipedia Articles - http://rali.iro.umontreal.ca/rali/?q=en/wikicoref
 * WiNER: Coarse Named Entities in Wikipedia and WiFiNE: Transforming Wikipedia into a Large-Scale Fine-Grained Entity Type Corpus - http://rali.iro.umontreal.ca/rali/en/wikipedia-main-concept
+* Named Entity Recognition for Entity Linking: What Works and What's Next - https://github.com/Babelscape/ner4el
 
 ## Shared tasks, competitions
 
