@@ -177,9 +177,10 @@ Summary: Links related to many datasets
 * [Jokes](https://github.com/taivop/joke-dataset)
 * [Short text corpus with focus on humor detection](https://github.com/CrowdTruth/Short-Text-Corpus-For-Humor-Detection)
 
-## Acoustic features data
+## Audio
 
 * [Acoustic and meta features of albums and songs on the Billboard 200](https://components.one/datasets/billboard-200/)
+* [Conversation: A Naturalistic Dataset of Online Recordings (CANDOR) corpus](https://osf.io/fbsgh/)
 
 
 ## Driving data
