@@ -142,6 +142,7 @@ Summary: Links related to many datasets
 * WikiTree Data Dump (24M geneologies) - https://www.wikitree.com/wiki/Help:Database_Dumps
 * List of names and surnames for Dutch, English, Portuguese and Spanish - https://github.com/davidsbatista/lexicons/blob/master/names-surnames-NL-UK-IT-PT-ES.zip
 * Chinese Names - https://github.com/psychbruce/ChineseNames
+* Details and relations between names: https://www.name-doctor.com/name-volodenka-meaning-of-volodenka-55917.html
 
 ## Images
 
