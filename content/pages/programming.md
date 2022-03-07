@@ -48,3 +48,4 @@ Summary: Links related to programming
 * From Nand to Tetris: Building a Modern Computer From First Principles - https://www.nand2tetris.org/
 * Computer Systems: A Programmer's Perspective - http://csapp.cs.cmu.edu/3e/home.html
 * Semiconductors: Everything You Wanted to Know - https://www.youtube.com/watch?v=r6NUO_bymuA
+* Introduction to GPUs with OpenGL - https://engineering.monstar-lab.com/en/post/2022/03/01/Introduction-To-GPUs-With-OpenGL/
