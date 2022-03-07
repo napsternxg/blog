@@ -58,6 +58,7 @@ Summary: Machine Learning concepts and traditional resources
 * [Generalized energy-based models](https://www.gatsby.ucl.ac.uk/~gretton//papers/gatech21.pdf) [Video](https://smartech.gatech.edu/handle/1853/65392)
 * [Kernel Methods](https://www.youtube.com/watch?v=alrKls6BORc)
 * [Non-Euclidean Methods in Machine Learning - “Data has Shape and Shape has Meaning” - Stanford Course](http://graphics.stanford.edu/courses/cs468-20-fall/index.html)
+* [THE SOCIETY OF MIND by Marvin Minsky](http://aurellem.org/society-of-mind/)
 
 ## Optimization
 
