@@ -15,6 +15,7 @@ Summary: Links related to visualizations
 * A trip through the Graphics Pipeline 2011: Index - https://fgiesen.wordpress.com/2011/07/09/a-trip-through-the-graphics-pipeline-2011-index/
 * Learning Modern 3D Graphics Programming - https://paroj.github.io/gltut/
 * Physically Based Rendering (Oscar winning book) - https://www.pbrt.org/ [Code](https://github.com/mmp/pbrt-v4)
+* Scientific Visualization: Python + Matplotlib by Nicolas Rougier - https://hal.inria.fr/hal-03427242
 
 ## Courses/Tutorials/Books
 
