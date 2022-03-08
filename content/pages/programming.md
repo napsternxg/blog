@@ -43,6 +43,11 @@ Summary: Links related to programming
 
 * picoCTF is a free computer security education program with original content built on a capture-the-flag framework - https://picoctf.org/
 
+## Operating System
+
+* Linux Benchmarking tools - https://www.brendangregg.com/linuxperf.html
+* Jeff Dean Latency Numbers over years - https://colin-scott.github.io/personal_website/research/interactive_latency.html
+
 ## Hardware
 
 * From Nand to Tetris: Building a Modern Computer From First Principles - https://www.nand2tetris.org/
