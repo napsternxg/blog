@@ -143,6 +143,8 @@ Summary: Links related to many datasets
 * List of names and surnames for Dutch, English, Portuguese and Spanish - https://github.com/davidsbatista/lexicons/blob/master/names-surnames-NL-UK-IT-PT-ES.zip
 * Chinese Names - https://github.com/psychbruce/ChineseNames
 * Details and relations between names: https://www.name-doctor.com/name-volodenka-meaning-of-volodenka-55917.html
+* NameGrapher - Explore the historical popularity of United States baby names - https://namerology.com/baby-name-grapher/
+* Baby Name Atlas: The Most Popular Names Around the World - https://namerology.com/baby-name-atlas/
 
 ## Images
 
