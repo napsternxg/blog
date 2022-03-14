@@ -8,7 +8,7 @@ Summary: Links related to quantum computing resources
 ## Videos
 
 * [A Beginner’s Guide To Quantum Computing](https://www.youtube.com/watch?v=JRIPV0dPAd4) - Very good introductory video form IBM Research using IBM Q project to code examples.
-* [Quantum Computing for Computer Scientists](https://www.youtube.com/watch?v=F_Riqjdh2oM) - Focuses on explaining QC via CS concepts. 
+* [Quantum Computing for Computer Scientists](https://www.youtube.com/watch?v=F_Riqjdh2oM) - Focuses on explaining QC via CS concepts. [Slides](https://ahelwer.ca/files/qc-for-cs.pdf)
 * [Programming with QisKit](https://www.youtube.com/playlist?list=PLOFEBzvs-Vvp2xg9-POLJhQwtVktlYGbY) - A series using IBM Qiskit library to program quantum algorithms and games.
 
 ## Articles
@@ -27,3 +27,4 @@ Summary: Links related to quantum computing resources
 
 ## Books
 * Textbook: Introduction to Classical and Quantum Computing - http://www.thomaswong.net/#publications 
+* QUANTUM COMPUTING: A Gentle Introduction by Eleanor Rieffel and Wolfgang Polak - http://mmrc.amss.cas.cn/tlb/201702/W020170224608150244118.pdf
