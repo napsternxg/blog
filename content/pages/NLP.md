@@ -516,6 +516,11 @@ Summary: Links related to NLP resources
 * WikiCoref: An English Coreference-annotated Corpus of Wikipedia Articles - http://rali.iro.umontreal.ca/rali/?q=en/wikicoref
 * WiNER: Coarse Named Entities in Wikipedia and WiFiNE: Transforming Wikipedia into a Large-Scale Fine-Grained Entity Type Corpus - http://rali.iro.umontreal.ca/rali/en/wikipedia-main-concept
 * Named Entity Recognition for Entity Linking: What Works and What's Next - https://github.com/Babelscape/ner4el
+* Timeline Summarization - http://www.l3s.de/~gtran/timeline/
+* News Timeline Summarization - https://github.com/complementizer/news-tls
+* [Wikipedia Current Events Portal](https://en.wikipedia.org/wiki/Portal:Current_events) (WCEP) + Common Crawl Dataset - https://github.com/complementizer/wcep-mds-dataset
+* NELA-Local: A Dataset of U.S. Local News Articles for the Study of County-level News Ecosystems - https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GFE66K
+* NELA-GT-2021: A Large Multi-Labelled News Dataset for The Study of Misinformation in News Articles - https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/RBKVBM
 
 ## Shared tasks, competitions
 
