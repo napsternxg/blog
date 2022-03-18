@@ -521,6 +521,7 @@ Summary: Links related to NLP resources
 * [Wikipedia Current Events Portal](https://en.wikipedia.org/wiki/Portal:Current_events) (WCEP) + Common Crawl Dataset - https://github.com/complementizer/wcep-mds-dataset
 * NELA-Local: A Dataset of U.S. Local News Articles for the Study of County-level News Ecosystems - https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GFE66K
 * NELA-GT-2021: A Large Multi-Labelled News Dataset for The Study of Misinformation in News Articles - https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/RBKVBM
+* Music Dataset: Lyrics and Metadata from 1950 to 2019 - https://data.mendeley.com/datasets/3t9vbwxgr5/2
 
 ## Shared tasks, competitions
 
