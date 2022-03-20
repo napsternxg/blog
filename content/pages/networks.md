@@ -64,6 +64,11 @@ Summary: Social Networks and Network Related documents
 * Temporal Covid Mental Health Map - https://osf.io/mvdpe/
 * A Global Book Reading Dataset (1M+ GoodReads network) - https://figshare.com/projects/A_Global_Book_Reading_Dataset/118854
 
+### Temporal Networks
+* Quantum Physics semantic network evolution - https://github.com/MarioKrenn6240/SEMNET
+* Science4Cast - Forcest future concept evolution in science - https://github.com/iarai/science4cast
+* Traffic4Cast - Spatio temporal traffic forcasting - https://github.com/iarai/NeurIPS2021-traffic4cast
+
 ## Theory
 
 * Graph Laplacian and Spectral Clustering - https://csustan.csustan.edu/~tom/Clustering/GraphLaplacian-tutorial.pdf
