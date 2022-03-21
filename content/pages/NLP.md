@@ -524,6 +524,7 @@ Summary: Links related to NLP resources
 * Music Dataset: Lyrics and Metadata from 1950 to 2019 - https://data.mendeley.com/datasets/3t9vbwxgr5/2
 * DL-HARD: Annotated Deep Learning Dataset For Passage and Document Retrieval - https://github.com/grill-lab/DL-HARD
 * LexGLUE: A Benchmark Dataset for Legal Language Understanding in English - https://github.com/coastalcph/lex-glue
+* PAQ: 65 Million Probably-Asked Questions and What You Can Do With Them - https://github.com/facebookresearch/PAQ
 
 ## Shared tasks, competitions
 
