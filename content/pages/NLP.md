@@ -525,6 +525,7 @@ Summary: Links related to NLP resources
 * DL-HARD: Annotated Deep Learning Dataset For Passage and Document Retrieval - https://github.com/grill-lab/DL-HARD
 * LexGLUE: A Benchmark Dataset for Legal Language Understanding in English - https://github.com/coastalcph/lex-glue
 * PAQ: 65 Million Probably-Asked Questions and What You Can Do With Them - https://github.com/facebookresearch/PAQ
+* IteraTeR: Understanding Iterative Revision from Human-Written Text - https://github.com/vipulraheja/IteraTeR
 
 ## Shared tasks, competitions
 
