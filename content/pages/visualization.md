@@ -25,6 +25,7 @@ Summary: Links related to visualizations
 * Multiple esoteric chart types using Plotly Express - https://nicolas.kruchten.com/semiology_of_graphics/
 * Pixar Story telling course on Khan Academy - https://www.khanacademy.org/computing/pixar/storytelling
 * Scientific Visualization: Python + Matplotlib - https://github.com/rougier/scientific-visualization-book
+* Scratchapixel 2.0 - Volume 1: Foundations of 3D Rendering - https://www.scratchapixel.com/index.php
 
 ## Learn D3
 
