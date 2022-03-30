@@ -161,6 +161,7 @@ Summary: Links related to many datasets
 * Bob Ross Paintings with title and color pallet names - https://github.com/jwilber/Bob_Ross_Paintings
 * OCR Datasets: https://cneud.github.io/ocr-gt/
 * LVIS: A DATASET FOR LARGE VOCABULARY INSTANCE SEGMENTATION: A new dataset for long tail object recognition. - https://www.lvisdataset.org/
+* YFCC100M 99M Image, Caption data - http://mmcommons.org/
 
 ## Stream processing data
 * Data from The Neural Hawkes Process - https://github.com/HMEIatJHU/neurawkes - [Google drive link](https://drive.google.com/drive/folders/0BwqmV0EcoUc8UklIR1BKV25YR1U?usp=sharing)
