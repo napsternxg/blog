@@ -527,6 +527,9 @@ Summary: Links related to NLP resources
 * PAQ: 65 Million Probably-Asked Questions and What You Can Do With Them - https://github.com/facebookresearch/PAQ
 * IteraTeR: Understanding Iterative Revision from Human-Written Text - https://github.com/vipulraheja/IteraTeR
 * Multilingual Name Entity Recognition (NER) Datasets with Gazetteer - https://registry.opendata.aws/code-mixed-ner/
+* Low Context Name Entity Recognition (NER) Datasets with Gazetteer - https://registry.opendata.aws/lowcontext-ner-gaz/
+* MultiCoNER Dataset - https://registry.opendata.aws/multiconer/
+* The Massively Multilingual Image Dataset (MMID) - http://multilingual-images.org/
 
 ## Shared tasks, competitions
 
