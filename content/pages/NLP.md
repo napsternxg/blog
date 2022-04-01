@@ -530,6 +530,7 @@ Summary: Links related to NLP resources
 * Low Context Name Entity Recognition (NER) Datasets with Gazetteer - https://registry.opendata.aws/lowcontext-ner-gaz/
 * MultiCoNER Dataset - https://registry.opendata.aws/multiconer/
 * The Massively Multilingual Image Dataset (MMID) - http://multilingual-images.org/
+* ZEST: ZEroShot learning from Task descriptions - https://registry.opendata.aws/allenai-zest/
 
 ## Shared tasks, competitions
 
