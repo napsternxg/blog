@@ -531,6 +531,18 @@ Summary: Links related to NLP resources
 * MultiCoNER Dataset - https://registry.opendata.aws/multiconer/
 * The Massively Multilingual Image Dataset (MMID) - http://multilingual-images.org/
 * ZEST: ZEroShot learning from Task descriptions - https://registry.opendata.aws/allenai-zest/
+* EMBEDDIA Cross-Lingual Embeddings for Less-Represented Languages in European News Media - http://embeddia.eu/outputs/
+* Ekspress Meedia news archive (c.1.4M articles in Estonian and Russian): hdl.handle.net/11356/1408
+* Latvian Delfi Article Archive (c.180k articles in Latvian and Russian): hdl.handle.net/11356/1409
+* Styria 24sata news archive (c.650k articles in Croatian): hdl.handle.net/11356/1410
+* STT news archive (c.2.8M articles in Finnish): urn.fi/urn:nbn:fi:lb-2019041501
+* Ekspress Meedia Comment Archive (c.31M comments in Estonian and Russian): hdl.handle.net/11356/1401
+* Latvian Delfi Comment Archive (c.12M comments in Latvian and Russian): hdl.handle.net/11356/1407
+* Styria 24sata Comment Archive (c.20M comments in Croatian): hdl.handle.net/11356/1399
+* Multi-lingual culture-independent word analogy dataset: hdl.handle.net/11356/1261
+* CoSimLex context-dependent similarity dataset: hdl.handle.net/11356/1308
+* Slovenian SimLex dataset: hdl.handle.net/11356/1309
+* Keyword extraction datasets for Croatian, Estonian, Latvian & Russian: http://hdl.handle.net/11356/1403.
 
 ## Shared tasks, competitions
 
