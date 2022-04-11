@@ -543,6 +543,7 @@ Summary: Links related to NLP resources
 * CoSimLex context-dependent similarity dataset: hdl.handle.net/11356/1308
 * Slovenian SimLex dataset: hdl.handle.net/11356/1309
 * Keyword extraction datasets for Croatian, Estonian, Latvian & Russian: http://hdl.handle.net/11356/1403.
+* Information Retreval Datasets - https://github.com/irgroup/datasets
 
 ## Shared tasks, competitions
 
