@@ -69,6 +69,13 @@ Summary: Social Networks and Network Related documents
 * Science4Cast - Forcest future concept evolution in science - https://github.com/iarai/science4cast
 * Traffic4Cast - Spatio temporal traffic forcasting - https://github.com/iarai/NeurIPS2021-traffic4cast
 
+### Signed networks
+
+* Alliance Treaty Obligations and Provisions (ATOP) - http://www.atopdata.org/data.html
+* Epinions signed network - https://snap.stanford.edu/data/soc-sign-epinions.html
+* Wikipedia Admin Election - https://snap.stanford.edu/data/wiki-Elec.html
+* Signed networks from SNAP group - https://snap.stanford.edu/data/index.html#signnets
+
 ## Theory
 
 * Graph Laplacian and Spectral Clustering - https://csustan.csustan.edu/~tom/Clustering/GraphLaplacian-tutorial.pdf
