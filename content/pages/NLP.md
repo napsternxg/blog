@@ -146,6 +146,8 @@ Summary: Links related to NLP resources
 * HurtLex a lexicon of offensive, aggressive, and hateful words in over 50 languages - https://github.com/valeriobasile/hurtlex
 * The Evaluative Lexicon - emotionality, valence, and extremity - http://www.evaluativelexicon.com/
 * CLICS: Database of Cross-Linguistic Colexifications - https://clics.clld.org/
+* FreeDict: Multilingual and Single Language Dictionaries - https://freedict.org/downloads/
+* Slob Dictionaries: Language dictionaries - https://github.com/itkach/slob/wiki/Dictionaries
 
 ## Data
 
