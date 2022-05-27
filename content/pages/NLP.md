@@ -546,6 +546,8 @@ Summary: Links related to NLP resources
 * Slovenian SimLex dataset: hdl.handle.net/11356/1309
 * Keyword extraction datasets for Croatian, Estonian, Latvian & Russian: http://hdl.handle.net/11356/1403.
 * Information Retreval Datasets - https://github.com/irgroup/datasets
+* Appraisal enISEAR dataset: A reannotation of the enISEAR corpus with Cognitive Appraisal - https://github.com/bluzukk/appraisal-emotion-classification
+* Universal Anaphora Data Repositories - https://github.com/UniversalAnaphora/UniversalAnaphora/blob/main/data/data.md
 
 ## Shared tasks, competitions
 
