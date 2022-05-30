@@ -548,6 +548,7 @@ Summary: Links related to NLP resources
 * Information Retreval Datasets - https://github.com/irgroup/datasets
 * Appraisal enISEAR dataset: A reannotation of the enISEAR corpus with Cognitive Appraisal - https://github.com/bluzukk/appraisal-emotion-classification
 * Universal Anaphora Data Repositories - https://github.com/UniversalAnaphora/UniversalAnaphora/blob/main/data/data.md
+* WANDS is a Wayfair product search relevance dataset - https://github.com/wayfair/WANDS
 
 ## Shared tasks, competitions
 
