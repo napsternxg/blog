@@ -19,6 +19,7 @@ Summary: Links related to quantum computing resources
 
 * [IBM Quantum computing free access](https://quantum-computing.ibm.com/) - Get access to schedule jobs on upto 32 qubits (mostly just 5). 
 * [QuTiP: Quantum Toolbox in Python](https://qutip.org/docs/latest/index.html)
+* [Superconducting Quantum Circuit in Python](https://www.sqcircuit.org/)
 
 
 ## Courses
