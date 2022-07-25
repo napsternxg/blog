@@ -11,6 +11,7 @@ Summary: Links related to Scientific Research
 * [You and Your Research by Richard Hamming](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html)
 * [How to Have a Bad Career How to Have a Bad Career in Research/Academia in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf) [Other links](https://people.eecs.berkeley.edu/~pattrsn/talks/nontech.html)
 * [Technology and Courage - Ivan Sutherland](https://cseweb.ucsd.edu/~wgg/smli_ps-1.pdf)
+* [The Craft of Writing Effectively (UChicago Leadership Lab)](https://youtu.be/vtIzMaLkCaM) - [Handout](https://cpb-us-w2.wpmucdn.com/u.osu.edu/dist/5/7046/files/2014/10/UnivChic_WritingProg-1grt232.pdf)
 
 # Links
 
