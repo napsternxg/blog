@@ -549,6 +549,7 @@ Summary: Links related to NLP resources
 * Appraisal enISEAR dataset: A reannotation of the enISEAR corpus with Cognitive Appraisal - https://github.com/bluzukk/appraisal-emotion-classification
 * Universal Anaphora Data Repositories - https://github.com/UniversalAnaphora/UniversalAnaphora/blob/main/data/data.md
 * WANDS is a Wayfair product search relevance dataset - https://github.com/wayfair/WANDS
+* 3rd Shared Task on SlavNER Recognition, Normalization, Classification and Cross-lingual linking of Named Entities in Slavic Languages - http://bsnlp.cs.helsinki.fi/shared-task.html
 
 ## Shared tasks, competitions
 
