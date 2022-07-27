@@ -552,6 +552,15 @@ Summary: Links related to NLP resources
 * 3rd Shared Task on SlavNER Recognition, Normalization, Classification and Cross-lingual linking of Named Entities in Slavic Languages - http://bsnlp.cs.helsinki.fi/shared-task.html
 * KIND (Kessler Italian Named-entities Dataset) - https://github.com/dhfbk/KIND
 * Monolingual and Cross-Lingual Acceptability Judgments with the The Italian Corpus of Linguistic Acceptability (CoLA) corpus - https://github.com/dhfbk/ItaCoLA-dataset
+* Knowledge Base Construction from Pre-trained Language Models (LM-KBC) - https://lm-kbc.github.io/
+* The Shared Task on Understanding Figurative Language - https://codalab.lisn.upsaclay.fr/competitions/5908 - https://huggingface.co/datasets/ColumbiaNLP/FigLang2022SharedTask
+* Euphemism Detection Shared Task - https://codalab.lisn.upsaclay.fr/competitions/5726
+* Multimodal Emotion Datasets - https://github.com/A2Zadeh/CMU-MultimodalSDK
+* DEAL: Detecting Entities in the Astrophysics Literature - https://ui.adsabs.harvard.edu/WIESP/2022/SharedTasks
+* CodRED: A Cross-Document Relation Extraction Dataset for Acquiring Knowledge in the Wild - https://codalab.lisn.upsaclay.fr/competitions/3770
+* code-mixed machine translation (MixMT) - https://codalab.lisn.upsaclay.fr/competitions/2861
+* Shared Task on Customized Chat Grounding Persona and Knowledge - https://codalab.lisn.upsaclay.fr/competitions/3754
+* Causal News Corpus - https://codalab.lisn.upsaclay.fr/competitions/2299
 
 ## Shared tasks, competitions
 
