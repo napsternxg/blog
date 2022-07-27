@@ -550,6 +550,8 @@ Summary: Links related to NLP resources
 * Universal Anaphora Data Repositories - https://github.com/UniversalAnaphora/UniversalAnaphora/blob/main/data/data.md
 * WANDS is a Wayfair product search relevance dataset - https://github.com/wayfair/WANDS
 * 3rd Shared Task on SlavNER Recognition, Normalization, Classification and Cross-lingual linking of Named Entities in Slavic Languages - http://bsnlp.cs.helsinki.fi/shared-task.html
+* KIND (Kessler Italian Named-entities Dataset) - https://github.com/dhfbk/KIND
+* Monolingual and Cross-Lingual Acceptability Judgments with the The Italian Corpus of Linguistic Acceptability (CoLA) corpus - https://github.com/dhfbk/ItaCoLA-dataset
 
 ## Shared tasks, competitions
 
