@@ -148,6 +148,7 @@ Summary: Links related to NLP resources
 * CLICS: Database of Cross-Linguistic Colexifications - https://clics.clld.org/
 * FreeDict: Multilingual and Single Language Dictionaries - https://freedict.org/downloads/
 * Slob Dictionaries: Language dictionaries - https://github.com/itkach/slob/wiki/Dictionaries
+* Hindi Language Stop Words List - https://data.mendeley.com/datasets/bsr3frvvjc/1
 
 ## Data
 
@@ -561,6 +562,12 @@ Summary: Links related to NLP resources
 * code-mixed machine translation (MixMT) - https://codalab.lisn.upsaclay.fr/competitions/2861
 * Shared Task on Customized Chat Grounding Persona and Knowledge - https://codalab.lisn.upsaclay.fr/competitions/3754
 * Causal News Corpus - https://codalab.lisn.upsaclay.fr/competitions/2299
+* WikiDiverse: A Multimodal Entity Linking Dataset with Diversified Contextual Topics and Entity Types - https://github.com/wangxw5/wikiDiverse
+* Time-Aware Language Models as Temporal Knowledge Bases - https://github.com/google-research/language/tree/master/language/templama
+* GoodNewsEveryone: A corpus of news headlines annotated with emotions, semantic roles, and reader perception - https://www.ims.uni-stuttgart.de/forschung/ressourcen/korpora/goodnewseveryone/
+* MELD: Multimodal EmotionLines Dataset: A dataset for Emotion Recognition in Multiparty Conversations - https://affective-meld.github.io/
+* Multi-modal Sarcasm Detection and Humor Classification in Code-mixed Conversations - https://github.com/LCS2-IIITD/MSH-COMICS
+
 
 ## Shared tasks, competitions
 
