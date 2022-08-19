@@ -15,6 +15,7 @@ Summary: Social Networks and Network Related documents
 
 * [Lectures on Network Systems](http://motion.me.ucsb.edu/book-lns/)
 * [Handbook of Graph Drawing and Visualization](http://cs.brown.edu/people/rtamassi/gdhandbook/)
+* [Network Data Science](https://bdpedigo.github.io/networks-course/landing.html)
 
 ## Links
 
