@@ -568,6 +568,7 @@ Summary: Links related to NLP resources
 * MELD: Multimodal EmotionLines Dataset: A dataset for Emotion Recognition in Multiparty Conversations - https://affective-meld.github.io/
 * Multi-modal Sarcasm Detection and Humor Classification in Code-mixed Conversations - https://github.com/LCS2-IIITD/MSH-COMICS
 * NewsClaims: A New Benchmark for Claim Detection from News with Background Knowledge - https://github.com/blender-nlp/NewsClaims
+* Relationship and Entity Extraction Evaluation Dataset- https://github.com/dstl/re3d
 
 
 ## Shared tasks, competitions
