@@ -146,6 +146,7 @@ Summary: Links related to many datasets
 * NameGrapher - Explore the historical popularity of United States baby names - https://namerology.com/baby-name-grapher/
 * Baby Name Atlas: The Most Popular Names Around the World - https://namerology.com/baby-name-atlas/
 * French Baby Names - https://en.geneanet.org/first-name/
+* Russian names with gender - https://github.com/words/russian-given-names
 
 ## Images
 
