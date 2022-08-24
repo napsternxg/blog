@@ -82,6 +82,7 @@ Summary: Links related to NLP resources
 * The Tatoeba Translation Challenge (v2021-08-07) - https://github.com/Helsinki-NLP/Tatoeba-Challenge
 * Named Entity Recognition for Entity Linking: What Works and What's Next - https://github.com/Babelscape/ner4el
 * Inception: semantic annotation tool - https://inception-project.github.io/
+* Language rules in XML format from languagetool.org - https://dev.languagetool.org/languages
 
 ### Pretrained embeddings and models
 * ELMO for Many Languages - https://github.com/HIT-SCIR/ELMoForManyLangs
@@ -149,6 +150,12 @@ Summary: Links related to NLP resources
 * FreeDict: Multilingual and Single Language Dictionaries - https://freedict.org/downloads/
 * Slob Dictionaries: Language dictionaries - https://github.com/itkach/slob/wiki/Dictionaries
 * Hindi Language Stop Words List - https://data.mendeley.com/datasets/bsr3frvvjc/1
+* XMLittré: XML version of the French Dictionary Littré (1873–1877) - https://bitbucket.org/Mytskine/xmlittre-data [Raw Text](https://www.littre.org/faq)
+* GNU Collaborative International Dictionary of English - https://gcide.gnu.org.ua/
+* GNU Dico: GNU Dictionary Server which loads dictionaries from various formats - https://puszcza.gnu.org.ua/software/dico/modules.html
+* Moby Thesaurus - https://moby-thesaurus.org/ (See [words.txt](https://github.com/words/moby))
+* OpenOffice MyThes thesaurus - https://www.openoffice.org/lingucomponent/thesaurus.html
+* German POS dictionary - https://github.com/languagetool-org/german-pos-dict
 
 ## Data
 
