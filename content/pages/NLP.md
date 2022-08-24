@@ -158,6 +158,8 @@ Summary: Links related to NLP resources
 * German POS dictionary - https://github.com/languagetool-org/german-pos-dict
 * CMU Dict (word pronounciation) - https://github.com/cmusphinx/cmudict [JS format](https://github.com/words/cmu-pronouncing-dictionary)
 * Gemoji: emoji descriptions and tags - https://github.com/github/gemoji/blob/master/db/emoji.json
+* Emoji-emotion: emotion assigned to emojis - https://github.com/words/emoji-emotion
+* Map of profane words to how likely it is to be used as either profanity or clean text (multilingual) - https://github.com/words/cuss
 
 ## Data
 
