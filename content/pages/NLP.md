@@ -156,6 +156,8 @@ Summary: Links related to NLP resources
 * Moby Thesaurus - https://moby-thesaurus.org/ (See [words.txt](https://github.com/words/moby))
 * OpenOffice MyThes thesaurus - https://www.openoffice.org/lingucomponent/thesaurus.html
 * German POS dictionary - https://github.com/languagetool-org/german-pos-dict
+* CMU Dict (word pronounciation) - https://github.com/cmusphinx/cmudict [JS format](https://github.com/words/cmu-pronouncing-dictionary)
+* Gemoji: emoji descriptions and tags - https://github.com/github/gemoji/blob/master/db/emoji.json
 
 ## Data
 
