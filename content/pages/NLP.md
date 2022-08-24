@@ -160,6 +160,9 @@ Summary: Links related to NLP resources
 * Gemoji: emoji descriptions and tags - https://github.com/github/gemoji/blob/master/db/emoji.json
 * Emoji-emotion: emotion assigned to emojis - https://github.com/words/emoji-emotion
 * Map of profane words to how likely it is to be used as either profanity or clean text (multilingual) - https://github.com/words/cuss
+* The LiLaH Emotion Lexicon of Croatian, Dutch and Slovene - https://www.clarin.si/repository/xmlui/handle/11356/1318
+* Linguistically annotated multilingual comparable corpora of parliamentary debates ParlaMint.ana 2.1 - https://www.clarin.si/repository/xmlui/handle/11356/1431 - [Github](https://github.com/clarin-eric/ParlaMint)
+* Multilingual comparable corpora of parliamentary debates ParlaMint 2.1 - https://www.clarin.si/repository/xmlui/handle/11356/1432
 
 ## Data
 
