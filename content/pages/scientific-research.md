@@ -17,6 +17,8 @@ Summary: Links related to Scientific Research
 
 * [Principles of Effective Research by Michael A. Nielsen](https://michaelnielsen.org/blog/principles-of-effective-research/)
 * [The Good Research Code Handbook](https://goodresearch.dev/)
+* [How to do Research - At the MIT AI Lab](https://dspace.mit.edu/bitstream/handle/1721.1/41487/AI_WP_316.pdf)
+* [How to do research - Bill Freeman](http://people.csail.mit.edu/billf/www/papers/doresearch.pdf) - [Slides](http://people.csail.mit.edu/billf/talks/10minFreeman2013.pdf)
 
 ## Presentatation Tools
 * [Annotated Latex equations](https://github.com/synercys/annotated_latex_equations)
