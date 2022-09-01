@@ -110,6 +110,7 @@ Summary: Machine Learning concepts and traditional resources
 ## Positive Unlabelled (PU) learning
 
 * [An introductory tutorial to the "Learning from Positive and Unlabeled Data" field](https://dtai.cs.kuleuven.be/tutorials/pulearning/) [videos](https://www.youtube.com/watch?v=MHKintiIDHo&list=PLrcwgu7Q4W_6vZjvGAP1tlbiUOTmZ2vY4)
+* [PU Learning - Learning from Positive and Unlabeled Examples - UIC Resources](https://www.cs.uic.edu/~liub/NSF/PSC-IIS-0307239.html)
 
 
 ## Concept Drift
