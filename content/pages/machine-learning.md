@@ -21,6 +21,7 @@ Summary: Machine Learning concepts and traditional resources
 * Macarico: learning to search - https://github.com/hal3/macarico
 * A Collection of Conference & School Notes in Machine Learning - https://github.com/visual-ml-notes/visual-machine-learning-notes
 * Python Toolkit of Statistics for Pairwise Interactions (pyspi) - https://github.com/olivercliff/pyspi
+* pulearn: Positive-unlabeled learning with Python - https://pulearn.github.io/pulearn/
 
 ## ML Engineering
 
@@ -105,6 +106,10 @@ Summary: Machine Learning concepts and traditional resources
 * [ICML 2020 TUTORIAL ON PARAMETER-FREE ONLINE OPTIMIZATION](https://parameterfree.com/icml-tutorial/)
 * [A Modern Introduction to Online Learning](https://arxiv.org/abs/1912.13213)
 
+
+## Positive Unlabelled (PU) learning
+
+* [An introductory tutorial to the "Learning from Positive and Unlabeled Data" field](https://dtai.cs.kuleuven.be/tutorials/pulearning/) [videos](https://www.youtube.com/watch?v=MHKintiIDHo&list=PLrcwgu7Q4W_6vZjvGAP1tlbiUOTmZ2vY4)
 
 
 ## Concept Drift
