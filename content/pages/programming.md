@@ -16,11 +16,13 @@ Summary: Links related to programming
 * Software Engineering at Google - https://abseil.io/resources/swe_at_google.2.pdf
 * How to Design Programs, Second Edition - https://htdp.org/2019-02-24/index.html
 * Algorithmica - https://en.algorithmica.org/hpc/ - [Code](https://github.com/sslotin/amh-code)
-
+* Foundations of Multidimensional and Metric Data Structures - Hanan Samet - https://www.elsevier.com/books/foundations-of-multidimensional-and-metric-data-structures/samet/978-0-12-369446-1
+* Data Structures and Algorithm Analysis - Clifford A. Shaffer - https://people.cs.vt.edu/~shaffer/Book/
 
 ## Implementations
 
 * The Stony Brook Algorithm Repository - http://algorist.com/algorist.html
+* OpenDSA: Interactive Data Structures and Algorithms - https://opendsa-server.cs.vt.edu/ - [Examples](https://opendsa-server.cs.vt.edu/OpenDSA/Books/Everything/html/)
 
 
 ## Parallel Computing

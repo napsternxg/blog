@@ -83,6 +83,7 @@ Summary: Links related to NLP resources
 * Named Entity Recognition for Entity Linking: What Works and What's Next - https://github.com/Babelscape/ner4el
 * Inception: semantic annotation tool - https://inception-project.github.io/
 * Language rules in XML format from languagetool.org - https://dev.languagetool.org/languages
+* REBL is an extension of the Radboud Entity Linker (REL) for Batch Entity Linking - https://github.com/informagi/REBL
 
 ### Pretrained embeddings and models
 * ELMO for Many Languages - https://github.com/HIT-SCIR/ELMoForManyLangs
@@ -583,7 +584,14 @@ Summary: Links related to NLP resources
 * Multi-modal Sarcasm Detection and Humor Classification in Code-mixed Conversations - https://github.com/LCS2-IIITD/MSH-COMICS
 * NewsClaims: A New Benchmark for Claim Detection from News with Background Knowledge - https://github.com/blender-nlp/NewsClaims
 * Relationship and Entity Extraction Evaluation Dataset- https://github.com/dstl/re3d
-
+* xNED - Basque dataset - https://github.com/anderbarrena/xNED
+* HIPE – Identifying Historical People, Places and other Entities Shared Task on Named Entity Recognition and Linking in Multilingual Historical Documents - https://hipe-eval.github.io/HIPE-2022/ - [Zenodo 2022](https://zenodo.org/record/6579950) - [2020](https://github.com/impresso/CLEF-HIPE-2020/tree/master/data) - [Zenodo 2020](https://zenodo.org/record/6046853)
+* MIM-GOLD-EL: an Icelandic Entity Linking (EL) corpus - https://repository.clarin.is/repository/xmlui/handle/20.500.12537/168
+* MIM-GOLD-NER: Icelandic named entity (NE) corpus - https://repository.clarin.is/repository/xmlui/handle/20.500.12537/230
+* MIM-GOLD: gold standard for PoS-tagging and lemmatizing Icelandic texts - https://repository.clarin.is/repository/xmlui/handle/20.500.12537/113
+* MS MARCO entity annotations and disambiguations - https://github.com/informagi/mmead
+* ConEL-2: Conversational Entity Linking Dataset - https://github.com/informagi/conversational-entity-linking-2022 - [Data](https://github.com/informagi/conversational-entity-linking)
+* Wizard of Wikipedia: Knowledge-Powered Conversational Agents - https://parl.ai/projects/wizard_of_wikipedia/
 
 ## Shared tasks, competitions
 
