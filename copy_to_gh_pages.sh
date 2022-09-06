@@ -3,6 +3,7 @@ set -e
 
 COMMIT_MSG=${1:-Updated blog}
 DUMMY_USER=${DUMMY_USER:-1}
+DEBUG=${DEBUG:-0}
 
 echo "making a commit with message=${COMMIT_MSG}";
 
