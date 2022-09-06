@@ -16,6 +16,7 @@ Summary: Complex Systems
 * Epidemic Modeling for Everyone - https://github.com/DataForScience/Epidemiology101/blob/master/README.md
 * [The Economy](https://www.core-econ.org/the-economy/book/text/0-3-contents.html)
 * Building Less Flawed Metrics: Dodging Goodhart and Campbell’s Laws - https://mpra.ub.uni-muenchen.de/98288/1/MPRA_paper_90649.pdf
+* Complex Systems and Networks: A historical view and 4 key ideas by Petter Holme - https://videopress.com/v/oLdj0PQX
 
 ## Courses
 
