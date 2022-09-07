@@ -21,6 +21,7 @@ else
         echo "DUMMY_USER=$DUMMY_USER, reusing env user."
     fi
     cp -r ./docs ../
+    rm setup-miniconda-patched-environment.yml
     git fetch origin gh-pages
     git checkout gh-pages
     rsync -a --delete ../docs/ ./docs/
