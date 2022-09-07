@@ -12,6 +12,7 @@ Summary: Notes and links related to machine learning ethics
 * Google AI ML fairness lectures - https://developers.google.com/machine-learning/crash-course/fairness/video-lecture
 * Law for Computer Scientists - https://lawforcomputerscientists.pubpub.org/
 * Berkeley course on Social Movements and Social Media - https://docs.google.com/document/d/1BFvpSxBOZoKayRUayCZfyUaolj6FEwH7muc5bfYWkRA/edit
+* Syllabus • Human-AI Interaction • Fall 2022 • CMSC 848C - UMD by Hal Daume - https://docs.google.com/document/d/1n2GQ5A5cZoucyFkptpr27Nje58L4M9SjA8mE0h83ucg/edit#
 
 ## Books
 
