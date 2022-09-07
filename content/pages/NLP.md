@@ -164,6 +164,7 @@ Summary: Links related to NLP resources
 * The LiLaH Emotion Lexicon of Croatian, Dutch and Slovene - https://www.clarin.si/repository/xmlui/handle/11356/1318
 * Linguistically annotated multilingual comparable corpora of parliamentary debates ParlaMint.ana 2.1 - https://www.clarin.si/repository/xmlui/handle/11356/1431 - [Github](https://github.com/clarin-eric/ParlaMint)
 * Multilingual comparable corpora of parliamentary debates ParlaMint 2.1 - https://www.clarin.si/repository/xmlui/handle/11356/1432
+* labMT lexicon with happniess score and defnitions - https://gitlab.com/compstorylab/sentiment-analysis/-/blob/master/data/labmt.tsv
 
 ## Data
 
