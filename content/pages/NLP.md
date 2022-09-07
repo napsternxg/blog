@@ -593,6 +593,8 @@ Summary: Links related to NLP resources
 * MS MARCO entity annotations and disambiguations - https://github.com/informagi/mmead
 * ConEL-2: Conversational Entity Linking Dataset - https://github.com/informagi/conversational-entity-linking-2022 - [Data](https://github.com/informagi/conversational-entity-linking)
 * Wizard of Wikipedia: Knowledge-Powered Conversational Agents - https://parl.ai/projects/wizard_of_wikipedia/
+* A Benchmarking Study of Embedding-based Entity Alignment for Knowledge Graphs - https://github.com/nju-websoft/OpenEA#dataset-overview
+* DBP1M: LargeEA: Aligning Entities for Large-scale Knowledge Graphs - https://github.com/ZJU-DAILY/LargeEA
 
 ## Shared tasks, competitions
 
