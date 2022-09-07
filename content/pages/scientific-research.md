@@ -12,6 +12,7 @@ Summary: Links related to Scientific Research
 * [How to Have a Bad Career How to Have a Bad Career in Research/Academia in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf) [Other links](https://people.eecs.berkeley.edu/~pattrsn/talks/nontech.html)
 * [Technology and Courage - Ivan Sutherland](https://cseweb.ucsd.edu/~wgg/smli_ps-1.pdf)
 * [The Craft of Writing Effectively (UChicago Leadership Lab)](https://youtu.be/vtIzMaLkCaM) - [Handout](https://cpb-us-w2.wpmucdn.com/u.osu.edu/dist/5/7046/files/2014/10/UnivChic_WritingProg-1grt232.pdf)
+* [Paper Writing in Applied Mathematics - Mason Porter](https://www.youtube.com/watch?v=oNgqQyF0GfY) - [Slides](https://www.slideshare.net/masonporter/paper-writing-in-applied-mathematics-slightly-updated-slides)
 
 # Links
 
@@ -19,6 +20,7 @@ Summary: Links related to Scientific Research
 * [The Good Research Code Handbook](https://goodresearch.dev/)
 * [How to do Research - At the MIT AI Lab](https://dspace.mit.edu/bitstream/handle/1721.1/41487/AI_WP_316.pdf)
 * [How to do research - Bill Freeman](http://people.csail.mit.edu/billf/www/papers/doresearch.pdf) - [Slides](http://people.csail.mit.edu/billf/talks/10minFreeman2013.pdf)
+* [The Narrative Hierarchy—Stories and Storytelling on all Scales](https://pdodds.w3.uvm.edu/writings/2015-06-04narrative-hierarchy/)
 
 ## Presentatation Tools
 * [Annotated Latex equations](https://github.com/synercys/annotated_latex_equations)

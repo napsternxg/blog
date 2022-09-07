@@ -16,6 +16,7 @@ Summary: Links related to visualizations
 * Learning Modern 3D Graphics Programming - https://paroj.github.io/gltut/
 * Physically Based Rendering (Oscar winning book) - https://www.pbrt.org/ [Code](https://github.com/mmp/pbrt-v4)
 * Scientific Visualization: Python + Matplotlib by Nicolas Rougier - https://hal.inria.fr/hal-03427242
+* Chromotome: A collection of color palettes - https://kgolid.github.io/chromotome-site/
 
 ## Courses/Tutorials/Books
 
