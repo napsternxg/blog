@@ -32,6 +32,7 @@ jobs:
           environment-file: 'environment.yml'
           python-version: 3.7
           auto-activate-base: false
+          clean-patched-environment-file: true
       
       - name: Setup software
         run: |

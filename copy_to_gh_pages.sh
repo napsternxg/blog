@@ -26,7 +26,7 @@ else
     rsync -a --delete ../docs/ ./docs/
     git add .
     git diff-index --quiet HEAD || git commit -m "${COMMIT_MSG}"
-    git clean -df
+    git clean -dfx
     git push origin HEAD
     git checkout master
 fi
