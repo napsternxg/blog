@@ -596,6 +596,7 @@ Summary: Links related to NLP resources
 * A Benchmarking Study of Embedding-based Entity Alignment for Knowledge Graphs - https://github.com/nju-websoft/OpenEA#dataset-overview
 * DBP1M: LargeEA: Aligning Entities for Large-scale Knowledge Graphs - https://github.com/ZJU-DAILY/LargeEA
 * Knowledge Graph Embedding, Entity Typing, and Entity Alignment Task Datasets - https://github.com/nju-websoft/muKG#datasets-hub-
+* Nested-NER - https://github.com/bplank/nested-ner
 
 ## Shared tasks, competitions
 
