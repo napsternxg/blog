@@ -165,6 +165,7 @@ Summary: Links related to NLP resources
 * Linguistically annotated multilingual comparable corpora of parliamentary debates ParlaMint.ana 2.1 - https://www.clarin.si/repository/xmlui/handle/11356/1431 - [Github](https://github.com/clarin-eric/ParlaMint)
 * Multilingual comparable corpora of parliamentary debates ParlaMint 2.1 - https://www.clarin.si/repository/xmlui/handle/11356/1432
 * labMT lexicon with happniess score and defnitions - https://gitlab.com/compstorylab/sentiment-analysis/-/blob/master/data/labmt.tsv
+* Easy-to-use word translations for 3,564 language pairs across 62 unique languages - https://github.com/kakaobrain/word2word
 
 ## Data
 
@@ -599,6 +600,7 @@ Summary: Links related to NLP resources
 * Nested-NER - https://github.com/bplank/nested-ner
 * 🐺 COYO-700M: Image-Text Pair Dataset - https://github.com/kakaobrain/coyo-dataset
 *  KorNLI and KorSTS: New Benchmark Datasets for Korean Natural Language Understanding - https://github.com/kakaobrain/KorNLUDatasets
+*  Jejueo Datasets for Machine Translation and Speech Synthesis - https://github.com/kakaobrain/jejueo
 
 ## Shared tasks, competitions
 
