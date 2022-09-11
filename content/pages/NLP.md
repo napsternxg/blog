@@ -597,6 +597,8 @@ Summary: Links related to NLP resources
 * DBP1M: LargeEA: Aligning Entities for Large-scale Knowledge Graphs - https://github.com/ZJU-DAILY/LargeEA
 * Knowledge Graph Embedding, Entity Typing, and Entity Alignment Task Datasets - https://github.com/nju-websoft/muKG#datasets-hub-
 * Nested-NER - https://github.com/bplank/nested-ner
+* 🐺 COYO-700M: Image-Text Pair Dataset - https://github.com/kakaobrain/coyo-dataset
+*  KorNLI and KorSTS: New Benchmark Datasets for Korean Natural Language Understanding - https://github.com/kakaobrain/KorNLUDatasets
 
 ## Shared tasks, competitions
 
