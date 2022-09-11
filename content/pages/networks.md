@@ -128,6 +128,7 @@ Summary: Social Networks and Network Related documents
 * Graphistry server - https://github.com/graphistry/pygraphistry 
 * Realtime graph visualization: http://graphvis.com/
 * Multilayer Networks in LaTeX - https://github.com/hackl/tikz-network
+* GPU-accelerated Force Graph in browser - https://github.com/cosmograph-org/cosmos
 
 ## Network signals
 * Great posts on the benefits of using network signals in identifying fake news:
