@@ -599,8 +599,11 @@ Summary: Links related to NLP resources
 * Knowledge Graph Embedding, Entity Typing, and Entity Alignment Task Datasets - https://github.com/nju-websoft/muKG#datasets-hub-
 * Nested-NER - https://github.com/bplank/nested-ner
 * 🐺 COYO-700M: Image-Text Pair Dataset - https://github.com/kakaobrain/coyo-dataset
-*  KorNLI and KorSTS: New Benchmark Datasets for Korean Natural Language Understanding - https://github.com/kakaobrain/KorNLUDatasets
-*  Jejueo Datasets for Machine Translation and Speech Synthesis - https://github.com/kakaobrain/jejueo
+* KorNLI and KorSTS: New Benchmark Datasets for Korean Natural Language Understanding - https://github.com/kakaobrain/KorNLUDatasets
+* Jejueo Datasets for Machine Translation and Speech Synthesis - https://github.com/kakaobrain/jejueo
+* MIntRec: A New Dataset for Multimodal Intent Recognition - https://github.com/thuiar/MIntRec
+* CH-SIMS v2.0: A Fine-grained Multi-label Chinese Multimodal Sentiment Analysis Dataset - https://thuiar.github.io/sims.github.io/chsims
+* Multimodal Sentiment Analysis Datasets - https://github.com/thuiar/AWESOME-MSA#related-datasets
 
 ## Shared tasks, competitions
 
