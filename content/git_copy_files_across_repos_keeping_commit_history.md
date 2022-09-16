@@ -1,10 +1,10 @@
-Title: Copy Commits Across Git Repositories Keeping Commit History
+Title: Copy Files Across Git Repositories Keeping Commit History
 Date: 2022-09-15 10:20
 Category: posts
 Tags: git
 Slug: git-copy-files-across-repos-keeping-commit-history
 Authors: Shubhanshu Mishra
-Summary: Copy Commits Across Git Repositories Keeping Commit History
+Summary: Copy Files Across Git Repositories Keeping Commit History
 
 
 Sometimes we would like to move files between two git repositories, namely, `repo1` to `repo2`. Here, both the repos do not share a commit history and may have a very different directory structure.
