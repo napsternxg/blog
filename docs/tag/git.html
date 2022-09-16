@@ -23,25 +23,18 @@
     <meta name="robots" content="" />
 
 
-<meta name="author" content="Shubhanshu Mishra" />
-<meta name="description" content="Using Geometric Notion of Vectors to understand their properties and the inner product" />
-<meta name="keywords" content="linear-algebra, complex-numbers">
-
+    <meta name="author" content="Shubhanshu Mishra" />
+    <meta name="description" content="This is a collection of notes and thoughts on mathematical model interpretation via their code implementation." />
 <meta property="og:site_name" content="Interpreting Models"/>
-<meta property="og:title" content="Understanding vectors"/>
-<meta property="og:description" content="Using Geometric Notion of Vectors to understand their properties and the inner product"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Interpreting Models"/>
+<meta property="og:description" content="This is a collection of notes and thoughts on mathematical model interpretation via their code implementation."/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://shubhanshu.com/blog/drafts/understanding-vectors.html"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2022-09-02 10:20:00-05:00"/>
-<meta property="article:modified_time" content="2022-09-16 03:30:57.280313-05:00"/>
-<meta property="article:author" content="https://shubhanshu.com/blog/author/shubhanshu-mishra.html">
-<meta property="article:section" content="posts"/>
-<meta property="article:tag" content="linear-algebra"/>
-<meta property="article:tag" content="complex-numbers"/>
+<meta property="og:url" content="https://shubhanshu.com/blog"/>
 <meta property="og:image" content="/assets/images/pic.jpg">
 
-  <title>Interpreting Models &ndash; Understanding vectors</title>
+  <title>Interpreting Models &ndash;     Tag git
+</title>
 
 </head>
 <body>
@@ -95,77 +88,17 @@
     <div class="row">
         <div class="col-lg-12">
           <main>
-<article class="single">
-  <header>
-      
-    <h1 id="understanding-vectors">Understanding vectors</h1>
-    <p>
-          Posted on 02/09/2022 in <a href="https://shubhanshu.com/blog/category/posts.html" class="badge bg-primary">posts</a>
-
-
-      <a href="https://shubhanshu.com/blog/tag/linear-algebra.html" class="badge bg-info">linear-algebra</a>
-      <a href="https://shubhanshu.com/blog/tag/complex-numbers.html" class="badge bg-info">complex-numbers</a>
-    </p>
-  </header>
-  <hr/>
-
-
-  <!--START: Article content-->
-  <h2 id="raw-notes">Raw notes</h2>
-<ul>
-<li>The abstract way of thinking vectors is to have objects and we can use one object to measure other objects. </li>
-<li>An object is represented by a vector. </li>
-<li>NOTE: We haven't any representation to the vector or the object. This will become apparent later as we will have different types of objects, e.g. functions, images, text, etc. </li>
-<li>The measurement can happen different ways. </li>
-<li>We want a measurement which does not change if we measure object a using object b, or vice-versa. </li>
-<li>One option is to take the area spanned by the two objects as a common measurement. However, this has a downside of sign flip if we go from a to b or from b to a. This area is commonly referred to as cross-product. </li>
-<li>The more natural measurement is to project one object on the other, while moving the other object 90 degrees towards the first. This provides two new rectagles whose areas are same. This has the surprising property of maintianing sign and measure value. Area is always measured in anti-clockwise direction.</li>
-<li>E.g. a's projection on b is $a*cos(\theta)$ and if b is rotated towards a by 90 degrees then it becomes b' now the area will be $b' x a cos(\theta) \hat{b}$. Notice that $\hat{b}$ and b' are going to be orthogonal by definition. </li>
-<li>if we rotate a towards b to get a' and project b on a to get $b*cos(\theta)$, then the area will be $b cos(\theta) \hat{a} x a'$. Again $\hat{a}$ and a' are going to be orthogonal by definition.</li>
-<li>
-<p>In both cases the area will then be $|b'|<em>|acos(\theta)| = |b||a|cos(\theta)$, and $|a'|</em>|bcos(\theta)| = |a||b|cos(\theta)$. </p>
-</li>
-<li>
-<p>A matrix then is just a way to perform measurement of an object using a collection of objects. </p>
-</li>
-<li>Let us define a measured object (or simply referred to as the object from now) to always be a represented by a standing vector (or a column vector, but notice we haven't yet defined that a vector is a collection of numbers, hence I wanted to be abstract here).</li>
-<li>Let us also define a measuring object (or we can call it a scale) to always be represented by a laying vector. </li>
-<li>Now a matrix will be a collection of laying vectors, represeting a list of measuring objects (or scales). </li>
-<li>If we would like to know the measurements of an object by a list of scales, we can expect as output a list of measurements. E.g. for 2 scales measuring a single object, the output will be 2 measurements. </li>
-<li>If we have a list of objects whose measurements we want to find given a list of scales we will represent the list of objects via a list of standing vectors, and list of scales as a list of laying vectors. </li>
-<li>We can observe that if we want to measure a list of vectors by themselves i.e. by the same list of vectors, the we can just convert a list of standing vectors to a list of lying vectors. This operation can be defined as the transpose (we will see its connection to matrics later).</li>
-<li>Let the list of object vectors be a matrix A, then the eqivalent list of these objects as scales will be $A^T$. </li>
-<li>Extracting all the measurements of the objects by themselves as scales can be done via $A^T x A$, this will gives us a list of $n * n$ measurements, where the diagonal will be the self measurements. </li>
-<li>Notice that self-measurement using the rotated rectangle as defined above correctly captures the length as self-project is the same vector and its rotation by 90 gives the square whose area is equal to the square of the length of the vector. We can consider the rotation in any arbitrary plan spanned by a and its orthogonal vector. A way to think of this is to wiggle a in any plane by an infinitismal angle, and then doing the same calculation in the plane spanned using a and its wiggled counter-part as b and then later taking the limit of $\theta$ to 0. </li>
-<li>Also notice we have not defined any basis till now, the vectors exist in empty space right now with no coordinate systems. This means all measurements happen via projection and rotation. Furthermore, all vectors have one end at the same point, this makes the notion of angle well defined.</li>
+<h3>Tag: git</h3>
+<ul class="article-list">
+    <li>
+       <small class="text-muted"> 15/09/2022 </small> - 
+       <a href="https://shubhanshu.com/blog/git-copy-files-across-repos-keeping-commit-history.html#git-copy-files-across-repos-keeping-commit-history">Copy Commits Across Git Repositories Keeping Commit History</a>
+    </li>
 </ul>
-<h2 id="resources">Resources</h2>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=yeK2N7FbkVI">J2. Unitary Groups</a> - Helped me understand unitary matrices and their basis. One thing which pops out is invest of matrix is similar to if each vector was rotated 90 degrees clockwise and the order of the vectors was swapped. Need to explore this in details. </li>
-<li><a href="https://www.youtube.com/watch?v=9bPwL30PBwM">Complex eigen values of a matrix</a> - Provides a good connection between the scaling and rotation matrix and how it is captured by eigen values which are complex. </li>
-</ul>  
-  <!--END: Article content-->
 
+  <div class="pagination">
+  </div>
 
-    <div class="addthis_relatedposts_inline">
-
-
-<!-- Disqus -->
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'shubhanshu-blog';
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>
-        Please enable JavaScript to view comments.
-
-</noscript>
-<!-- End Disqus -->
-</article>
           </main>
         </div>
     </div>
