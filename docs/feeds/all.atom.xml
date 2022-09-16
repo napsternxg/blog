@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Interpreting Models</title><link href="https://shubhanshu.com/blog/" rel="alternate"></link><link href="https://shubhanshu.com/blog/feeds/all.atom.xml" rel="self"></link><id>https://shubhanshu.com/blog/</id><updated>2022-09-16T03:30:57-05:00</updated><subtitle>A journey towards model interpretability</subtitle><entry><title>Copy Commits Across Git Repositories Keeping Commit History</title><link href="https://shubhanshu.com/blog/git-copy-files-across-repos-keeping-commit-history.html" rel="alternate"></link><published>2022-09-15T10:20:00-05:00</published><updated>2022-09-16T03:30:57-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2022-09-15:/blog/git-copy-files-across-repos-keeping-commit-history.html</id><summary type="html">&lt;p&gt;Copy Commits Across Git Repositories Keeping Commit History&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sometimes we would like to move files between two git repositories, namely, &lt;code&gt;repo1&lt;/code&gt; to &lt;code&gt;repo2&lt;/code&gt;. Here, both the repos do not share a commit history and may have a very different directory structure.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Interpreting Models</title><link href="https://shubhanshu.com/blog/" rel="alternate"></link><link href="https://shubhanshu.com/blog/feeds/all.atom.xml" rel="self"></link><id>https://shubhanshu.com/blog/</id><updated>2022-09-16T03:36:08-05:00</updated><subtitle>A journey towards model interpretability</subtitle><entry><title>Copy Commits Across Git Repositories Keeping Commit History</title><link href="https://shubhanshu.com/blog/git-copy-files-across-repos-keeping-commit-history.html" rel="alternate"></link><published>2022-09-15T10:20:00-05:00</published><updated>2022-09-16T03:36:08-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2022-09-15:/blog/git-copy-files-across-repos-keeping-commit-history.html</id><summary type="html">&lt;p&gt;Copy Commits Across Git Repositories Keeping Commit History&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sometimes we would like to move files between two git repositories, namely, &lt;code&gt;repo1&lt;/code&gt; to &lt;code&gt;repo2&lt;/code&gt;. Here, both the repos do not share a commit history and may have a very different directory structure.&lt;/p&gt;
 &lt;p&gt;One use case is you are developing a standalone side project in &lt;code&gt;repo1&lt;/code&gt; and would like later merge into a larger project &lt;code&gt;repo2&lt;/code&gt;. &lt;/p&gt;
 &lt;p&gt;One easy way is to simply copy files from &lt;code&gt;repo1&lt;/code&gt; to &lt;code&gt;repo2&lt;/code&gt; and then commit them in &lt;code&gt;repo2&lt;/code&gt;. However, in this approach we loose all the commit history information of the files in &lt;code&gt;repo1&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;We can use a combination of &lt;code&gt;git format-patch&lt;/code&gt; and &lt;code&gt;git am --3way&lt;/code&gt; commands to achieve this. &lt;/p&gt;
@@ -7,110 +7,107 @@
 &lt;h2 id="demo"&gt;Demo&lt;/h2&gt;
 &lt;h3 id="setup-repositories"&gt;Setup Repositories&lt;/h3&gt;
 &lt;p&gt;Let us setup 2 repositories. &lt;/p&gt;
-&lt;p&gt;```bash session
-~$ git config --global user.email "&lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#121;&amp;#111;&amp;#117;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#121;&amp;#111;&amp;#117;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;"
-~$ git config --global user.name "Your Name"
-~$ mkdir -p repo1 repo2&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;Set&lt;/span&gt;&lt;span class="n"&gt;up&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`repo1`&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~$ git config --global user.email &lt;span class="s2"&gt;&amp;quot;you@example.com&amp;quot;&lt;/span&gt;
+~$ git config --global user.name &lt;span class="s2"&gt;&amp;quot;Your Name&amp;quot;&lt;/span&gt;
+~$ mkdir -p repo1 repo2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;span class="n n-Quoted"&gt;`&lt;/span&gt;&lt;span class="n n-Quoted n-Quoted-Escape"&gt;``&lt;/span&gt;&lt;span class="n n-Quoted"&gt;bash session&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;~$ cd repo1/&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;~/repo1$ git init&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;Initialized empty Git repository in /home/user/repo1/.git/&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;~/repo1$ touch file1 file2&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;~/repo1$ echo &amp;quot;Hello World&amp;quot; &amp;gt; file1&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;~/repo1$ echo &amp;quot;Hello World again&amp;quot; &amp;gt; file2&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;~/repo1$ git status&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;On branch master&lt;/span&gt;
+&lt;p&gt;Setup &lt;code&gt;repo1&lt;/code&gt;. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~$ &lt;span class="nb"&gt;cd&lt;/span&gt; repo1/
+~/repo1$ git init
+Initialized empty Git repository &lt;span class="k"&gt;in&lt;/span&gt; /home/user/repo1/.git/
+~/repo1$ touch file1 file2
+~/repo1$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hello World&amp;quot;&lt;/span&gt; &amp;gt; file1
+~/repo1$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hello World again&amp;quot;&lt;/span&gt; &amp;gt; file2
+~/repo1$ git status
+On branch master
 
-&lt;span class="n n-Quoted"&gt;No commits yet&lt;/span&gt;
+No commits yet
 
-&lt;span class="n n-Quoted"&gt;Untracked files:&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;  (use &amp;quot;git add &amp;lt;file&amp;gt;...&amp;quot; to include in what will be committed)&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;        file1&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;        file2&lt;/span&gt;
+Untracked files:
+  &lt;span class="o"&gt;(&lt;/span&gt;use &lt;span class="s2"&gt;&amp;quot;git add &amp;lt;file&amp;gt;...&amp;quot;&lt;/span&gt; to include &lt;span class="k"&gt;in&lt;/span&gt; what will be committed&lt;span class="o"&gt;)&lt;/span&gt;
+        file1
+        file2
 
-&lt;span class="n n-Quoted"&gt;nothing added to commit but untracked files present (use &amp;quot;git add&amp;quot; to track)&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;~/repo1$ git add .&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;~/repo1$ git commit -am &amp;quot;Initial commit&amp;quot;&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;[master (root-commit) 6d58af8] Initial commit&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt; 2 files changed, 2 insertions(+)&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt; create mode 100644 file1&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt; create mode 100644 file2&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;~/repo1$ git log&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;commit 6d58af8d140c86de700dd9206cb2c7512c39a74c (HEAD -&amp;gt; master)&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;Author: Your Name &amp;lt;you@example.com&amp;gt;&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;Date:   Fri Sep 16 02:48:01 2022 +0000&lt;/span&gt;
+nothing added to commit but untracked files present &lt;span class="o"&gt;(&lt;/span&gt;use &lt;span class="s2"&gt;&amp;quot;git add&amp;quot;&lt;/span&gt; to track&lt;span class="o"&gt;)&lt;/span&gt;
+~/repo1$ git add .
+~/repo1$ git commit -am &lt;span class="s2"&gt;&amp;quot;Initial commit&amp;quot;&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;master &lt;span class="o"&gt;(&lt;/span&gt;root-commit&lt;span class="o"&gt;)&lt;/span&gt; 6d58af8&lt;span class="o"&gt;]&lt;/span&gt; Initial commit
+ &lt;span class="m"&gt;2&lt;/span&gt; files changed, &lt;span class="m"&gt;2&lt;/span&gt; insertions&lt;span class="o"&gt;(&lt;/span&gt;+&lt;span class="o"&gt;)&lt;/span&gt;
+ create mode &lt;span class="m"&gt;100644&lt;/span&gt; file1
+ create mode &lt;span class="m"&gt;100644&lt;/span&gt; file2
+~/repo1$ git log
+commit 6d58af8d140c86de700dd9206cb2c7512c39a74c &lt;span class="o"&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class="o"&gt;)&lt;/span&gt;
+Author: Your Name &amp;lt;you@example.com&amp;gt;
+Date:   Fri Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:48:01 &lt;span class="m"&gt;2022&lt;/span&gt; +0000
 
-&lt;span class="n n-Quoted"&gt;    Initial commit&lt;/span&gt;
+    Initial commit
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Add few more commits:&lt;/p&gt;
-&lt;p&gt;```bash session
-~/repo1$ echo "New Lines Galore" &amp;gt;&amp;gt; file1
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~/repo1$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;New Lines Galore&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; file1
 ~/repo1$ cat file1
 Hello World
 New lines galore
 ~/repo1$ git status
 On branch master
-Changes not staged for commit:
-  (use "git add &lt;file&gt;..." to update what will be committed)
-  (use "git restore &lt;file&gt;..." to discard changes in working directory)
-        modified:   file1&lt;/p&gt;
-&lt;p&gt;no changes added to commit (use "git add" and/or "git commit -a")
-~/repo1$ git commit -am "Second commit"
-[master 3f3c874] Second commit
- 1 file changed, 1 insertion(+)
+Changes not staged &lt;span class="k"&gt;for&lt;/span&gt; commit:
+  &lt;span class="o"&gt;(&lt;/span&gt;use &lt;span class="s2"&gt;&amp;quot;git add &amp;lt;file&amp;gt;...&amp;quot;&lt;/span&gt; to update what will be committed&lt;span class="o"&gt;)&lt;/span&gt;
+  &lt;span class="o"&gt;(&lt;/span&gt;use &lt;span class="s2"&gt;&amp;quot;git restore &amp;lt;file&amp;gt;...&amp;quot;&lt;/span&gt; to discard changes &lt;span class="k"&gt;in&lt;/span&gt; working directory&lt;span class="o"&gt;)&lt;/span&gt;
+        modified:   file1
+
+no changes added to commit &lt;span class="o"&gt;(&lt;/span&gt;use &lt;span class="s2"&gt;&amp;quot;git add&amp;quot;&lt;/span&gt; and/or &lt;span class="s2"&gt;&amp;quot;git commit -a&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+~/repo1$ git commit -am &lt;span class="s2"&gt;&amp;quot;Second commit&amp;quot;&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;master 3f3c874&lt;span class="o"&gt;]&lt;/span&gt; Second commit
+ &lt;span class="m"&gt;1&lt;/span&gt; file changed, &lt;span class="m"&gt;1&lt;/span&gt; insertion&lt;span class="o"&gt;(&lt;/span&gt;+&lt;span class="o"&gt;)&lt;/span&gt;
 ~/repo1$ git log
-commit 3f3c874e3487d999c581cf2d2b75f49de2ab5784 (HEAD -&amp;gt; master)
-Author: Your Name &lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#121;&amp;#111;&amp;#117;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#121;&amp;#111;&amp;#117;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;
-Date:   Fri Sep 16 02:48:49 2022 +0000&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Second commit
+commit 3f3c874e3487d999c581cf2d2b75f49de2ab5784 &lt;span class="o"&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class="o"&gt;)&lt;/span&gt;
+Author: Your Name &amp;lt;you@example.com&amp;gt;
+Date:   Fri Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:48:49 &lt;span class="m"&gt;2022&lt;/span&gt; +0000
+
+    Second commit
+
+commit 6d58af8d140c86de700dd9206cb2c7512c39a74c
+Author: Your Name &amp;lt;you@example.com&amp;gt;
+Date:   Fri Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:48:01 &lt;span class="m"&gt;2022&lt;/span&gt; +0000
+
+    Initial commit 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;commit 6d58af8d140c86de700dd9206cb2c7512c39a74c
-Author: Your Name &lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#121;&amp;#111;&amp;#117;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#121;&amp;#111;&amp;#117;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;
-Date:   Fri Sep 16 02:48:01 2022 +0000&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Initial commit
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now setup &lt;code&gt;repo2&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~/repo1$ &lt;span class="nb"&gt;cd&lt;/span&gt; ../repo2
+~/repo2$ git init
+Initialized empty Git repository &lt;span class="k"&gt;in&lt;/span&gt; /home/user/repo2/.git/
+~/repo2$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;This is file3 in new repo&amp;quot;&lt;/span&gt; &amp;gt; file3
+~/repo2$ git add .
+~/repo2$ git commit -am &lt;span class="s2"&gt;&amp;quot;File3&amp;quot;&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;master &lt;span class="o"&gt;(&lt;/span&gt;root-commit&lt;span class="o"&gt;)&lt;/span&gt; ce65e35&lt;span class="o"&gt;]&lt;/span&gt; File3
+ &lt;span class="m"&gt;1&lt;/span&gt; file changed, &lt;span class="m"&gt;1&lt;/span&gt; insertion&lt;span class="o"&gt;(&lt;/span&gt;+&lt;span class="o"&gt;)&lt;/span&gt;
+ create mode &lt;span class="m"&gt;100644&lt;/span&gt; file3
+~/repo2$ git log
+commit ce65e35e465dd5052c0c5f5a84e6ff35a856488d &lt;span class="o"&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class="o"&gt;)&lt;/span&gt;
+Author: Your Name &amp;lt;you@example.com&amp;gt;
+Date:   Fri Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:49:54 &lt;span class="m"&gt;2022&lt;/span&gt; +0000
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Now&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;set&lt;/span&gt;&lt;span class="n"&gt;up&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`repo2`&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="n n-Quoted"&gt;`&lt;/span&gt;&lt;span class="n n-Quoted n-Quoted-Escape"&gt;``&lt;/span&gt;&lt;span class="n n-Quoted"&gt;bash session&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;~/repo1$ cd ../repo2&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;~/repo2$ git init&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;Initialized empty Git repository in /home/user/repo2/.git/&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;~/repo2$ echo &amp;quot;This is file3 in new repo&amp;quot; &amp;gt; file3&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;~/repo2$ git add .&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;~/repo2$ git commit -am &amp;quot;File3&amp;quot;&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;[master (root-commit) ce65e35] File3&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt; 1 file changed, 1 insertion(+)&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt; create mode 100644 file3&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;~/repo2$ git log&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;commit ce65e35e465dd5052c0c5f5a84e6ff35a856488d (HEAD -&amp;gt; master)&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;Author: Your Name &amp;lt;you@example.com&amp;gt;&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;Date:   Fri Sep 16 02:49:54 2022 +0000&lt;/span&gt;
-
-&lt;span class="n n-Quoted"&gt;    File3&lt;/span&gt;
+    File3
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="exporting-commits-as-patches"&gt;Exporting commits as patches&lt;/h3&gt;
 &lt;p&gt;Now lets prepare the move from &lt;code&gt;repo1&lt;/code&gt; to &lt;code&gt;repo2&lt;/code&gt; keeping repo1 file history. &lt;/p&gt;
 &lt;p&gt;First we will export each commit in repo1 as a patch in a temp directory called &lt;code&gt;~/repo1_patches&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;```bash session
-~/repo2$ cd ../repo1
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~/repo2$ &lt;span class="nb"&gt;cd&lt;/span&gt; ../repo1
 ~/repo1$ mkdir ../repo1_patches
 ~/repo1$ git format-patch -o ../repo1_patches --root ./
 ../repo1_patches/0001-Initial-commit.patch
-../repo1_patches/0002-Second-commit.patch&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Now we will see what `~/repo1_patches` looks like.
+../repo1_patches/0002-Second-commit.patch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-```bash session
-~/repo1$ cd ../repo1_patches
+&lt;p&gt;Now we will see what &lt;code&gt;~/repo1_patches&lt;/code&gt; looks like.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~/repo1$ &lt;span class="nb"&gt;cd&lt;/span&gt; ../repo1_patches
 ~/repo1_patches$ ls -ltrh
-total 2.0K
--rw-r--r-- 1 user user 367 Sep 16 02:50 0002-Second-commit.patch
--rw-r--r-- 1 user user 563 Sep 16 02:50 0001-Initial-commit.patch
+total &lt;span class="m"&gt;2&lt;/span&gt;.0K
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; user user &lt;span class="m"&gt;367&lt;/span&gt; Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:50 &lt;span class="m"&gt;0002&lt;/span&gt;-Second-commit.patch
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; user user &lt;span class="m"&gt;563&lt;/span&gt; Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:50 &lt;span class="m"&gt;0001&lt;/span&gt;-Initial-commit.patch
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;These are the contents of &lt;code&gt;./0001-Initial-commit.patch&lt;/code&gt;&lt;/p&gt;
@@ -167,50 +164,48 @@ total 2.0K
 
 &lt;h3 id="applying-patches-as-commits-in-new-repo"&gt;Applying patches as commits in new repo&lt;/h3&gt;
 &lt;p&gt;Now that our patches are created, let us apply them sequentially to our new repo:&lt;/p&gt;
-&lt;p&gt;```bash session
-~/repo1_patches$ cd ../repo2
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~/repo1_patches$ &lt;span class="nb"&gt;cd&lt;/span&gt; ../repo2
 ~/repo2$ git status
 On branch master
 nothing to commit, working tree clean
 ~/repo2$ git log
-commit ce65e35e465dd5052c0c5f5a84e6ff35a856488d (HEAD -&amp;gt; master)
-Author: Your Name &lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#121;&amp;#111;&amp;#117;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#121;&amp;#111;&amp;#117;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;
-Date:   Fri Sep 16 02:49:54 2022 +0000&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;File3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+commit ce65e35e465dd5052c0c5f5a84e6ff35a856488d &lt;span class="o"&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class="o"&gt;)&lt;/span&gt;
+Author: Your Name &amp;lt;you@example.com&amp;gt;
+Date:   Fri Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:49:54 &lt;span class="m"&gt;2022&lt;/span&gt; +0000
 
-&lt;p&gt;~/repo2$ git am --3way ../repo1_patches/*.patch
+    File3
+~/repo2$ git am --3way ../repo1_patches/*.patch
 Applying: Initial commit
 Applying: Second commit
 ~/repo2$ ls -ltrh
-total 3.0K
--rw-r--r-- 1 user user 26 Sep 16 02:49 file3
--rw-r--r-- 1 user user 18 Sep 16 02:53 file2
--rw-r--r-- 1 user user 29 Sep 16 02:53 file1
+total &lt;span class="m"&gt;3&lt;/span&gt;.0K
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; user user &lt;span class="m"&gt;26&lt;/span&gt; Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:49 file3
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; user user &lt;span class="m"&gt;18&lt;/span&gt; Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:53 file2
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; user user &lt;span class="m"&gt;29&lt;/span&gt; Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:53 file1
 ~/repo2$ git log
-commit 3de485c1e24c555d53ede02ab6d52102ec7a2093 (HEAD -&amp;gt; master)
-Author: Your Name &lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#121;&amp;#111;&amp;#117;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#121;&amp;#111;&amp;#117;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;
-Date:   Fri Sep 16 02:48:49 2022 +0000&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Second commit
+commit 3de485c1e24c555d53ede02ab6d52102ec7a2093 &lt;span class="o"&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class="o"&gt;)&lt;/span&gt;
+Author: Your Name &amp;lt;you@example.com&amp;gt;
+Date:   Fri Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:48:49 &lt;span class="m"&gt;2022&lt;/span&gt; +0000
+
+    Second commit
+
+commit 483f95d8944ef3b79cbb536dd0b68d9459abbfca
+Author: Your Name &amp;lt;you@example.com&amp;gt;
+Date:   Fri Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:48:01 &lt;span class="m"&gt;2022&lt;/span&gt; +0000
+
+    Initial commit
+
+commit ce65e35e465dd5052c0c5f5a84e6ff35a856488d
+Author: Your Name &amp;lt;you@example.com&amp;gt;
+Date:   Fri Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:49:54 &lt;span class="m"&gt;2022&lt;/span&gt; +0000
+
+    File3
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;commit 483f95d8944ef3b79cbb536dd0b68d9459abbfca
-Author: Your Name &lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#121;&amp;#111;&amp;#117;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#121;&amp;#111;&amp;#117;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;
-Date:   Fri Sep 16 02:48:01 2022 +0000&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Initial commit
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;commit ce65e35e465dd5052c0c5f5a84e6ff35a856488d
-Author: Your Name &lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#121;&amp;#111;&amp;#117;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#121;&amp;#111;&amp;#117;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;
-Date:   Fri Sep 16 02:49:54 2022 +0000&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;File3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;```&lt;/p&gt;
 &lt;p&gt;As we can see the commit history from &lt;code&gt;repo1&lt;/code&gt; is now copied to &lt;code&gt;repo2&lt;/code&gt; along with the files. &lt;/p&gt;
 &lt;h2 id="epilogue"&gt;Epilogue&lt;/h2&gt;
 &lt;p&gt;This is an easy fix when &lt;code&gt;repo1&lt;/code&gt; is small and there is less likely to be a merge conflict between &lt;code&gt;repo1&lt;/code&gt; and &lt;code&gt;repo2&lt;/code&gt;. 
-For more complex, you can add additional commits to move the files around.&lt;/p&gt;</content><category term="posts"></category><category term="git"></category></entry><entry><title>Wordle One Shot Solution (Hack)</title><link href="https://shubhanshu.com/blog/wordle-hack.html" rel="alternate"></link><published>2022-01-13T10:20:00-06:00</published><updated>2022-09-16T03:30:57-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2022-01-13:/blog/wordle-hack.html</id><summary type="html">&lt;p&gt;Wordle One Shot Solution (Hack)&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Wordle Hack GIF" src="https://shubhanshu.com/blog/assets/wordle-hack.gif"&gt;&lt;/p&gt;
+For more complex, you can add additional commits to move the files around.&lt;/p&gt;</content><category term="posts"></category><category term="git"></category></entry><entry><title>Wordle One Shot Solution (Hack)</title><link href="https://shubhanshu.com/blog/wordle-hack.html" rel="alternate"></link><published>2022-01-13T10:20:00-06:00</published><updated>2022-09-16T03:36:08-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2022-01-13:/blog/wordle-hack.html</id><summary type="html">&lt;p&gt;Wordle One Shot Solution (Hack)&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Wordle Hack GIF" src="https://shubhanshu.com/blog/assets/wordle-hack.gif"&gt;&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#finding-the-solution-on-the-page"&gt;Finding the solution on the page&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#automating-it-via-codebookmark-button"&gt;Automating it via code/bookmark button&lt;/a&gt;&lt;/li&gt;
@@ -308,7 +303,7 @@ For more complex, you can add additional commits to move the files around.&lt;/p
 &lt;span class="sb"&gt;Learn about internet security from A PROJECT OF THE ELECTRONIC FRONTIER FOUNDATION: SURVEILLANCE SELF-DEFENSE: TIPS, TOOLS AND HOW-TOS FOR SAFER ONLINE COMMUNICATIONS course from https://ssd.eff.org/en&lt;/span&gt;
 &lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="nx"&gt;alert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;warn_message&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="posts"></category><category term="hacks"></category><category term="web-technolgy"></category></entry><entry><title>Part 1 - Understanding extreme value theory - Basics</title><link href="https://shubhanshu.com/blog/evt-part-1-basics.html" rel="alternate"></link><published>2019-07-21T02:10:00-05:00</published><updated>2022-09-16T03:30:57-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2019-07-21:/blog/evt-part-1-basics.html</id><summary type="html">&lt;p&gt;Basics of Extreme Value Theory for modeling extreme values.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="posts"></category><category term="hacks"></category><category term="web-technolgy"></category></entry><entry><title>Part 1 - Understanding extreme value theory - Basics</title><link href="https://shubhanshu.com/blog/evt-part-1-basics.html" rel="alternate"></link><published>2019-07-21T02:10:00-05:00</published><updated>2022-09-16T03:36:08-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2019-07-21:/blog/evt-part-1-basics.html</id><summary type="html">&lt;p&gt;Basics of Extreme Value Theory for modeling extreme values.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -689,7 +684,7 @@ $$&lt;p&gt;Surprisingly, like the central limit theorem, these values also conve
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="machine learning"></category><category term="statistics"></category></entry><entry><title>Time dependent models</title><link href="https://shubhanshu.com/blog/time-dependent-models.html" rel="alternate"></link><published>2017-09-11T14:05:00-05:00</published><updated>2022-09-16T03:30:57-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-11:/blog/time-dependent-models.html</id><summary type="html">&lt;p&gt;Implementing time dependent models using sklearn.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+</content><category term="posts"></category><category term="machine learning"></category><category term="statistics"></category></entry><entry><title>Time dependent models</title><link href="https://shubhanshu.com/blog/time-dependent-models.html" rel="alternate"></link><published>2017-09-11T14:05:00-05:00</published><updated>2022-09-16T03:36:08-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-11:/blog/time-dependent-models.html</id><summary type="html">&lt;p&gt;Implementing time dependent models using sklearn.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="Time-Dependent-Classification/Regression"&gt;Time Dependent Classification/Regression&lt;a class="anchor-link" href="#Time-Dependent-Classification/Regression"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;I have been interested in time dependent classification/regression for a long time. Most machine learning models are implemented as static models where our assumptions about the relationships between the input variables and the parameters of the models is fixed. This assumption is mostly true, however, there are cases where the model parameters for the same input variable must be allowed to change with time. Furthermore, the change in the model parameters should not be large compared to their value at the previous timesteps. One simple way to approach this problem is to have a different model for each timestep, however, this will not allow us to learn from all the data at hand. The second approach is to have a different parameter for each timestep and a base set of parameters. This second approach although more appropriate will not allow us to enforce our constraint that the model parameters at a given timestep should not change too much from their value at the last timestep.&lt;/p&gt;
@@ -16355,7 +16350,7 @@ cgghhBCSlv4PgfNoADwBj8EAAAAASUVORK5CYII=
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="python"></category><category term="machine learning"></category></entry><entry><title>Pytorch RNN sequence tagging</title><link href="https://shubhanshu.com/blog/pytorch-rnn-sequence-tagging.html" rel="alternate"></link><published>2017-09-03T01:57:00-05:00</published><updated>2022-09-16T03:30:57-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-03:/blog/pytorch-rnn-sequence-tagging.html</id><summary type="html">&lt;p&gt;Introduction to writing RNN sequence tagging code using PyTorch.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+</content><category term="posts"></category><category term="python"></category><category term="machine learning"></category></entry><entry><title>Pytorch RNN sequence tagging</title><link href="https://shubhanshu.com/blog/pytorch-rnn-sequence-tagging.html" rel="alternate"></link><published>2017-09-03T01:57:00-05:00</published><updated>2022-09-16T03:36:08-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-03:/blog/pytorch-rnn-sequence-tagging.html</id><summary type="html">&lt;p&gt;Introduction to writing RNN sequence tagging code using PyTorch.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -18421,7 +18416,7 @@ Wall time: 58.7 s
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="python"></category><category term="machine learning"></category><category term="deeplearning"></category></entry><entry><title>Metropolis Hastings algorithm - a python primer</title><link href="https://shubhanshu.com/blog/metropolis-hastings-primer.html" rel="alternate"></link><published>2017-04-18T02:19:00-05:00</published><updated>2022-09-16T03:30:57-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-04-18:/blog/metropolis-hastings-primer.html</id><summary type="html">&lt;p&gt;A pure numpy and python based primer to implementing and visualizing Metropolis Hastings algorithm for MCMC sampling.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+</content><category term="posts"></category><category term="python"></category><category term="machine learning"></category><category term="deeplearning"></category></entry><entry><title>Metropolis Hastings algorithm - a python primer</title><link href="https://shubhanshu.com/blog/metropolis-hastings-primer.html" rel="alternate"></link><published>2017-04-18T02:19:00-05:00</published><updated>2022-09-16T03:36:08-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-04-18:/blog/metropolis-hastings-primer.html</id><summary type="html">&lt;p&gt;A pure numpy and python based primer to implementing and visualizing Metropolis Hastings algorithm for MCMC sampling.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -23243,7 +23238,7 @@ h6BbAAAAAElFTkSuQmCC
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="machine learning"></category><category term="implementation"></category><category term="bayesian"></category></entry><entry><title>Convex Optimization using CVXPY</title><link href="https://shubhanshu.com/blog/convex-optimization-cvxpy.html" rel="alternate"></link><published>2017-01-02T10:30:00-06:00</published><updated>2022-09-16T03:30:57-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-01-02:/blog/convex-optimization-cvxpy.html</id><summary type="html">&lt;p&gt;Trying out CVXPY after listening to Stephen P. Boyd's lectures from Machine Learning Summer School, Tubingen and Kyoto, 2015 - &lt;a href="http://web.stanford.edu/~boyd/papers/cvx_short_course.html"&gt;http://web.stanford.edu/~boyd/papers/cvx_short_course.html&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+</content><category term="posts"></category><category term="machine learning"></category><category term="implementation"></category><category term="bayesian"></category></entry><entry><title>Convex Optimization using CVXPY</title><link href="https://shubhanshu.com/blog/convex-optimization-cvxpy.html" rel="alternate"></link><published>2017-01-02T10:30:00-06:00</published><updated>2022-09-16T03:36:08-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-01-02:/blog/convex-optimization-cvxpy.html</id><summary type="html">&lt;p&gt;Trying out CVXPY after listening to Stephen P. Boyd's lectures from Machine Learning Summer School, Tubingen and Kyoto, 2015 - &lt;a href="http://web.stanford.edu/~boyd/papers/cvx_short_course.html"&gt;http://web.stanford.edu/~boyd/papers/cvx_short_course.html&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;$\DeclareMathOperator*{\argmin}{arg\,min}$&lt;/p&gt;
@@ -26186,7 +26181,7 @@ QmCC
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="machine learning"></category></entry><entry><title>Getting started with pelican</title><link href="https://shubhanshu.com/blog/getting-started-pelican.html" rel="alternate"></link><published>2016-11-08T10:30:00-06:00</published><updated>2022-09-16T03:30:57-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-11-08:/blog/getting-started-pelican.html</id><summary type="html">&lt;p&gt;Using pelican, jupyter notebook to start a blog.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+</content><category term="posts"></category><category term="machine learning"></category></entry><entry><title>Getting started with pelican</title><link href="https://shubhanshu.com/blog/getting-started-pelican.html" rel="alternate"></link><published>2016-11-08T10:30:00-06:00</published><updated>2022-09-16T03:36:08-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-11-08:/blog/getting-started-pelican.html</id><summary type="html">&lt;p&gt;Using pelican, jupyter notebook to start a blog.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="First-plot-using-pelican"&gt;First plot using pelican&lt;a class="anchor-link" href="#First-plot-using-pelican"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;I am trying this new format for blogging using jupyter notebooks and pelican library. The motivation is to easily share my experiments using notebooks and write accompanying thoughts.&lt;/p&gt;

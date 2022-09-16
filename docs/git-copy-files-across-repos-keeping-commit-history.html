@@ -34,7 +34,7 @@
 <meta property="og:url" content="https://shubhanshu.com/blog/git-copy-files-across-repos-keeping-commit-history.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2022-09-15 10:20:00-05:00"/>
-<meta property="article:modified_time" content="2022-09-16 03:30:57.280313-05:00"/>
+<meta property="article:modified_time" content="2022-09-16 03:36:08.735612-05:00"/>
 <meta property="article:author" content="https://shubhanshu.com/blog/author/shubhanshu-mishra.html">
 <meta property="article:section" content="posts"/>
 <meta property="article:tag" content="git"/>
@@ -117,110 +117,107 @@
 <h2 id="demo">Demo</h2>
 <h3 id="setup-repositories">Setup Repositories</h3>
 <p>Let us setup 2 repositories. </p>
-<p>```bash session
-~$ git config --global user.email "<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#111;&#117;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">&#121;&#111;&#117;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a>"
-~$ git config --global user.name "Your Name"
-~$ mkdir -p repo1 repo2</p>
-<div class="highlight"><pre><span></span><code><span class="k">Set</span><span class="n">up</span><span class="w"> </span><span class="n n-Quoted">`repo1`</span><span class="p">.</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code>~$ git config --global user.email <span class="s2">&quot;you@example.com&quot;</span>
+~$ git config --global user.name <span class="s2">&quot;Your Name&quot;</span>
+~$ mkdir -p repo1 repo2
+</code></pre></div>
 
-<span class="n n-Quoted">`</span><span class="n n-Quoted n-Quoted-Escape">``</span><span class="n n-Quoted">bash session</span>
-<span class="n n-Quoted">~$ cd repo1/</span>
-<span class="n n-Quoted">~/repo1$ git init</span>
-<span class="n n-Quoted">Initialized empty Git repository in /home/user/repo1/.git/</span>
-<span class="n n-Quoted">~/repo1$ touch file1 file2</span>
-<span class="n n-Quoted">~/repo1$ echo &quot;Hello World&quot; &gt; file1</span>
-<span class="n n-Quoted">~/repo1$ echo &quot;Hello World again&quot; &gt; file2</span>
-<span class="n n-Quoted">~/repo1$ git status</span>
-<span class="n n-Quoted">On branch master</span>
+<p>Setup <code>repo1</code>. </p>
+<div class="highlight"><pre><span></span><code>~$ <span class="nb">cd</span> repo1/
+~/repo1$ git init
+Initialized empty Git repository <span class="k">in</span> /home/user/repo1/.git/
+~/repo1$ touch file1 file2
+~/repo1$ <span class="nb">echo</span> <span class="s2">&quot;Hello World&quot;</span> &gt; file1
+~/repo1$ <span class="nb">echo</span> <span class="s2">&quot;Hello World again&quot;</span> &gt; file2
+~/repo1$ git status
+On branch master
 
-<span class="n n-Quoted">No commits yet</span>
+No commits yet
 
-<span class="n n-Quoted">Untracked files:</span>
-<span class="n n-Quoted">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span>
-<span class="n n-Quoted">        file1</span>
-<span class="n n-Quoted">        file2</span>
+Untracked files:
+  <span class="o">(</span>use <span class="s2">&quot;git add &lt;file&gt;...&quot;</span> to include <span class="k">in</span> what will be committed<span class="o">)</span>
+        file1
+        file2
 
-<span class="n n-Quoted">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span>
-<span class="n n-Quoted">~/repo1$ git add .</span>
-<span class="n n-Quoted">~/repo1$ git commit -am &quot;Initial commit&quot;</span>
-<span class="n n-Quoted">[master (root-commit) 6d58af8] Initial commit</span>
-<span class="n n-Quoted"> 2 files changed, 2 insertions(+)</span>
-<span class="n n-Quoted"> create mode 100644 file1</span>
-<span class="n n-Quoted"> create mode 100644 file2</span>
-<span class="n n-Quoted">~/repo1$ git log</span>
-<span class="n n-Quoted">commit 6d58af8d140c86de700dd9206cb2c7512c39a74c (HEAD -&gt; master)</span>
-<span class="n n-Quoted">Author: Your Name &lt;you@example.com&gt;</span>
-<span class="n n-Quoted">Date:   Fri Sep 16 02:48:01 2022 +0000</span>
+nothing added to commit but untracked files present <span class="o">(</span>use <span class="s2">&quot;git add&quot;</span> to track<span class="o">)</span>
+~/repo1$ git add .
+~/repo1$ git commit -am <span class="s2">&quot;Initial commit&quot;</span>
+<span class="o">[</span>master <span class="o">(</span>root-commit<span class="o">)</span> 6d58af8<span class="o">]</span> Initial commit
+ <span class="m">2</span> files changed, <span class="m">2</span> insertions<span class="o">(</span>+<span class="o">)</span>
+ create mode <span class="m">100644</span> file1
+ create mode <span class="m">100644</span> file2
+~/repo1$ git log
+commit 6d58af8d140c86de700dd9206cb2c7512c39a74c <span class="o">(</span>HEAD -&gt; master<span class="o">)</span>
+Author: Your Name &lt;you@example.com&gt;
+Date:   Fri Sep <span class="m">16</span> <span class="m">02</span>:48:01 <span class="m">2022</span> +0000
 
-<span class="n n-Quoted">    Initial commit</span>
+    Initial commit
 </code></pre></div>
 
 <p>Add few more commits:</p>
-<p>```bash session
-~/repo1$ echo "New Lines Galore" &gt;&gt; file1
+<div class="highlight"><pre><span></span><code>~/repo1$ <span class="nb">echo</span> <span class="s2">&quot;New Lines Galore&quot;</span> &gt;&gt; file1
 ~/repo1$ cat file1
 Hello World
 New lines galore
 ~/repo1$ git status
 On branch master
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   file1</p>
-<p>no changes added to commit (use "git add" and/or "git commit -a")
-~/repo1$ git commit -am "Second commit"
-[master 3f3c874] Second commit
- 1 file changed, 1 insertion(+)
+Changes not staged <span class="k">for</span> commit:
+  <span class="o">(</span>use <span class="s2">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed<span class="o">)</span>
+  <span class="o">(</span>use <span class="s2">&quot;git restore &lt;file&gt;...&quot;</span> to discard changes <span class="k">in</span> working directory<span class="o">)</span>
+        modified:   file1
+
+no changes added to commit <span class="o">(</span>use <span class="s2">&quot;git add&quot;</span> and/or <span class="s2">&quot;git commit -a&quot;</span><span class="o">)</span>
+~/repo1$ git commit -am <span class="s2">&quot;Second commit&quot;</span>
+<span class="o">[</span>master 3f3c874<span class="o">]</span> Second commit
+ <span class="m">1</span> file changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>
 ~/repo1$ git log
-commit 3f3c874e3487d999c581cf2d2b75f49de2ab5784 (HEAD -&gt; master)
-Author: Your Name <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#111;&#117;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">&#121;&#111;&#117;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a>
-Date:   Fri Sep 16 02:48:49 2022 +0000</p>
-<div class="highlight"><pre><span></span><code>Second commit
+commit 3f3c874e3487d999c581cf2d2b75f49de2ab5784 <span class="o">(</span>HEAD -&gt; master<span class="o">)</span>
+Author: Your Name &lt;you@example.com&gt;
+Date:   Fri Sep <span class="m">16</span> <span class="m">02</span>:48:49 <span class="m">2022</span> +0000
+
+    Second commit
+
+commit 6d58af8d140c86de700dd9206cb2c7512c39a74c
+Author: Your Name &lt;you@example.com&gt;
+Date:   Fri Sep <span class="m">16</span> <span class="m">02</span>:48:01 <span class="m">2022</span> +0000
+
+    Initial commit 
 </code></pre></div>
 
-<p>commit 6d58af8d140c86de700dd9206cb2c7512c39a74c
-Author: Your Name <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#111;&#117;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">&#121;&#111;&#117;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a>
-Date:   Fri Sep 16 02:48:01 2022 +0000</p>
-<div class="highlight"><pre><span></span><code>Initial commit
-</code></pre></div>
+<p>Now setup <code>repo2</code>.</p>
+<div class="highlight"><pre><span></span><code>~/repo1$ <span class="nb">cd</span> ../repo2
+~/repo2$ git init
+Initialized empty Git repository <span class="k">in</span> /home/user/repo2/.git/
+~/repo2$ <span class="nb">echo</span> <span class="s2">&quot;This is file3 in new repo&quot;</span> &gt; file3
+~/repo2$ git add .
+~/repo2$ git commit -am <span class="s2">&quot;File3&quot;</span>
+<span class="o">[</span>master <span class="o">(</span>root-commit<span class="o">)</span> ce65e35<span class="o">]</span> File3
+ <span class="m">1</span> file changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>
+ create mode <span class="m">100644</span> file3
+~/repo2$ git log
+commit ce65e35e465dd5052c0c5f5a84e6ff35a856488d <span class="o">(</span>HEAD -&gt; master<span class="o">)</span>
+Author: Your Name &lt;you@example.com&gt;
+Date:   Fri Sep <span class="m">16</span> <span class="m">02</span>:49:54 <span class="m">2022</span> +0000
 
-<div class="highlight"><pre><span></span><code><span class="n">Now</span><span class="w"> </span><span class="k">set</span><span class="n">up</span><span class="w"> </span><span class="n n-Quoted">`repo2`</span><span class="p">.</span><span class="w"></span>
-
-<span class="n n-Quoted">`</span><span class="n n-Quoted n-Quoted-Escape">``</span><span class="n n-Quoted">bash session</span>
-<span class="n n-Quoted">~/repo1$ cd ../repo2</span>
-<span class="n n-Quoted">~/repo2$ git init</span>
-<span class="n n-Quoted">Initialized empty Git repository in /home/user/repo2/.git/</span>
-<span class="n n-Quoted">~/repo2$ echo &quot;This is file3 in new repo&quot; &gt; file3</span>
-<span class="n n-Quoted">~/repo2$ git add .</span>
-<span class="n n-Quoted">~/repo2$ git commit -am &quot;File3&quot;</span>
-<span class="n n-Quoted">[master (root-commit) ce65e35] File3</span>
-<span class="n n-Quoted"> 1 file changed, 1 insertion(+)</span>
-<span class="n n-Quoted"> create mode 100644 file3</span>
-<span class="n n-Quoted">~/repo2$ git log</span>
-<span class="n n-Quoted">commit ce65e35e465dd5052c0c5f5a84e6ff35a856488d (HEAD -&gt; master)</span>
-<span class="n n-Quoted">Author: Your Name &lt;you@example.com&gt;</span>
-<span class="n n-Quoted">Date:   Fri Sep 16 02:49:54 2022 +0000</span>
-
-<span class="n n-Quoted">    File3</span>
+    File3
 </code></pre></div>
 
 <h3 id="exporting-commits-as-patches">Exporting commits as patches</h3>
 <p>Now lets prepare the move from <code>repo1</code> to <code>repo2</code> keeping repo1 file history. </p>
 <p>First we will export each commit in repo1 as a patch in a temp directory called <code>~/repo1_patches</code></p>
-<p>```bash session
-~/repo2$ cd ../repo1
+<div class="highlight"><pre><span></span><code>~/repo2$ <span class="nb">cd</span> ../repo1
 ~/repo1$ mkdir ../repo1_patches
 ~/repo1$ git format-patch -o ../repo1_patches --root ./
 ../repo1_patches/0001-Initial-commit.patch
-../repo1_patches/0002-Second-commit.patch</p>
-<div class="highlight"><pre><span></span><code>Now we will see what `~/repo1_patches` looks like.
+../repo1_patches/0002-Second-commit.patch
+</code></pre></div>
 
-```bash session
-~/repo1$ cd ../repo1_patches
+<p>Now we will see what <code>~/repo1_patches</code> looks like.</p>
+<div class="highlight"><pre><span></span><code>~/repo1$ <span class="nb">cd</span> ../repo1_patches
 ~/repo1_patches$ ls -ltrh
-total 2.0K
--rw-r--r-- 1 user user 367 Sep 16 02:50 0002-Second-commit.patch
--rw-r--r-- 1 user user 563 Sep 16 02:50 0001-Initial-commit.patch
+total <span class="m">2</span>.0K
+-rw-r--r-- <span class="m">1</span> user user <span class="m">367</span> Sep <span class="m">16</span> <span class="m">02</span>:50 <span class="m">0002</span>-Second-commit.patch
+-rw-r--r-- <span class="m">1</span> user user <span class="m">563</span> Sep <span class="m">16</span> <span class="m">02</span>:50 <span class="m">0001</span>-Initial-commit.patch
 </code></pre></div>
 
 <p>These are the contents of <code>./0001-Initial-commit.patch</code></p>
@@ -277,46 +274,44 @@ total 2.0K
 
 <h3 id="applying-patches-as-commits-in-new-repo">Applying patches as commits in new repo</h3>
 <p>Now that our patches are created, let us apply them sequentially to our new repo:</p>
-<p>```bash session
-~/repo1_patches$ cd ../repo2
+<div class="highlight"><pre><span></span><code>~/repo1_patches$ <span class="nb">cd</span> ../repo2
 ~/repo2$ git status
 On branch master
 nothing to commit, working tree clean
 ~/repo2$ git log
-commit ce65e35e465dd5052c0c5f5a84e6ff35a856488d (HEAD -&gt; master)
-Author: Your Name <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#111;&#117;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">&#121;&#111;&#117;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a>
-Date:   Fri Sep 16 02:49:54 2022 +0000</p>
-<div class="highlight"><pre><span></span><code>File3
-</code></pre></div>
+commit ce65e35e465dd5052c0c5f5a84e6ff35a856488d <span class="o">(</span>HEAD -&gt; master<span class="o">)</span>
+Author: Your Name &lt;you@example.com&gt;
+Date:   Fri Sep <span class="m">16</span> <span class="m">02</span>:49:54 <span class="m">2022</span> +0000
 
-<p>~/repo2$ git am --3way ../repo1_patches/*.patch
+    File3
+~/repo2$ git am --3way ../repo1_patches/*.patch
 Applying: Initial commit
 Applying: Second commit
 ~/repo2$ ls -ltrh
-total 3.0K
--rw-r--r-- 1 user user 26 Sep 16 02:49 file3
--rw-r--r-- 1 user user 18 Sep 16 02:53 file2
--rw-r--r-- 1 user user 29 Sep 16 02:53 file1
+total <span class="m">3</span>.0K
+-rw-r--r-- <span class="m">1</span> user user <span class="m">26</span> Sep <span class="m">16</span> <span class="m">02</span>:49 file3
+-rw-r--r-- <span class="m">1</span> user user <span class="m">18</span> Sep <span class="m">16</span> <span class="m">02</span>:53 file2
+-rw-r--r-- <span class="m">1</span> user user <span class="m">29</span> Sep <span class="m">16</span> <span class="m">02</span>:53 file1
 ~/repo2$ git log
-commit 3de485c1e24c555d53ede02ab6d52102ec7a2093 (HEAD -&gt; master)
-Author: Your Name <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#111;&#117;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">&#121;&#111;&#117;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a>
-Date:   Fri Sep 16 02:48:49 2022 +0000</p>
-<div class="highlight"><pre><span></span><code>Second commit
+commit 3de485c1e24c555d53ede02ab6d52102ec7a2093 <span class="o">(</span>HEAD -&gt; master<span class="o">)</span>
+Author: Your Name &lt;you@example.com&gt;
+Date:   Fri Sep <span class="m">16</span> <span class="m">02</span>:48:49 <span class="m">2022</span> +0000
+
+    Second commit
+
+commit 483f95d8944ef3b79cbb536dd0b68d9459abbfca
+Author: Your Name &lt;you@example.com&gt;
+Date:   Fri Sep <span class="m">16</span> <span class="m">02</span>:48:01 <span class="m">2022</span> +0000
+
+    Initial commit
+
+commit ce65e35e465dd5052c0c5f5a84e6ff35a856488d
+Author: Your Name &lt;you@example.com&gt;
+Date:   Fri Sep <span class="m">16</span> <span class="m">02</span>:49:54 <span class="m">2022</span> +0000
+
+    File3
 </code></pre></div>
 
-<p>commit 483f95d8944ef3b79cbb536dd0b68d9459abbfca
-Author: Your Name <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#111;&#117;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">&#121;&#111;&#117;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a>
-Date:   Fri Sep 16 02:48:01 2022 +0000</p>
-<div class="highlight"><pre><span></span><code>Initial commit
-</code></pre></div>
-
-<p>commit ce65e35e465dd5052c0c5f5a84e6ff35a856488d
-Author: Your Name <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#111;&#117;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">&#121;&#111;&#117;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a>
-Date:   Fri Sep 16 02:49:54 2022 +0000</p>
-<div class="highlight"><pre><span></span><code>File3
-</code></pre></div>
-
-<p>```</p>
 <p>As we can see the commit history from <code>repo1</code> is now copied to <code>repo2</code> along with the files. </p>
 <h2 id="epilogue">Epilogue</h2>
 <p>This is an easy fix when <code>repo1</code> is small and there is less likely to be a merge conflict between <code>repo1</code> and <code>repo2</code>. 
