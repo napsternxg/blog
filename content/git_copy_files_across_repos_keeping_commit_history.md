@@ -24,7 +24,7 @@ The key idea is to first export each commit in `repo1` as a patch file. Then app
 
 Let us setup 2 repositories. 
 
-```bash session
+```bash
 ~$ git config --global user.email "you@example.com"
 ~$ git config --global user.name "Your Name"
 ~$ mkdir -p repo1 repo2
@@ -32,7 +32,7 @@ Let us setup 2 repositories.
 
 Setup `repo1`. 
 
-```bash session
+```bash
 ~$ cd repo1/
 ~/repo1$ git init
 Initialized empty Git repository in /home/user/repo1/.git/
@@ -67,7 +67,7 @@ Date:   Fri Sep 16 02:48:01 2022 +0000
 
 Add few more commits:
 
-```bash session
+```bash
 ~/repo1$ echo "New Lines Galore" >> file1
 ~/repo1$ cat file1
 Hello World
@@ -99,7 +99,7 @@ Date:   Fri Sep 16 02:48:01 2022 +0000
 
 Now setup `repo2`.
 
-```bash session
+```bash
 ~/repo1$ cd ../repo2
 ~/repo2$ git init
 Initialized empty Git repository in /home/user/repo2/.git/
@@ -124,7 +124,7 @@ Now lets prepare the move from `repo1` to `repo2` keeping repo1 file history.
 
 First we will export each commit in repo1 as a patch in a temp directory called `~/repo1_patches`
 
-```bash session
+```bash
 ~/repo2$ cd ../repo1
 ~/repo1$ mkdir ../repo1_patches
 ~/repo1$ git format-patch -o ../repo1_patches --root ./
@@ -134,7 +134,7 @@ First we will export each commit in repo1 as a patch in a temp directory called 
 
 Now we will see what `~/repo1_patches` looks like.
 
-```bash session
+```bash
 ~/repo1$ cd ../repo1_patches
 ~/repo1_patches$ ls -ltrh
 total 2.0K
@@ -203,7 +203,7 @@ index 557db03..acab188 100644
 Now that our patches are created, let us apply them sequentially to our new repo:
 
 
-```bash session
+```bash
 ~/repo1_patches$ cd ../repo2
 ~/repo2$ git status
 On branch master
