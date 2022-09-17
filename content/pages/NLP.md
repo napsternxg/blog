@@ -604,6 +604,13 @@ Summary: Links related to NLP resources
 * MIntRec: A New Dataset for Multimodal Intent Recognition - https://github.com/thuiar/MIntRec
 * CH-SIMS v2.0: A Fine-grained Multi-label Chinese Multimodal Sentiment Analysis Dataset - https://thuiar.github.io/sims.github.io/chsims
 * Multimodal Sentiment Analysis Datasets - https://github.com/thuiar/AWESOME-MSA#related-datasets
+* Contract Understanding Atticus Dataset (CUAD): A dataset of legal contracts with rich expert annotations - https://www.atticusprojectai.org/cuad - [Zenodo](https://zenodo.org/record/4595826)
+* FEVEROUS: Fact Extraction and VERification Over Unstructured and Structured information - https://fever.ai/dataset/feverous.html
+* Shifts: A Dataset of Real Distributional Shift Across Multiple Large-Scale Tasks (MT EN-RU from Global Voices and Reddit)- https://github.com/Shifts-Project/shifts/tree/main/translation
+* Multilingual Spoken Words - https://mlcommons.org/en/multilingual-spoken-words/
+* People’s Speech Dataset: the world’s largest English speech recognition corpus - https://mlcommons.org/en/peoples-speech/
+* Time-Sensitive Question Answering dataset - https://github.com/wenhuchen/Time-Sensitive-QA
+
 
 ## Shared tasks, competitions
 
