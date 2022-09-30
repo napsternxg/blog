@@ -610,6 +610,7 @@ Summary: Links related to NLP resources
 * Multilingual Spoken Words - https://mlcommons.org/en/multilingual-spoken-words/
 * People’s Speech Dataset: the world’s largest English speech recognition corpus - https://mlcommons.org/en/peoples-speech/
 * Time-Sensitive Question Answering dataset - https://github.com/wenhuchen/Time-Sensitive-QA
+* Sentence Keywords dataset (5K) - https://github.com/naister/Keyword-OpenSource-Data
 
 
 ## Shared tasks, competitions
