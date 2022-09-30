@@ -147,6 +147,7 @@ Summary: Links related to many datasets
 * Baby Name Atlas: The Most Popular Names Around the World - https://namerology.com/baby-name-atlas/
 * French Baby Names - https://en.geneanet.org/first-name/
 * Russian names with gender - https://github.com/words/russian-given-names
+* Family History Resources from Forebears.io - https://forebears.io/resources
 
 ## Images
 
