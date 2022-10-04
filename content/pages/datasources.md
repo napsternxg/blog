@@ -148,6 +148,7 @@ Summary: Links related to many datasets
 * French Baby Names - https://en.geneanet.org/first-name/
 * Russian names with gender - https://github.com/words/russian-given-names
 * Family History Resources from Forebears.io - https://forebears.io/resources
+* Name-Based Gender Classification (36 distinct sources—spanning over 150 countries and more than a century) - https://osf.io/tz38q/ - https://github.com/ianvanbuskirk/nbgc - [Software](https://github.com/ianvanbuskirk/nomquamgender)
 
 ## Images
 
