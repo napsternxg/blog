@@ -51,6 +51,8 @@ Summary: Machine Learning concepts and traditional resources
 * [Notes on information theory - Information Theory for Intelligent People - Simon DeDeo](http://tuvalu.santafe.edu/~simon/it.pdf)
 * [Notes on Bayesian reasoning - Bayesian Reasoning for Intelligent People - Simon DeDeo](http://tuvalu.santafe.edu/~simon/br.pdf)
 * [Mathematics of Machine Learning book](https://mml-book.github.io/)
+* [ALGORITHMS FOR DECISION MAKING](https://algorithmsbook.com/)
+* [Linear Algebra Done Right](https://linear.axler.net/) - [Videos and Slides](https://linear.axler.net/LADRvideos.html)
 * [Old and New Matrix Algebra Useful for Statistics](https://tminka.github.io/papers/matrix/minka-matrix.pdf)
 * [Linear Algebra by Jim Hefferon](https://hefferon.net/linearalgebra/)
 * [Intro to linear algebra in Numpy](https://pabloinsente.github.io/intro-linear-algebra)
