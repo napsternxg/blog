@@ -612,6 +612,7 @@ Summary: Links related to NLP resources
 * Time-Sensitive Question Answering dataset - https://github.com/wenhuchen/Time-Sensitive-QA
 * Sentence Keywords dataset (5K) - https://github.com/naister/Keyword-OpenSource-Data
 * Bloom Library - https://bloomlibrary.org/ [HuggingFace Hub](https://huggingface.co/datasets/sil-ai/bloom-lm)
+* Chinese NER dataset - https://github.com/PKUnlp-icler/SCL-RAI
 
 
 ## Shared tasks, competitions
