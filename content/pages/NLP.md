@@ -614,6 +614,7 @@ Summary: Links related to NLP resources
 * Bloom Library - https://bloomlibrary.org/ [HuggingFace Hub](https://huggingface.co/datasets/sil-ai/bloom-lm)
 * Chinese NER dataset - https://github.com/PKUnlp-icler/SCL-RAI
 * PreCo is a large-scale English dataset for coreference resolution from pre-schoolers - https://preschool-lab.github.io/PreCo/
+* The Project Dialogism Novel Corpus: A Dataset for Quotation Attribution in Literary Texts - https://github.com/Priya22/pdnc-lrec2022
 
 
 ## Shared tasks, competitions
