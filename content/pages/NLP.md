@@ -613,6 +613,7 @@ Summary: Links related to NLP resources
 * Sentence Keywords dataset (5K) - https://github.com/naister/Keyword-OpenSource-Data
 * Bloom Library - https://bloomlibrary.org/ [HuggingFace Hub](https://huggingface.co/datasets/sil-ai/bloom-lm)
 * Chinese NER dataset - https://github.com/PKUnlp-icler/SCL-RAI
+* PreCo is a large-scale English dataset for coreference resolution from pre-schoolers - https://preschool-lab.github.io/PreCo/
 
 
 ## Shared tasks, competitions
