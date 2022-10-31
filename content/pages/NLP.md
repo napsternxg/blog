@@ -616,7 +616,15 @@ Summary: Links related to NLP resources
 * PreCo is a large-scale English dataset for coreference resolution from pre-schoolers - https://preschool-lab.github.io/PreCo/
 * The Project Dialogism Novel Corpus: A Dataset for Quotation Attribution in Literary Texts - https://github.com/Priya22/pdnc-lrec2022
 * CrossRE: A Cross-Domain Dataset for Relation Extraction - https://github.com/mainlp/CrossRE
-
+* LongtoNotes: OntoNotes with Longer Coreference Chains - https://github.com/kumar-shridhar/LongtoNotes
+* Intent Classification Datasets - https://github.com/kumar-shridhar/Know-Your-Intent
+* MLQA (MultiLingual Question Answering) - https://github.com/facebookresearch/MLQA
+* STAPLE: Simultaneous Translation And Paraphrase for Language Education - https://sharedtask.duolingo.com/ [dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/38OJR6)
+* Spaced Repetition Model for Language Learning - https://github.com/duolingo/halflife-regression
+* reStructured Pretraining datasets - https://github.com/ExpressAI/reStructured-Pretraining#download-restructured-signals
+* PanLex Database - https://panlex.org/snapshot/ [Model Extension](https://github.com/cindyxinyiwang/expand-via-lexicon-based-adaptation)
+* GeNER (an automated dataset Generation framework for NER) - https://github.com/dmis-lab/GeNER
+* COMETA: the corpus of online medical entities - https://github.com/cambridgeltl/cometa
 
 ## Shared tasks, competitions
 
