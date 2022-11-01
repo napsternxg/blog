@@ -69,6 +69,7 @@ Summary: Social Networks and Network Related documents
 * Quantum Physics semantic network evolution - https://github.com/MarioKrenn6240/SEMNET
 * Science4Cast - Forcest future concept evolution in science - https://github.com/iarai/science4cast
 * Traffic4Cast - Spatio temporal traffic forcasting - https://github.com/iarai/NeurIPS2021-traffic4cast
+* Temporal higher-order networks (hypergraphs) - https://www.cs.cornell.edu/~arb/data/ [GitHub](https://github.com/arbenson/ScHoLP-Tutorial)
 
 ### Signed networks
 
