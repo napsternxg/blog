@@ -64,6 +64,7 @@ Summary: Social Networks and Network Related documents
 * ReconMap2: most comprehensive representation of human metabolism - https://www.vmh.life/#reconmap2
 * Temporal Covid Mental Health Map - https://osf.io/mvdpe/
 * A Global Book Reading Dataset (1M+ GoodReads network) - https://figshare.com/projects/A_Global_Book_Reading_Dataset/118854
+* fauci-email: a json digest of Anthony Fauci's released emails - https://github.com/nveldt/fauci-email
 
 ### Temporal Networks
 * Quantum Physics semantic network evolution - https://github.com/MarioKrenn6240/SEMNET
