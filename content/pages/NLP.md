@@ -625,6 +625,7 @@ Summary: Links related to NLP resources
 * PanLex Database - https://panlex.org/snapshot/ [Model Extension](https://github.com/cindyxinyiwang/expand-via-lexicon-based-adaptation)
 * GeNER (an automated dataset Generation framework for NER) - https://github.com/dmis-lab/GeNER
 * COMETA: the corpus of online medical entities - https://github.com/cambridgeltl/cometa
+* Pivot-based Entity Linking (54 training langs, 9 test langs) - https://github.com/shrutirij/pivot-based-entity-linking
 
 ## Shared tasks, competitions
 
