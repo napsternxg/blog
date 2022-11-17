@@ -626,6 +626,7 @@ Summary: Links related to NLP resources
 * GeNER (an automated dataset Generation framework for NER) - https://github.com/dmis-lab/GeNER
 * COMETA: the corpus of online medical entities - https://github.com/cambridgeltl/cometa
 * Pivot-based Entity Linking (54 training langs, 9 test langs) - https://github.com/shrutirij/pivot-based-entity-linking
+* Wikipedia Wikidata Relation Extraction (Context-Aware Representations for Knowledge Base Relation Extraction) - https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2776
 
 ## Shared tasks, competitions
 
