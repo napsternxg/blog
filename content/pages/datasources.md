@@ -189,6 +189,7 @@ Summary: Links related to many datasets
 
 * [Acoustic and meta features of albums and songs on the Billboard 200](https://components.one/datasets/billboard-200/)
 * [Conversation: A Naturalistic Dataset of Online Recordings (CANDOR) corpus](https://osf.io/fbsgh/)
+* [LAION Audio Dataset Project](https://github.com/LAION-AI/audio-dataset)
 
 
 ## Driving data

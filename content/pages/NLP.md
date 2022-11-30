@@ -84,6 +84,7 @@ Summary: Links related to NLP resources
 * Inception: semantic annotation tool - https://inception-project.github.io/
 * Language rules in XML format from languagetool.org - https://dev.languagetool.org/languages
 * REBL is an extension of the Radboud Entity Linker (REL) for Batch Entity Linking - https://github.com/informagi/REBL
+* Odinson: A Fast Rule-based Information Extraction Framework - https://github.com/lum-ai/odinson/
 
 ### Pretrained embeddings and models
 * ELMO for Many Languages - https://github.com/HIT-SCIR/ELMoForManyLangs
@@ -169,6 +170,15 @@ Summary: Links related to NLP resources
 
 ## Data
 
+* Multi-LexSum: https://multilexsum.github.io/
+* List of English Medical Terms - https://github.com/glutanimate/wordlist-medicalterms-en
+* HUNER: improving biomedical NER with pretraining - https://corposaurus.github.io/corpora/
+* WebIs Datasets - https://webis.de/data.html
+* WEXEA: an exhaustive Wikipedia entity annotation system - https://github.com/mjstrobl/WEXEA
+* Toloka Visual Question Answering Challenge - https://toloka.ai/challenges/wsdm2023/
+* KPWR-NER: Polish Fine-grained NER - https://huggingface.co/datasets/clarin-pl/kpwr-ner
+* Universal NER Datasets - https://www.universalner.org/datasets/
+* Survey on English Entity Linking on Wikidata - https://github.com/semantic-systems/ELEnglishWD [Zenodo](https://zenodo.org/record/5704890)
 * Sentiment corpora: https://www.w3.org/community/sentiment/wiki/Datasets
 * Relation Extraction Corpora: https://github.com/davidsbatista/Annotated-Semantic-Relationships-Datasets
 * Summarization corpora: https://gist.github.com/napsternxg/2750479273e0621c5aa697bf89843428
@@ -627,6 +637,7 @@ Summary: Links related to NLP resources
 * COMETA: the corpus of online medical entities - https://github.com/cambridgeltl/cometa
 * Pivot-based Entity Linking (54 training langs, 9 test langs) - https://github.com/shrutirij/pivot-based-entity-linking
 * Wikipedia Wikidata Relation Extraction (Context-Aware Representations for Knowledge Base Relation Extraction) - https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2776
+* Hinglish-TOP Dataset (Semantic Parsing) - https://github.com/google-research-datasets/Hinglish-TOP-Dataset
 
 ## Shared tasks, competitions
 
