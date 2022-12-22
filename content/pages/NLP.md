@@ -638,6 +638,7 @@ Summary: Links related to NLP resources
 * Pivot-based Entity Linking (54 training langs, 9 test langs) - https://github.com/shrutirij/pivot-based-entity-linking
 * Wikipedia Wikidata Relation Extraction (Context-Aware Representations for Knowledge Base Relation Extraction) - https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2776
 * Hinglish-TOP Dataset (Semantic Parsing) - https://github.com/google-research-datasets/Hinglish-TOP-Dataset
+* CoNLL++ (CoNLL 03 EN NER Fixed dataset) - https://github.com/ZihanWangKi/CrossWeigh
 
 ## Shared tasks, competitions
 
