@@ -1,13 +1,14 @@
 name: pelican
 dependencies:
-    - python
-    - ipykernel
-    - ipython
-    - jupyter
-    - nbconvert>=5,<6
-    - markdown
+    - python==3.7.13
+    - ipykernel==6.15.2
+    - ipython==7.31.1
+    - jupyter==1.0.0
+    - nbconvert==5.6.1
+    - markdown==3.3.4
+    - jinja2==3.0.3
     - pip
     - pip:
-        - pelican
-        - pymdown-extensions
-        - pelican-jupyter
+        - pelican==4.8.0
+        - pymdown-extensions==9.7
+        - pelican-jupyter==0.10.1
