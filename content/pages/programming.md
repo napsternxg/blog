@@ -24,6 +24,9 @@ Summary: Links related to programming
 * The Stony Brook Algorithm Repository - http://algorist.com/algorist.html
 * OpenDSA: Interactive Data Structures and Algorithms - https://opendsa-server.cs.vt.edu/ - [Examples](https://opendsa-server.cs.vt.edu/OpenDSA/Books/Everything/html/)
 
+## Software Design
+* Design Pattern - https://refactoring.guru/design-patterns
+
 
 ## Parallel Computing
 
