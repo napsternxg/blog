@@ -137,6 +137,7 @@ Summary: Links related to NLP resources
 * Advanced String Matching and Burrows-Wheeler Indexing - https://langmead-lab.org/teaching-materials/ [YouTube](https://www.youtube.com/playlist?list=PL2mpR0RYFQsADmYpW2YWBrXJZ_6EL_3nu)
 * Succinct Data Structures for NLP-at-Scale - https://mpetri.github.io/coling16-tutorial/
 * Space-Efficient Data Structures for Top-k Completion - https://www.microsoft.com/en-us/research/publication/space-efficient-data-structures-for-top-k-completion/
+* Beginner's Crash Course to Elastic Stack for text analysis - https://github.com/LisaHJung/Beginners-Crash-Course-to-Elastic-Stack-Series-Table-of-Contents - [YouTube](https://www.youtube.com/playlist?list=PL_mJOmq4zsHZYAyK606y7wjQtC0aoE6Es)
 
 ## Lexicons
 
