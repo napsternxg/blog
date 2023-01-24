@@ -85,6 +85,7 @@ Summary: Links related to NLP resources
 * Language rules in XML format from languagetool.org - https://dev.languagetool.org/languages
 * REBL is an extension of the Radboud Entity Linker (REL) for Batch Entity Linking - https://github.com/informagi/REBL
 * Odinson: A Fast Rule-based Information Extraction Framework - https://github.com/lum-ai/odinson/
+* SDSL - Succinct Data Structure Library - https://github.com/simongog/sdsl-lite/
 
 ### Pretrained embeddings and models
 * ELMO for Many Languages - https://github.com/HIT-SCIR/ELMoForManyLangs
@@ -133,6 +134,9 @@ Summary: Links related to NLP resources
 * Entity Related Papers - https://github.com/HelloRusk/entity-related-papers/blob/master/README.md
 * Entity Linking Recent Trends - https://github.com/izuna385/Entity-Linking-Recent-Trends
 * Fine-grained evaluation of Entity Linking - https://github.com/henryrosalesmendez/EL_exp
+* Advanced String Matching and Burrows-Wheeler Indexing - https://langmead-lab.org/teaching-materials/ [YouTube](https://www.youtube.com/playlist?list=PL2mpR0RYFQsADmYpW2YWBrXJZ_6EL_3nu)
+* Succinct Data Structures for NLP-at-Scale - https://mpetri.github.io/coling16-tutorial/
+* Space-Efficient Data Structures for Top-k Completion - https://www.microsoft.com/en-us/research/publication/space-efficient-data-structures-for-top-k-completion/
 
 ## Lexicons
 
