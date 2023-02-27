@@ -644,6 +644,7 @@ Summary: Links related to NLP resources
 * Wikipedia Wikidata Relation Extraction (Context-Aware Representations for Knowledge Base Relation Extraction) - https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2776
 * Hinglish-TOP Dataset (Semantic Parsing) - https://github.com/google-research-datasets/Hinglish-TOP-Dataset
 * CoNLL++ (CoNLL 03 EN NER Fixed dataset) - https://github.com/ZihanWangKi/CrossWeigh
+* CANARD: a dataset for question-in-context rewriting - https://sites.google.com/view/qanta/projects/canard
 
 ## Shared tasks, competitions
 
