@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Interpreting Models</title><link href="https://shubhanshu.com/blog/" rel="alternate"></link><link href="https://shubhanshu.com/blog/feeds/all.atom.xml" rel="self"></link><id>https://shubhanshu.com/blog/</id><updated>2023-01-24T21:14:37-06:00</updated><subtitle>A journey towards model interpretability</subtitle><entry><title>Copy Files Across Git Repositories Keeping Commit History</title><link href="https://shubhanshu.com/blog/git-copy-files-across-repos-keeping-commit-history.html" rel="alternate"></link><published>2022-09-15T10:20:00-05:00</published><updated>2023-01-24T21:14:37-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2022-09-15:/blog/git-copy-files-across-repos-keeping-commit-history.html</id><summary type="html">&lt;p&gt;Copy Files Across Git Repositories Keeping Commit History&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sometimes we would like to move files between two git repositories, namely, &lt;code&gt;repo1&lt;/code&gt; to &lt;code&gt;repo2&lt;/code&gt;. Here, both the repos do not share a commit history and may have a very different directory structure.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Interpreting Models</title><link href="https://shubhanshu.com/blog/" rel="alternate"></link><link href="https://shubhanshu.com/blog/feeds/all.atom.xml" rel="self"></link><id>https://shubhanshu.com/blog/</id><updated>2023-02-27T20:47:04-06:00</updated><subtitle>A journey towards model interpretability</subtitle><entry><title>Copy Files Across Git Repositories Keeping Commit History</title><link href="https://shubhanshu.com/blog/git-copy-files-across-repos-keeping-commit-history.html" rel="alternate"></link><published>2022-09-15T10:20:00-05:00</published><updated>2023-02-27T20:47:04-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2022-09-15:/blog/git-copy-files-across-repos-keeping-commit-history.html</id><summary type="html">&lt;p&gt;Copy Files Across Git Repositories Keeping Commit History&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sometimes we would like to move files between two git repositories, namely, &lt;code&gt;repo1&lt;/code&gt; to &lt;code&gt;repo2&lt;/code&gt;. Here, both the repos do not share a commit history and may have a very different directory structure.&lt;/p&gt;
 &lt;p&gt;One use case is you are developing a standalone side project in &lt;code&gt;repo1&lt;/code&gt; and would like later merge into a larger project &lt;code&gt;repo2&lt;/code&gt;. &lt;/p&gt;
 &lt;p&gt;One easy way is to simply copy files from &lt;code&gt;repo1&lt;/code&gt; to &lt;code&gt;repo2&lt;/code&gt; and then commit them in &lt;code&gt;repo2&lt;/code&gt;. However, in this approach we loose all the commit history information of the files in &lt;code&gt;repo1&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;We can use a combination of &lt;code&gt;git format-patch&lt;/code&gt; and &lt;code&gt;git am --3way&lt;/code&gt; commands to achieve this. &lt;/p&gt;
@@ -7,107 +7,107 @@
 &lt;h2 id="demo"&gt;Demo&lt;/h2&gt;
 &lt;h3 id="setup-repositories"&gt;Setup Repositories&lt;/h3&gt;
 &lt;p&gt;Let us setup 2 repositories. &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~$ git config --global user.email &lt;span class="s2"&gt;&amp;quot;you@example.com&amp;quot;&lt;/span&gt;
-~$ git config --global user.name &lt;span class="s2"&gt;&amp;quot;Your Name&amp;quot;&lt;/span&gt;
-~$ mkdir -p repo1 repo2
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt;--global&lt;span class="w"&gt; &lt;/span&gt;user.email&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;you@example.com&amp;quot;&lt;/span&gt;
+~$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt;--global&lt;span class="w"&gt; &lt;/span&gt;user.name&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Your Name&amp;quot;&lt;/span&gt;
+~$&lt;span class="w"&gt; &lt;/span&gt;mkdir&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;repo1&lt;span class="w"&gt; &lt;/span&gt;repo2
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Setup &lt;code&gt;repo1&lt;/code&gt;. &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~$ &lt;span class="nb"&gt;cd&lt;/span&gt; repo1/
-~/repo1$ git init
-Initialized empty Git repository &lt;span class="k"&gt;in&lt;/span&gt; /home/user/repo1/.git/
-~/repo1$ touch file1 file2
-~/repo1$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hello World&amp;quot;&lt;/span&gt; &amp;gt; file1
-~/repo1$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hello World again&amp;quot;&lt;/span&gt; &amp;gt; file2
-~/repo1$ git status
-On branch master
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;repo1/
+~/repo1$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;init
+Initialized&lt;span class="w"&gt; &lt;/span&gt;empty&lt;span class="w"&gt; &lt;/span&gt;Git&lt;span class="w"&gt; &lt;/span&gt;repository&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;/home/user/repo1/.git/
+~/repo1$&lt;span class="w"&gt; &lt;/span&gt;touch&lt;span class="w"&gt; &lt;/span&gt;file1&lt;span class="w"&gt; &lt;/span&gt;file2
+~/repo1$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hello World&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;file1
+~/repo1$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hello World again&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;file2
+~/repo1$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;status
+On&lt;span class="w"&gt; &lt;/span&gt;branch&lt;span class="w"&gt; &lt;/span&gt;master
 
-No commits yet
+No&lt;span class="w"&gt; &lt;/span&gt;commits&lt;span class="w"&gt; &lt;/span&gt;yet
 
-Untracked files:
-  &lt;span class="o"&gt;(&lt;/span&gt;use &lt;span class="s2"&gt;&amp;quot;git add &amp;lt;file&amp;gt;...&amp;quot;&lt;/span&gt; to include &lt;span class="k"&gt;in&lt;/span&gt; what will be committed&lt;span class="o"&gt;)&lt;/span&gt;
-        file1
-        file2
+Untracked&lt;span class="w"&gt; &lt;/span&gt;files:
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;use&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;git add &amp;lt;file&amp;gt;...&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;include&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;what&lt;span class="w"&gt; &lt;/span&gt;will&lt;span class="w"&gt; &lt;/span&gt;be&lt;span class="w"&gt; &lt;/span&gt;committed&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;file1
+&lt;span class="w"&gt;        &lt;/span&gt;file2
 
-nothing added to commit but untracked files present &lt;span class="o"&gt;(&lt;/span&gt;use &lt;span class="s2"&gt;&amp;quot;git add&amp;quot;&lt;/span&gt; to track&lt;span class="o"&gt;)&lt;/span&gt;
-~/repo1$ git add .
-~/repo1$ git commit -am &lt;span class="s2"&gt;&amp;quot;Initial commit&amp;quot;&lt;/span&gt;
-&lt;span class="o"&gt;[&lt;/span&gt;master &lt;span class="o"&gt;(&lt;/span&gt;root-commit&lt;span class="o"&gt;)&lt;/span&gt; 6d58af8&lt;span class="o"&gt;]&lt;/span&gt; Initial commit
- &lt;span class="m"&gt;2&lt;/span&gt; files changed, &lt;span class="m"&gt;2&lt;/span&gt; insertions&lt;span class="o"&gt;(&lt;/span&gt;+&lt;span class="o"&gt;)&lt;/span&gt;
- create mode &lt;span class="m"&gt;100644&lt;/span&gt; file1
- create mode &lt;span class="m"&gt;100644&lt;/span&gt; file2
-~/repo1$ git log
-commit 6d58af8d140c86de700dd9206cb2c7512c39a74c &lt;span class="o"&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class="o"&gt;)&lt;/span&gt;
-Author: Your Name &amp;lt;you@example.com&amp;gt;
-Date:   Fri Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:48:01 &lt;span class="m"&gt;2022&lt;/span&gt; +0000
+nothing&lt;span class="w"&gt; &lt;/span&gt;added&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;but&lt;span class="w"&gt; &lt;/span&gt;untracked&lt;span class="w"&gt; &lt;/span&gt;files&lt;span class="w"&gt; &lt;/span&gt;present&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;use&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;git add&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;track&lt;span class="o"&gt;)&lt;/span&gt;
+~/repo1$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;.
+~/repo1$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;-am&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Initial commit&amp;quot;&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;master&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;root-commit&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;6d58af8&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;Initial&lt;span class="w"&gt; &lt;/span&gt;commit
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;files&lt;span class="w"&gt; &lt;/span&gt;changed,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;insertions&lt;span class="o"&gt;(&lt;/span&gt;+&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;create&lt;span class="w"&gt; &lt;/span&gt;mode&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;100644&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;file1
+&lt;span class="w"&gt; &lt;/span&gt;create&lt;span class="w"&gt; &lt;/span&gt;mode&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;100644&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;file2
+~/repo1$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;log
+commit&lt;span class="w"&gt; &lt;/span&gt;6d58af8d140c86de700dd9206cb2c7512c39a74c&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;HEAD&lt;span class="w"&gt; &lt;/span&gt;-&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt;
+Author:&lt;span class="w"&gt; &lt;/span&gt;Your&lt;span class="w"&gt; &lt;/span&gt;Name&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;you@example.com&amp;gt;
+Date:&lt;span class="w"&gt;   &lt;/span&gt;Fri&lt;span class="w"&gt; &lt;/span&gt;Sep&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;02&lt;/span&gt;:48:01&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2022&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;+0000
 
-    Initial commit
+&lt;span class="w"&gt;    &lt;/span&gt;Initial&lt;span class="w"&gt; &lt;/span&gt;commit
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Add few more commits:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~/repo1$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;New Lines Galore&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; file1
-~/repo1$ cat file1
-Hello World
-New lines galore
-~/repo1$ git status
-On branch master
-Changes not staged &lt;span class="k"&gt;for&lt;/span&gt; commit:
-  &lt;span class="o"&gt;(&lt;/span&gt;use &lt;span class="s2"&gt;&amp;quot;git add &amp;lt;file&amp;gt;...&amp;quot;&lt;/span&gt; to update what will be committed&lt;span class="o"&gt;)&lt;/span&gt;
-  &lt;span class="o"&gt;(&lt;/span&gt;use &lt;span class="s2"&gt;&amp;quot;git restore &amp;lt;file&amp;gt;...&amp;quot;&lt;/span&gt; to discard changes &lt;span class="k"&gt;in&lt;/span&gt; working directory&lt;span class="o"&gt;)&lt;/span&gt;
-        modified:   file1
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~/repo1$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;New Lines Galore&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;file1
+~/repo1$&lt;span class="w"&gt; &lt;/span&gt;cat&lt;span class="w"&gt; &lt;/span&gt;file1
+Hello&lt;span class="w"&gt; &lt;/span&gt;World
+New&lt;span class="w"&gt; &lt;/span&gt;lines&lt;span class="w"&gt; &lt;/span&gt;galore
+~/repo1$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;status
+On&lt;span class="w"&gt; &lt;/span&gt;branch&lt;span class="w"&gt; &lt;/span&gt;master
+Changes&lt;span class="w"&gt; &lt;/span&gt;not&lt;span class="w"&gt; &lt;/span&gt;staged&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;commit:
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;use&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;git add &amp;lt;file&amp;gt;...&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;update&lt;span class="w"&gt; &lt;/span&gt;what&lt;span class="w"&gt; &lt;/span&gt;will&lt;span class="w"&gt; &lt;/span&gt;be&lt;span class="w"&gt; &lt;/span&gt;committed&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;use&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;git restore &amp;lt;file&amp;gt;...&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;discard&lt;span class="w"&gt; &lt;/span&gt;changes&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;working&lt;span class="w"&gt; &lt;/span&gt;directory&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;modified:&lt;span class="w"&gt;   &lt;/span&gt;file1
 
-no changes added to commit &lt;span class="o"&gt;(&lt;/span&gt;use &lt;span class="s2"&gt;&amp;quot;git add&amp;quot;&lt;/span&gt; and/or &lt;span class="s2"&gt;&amp;quot;git commit -a&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-~/repo1$ git commit -am &lt;span class="s2"&gt;&amp;quot;Second commit&amp;quot;&lt;/span&gt;
-&lt;span class="o"&gt;[&lt;/span&gt;master 3f3c874&lt;span class="o"&gt;]&lt;/span&gt; Second commit
- &lt;span class="m"&gt;1&lt;/span&gt; file changed, &lt;span class="m"&gt;1&lt;/span&gt; insertion&lt;span class="o"&gt;(&lt;/span&gt;+&lt;span class="o"&gt;)&lt;/span&gt;
-~/repo1$ git log
-commit 3f3c874e3487d999c581cf2d2b75f49de2ab5784 &lt;span class="o"&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class="o"&gt;)&lt;/span&gt;
-Author: Your Name &amp;lt;you@example.com&amp;gt;
-Date:   Fri Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:48:49 &lt;span class="m"&gt;2022&lt;/span&gt; +0000
+no&lt;span class="w"&gt; &lt;/span&gt;changes&lt;span class="w"&gt; &lt;/span&gt;added&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;use&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;git add&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;and/or&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;git commit -a&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+~/repo1$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;-am&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Second commit&amp;quot;&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;master&lt;span class="w"&gt; &lt;/span&gt;3f3c874&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;Second&lt;span class="w"&gt; &lt;/span&gt;commit
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;file&lt;span class="w"&gt; &lt;/span&gt;changed,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;insertion&lt;span class="o"&gt;(&lt;/span&gt;+&lt;span class="o"&gt;)&lt;/span&gt;
+~/repo1$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;log
+commit&lt;span class="w"&gt; &lt;/span&gt;3f3c874e3487d999c581cf2d2b75f49de2ab5784&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;HEAD&lt;span class="w"&gt; &lt;/span&gt;-&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt;
+Author:&lt;span class="w"&gt; &lt;/span&gt;Your&lt;span class="w"&gt; &lt;/span&gt;Name&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;you@example.com&amp;gt;
+Date:&lt;span class="w"&gt;   &lt;/span&gt;Fri&lt;span class="w"&gt; &lt;/span&gt;Sep&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;02&lt;/span&gt;:48:49&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2022&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;+0000
 
-    Second commit
+&lt;span class="w"&gt;    &lt;/span&gt;Second&lt;span class="w"&gt; &lt;/span&gt;commit
 
-commit 6d58af8d140c86de700dd9206cb2c7512c39a74c
-Author: Your Name &amp;lt;you@example.com&amp;gt;
-Date:   Fri Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:48:01 &lt;span class="m"&gt;2022&lt;/span&gt; +0000
+commit&lt;span class="w"&gt; &lt;/span&gt;6d58af8d140c86de700dd9206cb2c7512c39a74c
+Author:&lt;span class="w"&gt; &lt;/span&gt;Your&lt;span class="w"&gt; &lt;/span&gt;Name&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;you@example.com&amp;gt;
+Date:&lt;span class="w"&gt;   &lt;/span&gt;Fri&lt;span class="w"&gt; &lt;/span&gt;Sep&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;02&lt;/span&gt;:48:01&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2022&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;+0000
 
-    Initial commit 
+&lt;span class="w"&gt;    &lt;/span&gt;Initial&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now setup &lt;code&gt;repo2&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~/repo1$ &lt;span class="nb"&gt;cd&lt;/span&gt; ../repo2
-~/repo2$ git init
-Initialized empty Git repository &lt;span class="k"&gt;in&lt;/span&gt; /home/user/repo2/.git/
-~/repo2$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;This is file3 in new repo&amp;quot;&lt;/span&gt; &amp;gt; file3
-~/repo2$ git add .
-~/repo2$ git commit -am &lt;span class="s2"&gt;&amp;quot;File3&amp;quot;&lt;/span&gt;
-&lt;span class="o"&gt;[&lt;/span&gt;master &lt;span class="o"&gt;(&lt;/span&gt;root-commit&lt;span class="o"&gt;)&lt;/span&gt; ce65e35&lt;span class="o"&gt;]&lt;/span&gt; File3
- &lt;span class="m"&gt;1&lt;/span&gt; file changed, &lt;span class="m"&gt;1&lt;/span&gt; insertion&lt;span class="o"&gt;(&lt;/span&gt;+&lt;span class="o"&gt;)&lt;/span&gt;
- create mode &lt;span class="m"&gt;100644&lt;/span&gt; file3
-~/repo2$ git log
-commit ce65e35e465dd5052c0c5f5a84e6ff35a856488d &lt;span class="o"&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class="o"&gt;)&lt;/span&gt;
-Author: Your Name &amp;lt;you@example.com&amp;gt;
-Date:   Fri Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:49:54 &lt;span class="m"&gt;2022&lt;/span&gt; +0000
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~/repo1$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;../repo2
+~/repo2$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;init
+Initialized&lt;span class="w"&gt; &lt;/span&gt;empty&lt;span class="w"&gt; &lt;/span&gt;Git&lt;span class="w"&gt; &lt;/span&gt;repository&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;/home/user/repo2/.git/
+~/repo2$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;This is file3 in new repo&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;file3
+~/repo2$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;.
+~/repo2$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;-am&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;File3&amp;quot;&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;master&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;root-commit&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;ce65e35&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;File3
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;file&lt;span class="w"&gt; &lt;/span&gt;changed,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;insertion&lt;span class="o"&gt;(&lt;/span&gt;+&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;create&lt;span class="w"&gt; &lt;/span&gt;mode&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;100644&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;file3
+~/repo2$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;log
+commit&lt;span class="w"&gt; &lt;/span&gt;ce65e35e465dd5052c0c5f5a84e6ff35a856488d&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;HEAD&lt;span class="w"&gt; &lt;/span&gt;-&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt;
+Author:&lt;span class="w"&gt; &lt;/span&gt;Your&lt;span class="w"&gt; &lt;/span&gt;Name&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;you@example.com&amp;gt;
+Date:&lt;span class="w"&gt;   &lt;/span&gt;Fri&lt;span class="w"&gt; &lt;/span&gt;Sep&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;02&lt;/span&gt;:49:54&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2022&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;+0000
 
-    File3
+&lt;span class="w"&gt;    &lt;/span&gt;File3
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="exporting-commits-as-patches"&gt;Exporting commits as patches&lt;/h3&gt;
 &lt;p&gt;Now lets prepare the move from &lt;code&gt;repo1&lt;/code&gt; to &lt;code&gt;repo2&lt;/code&gt; keeping repo1 file history. &lt;/p&gt;
 &lt;p&gt;First we will export each commit in repo1 as a patch in a temp directory called &lt;code&gt;~/repo1_patches&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~/repo2$ &lt;span class="nb"&gt;cd&lt;/span&gt; ../repo1
-~/repo1$ mkdir ../repo1_patches
-~/repo1$ git format-patch -o ../repo1_patches --root ./
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~/repo2$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;../repo1
+~/repo1$&lt;span class="w"&gt; &lt;/span&gt;mkdir&lt;span class="w"&gt; &lt;/span&gt;../repo1_patches
+~/repo1$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;format-patch&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;../repo1_patches&lt;span class="w"&gt; &lt;/span&gt;--root&lt;span class="w"&gt; &lt;/span&gt;./
 ../repo1_patches/0001-Initial-commit.patch
 ../repo1_patches/0002-Second-commit.patch
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now we will see what &lt;code&gt;~/repo1_patches&lt;/code&gt; looks like.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~/repo1$ &lt;span class="nb"&gt;cd&lt;/span&gt; ../repo1_patches
-~/repo1_patches$ ls -ltrh
-total &lt;span class="m"&gt;2&lt;/span&gt;.0K
--rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; user user &lt;span class="m"&gt;367&lt;/span&gt; Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:50 &lt;span class="m"&gt;0002&lt;/span&gt;-Second-commit.patch
--rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; user user &lt;span class="m"&gt;563&lt;/span&gt; Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:50 &lt;span class="m"&gt;0001&lt;/span&gt;-Initial-commit.patch
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~/repo1$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;../repo1_patches
+~/repo1_patches$&lt;span class="w"&gt; &lt;/span&gt;ls&lt;span class="w"&gt; &lt;/span&gt;-ltrh
+total&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;.0K
+-rw-r--r--&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;user&lt;span class="w"&gt; &lt;/span&gt;user&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;367&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;Sep&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;02&lt;/span&gt;:50&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0002&lt;/span&gt;-Second-commit.patch
+-rw-r--r--&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;user&lt;span class="w"&gt; &lt;/span&gt;user&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;563&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;Sep&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;02&lt;/span&gt;:50&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0001&lt;/span&gt;-Initial-commit.patch
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;These are the contents of &lt;code&gt;./0001-Initial-commit.patch&lt;/code&gt;&lt;/p&gt;
@@ -116,28 +116,28 @@ total &lt;span class="m"&gt;2&lt;/span&gt;.0K
 &lt;span class="w"&gt;Date: Fri, 16 Sep 2022 02:48:01 +0000&lt;/span&gt;
 &lt;span class="w"&gt;Subject: [PATCH 1/2] Initial commit&lt;/span&gt;
 
-&lt;span class="gd"&gt;---&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;file1 | 1 +&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;file2 | 1 +&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;2 files changed, 2 insertions(+)&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;create mode 100644 file1&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;create mode 100644 file2&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gd"&gt;---&lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;file1 | 1 +
+&lt;span class="w"&gt; &lt;/span&gt;file2 | 1 +
+&lt;span class="w"&gt; &lt;/span&gt;2 files changed, 2 insertions(+)
+&lt;span class="w"&gt; &lt;/span&gt;create mode 100644 file1
+&lt;span class="w"&gt; &lt;/span&gt;create mode 100644 file2
 
-&lt;span class="gh"&gt;diff --git a/file1 b/file1&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gh"&gt;diff --git a/file1 b/file1&lt;/span&gt;
 &lt;span class="w"&gt;new file mode 100644&lt;/span&gt;
-&lt;span class="gh"&gt;index 0000000..557db03&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="gd"&gt;--- /dev/null&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="gi"&gt;+++ b/file1&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="gu"&gt;@@ -0,0 +1 @@&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="gi"&gt;+Hello World&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="gh"&gt;diff --git a/file2 b/file2&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gh"&gt;index 0000000..557db03&lt;/span&gt;
+&lt;span class="gd"&gt;--- /dev/null&lt;/span&gt;
+&lt;span class="gi"&gt;+++ b/file1&lt;/span&gt;
+&lt;span class="gu"&gt;@@ -0,0 +1 @@&lt;/span&gt;
+&lt;span class="gi"&gt;+Hello World&lt;/span&gt;
+&lt;span class="gh"&gt;diff --git a/file2 b/file2&lt;/span&gt;
 &lt;span class="w"&gt;new file mode 100644&lt;/span&gt;
-&lt;span class="gh"&gt;index 0000000..c3aaa9d&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="gd"&gt;--- /dev/null&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="gi"&gt;+++ b/file2&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="gu"&gt;@@ -0,0 +1 @@&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="gi"&gt;+Hello World again&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="gd"&gt;-- &lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gh"&gt;index 0000000..c3aaa9d&lt;/span&gt;
+&lt;span class="gd"&gt;--- /dev/null&lt;/span&gt;
+&lt;span class="gi"&gt;+++ b/file2&lt;/span&gt;
+&lt;span class="gu"&gt;@@ -0,0 +1 @@&lt;/span&gt;
+&lt;span class="gi"&gt;+Hello World again&lt;/span&gt;
+&lt;span class="gd"&gt;-- &lt;/span&gt;
 &lt;span class="w"&gt;2.25.1&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -147,65 +147,65 @@ total &lt;span class="m"&gt;2&lt;/span&gt;.0K
 &lt;span class="w"&gt;Date: Fri, 16 Sep 2022 02:48:49 +0000&lt;/span&gt;
 &lt;span class="w"&gt;Subject: [PATCH 2/2] Second commit&lt;/span&gt;
 
-&lt;span class="gd"&gt;---&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;file1 | 1 +&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;1 file changed, 1 insertion(+)&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gd"&gt;---&lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;file1 | 1 +
+&lt;span class="w"&gt; &lt;/span&gt;1 file changed, 1 insertion(+)
 
-&lt;span class="gh"&gt;diff --git a/file1 b/file1&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="gh"&gt;index 557db03..acab188 100644&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="gd"&gt;--- a/file1&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="gi"&gt;+++ b/file1&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="gu"&gt;@@ -1 +1,2 @@&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;Hello World&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="gi"&gt;+New lines galore&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="gd"&gt;-- &lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gh"&gt;diff --git a/file1 b/file1&lt;/span&gt;
+&lt;span class="gh"&gt;index 557db03..acab188 100644&lt;/span&gt;
+&lt;span class="gd"&gt;--- a/file1&lt;/span&gt;
+&lt;span class="gi"&gt;+++ b/file1&lt;/span&gt;
+&lt;span class="gu"&gt;@@ -1 +1,2 @@&lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;Hello World
+&lt;span class="gi"&gt;+New lines galore&lt;/span&gt;
+&lt;span class="gd"&gt;-- &lt;/span&gt;
 &lt;span class="w"&gt;2.25.1&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="applying-patches-as-commits-in-new-repo"&gt;Applying patches as commits in new repo&lt;/h3&gt;
 &lt;p&gt;Now that our patches are created, let us apply them sequentially to our new repo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~/repo1_patches$ &lt;span class="nb"&gt;cd&lt;/span&gt; ../repo2
-~/repo2$ git status
-On branch master
-nothing to commit, working tree clean
-~/repo2$ git log
-commit ce65e35e465dd5052c0c5f5a84e6ff35a856488d &lt;span class="o"&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class="o"&gt;)&lt;/span&gt;
-Author: Your Name &amp;lt;you@example.com&amp;gt;
-Date:   Fri Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:49:54 &lt;span class="m"&gt;2022&lt;/span&gt; +0000
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~/repo1_patches$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;../repo2
+~/repo2$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;status
+On&lt;span class="w"&gt; &lt;/span&gt;branch&lt;span class="w"&gt; &lt;/span&gt;master
+nothing&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;commit,&lt;span class="w"&gt; &lt;/span&gt;working&lt;span class="w"&gt; &lt;/span&gt;tree&lt;span class="w"&gt; &lt;/span&gt;clean
+~/repo2$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;log
+commit&lt;span class="w"&gt; &lt;/span&gt;ce65e35e465dd5052c0c5f5a84e6ff35a856488d&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;HEAD&lt;span class="w"&gt; &lt;/span&gt;-&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt;
+Author:&lt;span class="w"&gt; &lt;/span&gt;Your&lt;span class="w"&gt; &lt;/span&gt;Name&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;you@example.com&amp;gt;
+Date:&lt;span class="w"&gt;   &lt;/span&gt;Fri&lt;span class="w"&gt; &lt;/span&gt;Sep&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;02&lt;/span&gt;:49:54&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2022&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;+0000
 
-    File3
-~/repo2$ git am --3way ../repo1_patches/*.patch
-Applying: Initial commit
-Applying: Second commit
-~/repo2$ ls -ltrh
-total &lt;span class="m"&gt;3&lt;/span&gt;.0K
--rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; user user &lt;span class="m"&gt;26&lt;/span&gt; Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:49 file3
--rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; user user &lt;span class="m"&gt;18&lt;/span&gt; Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:53 file2
--rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; user user &lt;span class="m"&gt;29&lt;/span&gt; Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:53 file1
-~/repo2$ git log
-commit 3de485c1e24c555d53ede02ab6d52102ec7a2093 &lt;span class="o"&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class="o"&gt;)&lt;/span&gt;
-Author: Your Name &amp;lt;you@example.com&amp;gt;
-Date:   Fri Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:48:49 &lt;span class="m"&gt;2022&lt;/span&gt; +0000
+&lt;span class="w"&gt;    &lt;/span&gt;File3
+~/repo2$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;am&lt;span class="w"&gt; &lt;/span&gt;--3way&lt;span class="w"&gt; &lt;/span&gt;../repo1_patches/*.patch
+Applying:&lt;span class="w"&gt; &lt;/span&gt;Initial&lt;span class="w"&gt; &lt;/span&gt;commit
+Applying:&lt;span class="w"&gt; &lt;/span&gt;Second&lt;span class="w"&gt; &lt;/span&gt;commit
+~/repo2$&lt;span class="w"&gt; &lt;/span&gt;ls&lt;span class="w"&gt; &lt;/span&gt;-ltrh
+total&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.0K
+-rw-r--r--&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;user&lt;span class="w"&gt; &lt;/span&gt;user&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;26&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;Sep&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;02&lt;/span&gt;:49&lt;span class="w"&gt; &lt;/span&gt;file3
+-rw-r--r--&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;user&lt;span class="w"&gt; &lt;/span&gt;user&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;18&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;Sep&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;02&lt;/span&gt;:53&lt;span class="w"&gt; &lt;/span&gt;file2
+-rw-r--r--&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;user&lt;span class="w"&gt; &lt;/span&gt;user&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;Sep&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;02&lt;/span&gt;:53&lt;span class="w"&gt; &lt;/span&gt;file1
+~/repo2$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;log
+commit&lt;span class="w"&gt; &lt;/span&gt;3de485c1e24c555d53ede02ab6d52102ec7a2093&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;HEAD&lt;span class="w"&gt; &lt;/span&gt;-&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt;
+Author:&lt;span class="w"&gt; &lt;/span&gt;Your&lt;span class="w"&gt; &lt;/span&gt;Name&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;you@example.com&amp;gt;
+Date:&lt;span class="w"&gt;   &lt;/span&gt;Fri&lt;span class="w"&gt; &lt;/span&gt;Sep&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;02&lt;/span&gt;:48:49&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2022&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;+0000
 
-    Second commit
+&lt;span class="w"&gt;    &lt;/span&gt;Second&lt;span class="w"&gt; &lt;/span&gt;commit
 
-commit 483f95d8944ef3b79cbb536dd0b68d9459abbfca
-Author: Your Name &amp;lt;you@example.com&amp;gt;
-Date:   Fri Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:48:01 &lt;span class="m"&gt;2022&lt;/span&gt; +0000
+commit&lt;span class="w"&gt; &lt;/span&gt;483f95d8944ef3b79cbb536dd0b68d9459abbfca
+Author:&lt;span class="w"&gt; &lt;/span&gt;Your&lt;span class="w"&gt; &lt;/span&gt;Name&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;you@example.com&amp;gt;
+Date:&lt;span class="w"&gt;   &lt;/span&gt;Fri&lt;span class="w"&gt; &lt;/span&gt;Sep&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;02&lt;/span&gt;:48:01&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2022&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;+0000
 
-    Initial commit
+&lt;span class="w"&gt;    &lt;/span&gt;Initial&lt;span class="w"&gt; &lt;/span&gt;commit
 
-commit ce65e35e465dd5052c0c5f5a84e6ff35a856488d
-Author: Your Name &amp;lt;you@example.com&amp;gt;
-Date:   Fri Sep &lt;span class="m"&gt;16&lt;/span&gt; &lt;span class="m"&gt;02&lt;/span&gt;:49:54 &lt;span class="m"&gt;2022&lt;/span&gt; +0000
+commit&lt;span class="w"&gt; &lt;/span&gt;ce65e35e465dd5052c0c5f5a84e6ff35a856488d
+Author:&lt;span class="w"&gt; &lt;/span&gt;Your&lt;span class="w"&gt; &lt;/span&gt;Name&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;you@example.com&amp;gt;
+Date:&lt;span class="w"&gt;   &lt;/span&gt;Fri&lt;span class="w"&gt; &lt;/span&gt;Sep&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;02&lt;/span&gt;:49:54&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2022&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;+0000
 
-    File3
+&lt;span class="w"&gt;    &lt;/span&gt;File3
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;As we can see the commit history from &lt;code&gt;repo1&lt;/code&gt; is now copied to &lt;code&gt;repo2&lt;/code&gt; along with the files. &lt;/p&gt;
 &lt;h2 id="epilogue"&gt;Epilogue&lt;/h2&gt;
 &lt;p&gt;This is an easy fix when &lt;code&gt;repo1&lt;/code&gt; is small and there is less likely to be a merge conflict between &lt;code&gt;repo1&lt;/code&gt; and &lt;code&gt;repo2&lt;/code&gt;. 
-For more complex, you can add additional commits to move the files around.&lt;/p&gt;</content><category term="posts"></category><category term="git"></category></entry><entry><title>Wordle One Shot Solution (Hack)</title><link href="https://shubhanshu.com/blog/wordle-hack.html" rel="alternate"></link><published>2022-01-13T10:20:00-06:00</published><updated>2023-01-24T21:14:37-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2022-01-13:/blog/wordle-hack.html</id><summary type="html">&lt;p&gt;Wordle One Shot Solution (Hack)&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Wordle Hack GIF" src="https://shubhanshu.com/blog/assets/wordle-hack.gif"&gt;&lt;/p&gt;
+For more complex, you can add additional commits to move the files around.&lt;/p&gt;</content><category term="posts"></category><category term="git"></category></entry><entry><title>Wordle One Shot Solution (Hack)</title><link href="https://shubhanshu.com/blog/wordle-hack.html" rel="alternate"></link><published>2022-01-13T10:20:00-06:00</published><updated>2023-02-27T20:47:04-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2022-01-13:/blog/wordle-hack.html</id><summary type="html">&lt;p&gt;Wordle One Shot Solution (Hack)&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Wordle Hack GIF" src="https://shubhanshu.com/blog/assets/wordle-hack.gif"&gt;&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#finding-the-solution-on-the-page"&gt;Finding the solution on the page&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#automating-it-via-codebookmark-button"&gt;Automating it via code/bookmark button&lt;/a&gt;&lt;/li&gt;
@@ -245,7 +245,7 @@ For more complex, you can add additional commits to move the files around.&lt;/p
 &lt;p&gt;I am not doing anything fancy. It is just that the solution is always available on the page and I am reading it and firing the keypresses to get answer.    &lt;/p&gt;
 &lt;h2 id="how-to-use"&gt;How to use&lt;/h2&gt;
 &lt;p&gt;Make a bookmark with the following URL. When on the wordle page. Click the bookmark to get solution. &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;javascript&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;act&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;dispatchEvent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;KeyboardEvent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keydown&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;))}&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;done&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Enter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Enter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;charCode&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;13&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;keyCode&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;13&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;view&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;bubbles&lt;/span&gt;&lt;span class="o"&gt;:!&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="nx"&gt;solution&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;JSON&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;localStorage&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;nyt-wordle-state&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;&lt;span class="nx"&gt;solution&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nb"&gt;Array&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;solution&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;act&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;})),&lt;/span&gt;&lt;span class="nx"&gt;act&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;done&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;warn_message&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;This is a hack to get the wordle solution.\nWhen your press OK the solution will show. Read the message below in full.\nNOTE: Use it only when you are frustrated and just want to see the solution. It will ruin the fun of the game for you. \nI am not doing anything fancy. \nIt is just that the solution is always available on the page and I am reading it and firing the keypresses to get answer.\nYou can simply right click the page and open the console and type this JS. Be reminded that you should not copy JS from strangers on your pages, it can be used to steal your passwords or other sensitive information. You can read the full code used here and more details at: https://shubhanshu.com/blog/wordle-hack\nLearn about internet security from A PROJECT OF THE ELECTRONIC FRONTIER FOUNDATION: SURVEILLANCE SELF-DEFENSE: TIPS, TOOLS AND HOW-TOS FOR SAFER ONLINE COMMUNICATIONS course from https://ssd.eff.org/en\n&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nx"&gt;alert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;warn_message&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;javascript&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;act&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;dispatchEvent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;KeyboardEvent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;keydown&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;))}&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;done&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Enter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Enter&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;charCode&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;13&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;keyCode&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;13&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;view&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;bubbles&lt;/span&gt;&lt;span class="o"&gt;:!&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="nx"&gt;solution&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;JSON&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;localStorage&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;nyt-wordle-state&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;&lt;span class="nx"&gt;solution&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nb"&gt;Array&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;solution&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;act&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;})),&lt;/span&gt;&lt;span class="nx"&gt;act&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;done&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;warn_message&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;This is a hack to get the wordle solution.\nWhen your press OK the solution will show. Read the message below in full.\nNOTE: Use it only when you are frustrated and just want to see the solution. It will ruin the fun of the game for you. \nI am not doing anything fancy. \nIt is just that the solution is always available on the page and I am reading it and firing the keypresses to get answer.\nYou can simply right click the page and open the console and type this JS. Be reminded that you should not copy JS from strangers on your pages, it can be used to steal your passwords or other sensitive information. You can read the full code used here and more details at: https://shubhanshu.com/blog/wordle-hack\nLearn about internet security from A PROJECT OF THE ELECTRONIC FRONTIER FOUNDATION: SURVEILLANCE SELF-DEFENSE: TIPS, TOOLS AND HOW-TOS FOR SAFER ONLINE COMMUNICATIONS course from https://ssd.eff.org/en\n&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nx"&gt;alert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;warn_message&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div&gt;
@@ -284,17 +284,17 @@ For more complex, you can add additional commits to move the files around.&lt;/p
 &lt;span class="cm"&gt;/*&lt;/span&gt;
 &lt;span class="cm"&gt;Helper function to fire keypress.&lt;/span&gt;
 &lt;span class="cm"&gt;*/&lt;/span&gt;
-&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;act&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
-  &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;dispatchEvent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;KeyboardEvent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;keydown&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
-&lt;span class="p"&gt;};&lt;/span&gt; 
+&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;act&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;dispatchEvent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;KeyboardEvent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;keydown&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
 &lt;span class="cm"&gt;/* Keypress arguments to simulate Enter key press */&lt;/span&gt;
-&lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;done&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Enter&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Enter&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;charCode&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;13&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;keyCode&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;13&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;view&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;bubbles&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;done&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Enter&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Enter&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;charCode&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;13&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;keyCode&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;13&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;view&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;bubbles&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;
 &lt;span class="cm"&gt;/* Wordle Solution is always saved in localStorage so just retriving it from there. */&lt;/span&gt;
-&lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;solution&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;JSON&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;localStorage&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;nyt-wordle-state&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;&lt;span class="nx"&gt;solution&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;solution&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;JSON&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;localStorage&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;nyt-wordle-state&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;&lt;span class="nx"&gt;solution&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="cm"&gt;/* Fire keypress for each char in the solution and then press Enter. */&lt;/span&gt;
-&lt;span class="nb"&gt;Array&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;solution&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;act&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;}));&lt;/span&gt; &lt;span class="nx"&gt;act&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;done&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="nb"&gt;Array&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;solution&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;act&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;}));&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;act&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;done&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="cm"&gt;/* Display warning message on running JS from strangers on your page. Good way to educate masses on perils of copy pasting JS on secure pages (hopefully). */&lt;/span&gt;
-&lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;warn_message&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`This is a hack to get the wordle solution.&lt;/span&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;warn_message&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`This is a hack to get the wordle solution.&lt;/span&gt;
 &lt;span class="sb"&gt;When your press OK the solution will show. Read the message below in full.&lt;/span&gt;
 &lt;span class="sb"&gt;NOTE: Use it only when you are frustrated and just want to see the solution. It will ruin the fun of the game for you. &lt;/span&gt;
 &lt;span class="sb"&gt;I am not doing anything fancy. &lt;/span&gt;
@@ -303,7 +303,7 @@ For more complex, you can add additional commits to move the files around.&lt;/p
 &lt;span class="sb"&gt;Learn about internet security from A PROJECT OF THE ELECTRONIC FRONTIER FOUNDATION: SURVEILLANCE SELF-DEFENSE: TIPS, TOOLS AND HOW-TOS FOR SAFER ONLINE COMMUNICATIONS course from https://ssd.eff.org/en&lt;/span&gt;
 &lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="nx"&gt;alert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;warn_message&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="posts"></category><category term="hacks"></category><category term="web-technolgy"></category></entry><entry><title>Part 1 - Understanding extreme value theory - Basics</title><link href="https://shubhanshu.com/blog/evt-part-1-basics.html" rel="alternate"></link><published>2019-07-21T02:10:00-05:00</published><updated>2023-01-24T21:14:37-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2019-07-21:/blog/evt-part-1-basics.html</id><summary type="html">&lt;p&gt;Basics of Extreme Value Theory for modeling extreme values.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="posts"></category><category term="hacks"></category><category term="web-technolgy"></category></entry><entry><title>Part 1 - Understanding extreme value theory - Basics</title><link href="https://shubhanshu.com/blog/evt-part-1-basics.html" rel="alternate"></link><published>2019-07-21T02:10:00-05:00</published><updated>2023-02-27T20:47:04-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2019-07-21:/blog/evt-part-1-basics.html</id><summary type="html">&lt;p&gt;Basics of Extreme Value Theory for modeling extreme values.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -684,7 +684,7 @@ $$&lt;p&gt;Surprisingly, like the central limit theorem, these values also conve
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="machine learning"></category><category term="statistics"></category></entry><entry><title>Time dependent models</title><link href="https://shubhanshu.com/blog/time-dependent-models.html" rel="alternate"></link><published>2017-09-11T14:05:00-05:00</published><updated>2023-01-24T21:14:37-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-11:/blog/time-dependent-models.html</id><summary type="html">&lt;p&gt;Implementing time dependent models using sklearn.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+</content><category term="posts"></category><category term="machine learning"></category><category term="statistics"></category></entry><entry><title>Time dependent models</title><link href="https://shubhanshu.com/blog/time-dependent-models.html" rel="alternate"></link><published>2017-09-11T14:05:00-05:00</published><updated>2023-02-27T20:47:04-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-11:/blog/time-dependent-models.html</id><summary type="html">&lt;p&gt;Implementing time dependent models using sklearn.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="Time-Dependent-Classification/Regression"&gt;Time Dependent Classification/Regression&lt;a class="anchor-link" href="#Time-Dependent-Classification/Regression"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;I have been interested in time dependent classification/regression for a long time. Most machine learning models are implemented as static models where our assumptions about the relationships between the input variables and the parameters of the models is fixed. This assumption is mostly true, however, there are cases where the model parameters for the same input variable must be allowed to change with time. Furthermore, the change in the model parameters should not be large compared to their value at the previous timesteps. One simple way to approach this problem is to have a different model for each timestep, however, this will not allow us to learn from all the data at hand. The second approach is to have a different parameter for each timestep and a base set of parameters. This second approach although more appropriate will not allow us to enforce our constraint that the model parameters at a given timestep should not change too much from their value at the last timestep.&lt;/p&gt;
@@ -767,7 +767,7 @@ $$&lt;p&gt;Here $X$ in the input data such that at each timestep we get $X_t$ an
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;span class="n"&gt;timesteps&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;random_walk_values&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;timesteps&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;initial_values&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stepsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;Generate random walk weights for timesteps starting with initial_vals&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;Generate random walk weights for timesteps starting with initial_vals&lt;/span&gt;
 &lt;span class="sd"&gt;    &lt;/span&gt;
 &lt;span class="sd"&gt;    Args:&lt;/span&gt;
 &lt;span class="sd"&gt;        timesteps: number of timesteps of random walk&lt;/span&gt;
@@ -16350,7 +16350,7 @@ cgghhBCSlv4PgfNoADwBj8EAAAAASUVORK5CYII=
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="python"></category><category term="machine learning"></category></entry><entry><title>Pytorch RNN sequence tagging</title><link href="https://shubhanshu.com/blog/pytorch-rnn-sequence-tagging.html" rel="alternate"></link><published>2017-09-03T01:57:00-05:00</published><updated>2023-01-24T21:14:37-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-03:/blog/pytorch-rnn-sequence-tagging.html</id><summary type="html">&lt;p&gt;Introduction to writing RNN sequence tagging code using PyTorch.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+</content><category term="posts"></category><category term="python"></category><category term="machine learning"></category></entry><entry><title>Pytorch RNN sequence tagging</title><link href="https://shubhanshu.com/blog/pytorch-rnn-sequence-tagging.html" rel="alternate"></link><published>2017-09-03T01:57:00-05:00</published><updated>2023-02-27T20:47:04-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-03:/blog/pytorch-rnn-sequence-tagging.html</id><summary type="html">&lt;p&gt;Introduction to writing RNN sequence tagging code using PyTorch.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -16400,7 +16400,7 @@ $$&lt;/p&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Input2Hidden&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Module&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x_dim&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;concat_layers&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Input2Hidden module&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Input2Hidden module&lt;/span&gt;
 &lt;span class="sd"&gt;        &lt;/span&gt;
 &lt;span class="sd"&gt;        Args:&lt;/span&gt;
 &lt;span class="sd"&gt;            x_dim: input vector dimension&lt;/span&gt;
@@ -16425,7 +16425,7 @@ $$&lt;/p&gt;
     
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Hidden2Output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Module&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x_dim&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;out_dim&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;concat_layers&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Hidden2Output module&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Hidden2Output module&lt;/span&gt;
 &lt;span class="sd"&gt;        &lt;/span&gt;
 &lt;span class="sd"&gt;        Args:&lt;/span&gt;
 &lt;span class="sd"&gt;            x_dim: input vector dimension&lt;/span&gt;
@@ -16792,7 +16792,7 @@ $$
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;create_dataset&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;max_len&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Create a dataset of max_len bits and their flipped values&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Create a dataset of max_len bits and their flipped values&lt;/span&gt;
 &lt;span class="sd"&gt;    &lt;/span&gt;
 &lt;span class="sd"&gt;    Args:&lt;/span&gt;
 &lt;span class="sd"&gt;        max_len: Maximum number of bits in the number&lt;/span&gt;
@@ -16991,7 +16991,7 @@ Wall time: 22.6 s
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;create_dataset&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;max_len&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;K&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Create a dataset of max_len bits and their flipped values&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Create a dataset of max_len bits and their flipped values&lt;/span&gt;
 &lt;span class="sd"&gt;    &lt;/span&gt;
 &lt;span class="sd"&gt;    Args:&lt;/span&gt;
 &lt;span class="sd"&gt;        max_len: Maximum number of bits in the number&lt;/span&gt;
@@ -18416,7 +18416,7 @@ Wall time: 58.7 s
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="python"></category><category term="machine learning"></category><category term="deeplearning"></category></entry><entry><title>Metropolis Hastings algorithm - a python primer</title><link href="https://shubhanshu.com/blog/metropolis-hastings-primer.html" rel="alternate"></link><published>2017-04-18T02:19:00-05:00</published><updated>2023-01-24T21:14:37-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-04-18:/blog/metropolis-hastings-primer.html</id><summary type="html">&lt;p&gt;A pure numpy and python based primer to implementing and visualizing Metropolis Hastings algorithm for MCMC sampling.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+</content><category term="posts"></category><category term="python"></category><category term="machine learning"></category><category term="deeplearning"></category></entry><entry><title>Metropolis Hastings algorithm - a python primer</title><link href="https://shubhanshu.com/blog/metropolis-hastings-primer.html" rel="alternate"></link><published>2017-04-18T02:19:00-05:00</published><updated>2023-02-27T20:47:04-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-04-18:/blog/metropolis-hastings-primer.html</id><summary type="html">&lt;p&gt;A pure numpy and python based primer to implementing and visualizing Metropolis Hastings algorithm for MCMC sampling.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -23238,7 +23238,7 @@ h6BbAAAAAElFTkSuQmCC
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="machine learning"></category><category term="implementation"></category><category term="bayesian"></category></entry><entry><title>Convex Optimization using CVXPY</title><link href="https://shubhanshu.com/blog/convex-optimization-cvxpy.html" rel="alternate"></link><published>2017-01-02T10:30:00-06:00</published><updated>2023-01-24T21:14:37-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-01-02:/blog/convex-optimization-cvxpy.html</id><summary type="html">&lt;p&gt;Trying out CVXPY after listening to Stephen P. Boyd's lectures from Machine Learning Summer School, Tubingen and Kyoto, 2015 - &lt;a href="http://web.stanford.edu/~boyd/papers/cvx_short_course.html"&gt;http://web.stanford.edu/~boyd/papers/cvx_short_course.html&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+</content><category term="posts"></category><category term="machine learning"></category><category term="implementation"></category><category term="bayesian"></category></entry><entry><title>Convex Optimization using CVXPY</title><link href="https://shubhanshu.com/blog/convex-optimization-cvxpy.html" rel="alternate"></link><published>2017-01-02T10:30:00-06:00</published><updated>2023-02-27T20:47:04-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-01-02:/blog/convex-optimization-cvxpy.html</id><summary type="html">&lt;p&gt;Trying out CVXPY after listening to Stephen P. Boyd's lectures from Machine Learning Summer School, Tubingen and Kyoto, 2015 - &lt;a href="http://web.stanford.edu/~boyd/papers/cvx_short_course.html"&gt;http://web.stanford.edu/~boyd/papers/cvx_short_course.html&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;$\DeclareMathOperator*{\argmin}{arg\,min}$&lt;/p&gt;
@@ -26181,7 +26181,7 @@ QmCC
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="machine learning"></category></entry><entry><title>Getting started with pelican</title><link href="https://shubhanshu.com/blog/getting-started-pelican.html" rel="alternate"></link><published>2016-11-08T10:30:00-06:00</published><updated>2023-01-24T21:14:37-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-11-08:/blog/getting-started-pelican.html</id><summary type="html">&lt;p&gt;Using pelican, jupyter notebook to start a blog.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+</content><category term="posts"></category><category term="machine learning"></category></entry><entry><title>Getting started with pelican</title><link href="https://shubhanshu.com/blog/getting-started-pelican.html" rel="alternate"></link><published>2016-11-08T10:30:00-06:00</published><updated>2023-02-27T20:47:04-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-11-08:/blog/getting-started-pelican.html</id><summary type="html">&lt;p&gt;Using pelican, jupyter notebook to start a blog.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="First-plot-using-pelican"&gt;First plot using pelican&lt;a class="anchor-link" href="#First-plot-using-pelican"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;I am trying this new format for blogging using jupyter notebooks and pelican library. The motivation is to easily share my experiments using notebooks and write accompanying thoughts.&lt;/p&gt;
@@ -27627,12 +27627,12 @@ QmCC
 &lt;p&gt;[2] Tang, Jian, et al. "Line: Large-scale information network embedding." Proceedings of the 24th International Conference on World Wide Web. International World Wide Web Conferences Steering Committee, 2015.&lt;/p&gt;
 &lt;p&gt;[3] Mikolov, Tomas, et al. "Distributed representations of words and phrases and their compositionality." Advances in neural information processing systems. 2013.&lt;/p&gt;
 &lt;p&gt;[4] Kiros, Ryan, et al. "Skip-thought vectors." Advances in Neural Information Processing Systems. 2015.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;@misc&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="mf"&gt;1603.08861&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Author&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="n"&gt;Zhilin&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Yang&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;William&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Cohen&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Ruslan&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Salakhutdinov&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="n"&gt;Revisiting&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Semi&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Supervised&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Learning&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Graph&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Embeddings&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="nf"&gt;Year&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;2016&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Eprint&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="nl"&gt;arXiv&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;1603.08861&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;@misc&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="mf"&gt;1603.08861&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="n"&gt;Author&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="n"&gt;Zhilin&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Yang&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;William&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Cohen&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Ruslan&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Salakhutdinov&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="n"&gt;Revisiting&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Semi&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Supervised&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Learning&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Graph&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Embeddings&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="nf"&gt;Year&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;2016&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="n"&gt;Eprint&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="nl"&gt;arXiv&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;1603.08861&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="posts"></category><category term="deeplearning"></category><category term="reviews"></category></entry><entry><title>Ask Me Anything - Dynamic Memory Networks for Natural Language Processing</title><link href="https://shubhanshu.com/blog/ama-socher.html" rel="alternate"></link><published>2016-03-09T10:20:00-06:00</published><updated>2016-03-09T10:20:00-06:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-03-09:/blog/ama-socher.html</id><summary type="html">&lt;p&gt;End to end module to learn NLP tasks as Q/A tasks.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Authors: Ankit Kumar, Ozan Irsoy, Peter Ondruska, Mohit Iyyer, James Bradbury, Ishaan Gulrajani, Victor Zhong, Romain Paulus, Richard Socher&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
 &lt;p&gt;This paper presents a general purpose neural network framework called Dynamic Memory Networks (DMN), for solving NLP tasks such as question answering (QnA), text classification for sentiment analysis, and Part-of-Speech (POS) tagging. The authors achieve this by converting each task into its equivalent QnA form e.g. "What is the sentiment?", "POS tags?" etc. They report state of the art accuracy on all the tasks.&lt;/p&gt;
@@ -27649,23 +27649,23 @@ QmCC
 &lt;p&gt;For the multi-sentence input, I would be interested in knowing how the DMN performns if there is an output from the Input module per token for each sentence. I think this will give the module more fine-grained control over the details in each sentence, especially, when it involved path finding and positonal arguments.&lt;/p&gt;
 &lt;p&gt;Overall, I think this paper is another important step in the direction of end-to-end NLP, and supports the the prediction of Christopher Manning of "Deep Learning Tsunami in NLP". Given the previous seminal work in the MemNN paper as well as the NLP from Scratch paper, this work also will get more researchers involved in using end to end sequence to sequence learning approaches in NLP tasks.&lt;/p&gt;
 &lt;h3 id="reference"&gt;Reference&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;@article&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="nl"&gt;DBLP&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;journals&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;corr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;KumarISBEPOGS15&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;author&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="n"&gt;Ankit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Kumar&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Ozan&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Irsoy&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Jonathan&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Su&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;James&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Bradbury&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Robert&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;English&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Brian&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Pierce&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Peter&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Ondruska&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Ishaan&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Gulrajani&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Richard&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Socher&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="n"&gt;Ask&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Me&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;Anything&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Dynamic&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Memory&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Networks&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Natural&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Language&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Processing&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;journal&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="k"&gt;CoRR&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;volume&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="nf"&gt;abs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;1506.07285&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="nf"&gt;year&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;2015&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;arxiv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nf"&gt;abs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;1506.07285&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="nc"&gt;timestamp&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="n"&gt;Wed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Jul&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2015&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;0200&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;biburl&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;dblp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;uni&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;trier&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;de&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;rec&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;journals&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;corr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;KumarISBEPOGS15&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;bibsource&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="n"&gt;dblp&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;computer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;science&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bibliography&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;dblp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;org&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;@article&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="nl"&gt;DBLP&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;journals&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;corr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;KumarISBEPOGS15&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="n"&gt;author&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="n"&gt;Ankit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Kumar&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;
+&lt;span class="n"&gt;Ozan&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Irsoy&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;
+&lt;span class="n"&gt;Jonathan&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Su&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;
+&lt;span class="n"&gt;James&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Bradbury&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;
+&lt;span class="n"&gt;Robert&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;English&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;
+&lt;span class="n"&gt;Brian&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Pierce&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;
+&lt;span class="n"&gt;Peter&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Ondruska&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;
+&lt;span class="n"&gt;Ishaan&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Gulrajani&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;
+&lt;span class="n"&gt;Richard&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Socher&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="n"&gt;Ask&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Me&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;Anything&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Dynamic&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Memory&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Networks&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Natural&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Language&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Processing&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="n"&gt;journal&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="k"&gt;CoRR&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="n"&gt;volume&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="nf"&gt;abs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;1506.07285&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="nf"&gt;year&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;2015&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;arxiv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nf"&gt;abs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;1506.07285&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="nc"&gt;timestamp&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="n"&gt;Wed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Jul&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2015&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;0200&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="n"&gt;biburl&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;dblp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;uni&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;trier&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;de&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;rec&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;journals&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;corr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;KumarISBEPOGS15&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="n"&gt;bibsource&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="n"&gt;dblp&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;computer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;science&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bibliography&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;dblp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;org&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="posts"></category><category term="deeplearning"></category><category term="reviews"></category></entry></feed>
