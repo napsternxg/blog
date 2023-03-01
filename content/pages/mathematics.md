@@ -84,6 +84,7 @@ Summary: Links related to mathematics
 * [Stochastic Calculus, Filtering, and Stochastic Control](https://web.math.princeton.edu/~rvan/acm217/ACM217.pdf)
 * [Stochastic Calculus: An Introduction with Applications](http://www.math.uchicago.edu/~lawler/finbook.pdf)
 * [Financial Calculus: An Introduction to derivative pricing](https://cms.dm.uba.ar/academico/materias/2docuat2016/analisis_cuantitativo_en_finanzas/Baxter_Rennie_Financial_Calculus.pdf)
+* [Multi-Period Trading via Convex Optimization](https://web.stanford.edu/~boyd/papers/pdf/cvx_portfolio.pdf)
 
 
 # Mathematics for Social Justice
