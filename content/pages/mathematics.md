@@ -80,6 +80,10 @@ Summary: Links related to mathematics
 # Complex Systems
 
 * [Nonlinear Dynamics 1: Geometry of Chaos](https://chaosbook.org/course1/index.html)
+* [Stochastic Calculus, Lent 2016](https://www.statslab.cam.ac.uk/~jpm205/teaching/lent2016/index.html)
+* [Stochastic Calculus, Filtering, and Stochastic Control](https://web.math.princeton.edu/~rvan/acm217/ACM217.pdf)
+* [Stochastic Calculus: An Introduction with Applications](http://www.math.uchicago.edu/~lawler/finbook.pdf)
+* [Financial Calculus: An Introduction to derivative pricing](https://cms.dm.uba.ar/academico/materias/2docuat2016/analisis_cuantitativo_en_finanzas/Baxter_Rennie_Financial_Calculus.pdf)
 
 
 # Mathematics for Social Justice
