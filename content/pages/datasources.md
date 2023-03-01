@@ -149,6 +149,10 @@ Summary: Links related to many datasets
 * Russian names with gender - https://github.com/words/russian-given-names
 * Family History Resources from Forebears.io - https://forebears.io/resources
 * Name-Based Gender Classification (36 distinct sources—spanning over 150 countries and more than a century) - https://osf.io/tz38q/ - https://github.com/ianvanbuskirk/nbgc - [Software](https://github.com/ianvanbuskirk/nomquamgender)
+* EthniColr: Predict Race and Ethnicity Based on the Sequence of Characters in a Name - https://github.com/appeler/ethnicolr/tree/master/ethnicolr/data
+* World Gender Name Dictionary - https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/MSEGSJ
+* Genni + Ethnea for the Author-ity 2009 dataset - https://databank.illinois.edu/datasets/IDB-9087546
+* demographicx: A Python package for estimating gender and ethnicity using deep learning transformers - https://github.com/sciosci/demographicx
 
 ## Images
 
