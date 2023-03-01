@@ -153,6 +153,7 @@ Summary: Links related to many datasets
 * World Gender Name Dictionary - https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/MSEGSJ
 * Genni + Ethnea for the Author-ity 2009 dataset - https://databank.illinois.edu/datasets/IDB-9087546
 * demographicx: A Python package for estimating gender and ethnicity using deep learning transformers - https://github.com/sciosci/demographicx
+* List of first names, genders and country-specific frequencies - https://github.com/MatthiasWinkelmann/firstname-database
 
 ## Images
 
