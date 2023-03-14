@@ -154,6 +154,7 @@ Summary: Links related to many datasets
 * Genni + Ethnea for the Author-ity 2009 dataset - https://databank.illinois.edu/datasets/IDB-9087546
 * demographicx: A Python package for estimating gender and ethnicity using deep learning transformers - https://github.com/sciosci/demographicx
 * List of first names, genders and country-specific frequencies - https://github.com/MatthiasWinkelmann/firstname-database
+* Validated Names for Experimental Studies on Race and Ethnicity - https://github.com/jaeyk/validated_names/tree/main
 
 ## Images
 
