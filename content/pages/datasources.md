@@ -213,3 +213,23 @@ Summary: Links related to many datasets
 
 ### NFL
 * [Commentary of NFL matches across the years](https://github.com/jmerullo/football)
+
+
+## Food
+-   [Portal:Food - Wikipedia](https://en.wikipedia.org/wiki/Portal:Food) 
+-   [Cookbook:Chiles - Wikibooks, open books for an open world](https://en.wikibooks.org/wiki/Cookbook:Chiles) 
+-   [Category:Ingredients - Wikibooks, open books for an open world](https://en.wikibooks.org/wiki/Category:Ingredients) 
+-   [Category:Recipes - Wikibooks, open books for an open world](https://en.wikibooks.org/wiki/Category:Recipes) 
+-   [Recipe - Schema.org Type](https://schema.org/Recipe) 
+-   [GitHub - cosylabiiit/recipe-knowledge-mining](https://github.com/cosylabiiit/recipe-knowledge-mining) - NER for recipe - [[2004.12184] A Named Entity Based Approach to Model Recipes](https://arxiv.org/abs/2004.12184)
+-   [RecipeDB: a resource for exploring recipes](https://pubmed.ncbi.nlm.nih.gov/33238002/)
+-   [cosylabiiit/Recipedb-companion-data](https://github.com/cosylabiiit/Recipedb-companion-data)
+-   [GitHub - cosylabiiit/recipe-knowledge-mining](https://github.com/cosylabiiit/recipe-knowledge-mining) 
+-   [Training Recipe Ingredient NER with Transformers](https://skeptric.com/recipe-ner-transformers/)     
+-   <https://tasty.co/> 
+-   [Recipes from Tasty | Kaggle](https://www.kaggle.com/datasets/zeeenb/recipes-from-tasty) 
+-   [RecipeNLG: A Cooking Recipes Dataset for Semi-Structured Text Generation - ACL Anthology](https://aclanthology.org/2020.inlg-1.4/)
+-   [recipe_nlg - Datasets at Hugging Face](https://huggingface.co/datasets/recipe_nlg)
+-   [SHARE: a System for Hierarchical Assistive Recipe Editing](https://aclanthology.org/2022.emnlp-main.761/)
+-   [lishuyang/recipepairs - Datasets at Hugging Face](https://huggingface.co/datasets/lishuyang/recipepairs)
+-   Open Recipes: <https://huggingface.co/datasets/napsternxg/openrecipes-20170107-061401-recipeitems>
