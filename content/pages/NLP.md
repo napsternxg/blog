@@ -646,6 +646,8 @@ Summary: Links related to NLP resources
 * Hinglish-TOP Dataset (Semantic Parsing) - https://github.com/google-research-datasets/Hinglish-TOP-Dataset
 * CoNLL++ (CoNLL 03 EN NER Fixed dataset) - https://github.com/ZihanWangKi/CrossWeigh
 * CANARD: a dataset for question-in-context rewriting - https://sites.google.com/view/qanta/projects/canard
+* WikiWiki - a large scale entity typing dataset - https://github.com/amazon-science/wikiwiki-dataset
+* Expedia Group ECML/PKDD 2022 challenge - Zero-shot Cross-brand Lodging Recommendation- https://github.com/ExpediaGroup/pkdd22-challenge-expediagroup
 
 ## Shared tasks, competitions
 
