@@ -15,6 +15,14 @@ Summary: Links related to many datasets
 ## Web Data
 * Web tables from common crawl data - http://webdatacommons.org/webtables/
 * Domain names - https://dnscensus2013.neocities.org/index.html
+* WDC Products: A Multi-Dimensional Entity Matching Benchmark - https://webdatacommons.org/largescaleproductcorpus/wdc-products/ - [Paper](https://arxiv.org/abs/2301.09521)
+* WDC Product Data Corpus - V.2020 - https://webdatacommons.org/largescaleproductcorpus/v2020/index.html
+
+## Entity Matching datasets
+* Entity Resolution via Hierarchical Graph Attention Network - https://github.com/CGCL-codes/HierGAT/tree/main
+* Magellan - https://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md
+* WDC - http://webdatacommons.org/largescaleproductcorpus/v2/index.html
+* DI2KG - http://di2kg.inf.uniroma3.it/datasets.html
 
 
 ## Location data
