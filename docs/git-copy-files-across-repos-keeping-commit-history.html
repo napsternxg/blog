@@ -34,7 +34,7 @@
 <meta property="og:url" content="https://shubhanshu.com/blog/git-copy-files-across-repos-keeping-commit-history.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2022-09-15 10:20:00-05:00"/>
-<meta property="article:modified_time" content="2023-04-03 01:42:36.163783-05:00"/>
+<meta property="article:modified_time" content="2023-04-16 16:54:55.563327-05:00"/>
 <meta property="article:author" content="https://shubhanshu.com/blog/author/shubhanshu-mishra.html">
 <meta property="article:section" content="posts"/>
 <meta property="article:tag" content="git"/>
@@ -222,12 +222,12 @@ total<span class="w"> </span><span class="m">2</span>.0K
 </code></pre></div>
 
 <p>These are the contents of <code>./0001-Initial-commit.patch</code></p>
-<div class="highlight"><pre><span></span><code><span class="w">From 6d58af8d140c86de700dd9206cb2c7512c39a74c Mon Sep 17 00:00:00 2001</span>
-<span class="w">From: Your Name &lt;you@example.com&gt;</span>
-<span class="w">Date: Fri, 16 Sep 2022 02:48:01 +0000</span>
-<span class="w">Subject: [PATCH 1/2] Initial commit</span>
+<div class="highlight"><pre><span></span><code>From 6d58af8d140c86de700dd9206cb2c7512c39a74c Mon Sep 17 00:00:00 2001
+From: Your Name &lt;you@example.com&gt;
+Date: Fri, 16 Sep 2022 02:48:01 +0000
+Subject: [PATCH 1/2] Initial commit
 
-<span class="gd">---</span>
+<span class="gs">---</span>
 <span class="w"> </span>file1 | 1 +
 <span class="w"> </span>file2 | 1 +
 <span class="w"> </span>2 files changed, 2 insertions(+)
@@ -235,30 +235,30 @@ total<span class="w"> </span><span class="m">2</span>.0K
 <span class="w"> </span>create mode 100644 file2
 
 <span class="gh">diff --git a/file1 b/file1</span>
-<span class="w">new file mode 100644</span>
+new file mode 100644
 <span class="gh">index 0000000..557db03</span>
 <span class="gd">--- /dev/null</span>
 <span class="gi">+++ b/file1</span>
 <span class="gu">@@ -0,0 +1 @@</span>
 <span class="gi">+Hello World</span>
 <span class="gh">diff --git a/file2 b/file2</span>
-<span class="w">new file mode 100644</span>
+new file mode 100644
 <span class="gh">index 0000000..c3aaa9d</span>
 <span class="gd">--- /dev/null</span>
 <span class="gi">+++ b/file2</span>
 <span class="gu">@@ -0,0 +1 @@</span>
 <span class="gi">+Hello World again</span>
 <span class="gd">-- </span>
-<span class="w">2.25.1</span>
+2.25.1
 </code></pre></div>
 
 <p>These are the contents of <code>./0002-Second-commit.patch</code></p>
-<div class="highlight"><pre><span></span><code><span class="w">From 3f3c874e3487d999c581cf2d2b75f49de2ab5784 Mon Sep 17 00:00:00 2001</span>
-<span class="w">From: Your Name &lt;you@example.com&gt;</span>
-<span class="w">Date: Fri, 16 Sep 2022 02:48:49 +0000</span>
-<span class="w">Subject: [PATCH 2/2] Second commit</span>
+<div class="highlight"><pre><span></span><code>From 3f3c874e3487d999c581cf2d2b75f49de2ab5784 Mon Sep 17 00:00:00 2001
+From: Your Name &lt;you@example.com&gt;
+Date: Fri, 16 Sep 2022 02:48:49 +0000
+Subject: [PATCH 2/2] Second commit
 
-<span class="gd">---</span>
+<span class="gs">---</span>
 <span class="w"> </span>file1 | 1 +
 <span class="w"> </span>1 file changed, 1 insertion(+)
 
@@ -270,7 +270,7 @@ total<span class="w"> </span><span class="m">2</span>.0K
 <span class="w"> </span>Hello World
 <span class="gi">+New lines galore</span>
 <span class="gd">-- </span>
-<span class="w">2.25.1</span>
+2.25.1
 </code></pre></div>
 
 <h3 id="applying-patches-as-commits-in-new-repo">Applying patches as commits in new repo</h3>
