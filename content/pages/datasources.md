@@ -179,6 +179,9 @@ Summary: Links related to many datasets
 * OCR Datasets: https://cneud.github.io/ocr-gt/
 * LVIS: A DATASET FOR LARGE VOCABULARY INSTANCE SEGMENTATION: A new dataset for long tail object recognition. - https://www.lvisdataset.org/
 * YFCC100M 99M Image, Caption data - http://mmcommons.org/
+* LILA BC: Labeled Information Library of Alexandria: Biology and Conservation - https://lila.science/datasets
+* Ecoset – an ecologically more valid large-scale image dataset - https://www.kietzmannlab.org/ecoset/
+* Natural Scenes Dataset (NSD) is a large-scale fMRI dataset conducted at ultra-high-field - https://naturalscenesdataset.org/
 
 ## Stream processing data
 * Data from The Neural Hawkes Process - https://github.com/HMEIatJHU/neurawkes - [Google drive link](https://drive.google.com/drive/folders/0BwqmV0EcoUc8UklIR1BKV25YR1U?usp=sharing)
