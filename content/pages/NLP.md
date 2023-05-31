@@ -649,6 +649,7 @@ Summary: Links related to NLP resources
 * WikiWiki - a large scale entity typing dataset - https://github.com/amazon-science/wikiwiki-dataset
 * Expedia Group ECML/PKDD 2022 challenge - Zero-shot Cross-brand Lodging Recommendation- https://github.com/ExpediaGroup/pkdd22-challenge-expediagroup
 * MACCROBAT: NER dataset for 41 biomedical entities using PubMed abstracts - https://figshare.com/articles/dataset/MACCROBAT2018/9764942
+* NusaX: Multilingual Parallel Sentiment Dataset for 10 Indonesian Local Languages - https://github.com/IndoNLP/nusax/
 
 ## Shared tasks, competitions
 
