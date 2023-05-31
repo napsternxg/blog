@@ -40,3 +40,4 @@ Status: draft
 
 * [J2. Unitary Groups](https://www.youtube.com/watch?v=yeK2N7FbkVI) - Helped me understand unitary matrices and their basis. One thing which pops out is invest of matrix is similar to if each vector was rotated 90 degrees clockwise and the order of the vectors was swapped. Need to explore this in details. 
 * [Complex eigen values of a matrix](https://www.youtube.com/watch?v=9bPwL30PBwM) - Provides a good connection between the scaling and rotation matrix and how it is captured by eigen values which are complex. 
+* [Motivation behind Definition of Inner Product Space](https://math.stackexchange.com/questions/2488135/motivation-behind-definition-of-inner-product-space) - Provides how Inner product is related to complex and geometric numbers
