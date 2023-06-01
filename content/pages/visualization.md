@@ -58,6 +58,8 @@ Summary: Links related to visualizations
 * https://github.com/penrose/penrose - Penrose - Create beautiful diagrams just by typing mathematical notation in plain text.
 * https://github.com/marceloprates/prettymaps - Pretty maps using OSM and matplotlib
 * https://github.com/deeptools/pyGenomeTracks - plot beautiful and highly customizable genome browser tracks
+* https://visit-dav.github.io/visit-website/ - VisIt is a free, open source, platform independent, distributed, parallel, visualization tool for visualizing data defined on two- and three-dimensional structured and unstructured meshes. 
+* https://www.paraview.org/ - ParaView is the world’s leading open source post-processing visualization engine.
 
 ## Diagrams
 
