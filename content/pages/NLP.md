@@ -650,6 +650,9 @@ Summary: Links related to NLP resources
 * Expedia Group ECML/PKDD 2022 challenge - Zero-shot Cross-brand Lodging Recommendation- https://github.com/ExpediaGroup/pkdd22-challenge-expediagroup
 * MACCROBAT: NER dataset for 41 biomedical entities using PubMed abstracts - https://figshare.com/articles/dataset/MACCROBAT2018/9764942
 * NusaX: Multilingual Parallel Sentiment Dataset for 10 Indonesian Local Languages - https://github.com/IndoNLP/nusax/
+* MAVE: : A Product Dataset for Multi-source Attribute Value Extraction - https://github.com/google-research-datasets/MAVE
+* KOBE v2: Towards Knowledge-Based Personalized Product Description Generation in E-commerce - https://github.com/THUDM/KOBE
+* 🪐 spaCy Project: Analyzing how mentions of ingredients change over time (Named Entity Recognition) - https://github.com/explosion/projects/tree/v3/tutorials/ner_food_ingredients
 
 ## Shared tasks, competitions
 
