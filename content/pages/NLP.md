@@ -40,6 +40,7 @@ Summary: Links related to NLP resources
 * Multilingual Natural Language Processing - http://demo.clab.cs.cmu.edu/11737fa20/
 * CSE 704 - Applied Natural Language Processing and Computational Social Science - https://kennyjoseph.github.io/cse702
 * [Information Retrieval: Implementing and Evaluating Search Engines By Stefan Büttcher, Charles L. A. Clarke and Gordon V. Cormack](https://mitmecsept.files.wordpress.com/2018/05/stefan-bc3bcttcher-charles-l-a-clarke-gordon-v-cormack-information-retrieval-implementing-and-evaluating-search-engines-2010-mit.pdf)
+* [Search Result Diversification](https://www.dcs.gla.ac.uk/~craigm/publications/santos2015ftir.pdf)
 
 
 ## Scientific NLP 
