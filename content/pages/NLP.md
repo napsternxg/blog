@@ -97,6 +97,7 @@ Summary: Links related to NLP resources
 * FastText embeddings - https://fasttext.cc/
 
 ## Links
+* The Definition of Sekine’s Extended Named Entities - https://nlp.cs.nyu.edu/ene/version7_1_0Beng.html
 * Bayesian NLP: https://homepages.inf.ed.ac.uk/sgwater/resources.html
 * Rules for forming questions using text: https://ell.stackexchange.com/questions/1156/when-converting-a-statement-to-a-question-where-in-the-sentence-should-i-put-t/1198#1198
 * Intel NLP library lots of great features using Tensorflow: http://nlp_architect.nervanasys.com/publications.html
