@@ -256,3 +256,4 @@ Summary: Links related to many datasets
 -   [CulinaryDB - Data Analytics for World Cuisines](https://cosylab.iiitd.edu.in/culinarydb/)
 -   [FoodData Central](https://fdc.nal.usda.gov/download-datasets.html) - [Datasheet](https://fdc.nal.usda.gov/portal-data/external/dataDictionary)
 -   [Food and Nutrient Database for Dietary Studies - Food ingredients](https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/food-surveys-research-group/docs/fndds-download-databases/)
+-   [LexMapr - A Lexicon and Rule-Based Tool for Translating Short Biomedical Specimen Descriptions into Semantic Web Ontology Terms](https://github.com/cidgoh/LexMapr)
