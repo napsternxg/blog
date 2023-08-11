@@ -249,3 +249,7 @@ Summary: Links related to many datasets
 -   [Wikipedia Commons - Category:Food_and_drink](https://commons.wikimedia.org/wiki/Category:Food_and_drink)
 -   [Wikipedia Commons - Category:Beverages](https://commons.wikimedia.org/wiki/Category:Beverages)   
 -   [Wikipedia Commons - Category:Food](https://commons.wikimedia.org/wiki/Category:Food)
+-   [🪐 spaCy Project: Analyzing how mentions of ingredients change over time (Named Entity Recognition)](https://github.com/explosion/projects/tree/v3/tutorials/ner_food_ingredients)
+-   [TASTESet recipe NER model and dataset](https://github.com/taisti/TASTEset/) - [TasteSet 2.0 - 1K annotated](https://github.com/taisti/TASTEset-2.0/)
+-   [FINER: Food Ingredient NER Dataset](https://figshare.com/articles/dataset/Food_Ingredient_Named-Entity_Data_Construction_using_Semi-supervised_Multi-model_Prediction_Technique/20222361/3) - [Paper: SMPT: A Semi-Supervised Multi-Model Prediction Technique for Food Ingredient Named Entity Recognition (FINER) Dataset Construction](https://www.mdpi.com/2227-9709/10/1/10)
+-   [NYTimes - CRF Ingredient Phrase Tagger](https://github.com/NYTimes/ingredient-phrase-tagger)
