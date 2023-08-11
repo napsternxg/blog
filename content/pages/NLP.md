@@ -656,6 +656,7 @@ Summary: Links related to NLP resources
 * MAVE: : A Product Dataset for Multi-source Attribute Value Extraction - https://github.com/google-research-datasets/MAVE
 * KOBE v2: Towards Knowledge-Based Personalized Product Description Generation in E-commerce - https://github.com/THUDM/KOBE
 * 🪐 spaCy Project: Analyzing how mentions of ingredients change over time (Named Entity Recognition) - https://github.com/explosion/projects/tree/v3/tutorials/ner_food_ingredients
+* TASTESet recipe NER model and dataset - https://github.com/taisti/TASTEset/
 
 ## Shared tasks, competitions
 
