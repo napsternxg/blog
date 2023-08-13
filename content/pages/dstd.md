@@ -6,4 +6,4 @@ Authors: Shubhanshu Mishra
 Summary: Digital Social Trace Data
 
 ## Links
-* Fundamental Structures in Dynamic Communication Networks - https://arxiv.org/abs/1907.09966
+* [Fundamental Structures in Dynamic Communication Networks](https://arxiv.org/abs/1907.09966) 

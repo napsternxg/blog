@@ -7,41 +7,41 @@ Summary: Machine Learning concepts and traditional resources
 
 ## Tools
 
-* Scikit-multilearn - http://scikit.ml/index.html
-* scikit-multiflow: for multi-output/multi-label and stream data.- https://scikit-multiflow.github.io/
-* scikit-plot: plot models analysis - https://github.com/reiinakano/scikit-plot
-* yellowbrick various model visualizations - https://www.scikit-yb.org/en/latest/
-* Scikit-lego: interesting prebuild pipelines and transformers for sklearn - https://scikit-lego.readthedocs.io/en/latest/
-* List of various scikits - http://scikits.appspot.com/scikits
-* Information Theoretical Estimators (ITE) in Python - https://bitbucket.org/szzoli/ite-in-python/src/master/ [Paper](https://arxiv.org/abs/1405.2106)
-* HYPERBOLIC DEEP LEARNING - A nascent and promising field - http://hyperbolicdeeplearning.com/
-* Optimial Transport - https://pythonot.github.io/quickstart.html
-* EMLP: Equivariant Representations layers - https://emlp.readthedocs.io/en/latest/index.html
-* BOLT: 10x faster matrix and vector operations - https://github.com/dblalock/bolt
-* Macarico: learning to search - https://github.com/hal3/macarico
-* A Collection of Conference & School Notes in Machine Learning - https://github.com/visual-ml-notes/visual-machine-learning-notes
-* Python Toolkit of Statistics for Pairwise Interactions (pyspi) - https://github.com/olivercliff/pyspi
-* pulearn: Positive-unlabeled learning with Python - https://pulearn.github.io/pulearn/
+* [Scikit-multilearn](http://scikit.ml/index.html) 
+* [scikit-multiflow: for multi-output/multi-label and stream data](https://scikit-multiflow.github.io/) 
+* [scikit-plot: plot models analysis](https://github.com/reiinakano/scikit-plot) 
+* [yellowbrick various model visualizations](https://www.scikit-yb.org/en/latest/)
+* [Scikit-lego: interesting prebuild pipelines and transformers for sklearn](https://scikit-lego.readthedocs.io/en/latest/) 
+* [List of various scikits](http://scikits.appspot.com/scikits) 
+* [Information Theoretical Estimators (ITE) in Python](https://bitbucket.org/szzoli/ite-in-python/src/master/) [Paper](https://arxiv.org/abs/1405.2106)
+* [HYPERBOLIC DEEP LEARNING - A nascent and promising field](http://hyperbolicdeeplearning.com/)
+* [Optimial Transport](https://pythonot.github.io/quickstart.html)
+* [EMLP: Equivariant Representations layers](https://emlp.readthedocs.io/en/latest/index.html)
+* [BOLT: 10x faster matrix and vector operations](https://github.com/dblalock/bolt)
+* [Macarico: learning to search](https://github.com/hal3/macarico)
+* [A Collection of Conference & School Notes in Machine Learning](https://github.com/visual-ml-notes/visual-machine-learning-notes)
+* [Python Toolkit of Statistics for Pairwise Interactions (pyspi)](https://github.com/olivercliff/pyspi)
+* [pulearn: Positive-unlabeled learning with Python](https://pulearn.github.io/pulearn/)
 
 ## ML Engineering
 
 * https://github.com/EthicalML/awesome-production-machine-learning
-* Machine Learning Systems Design - https://github.com/chiphuyen/machine-learning-systems-design
+* [Machine Learning Systems Design](https://github.com/chiphuyen/machine-learning-systems-design)
 * https://www.oreilly.com/radar/what-you-need-to-know-about-product-management-for-ai/
 * https://github.com/Intellicode/ml-engineering-resources
-* Top 30 ML in Production Resources - https://mlinproduction.com/top-30-ml-in-production-resources-guide/
-* 150 Successful Machine Learning Models: 6 Lessons Learned at Booking.com - https://dl.acm.org/doi/pdf/10.1145/3292500.3330744
-* Rules of Machine Learning: Best Practices for ML Engineering - http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf [On google blog](https://developers.google.com/machine-learning/guides/rules-of-ml)
-* Troubleshooting Deep Neural Networks: A Field Guide to Fixing Your Model - http://josh-tobin.com/troubleshooting-deep-neural-networks.html
-* Lecture 6: MLOps Infrastructure & Tooling - https://fullstackdeeplearning.com/spring2021/lecture-6/
-* Made with ML - https://madewithml.com/
-* Machine Learning Systems Design - https://stanford-cs329s.github.io/2021/slides/cs329s_12_slides_sara_google.pdf
-* Monitering model/data Drift - https://evidentlyai.com/blog/ml-monitoring-do-i-need-data-drift
-* Machine Learning in Science and Industry slides - https://arogozhnikov.github.io/2017/04/20/machine-learning-in-science-and-industry.html
-* Machine learning in production - https://applyingml.com/papers/
-* How to navigate through the ML research information flood - https://drive.google.com/file/d/1zKAKBmOzM8KOnVnO09Xc_4Mne1z4pEUa/view
-* SRE for ML: The First 10 Years and the Next 10 - https://www.usenix.org/conference/srecon21/presentation/underwood-sre-ml
-* ML Crash Course from Google which included practical aspects of ML - https://developers.google.com/machine-learning/crash-course
+* [Top 30 ML in Production Resources](https://mlinproduction.com/top-30-ml-in-production-resources-guide/)
+* [150 Successful Machine Learning Models: 6 Lessons Learned at Booking.com](https://dl.acm.org/doi/pdf/10.1145/3292500.3330744)
+* [Rules of Machine Learning: Best Practices for ML Engineering](http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf) [On google blog](https://developers.google.com/machine-learning/guides/rules-of-ml)
+* [Troubleshooting Deep Neural Networks: A Field Guide to Fixing Your Model](http://josh-tobin.com/troubleshooting-deep-neural-networks.html)
+* [Lecture 6: MLOps Infrastructure & Tooling](https://fullstackdeeplearning.com/spring2021/lecture-6/)
+* [Made with ML](https://madewithml.com/)
+* [Machine Learning Systems Design](https://stanford-cs329s.github.io/2021/slides/cs329s_12_slides_sara_google.pdf)
+* [Monitering model/data Drift](https://evidentlyai.com/blog/ml-monitoring-do-i-need-data-drift)
+* [Machine Learning in Science and Industry slides](https://arogozhnikov.github.io/2017/04/20/machine-learning-in-science-and-industry.html)
+* [Machine learning in production](https://applyingml.com/papers/)
+* [How to navigate through the ML research information flood](https://drive.google.com/file/d/1zKAKBmOzM8KOnVnO09Xc_4Mne1z4pEUa/view)
+* [SRE for ML: The First 10 Years and the Next 10](https://www.usenix.org/conference/srecon21/presentation/underwood-sre-ml)
+* [ML Crash Course from Google which included practical aspects of ML](https://developers.google.com/machine-learning/crash-course)
 
 
 ## Theory
@@ -80,17 +80,17 @@ Summary: Machine Learning concepts and traditional resources
 
 ## Structured prediction
 
-* Course: https://taehwanptl.github.io/
-* CVPR 2011 Tutorial - Structured Prediction and Learning in Computer Vision: http://www.nowozin.net/sebastian/cvpr2011tutorial/
-* Pytorch Struct - http://nlp.seas.harvard.edu/pytorch-struct/README.html
+* [Course](https://taehwanptl.github.io/)
+* [CVPR 2011 Tutorial - Structured Prediction and Learning in Computer Vision](http://www.nowozin.net/sebastian/cvpr2011tutorial/)
+* [Pytorch Struct](http://nlp.seas.harvard.edu/pytorch-struct/README.html)
 
 
 ## Graphical models and variational inference
 
 * Graphical Models, Exponential Families, and Variational Inference: https://people.eecs.berkeley.edu/~wainwrig/Papers/WaiJor08_FTML.pdf
 * Probabilistic Graphical Models stanford course: https://cs228.stanford.edu/ [\[Course notes\]](https://ermongroup.github.io/cs228-notes/)
-* Differential Inference: A Criminally Underused Tool - https://github.com/srush/ProbTalk/blob/main/talk.notebook.ipynb
-* Probabilistic Machine Learning: Advanced Topics - https://probml.github.io/pml-book/book2.html
+* [Differential Inference: A Criminally Underused Tool](https://github.com/srush/ProbTalk/blob/main/talk.notebook.ipynb)
+* [Probabilistic Machine Learning: Advanced Topics](https://probml.github.io/pml-book/book2.html)
 
 ## Extreme classification
 
@@ -122,9 +122,9 @@ Summary: Machine Learning concepts and traditional resources
 
 ## Domain Adaptation
 
-* Office-Home Dataset - http://hemanthdv.org/OfficeHome-Dataset/
-* ImageClef - https://www.imageclef.org/2014/adaptation
-* Pg. 13 of this paper suggests data for open world/domain adaptation - https://arxiv.org/pdf/2004.07780.pdf
+* [Office-Home Dataset](http://hemanthdv.org/OfficeHome-Dataset/)
+* [ImageClef](https://www.imageclef.org/2014/adaptation)
+* [Pg. 13 of this paper suggests data for open world/domain adaptation](https://arxiv.org/pdf/2004.07780.pdf)
 
 ## Bandit Algorithms
 
@@ -134,21 +134,21 @@ Summary: Machine Learning concepts and traditional resources
 
 ## Continual learning
 
-* Meta-Learning Representations for Continual Learning - https://github.com/khurramjaved96/mrcl
-* Distillation and Incremental Classifier Learning - https://github.com/khurramjaved96/incremental-learning
-* Awesome Continual Learning - https://github.com/khurramjaved96/awesome-continual-learning
-* Continual Unsupervised Representation Learning - https://arxiv.org/abs/1910.14481
-* Continual Learning Papers Library by ContinualAI - https://www.zotero.org/groups/2623909/continual_learning_papers/library
-* Sequoia A Playground for research at the intersection of Continual, Reinforcement, and Self-Supervised Learning. - https://github.com/lebrice/Sequoia
-* Continual Learning: Towards “Broad” AI Winter 2021, A Course offered by the Université de Montréal - https://sites.google.com/view/ift6760-b2021/schedule?authuser=0
-* A Wholistic View of Continual Learning with Deep Neural Networks: Forgotten Lessons and the Bridge to Active and Open World Learning - Martin Mundt - https://drive.google.com/file/d/1fDOwLI3_EXxeEZyRCbGXFPSv2i39Tf_A/view
+* [Meta-Learning Representations for Continual Learning](https://github.com/khurramjaved96/mrcl)
+* [Distillation and Incremental Classifier Learning](https://github.com/khurramjaved96/incremental-learning)
+* [Awesome Continual Learning](https://github.com/khurramjaved96/awesome-continual-learning)
+* [Continual Unsupervised Representation Learning](https://arxiv.org/abs/1910.14481)
+* [Continual Learning Papers Library by ContinualAI](https://www.zotero.org/groups/2623909/continual_learning_papers/library)
+* [Sequoia A Playground for research at the intersection of Continual, Reinforcement, and Self-Supervised Learning.](https://github.com/lebrice/Sequoia)
+* [Continual Learning: Towards “Broad” AI Winter 2021, A Course offered by the Université de Montréal](https://sites.google.com/view/ift6760-b2021/schedule?authuser=0)
+* [A Wholistic View of Continual Learning with Deep Neural Networks: Forgotten Lessons and the Bridge to Active and Open World Learning - Martin Mundt](https://drive.google.com/file/d/1fDOwLI3_EXxeEZyRCbGXFPSv2i39Tf_A/view)
 * [Tutorial 2: Out-of-distribution (OOD) Learning Week 3, Day 4: Continual Learning](https://deeplearning.neuromatch.io/tutorials/W3D4_ContinualLearning/student/W3D4_Tutorial2.html)
-* CVPR21 Continual Learning Challenge - https://eval.ai/web/challenges/challenge-page/829/overview
-* Avalanche: an End-to-End Library for Continual Learning - https://avalanche.continualai.org/
+* [CVPR21 Continual Learning Challenge](https://eval.ai/web/challenges/challenge-page/829/overview)
+* [Avalanche: an End-to-End Library for Continual Learning](https://avalanche.continualai.org/)
 
 ## Multi task learning
 
-* CS 330: Deep Multi-Task and Meta Learning - http://cs330.stanford.edu/
+* [CS 330: Deep Multi-Task and Meta Learning](http://cs330.stanford.edu/)
 
 ## Learning to Rank
 
@@ -163,11 +163,11 @@ Summary: Machine Learning concepts and traditional resources
 
 ## Active learning
 
-* Importance weighted active learning for streams: http://www.yisongyue.com/courses/cs159/lectures/active_learning.pdf
-* Summary of active learning: http://www.yisongyue.com/courses/cs159/lectures/active_notes.pdf
-* Good survey of potential issues with active learning: http://proceedings.mlr.press/v16/settles11a.html
+* [Importance weighted active learning for streams](http://www.yisongyue.com/courses/cs159/lectures/active_learning.pdf)
+* [Summary of active learning](http://www.yisongyue.com/courses/cs159/lectures/active_notes.pdf)
+* [Good survey of potential issues with active learning](http://proceedings.mlr.press/v16/settles11a.html)
 * [Human-in-the-Loop Machine Learning by Robert Munro](https://www.manning.com/books/human-in-the-loop-machine-learning) - [Active learning in pytorch from book](https://github.com/rmunro/pytorch_active_learning) [Cheatsheat on active learning](http://www.robertmunro.com/Advanced_Active_Learning_Cheatsheet.pdf)
-* DUALIST: Utility for Active Learning with Instances and Semantic Terms - https://github.com/burrsettles/dualist/blob/master/README.md
+* [DUALIST: Utility for Active Learning with Instances and Semantic Terms](https://github.com/burrsettles/dualist/blob/master/README.md)
 
 ## Multiple instance learning
 
@@ -191,31 +191,31 @@ Summary: Machine Learning concepts and traditional resources
 
 ## Multimodal learning
 
-* Multimodal Machine Learning: A Survey and Taxonomy - https://arxiv.org/abs/1705.09406
+* [Multimodal Machine Learning: A Survey and Taxonomy](https://arxiv.org/abs/1705.09406)
 
 
 ## Applications
 
-* List of applications across various industries - https://github.com/firmai/industry-machine-learning#legal
-* Visual explanations of ML algorithms - http://visxai.io/2018.html
+* [List of applications across various industries](https://github.com/firmai/industry-machine-learning#legal)
+* [Visual explanations of ML algorithms](http://visxai.io/2018.html)
 * Javascript animated examples from Artificial Intelligence - A Modern Approach by Stuart Russell and Peter Norvig: http://aimacode.github.io/aima-javascript/
-* Adaptive Language Models in JavaScript - https://github.com/google-research/google-research/tree/master/jslm
+* [Adaptive Language Models in JavaScript](https://github.com/google-research/google-research/tree/master/jslm)
 
 
 ## Interpretability
 
-* ML Interpratation in python - https://github.com/jphall663/interpretable_machine_learning_with_python
-* Explanatory Model Analysis - https://github.com/pbiecek/ema
-* Interesting resources related to XAI (Explainable Artificial Intelligence) - https://github.com/pbiecek/xai_resources
+* [ML Interpratation in python](https://github.com/jphall663/interpretable_machine_learning_with_python)
+* [Explanatory Model Analysis](https://github.com/pbiecek/ema)
+* [Interesting resources related to XAI (Explainable Artificial Intelligence)](https://github.com/pbiecek/xai_resources)
 
 ## Control Theory
-* Engineering Media: Control theory posts, lectures, and book - https://engineeringmedia.com/
-* Resourcium - https://resourcium.org/
+* [Engineering Media: Control theory posts, lectures, and book](https://engineeringmedia.com/)
+* [Resourcium](https://resourcium.org/)
 
 
 ## Graph Neural Networks
 
-* A Complete Beginner's Guide to G-Invariant Neural Networks - https://invariances.org/ginvariance-tutorial/
-* Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges - https://geometricdeeplearning.com/lectures/
-* Non-Euclidean Methods in Machine Learning - http://graphics.stanford.edu/courses/cs468-20-fall/schedule.html
-* Introduction to Graph Neural Nets with JAX/jraph - https://github.com/deepmind/educational/tree/master/colabs/summer_schools
+* [A Complete Beginner's Guide to G-Invariant Neural Networks](https://invariances.org/ginvariance-tutorial/)
+* [Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges](https://geometricdeeplearning.com/lectures/)
+* [Non-Euclidean Methods in Machine Learning](http://graphics.stanford.edu/courses/cs468-20-fall/schedule.html)
+* [Introduction to Graph Neural Nets with JAX/jraph](https://github.com/deepmind/educational/tree/master/colabs/summer_schools)

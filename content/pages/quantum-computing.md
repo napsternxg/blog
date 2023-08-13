@@ -24,8 +24,8 @@ Summary: Links related to quantum computing resources
 
 ## Courses
 
-* Topology in condensed matter: tying quantum knots - https://topocondmat.org/index.html
+* [Topology in condensed matter: tying quantum knots](https://topocondmat.org/index.html)
 
 ## Books
-* Textbook: Introduction to Classical and Quantum Computing - http://www.thomaswong.net/#publications 
-* QUANTUM COMPUTING: A Gentle Introduction by Eleanor Rieffel and Wolfgang Polak - http://mmrc.amss.cas.cn/tlb/201702/W020170224608150244118.pdf
+* [Textbook: Introduction to Classical and Quantum Computing](http://www.thomaswong.net/#publications )
+* [QUANTUM COMPUTING: A Gentle Introduction by Eleanor Rieffel and Wolfgang Polak](http://mmrc.amss.cas.cn/tlb/201702/W020170224608150244118.pdf)
