@@ -142,6 +142,7 @@ Summary: Links related to NLP resources
 * [Succinct Data Structures for NLP-at-Scale](https://mpetri.github.io/coling16-tutorial/)
 * [Space-Efficient Data Structures for Top-k Completion](https://www.microsoft.com/en-us/research/publication/space-efficient-data-structures-for-top-k-completion/)
 * [Beginner's Crash Course to Elastic Stack for text analysis](https://github.com/LisaHJung/Beginners-Crash-Course-to-Elastic-Stack-Series-Table-of-Contents) - [YouTube](https://www.youtube.com/playlist?list=PL_mJOmq4zsHZYAyK606y7wjQtC0aoE6Es)
+* [The Definition of Sekine’s Extended Named Entities](https://nlp.cs.nyu.edu/ene/version7_1_0Beng.html)
 
 ## Lexicons
 
@@ -657,6 +658,10 @@ Summary: Links related to NLP resources
 * [KOBE v2: Towards Knowledge-Based Personalized Product Description Generation in E-commerce](https://github.com/THUDM/KOBE)
 * [🪐 spaCy Project: Analyzing how mentions of ingredients change over time (Named Entity Recognition)](https://github.com/explosion/projects/tree/v3/tutorials/ner_food_ingredients)
 * [TASTESet recipe NER model and dataset](https://github.com/taisti/TASTEset/)
+* [Analysis of Gender Bias in Hollywood Movies](https://github.com/melihkurtaran/DIE_Gender_Equality_in_Movies)
+* [P-Stance: A Large Dataset for Stance Detection in Political Domain](https://github.com/chuchun8/PStance/)
+* [MultiNERD: A Multilingual, Multi-Genre and Fine-Grained Dataset for Named Entity Recognition (and Disambiguation)](https://github.com/Babelscape/multinerd) - [Model - SpanMarker for Named Entity Recognition](https://github.com/tomaarsen/SpanMarkerNER)
+* [WikiNEuRal: Combined Neural and Knowledge-based Silver Data Creation for Multilingual NER](https://github.com/Babelscape/wikineural)
 
 ## Shared tasks, competitions
 
