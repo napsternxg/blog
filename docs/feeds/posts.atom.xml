@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Interpreting Models - posts</title><link href="https://shubhanshu.com/blog/" rel="alternate"></link><link href="https://shubhanshu.com/blog/feeds/posts.atom.xml" rel="self"></link><id>https://shubhanshu.com/blog/</id><updated>2023-08-19T23:48:00-05:00</updated><subtitle>A journey towards model interpretability</subtitle><entry><title>Precision and Recall are just filtered accuracies</title><link href="https://shubhanshu.com/blog/accuracy-precision-recall.html" rel="alternate"></link><published>2023-08-19T23:48:00-05:00</published><updated>2023-08-19T08:07:12-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2023-08-19:/blog/accuracy-precision-recall.html</id><summary type="html">&lt;p&gt;In this post I will show how precision and recall are related to accuracy and how they can be thought of as filtered versions of accuracy.&lt;/p&gt;
-&lt;h1 id="accuracy"&gt;Accuracy&lt;/h1&gt;
-&lt;p&gt;Accuracy is a fundamental concept in evaluating every day systems. In simple terms, accuracy is defined as proportion of times the predictions of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post I will show how precision and recall are related to accuracy and how they can be thought of as filtered versions of accuracy.&lt;/p&gt;
-&lt;h1 id="accuracy"&gt;Accuracy&lt;/h1&gt;
-&lt;p&gt;Accuracy is a fundamental concept in evaluating every day systems. In simple terms, accuracy is defined as proportion of times the predictions of our system matched the true outcome (assuming the true outcome exists). For this post lets follow the scikit-learn convention and define &lt;code&gt;y_true&lt;/code&gt; as the true outcome and &lt;code&gt;y_pred&lt;/code&gt; as the predictions. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Interpreting Models - posts</title><link href="https://shubhanshu.com/blog/" rel="alternate"></link><link href="https://shubhanshu.com/blog/feeds/posts.atom.xml" rel="self"></link><id>https://shubhanshu.com/blog/</id><updated>2023-08-19T23:48:00-05:00</updated><subtitle>A journey towards model interpretability</subtitle><entry><title>Precision and Recall are just filtered accuracies</title><link href="https://shubhanshu.com/blog/accuracy-precision-recall.html" rel="alternate"></link><published>2023-08-19T23:48:00-05:00</published><updated>2023-08-19T08:19:40-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2023-08-19:/blog/accuracy-precision-recall.html</id><summary type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;In this post I will show how precision and recall are related to accuracy and how they can be thought of as filtered versions of accuracy.&lt;/p&gt;
+&lt;h2 id="Accuracy"&gt;Accuracy&lt;a class="anchor-link" href="#Accuracy"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Accuracy is a fundamental concept in evaluating every day systems. In simple terms, accuracy is defined as proportion of times the predictions of our system matched the true outcome (assuming the true outcome exists). For this post lets follow the scikit-learn convention and define &lt;code&gt;y_true&lt;/code&gt;</summary><content type="html">&lt;body&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;In this post I will show how precision and recall are related to accuracy and how they can be thought of as filtered versions of accuracy.&lt;/p&gt;
+&lt;h2 id="Accuracy"&gt;Accuracy&lt;a class="anchor-link" href="#Accuracy"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Accuracy is a fundamental concept in evaluating every day systems. In simple terms, accuracy is defined as proportion of times the predictions of our system matched the true outcome (assuming the true outcome exists). For this post lets follow the scikit-learn convention and define &lt;code&gt;y_true&lt;/code&gt; as the true outcome and &lt;code&gt;y_pred&lt;/code&gt; as the predictions.&lt;/p&gt;
 &lt;p&gt;In mathematical terms accuracy can be simply written as the mean value of the indicator function which is 1 when the &lt;code&gt;y_true == y_pred&lt;/code&gt; and 0 otherwise.&lt;/p&gt;
 &lt;p&gt;More consicely, this can be written as $accuracy(y_{true}, y_{pred}) = \frac{1}{N} * \sum_i \mathbb{1}[y_{true} = y_{pred}]$.&lt;/p&gt;
-&lt;h2 id="confusion-matrix"&gt;Confusion Matrix&lt;/h2&gt;
-&lt;p&gt;Another popular way of computing accuracy is by using the confusion matrix. If our outcome classes can be enumerated as 0, 1, 2, ... then the confusion matrix $CM$ will contain elements $CM[i, j] = \sum_i \mathbb{1}[y_{true} = i \land y_{pred} = j]$, i.e. count of the number of times $y_{true}$ was $i$ and $y_{pred}$ was $j$. &lt;/p&gt;
+&lt;h2 id="Confusion-Matrix"&gt;Confusion Matrix&lt;a class="anchor-link" href="#Confusion-Matrix"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Another popular way of computing accuracy is by using the confusion matrix. If our outcome classes can be enumerated as 0, 1, 2, ... then the confusion matrix $CM$ will contain elements $CM[i, j] = \sum_i \mathbb{1}[y_{true} = i \land y_{pred} = j]$, i.e. count of the number of times $y_{true}$ was $i$ and $y_{pred}$ was $j$.&lt;/p&gt;
 &lt;p&gt;A confusion matrix for binary classification (assuming $+$ as the positive class) may look as follows:&lt;/p&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
+&lt;thead&gt;&lt;tr&gt;
 &lt;th&gt;true/pred&lt;/th&gt;
 &lt;th&gt;$-$&lt;/th&gt;
 &lt;th&gt;$+$&lt;/th&gt;
@@ -41,8 +43,7 @@
 &lt;/table&gt;
 &lt;p&gt;Here the terms mean the following:&lt;/p&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
+&lt;thead&gt;&lt;tr&gt;
 &lt;th&gt;Term&lt;/th&gt;
 &lt;th&gt;Defition&lt;/th&gt;
 &lt;th&gt;Comments&lt;/th&gt;
@@ -73,29 +74,54 @@
 &lt;/table&gt;
 &lt;p&gt;This confusion matrix approach easily extends to multi-class cases and is quite helpful when defining Precision, Recall metrics as we will see below.&lt;/p&gt;
 &lt;p&gt;Finally, Accuracy can be defined in terms of the confusion matrix as $accuracy = \frac{TP + TN}{TP + FP + FN + TN}$&lt;/p&gt;
-&lt;h1 id="precison-and-recall"&gt;Precison and Recall&lt;/h1&gt;
-&lt;p&gt;Precision and Recall are popular evaluation metrics used for evaluating classification systems and are very valuable when we have multiple classes and these classes are present with a skewed distribution in the data. &lt;/p&gt;
-&lt;p&gt;Precision recall metrics are often defined using the confusion matrix approach as follows: &lt;/p&gt;
+&lt;h1 id="Precison-and-Recall"&gt;Precison and Recall&lt;a class="anchor-link" href="#Precison-and-Recall"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Precision and Recall are popular evaluation metrics used for evaluating classification systems and are very valuable when we have multiple classes and these classes are present with a skewed distribution in the data.&lt;/p&gt;
+&lt;p&gt;Precision recall metrics are often defined using the confusion matrix approach as follows:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;$precision = \frac{TP}{ TP + FP}$&lt;/li&gt;
 &lt;li&gt;$recall = \frac{TP}{ TP + FN}$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;However, I find this definition restrictive, i.e. this only works for binary classification use cases and for each new class we need to define a new confusion matrix. I also find this formulation difficult to remember. E.g. in my initial days of learning these definitions I often used to confuse False Positive and False Negatives. &lt;/p&gt;
-&lt;p&gt;Furthermore, this also relies on the confusion matrix approach to compute the values, which has its benefits in terms of computational complexity as we can compute the confusion matrix once on a large dataset and compute all sorts of metrics on top of this. &lt;/p&gt;
-&lt;p&gt;Here, I am going to share my convention of remembering what precision and recall means and this will help us later connect to the accuracy metric. &lt;/p&gt;
-&lt;p&gt;## Precision Recall as filtered accuracies&lt;/p&gt;
-&lt;p&gt;If you look at the confusion matrix above you will notice that precision is really defined as the ratio of $\frac{CM[+, +]}{\sum_{true~classes} CM[:, +]}$.&lt;/p&gt;
-&lt;p&gt;This ratio can be stated $\frac{correct~prediction~of~+&lt;em class&gt;{class}}{all~the~ predictions~of~+&lt;/em&gt;}$. &lt;/p&gt;
-&lt;p&gt;If you notice clearly, this is just the accuracy of the data limited to items predicted as $+&lt;em true&gt;{class}$ or simply $precision(y&lt;/em&gt;, y_{pred}, class) = accuracy(y_{true}[y_{pred} = class], y_{pred}[y_{pred} = class])$, where $X[y=class]$ selects only those items from $X$ where $y=class$, we can $y = class$ as a filter or mask.&lt;/p&gt;
-&lt;p&gt;Similarly, recall is $\frac{CM[+, +]}{\sum_{pred~classes} CM[+, :]}$ or $\frac{correct~prediction~of~+&lt;em class&gt;{class}}{all~the~items~of~+&lt;/em&gt;}$ or $recall(y_{true}, y_{pred}, class) = accuracy(y_{true}[y_{true} = class], y_{pred}[y_{true} = class])$. &lt;/p&gt;
+&lt;p&gt;However, I find this definition restrictive, i.e. this only works for binary classification use cases and for each new class we need to define a new confusion matrix. I also find this formulation difficult to remember. E.g. in my initial days of learning these definitions I often used to confuse False Positive and False Negatives.&lt;/p&gt;
+&lt;p&gt;Furthermore, this also relies on the confusion matrix approach to compute the values, which has its benefits in terms of computational complexity as we can compute the confusion matrix once on a large dataset and compute all sorts of metrics on top of this.&lt;/p&gt;
+&lt;p&gt;Here, I am going to share my convention of remembering what precision and recall means and this will help us later connect to the accuracy metric.&lt;/p&gt;
+&lt;h2 id="Precision-Recall-as-filtered-accuracies"&gt;Precision Recall as filtered accuracies&lt;a class="anchor-link" href="#Precision-Recall-as-filtered-accuracies"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;If you look at the confusion matrix above you will notice that precision is really defined as the ratio of $\frac{CM[+, +]}{\sum_{true~classes} CM[:, +]}$.&lt;/p&gt;
+&lt;p&gt;This ratio can be stated $\frac{correct~prediction~of~+_{class}}{all~the~ predictions~of~+_{class}}$.&lt;/p&gt;
+&lt;p&gt;If you notice clearly, this is just the accuracy of the data limited to items predicted as $+_{class}$ or simply $precision(y_{true}, y_{pred}, class) = accuracy(y_{true}[y_{pred} = class], y_{pred}[y_{pred} = class])$, where $X[y=class]$ selects only those items from $X$ where $y=class$, we can $y = class$ as a filter or mask.&lt;/p&gt;
+&lt;p&gt;Similarly, recall is $\frac{CM[+, +]}{\sum_{pred~classes} CM[+, :]}$ or $\frac{correct~prediction~of~+_{class}}{all~the~items~of~+_{class}}$ or $recall(y_{true}, y_{pred}, class) = accuracy(y_{true}[y_{true} = class], y_{pred}[y_{true} = class])$.&lt;/p&gt;
 &lt;p&gt;So if you look closely, you will notice that precision and recall only differ in the filter used to send data to accuracy. Precision uses the filter $[y_{pred} = +]$ while recall uses the filter $[y_{true} = +]$.&lt;/p&gt;
 &lt;p&gt;Furthermore, we can see that if we swap the arguments to precision or recall we get the value for the other, i.e. $precision(y_{true}, \boldsymbol{y_{pred}}, class) = recall(\boldsymbol{y_{pred}}, y_{true}, class)$.&lt;/p&gt;
 &lt;p&gt;Furthermore, this definition can easily be extended to multi class setting where you simply need to replace $+$ with the new class.&lt;/p&gt;
-&lt;h2 id="python-implementation"&gt;Python Implementation&lt;/h2&gt;
-&lt;p&gt;Next we are going to see how to implement these functions in python using the abstractions defined above.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
 
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;accuracy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Python-Implementation"&gt;Python Implementation&lt;a class="anchor-link" href="#Python-Implementation"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Next we are going to see how to implement these functions in python using the abstractions defined above.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[24]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-python"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.metrics&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;classification_report&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[8]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-python"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;accuracy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
   &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_true&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;masked_accuracy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mask&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -111,26 +137,97 @@
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;precision&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;true_class&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
   &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;class_specific_accuracy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;true_class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="c1"&gt;# Notice that recall(y_true, y_pred, true_class) == precision(y_pred, y_true, true_class)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class="c1"&gt;# recall(y_true, y_pred, true_class) == precision(y_pred, y_true, true_class)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;We can now compare the implementation against the sklearn implementation. &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;N&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10000&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;We can now compare the implementation against the sklearn implementation.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[94]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-python"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10000&lt;/span&gt;
 &lt;span class="n"&gt;true_class&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;span class="n"&gt;y_true&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randint&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;true_class&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;y_pred&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randint&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;true_class&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;weights&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;weights&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
-&lt;span class="n"&gt;report&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;classification_report&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt output_prompt"&gt;Out[94]:&lt;/div&gt;
+
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;((10000,), (10000,), (10000,))&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Leading to the outputs&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[95]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-python"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;report&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;classification_report&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;report&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;accuracy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;=:&lt;/span&gt;&lt;span class="s2"&gt;.2f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;precision&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;true_class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;=:&lt;/span&gt;&lt;span class="s2"&gt;.2f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;recall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;true_class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;=:&lt;/span&gt;&lt;span class="s2"&gt;.2f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;recall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;true_class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;=:&lt;/span&gt;&lt;span class="s2"&gt;.2f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; == &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;precision&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;true_class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;=:&lt;/span&gt;&lt;span class="s2"&gt;.2f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Leading to the outputs:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;              precision    recall  f1-score   support
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;              precision    recall  f1-score   support
 
            0       0.50      0.50      0.50      4939
            1       0.51      0.50      0.51      5061
@@ -143,12 +240,27 @@ accuracy(y_true, y_pred)=0.50
 precision(y_true, y_pred, true_class)=0.51
 recall(y_true, y_pred, true_class)=0.50
 recall(y_true, y_pred, true_class)=0.50 == precision(y_pred, y_true, true_class)=0.50
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;p&gt;If you notice, this doesn't require us to construct the full confusion matrix thereby making the approach suitable where the number of classes is very large. &lt;/p&gt;
-&lt;h2 id="example-of-application-to-named-entity-recognition-evaluation"&gt;Example of application to Named Entity Recognition Evaluation&lt;/h2&gt;
-&lt;p&gt;One example of where this is useful is when evaluating named entity recognition systems where we want to evaluate if the model prediction at the entity level. E.g. &lt;code&gt;[Shubhanshu Mishra](PER) visited [SFO](LOC)&lt;/code&gt; was predicted by the model as &lt;code&gt;[Shubhanshu](PER) Mishra visited [SFO](LOC)&lt;/code&gt; with entity types as &lt;code&gt;PER&lt;/code&gt; and &lt;code&gt;LOC&lt;/code&gt;. Here, if we define a class as &lt;code&gt;(docid, start, end, type)&lt;/code&gt; i.e. &lt;code&gt;y_true = [(0, 0, 17, PER), (0, 26, 29, LOC)]&lt;/code&gt; and &lt;code&gt;y_pred=[(0, 0, 10, PER), (0, 26, 29, LOC)]&lt;/code&gt; we can easily compute the precision, and recall values of the data as simply &lt;code&gt;precision = len(set(y_true) &amp;amp; set(y_pred)) / len(set(y_pred))&lt;/code&gt; and &lt;code&gt;recall = len(set(y_true) &amp;amp; set(y_pred)) / len(set(y_true))&lt;/code&gt; and their type specific versions as follows:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;precision_ner&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;If you notice, this doesn't require us to construct the full confusion matrix thereby making the approach suitable where the number of classes is very large.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Example-of-application-to-Named-Entity-Recognition-Evaluation"&gt;Example of application to Named Entity Recognition Evaluation&lt;a class="anchor-link" href="#Example-of-application-to-Named-Entity-Recognition-Evaluation"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;One example of where this is useful is when evaluating named entity recognition systems where we want to evaluate if the model prediction at the entity level. E.g. &lt;code&gt;[Shubhanshu Mishra](PER) visited [SFO](LOC)&lt;/code&gt; was predicted by the model as &lt;code&gt;[Shubhanshu](PER) Mishra visited [SFO](LOC)&lt;/code&gt; with entity types as &lt;code&gt;PER&lt;/code&gt; and &lt;code&gt;LOC&lt;/code&gt;. Here, if we define a class as &lt;code&gt;(docid, start, end, type)&lt;/code&gt; i.e. &lt;code&gt;y_true = [(0, 0, 17, PER), (0, 26, 29, LOC)]&lt;/code&gt; and &lt;code&gt;y_pred=[(0, 0, 10, PER), (0, 26, 29, LOC)]&lt;/code&gt; we can easily compute the precision, and recall values of the data as simply &lt;code&gt;precision = len(set(y_true) &amp;amp; set(y_pred)) / len(set(y_pred))&lt;/code&gt; and &lt;code&gt;recall = len(set(y_true) &amp;amp; set(y_pred)) / len(set(y_true))&lt;/code&gt; and their type specific versions as follows:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;precision_ner&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;type_specific_true&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(((&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;y_true&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
     &lt;span class="n"&gt;type_specific_pred&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(((&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;y_pred&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
     &lt;span class="n"&gt;correct_predictions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;type_specific_true&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;type_specific_pred&lt;/span&gt;
@@ -156,16 +268,58 @@ recall(y_true, y_pred, true_class)=0.50 == precision(y_pred, y_true, true_class)
 
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;recall_ner&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;precision_ner&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_pred&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can now extend it to Named Entity Recognition and Disambiguation (NERD) by defining the class as &lt;code&gt;(docid, start, end, type, entity_id)&lt;/code&gt;. This is the approach we have taken in our paper &lt;a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/09723c9f291f6056fd1885081859c186-Abstract-Datasets_and_Benchmarks.html"&gt;TweetNERD - End to End Entity Linking Benchmark for Tweets&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;You can now extend it to Named Entity Recognition and Disambiguation (NERD) by defining the class as &lt;code&gt;(docid, start, end, type, entity_id)&lt;/code&gt;. This is the approach we have taken in our paper &lt;a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/09723c9f291f6056fd1885081859c186-Abstract-Datasets_and_Benchmarks.html"&gt;TweetNERD - End to End Entity Linking Benchmark for Tweets&lt;/a&gt;.&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>AI Safety Areas</title><link href="https://shubhanshu.com/blog/ai-safety-areas.html" rel="alternate"></link><published>2023-05-31T23:48:00-05:00</published><updated>2023-08-19T08:07:12-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2023-05-31:/blog/ai-safety-areas.html</id><summary type="html">&lt;h1 id="major-areas-for-ai-safety"&gt;Major areas for AI safety&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+ 
+
+&lt;/body&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;
+</content><category term="posts"></category></entry><entry><title>AI Safety Areas</title><link href="https://shubhanshu.com/blog/ai-safety-areas.html" rel="alternate"></link><published>2023-05-31T23:48:00-05:00</published><updated>2023-08-19T08:19:40-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2023-05-31:/blog/ai-safety-areas.html</id><summary type="html">&lt;h1 id="major-areas-for-ai-safety"&gt;Major areas for AI safety&lt;/h1&gt;
 &lt;p&gt;As AI adoption increases we need a multi pronged approach to ensure that AI usage is safe. This approach should encompass education, intervention, and accessibility. &lt;/p&gt;
 &lt;p&gt;First, widespread usage of AI leads to a new way of communication and social interaction, where actual user generated content …&lt;/p&gt;</summary><content type="html">&lt;h1 id="major-areas-for-ai-safety"&gt;Major areas for AI safety&lt;/h1&gt;
 &lt;p&gt;As AI adoption increases we need a multi pronged approach to ensure that AI usage is safe. This approach should encompass education, intervention, and accessibility. &lt;/p&gt;
 &lt;p&gt;First, widespread usage of AI leads to a new way of communication and social interaction, where actual user generated content is intermingled with AI generated content. We need to ensure that the social strata which will be most affected by these systems are currently the least educated about the technology. Model cards, data cards serve a good step in the direction of educating people about these technologies, but we need to ensure people understand interacting with these systems like they interact with a Knife in their kitchen, they know it can cause harm but also know the right way to use it to increase their productivity. &lt;/p&gt;
 &lt;p&gt;Second, people and social groups and their representatives should be able to intervene with these AI systems to ensure they are locally adoptable and are not forcing a certain outsider belief into their community. When AI fails their should be a way to exit with a no AI option or transfer control to the user. This would require building better AI interoperable UX.&lt;/p&gt;
 &lt;p&gt;Third, AI should be accessible to as wide a community to ensure it doesn't perpetuate the rich gets richer phenomenon and leads to further socio economic divide. However, accessibility should not just be limited to open source models, but the ability of people to use AI as a tool as opposed to a magic wand and ensure that there are ways communities can invest reasonably in making AI reach their members. Something like this happened with the Maker movement which made 3d printing very accessible and ensured community participation. &lt;/p&gt;
-&lt;p&gt;Working on Twitter's  Image cropping bias work and NER bias work allowed me to work on these problems first hand and see that the solutions to many tech problems often lies not within the span of a keyboard but across the span of people who use it, and the latter is not normally distributed. &lt;/p&gt;</content><category term="posts"></category></entry><entry><title>Copy Files Across Git Repositories Keeping Commit History</title><link href="https://shubhanshu.com/blog/git-copy-files-across-repos-keeping-commit-history.html" rel="alternate"></link><published>2022-09-15T10:20:00-05:00</published><updated>2023-08-19T08:07:12-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2022-09-15:/blog/git-copy-files-across-repos-keeping-commit-history.html</id><summary type="html">&lt;p&gt;Copy Files Across Git Repositories Keeping Commit History&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sometimes we would like to move files between two git repositories, namely, &lt;code&gt;repo1&lt;/code&gt; to &lt;code&gt;repo2&lt;/code&gt;. Here, both the repos do not share a commit history and may have a very different directory structure.&lt;/p&gt;
+&lt;p&gt;Working on Twitter's  Image cropping bias work and NER bias work allowed me to work on these problems first hand and see that the solutions to many tech problems often lies not within the span of a keyboard but across the span of people who use it, and the latter is not normally distributed. &lt;/p&gt;</content><category term="posts"></category></entry><entry><title>Copy Files Across Git Repositories Keeping Commit History</title><link href="https://shubhanshu.com/blog/git-copy-files-across-repos-keeping-commit-history.html" rel="alternate"></link><published>2022-09-15T10:20:00-05:00</published><updated>2023-08-19T08:19:40-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2022-09-15:/blog/git-copy-files-across-repos-keeping-commit-history.html</id><summary type="html">&lt;p&gt;Copy Files Across Git Repositories Keeping Commit History&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sometimes we would like to move files between two git repositories, namely, &lt;code&gt;repo1&lt;/code&gt; to &lt;code&gt;repo2&lt;/code&gt;. Here, both the repos do not share a commit history and may have a very different directory structure.&lt;/p&gt;
 &lt;p&gt;One use case is you are developing a standalone side project in &lt;code&gt;repo1&lt;/code&gt; and would like later merge into a larger project &lt;code&gt;repo2&lt;/code&gt;. &lt;/p&gt;
 &lt;p&gt;One easy way is to simply copy files from &lt;code&gt;repo1&lt;/code&gt; to &lt;code&gt;repo2&lt;/code&gt; and then commit them in &lt;code&gt;repo2&lt;/code&gt;. However, in this approach we loose all the commit history information of the files in &lt;code&gt;repo1&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;We can use a combination of &lt;code&gt;git format-patch&lt;/code&gt; and &lt;code&gt;git am --3way&lt;/code&gt; commands to achieve this. &lt;/p&gt;
@@ -371,7 +525,7 @@ Date:&lt;span class="w"&gt;   &lt;/span&gt;Fri&lt;span class="w"&gt; &lt;/span&g
 &lt;p&gt;As we can see the commit history from &lt;code&gt;repo1&lt;/code&gt; is now copied to &lt;code&gt;repo2&lt;/code&gt; along with the files. &lt;/p&gt;
 &lt;h2 id="epilogue"&gt;Epilogue&lt;/h2&gt;
 &lt;p&gt;This is an easy fix when &lt;code&gt;repo1&lt;/code&gt; is small and there is less likely to be a merge conflict between &lt;code&gt;repo1&lt;/code&gt; and &lt;code&gt;repo2&lt;/code&gt;. 
-For more complex, you can add additional commits to move the files around.&lt;/p&gt;</content><category term="posts"></category><category term="git"></category></entry><entry><title>Wordle One Shot Solution (Hack)</title><link href="https://shubhanshu.com/blog/wordle-hack.html" rel="alternate"></link><published>2022-01-13T10:20:00-06:00</published><updated>2023-08-19T08:07:12-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2022-01-13:/blog/wordle-hack.html</id><summary type="html">&lt;p&gt;Wordle One Shot Solution (Hack)&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Wordle Hack GIF" src="https://shubhanshu.com/blog/assets/wordle-hack.gif"&gt;&lt;/p&gt;
+For more complex, you can add additional commits to move the files around.&lt;/p&gt;</content><category term="posts"></category><category term="git"></category></entry><entry><title>Wordle One Shot Solution (Hack)</title><link href="https://shubhanshu.com/blog/wordle-hack.html" rel="alternate"></link><published>2022-01-13T10:20:00-06:00</published><updated>2023-08-19T08:19:40-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2022-01-13:/blog/wordle-hack.html</id><summary type="html">&lt;p&gt;Wordle One Shot Solution (Hack)&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Wordle Hack GIF" src="https://shubhanshu.com/blog/assets/wordle-hack.gif"&gt;&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#finding-the-solution-on-the-page"&gt;Finding the solution on the page&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#automating-it-via-codebookmark-button"&gt;Automating it via code/bookmark button&lt;/a&gt;&lt;/li&gt;
@@ -469,7 +623,7 @@ For more complex, you can add additional commits to move the files around.&lt;/p
 &lt;span class="sb"&gt;Learn about internet security from A PROJECT OF THE ELECTRONIC FRONTIER FOUNDATION: SURVEILLANCE SELF-DEFENSE: TIPS, TOOLS AND HOW-TOS FOR SAFER ONLINE COMMUNICATIONS course from https://ssd.eff.org/en&lt;/span&gt;
 &lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="nx"&gt;alert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;warn_message&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="posts"></category><category term="hacks"></category><category term="web-technolgy"></category></entry><entry><title>Part 1 - Understanding extreme value theory - Basics</title><link href="https://shubhanshu.com/blog/evt-part-1-basics.html" rel="alternate"></link><published>2019-07-21T02:10:00-05:00</published><updated>2023-08-19T08:07:12-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2019-07-21:/blog/evt-part-1-basics.html</id><summary type="html">&lt;p&gt;Basics of Extreme Value Theory for modeling extreme values.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="posts"></category><category term="hacks"></category><category term="web-technolgy"></category></entry><entry><title>Part 1 - Understanding extreme value theory - Basics</title><link href="https://shubhanshu.com/blog/evt-part-1-basics.html" rel="alternate"></link><published>2019-07-21T02:10:00-05:00</published><updated>2023-08-19T08:19:40-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2019-07-21:/blog/evt-part-1-basics.html</id><summary type="html">&lt;p&gt;Basics of Extreme Value Theory for modeling extreme values.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -850,7 +1004,7 @@ $$&lt;p&gt;Surprisingly, like the central limit theorem, these values also conve
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="machine learning"></category><category term="statistics"></category></entry><entry><title>Time dependent models</title><link href="https://shubhanshu.com/blog/time-dependent-models.html" rel="alternate"></link><published>2017-09-11T14:05:00-05:00</published><updated>2023-08-19T08:07:12-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-11:/blog/time-dependent-models.html</id><summary type="html">&lt;p&gt;Implementing time dependent models using sklearn.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+</content><category term="posts"></category><category term="machine learning"></category><category term="statistics"></category></entry><entry><title>Time dependent models</title><link href="https://shubhanshu.com/blog/time-dependent-models.html" rel="alternate"></link><published>2017-09-11T14:05:00-05:00</published><updated>2023-08-19T08:19:40-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-11:/blog/time-dependent-models.html</id><summary type="html">&lt;p&gt;Implementing time dependent models using sklearn.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="Time-Dependent-Classification/Regression"&gt;Time Dependent Classification/Regression&lt;a class="anchor-link" href="#Time-Dependent-Classification/Regression"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;I have been interested in time dependent classification/regression for a long time. Most machine learning models are implemented as static models where our assumptions about the relationships between the input variables and the parameters of the models is fixed. This assumption is mostly true, however, there are cases where the model parameters for the same input variable must be allowed to change with time. Furthermore, the change in the model parameters should not be large compared to their value at the previous timesteps. One simple way to approach this problem is to have a different model for each timestep, however, this will not allow us to learn from all the data at hand. The second approach is to have a different parameter for each timestep and a base set of parameters. This second approach although more appropriate will not allow us to enforce our constraint that the model parameters at a given timestep should not change too much from their value at the last timestep.&lt;/p&gt;
@@ -16516,7 +16670,7 @@ cgghhBCSlv4PgfNoADwBj8EAAAAASUVORK5CYII=
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="python"></category><category term="machine learning"></category></entry><entry><title>Pytorch RNN sequence tagging</title><link href="https://shubhanshu.com/blog/pytorch-rnn-sequence-tagging.html" rel="alternate"></link><published>2017-09-03T01:57:00-05:00</published><updated>2023-08-19T08:07:12-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-03:/blog/pytorch-rnn-sequence-tagging.html</id><summary type="html">&lt;p&gt;Introduction to writing RNN sequence tagging code using PyTorch.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+</content><category term="posts"></category><category term="python"></category><category term="machine learning"></category></entry><entry><title>Pytorch RNN sequence tagging</title><link href="https://shubhanshu.com/blog/pytorch-rnn-sequence-tagging.html" rel="alternate"></link><published>2017-09-03T01:57:00-05:00</published><updated>2023-08-19T08:19:40-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-09-03:/blog/pytorch-rnn-sequence-tagging.html</id><summary type="html">&lt;p&gt;Introduction to writing RNN sequence tagging code using PyTorch.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -18582,7 +18736,7 @@ Wall time: 58.7 s
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="python"></category><category term="machine learning"></category><category term="deeplearning"></category></entry><entry><title>Metropolis Hastings algorithm - a python primer</title><link href="https://shubhanshu.com/blog/metropolis-hastings-primer.html" rel="alternate"></link><published>2017-04-18T02:19:00-05:00</published><updated>2023-08-19T08:07:12-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-04-18:/blog/metropolis-hastings-primer.html</id><summary type="html">&lt;p&gt;A pure numpy and python based primer to implementing and visualizing Metropolis Hastings algorithm for MCMC sampling.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+</content><category term="posts"></category><category term="python"></category><category term="machine learning"></category><category term="deeplearning"></category></entry><entry><title>Metropolis Hastings algorithm - a python primer</title><link href="https://shubhanshu.com/blog/metropolis-hastings-primer.html" rel="alternate"></link><published>2017-04-18T02:19:00-05:00</published><updated>2023-08-19T08:19:40-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-04-18:/blog/metropolis-hastings-primer.html</id><summary type="html">&lt;p&gt;A pure numpy and python based primer to implementing and visualizing Metropolis Hastings algorithm for MCMC sampling.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -23404,7 +23558,7 @@ h6BbAAAAAElFTkSuQmCC
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="machine learning"></category><category term="implementation"></category><category term="bayesian"></category></entry><entry><title>Convex Optimization using CVXPY</title><link href="https://shubhanshu.com/blog/convex-optimization-cvxpy.html" rel="alternate"></link><published>2017-01-02T10:30:00-06:00</published><updated>2023-08-19T08:07:12-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-01-02:/blog/convex-optimization-cvxpy.html</id><summary type="html">&lt;p&gt;Trying out CVXPY after listening to Stephen P. Boyd's lectures from Machine Learning Summer School, Tubingen and Kyoto, 2015 - &lt;a href="http://web.stanford.edu/~boyd/papers/cvx_short_course.html"&gt;http://web.stanford.edu/~boyd/papers/cvx_short_course.html&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+</content><category term="posts"></category><category term="machine learning"></category><category term="implementation"></category><category term="bayesian"></category></entry><entry><title>Convex Optimization using CVXPY</title><link href="https://shubhanshu.com/blog/convex-optimization-cvxpy.html" rel="alternate"></link><published>2017-01-02T10:30:00-06:00</published><updated>2023-08-19T08:19:40-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2017-01-02:/blog/convex-optimization-cvxpy.html</id><summary type="html">&lt;p&gt;Trying out CVXPY after listening to Stephen P. Boyd's lectures from Machine Learning Summer School, Tubingen and Kyoto, 2015 - &lt;a href="http://web.stanford.edu/~boyd/papers/cvx_short_course.html"&gt;http://web.stanford.edu/~boyd/papers/cvx_short_course.html&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;$\DeclareMathOperator*{\argmin}{arg\,min}$&lt;/p&gt;
@@ -26347,7 +26501,7 @@ QmCC
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="posts"></category><category term="machine learning"></category></entry><entry><title>Getting started with pelican</title><link href="https://shubhanshu.com/blog/getting-started-pelican.html" rel="alternate"></link><published>2016-11-08T10:30:00-06:00</published><updated>2023-08-19T08:07:12-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-11-08:/blog/getting-started-pelican.html</id><summary type="html">&lt;p&gt;Using pelican, jupyter notebook to start a blog.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+</content><category term="posts"></category><category term="machine learning"></category></entry><entry><title>Getting started with pelican</title><link href="https://shubhanshu.com/blog/getting-started-pelican.html" rel="alternate"></link><published>2016-11-08T10:30:00-06:00</published><updated>2023-08-19T08:19:40-05:00</updated><author><name>Shubhanshu Mishra</name></author><id>tag:shubhanshu.com,2016-11-08:/blog/getting-started-pelican.html</id><summary type="html">&lt;p&gt;Using pelican, jupyter notebook to start a blog.&lt;/p&gt;</summary><content type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="First-plot-using-pelican"&gt;First plot using pelican&lt;a class="anchor-link" href="#First-plot-using-pelican"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;I am trying this new format for blogging using jupyter notebooks and pelican library. The motivation is to easily share my experiments using notebooks and write accompanying thoughts.&lt;/p&gt;
