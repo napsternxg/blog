@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://shubhanshu.com/blog/theme/stylesheet/style.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.1/litera/bootstrap.min.css" rel="stylesheet" integrity="sha512-Ze0T5yoPnXhcETAFZDb7QSgCVQa1QDkA1c+wrFiRdSqcVXOnyutqKxOzt/vE3Qo9Sqto5EdJuBxQ7LLyOd3ofg==" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="https://shubhanshu.com/blog/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://shubhanshu.com/blog/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://shubhanshu.com/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Interpreting Models Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+
+<meta name="author" content="Shubhanshu Mishra" />
+<meta name="description" content="In this post I will show how precision and recall are related to accuracy and how they can be thought of as filtered versions of accuracy. Accuracy Accuracy is a fundamental concept in evaluating every day systems. In simple terms, accuracy is defined as proportion of times the predictions of …" />
+<meta name="keywords" content="">
+
+<meta property="og:site_name" content="Interpreting Models"/>
+<meta property="og:title" content="Precision and Recall are just filtered accuracies"/>
+<meta property="og:description" content="In this post I will show how precision and recall are related to accuracy and how they can be thought of as filtered versions of accuracy. Accuracy Accuracy is a fundamental concept in evaluating every day systems. In simple terms, accuracy is defined as proportion of times the predictions of …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://shubhanshu.com/blog/accuracy-precision-recall.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2023-08-19 23:48:00-05:00"/>
+<meta property="article:modified_time" content="2023-08-19 08:07:12.790938-05:00"/>
+<meta property="article:author" content="https://shubhanshu.com/blog/author/shubhanshu-mishra.html">
+<meta property="article:section" content="posts"/>
+<meta property="og:image" content="/assets/images/pic.jpg">
+
+  <title>Interpreting Models &ndash; Precision and Recall are just filtered accuracies</title>
+
+</head>
+<body>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container">
+          <a class="navbar-brand" href="https://shubhanshu.com/blog">Interpreting Models</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor03">
+              <ul class="navbar-nav me-auto">
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Notes</a>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/complex-systems.html#complex-systems">Complex Systems</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/data-mining.html#data-mining">Data Mining</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/data-sources.html#data-sources">Data Sources</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/dstd.html#dstd">Digital Social Trace Data</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/explorables.html#explorables">Explorable Explanations</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/finance.html#finance">Finance</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/ir.html#ir">Information Retrieval</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/ml.html#ml">Machine Learning</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/ml-ethics.html#ml-ethics">Machine Learning Ethics</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/math.html#math">Mathematics</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/nlp.html#nlp">Natural Language Processing</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/networks.html#networks">Networks</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/online-experimentation.html#online-experimentation">Online Experimentation</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/programming.html#programming">Programming</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/quantum-computing.html#quantum-computing">Quantum Computing</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/recsys.html#recsys">Recommender Systems</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/scientific-research.html#scientific-research">Scientific Research</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/search.html#search">Search</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/statistics.html#statistics">Statistics</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/video-making.html#video-making">Video Making</a>
+                          <a class="dropdown-item" href="https://shubhanshu.com/blog/visualization.html#visualization">Visualization</a>
+                      </div>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="https://shubhanshu.com/blog/archives/">Archives</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://shubhanshu.com/blog/category/">Categories</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://shubhanshu.com/blog/tag/">Tags</a></li>
+              </ul>
+              <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link" href="https://shubhanshu.com/" target="_blank">Personal Website</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://shubhanshu.com/blog/feeds/all.atom.xml">    Atom
+</a></li>
+
+              </ul>
+          </div>
+          </div>
+      </nav>
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+          <main>
+<article class="single">
+  <header>
+      
+    <h1 id="accuracy-precision-recall">Precision and Recall are just filtered accuracies</h1>
+    <p>
+          Posted on 19/08/2023 in <a href="https://shubhanshu.com/blog/category/posts.html" class="badge bg-primary">posts</a>
+
+
+    </p>
+  </header>
+  <hr/>
+
+
+  <!--START: Article content-->
+  <p>In this post I will show how precision and recall are related to accuracy and how they can be thought of as filtered versions of accuracy.</p>
+<h1 id="accuracy">Accuracy</h1>
+<p>Accuracy is a fundamental concept in evaluating every day systems. In simple terms, accuracy is defined as proportion of times the predictions of our system matched the true outcome (assuming the true outcome exists). For this post lets follow the scikit-learn convention and define <code>y_true</code> as the true outcome and <code>y_pred</code> as the predictions. </p>
+<p>In mathematical terms accuracy can be simply written as the mean value of the indicator function which is 1 when the <code>y_true == y_pred</code> and 0 otherwise.</p>
+<p>More consicely, this can be written as $accuracy(y_{true}, y_{pred}) = \frac{1}{N} * \sum_i \mathbb{1}[y_{true} = y_{pred}]$.</p>
+<h2 id="confusion-matrix">Confusion Matrix</h2>
+<p>Another popular way of computing accuracy is by using the confusion matrix. If our outcome classes can be enumerated as 0, 1, 2, ... then the confusion matrix $CM$ will contain elements $CM[i, j] = \sum_i \mathbb{1}[y_{true} = i \land y_{pred} = j]$, i.e. count of the number of times $y_{true}$ was $i$ and $y_{pred}$ was $j$. </p>
+<p>A confusion matrix for binary classification (assuming $+$ as the positive class) may look as follows:</p>
+<table>
+<thead>
+<tr>
+<th>true/pred</th>
+<th>$-$</th>
+<th>$+$</th>
+<th>total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$-$</td>
+<td>10 [TN]</td>
+<td>05 [FP]</td>
+<td>15 [$-_{true}$]</td>
+</tr>
+<tr>
+<td>$+$</td>
+<td>35 [FN]</td>
+<td>50 [TP]</td>
+<td>85 [$+_{true}$]</td>
+</tr>
+<tr>
+<td>total</td>
+<td>45 [$-_{pred}$]</td>
+<td>55 [$+_{pred}$]</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<p>Here the terms mean the following:</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Defition</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TP</td>
+<td>True Positives</td>
+<td>Number of times the $+$ class is predicted as $+$; correctly predicted as positive</td>
+</tr>
+<tr>
+<td>FP</td>
+<td>False Positives</td>
+<td>Number of times the $-$ class is predicted as $+$; i.e. incorrectly predicted as positive</td>
+</tr>
+<tr>
+<td>FN</td>
+<td>False Negatives</td>
+<td>Number of times the $+$ class is predicted as $-$; i.e. incorrectly predicted as negative</td>
+</tr>
+<tr>
+<td>TN</td>
+<td>True Positives</td>
+<td>Number of times the $-$ class is predicted as $-$; i.e. correctly predicted as negative</td>
+</tr>
+</tbody>
+</table>
+<p>This confusion matrix approach easily extends to multi-class cases and is quite helpful when defining Precision, Recall metrics as we will see below.</p>
+<p>Finally, Accuracy can be defined in terms of the confusion matrix as $accuracy = \frac{TP + TN}{TP + FP + FN + TN}$</p>
+<h1 id="precison-and-recall">Precison and Recall</h1>
+<p>Precision and Recall are popular evaluation metrics used for evaluating classification systems and are very valuable when we have multiple classes and these classes are present with a skewed distribution in the data. </p>
+<p>Precision recall metrics are often defined using the confusion matrix approach as follows: </p>
+<ul>
+<li>$precision = \frac{TP}{ TP + FP}$</li>
+<li>$recall = \frac{TP}{ TP + FN}$</li>
+</ul>
+<p>However, I find this definition restrictive, i.e. this only works for binary classification use cases and for each new class we need to define a new confusion matrix. I also find this formulation difficult to remember. E.g. in my initial days of learning these definitions I often used to confuse False Positive and False Negatives. </p>
+<p>Furthermore, this also relies on the confusion matrix approach to compute the values, which has its benefits in terms of computational complexity as we can compute the confusion matrix once on a large dataset and compute all sorts of metrics on top of this. </p>
+<p>Here, I am going to share my convention of remembering what precision and recall means and this will help us later connect to the accuracy metric. </p>
+<p>## Precision Recall as filtered accuracies</p>
+<p>If you look at the confusion matrix above you will notice that precision is really defined as the ratio of $\frac{CM[+, +]}{\sum_{true~classes} CM[:, +]}$.</p>
+<p>This ratio can be stated $\frac{correct~prediction~of~+<em class>{class}}{all~the~ predictions~of~+</em>}$. </p>
+<p>If you notice clearly, this is just the accuracy of the data limited to items predicted as $+<em true>{class}$ or simply $precision(y</em>, y_{pred}, class) = accuracy(y_{true}[y_{pred} = class], y_{pred}[y_{pred} = class])$, where $X[y=class]$ selects only those items from $X$ where $y=class$, we can $y = class$ as a filter or mask.</p>
+<p>Similarly, recall is $\frac{CM[+, +]}{\sum_{pred~classes} CM[+, :]}$ or $\frac{correct~prediction~of~+<em class>{class}}{all~the~items~of~+</em>}$ or $recall(y_{true}, y_{pred}, class) = accuracy(y_{true}[y_{true} = class], y_{pred}[y_{true} = class])$. </p>
+<p>So if you look closely, you will notice that precision and recall only differ in the filter used to send data to accuracy. Precision uses the filter $[y_{pred} = +]$ while recall uses the filter $[y_{true} = +]$.</p>
+<p>Furthermore, we can see that if we swap the arguments to precision or recall we get the value for the other, i.e. $precision(y_{true}, \boldsymbol{y_{pred}}, class) = recall(\boldsymbol{y_{pred}}, y_{true}, class)$.</p>
+<p>Furthermore, this definition can easily be extended to multi class setting where you simply need to replace $+$ with the new class.</p>
+<h2 id="python-implementation">Python Implementation</h2>
+<p>Next we are going to see how to implement these functions in python using the abstractions defined above.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">accuracy</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">y_true</span> <span class="o">==</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">masked_accuracy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">accuracy</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">mask</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">class_specific_accuracy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">true_class</span><span class="p">):</span>
+  <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">true_class</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">masked_accuracy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">mask</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">recall</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">true_class</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">class_specific_accuracy</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">true_class</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">precision</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">true_class</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">class_specific_accuracy</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="n">true_class</span><span class="p">)</span>
+
+<span class="c1"># Notice that recall(y_true, y_pred, true_class) == precision(y_pred, y_true, true_class)</span>
+</code></pre></div>
+
+<p>We can now compare the implementation against the sklearn implementation. </p>
+<div class="highlight"><pre><span></span><code><span class="n">N</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">true_class</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">y_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">true_class</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">true_class</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+
+<span class="n">report</span> <span class="o">=</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">report</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">accuracy</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred</span><span class="p">)</span><span class="si">=:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">precision</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred</span><span class="p">,</span><span class="w"> </span><span class="n">true_class</span><span class="p">)</span><span class="si">=:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">recall</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred</span><span class="p">,</span><span class="w"> </span><span class="n">true_class</span><span class="p">)</span><span class="si">=:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">recall</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred</span><span class="p">,</span><span class="w"> </span><span class="n">true_class</span><span class="p">)</span><span class="si">=:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> == </span><span class="si">{</span><span class="n">precision</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span><span class="w"> </span><span class="n">y_true</span><span class="p">,</span><span class="w"> </span><span class="n">true_class</span><span class="p">)</span><span class="si">=:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Leading to the outputs:</p>
+<div class="highlight"><pre><span></span><code>              precision    recall  f1-score   support
+
+           0       0.50      0.50      0.50      4939
+           1       0.51      0.50      0.51      5061
+
+    accuracy                           0.50     10000
+   macro avg       0.50      0.50      0.50     10000
+weighted avg       0.50      0.50      0.50     10000
+
+accuracy(y_true, y_pred)=0.50
+precision(y_true, y_pred, true_class)=0.51
+recall(y_true, y_pred, true_class)=0.50
+recall(y_true, y_pred, true_class)=0.50 == precision(y_pred, y_true, true_class)=0.50
+</code></pre></div>
+
+<p>If you notice, this doesn't require us to construct the full confusion matrix thereby making the approach suitable where the number of classes is very large. </p>
+<h2 id="example-of-application-to-named-entity-recognition-evaluation">Example of application to Named Entity Recognition Evaluation</h2>
+<p>One example of where this is useful is when evaluating named entity recognition systems where we want to evaluate if the model prediction at the entity level. E.g. <code>[Shubhanshu Mishra](PER) visited [SFO](LOC)</code> was predicted by the model as <code>[Shubhanshu](PER) Mishra visited [SFO](LOC)</code> with entity types as <code>PER</code> and <code>LOC</code>. Here, if we define a class as <code>(docid, start, end, type)</code> i.e. <code>y_true = [(0, 0, 17, PER), (0, 26, 29, LOC)]</code> and <code>y_pred=[(0, 0, 10, PER), (0, 26, 29, LOC)]</code> we can easily compute the precision, and recall values of the data as simply <code>precision = len(set(y_true) &amp; set(y_pred)) / len(set(y_pred))</code> and <code>recall = len(set(y_true) &amp; set(y_pred)) / len(set(y_true))</code> and their type specific versions as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">precision_ner</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+    <span class="n">type_specific_true</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(((</span><span class="n">d</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="ow">in</span> <span class="n">y_true</span> <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="nb">type</span><span class="p">))</span>
+    <span class="n">type_specific_pred</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(((</span><span class="n">d</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="ow">in</span> <span class="n">y_pred</span> <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="nb">type</span><span class="p">))</span>
+    <span class="n">correct_predictions</span> <span class="o">=</span> <span class="n">type_specific_true</span> <span class="o">&amp;</span> <span class="n">type_specific_pred</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">correct_predictions</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">type_specific_pred</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">recall_ner</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">precision_ner</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span>
+</code></pre></div>
+
+<p>You can now extend it to Named Entity Recognition and Disambiguation (NERD) by defining the class as <code>(docid, start, end, type, entity_id)</code>. This is the approach we have taken in our paper <a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/09723c9f291f6056fd1885081859c186-Abstract-Datasets_and_Benchmarks.html">TweetNERD - End to End Entity Linking Benchmark for Tweets</a>.</p>  
+  <!--END: Article content-->
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'shubhanshu-blog';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+<!-- End Disqus -->
+</article>
+          </main>
+        </div>
+    </div>
+  </div>
+  <footer class="footer text-center text-muted">
+    <hr/>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+<p class="font-weight-light small">
+&copy;  2016 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+<a rel="license"
+   href="http://creativecommons.org/licenses/by-sa/4.0/"
+   target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+</a>
+<br/>
+Powered by <a href="http://getpelican.com" target="_blank">Pelican</a>. <a href="https://github.com/napsternxg/pelican-bootswatch" target="_blank">pelican-bootswatch</a> by <a href="https://shubhanshu.com">shubhanshu.com</a>. Made using <a href="http://getbootstrap.com/">Twitter Bootstrap</a> and <a href="http://bootswatch.com/litera/">Bootswatch litera</a> theme. Icons from <a href="http://glyphicons.com/">Glyphicons</a>.</p>
+  </div>
+</div>
+  </div>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44393164-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics --></html>
