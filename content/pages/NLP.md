@@ -651,7 +651,7 @@ Summary: Links related to NLP resources
 * [CoNLL++ (CoNLL 03 EN NER Fixed dataset)](https://github.com/ZihanWangKi/CrossWeigh)
 * [CANARD: a dataset for question-in-context rewriting](https://sites.google.com/view/qanta/projects/canard)
 * [WikiWiki - a large scale entity typing dataset](https://github.com/amazon-science/wikiwiki-dataset)
-* Expedia Group ECML/PKDD 2022 challenge - Zero-shot Cross-brand Lodging Recommendation- https://github.com/ExpediaGroup/pkdd22-challenge-expediagroup
+* [Expedia Group ECML/PKDD 2022 challenge - Zero-shot Cross-brand Lodging Recommendation](https://github.com/ExpediaGroup/pkdd22-challenge-expediagroup)
 * [MACCROBAT: NER dataset for 41 biomedical entities using PubMed abstracts](https://figshare.com/articles/dataset/MACCROBAT2018/9764942)
 * [NusaX: Multilingual Parallel Sentiment Dataset for 10 Indonesian Local Languages](https://github.com/IndoNLP/nusax/)
 * [MAVE: : A Product Dataset for Multi-source Attribute Value Extraction](https://github.com/google-research-datasets/MAVE)
@@ -662,6 +662,7 @@ Summary: Links related to NLP resources
 * [P-Stance: A Large Dataset for Stance Detection in Political Domain](https://github.com/chuchun8/PStance/)
 * [MultiNERD: A Multilingual, Multi-Genre and Fine-Grained Dataset for Named Entity Recognition (and Disambiguation)](https://github.com/Babelscape/multinerd) - [Model - SpanMarker for Named Entity Recognition](https://github.com/tomaarsen/SpanMarkerNER)
 * [WikiNEuRal: Combined Neural and Knowledge-based Silver Data Creation for Multilingual NER](https://github.com/Babelscape/wikineural)
+* [WANDS - Wayfair ANnotation Dataset - Wayfair product search relevance dataset](https://github.com/wayfair/WANDS)
 
 ## Shared tasks, competitions
 
