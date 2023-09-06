@@ -663,6 +663,9 @@ Summary: Links related to NLP resources
 * [MultiNERD: A Multilingual, Multi-Genre and Fine-Grained Dataset for Named Entity Recognition (and Disambiguation)](https://github.com/Babelscape/multinerd) - [Model - SpanMarker for Named Entity Recognition](https://github.com/tomaarsen/SpanMarkerNER)
 * [WikiNEuRal: Combined Neural and Knowledge-based Silver Data Creation for Multilingual NER](https://github.com/Babelscape/wikineural)
 * [WANDS - Wayfair ANnotation Dataset - Wayfair product search relevance dataset](https://github.com/wayfair/WANDS)
+* [Humset toponym annotations - Location NER 469 docs](https://github.com/embelliardo/HumSet_geolocation_annotations)
+* [DISTEMIST: DISease TExt Mining Shared Task - NERD dataset](https://temu.bsc.es/distemist/)
+* [SympTEMIST: SYMPtoms, signs and findings TExt MIning Shared Task - NERD dataset](https://temu.bsc.es/symptemist/)
 
 ## Shared tasks, competitions
 
