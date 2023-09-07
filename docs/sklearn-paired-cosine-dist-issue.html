@@ -23,18 +23,24 @@
     <meta name="robots" content="" />
 
 
-    <meta name="author" content="Shubhanshu Mishra" />
-    <meta name="description" content="This is a collection of notes and thoughts on mathematical model interpretation via their code implementation." />
+<meta name="author" content="Shubhanshu Mishra" />
+<meta name="description" content="Sklearn Paired Cosine Distance Issue" />
+<meta name="keywords" content="machine-learning">
+
 <meta property="og:site_name" content="Interpreting Models"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="Interpreting Models"/>
-<meta property="og:description" content="This is a collection of notes and thoughts on mathematical model interpretation via their code implementation."/>
+<meta property="og:title" content="Sklearn Paired Cosine Distance Issue"/>
+<meta property="og:description" content="Sklearn Paired Cosine Distance Issue"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://shubhanshu.com/blog"/>
+<meta property="og:url" content="https://shubhanshu.com/blog/sklearn-paired-cosine-dist-issue.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2023-09-07 10:20:00-05:00"/>
+<meta property="article:modified_time" content="2023-09-07 18:31:16.499021-05:00"/>
+<meta property="article:author" content="https://shubhanshu.com/blog/author/shubhanshu-mishra.html">
+<meta property="article:section" content="posts"/>
+<meta property="article:tag" content="machine-learning"/>
 <meta property="og:image" content="/assets/images/pic.jpg">
 
-  <title>Interpreting Models &ndash;     Archives
-</title>
+  <title>Interpreting Models &ndash; Sklearn Paired Cosine Distance Issue</title>
 
 </head>
 <body>
@@ -92,79 +98,66 @@
         <div class="col-lg-12">
           <main>
 <article class="single">
-    <header>
-        <h1>    Archives
-</h1>
-    </header>
-    <div>
-        <h3>2023</h3>
-        <ul class="article-list">
-    <li>
-       <small class="text-muted"> 07/09/2023 </small> - 
-       <a href="https://shubhanshu.com/blog/sklearn-paired-cosine-dist-issue.html#sklearn-paired-cosine-dist-issue">Sklearn Paired Cosine Distance Issue</a>
-    </li>
-    <li>
-       <small class="text-muted"> 19/08/2023 </small> - 
-       <a href="https://shubhanshu.com/blog/accuracy-precision-recall.html#accuracy-precision-recall">Precision and Recall are just filtered accuracies</a>
-    </li>
-    <li>
-       <small class="text-muted"> 31/05/2023 </small> - 
-       <a href="https://shubhanshu.com/blog/ai-safety-areas.html#ai-safety-areas">AI Safety Areas</a>
-    </li>
-</ul>
-        <h3>2022</h3>
-        <ul class="article-list">
-    <li>
-       <small class="text-muted"> 15/09/2022 </small> - 
-       <a href="https://shubhanshu.com/blog/git-copy-files-across-repos-keeping-commit-history.html#git-copy-files-across-repos-keeping-commit-history">Copy Files Across Git Repositories Keeping Commit History</a>
-    </li>
-    <li>
-       <small class="text-muted"> 13/01/2022 </small> - 
-       <a href="https://shubhanshu.com/blog/wordle-hack.html#wordle-hack">Wordle One Shot Solution (Hack)</a>
-    </li>
-</ul>
-        <h3>2019</h3>
-        <ul class="article-list">
-    <li>
-       <small class="text-muted"> 21/07/2019 </small> - 
-       <a href="https://shubhanshu.com/blog/evt-part-1-basics.html#evt-part-1-basics">Part 1 - Understanding extreme value theory - Basics</a>
-    </li>
-</ul>
-        <h3>2017</h3>
-        <ul class="article-list">
-    <li>
-       <small class="text-muted"> 11/09/2017 </small> - 
-       <a href="https://shubhanshu.com/blog/time-dependent-models.html#time-dependent-models">Time dependent models</a>
-    </li>
-    <li>
-       <small class="text-muted"> 03/09/2017 </small> - 
-       <a href="https://shubhanshu.com/blog/pytorch-rnn-sequence-tagging.html#pytorch-rnn-sequence-tagging">Pytorch RNN sequence tagging</a>
-    </li>
-    <li>
-       <small class="text-muted"> 18/04/2017 </small> - 
-       <a href="https://shubhanshu.com/blog/metropolis-hastings-primer.html#metropolis-hastings-primer">Metropolis Hastings algorithm - a python primer</a>
-    </li>
-    <li>
-       <small class="text-muted"> 02/01/2017 </small> - 
-       <a href="https://shubhanshu.com/blog/convex-optimization-cvxpy.html#convex-optimization-cvxpy">Convex Optimization using CVXPY</a>
-    </li>
-</ul>
-        <h3>2016</h3>
-        <ul class="article-list">
-    <li>
-       <small class="text-muted"> 08/11/2016 </small> - 
-       <a href="https://shubhanshu.com/blog/getting-started-pelican.html#getting-started-pelican">Getting started with pelican</a>
-    </li>
-    <li>
-       <small class="text-muted"> 04/04/2016 </small> - 
-       <a href="https://shubhanshu.com/blog/semi-sup-graphemb-salakh.html#semi-sup-graphemb-salakh">Revisiting Semi-Supervised Learning with Graph Embeddings</a>
-    </li>
-    <li>
-       <small class="text-muted"> 09/03/2016 </small> - 
-       <a href="https://shubhanshu.com/blog/ama-socher.html#ama-socher">Ask Me Anything - Dynamic Memory Networks for Natural Language Processing</a>
-    </li>
-</ul>
-    </div>
+  <header>
+      
+    <h1 id="sklearn-paired-cosine-dist-issue">Sklearn Paired Cosine Distance Issue</h1>
+    <p>
+          Posted on 07/09/2023 in <a href="https://shubhanshu.com/blog/category/posts.html" class="badge bg-primary">posts</a>
+
+
+      <a href="https://shubhanshu.com/blog/tag/machine-learning.html" class="badge bg-info">machine-learning</a>
+    </p>
+  </header>
+  <hr/>
+
+
+  <!--START: Article content-->
+  <p>Here I explore an issue with how sklearn's <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.paired_cosine_distances.html"><code>paired_cosine_distances</code></a> function returns erronous values when we have one vector with zero norm. </p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">paired_cosine_distances</span><span class="p">,</span> <span class="n">paired_euclidean_distances</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+
+<span class="n">paired_cosine_distances</span><span class="p">(</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]),</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="p">)</span>
+<span class="c1"># Outputs: array([0. , 0. , 0.5, 1. ])</span>
+
+<span class="c1"># dot products</span>
+<span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]))</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># Outputs: array([2, 1, 0, 0])</span>
+</code></pre></div>
+
+<p>Dot product between [0, 0] and [0, 1] is zero and hence cosine sim should also be zero (or at best undefined).
+However, sklearn paried cosine dist will give a value of 0.5 for this case which is not realistic. 
+The reason for this dist value is because in sklearn the cosine dist is defined as:
+1 - cos(theta) = 0.5*|A - B| for unit normed vectors A and B. 
+This makes |A - B| term equal to 1 for the case where one of the vector has zero norm.</p>
+<p>However, if we take the dot product defition of cosine dist = 1 - A.B / (|A|*|B|), 
+this value should either be undefined as we have a 0/0 division or should be 1.0 assuming A.B = 0 takes precedence.</p>
+<p>This can cause incorrect results when mining massive datasets using pairwise cosine dist which is an important metric in ML for NN search or as a feature to downstream models.</p>
+<p>Make sure to keep this in mind or filter out values with zero norm when working with cosine distances in sklearn.</p>  
+  <!--END: Article content-->
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'shubhanshu-blog';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+<!-- End Disqus -->
 </article>
           </main>
         </div>
