@@ -666,6 +666,7 @@ Summary: Links related to NLP resources
 * [Humset toponym annotations - Location NER 469 docs](https://github.com/embelliardo/HumSet_geolocation_annotations)
 * [DISTEMIST: DISease TExt Mining Shared Task - NERD dataset](https://temu.bsc.es/distemist/)
 * [SympTEMIST: SYMPtoms, signs and findings TExt MIning Shared Task - NERD dataset](https://temu.bsc.es/symptemist/)
+* [SemEval-2 - 2010 - Evaluation Exercises on Semantic Evaluation - ACL SigLex event](https://semeval2.fbk.eu/semeval2.php?location=tasks-short)
 
 ## Shared tasks, competitions
 
