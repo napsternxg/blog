@@ -258,3 +258,5 @@ Summary: Links related to many datasets
 * [Food and Nutrient Database for Dietary Studies - Food ingredients](https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/food-surveys-research-group/docs/fndds-download-databases/)
 * [LexMapr - A Lexicon and Rule-Based Tool for Translating Short Biomedical Specimen Descriptions into Semantic Web Ontology Terms](https://github.com/cidgoh/LexMapr)
 * [FoodBase corpus: A new resource of annotated food entities](https://cs.ijs.si/repository/FoodBase/)
+* [OpenFoodFacts - Used by Wikidata](https://world.openfoodfacts.org/data) - [Datasets](https://github.com/openfoodfacts/openfoodfacts-ai/blob/develop/data-sets.md) - [Translations](https://github.com/openfoodfacts/openfoodfacts-translations/tree/main/openfoodfacts-label-taxonomy)
+    *  [Open Beauty Facts](https://world.openbeautyfacts.org/) - [Open Product Facts](https://world.openproductsfacts.org/)
