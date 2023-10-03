@@ -237,7 +237,7 @@ Summary: Links related to many datasets
 * [cosylabiiit/Recipedb-companion-data](https://github.com/cosylabiiit/Recipedb-companion-data)
 * [GitHub - cosylabiiit/recipe-knowledge-mining](https://github.com/cosylabiiit/recipe-knowledge-mining) 
 * [Training Recipe Ingredient NER with Transformers](https://skeptric.com/recipe-ner-transformers/)     
-* <https://tasty.co/> 
+* [Tasty.co - Each recipe page has LD+JSON data for recipe](https://tasty.co/)
 * [Recipes from Tasty | Kaggle](https://www.kaggle.com/datasets/zeeenb/recipes-from-tasty) 
 * [RecipeNLG: A Cooking Recipes Dataset for Semi-Structured Text Generation - ACL Anthology](https://aclanthology.org/2020.inlg-1.4/)
 * [recipe_nlg - Datasets at Hugging Face](https://huggingface.co/datasets/recipe_nlg)
