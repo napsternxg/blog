@@ -249,7 +249,7 @@ Summary: Links related to many datasets
 * [Wikipedia Commons - Category:Beverages](https://commons.wikimedia.org/wiki/Category:Beverages)   
 * [Wikipedia Commons - Category:Food](https://commons.wikimedia.org/wiki/Category:Food)
 * [🪐 spaCy Project: Analyzing how mentions of ingredients change over time (Named Entity Recognition)](https://github.com/explosion/projects/tree/v3/tutorials/ner_food_ingredients)
-* [TASTESet recipe NER model and dataset](https://github.com/taisti/TASTEset/) - [TasteSet 2.0 - 1K annotated](https://github.com/taisti/TASTEset-2.0/) - [Entities Linked to https://foodon.org/]()
+* [TASTESet recipe NER model and dataset](https://github.com/taisti/TASTEset/) - [TasteSet 2.0 - 1K annotated](https://github.com/taisti/TASTEset-2.0/) - [Entities Linked to https://foodon.org/]() - [Spacy NER Training](https://colab.research.google.com/drive/16QLMiyQpFxDc8qw64zYupsypy8BkywjB?usp=sharing)
 * [FINER: Food Ingredient NER Dataset](https://figshare.com/articles/dataset/Food_Ingredient_Named-Entity_Data_Construction_using_Semi-supervised_Multi-model_Prediction_Technique/20222361/3) - [Paper: SMPT: A Semi-Supervised Multi-Model Prediction Technique for Food Ingredient Named Entity Recognition (FINER) Dataset Construction](https://www.mdpi.com/2227-9709/10/1/10)
 * [NYTimes - CRF Ingredient Phrase Tagger](https://github.com/NYTimes/ingredient-phrase-tagger)
 * [CulinaryDB - Data Analytics for World Cuisines](https://cosylab.iiitd.edu.in/culinarydb/)
@@ -269,3 +269,4 @@ Summary: Links related to many datasets
 * [Food 101](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/)
 * [Assorted, Archetypal, and Annotated Two Million (3A2M) Cooking Recipe Dataset](https://www.kaggle.com/datasets/nazmussakibrupol/3a2m-cooking-recipe-dataset)
 * [FINER: Food Ingredient NER Dataset](https://figshare.com/articles/dataset/Food_Ingredient_Named-Entity_Data_Construction_using_Semi-supervised_Multi-model_Prediction_Technique/20222361/3)
+* [A Named Entity Based Approach to Model Recipes](https://github.com/cosylabiiit/recipe-knowledge-mining/)
