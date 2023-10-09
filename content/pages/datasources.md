@@ -270,4 +270,4 @@ Summary: Links related to many datasets
 * [Assorted, Archetypal, and Annotated Two Million (3A2M) Cooking Recipe Dataset](https://www.kaggle.com/datasets/nazmussakibrupol/3a2m-cooking-recipe-dataset)
 * [FINER: Food Ingredient NER Dataset](https://figshare.com/articles/dataset/Food_Ingredient_Named-Entity_Data_Construction_using_Semi-supervised_Multi-model_Prediction_Technique/20222361/3)
 * [A Named Entity Based Approach to Model Recipes](https://github.com/cosylabiiit/recipe-knowledge-mining/)
-* [Common Crawl Web Dumps JSONLD](https://webdatacommons.org/structureddata/2022-12/stats/schema_org_subsets.html)
+* [Common Crawl Web Dumps JSONLD - Includes Recipes](https://webdatacommons.org/structureddata/2022-12/stats/schema_org_subsets.html) - [Common Crawl JSONLD Dumps](https://webdatacommons.org/structureddata/2022-12/stats/how_to_get_the_data.html)
