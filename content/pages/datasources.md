@@ -23,6 +23,7 @@ Summary: Links related to many datasets
 * [Magellan](https://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md) 
 * [WDC](http://webdatacommons.org/largescaleproductcorpus/v2/index.html) 
 * [DI2KG](http://di2kg.inf.uniroma3.it/datasets.html) 
+* [Benchmark datasets for entity resolution](https://dbs.uni-leipzig.de/de/research/projects/object_matching/benchmark_datasets_for_entity_resolution)
 
 
 ## Location data
@@ -271,3 +272,4 @@ Summary: Links related to many datasets
 * [FINER: Food Ingredient NER Dataset](https://figshare.com/articles/dataset/Food_Ingredient_Named-Entity_Data_Construction_using_Semi-supervised_Multi-model_Prediction_Technique/20222361/3)
 * [A Named Entity Based Approach to Model Recipes](https://github.com/cosylabiiit/recipe-knowledge-mining/)
 * [Common Crawl Web Dumps JSONLD - Includes Recipes](https://webdatacommons.org/structureddata/2022-12/stats/schema_org_subsets.html) - [Common Crawl JSONLD Dumps](https://webdatacommons.org/structureddata/2022-12/stats/how_to_get_the_data.html)
+* [Langual TM - Thesaurus for Food used in Foodon](https://www.langual.org/langual_Downloads.asp)
