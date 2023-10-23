@@ -273,4 +273,4 @@ Summary: Links related to many datasets
 * [A Named Entity Based Approach to Model Recipes](https://github.com/cosylabiiit/recipe-knowledge-mining/)
 * [Common Crawl Web Dumps JSONLD - Includes Recipes](https://webdatacommons.org/structureddata/2022-12/stats/schema_org_subsets.html) - [Common Crawl JSONLD Dumps](https://webdatacommons.org/structureddata/2022-12/stats/how_to_get_the_data.html)
 * [Langual TM - Thesaurus for Food used in Foodon](https://www.langual.org/langual_Downloads.asp)
-* [Food.com Recipes and Interactions - Reviews](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions/)
+* [Food.com Recipes and Interactions - Reviews](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions/) - [Github](https://github.com/majumderb/recipe-personalization)
