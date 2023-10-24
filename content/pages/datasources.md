@@ -274,3 +274,11 @@ Summary: Links related to many datasets
 * [Common Crawl Web Dumps JSONLD - Includes Recipes](https://webdatacommons.org/structureddata/2022-12/stats/schema_org_subsets.html) - [Common Crawl JSONLD Dumps](https://webdatacommons.org/structureddata/2022-12/stats/how_to_get_the_data.html)
 * [Langual TM - Thesaurus for Food used in Foodon](https://www.langual.org/langual_Downloads.asp)
 * [Food.com Recipes and Interactions - Reviews](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions/) - [Github](https://github.com/majumderb/recipe-personalization)
+* [TasteAtlas - Indexed by Wikidata](https://www.tasteatlas.com/about) - [Gist](https://gist.github.com/napsternxg/2695512d0bf9b3ad40208aceceea5f7f)
+
+
+## E-Commerce
+
+* [United Nations Standard Products and Services Code (UNSPSC) is a taxonomy of products and services for use in eCommerce](https://en.wikipedia.org/wiki/UNSPSC)
+* [KB Pedia](https://kbpedia.org/)
+* [Global Product Classification](https://www.gs1.org/)
