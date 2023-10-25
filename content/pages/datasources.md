@@ -243,7 +243,7 @@ Summary: Links related to many datasets
 * [RecipeNLG: A Cooking Recipes Dataset for Semi-Structured Text Generation - ACL Anthology](https://aclanthology.org/2020.inlg-1.4/) - [RecipeNLG](https://recipenlg.cs.put.poznan.pl/) - [HuggingFace](https://huggingface.co/datasets/recipe_nlg)
 * [SHARE: a System for Hierarchical Assistive Recipe Editing](https://aclanthology.org/2022.emnlp-main.761/)
 * [lishuyang/recipepairs - Datasets at Hugging Face](https://huggingface.co/datasets/lishuyang/recipepairs)
-* Open Recipes: <https://huggingface.co/datasets/napsternxg/openrecipes-20170107-061401-recipeitems>
+* Open Recipes: <https://huggingface.co/datasets/napsternxg/openrecipes-20170107-061401-recipeitems> - [Github](https://github.com/fictivekin/openrecipes)
 * [Wikibook - Cookbook:Table_of_Contents](https://en.wikibooks.org/wiki/Cookbook:Table_of_Contents)
 * [Wikipedia Commons - Category:Nutrition](https://commons.wikimedia.org/wiki/Category:Nutrition)
 * [Wikipedia Commons - Category:Food_and_drink](https://commons.wikimedia.org/wiki/Category:Food_and_drink)
