@@ -283,3 +283,4 @@ Summary: Links related to many datasets
 * [KB Pedia](https://kbpedia.org/)
 * [Global Product Classification](https://www.gs1.org/)
 * [Open-World Product Attribute Mining Dataset from Amazon](https://github.com/lxucs/woam)
+* [The Product Types Ontology: High-precision identifiers for product types based on Wikipedia](http://www.productontology.org/)
