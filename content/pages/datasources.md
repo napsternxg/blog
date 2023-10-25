@@ -282,3 +282,4 @@ Summary: Links related to many datasets
 * [United Nations Standard Products and Services Code (UNSPSC) is a taxonomy of products and services for use in eCommerce](https://en.wikipedia.org/wiki/UNSPSC)
 * [KB Pedia](https://kbpedia.org/)
 * [Global Product Classification](https://www.gs1.org/)
+* [Open-World Product Attribute Mining Dataset from Amazon](https://github.com/lxucs/woam)
