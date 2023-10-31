@@ -49,6 +49,9 @@ Summary: Links related to Search resources
 ## Recsys Inspiration
 * [RecSys Papers by Industry and Topic](https://github.com/tangxyw/RecSysPapers/)
 
+## Explainability
+* [Explainable Information Retrieval: A Survey]()
+
 
 # Recommendations
 * [Complex Item Set Recommendation](https://irlab.science.uva.nl/teaching/sigir-2023-tutorial-on-complex-item-set-recommendation/)
@@ -64,6 +67,11 @@ Summary: Links related to Search resources
 
 * [Insights from Amazon shopping queries](https://advertising.amazon.com/library/research/shopping-queries)
 * [Consumption vs. de-consumption: 2 different motivations shaping shopping behavior](https://advertising.amazon.com/blog/consumption-vs-de-consumption?ref_=a20m_us_lbr_rsh_shpgqrys_blg_condecon)
+
+
+# Conversational Search
+
+* [Improving Search Clarification with Structured Information Extracted from Search Results](https://dl.acm.org/doi/10.1145/3580305.3599389)
 
 # Overall
 
