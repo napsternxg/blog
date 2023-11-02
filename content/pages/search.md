@@ -21,6 +21,8 @@ Summary: Links related to Search resources
 
 ## Query Intent
 
+* [Semantic query parsing blueprint](https://blog.griddynamics.com/semantic-query-parsing-blueprint/)
+* [Understanding Natural Language Understanding - PDF](https://nlp.stanford.edu/~wcmac/papers/20140716-UNLU.pdf)
 
 ## Query Refinement
 * [Entity-Centric Query Refinement](https://arxiv.org/abs/2204.00743)
@@ -32,6 +34,8 @@ Summary: Links related to Search resources
 ## Query Tagging
 * [A User-Centered Concept Mining System for Query and Document Understanding at Tencent](https://arxiv.org/abs/1905.08487)
 * [Knowledge-Rich Self-Supervision for Biomedical Entity Linking](https://arxiv.org/abs/2112.07887)
+* [Unsupervised query segmentation using generative language models and wikipedia](https://dl.acm.org/doi/10.1145/1367497.1367545)
+* [Concepts Identification from Queries and Its Application for Search](https://studylib.net/doc/5272193/concepts-identification-from-queries-and-its-application-...)
 
 
 
