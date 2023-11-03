@@ -49,6 +49,8 @@ Summary: Links related to Search resources
 
 ## Diversification
 * [Practical Diversified Recommendations on YouTube with Determinantal Point Processes](https://jgillenw.com/cikm2018.pdf)
+* [Diversity in Search](https://innovation.ebayinc.com/tech/engineering/diversity-in-search/)
+
 
 ## Recsys Inspiration
 * [RecSys Papers by Industry and Topic](https://github.com/tangxyw/RecSysPapers/)
@@ -67,6 +69,11 @@ Summary: Links related to Search resources
 * [Recent Advances in RetrievalAugmented Text Generation](https://jcyk.github.io/RetGenTutorial/)
 
 
+# Visual Search
+
+* [Seven Tips for Visual Search at Scale](https://innovation.ebayinc.com/tech/research/tips-for-visual-search-at-scale/) - [Paper](https://arxiv.org/abs/1706.03154)
+* [Searching for products in virtual reality: Understanding the impact of context and result presentation on user experience](https://www.amazon.science/publications/searching-for-products-in-virtual-reality-understanding-the-impact-of-context-and-result-presentation-on-user-experience)
+
 # Query Advertising
 
 * [Insights from Amazon shopping queries](https://advertising.amazon.com/library/research/shopping-queries)
@@ -81,3 +88,10 @@ Summary: Links related to Search resources
 
 * [Challenges and Research Opportunities in eCommerce Search and Recommendations](https://www.amazon.science/publications/challenges-and-research-opportunities-in-ecommerce-search-and-recommendations)
 * [SIGIR Workshop On eCommerce](https://sigir-ecom.github.io/)
+
+
+# Domains
+
+## E-commerce
+* [Faster E-commerce Search](https://innovation.ebayinc.com/tech/research/making-e-commerce-search-faster/)
+* 

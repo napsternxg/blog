@@ -284,3 +284,4 @@ Summary: Links related to many datasets
 * [Global Product Classification](https://www.gs1.org/)
 * [Open-World Product Attribute Mining Dataset from Amazon](https://github.com/lxucs/woam)
 * [The Product Types Ontology: High-precision identifiers for product types based on Wikipedia](http://www.productontology.org/)
+* [Instacart Market Basket Analysis Dataset](https://www.kaggle.com/competitions/instacart-market-basket-analysis/data) - [Description](https://gist.github.com/jeremystan/c3b39d947d9b88b3ccff3147dbcf6c6b)

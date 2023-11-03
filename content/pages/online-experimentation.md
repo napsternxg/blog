@@ -12,6 +12,7 @@ Summary: Links related to Online Experimentation resources
 
 * [PRACTICAL DEFAULTS FOR A/B TESTING by Ronny Kohavi](https://drive.google.com/file/d/18jukd0M4PgHpBKC_uDFQREMyIYSS3qiL/view) - [link](https://conversionhotel.com/session/keynote-2022-practical-defaults-for-abtesting/)
 * [Online Controlled Experiments: Lessons from Running A/B/n Tests for 12 Years, Ron Kohavi 20151130](https://www.youtube.com/watch?v=qtboCGd_hTA) - [Slides](https://exp-platform.com/kdd2015keynotekohavi/)
+* [A/B Testing Intuition Busters: Common Misunderstandings in Online Controlled Experiments](https://exp-platform.com/abtestingintuitionbusters/)
 
 ### Data Sources
 * [The Upworthy Research Archive](https://osf.io/jd64p/)
