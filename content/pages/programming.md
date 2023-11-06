@@ -26,6 +26,7 @@ Summary: Links related to programming
 
 ## Software Design
 * [Design Pattern](https://refactoring.guru/design-patterns)
+* [Hints and Principles for Computer System Design by Butler Lampson](https://arxiv.org/abs/2011.02455)
 
 
 ## Parallel Computing

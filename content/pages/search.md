@@ -41,8 +41,11 @@ Summary: Links related to Search resources
 
 # Ranking
 
+* [Haystack EU 2023 - Philipp Krenn: Reciprocal Rank Fusion (RRF) - How to Stop Worrying about Boosting](https://www.youtube.com/watch?v=px4YBYrz0NU)
+
 ## Ranking for value
 * [Globally Optimized Mutual Influence Aware Ranking in E-Commerce Search](https://arxiv.org/abs/1805.08524)
+
 
 
 # Result Presentation
