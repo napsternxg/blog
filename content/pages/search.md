@@ -6,6 +6,10 @@ Authors: Shubhanshu Mishra
 Summary: Links related to Search resources
 
 
+# Evaluation
+
+* [An IR-based Evaluation Framework for Web Search Query Segmentation](https://arxiv.org/abs/1111.1497)
+
 # Sparse Search
 
 ## Papers/Slides/Docs
@@ -36,6 +40,9 @@ Summary: Links related to Search resources
 * [Knowledge-Rich Self-Supervision for Biomedical Entity Linking](https://arxiv.org/abs/2112.07887)
 * [Unsupervised query segmentation using generative language models and wikipedia](https://dl.acm.org/doi/10.1145/1367497.1367545)
 * [Concepts Identification from Queries and Its Application for Search](https://studylib.net/doc/5272193/concepts-identification-from-queries-and-its-application-...)
+
+## Query Entity Linking
+* [Understanding Queries through Entities](https://e.humanities.uva.nl/esair14/presentations/PeterMika-slides.pdf)
 
 
 
