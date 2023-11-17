@@ -137,3 +137,8 @@ Summary: Social Networks and Network Related documents
   - https://hapgood.us/2019/03/28/network-heuristics/
   - https://hapgood.us/2018/02/18/recognition-is-futile-why-checklist-approaches-to-information-literacy-fail-and-what-to-do-about-it/
   - https://hapgood.us/2018/09/14/a-short-history-of-craap/
+
+
+## Graph Signals
+
+* [The personal web: Connecting information for better search and recommendation](https://www.microsoft.com/en-us/research/blog/the-personal-web-connecting-information-for-better-search-and-recommendation/)

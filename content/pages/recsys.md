@@ -11,3 +11,9 @@ Summary: Links related to Recommender Systems resources
 ## Links
 * [RecSys Papers by Industry and Topic](https://github.com/tangxyw/RecSysPapers/)
 
+
+## Papers
+
+### Temporal Recsys
+
+* [FIRE: Fast Incremental Recommendation with Graph Signal Processing](https://www.microsoft.com/en-us/research/publication/fire-fast-incremental-recommendation-with-graph-signal-processing/)

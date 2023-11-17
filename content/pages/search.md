@@ -9,6 +9,9 @@ Summary: Links related to Search resources
 # Evaluation
 
 * [An IR-based Evaluation Framework for Web Search Query Segmentation](https://arxiv.org/abs/1111.1497)
+* [Recall, Robustness, and Lexicographic Evaluation](https://arxiv.org/abs/2302.11370)
+* [Are We There Yet? A Decision Framework for Replacing Term Based Retrieval with Dense Retrieval Systems](https://arxiv.org/abs/2206.12993)
+* [Grid-based Evaluation Metrics for Web Image Search](https://github.com/THUxiexiaohui/grid-based-evaluation-metrics)
 
 # Sparse Search
 
@@ -20,6 +23,7 @@ Summary: Links related to Search resources
 
 ## Tools
 * [Rank-BM25: A two line search engine](https://github.com/dorianbrown/rank_bm25)
+* [ClickModels: A Click Model is a probabilistic graphical model used to predict search engine click data from past observations](https://github.com/varepsilon/clickmodels) - [ClickModelsWC: Extra Models](https://github.com/kurakimai/clickmodel_wc)
 
 # Query Understanding
 
@@ -44,7 +48,11 @@ Summary: Links related to Search resources
 ## Query Entity Linking
 * [Understanding Queries through Entities](https://e.humanities.uva.nl/esair14/presentations/PeterMika-slides.pdf)
 
+## Session Based Signals
 
+* [Deep Learning Powered In-Session Contextual Ranking using Clickthrough Data](https://www.microsoft.com/en-us/research/publication/deep-learning-powered-session-contextual-ranking-using-clickthrough-data/)
+* [SIGIR 2022 Tutorial: Sequential/Session-based Recommendations: Challenges, Approaches, Applications and Opportunities](https://neurec22.github.io/SRS&SBRS/) [PDF](https://web.archive.org/web/20231117164647/https://maifile.cn/est/?e=d50425962986)
+* [Session-based Recommender Systems](https://session-based-recommenders.fastforwardlabs.com/)
 
 # Ranking
 
@@ -60,14 +68,24 @@ Summary: Links related to Search resources
 ## Diversification
 * [Practical Diversified Recommendations on YouTube with Determinantal Point Processes](https://jgillenw.com/cikm2018.pdf)
 * [Diversity in Search](https://innovation.ebayinc.com/tech/engineering/diversity-in-search/)
+* [Result Diversification in Search and Recommendation: A Survey](https://arxiv.org/abs/2212.14464) - Very good paper also helpful for query intent understanding
 
 
 ## Recsys Inspiration
 * [RecSys Papers by Industry and Topic](https://github.com/tangxyw/RecSysPapers/)
 
 ## Explainability
-* [Explainable Information Retrieval: A Survey]()
+* [Explainable Information Retrieval: A Survey](https://arxiv.org/abs/2211.02405)
 
+
+# Personalization
+
+* [Personalized retrieval over millions of items](https://www.microsoft.com/en-us/research/publication/personalized-retrieval-over-millions-of-items/)
+* [Encoding History with Context-aware Representation Learning for Personalized Search](https://dl.acm.org/doi/abs/10.1145/3397271.3401175)
+
+
+# Online Learning
+* [Interactive Information Retrieval with Bandit Feedback](https://www.cs.virginia.edu/~hw5x/HCDM/tutorials/sigir2021-iir-bandit/_site/)
 
 # Recommendations
 * [Complex Item Set Recommendation](https://irlab.science.uva.nl/teaching/sigir-2023-tutorial-on-complex-item-set-recommendation/)
@@ -105,3 +123,9 @@ Summary: Links related to Search resources
 ## E-commerce
 * [Faster E-commerce Search](https://innovation.ebayinc.com/tech/research/making-e-commerce-search-faster/)
 * 
+
+
+# User Interfaces
+
+* [Search Interfaces for Biomedical Searching: How do Gaze, User Perception, Search Behaviour and Search Performance Relate?](https://dl.acm.org/doi/10.1145/3498366.3505769)
+* [Modeling User Behavior for Vertical Search: Images, Apps and Products](https://github.com/THUxiexiaohui/SIGIR-2020-Tutorial/tree/master)

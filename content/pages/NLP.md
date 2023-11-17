@@ -681,6 +681,7 @@ Summary: Links related to NLP resources
 * [SemEval shared tasks](https://semeval.github.io/)
 * [TREC shared tasks](https://trec.nist.gov/pubs/call2021.html)
 * [Shared task on implicit and underspecified language](https://unimplicit.github.io/)
+* [Social Book Search Lab](https://social-book-search.humanities.uva.nl/#/overview)
 
 ## Research Groups
 * [University of Copenhagen ](https://supernlp.github.io/) 
