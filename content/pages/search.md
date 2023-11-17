@@ -31,6 +31,7 @@ Summary: Links related to Search resources
 
 * [Semantic query parsing blueprint](https://blog.griddynamics.com/semantic-query-parsing-blueprint/)
 * [Understanding Natural Language Understanding - PDF](https://nlp.stanford.edu/~wcmac/papers/20140716-UNLU.pdf)
+* [Awesome Intent Analysis](https://github.com/mariyahendriksen/awesome-intent-analysis)
 
 ## Query Refinement
 * [Entity-Centric Query Refinement](https://arxiv.org/abs/2204.00743)
@@ -44,6 +45,7 @@ Summary: Links related to Search resources
 * [Knowledge-Rich Self-Supervision for Biomedical Entity Linking](https://arxiv.org/abs/2112.07887)
 * [Unsupervised query segmentation using generative language models and wikipedia](https://dl.acm.org/doi/10.1145/1367497.1367545)
 * [Concepts Identification from Queries and Its Application for Search](https://studylib.net/doc/5272193/concepts-identification-from-queries-and-its-application-...)
+* [Towards a simplified ontology for better e-commerce search - PDF](https://sigir-ecom.github.io/ecom2018/files/ASimplifiedOntology.pdf) - Automated Entity Tagging in Search Queries
 
 ## Query Entity Linking
 * [Understanding Queries through Entities](https://e.humanities.uva.nl/esair14/presentations/PeterMika-slides.pdf)
@@ -122,7 +124,7 @@ Summary: Links related to Search resources
 
 ## E-commerce
 * [Faster E-commerce Search](https://innovation.ebayinc.com/tech/research/making-e-commerce-search-faster/)
-* 
+* [The 2018 SIGIR Workshop On eCommerce](https://sigir-ecom.github.io/ecom2018/index.html)
 
 
 # User Interfaces
