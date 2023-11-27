@@ -168,6 +168,7 @@ Summary: Machine Learning concepts and traditional resources
 * [Good survey of potential issues with active learning](http://proceedings.mlr.press/v16/settles11a.html)
 * [Human-in-the-Loop Machine Learning by Robert Munro](https://www.manning.com/books/human-in-the-loop-machine-learning) - [Active learning in pytorch from book](https://github.com/rmunro/pytorch_active_learning) [Cheatsheat on active learning](http://www.robertmunro.com/Advanced_Active_Learning_Cheatsheet.pdf)
 * [DUALIST: Utility for Active Learning with Instances and Semantic Terms](https://github.com/burrsettles/dualist/blob/master/README.md)
+* [CleanLab - The standard data-centric AI package for data quality and machine learning with messy, real-world data and labels](https://cleanlab.ai/#solutions)
 
 ## Multiple instance learning
 

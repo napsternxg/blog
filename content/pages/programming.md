@@ -10,6 +10,7 @@ Summary: Links related to programming
 * [UIUC Intro to Competitive Programming](https://pages.github-dev.cs.illinois.edu/sig-icpc/cs491-wf/syllabus/)
 * [William Fiset Youtube Playlists on various topics](https://www.youtube.com/user/purpongie/playlists)
 * [From Nand to Tetris: Building a Modern Computer From First Principles](https://www.nand2tetris.org/)
+* [15-150: Principles of Functional Programming by Brandon Wu](https://brandonspark.github.io/150/)
 
 ## Books
 

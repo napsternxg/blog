@@ -27,6 +27,8 @@ Summary: Links related to Search resources
 ## Online
 
 * [A/B Testing for Search is Different](https://dtunkelang.medium.com/a-b-testing-for-search-is-different-f6b0f6f4d0f5)
+* [Building a Data Driven Search Program with James Rubinstein of LexisNexis](https://www.youtube.com/watch?v=vSy2gxUlGGI)
+* [NDCG is overrated](https://softwaredoug.com/blog/2023/05/06/ndcg-is-overrated)
 
 
 # Sparse Search
@@ -105,6 +107,8 @@ Summary: Links related to Search resources
 * [Diversity in Search](https://innovation.ebayinc.com/tech/engineering/diversity-in-search/)
 * [Result Diversification in Search and Recommendation: A Survey](https://arxiv.org/abs/2212.14464) - Very good paper also helpful for query intent understanding
 * [Similarity-Sensitive Diversity](https://www.linkedin.com/pulse/similarity-sensitive-diversity-daniel-tunkelang?trk=portfolio_article-card_title)
+* [Mixing and Matching - Part 4 - Andreas Wagner - Learning to Diversify Search Results](https://www.youtube.com/watch?v=QU0ndZvM_LQ) - Shows diversification at the level of list results as opposed to search results.
+* [Measuring and Optimizing Findability in e-commerce Search (MICES 2019)](https://www.youtube.com/watch?v=xgHf9k272nc)
 
 
 ## Recsys Inspiration
@@ -177,3 +181,4 @@ Summary: Links related to Search resources
 * [Interview Questions for Search Relevance Engineers, Data Scientists, and Product Managers](https://dtunkelang.medium.com/interview-questions-for-search-relevance-engineers-and-product-managers-7a1b6b8cacea)
 * [Awesome Search](https://github.com/frutik/awesome-search)
 * [Building a Better Search Engine for the Allen Institute for Artificial Intelligence: A “tell-all” account of improving Semantic Scholar's academic search engine](https://www.data-cowboys.com/blog/building-a-better-search-engine-for-the-allen-institute-for-artificial)
+* [MIx-Camp E-commerce Search](https://www.youtube.com/@mix-campe-commercesearch2961/videos)
