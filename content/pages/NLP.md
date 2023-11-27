@@ -89,6 +89,7 @@ Summary: Links related to NLP resources
 * [REBL is an extension of the Radboud Entity Linker (REL) for Batch Entity Linking](https://github.com/informagi/REBL)
 * [Odinson: A Fast Rule-based Information Extraction Framework](https://github.com/lum-ai/odinson/)
 * [SDSL - Succinct Data Structure Library](https://github.com/simongog/sdsl-lite/)
+* [ReFinED: An Efficient Zero-shot-capable Approach to End-to-End Entity Linking](https://github.com/amazon-science/ReFinED)
 
 ### Pretrained embeddings and models
 * [ELMO for Many Languages](https://github.com/HIT-SCIR/ELMoForManyLangs)
@@ -667,6 +668,7 @@ Summary: Links related to NLP resources
 * [DISTEMIST: DISease TExt Mining Shared Task - NERD dataset](https://temu.bsc.es/distemist/)
 * [SympTEMIST: SYMPtoms, signs and findings TExt MIning Shared Task - NERD dataset](https://temu.bsc.es/symptemist/)
 * [SemEval-2 - 2010 - Evaluation Exercises on Semantic Evaluation - ACL SigLex event](https://semeval2.fbk.eu/semeval2.php?location=tasks-short)
+* [Retail Products Classification: Classification of retail products by image and description](https://www.kaggle.com/competitions/retail-products-classification/overview)
 
 ## Shared tasks, competitions
 

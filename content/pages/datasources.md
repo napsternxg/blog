@@ -182,7 +182,8 @@ Summary: Links related to many datasets
 * [YFCC100M 99M Image, Caption data](http://mmcommons.org/) 
 * [LILA BC: Labeled Information Library of Alexandria: Biology and Conservation](https://lila.science/datasets) 
 * [Ecoset – an ecologically more valid large-scale image dataset](https://www.kietzmannlab.org/ecoset/) 
-* [Natural Scenes Dataset (NSD) is a large-scale fMRI dataset conducted at ultra-high-field](https://naturalscenesdataset.org/) 
+* [Natural Scenes Dataset (NSD) is a large-scale fMRI dataset conducted at ultra-high-field](https://naturalscenesdataset.org/)
+* [Book covers dataset from: https://www.bookdepository.com/](https://www.kaggle.com/datasets/lukaanicin/book-covers-dataset/data)
 
 ## Stream processing data
 * [Data from The Neural Hawkes Process](https://github.com/HMEIatJHU/neurawkes) - [Google drive link](https://drive.google.com/drive/folders/0BwqmV0EcoUc8UklIR1BKV25YR1U?usp=sharing)
@@ -275,7 +276,7 @@ Summary: Links related to many datasets
 * [Langual TM - Thesaurus for Food used in Foodon](https://www.langual.org/langual_Downloads.asp)
 * [Food.com Recipes and Interactions - Reviews](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions/) - [Github](https://github.com/majumderb/recipe-personalization)
 * [TasteAtlas - Indexed by Wikidata](https://www.tasteatlas.com/about) - [Gist](https://gist.github.com/napsternxg/2695512d0bf9b3ad40208aceceea5f7f)
-
+* [Food.com Recipes with Search Terms and Tags](https://www.kaggle.com/datasets/shuyangli94/foodcom-recipes-with-search-terms-and-tags)
 
 ## E-Commerce
 
@@ -285,3 +286,9 @@ Summary: Links related to many datasets
 * [Open-World Product Attribute Mining Dataset from Amazon](https://github.com/lxucs/woam)
 * [The Product Types Ontology: High-precision identifiers for product types based on Wikipedia](http://www.productontology.org/)
 * [Instacart Market Basket Analysis Dataset](https://www.kaggle.com/competitions/instacart-market-basket-analysis/data) - [Description](https://gist.github.com/jeremystan/c3b39d947d9b88b3ccff3147dbcf6c6b)
+* [Retail Products Classification: Classification of retail products by image and description](https://www.kaggle.com/competitions/retail-products-classification/overview)
+* [Crowdflower Search Results Relevance: Predict the relevance of search results from eCommerce sites](https://www.kaggle.com/competitions/crowdflower-search-relevance/overview)
+* [Home Depot Product Search Relevance: Predict the relevance of search results on homedepot.com](https://www.kaggle.com/competitions/home-depot-product-search-relevance)
+* [Yandex: Personalized Web Search Challenge: Re-rank web documents using personal preferences](https://www.kaggle.com/competitions/yandex-personalized-web-search-challenge/overview)
+* [Shopping Queries Dataset: A Large-Scale ESCI Benchmark for Improving Product Search](https://github.com/amazon-science/esci-data) - [ESCI-S: extended metadata for Amazon ESCI dataset](https://github.com/shuttie/esci-s)
+* [WANDS - Wayfair ANnotation Dataset](https://github.com/wayfair/WANDS)

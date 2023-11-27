@@ -8,10 +8,26 @@ Summary: Links related to Search resources
 
 # Evaluation
 
+## Offline
 * [An IR-based Evaluation Framework for Web Search Query Segmentation](https://arxiv.org/abs/1111.1497)
 * [Recall, Robustness, and Lexicographic Evaluation](https://arxiv.org/abs/2302.11370)
 * [Are We There Yet? A Decision Framework for Replacing Term Based Retrieval with Dense Retrieval Systems](https://arxiv.org/abs/2206.12993)
 * [Grid-based Evaluation Metrics for Web Image Search](https://github.com/THUxiexiaohui/grid-based-evaluation-metrics)
+* [Less if More: Introduced K-call @ N metric - PDF](https://people.csail.mit.edu/harr/papers/sigir2006.pdf)
+* [Effective Query Triage](https://www.linkedin.com/pulse/effective-query-triage-daniel-tunkelang?trk=portfolio_article-card_title)
+* [Quality rater and algorithmic evaluation systems: Are major changes coming?](https://searchengineland.com/quality-rater-algorithmic-evaluation-systems-changes-434895)
+* [The crowd is made of people: Observations from large-scale crowd labelling](https://www.microsoft.com/en-us/research/publication/the-crowd-is-made-of-people-observations-from-large-scale-crowd-labelling/)
+
+## Bias
+
+* [What is Presentation Bias in search?](https://softwaredoug.com/blog/2022/07/16/what-is-presentation-bias-in-search.html) - [PDF](https://www.wsdm-conference.org/2010/proceedings/docs/p351.pdf)
+* [An Experimental Comparison of Click Position-Bias Models](https://videolectures.net/wsdm08_craswell_eccp/) - [Slides](https://www.slideserve.com/elan/an-experimental-comparison-of-click-position-bias-models)
+* [Beyond Position Bias: Examining Result Attractiveness as a Source of Presentation Bias in Clickthrough Data](https://www.slideserve.com/betty_james/beyond-position-bias-examining-result-attractiveness-as-a-source-of-presentation-bias-in-clickthrough-data)
+
+## Online
+
+* [A/B Testing for Search is Different](https://dtunkelang.medium.com/a-b-testing-for-search-is-different-f6b0f6f4d0f5)
+
 
 # Sparse Search
 
@@ -23,22 +39,30 @@ Summary: Links related to Search resources
 
 ## Tools
 * [Rank-BM25: A two line search engine](https://github.com/dorianbrown/rank_bm25)
-* [ClickModels: A Click Model is a probabilistic graphical model used to predict search engine click data from past observations](https://github.com/varepsilon/clickmodels) - [ClickModelsWC: Extra Models](https://github.com/kurakimai/clickmodel_wc)
+* [ClickModels: A Click Model is a probabilistic graphical model used to predict search engine click data from past observations](https://github.com/varepsilon/clickmodels) - [ClickModelsWC: Extra Models](https://github.com/kurakimai/clickmodel_wc) - [Tutorial and CheatSheet](https://clickmodels.weebly.com/tutorials.html) - [Book with many probabilistic click models described](https://clickmodels.weebly.com/the-book.html)
 
 # Query Understanding
+
+* [Query Understanding: A Manifesto](https://www.slideshare.net/dtunkelang/query-understanding-a-manifesto)
+
+## Query Embeddings
+
+* [Helping Searchers Satisfice through Query Understanding](https://www.linkedin.com/pulse/helping-searchers-satisfice-through-query-daniel-tunkelang?trk=portfolio_article-card_title)
 
 ## Query Intent
 
 * [Semantic query parsing blueprint](https://blog.griddynamics.com/semantic-query-parsing-blueprint/)
 * [Understanding Natural Language Understanding - PDF](https://nlp.stanford.edu/~wcmac/papers/20140716-UNLU.pdf)
 * [Awesome Intent Analysis](https://github.com/mariyahendriksen/awesome-intent-analysis)
+* [Using AI to Understand Search Intent](https://www.linkedin.com/pulse/using-ai-understand-search-intent-daniel-tunkelang?trk=portfolio_article-card_title)
+* [Deconstructing E-Commerce Search UX: The 8 Most Common Search Query Types (42% of Sites Have Issues)](https://baymard.com/blog/ecommerce-search-query-types)
+
 
 ## Query Refinement
 * [Entity-Centric Query Refinement](https://arxiv.org/abs/2204.00743)
 * [Intent term selection and refinement in e-commerce queries](https://arxiv.org/abs/1908.08564)
 * [Distant-Supervised Slot-Filling for E-Commerce Queries](https://arxiv.org/abs/2012.08134)
 * [Advancing query rewriting in e-commerce via shopping intent learning](https://www.amazon.science/publications/advancing-query-rewriting-in-e-commerce-via-shopping-intent-learning)
-
 
 ## Query Tagging
 * [A User-Centered Concept Mining System for Query and Document Understanding at Tencent](https://arxiv.org/abs/1905.08487)
@@ -56,6 +80,11 @@ Summary: Links related to Search resources
 * [SIGIR 2022 Tutorial: Sequential/Session-based Recommendations: Challenges, Approaches, Applications and Opportunities](https://neurec22.github.io/SRS&SBRS/) [PDF](https://web.archive.org/web/20231117164647/https://maifile.cn/est/?e=d50425962986)
 * [Session-based Recommender Systems](https://session-based-recommenders.fastforwardlabs.com/)
 
+
+# Retrieval
+* [In Search of Recall](https://www.linkedin.com/pulse/search-recall-daniel-tunkelang/)
+* [Balance Your Search Budget!](https://www.linkedin.com/pulse/balance-your-search-budget-daniel-tunkelang/)
+
 # Ranking
 
 * [Haystack EU 2023 - Philipp Krenn: Reciprocal Rank Fusion (RRF) - How to Stop Worrying about Boosting](https://www.youtube.com/watch?v=px4YBYrz0NU)
@@ -65,12 +94,17 @@ Summary: Links related to Search resources
 
 
 
+# Sponsored Search
+
+* [Personalized Click Prediction in Sponsored Search](https://videolectures.net/wsdm2010_cheng_pcpis/) - [PDF](https://www.wsdm-conference.org/2010/proceedings/docs/p351.pdf)
+
 # Result Presentation
 
 ## Diversification
 * [Practical Diversified Recommendations on YouTube with Determinantal Point Processes](https://jgillenw.com/cikm2018.pdf)
 * [Diversity in Search](https://innovation.ebayinc.com/tech/engineering/diversity-in-search/)
 * [Result Diversification in Search and Recommendation: A Survey](https://arxiv.org/abs/2212.14464) - Very good paper also helpful for query intent understanding
+* [Similarity-Sensitive Diversity](https://www.linkedin.com/pulse/similarity-sensitive-diversity-daniel-tunkelang?trk=portfolio_article-card_title)
 
 
 ## Recsys Inspiration
@@ -114,20 +148,31 @@ Summary: Links related to Search resources
 
 * [Improving Search Clarification with Structured Information Extracted from Search Results](https://dl.acm.org/doi/10.1145/3580305.3599389)
 
-# Overall
-
-* [Challenges and Research Opportunities in eCommerce Search and Recommendations](https://www.amazon.science/publications/challenges-and-research-opportunities-in-ecommerce-search-and-recommendations)
-* [SIGIR Workshop On eCommerce](https://sigir-ecom.github.io/)
-
+# Engineering
+* [On-Site Search Design Patterns for E-Commerce: Schema Structure, Data Driven Ranking & More](https://project-a.github.io/on-site-search-design-patterns-for-e-commerce/)
 
 # Domains
 
 ## E-commerce
 * [Faster E-commerce Search](https://innovation.ebayinc.com/tech/research/making-e-commerce-search-faster/)
 * [The 2018 SIGIR Workshop On eCommerce](https://sigir-ecom.github.io/ecom2018/index.html)
+* [Analyzing and Predicting Purchase Intent in E-commerce: Anonymous vs. Identified Customers](https://arxiv.org/abs/2012.08777)
 
 
 # User Interfaces
 
 * [Search Interfaces for Biomedical Searching: How do Gaze, User Perception, Search Behaviour and Search Performance Relate?](https://dl.acm.org/doi/10.1145/3498366.3505769)
 * [Modeling User Behavior for Vertical Search: Images, Apps and Products](https://github.com/THUxiexiaohui/SIGIR-2020-Tutorial/tree/master)
+
+# Publication Venues
+
+* [Workshop on e-Commerce and NLP](https://sites.google.com/view/ecnlp/ecnlp-6-kdd-2023)
+* [SIGIR Workshop On eCommerce](https://sigir-ecom.github.io/)
+
+
+# General
+
+* [Challenges and Research Opportunities in eCommerce Search and Recommendations](https://www.amazon.science/publications/challenges-and-research-opportunities-in-ecommerce-search-and-recommendations)
+* [Thoughts about Managing Search Teams](https://dtunkelang.medium.com/thoughts-about-managing-search-teams-f8d2f54fbed7)
+* [Interview Questions for Search Relevance Engineers, Data Scientists, and Product Managers](https://dtunkelang.medium.com/interview-questions-for-search-relevance-engineers-and-product-managers-7a1b6b8cacea)
+* [Awesome Search](https://github.com/frutik/awesome-search)

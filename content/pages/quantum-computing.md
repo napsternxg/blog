@@ -20,11 +20,15 @@ Summary: Links related to quantum computing resources
 * [IBM Quantum computing free access](https://quantum-computing.ibm.com/) - Get access to schedule jobs on upto 32 qubits (mostly just 5). 
 * [QuTiP: Quantum Toolbox in Python](https://qutip.org/docs/latest/index.html)
 * [Superconducting Quantum Circuit in Python](https://www.sqcircuit.org/)
+* [Strawberry Fields: A cross-platform Python library for simulating and executing programs on quantum photonic hardware.](https://strawberryfields.ai)
+* [PennyLane: a software framework for differentiable quantum programming](https://pennylane.ai/)
 
 
 ## Courses
 
 * [Topology in condensed matter: tying quantum knots](https://topocondmat.org/index.html)
+* [Xanadu Quantum Codebook](https://codebook.xanadu.ai/)
+* [PennyLane: Learn quantum programming](https://pennylane.ai/qml/)
 
 ## Books
 * [Textbook: Introduction to Classical and Quantum Computing](http://www.thomaswong.net/#publications )
