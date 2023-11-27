@@ -176,3 +176,4 @@ Summary: Links related to Search resources
 * [Thoughts about Managing Search Teams](https://dtunkelang.medium.com/thoughts-about-managing-search-teams-f8d2f54fbed7)
 * [Interview Questions for Search Relevance Engineers, Data Scientists, and Product Managers](https://dtunkelang.medium.com/interview-questions-for-search-relevance-engineers-and-product-managers-7a1b6b8cacea)
 * [Awesome Search](https://github.com/frutik/awesome-search)
+* [Building a Better Search Engine for the Allen Institute for Artificial Intelligence: A “tell-all” account of improving Semantic Scholar's academic search engine](https://www.data-cowboys.com/blog/building-a-better-search-engine-for-the-allen-institute-for-artificial)
