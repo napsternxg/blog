@@ -161,6 +161,7 @@ Summary: Links related to Search resources
 * [Faster E-commerce Search](https://innovation.ebayinc.com/tech/research/making-e-commerce-search-faster/)
 * [The 2018 SIGIR Workshop On eCommerce](https://sigir-ecom.github.io/ecom2018/index.html)
 * [Analyzing and Predicting Purchase Intent in E-commerce: Anonymous vs. Identified Customers](https://arxiv.org/abs/2012.08777)
+* [Improving Deep Learning For Airbnb Search](https://arxiv.org/abs/2002.05515)
 
 
 # User Interfaces
