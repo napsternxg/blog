@@ -23,6 +23,7 @@ Summary: Links related to Search resources
 * [What is Presentation Bias in search?](https://softwaredoug.com/blog/2022/07/16/what-is-presentation-bias-in-search.html) - [PDF](https://www.wsdm-conference.org/2010/proceedings/docs/p351.pdf)
 * [An Experimental Comparison of Click Position-Bias Models](https://videolectures.net/wsdm08_craswell_eccp/) - [Slides](https://www.slideserve.com/elan/an-experimental-comparison-of-click-position-bias-models)
 * [Beyond Position Bias: Examining Result Attractiveness as a Source of Presentation Bias in Clickthrough Data](https://www.slideserve.com/betty_james/beyond-position-bias-examining-result-attractiveness-as-a-source-of-presentation-bias-in-clickthrough-data)
+* Left Digit Bias - [More than a Penny's Worth: Left-Digit Bias and Firm Pricing](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3413019) - [Left-Digit Bias at Lyft](https://www.restud.com/left-digit-bias-at-lyft/) - [The Left-Digit Bias: When and Why Are Consumers Penny Wise and Pound Foolish?](https://journals.sagepub.com/doi/full/10.1177/0022243720932532)
 
 ## Online
 
@@ -116,6 +117,9 @@ Summary: Links related to Search resources
 
 ## Explainability
 * [Explainable Information Retrieval: A Survey](https://arxiv.org/abs/2211.02405)
+
+## Behaviour Driven Presentation
+* [HOW TO USE PSYCHOLOGICAL PRICING TECHNIQUES TO SELL MORE ON SHOPIFY](https://www.appattic.com/post/how-to-use-psychological-pricing-techniques-to-sell-more-on-shopify)
 
 
 # Personalization
