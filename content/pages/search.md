@@ -24,12 +24,14 @@ Summary: Links related to Search resources
 * [An Experimental Comparison of Click Position-Bias Models](https://videolectures.net/wsdm08_craswell_eccp/) - [Slides](https://www.slideserve.com/elan/an-experimental-comparison-of-click-position-bias-models)
 * [Beyond Position Bias: Examining Result Attractiveness as a Source of Presentation Bias in Clickthrough Data](https://www.slideserve.com/betty_james/beyond-position-bias-examining-result-attractiveness-as-a-source-of-presentation-bias-in-clickthrough-data)
 * Left Digit Bias - [More than a Penny's Worth: Left-Digit Bias and Firm Pricing](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3413019) - [Left-Digit Bias at Lyft](https://www.restud.com/left-digit-bias-at-lyft/) - [The Left-Digit Bias: When and Why Are Consumers Penny Wise and Pound Foolish?](https://journals.sagepub.com/doi/full/10.1177/0022243720932532)
+* [Improving Retrievability in Search with Query Generation](https://research.atspotify.com/2023/05/improving-retrievability-in-search-with-query-generation/)
 
 ## Online
 
 * [A/B Testing for Search is Different](https://dtunkelang.medium.com/a-b-testing-for-search-is-different-f6b0f6f4d0f5)
 * [Building a Data Driven Search Program with James Rubinstein of LexisNexis](https://www.youtube.com/watch?v=vSy2gxUlGGI)
 * [NDCG is overrated](https://softwaredoug.com/blog/2023/05/06/ndcg-is-overrated)
+* [Meaningful metrics: How data sharpened the focus of product teams](https://blog.duolingo.com/growth-model-duolingo/)
 
 
 # Sparse Search
@@ -59,6 +61,7 @@ Summary: Links related to Search resources
 * [Awesome Intent Analysis](https://github.com/mariyahendriksen/awesome-intent-analysis)
 * [Using AI to Understand Search Intent](https://www.linkedin.com/pulse/using-ai-understand-search-intent-daniel-tunkelang?trk=portfolio_article-card_title)
 * [Deconstructing E-Commerce Search UX: The 8 Most Common Search Query Types (42% of Sites Have Issues)](https://baymard.com/blog/ecommerce-search-query-types)
+* [Personalizing natural-language understanding using multi-armed bandits and implicit feedback](https://www.amazon.science/publications/personalizing-natural-language-understanding-using-multi-armed-bandits-and-implicit-feedback)
 
 
 ## Query Refinement
@@ -87,14 +90,20 @@ Summary: Links related to Search resources
 # Retrieval
 * [In Search of Recall](https://www.linkedin.com/pulse/search-recall-daniel-tunkelang/)
 * [Balance Your Search Budget!](https://www.linkedin.com/pulse/balance-your-search-budget-daniel-tunkelang/)
+* [ProcSim: Proxy-based confidence for robust similarity learning](https://www.amazon.science/publications/procsim-proxy-based-confidence-for-robust-similarity-learning)
 
 # Ranking
 
 * [Haystack EU 2023 - Philipp Krenn: Reciprocal Rank Fusion (RRF) - How to Stop Worrying about Boosting](https://www.youtube.com/watch?v=px4YBYrz0NU)
+* [From structured search to learning-to-rank-and-retrieve](https://www.amazon.science/blog/from-structured-search-to-learning-to-rank-and-retrieve)
 
 ## Ranking for value
 * [Globally Optimized Mutual Influence Aware Ranking in E-Commerce Search](https://arxiv.org/abs/1805.08524)
 
+
+# Query Suggestion
+
+* [Graph Learning for Exploratory Query Suggestions in an Instant Search System](https://research.atspotify.com/2023/10/graph-learning-for-exploratory-query-suggestions-in-an-instant-search-system/)
 
 
 # Sponsored Search

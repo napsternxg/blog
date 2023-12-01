@@ -220,3 +220,9 @@ Summary: Machine Learning concepts and traditional resources
 * [Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges](https://geometricdeeplearning.com/lectures/)
 * [Non-Euclidean Methods in Machine Learning](http://graphics.stanford.edu/courses/cs468-20-fall/schedule.html)
 * [Introduction to Graph Neural Nets with JAX/jraph](https://github.com/deepmind/educational/tree/master/colabs/summer_schools)
+* [](https://www.amazon.science/blog/how-aws-uses-graph-neural-networks-to-meet-customer-needs)
+
+
+# General
+
+* [Great blogs on visualization of ML models and topics](https://tinkerd.net/blog/)
