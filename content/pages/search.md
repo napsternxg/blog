@@ -85,12 +85,14 @@ Summary: Links related to Search resources
 * [Deep Learning Powered In-Session Contextual Ranking using Clickthrough Data](https://www.microsoft.com/en-us/research/publication/deep-learning-powered-session-contextual-ranking-using-clickthrough-data/)
 * [SIGIR 2022 Tutorial: Sequential/Session-based Recommendations: Challenges, Approaches, Applications and Opportunities](https://neurec22.github.io/SRS&SBRS/) [PDF](https://web.archive.org/web/20231117164647/https://maifile.cn/est/?e=d50425962986)
 * [Session-based Recommender Systems](https://session-based-recommenders.fastforwardlabs.com/)
+* [User Persona Identification and New Service Adaptation Recommendation](https://arxiv.org/abs/2311.10773) - Introduces SessionBERT
 
 
 # Retrieval
 * [In Search of Recall](https://www.linkedin.com/pulse/search-recall-daniel-tunkelang/)
 * [Balance Your Search Budget!](https://www.linkedin.com/pulse/balance-your-search-budget-daniel-tunkelang/)
 * [ProcSim: Proxy-based confidence for robust similarity learning](https://www.amazon.science/publications/procsim-proxy-based-confidence-for-robust-similarity-learning)
+* [Divide and Conquer: Towards Better Embedding-based Retrieval for Recommender Systems From a Multi-task Perspective](https://arxiv.org/abs/2302.02657)
 
 # Ranking
 
