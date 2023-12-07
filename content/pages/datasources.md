@@ -277,6 +277,13 @@ Summary: Links related to many datasets
 * [Food.com Recipes and Interactions - Reviews](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions/) - [Github](https://github.com/majumderb/recipe-personalization)
 * [TasteAtlas - Indexed by Wikidata](https://www.tasteatlas.com/about) - [Gist](https://gist.github.com/napsternxg/2695512d0bf9b3ad40208aceceea5f7f)
 * [Food.com Recipes with Search Terms and Tags](https://www.kaggle.com/datasets/shuyangli94/foodcom-recipes-with-search-terms-and-tags)
+* [Fruit and Vegetable Prices](https://catalog.data.gov/dataset/fruit-and-vegetable-prices)
+* [Data Products - Economic Research Service - U.S. DEPARTMENT OF AGRICULTURE](https://www.ers.usda.gov/data-products/#!topicid=14828&subtopicid=)
+* [Department of Agriculture - Data.gov](https://catalog.data.gov/organization/usda-gov)
+* [Food-a-pedia from HealthData.gov - Find the calorie content of any food or beverage using the Food-a-pedia](https://healthdata.gov/dataset/Food-a-pedia/c9sf-xv58/data)
+* [SuperTracker - source code and foods database]()
+* [MyPlate - U.S. DEPARTMENT OF AGRICULTURE](https://www.myplate.gov/) - [Multilingual](https://www.myplate.gov/resources/myplate-multiple-languages)
+* [MyPlate Kitchen](https://www.myplate.gov/myplate-kitchen)
 
 ## E-Commerce
 

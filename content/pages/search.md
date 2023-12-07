@@ -114,6 +114,11 @@ Summary: Links related to Search resources
 
 # Result Presentation
 
+## Whole Page Ranking
+
+* [Beyond Ranking: Optimizing Whole-Page Presentation](https://dl.acm.org/doi/10.1145/2835776.2835824)
+* [Whole Page Unbiased Learning to Rank from Baidu](https://arxiv.org/abs/2210.10718)
+
 ## Diversification
 * [Practical Diversified Recommendations on YouTube with Determinantal Point Processes](https://jgillenw.com/cikm2018.pdf)
 * [Diversity in Search](https://innovation.ebayinc.com/tech/engineering/diversity-in-search/)
