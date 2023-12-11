@@ -10,7 +10,7 @@ Summary: Links related to Recommender Systems resources
 
 ## Links
 * [RecSys Papers by Industry and Topic](https://github.com/tangxyw/RecSysPapers/)
-
+* [Practical Lessons from Predicting Clicks on Ads at Facebook](https://research.facebook.com/publications/practical-lessons-from-predicting-clicks-on-ads-at-facebook/)
 
 ## Books
 
