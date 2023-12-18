@@ -76,6 +76,7 @@ Summary: Links related to Search resources
 * [Unsupervised query segmentation using generative language models and wikipedia](https://dl.acm.org/doi/10.1145/1367497.1367545)
 * [Concepts Identification from Queries and Its Application for Search](https://studylib.net/doc/5272193/concepts-identification-from-queries-and-its-application-...)
 * [Towards a simplified ontology for better e-commerce search - PDF](https://sigir-ecom.github.io/ecom2018/files/ASimplifiedOntology.pdf) - Automated Entity Tagging in Search Queries
+* [Semantic query parsing blueprint](https://blog.griddynamics.com/semantic-query-parsing-blueprint/)
 
 ## Query Entity Linking
 * [Understanding Queries through Entities](https://e.humanities.uva.nl/esair14/presentations/PeterMika-slides.pdf)

@@ -669,6 +669,7 @@ Summary: Links related to NLP resources
 * [SympTEMIST: SYMPtoms, signs and findings TExt MIning Shared Task - NERD dataset](https://temu.bsc.es/symptemist/)
 * [SemEval-2 - 2010 - Evaluation Exercises on Semantic Evaluation - ACL SigLex event](https://semeval2.fbk.eu/semeval2.php?location=tasks-short)
 * [Retail Products Classification: Classification of retail products by image and description](https://www.kaggle.com/competitions/retail-products-classification/overview)
+* [ColorNames - NAME ALL THE COLORS!](https://colornames.org/download/)
 
 ## Shared tasks, competitions
 
