@@ -34,13 +34,21 @@ Summary: Links related to programming
 
 * [MIT 18.337J/6.338J: Parallel Computing and Scientific Machine Learning in Julia](https://mitmath.github.io/18337/)
 * [Patterns of Distributed Systems](https://martinfowler.com/articles/patterns-of-distributed-systems/)
+* [Programming Parallel Computers](https://ppc.cs.aalto.fi/)
+* [Distributed Algorithms 2020](https://jukkasuomela.fi/da2020/)
 
-## Data Structures
+## Contest Programming
+
+### General
+* [CS 97SI: Introduction to Programming Contests](https://web.stanford.edu/class/cs97si/)
+
+### Data Structures
 
 * [Tradeoffs of data structures](http://www.idevelopment.info/data/Programming/data_structures/overview/Data_Structures_Algorithms_Introduction.shtml)
 * [Applications of data structures](http://www.cs.fsu.edu/~jestes/cop3330/notes/datastruct.html)
+* [Suffix arrays – a programming contest approach (PDF)](https://web.stanford.edu/class/cs97si/suffix-array.pdf)
 
-## Dynamic Programming
+### Dynamic Programming
 
 * http://prismoskills.appspot.com/lessons/Dynamic_Programming/Chapter_01_-_Introduction.jsp
 * https://medium.freecodecamp.org/demystifying-dynamic-programming-3efafb8d4296
@@ -61,3 +69,5 @@ Summary: Links related to programming
 * [Computer Systems: A Programmer's Perspective](http://csapp.cs.cmu.edu/3e/home.html)
 * [Semiconductors: Everything You Wanted to Know](https://www.youtube.com/watch?v=r6NUO_bymuA)
 * [Introduction to GPUs with OpenGL](https://engineering.monstar-lab.com/en/post/2022/03/01/Introduction-To-GPUs-With-OpenGL/)
+* [Intro to AMD GPU Programming with HIP](https://www.olcf.ornl.gov/calendar/intro-to-amd-gpu-programming-with-hip/) - [Vimeo](https://vimeo.com/359154970) - [PDF](https://www.olcf.ornl.gov/wp-content/uploads/2019/09/AMD_GPU_HIP_training_20190906.pdf)
+* [GPU-Puzzles](https://github.com/srush/GPU-Puzzles)

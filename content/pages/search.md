@@ -107,6 +107,8 @@ Summary: Links related to Search resources
 # Query Suggestion
 
 * [Graph Learning for Exploratory Query Suggestions in an Instant Search System](https://research.atspotify.com/2023/10/graph-learning-for-exploratory-query-suggestions-in-an-instant-search-system/)
+* [9 UX Best Practice Design Patterns for Autocomplete Suggestions (Only 19% Get Everything Right)](https://baymard.com/blog/autocomplete-design)
+
 
 
 # Sponsored Search
@@ -128,6 +130,12 @@ Summary: Links related to Search resources
 * [Mixing and Matching - Part 4 - Andreas Wagner - Learning to Diversify Search Results](https://www.youtube.com/watch?v=QU0ndZvM_LQ) - Shows diversification at the level of list results as opposed to search results.
 * [Measuring and Optimizing Findability in e-commerce Search (MICES 2019)](https://www.youtube.com/watch?v=xgHf9k272nc)
 
+## Faceted Search
+* [Relevant facets: how to select and promote facets with deep learning](https://blog.griddynamics.com/relevant-facets-how-to-select-and-promote-facets-with-deep-learning/)
+* [Faceted Search: An Overview](https://www.algolia.com/blog/ux/faceted-search-an-overview/)
+* [Implementing faceted search with dynamic faceting](https://www.algolia.com/blog/engineering/implementing-faceted-search-with-dynamic-faceting-with-code/)
+* [Faceted search, where every JSON attribute counts](https://www.algolia.com/blog/engineering/facets-and-faceted-search-making-every-attribute-count/)
+* [Consider Promoting Important Filters (61% Don’t)](https://baymard.com/blog/promoting-product-filters)
 
 ## Recsys Inspiration
 * [RecSys Papers by Industry and Topic](https://github.com/tangxyw/RecSysPapers/)
