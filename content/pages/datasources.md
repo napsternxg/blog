@@ -289,7 +289,7 @@ Summary: Links related to many datasets
 
 * [United Nations Standard Products and Services Code (UNSPSC) is a taxonomy of products and services for use in eCommerce](https://en.wikipedia.org/wiki/UNSPSC)
 * [KB Pedia](https://kbpedia.org/)
-* [Global Product Classification](https://www.gs1.org/)
+* [Global Product Classification (GPC)](https://gpc-browser.gs1.org/)
 * [Open-World Product Attribute Mining Dataset from Amazon](https://github.com/lxucs/woam)
 * [The Product Types Ontology: High-precision identifiers for product types based on Wikipedia](http://www.productontology.org/)
 * [Instacart Market Basket Analysis Dataset](https://www.kaggle.com/competitions/instacart-market-basket-analysis/data) - [Description](https://gist.github.com/jeremystan/c3b39d947d9b88b3ccff3147dbcf6c6b)
@@ -299,3 +299,9 @@ Summary: Links related to many datasets
 * [Yandex: Personalized Web Search Challenge: Re-rank web documents using personal preferences](https://www.kaggle.com/competitions/yandex-personalized-web-search-challenge/overview)
 * [Shopping Queries Dataset: A Large-Scale ESCI Benchmark for Improving Product Search](https://github.com/amazon-science/esci-data) - [ESCI-S: extended metadata for Amazon ESCI dataset](https://github.com/shuttie/esci-s)
 * [WANDS - Wayfair ANnotation Dataset](https://github.com/wayfair/WANDS)
+* [OpenFoodFacts - Used by Wikidata](https://world.openfoodfacts.org/data) - [Datasets](https://github.com/openfoodfacts/openfoodfacts-ai/blob/develop/data-sets.md) - [Translations](https://github.com/openfoodfacts/openfoodfacts-translations/tree/main/openfoodfacts-label-taxonomy) - [Search related artifacts](https://github.com/openfoodfacts/search-a-licious/blob/main/data/config/openfoodfacts.yml)
+* [Open Beauty Facts](https://world.openbeautyfacts.org/)
+* [Open Product Facts](https://world.openproductsfacts.org/)
+* [Open Pet Food Facts](https://world.openpetfoodfacts.org/)
+* [Flipkart categories](https://www.flipkart.com/sitemap)
+* [Walmart Categories](https://www.walmart.com/sitemap_category.xml)

@@ -27,6 +27,7 @@ Summary: Links related to visualizations
 * [Pixar Story telling course on Khan Academy](https://www.khanacademy.org/computing/pixar/storytelling)
 * [Scientific Visualization: Python + Matplotlib](https://github.com/rougier/scientific-visualization-book)
 * [Scratchapixel 2.0 - Volume 1: Foundations of 3D Rendering](https://www.scratchapixel.com/index.php)
+* [Graphics Gems II (PDF)](https://theswissbay.ch/pdf/Gentoomen%20Library/Game%20Development/Programming/Graphics%20Gems%202.pdf)
 
 ## Learn D3
 

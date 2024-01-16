@@ -28,6 +28,15 @@ Summary: Links related to programming
 ## Software Design
 * [Design Pattern](https://refactoring.guru/design-patterns)
 * [Hints and Principles for Computer System Design by Butler Lampson](https://arxiv.org/abs/2011.02455)
+* [The Art of SLOs](https://sre.google/resources/practices-and-processes/art-of-slos/)
+
+
+## Engineering Management
+* [LinkedIn Developer Productivity and Happiness Framework!](https://linkedin.github.io/dph-framework/)
+
+### Tools
+
+* [Backstage - An open platform for building developer portals](https://backstage.io/docs/overview/what-is-backstage/)
 
 
 ## Parallel Computing
@@ -41,6 +50,7 @@ Summary: Links related to programming
 
 ### General
 * [CS 97SI: Introduction to Programming Contests](https://web.stanford.edu/class/cs97si/)
+* [Algorithms for Competitive Programming](https://cp-algorithms.com/)
 
 ### Data Structures
 

@@ -99,6 +99,8 @@ Summary: Links related to Search resources
 
 * [Haystack EU 2023 - Philipp Krenn: Reciprocal Rank Fusion (RRF) - How to Stop Worrying about Boosting](https://www.youtube.com/watch?v=px4YBYrz0NU)
 * [From structured search to learning-to-rank-and-retrieve](https://www.amazon.science/blog/from-structured-search-to-learning-to-rank-and-retrieve)
+* [Learning to Rank for Information Retrieval](https://www.nowpublishers.com/article/Details/INR-016)
+* [Ranking Relevance in Yahoo Search](https://dl.acm.org/doi/10.1145/2939672.2939677)
 
 ## Ranking for value
 * [Globally Optimized Mutual Influence Aware Ranking in E-Commerce Search](https://arxiv.org/abs/1805.08524)
@@ -164,6 +166,7 @@ Summary: Links related to Search resources
 
 * [LLM 4 IR Survey](https://github.com/RUC-NLPIR/LLM4IR-Survey)
 * [Recent Advances in RetrievalAugmented Text Generation](https://jcyk.github.io/RetGenTutorial/)
+* [Generative Information Retrieval (slides) - Marc Najork (2023)](https://research.google/pubs/generative-information-retrieval-slides/) [archive.org](https://web.archive.org/web/20240116004805/https://docs.google.com/presentation/d/19lAeVzPkh20Ly855tKDkz1uv-1pHV_9GxfntiTJPUug/edit#slide=id.g22efd0a58a4_2_0)
 
 
 # Visual Search
@@ -191,6 +194,7 @@ Summary: Links related to Search resources
 * [The 2018 SIGIR Workshop On eCommerce](https://sigir-ecom.github.io/ecom2018/index.html)
 * [Analyzing and Predicting Purchase Intent in E-commerce: Anonymous vs. Identified Customers](https://arxiv.org/abs/2012.08777)
 * [Improving Deep Learning For Airbnb Search](https://arxiv.org/abs/2002.05515)
+* [The Architecture of eBay Search - SIGIR 2017](https://www.semanticscholar.org/paper/The-Architecture-of-eBay-Search-Trotman-Degenhardt/4665523598d2244256207ab30b10ddc7a4930b78)
 
 
 # User Interfaces
@@ -212,3 +216,5 @@ Summary: Links related to Search resources
 * [Awesome Search](https://github.com/frutik/awesome-search)
 * [Building a Better Search Engine for the Allen Institute for Artificial Intelligence: A “tell-all” account of improving Semantic Scholar's academic search engine](https://www.data-cowboys.com/blog/building-a-better-search-engine-for-the-allen-institute-for-artificial)
 * [MIx-Camp E-commerce Search](https://www.youtube.com/@mix-campe-commercesearch2961/videos)
+* [The Anatomy of a Large-Scale Hypertextual Web Search Engine - Original Google Search Engine Paper](https://research.google/pubs/the-anatomy-of-a-large-scale-hypertextual-web-search-engine/)
+* [KDD 2020: Hands-onTutorials: Deep Learning for Search and Recommender Systems in Practice](https://www.youtube.com/watch?v=q6yF0It2ubk)

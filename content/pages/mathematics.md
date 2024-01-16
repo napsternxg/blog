@@ -21,7 +21,7 @@ Summary: Links related to mathematics
   - http://mei.org.uk/geogebra-tasks
 * Geogebra tutorials: https://www.geogebra.org/m/t6v92Gdz
 * Video lecture courses with interactive content: https://lmqm.xyz
-* [JSXGraph](https://jsxgraph.uni-bayreuth.de/wp/about/index.html) 
+* [JSXGraph](https://jsxgraph.uni-bayreuth.de/wp/about/index.html)
 * [Tungsteno IO - Interactive Math](https://www.tungsteno.io/)
 
 # N-dimensional spaces
@@ -105,3 +105,7 @@ Summary: Links related to mathematics
 
 * [Applied Empirical Methods](https://github.com/paulgp/applied-methods-phd#lectures-full-syllabus)
 * [The Economy](https://www.core-econ.org/the-economy/book/text/0-3-contents.html)
+
+# Probability and Statistics
+
+* [Probability tools, tricks, and miracles by David Pollard](http://www.stat.yale.edu/~pollard/Books/Pttm/)
