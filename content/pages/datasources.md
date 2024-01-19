@@ -301,7 +301,7 @@ Summary: Links related to many datasets
 * [WANDS - Wayfair ANnotation Dataset](https://github.com/wayfair/WANDS)
 * [OpenFoodFacts - Used by Wikidata](https://world.openfoodfacts.org/data) - [Datasets](https://github.com/openfoodfacts/openfoodfacts-ai/blob/develop/data-sets.md) - [Translations](https://github.com/openfoodfacts/openfoodfacts-translations/tree/main/openfoodfacts-label-taxonomy) - [Search related artifacts](https://github.com/openfoodfacts/search-a-licious/blob/main/data/config/openfoodfacts.yml)
 * [Open Beauty Facts](https://world.openbeautyfacts.org/)
-* [Open Product Facts](https://world.openproductsfacts.org/)
+* [Open Product Facts](https://world.openproductsfacts.org/) - [Taxonomies](https://github.com/openfoodfacts/openfoodfacts-server/tree/main/taxonomies)
 * [Open Pet Food Facts](https://world.openpetfoodfacts.org/)
 * [Flipkart categories](https://www.flipkart.com/sitemap)
 * [Walmart Categories](https://www.walmart.com/sitemap_category.xml)
