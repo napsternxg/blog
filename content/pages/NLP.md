@@ -75,6 +75,8 @@ Summary: Links related to NLP resources
 * [Py Readability metrics](https://github.com/cdimascio/py-readability-metrics)
 * [iNLTK](https://inltk.readthedocs.io/en/latest/)
 * [Fast spell correction and word segmentation](https://github.com/wolfgarbe/symspell)
+* [NeuSpell: A Neural Spelling Correction Toolkit](https://github.com/neuspell/neuspell/)
+* [JamSpell](https://github.com/bakwc/JamSpell) -- Contains [error model](https://github.com/bakwc/JamSpell/blob/master/evaluate/typo_model.py) to generate spell errors. [How does JamSpell correction work?](https://github.com/bakwc/JamSpell/issues/15)
 * [NERD evaluation](https://nerd.readthedocs.io/en/latest/evaluation.html)
 * [MedCAT can be used to extract information from Electronic Health Records (EHRs) and link it to biomedical ontologies like SNOMED-CT and UMLS](https://github.com/CogStack/MedCAT)
 * [PyTerrier - A Python framework for performing information retrieval experiments, building on http://terrier.org/](https://github.com/terrier-org/pyterrier)
@@ -178,6 +180,7 @@ Summary: Links related to NLP resources
 * [Multilingual comparable corpora of parliamentary debates ParlaMint 2.1](https://www.clarin.si/repository/xmlui/handle/11356/1432)
 * [labMT lexicon with happniess score and defnitions](https://gitlab.com/compstorylab/sentiment-analysis/-/blob/master/data/labmt.tsv)
 * [Easy-to-use word translations for 3,564 language pairs across 62 unique languages](https://github.com/kakaobrain/word2word)
+* [FrequencyWords: Frequency Word List Generator](https://github.com/hermitdave/FrequencyWords)
 
 ## Data
 
@@ -670,6 +673,8 @@ Summary: Links related to NLP resources
 * [SemEval-2 - 2010 - Evaluation Exercises on Semantic Evaluation - ACL SigLex event](https://semeval2.fbk.eu/semeval2.php?location=tasks-short)
 * [Retail Products Classification: Classification of retail products by image and description](https://www.kaggle.com/competitions/retail-products-classification/overview)
 * [ColorNames - NAME ALL THE COLORS!](https://colornames.org/download/)
+* [en-worldwide-newswire 1100 news articles non western](https://github.com/stanfordnlp/en-worldwide-newswire)
+* [Stanford  handparsed-treebank - Extra hand parsed data for training models](https://github.com/stanfordnlp/handparsed-treebank)
 
 ## Shared tasks, competitions
 
