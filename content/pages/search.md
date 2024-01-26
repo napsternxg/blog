@@ -101,6 +101,14 @@ Summary: Links related to Search resources
 * [From structured search to learning-to-rank-and-retrieve](https://www.amazon.science/blog/from-structured-search-to-learning-to-rank-and-retrieve)
 * [Learning to Rank for Information Retrieval](https://www.nowpublishers.com/article/Details/INR-016)
 * [Ranking Relevance in Yahoo Search](https://dl.acm.org/doi/10.1145/2939672.2939677)
+* [Improving Web Search Ranking by Incorporating User Behavior - Microsoft](https://www.microsoft.com/en-us/research/publication/improving-web-search-ranking-by-incorporating-user-behavior/)
+
+## Rank Fusion
+* [Standing on the Shoulders of Giants - Ranking by Combining Multiple Sources (PDF)](https://www.cse.lehigh.edu/~brian/pubs/2007/ranking-by-combining/LU-CSE-07-011.pdf)
+
+## Ranking Architectures
+* [Are Neural Rankers still Outperformed by Gradient Boosted Decision Trees?](https://research.google/pubs/are-neural-rankers-still-outperformed-by-gradient-boosted-decision-trees/)
+
 
 ## Ranking for value
 * [Globally Optimized Mutual Influence Aware Ranking in E-Commerce Search](https://arxiv.org/abs/1805.08524)
