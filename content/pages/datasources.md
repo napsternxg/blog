@@ -299,6 +299,8 @@ Summary: Links related to many datasets
 * [Yandex: Personalized Web Search Challenge: Re-rank web documents using personal preferences](https://www.kaggle.com/competitions/yandex-personalized-web-search-challenge/overview)
 * [Shopping Queries Dataset: A Large-Scale ESCI Benchmark for Improving Product Search](https://github.com/amazon-science/esci-data) - [ESCI-S: extended metadata for Amazon ESCI dataset](https://github.com/shuttie/esci-s)
 * [WANDS - Wayfair ANnotation Dataset](https://github.com/wayfair/WANDS)
+* [Crowdflower Search Results eCommerce Relevance](https://www.kaggle.com/c/crowdflower-search-relevance)
+* [Home Depot Product Search Relevance](https://www.kaggle.com/c/home-depot-product-search-relevance)
 * [OpenFoodFacts - Used by Wikidata](https://world.openfoodfacts.org/data) - [Datasets](https://github.com/openfoodfacts/openfoodfacts-ai/blob/develop/data-sets.md) - [Translations](https://github.com/openfoodfacts/openfoodfacts-translations/tree/main/openfoodfacts-label-taxonomy) - [Search related artifacts](https://github.com/openfoodfacts/search-a-licious/blob/main/data/config/openfoodfacts.yml)
 * [Open Beauty Facts](https://world.openbeautyfacts.org/)
 * [Open Product Facts](https://world.openproductsfacts.org/) - [Taxonomies](https://github.com/openfoodfacts/openfoodfacts-server/tree/main/taxonomies)
