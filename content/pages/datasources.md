@@ -307,3 +307,4 @@ Summary: Links related to many datasets
 * [Open Pet Food Facts](https://world.openpetfoodfacts.org/)
 * [Flipkart categories](https://www.flipkart.com/sitemap)
 * [Walmart Categories](https://www.walmart.com/sitemap_category.xml)
+* [SIGIR eCOM - A collection of eCommerce datasets and data challenges](https://sigir-ecom.github.io/ecomDatasets.html)
