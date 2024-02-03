@@ -118,7 +118,7 @@ Summary: Links related to Search resources
 
 * [Graph Learning for Exploratory Query Suggestions in an Instant Search System](https://research.atspotify.com/2023/10/graph-learning-for-exploratory-query-suggestions-in-an-instant-search-system/)
 * [9 UX Best Practice Design Patterns for Autocomplete Suggestions (Only 19% Get Everything Right)](https://baymard.com/blog/autocomplete-design)
-
+* [A Dataset for Evaluating Query Suggestion Algorithms in Information Retrieval](https://www.cs.ubbcluj.ro/~ionutb/history-collector/dataset/)
 
 
 # Sponsored Search
