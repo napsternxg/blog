@@ -5,7 +5,7 @@ Slug: ml
 Authors: Shubhanshu Mishra
 Summary: Machine Learning concepts and traditional resources
 
-## Tools
+# Tools
 
 * [Scikit-multilearn](http://scikit.ml/index.html) 
 * [scikit-multiflow: for multi-output/multi-label and stream data](https://scikit-multiflow.github.io/) 
@@ -23,7 +23,7 @@ Summary: Machine Learning concepts and traditional resources
 * [Python Toolkit of Statistics for Pairwise Interactions (pyspi)](https://github.com/olivercliff/pyspi)
 * [pulearn: Positive-unlabeled learning with Python](https://pulearn.github.io/pulearn/)
 
-## ML Engineering
+# ML Engineering
 
 * https://github.com/EthicalML/awesome-production-machine-learning
 * [Machine Learning Systems Design](https://github.com/chiphuyen/machine-learning-systems-design)
@@ -44,7 +44,14 @@ Summary: Machine Learning concepts and traditional resources
 * [ML Crash Course from Google which included practical aspects of ML](https://developers.google.com/machine-learning/crash-course)
 
 
-## Theory
+## Model Speedup
+
+* [Scalable Vector Search - Includes Locally-Adaptive Quantization for Streaming Vector Search](https://github.com/IntelLabs/ScalableVectorSearch)
+* [DeepSpeed Compression: A composable library for extreme compression and zero-cost quantization](https://www.microsoft.com/en-us/research/blog/deepspeed-compression-a-composable-library-for-extreme-compression-and-zero-cost-quantization/)
+
+
+
+# Theory
 
 * [The Theory Behind Overfitting, Cross Validation, Regularization, Bagging, and Boosting: Tutorial](https://arxiv.org/abs/1905.12787)
 * [Blog: Shape matching with time series data](https://roamanalytics.com/2016/11/28/shape-matching-with-time-series-data/)
@@ -196,19 +203,12 @@ Summary: Machine Learning concepts and traditional resources
 * [Multimodal Machine Learning: A Survey and Taxonomy](https://arxiv.org/abs/1705.09406)
 
 
-## Applications
-
-* [List of applications across various industries](https://github.com/firmai/industry-machine-learning#legal)
-* [Visual explanations of ML algorithms](http://visxai.io/2018.html)
-* Javascript animated examples from Artificial Intelligence - A Modern Approach by Stuart Russell and Peter Norvig: http://aimacode.github.io/aima-javascript/
-* [Adaptive Language Models in JavaScript](https://github.com/google-research/google-research/tree/master/jslm)
-
-
 ## Interpretability
 
 * [ML Interpratation in python](https://github.com/jphall663/interpretable_machine_learning_with_python)
 * [Explanatory Model Analysis](https://github.com/pbiecek/ema)
 * [Interesting resources related to XAI (Explainable Artificial Intelligence)](https://github.com/pbiecek/xai_resources)
+* [Great blogs on visualization of ML models and topics](https://tinkerd.net/blog/)
 
 ## Control Theory
 * [Engineering Media: Control theory posts, lectures, and book](https://engineeringmedia.com/)
@@ -221,9 +221,12 @@ Summary: Machine Learning concepts and traditional resources
 * [Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges](https://geometricdeeplearning.com/lectures/)
 * [Non-Euclidean Methods in Machine Learning](http://graphics.stanford.edu/courses/cs468-20-fall/schedule.html)
 * [Introduction to Graph Neural Nets with JAX/jraph](https://github.com/deepmind/educational/tree/master/colabs/summer_schools)
-* [](https://www.amazon.science/blog/how-aws-uses-graph-neural-networks-to-meet-customer-needs)
+* [How AWS uses graph neural networks to meet customer needs](https://www.amazon.science/blog/how-aws-uses-graph-neural-networks-to-meet-customer-needs)
 
 
-# General
+# Applications
 
-* [Great blogs on visualization of ML models and topics](https://tinkerd.net/blog/)
+* [List of applications across various industries](https://github.com/firmai/industry-machine-learning#legal)
+* [Visual explanations of ML algorithms](http://visxai.io/2018.html)
+* Javascript animated examples from Artificial Intelligence - A Modern Approach by Stuart Russell and Peter Norvig: http://aimacode.github.io/aima-javascript/
+* [Adaptive Language Models in JavaScript](https://github.com/google-research/google-research/tree/master/jslm)

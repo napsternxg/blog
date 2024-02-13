@@ -106,6 +106,7 @@ Summary: Social Networks and Network Related documents
 * [NetworKit - Large Scale Network Analysis in Python](https://networkit.github.io/index.html)
 * [PathPy - Temporal Network Analysis](https://www.pathpy.net/index.html)
 * [Bandicoot:an open-source Python toolbox to analyze mobile phone metadata](https://cpg.doc.ic.ac.uk/bandicoot/)
+* [Open MatSci ML Toolkit : A Broad, Multi-Task Benchmark for Solid-State Materials Modeling](https://github.com/IntelLabs/matsciml)
 
 ## Tutorials
 

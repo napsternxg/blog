@@ -102,6 +102,7 @@ Summary: Links related to Search resources
 * [Learning to Rank for Information Retrieval](https://www.nowpublishers.com/article/Details/INR-016)
 * [Ranking Relevance in Yahoo Search](https://dl.acm.org/doi/10.1145/2939672.2939677)
 * [Improving Web Search Ranking by Incorporating User Behavior - Microsoft](https://www.microsoft.com/en-us/research/publication/improving-web-search-ranking-by-incorporating-user-behavior/)
+* [How LambdaMART works - optimizing product ranking goals](https://softwaredoug.com/blog/2021/11/28/how-lammbamart-works.html)
 
 ## Rank Fusion
 * [Standing on the Shoulders of Giants - Ranking by Combining Multiple Sources (PDF)](https://www.cse.lehigh.edu/~brian/pubs/2007/ranking-by-combining/LU-CSE-07-011.pdf)

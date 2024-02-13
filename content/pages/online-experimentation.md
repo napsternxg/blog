@@ -32,7 +32,15 @@ Summary: Links related to Online Experimentation resources
 
 * [How to Measure Anything: Finding the Value of Intangibles in Business by Douglas W. Hubbard](https://www.amazon.com/How-Measure-Anything-Intangibles-Business/dp/1118539273)
 
+### Links
+* [Improve Your UI With Winning & Losing A/B Tests](https://goodui.org/)
+
 ## Bandit Algorithms
+
+### Links
+* [Beyond A/B testing: Multi-armed bandit experiments](https://www.dynamicyield.com/lesson/contextual-bandit-optimization/)
+* [An Overview of Contextual Bandits](https://towardsdatascience.com/an-overview-of-contextual-bandits-53ac3aa45034)
+
 
 ### Data Sources
 * [Replication Data for: A Sleeping, Recovering Bandit Algorithm for Optimizing Recurring Notifications](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/23ZWVI)

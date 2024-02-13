@@ -309,3 +309,5 @@ Summary: Links related to many datasets
 * [Walmart Categories](https://www.walmart.com/sitemap_category.xml)
 * [SIGIR eCOM - A collection of eCommerce datasets and data challenges](https://sigir-ecom.github.io/ecomDatasets.html)
 * [Food images and descriptions from the Wolt app](https://huggingface.co/datasets/Qdrant/wolt-food-clip-ViT-B-32-embeddings) - [more details on cafe](https://huggingface.co/datasets/aintech/vdf_wolt_food)
+* [H&M Personalized Fashion Recommendations](https://www.kaggle.com/competitions/h-and-m-personalized-fashion-recommendations)
+* [Google Local Data (2021)](https://datarepo.eng.ucsd.edu/mcauley_group/gdrive/googlelocal/)
