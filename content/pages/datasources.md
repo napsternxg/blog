@@ -100,7 +100,7 @@ Summary: Links related to many datasets
 * [CShapes 2.0 maps the borders and capitals of independent states and dependent territories from 1886 to 2019](https://icr.ethz.ch/data/cshapes/) 
 * [GROWup - Geographical Research On War, Unified Platform](https://growup.ethz.ch/) 
 * [Behavioral Correlates of War, 1816-1979 (ICPSR 8606)](https://www.icpsr.umich.edu/web/ICPSR/studies/8606) 
-
+* [VIINA 2.0 / Violent Incident Information from News Articles](https://github.com/zhukovyuri/VIINA)
 
 ## Personality prediction data
 * [Multiple personality datasets](https://github.com/amarallab/personality-types) 

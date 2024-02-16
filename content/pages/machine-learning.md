@@ -44,6 +44,11 @@ Summary: Machine Learning concepts and traditional resources
 * [ML Crash Course from Google which included practical aspects of ML](https://developers.google.com/machine-learning/crash-course)
 
 
+## On-Device ML
+
+* [Microsoft - On-Device Training: Training a model in browser](https://cloudblogs.microsoft.com/opensource/2024/02/06/on-device-training-training-a-model-in-browser/)
+* [ONNX Runtime JavaScript API](https://onnxruntime.ai/docs/api/js/index.html)
+
 ## Model Speedup
 
 * [Scalable Vector Search - Includes Locally-Adaptive Quantization for Streaming Vector Search](https://github.com/IntelLabs/ScalableVectorSearch)
