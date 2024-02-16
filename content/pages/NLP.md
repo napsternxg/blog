@@ -675,6 +675,9 @@ Summary: Links related to NLP resources
 * [ColorNames - NAME ALL THE COLORS!](https://colornames.org/download/)
 * [en-worldwide-newswire 1100 news articles non western](https://github.com/stanfordnlp/en-worldwide-newswire)
 * [Stanford  handparsed-treebank - Extra hand parsed data for training models](https://github.com/stanfordnlp/handparsed-treebank)
+* [ComFact: A Benchmark for Linking Contextual Commonsense Knowledge](https://github.com/Silin159/ComFact)
+* [PeaCoK: Persona Commonsense Knowledge for Consistent and Engaging Narratives](https://github.com/Silin159/PeaCoK)
+* [ConvAI3: Clarifying Questions for Open-Domain Dialogue Systems (ClariQ)](https://convai.io/)
 
 ## Shared tasks, competitions
 
@@ -690,6 +693,7 @@ Summary: Links related to NLP resources
 * [TREC shared tasks](https://trec.nist.gov/pubs/call2021.html)
 * [Shared task on implicit and underspecified language](https://unimplicit.github.io/)
 * [Social Book Search Lab](https://social-book-search.humanities.uva.nl/#/overview)
+* [DSTC7: Dialog System Technology Challenges](http://workshop.colips.org/dstc7/call.html)
 
 ## Research Groups
 * [University of Copenhagen ](https://supernlp.github.io/) 
