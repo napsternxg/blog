@@ -8,6 +8,10 @@ Summary: Links related to Search resources
 
 # Evaluation
 
+## Datasets
+
+* [A Large Scale Search Dataset from Baidu Search Engine](https://github.com/ChuXiaokai/baidu_ultr_dataset) - [Homepage](https://htmlpreview.github.io/?https://github.com/HaitaoMao/baidu_ultr_page/blob/main/index.html) - [Paper](https://arxiv.org/abs/2207.03051)
+
 ## Offline
 * [An IR-based Evaluation Framework for Web Search Query Segmentation](https://arxiv.org/abs/1111.1497)
 * [Recall, Robustness, and Lexicographic Evaluation](https://arxiv.org/abs/2302.11370)
@@ -25,6 +29,7 @@ Summary: Links related to Search resources
 * [Beyond Position Bias: Examining Result Attractiveness as a Source of Presentation Bias in Clickthrough Data](https://www.slideserve.com/betty_james/beyond-position-bias-examining-result-attractiveness-as-a-source-of-presentation-bias-in-clickthrough-data)
 * Left Digit Bias - [More than a Penny's Worth: Left-Digit Bias and Firm Pricing](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3413019) - [Left-Digit Bias at Lyft](https://www.restud.com/left-digit-bias-at-lyft/) - [The Left-Digit Bias: When and Why Are Consumers Penny Wise and Pound Foolish?](https://journals.sagepub.com/doi/full/10.1177/0022243720932532)
 * [Improving Retrievability in Search with Query Generation](https://research.atspotify.com/2023/05/improving-retrievability-in-search-with-query-generation/)
+* [Recent Advances in the Foundations and Applications of Unbiased Learning to Rank](https://sites.google.com/view/sigir-2023-tutorial-ultr)
 
 ## Online
 
@@ -45,6 +50,7 @@ Summary: Links related to Search resources
 ## Tools
 * [Rank-BM25: A two line search engine](https://github.com/dorianbrown/rank_bm25)
 * [ClickModels: A Click Model is a probabilistic graphical model used to predict search engine click data from past observations](https://github.com/varepsilon/clickmodels) - [ClickModelsWC: Extra Models](https://github.com/kurakimai/clickmodel_wc) - [Tutorial and CheatSheet](https://clickmodels.weebly.com/tutorials.html) - [Book with many probabilistic click models described](https://clickmodels.weebly.com/the-book.html)
+* [Unbiased Learning to Rank Algorithms (ULTRA)](https://github.com/ULTR-Community/ULTRA_pytorch)
 
 # Query Understanding
 

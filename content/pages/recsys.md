@@ -11,6 +11,7 @@ Summary: Links related to Recommender Systems resources
 ## Links
 * [RecSys Papers by Industry and Topic](https://github.com/tangxyw/RecSysPapers/)
 * [Practical Lessons from Predicting Clicks on Ads at Facebook](https://research.facebook.com/publications/practical-lessons-from-predicting-clicks-on-ads-at-facebook/)
+* [Recent Advances in the Foundations and Applications of Unbiased Learning to Rank](https://sites.google.com/view/sigir-2023-tutorial-ultr)
 
 ## Books
 

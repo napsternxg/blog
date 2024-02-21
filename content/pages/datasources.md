@@ -25,6 +25,10 @@ Summary: Links related to many datasets
 * [DI2KG](http://di2kg.inf.uniroma3.it/datasets.html) 
 * [Benchmark datasets for entity resolution](https://dbs.uni-leipzig.de/de/research/projects/object_matching/benchmark_datasets_for_entity_resolution)
 
+## Ranking
+
+* [PrefLib: A Library for Preferences](https://www.preflib.org/datasets)
+
 
 ## Location data
 
@@ -164,6 +168,8 @@ Summary: Links related to many datasets
 * [demographicx: A Python package for estimating gender and ethnicity using deep learning transformers](https://github.com/sciosci/demographicx) 
 * [List of first names, genders and country-specific frequencies](https://github.com/MatthiasWinkelmann/firstname-database) 
 * [Validated Names for Experimental Studies on Race and Ethnicity](https://github.com/jaeyk/validated_names/tree/main) 
+* [JRC-Names is a highly multilingual named entity resource for person and organisation name](https://joint-research-centre.ec.europa.eu/language-technology-resources/jrc-names_en) - [RDF](https://data.jrc.ec.europa.eu/dataset/jrc-emm-jrc-names)
+
 
 ## Images
 
@@ -319,6 +325,7 @@ Summary: Links related to many datasets
 * [Home Depot Product Search Relevance: Predict the relevance of search results on homedepot.com](https://www.kaggle.com/competitions/home-depot-product-search-relevance)
 * [Yandex: Personalized Web Search Challenge: Re-rank web documents using personal preferences](https://www.kaggle.com/competitions/yandex-personalized-web-search-challenge/overview)
 * [Shopping Queries Dataset: A Large-Scale ESCI Benchmark for Improving Product Search](https://github.com/amazon-science/esci-data) - [ESCI-S: extended metadata for Amazon ESCI dataset](https://github.com/shuttie/esci-s)
+* [Amazon-PQA - Amazon product questions and their answers, along with the public product information](https://registry.opendata.aws/amazon-pqa/)
 * [WANDS - Wayfair ANnotation Dataset](https://github.com/wayfair/WANDS)
 * [Crowdflower Search Results eCommerce Relevance](https://www.kaggle.com/c/crowdflower-search-relevance)
 * [Home Depot Product Search Relevance](https://www.kaggle.com/c/home-depot-product-search-relevance)
@@ -333,3 +340,4 @@ Summary: Links related to many datasets
 * [H&M Personalized Fashion Recommendations](https://www.kaggle.com/competitions/h-and-m-personalized-fashion-recommendations)
 * [Google Local Data (2021)](https://datarepo.eng.ucsd.edu/mcauley_group/gdrive/googlelocal/)
 * [Groceries dataset: Dataset of 38765 rows for Market Basket Analysis](https://www.kaggle.com/datasets/heeraldedhia/groceries-dataset)
+* [The Klarna Product Page Dataset - 51K pages from 8 countries](https://github.com/klarna/product-page-dataset)
