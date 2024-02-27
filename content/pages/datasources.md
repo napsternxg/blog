@@ -341,3 +341,4 @@ Summary: Links related to many datasets
 * [Google Local Data (2021)](https://datarepo.eng.ucsd.edu/mcauley_group/gdrive/googlelocal/)
 * [Groceries dataset: Dataset of 38765 rows for Market Basket Analysis](https://www.kaggle.com/datasets/heeraldedhia/groceries-dataset)
 * [The Klarna Product Page Dataset - 51K pages from 8 countries](https://github.com/klarna/product-page-dataset)
+* [AliProducts Challenge: Large-scale Cross-Modal Product Retrieval](https://tianchi.aliyun.com/competition/entrance/532077/information)
