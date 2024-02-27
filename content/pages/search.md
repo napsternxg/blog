@@ -109,6 +109,9 @@ Summary: Links related to Search resources
 * [Ranking Relevance in Yahoo Search](https://dl.acm.org/doi/10.1145/2939672.2939677)
 * [Improving Web Search Ranking by Incorporating User Behavior - Microsoft](https://www.microsoft.com/en-us/research/publication/improving-web-search-ranking-by-incorporating-user-behavior/)
 * [How LambdaMART works - optimizing product ranking goals](https://softwaredoug.com/blog/2021/11/28/how-lammbamart-works.html)
+* [Istella Learning to Rank (LETOR) dataset](https://istella.ai/data/letor-dataset/)
+* [Tiangong-ULTR (Unbiased Learning To Rank) dataset using search logs of Sogou.com](http://www.thuir.cn/data-tiangong-ultr/)
+* [A Large Scale Search Dataset from Baidu Search Engine](https://github.com/ChuXiaokai/baidu_ultr_dataset)
 
 ## Rank Fusion
 * [Standing on the Shoulders of Giants - Ranking by Combining Multiple Sources (PDF)](https://www.cse.lehigh.edu/~brian/pubs/2007/ranking-by-combining/LU-CSE-07-011.pdf)
