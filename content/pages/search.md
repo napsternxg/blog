@@ -112,6 +112,7 @@ Summary: Links related to Search resources
 * [Istella Learning to Rank (LETOR) dataset](https://istella.ai/data/letor-dataset/)
 * [Tiangong-ULTR (Unbiased Learning To Rank) dataset using search logs of Sogou.com](http://www.thuir.cn/data-tiangong-ultr/)
 * [A Large Scale Search Dataset from Baidu Search Engine](https://github.com/ChuXiaokai/baidu_ultr_dataset)
+* [Introduction to Learning to Rank](https://everdark.github.io/k9/notebooks/ml/learning_to_rank/learning_to_rank.html) - Very good summary of Learning to Rank methods
 
 ## Rank Fusion
 * [Standing on the Shoulders of Giants - Ranking by Combining Multiple Sources (PDF)](https://www.cse.lehigh.edu/~brian/pubs/2007/ranking-by-combining/LU-CSE-07-011.pdf)
