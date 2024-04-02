@@ -169,6 +169,8 @@ Summary: Links related to many datasets
 * [List of first names, genders and country-specific frequencies](https://github.com/MatthiasWinkelmann/firstname-database) 
 * [Validated Names for Experimental Studies on Race and Ethnicity](https://github.com/jaeyk/validated_names/tree/main) 
 * [JRC-Names is a highly multilingual named entity resource for person and organisation name](https://joint-research-centre.ec.europa.eu/language-technology-resources/jrc-names_en) - [RDF](https://data.jrc.ec.europa.eu/dataset/jrc-emm-jrc-names)
+* [A Brief History of Human Time - Cross-verified Dataset
+](https://data.sciencespo.fr/dataset.xhtml?persistentId=doi:10.21410/7E4/RDAG3O) - Includes name, year, gender
 
 
 ## Images
