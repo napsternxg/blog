@@ -344,3 +344,6 @@ Summary: Links related to many datasets
 * [Groceries dataset: Dataset of 38765 rows for Market Basket Analysis](https://www.kaggle.com/datasets/heeraldedhia/groceries-dataset)
 * [The Klarna Product Page Dataset - 51K pages from 8 countries](https://github.com/klarna/product-page-dataset)
 * [AliProducts Challenge: Large-scale Cross-Modal Product Retrieval](https://tianchi.aliyun.com/competition/entrance/532077/information)
+* [Alibaba eCommerce de-biasing dataset](https://tianchi.aliyun.com/competition/entrance/231785/introduction)
+* [H&M Personalized Fashion Recommendations](https://www.kaggle.com/competitions/h-and-m-personalized-fashion-recommendations)
+* [Mining the Web of HTML-embedded Product Data](https://github.com/ir-ischool-uos/mwpd) - [Webpage](https://ir-ischool-uos.github.io/mwpd/index.html#data1)
