@@ -214,6 +214,9 @@ Summary: Links related to Search resources
 * [Analyzing and Predicting Purchase Intent in E-commerce: Anonymous vs. Identified Customers](https://arxiv.org/abs/2012.08777)
 * [Improving Deep Learning For Airbnb Search](https://arxiv.org/abs/2002.05515)
 * [The Architecture of eBay Search - SIGIR 2017](https://www.semanticscholar.org/paper/The-Architecture-of-eBay-Search-Trotman-Degenhardt/4665523598d2244256207ab30b10ddc7a4930b78)
+* [How to sell on Amazon: a guide for beginners - Shows all variables used for listing items on Amazon which help with search](https://sell.amazon.com/sell#adding-your-products)
+* [Shopify's Standard Product Taxonomy](https://github.com/Shopify/product-taxonomy) - [page](https://shopify.github.io/product-taxonomy/)
+* [Image Classification with Taxonomy Mapping](https://huggingface.co/spaces/Marqo/e-commerce-taxonomy-mapping)
 
 
 # User Interfaces
