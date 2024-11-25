@@ -74,13 +74,9 @@ Summary: Links related to NLP resources
 * [Bengali NLP](https://github.com/sagorbrur/bnlp)
 * [Py Readability metrics](https://github.com/cdimascio/py-readability-metrics)
 * [iNLTK](https://inltk.readthedocs.io/en/latest/)
-* [Fast spell correction and word segmentation](https://github.com/wolfgarbe/symspell)
-* [NeuSpell: A Neural Spelling Correction Toolkit](https://github.com/neuspell/neuspell/)
-* [JamSpell](https://github.com/bakwc/JamSpell) -- Contains [error model](https://github.com/bakwc/JamSpell/blob/master/evaluate/typo_model.py) to generate spell errors. [How does JamSpell correction work?](https://github.com/bakwc/JamSpell/issues/15)
 * [NERD evaluation](https://nerd.readthedocs.io/en/latest/evaluation.html)
 * [MedCAT can be used to extract information from Electronic Health Records (EHRs) and link it to biomedical ontologies like SNOMED-CT and UMLS](https://github.com/CogStack/MedCAT)
 * [PyTerrier - A Python framework for performing information retrieval experiments, building on http://terrier.org/](https://github.com/terrier-org/pyterrier)
-* [JamSpell - Spelling correction (works in python)](https://github.com/bakwc/JamSpell)
 * [Efficient Low Memory Aligner](https://github.com/robertostling/eflomal)
 * [DeepTranslit: Towards better transliteration for Indic languages](https://github.com/notAI-tech/DeepTranslit)
 * [Google Trends Anchor Bank](https://github.com/epfl-dlab/GoogleTrendsAnchorBank)
@@ -92,6 +88,13 @@ Summary: Links related to NLP resources
 * [Odinson: A Fast Rule-based Information Extraction Framework](https://github.com/lum-ai/odinson/)
 * [SDSL - Succinct Data Structure Library](https://github.com/simongog/sdsl-lite/)
 * [ReFinED: An Efficient Zero-shot-capable Approach to End-to-End Entity Linking](https://github.com/amazon-science/ReFinED)
+* [SymSpell - Fast spell correction and word segmentation](https://github.com/wolfgarbe/symspell)
+* [NeuSpell: A Neural Spelling Correction Toolkit](https://github.com/neuspell/neuspell/)
+* [JamSpell](https://github.com/bakwc/JamSpell) -- Contains [error model](https://github.com/bakwc/JamSpell/blob/master/evaluate/typo_model.py) to generate spell errors. [How does JamSpell correction work?](https://github.com/bakwc/JamSpell/issues/15)
+* [libenchant -- Generic spell checking library](https://github.com/rrthomas/enchant) - [pyenchant](https://pyenchant.github.io/pyenchant/#)
+* [SCOWL (Spell Checker Oriented Word Lists)](http://wordlist.aspell.net/)
+* [nlpaug - Data augmentation for NLP](https://github.com/makcedward/nlpaug/)
+
 
 ### Pretrained embeddings and models
 * [ELMO for Many Languages](https://github.com/HIT-SCIR/ELMoForManyLangs)
@@ -678,6 +681,7 @@ Summary: Links related to NLP resources
 * [ComFact: A Benchmark for Linking Contextual Commonsense Knowledge](https://github.com/Silin159/ComFact)
 * [PeaCoK: Persona Commonsense Knowledge for Consistent and Engaging Narratives](https://github.com/Silin159/PeaCoK)
 * [ConvAI3: Clarifying Questions for Open-Domain Dialogue Systems (ClariQ)](https://convai.io/)
+* [Wikipedia Correction and Paraphrase Corpus](https://wicopaco.limsi.fr/)
 
 ## Shared tasks, competitions
 

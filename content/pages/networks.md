@@ -66,6 +66,8 @@ Summary: Social Networks and Network Related documents
 * [Temporal Covid Mental Health Map](https://osf.io/mvdpe/)
 * [A Global Book Reading Dataset (1M+ GoodReads network)](https://figshare.com/projects/A_Global_Book_Reading_Dataset/118854)
 * [fauci-email: a json digest of Anthony Fauci's released emails](https://github.com/nveldt/fauci-email)
+* [Foursquare’s Open Source Places - 100M+ points of interest](https://location.foursquare.com/products/places/) - [Download](https://docs.foursquare.com/data-products/docs/access-fsq-os-places)
+* [FourSquare Graph](https://location.foursquare.com/company/our-tech/graph/)
 
 ### Temporal Networks
 * [Quantum Physics semantic network evolution](https://github.com/MarioKrenn6240/SEMNET)
