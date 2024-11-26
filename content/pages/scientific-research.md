@@ -21,6 +21,7 @@ Summary: Links related to Scientific Research
 * [How to do Research - At the MIT AI Lab](https://dspace.mit.edu/bitstream/handle/1721.1/41487/AI_WP_316.pdf)
 * [How to do research - Bill Freeman](http://people.csail.mit.edu/billf/www/papers/doresearch.pdf) - [Slides](http://people.csail.mit.edu/billf/talks/10minFreeman2013.pdf)
 * [The Narrative Hierarchy—Stories and Storytelling on all Scales](https://pdodds.w3.uvm.edu/writings/2015-06-04narrative-hierarchy/)
+* [Makeability Lab Handbook - Lab Principles](https://docs.google.com/document/d/1YiiDsfpiolpXjUTj8xWrQwQQUzqrfqT9bocOpaYDrtI/edit?tab=t.0#heading=h.67pak1did5de)
 
 ## Presentatation Tools
 * [Annotated Latex equations](https://github.com/synercys/annotated_latex_equations)
