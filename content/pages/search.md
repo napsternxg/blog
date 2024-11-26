@@ -142,6 +142,12 @@ Summary: Links related to Search resources
 
 * [Beyond Ranking: Optimizing Whole-Page Presentation](https://dl.acm.org/doi/10.1145/2835776.2835824)
 * [Whole Page Unbiased Learning to Rank from Baidu](https://arxiv.org/abs/2210.10718)
+* [Whole page optimization with local and global constraints - Amazon](https://www.amazon.science/publications/whole-page-optimization-with-local-and-global-constraints)
+* [The Whole-Page Optimization via Dynamic Ad Allocation - Alibaba](https://dl.acm.org/doi/abs/10.1145/3184558.3191584)
+* [GenSERP: Large Language Models for Whole Page Presentation - Microsoft](https://arxiv.org/abs/2402.14301v1)
+* [Automate page layout optimization: An offline deep Q-learning approach - Amazon](https://www.amazon.science/publications/automate-page-layout-optimization-an-offline-deep-q-learning-approach)
+* [A Real-Time Whole Page Personalization Framework for E-Commerce - Walmart](https://arxiv.org/abs/2012.04681)
+* [Page-level Optimization of e-Commerce Item Recommendations - eBay](https://arxiv.org/abs/2108.05891)
 
 ## Diversification
 * [Practical Diversified Recommendations on YouTube with Determinantal Point Processes](https://jgillenw.com/cikm2018.pdf)
@@ -217,12 +223,13 @@ Summary: Links related to Search resources
 * [How to sell on Amazon: a guide for beginners - Shows all variables used for listing items on Amazon which help with search](https://sell.amazon.com/sell#adding-your-products)
 * [Shopify's Standard Product Taxonomy](https://github.com/Shopify/product-taxonomy) - [page](https://shopify.github.io/product-taxonomy/)
 * [Image Classification with Taxonomy Mapping](https://huggingface.co/spaces/Marqo/e-commerce-taxonomy-mapping)
-
+* [Amazon Search Mission and Query Understanding](https://amazonsearchqu.github.io/#)
 
 # User Interfaces
 
 * [Search Interfaces for Biomedical Searching: How do Gaze, User Perception, Search Behaviour and Search Performance Relate?](https://dl.acm.org/doi/10.1145/3498366.3505769)
 * [Modeling User Behavior for Vertical Search: Images, Apps and Products](https://github.com/THUxiexiaohui/SIGIR-2020-Tutorial/tree/master)
+* [User Behavior Insights](https://www.ubisearch.dev/quickstart/)
 
 # Publication Venues
 

@@ -75,6 +75,7 @@ Summary: Machine Learning concepts and traditional resources
 * [Non-Euclidean Methods in Machine Learning - “Data has Shape and Shape has Meaning” - Stanford Course](http://graphics.stanford.edu/courses/cs468-20-fall/index.html)
 * [THE SOCIETY OF MIND by Marvin Minsky](http://aurellem.org/society-of-mind/) [MIT Course](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-868j-the-society-of-mind-fall-2011/readings/)
 * [SVD and its applications (PDF)](https://pillowlab.princeton.edu/teaching/mathtools21fall/notes/notes_SVD.pdf)
+* [Modern Big Data Algorithms](https://drive.google.com/file/d/18fxyBiPE0G4e5yixAj5S--YL_pgTh3Vo/view)
 
 ## Optimization
 
