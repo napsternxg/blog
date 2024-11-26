@@ -7,7 +7,7 @@ Authors: Shubhanshu Mishra
 Summary: Lab Handbooks for Managing Teams
 
 
-Today I came across the [Makeability Lab Handbook](https://docs.google.com/document/d/1YiiDsfpiolpXjUTj8xWrQwQQUzqrfqT9bocOpaYDrtI/edit?tab=t.0) from University of Washington's [Makeability Lab](https://makeabilitylab.cs.washington.edu/), which is "an advanced research lab in Human-AI". In that document I also found some reference links to the articles [Components of Lab Notebook](https://thebiologist.rsb.org.uk/images/biologist/2020/Apr_May_2020_67-2/67.2_Handbook.pdf)
+Today I came across the [Makeability Lab Handbook](https://docs.google.com/document/d/1YiiDsfpiolpXjUTj8xWrQwQQUzqrfqT9bocOpaYDrtI/edit?tab=t.0) from University of Washington's [Makeability Lab](https://makeabilitylab.cs.washington.edu/), which is "an advanced research lab in Human-AI". In that document I also found some reference links to the articles [Components of Lab Notebook](https://thebiologist.rsb.org.uk/images/biologist/2020/Apr_May_2020_67-2/67.2_Handbook.pdf), [How to… write a lab handbook](https://thebiologist.rsb.org.uk/biologist-features/how-to-write-a-lab-handbook#refs), [Music Lab's handbook](https://handbook-public.themusiclab.org/), [Research Culture: Why every lab needs a handbook](https://elifesciences.org/articles/88853), [Lab Handbook Resources](https://zenodo.org/records/7419211), [WIN Lab Handbook Page](https://www.win.ox.ac.uk/about/training/lab-handbooks).
 
 What I liked about the idea of lab handbooks is how it can help manage teams in an async manner, i.e. get their problems solved without waiting on the other person's availability. The idea of lab notebook appears to be an efficient tool at enabling this async collaboration. 
 
