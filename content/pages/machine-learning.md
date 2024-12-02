@@ -240,3 +240,4 @@ Summary: Machine Learning concepts and traditional resources
 * [Visual explanations of ML algorithms](http://visxai.io/2018.html)
 * Javascript animated examples from Artificial Intelligence - A Modern Approach by Stuart Russell and Peter Norvig: http://aimacode.github.io/aima-javascript/
 * [Adaptive Language Models in JavaScript](https://github.com/google-research/google-research/tree/master/jslm)
+* [ML and LLM system design: A database of 500 case studies from 100+ companies](https://www.evidentlyai.com/ml-system-design)
