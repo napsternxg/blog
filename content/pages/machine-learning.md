@@ -22,6 +22,9 @@ Summary: Machine Learning concepts and traditional resources
 * [A Collection of Conference & School Notes in Machine Learning](https://github.com/visual-ml-notes/visual-machine-learning-notes)
 * [Python Toolkit of Statistics for Pairwise Interactions (pyspi)](https://github.com/olivercliff/pyspi)
 * [pulearn: Positive-unlabeled learning with Python](https://pulearn.github.io/pulearn/)
+* [pyGMO2 - Basic Multi-Objective Functionalities](https://esa.github.io/pygmo2/tutorials/moo.html)
+* [pymoo: Multi-objective Optimization in Python](https://pymoo.org/)
+
 
 # ML Engineering
 
@@ -91,6 +94,7 @@ Summary: Machine Learning concepts and traditional resources
 * [Proximal Operators implementations](http://proximity-operator.net/)
 * [CMU series of tutorials for conducting computational experiments with optimization solvers](https://github.com/rkimura47/cmu-comp-or)
 * [Computational Optimal Transport](https://optimaltransport.github.io/slides/)
+* [Compressed sensing - Tenrence Tao (PDF)](https://www.math.hkbu.edu.hk/~ttang/UsefulCollections/compressed-sensing1.pdf)
 
 ## Structured prediction
 
