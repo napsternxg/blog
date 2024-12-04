@@ -51,6 +51,7 @@ Summary: Links related to Search resources
 * [Rank-BM25: A two line search engine](https://github.com/dorianbrown/rank_bm25)
 * [ClickModels: A Click Model is a probabilistic graphical model used to predict search engine click data from past observations](https://github.com/varepsilon/clickmodels) - [ClickModelsWC: Extra Models](https://github.com/kurakimai/clickmodel_wc) - [Tutorial and CheatSheet](https://clickmodels.weebly.com/tutorials.html) - [Book with many probabilistic click models described](https://clickmodels.weebly.com/the-book.html)
 * [Unbiased Learning to Rank Algorithms (ULTRA)](https://github.com/ULTR-Community/ULTRA_pytorch)
+* [Explore IR Measures](https://demo.ir-measur.es/explore)
 
 # Query Understanding
 
@@ -224,6 +225,8 @@ Summary: Links related to Search resources
 * [Shopify's Standard Product Taxonomy](https://github.com/Shopify/product-taxonomy) - [page](https://shopify.github.io/product-taxonomy/)
 * [Image Classification with Taxonomy Mapping](https://huggingface.co/spaces/Marqo/e-commerce-taxonomy-mapping)
 * [Amazon Search Mission and Query Understanding](https://amazonsearchqu.github.io/#)
+* [Semantic Web Challenge: Mining the Web of HTML-embedded Product Data](https://ir-ischool-uos.github.io/mwpd/index.html)
+* [MAVE: A Product Dataset for Multi-source Attribute Value Extraction](https://github.com/google-research-datasets/MAVE)
 
 # User Interfaces
 
@@ -247,3 +250,5 @@ Summary: Links related to Search resources
 * [MIx-Camp E-commerce Search](https://www.youtube.com/@mix-campe-commercesearch2961/videos)
 * [The Anatomy of a Large-Scale Hypertextual Web Search Engine - Original Google Search Engine Paper](https://research.google/pubs/the-anatomy-of-a-large-scale-hypertextual-web-search-engine/)
 * [KDD 2020: Hands-onTutorials: Deep Learning for Search and Recommender Systems in Practice](https://www.youtube.com/watch?v=q6yF0It2ubk)
+* [Haystack 2024 - My Favorite Talks](https://talkingtocomputers.substack.com/p/haystack-2024-my-favorite-talks)
+* [The SIGIR 2024 Tutorial: Robust Information Retrieval](https://sigir2024-robust-information-retrieval.github.io/)

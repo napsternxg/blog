@@ -18,3 +18,8 @@ Summary: Finance
 * [OpenBB Terminal: Finance datasets open for all](https://github.com/OpenBB-finance/OpenBBTerminal) 
 * [OpenBB macro database of 570.000+ data series containing International Data](https://github.com/OpenBB-finance/MacroDatabase) 
 * [Algorithmic trading framework for cryptocurrencies](https://github.com/ivopetiz/algotrading) 
+
+
+## Saving Money
+
+* [The Carry Guide to Paying Less in Taxes](https://carryhq.notion.site/The-Carry-Guide-to-Paying-Less-in-Taxes-10b2b4da52698034a44de8367f15650d)

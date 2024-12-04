@@ -44,6 +44,7 @@ Summary: Links related to mathematics
 * [Calculus Blue by Robert Ghist - comic style calculus - covers basic to advanced concepts](https://www.math.upenn.edu/~ghrist/)
 * [THE MATHEMATICS OF DIFFUSION](http://www-eng.lbl.gov/~shuman/NEXT/MATERIALS&COMPONENTS/Xe_damage/Crank-The-Mathematics-of-Diffusion.pdf)
 * [The Calculus Of Finite Differences by Thomson, L. M. Milne](https://archive.org/details/calculusoffinite032017mbp/page/n7/mode/2up?view=theater)
+* [It’s just calculus and convexity](https://www.stat.yale.edu/~pollard/Books/Pttm/Calculus.pdf)
 
 ## Convex Optimization
 
